@@ -1,5 +1,6 @@
 import svgPaths from "./svg-ly9usgqlzn";
 import imgEllipse4 from "figma:asset/59fe701eb8226508e3a213da6b6769564706529b.png";
+const imgEllipse4Src = imgEllipse4 as unknown as string;
 
 function Group() {
   return (
@@ -5033,7 +5034,7 @@ function Group10() {
       <div className="absolute bg-white h-[205px] left-[1223px] rounded-bl-[45px] rounded-br-[11.169px] rounded-tl-[11.169px] rounded-tr-[11.169px] shadow-[0px_3.723px_70.736px_0px_rgba(28,2,98,0.31)] top-[264px] w-[387px]" />
       <div className="absolute left-[1123px] opacity-60 size-[308px] top-[276px]">
         <div className="absolute inset-[-4.91%_-10.11%_-12.42%_-7.22%]">
-          <img alt="" className="block max-w-none size-full" height="361.378" src={imgEllipse4} width="361.378" />
+          <img alt="" className="block max-w-none size-full" height="361.378" src={imgEllipse4Src} width="361.378" />
         </div>
       </div>
     </div>

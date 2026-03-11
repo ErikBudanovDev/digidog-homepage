@@ -15,7 +15,8 @@ import {
   Planet as OriginalPlanet,
   StarShape as OriginalStarShape,
   TwinkleStar as OriginalTwinkleStar,
-} from "@/app/components/CosmicElements";
+  OrbitDot as OriginalOrbitDot,
+} from "@/components/CosmicElements";
 
 export function StarField(props: Parameters<typeof OriginalStarField>[0]) {
   const [mounted, setMounted] = useState(false);
@@ -57,4 +58,11 @@ export function TwinkleStar(props: Parameters<typeof OriginalTwinkleStar>[0]) {
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
   return <OriginalTwinkleStar {...props} />;
+}
+
+export function OrbitDot(props: Parameters<typeof OriginalOrbitDot>[0]) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+  return <OriginalOrbitDot {...props} />;
 }

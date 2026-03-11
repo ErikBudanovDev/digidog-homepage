@@ -32,6 +32,7 @@ import { HeroLayout } from "@/components/ui/hero-layout";
 import svgPaths from "@/imports/svg-ly9usgqlzn";
 
 import erikPhoto from "figma:asset/c28a01d5ca35b1e207da7537c250359543a3aa75.png";
+const erikPhotoSrc = erikPhoto as unknown as string;
 import { SEO } from "@/components/SEO";
 import { useTranslation } from "@/i18n/i18n-context";
 import enPg from "@/translations/pages/english.json";
@@ -675,7 +676,7 @@ function ContactFormSection() {
                     }}
                   />
                   <div className="relative w-[56px] h-[56px] rounded-full overflow-hidden border-2 border-white/15">
-                    <img src={erikPhoto} alt="Erik Budanov" className="w-full h-full object-cover" />
+                    <img src={erikPhotoSrc} alt="Erik Budanov" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div>

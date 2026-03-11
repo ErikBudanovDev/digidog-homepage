@@ -4,7 +4,11 @@
 
 import type { de } from "./de";
 
-export const en: typeof de = {
+type DeepStringify<T> = {
+  [K in keyof T]: T[K] extends string ? string : T[K] extends object ? DeepStringify<T[K]> : T[K];
+};
+
+export const en: DeepStringify<typeof de> = {
   /* ── shared / common ── */
   common: {
     services: "Services",

@@ -22,8 +22,8 @@ function HeroBackground() {
         style={{ top: "80%", right: "-19%", bottom: "-35%", left: "70%" }}
       >
         <svg viewBox="0 0 308 308" fill="none" className="w-full h-full">
-          <path d={svgPaths[0]} fill="white" fillOpacity={0.6} />
-          <path d={svgPaths[1]} fill="white" fillOpacity={0.4} />
+          <path d={Object.values(svgPaths)[0]} fill="white" fillOpacity={0.6} />
+          <path d={Object.values(svgPaths)[1]} fill="white" fillOpacity={0.4} />
         </svg>
       </div>
       <StarField count={30} />

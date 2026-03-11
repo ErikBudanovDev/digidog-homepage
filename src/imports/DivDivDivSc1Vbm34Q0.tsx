@@ -1,12 +1,13 @@
 import svgPaths from "./svg-yt57hkh8op";
 import imgC25Fc2Cd85D944Ef9C46F4346E93C234Webp from "figma:asset/b383767b5b7dc243e08ca2992180e6e4a1c117ae.png";
+const imgC25Fc2Cd85D944Ef9C46F4346E93C234WebpSrc = imgC25Fc2Cd85D944Ef9C46F4346E93C234Webp as unknown as string;
 
 function DivDivDivSc1Vbm34Q1() {
   return (
     <div className="h-[380px] relative rounded-[16px] shrink-0 w-[700px]" data-name="div.div__Div-sc-1vbm34q-0" style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 700 380\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(35 19 -35 19 350 190)\\'><stop stop-color=\\'rgba(165,239,255,0.2)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(236,183,210,0.043)\\' offset=\\'0.7708\\'/><stop stop-color=\\'rgba(70,144,213,0)\\' offset=\\'1\\'/></radialGradient></defs></svg>')" }}>
       <div aria-hidden="true" className="absolute border-2 border-[rgba(255,255,255,0.59)] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)]" />
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[301px] left-1/2 rounded-[8px] shadow-[0px_0px_10px_0px_rgba(165,171,192,0.3),0px_2px_2px_0px_rgba(165,171,192,0.6),0px_4px_4px_0px_rgba(165,171,192,0.6),0px_16px_16px_0px_rgba(165,171,192,0.6),0px_32px_32px_0px_rgba(165,171,192,0.6)] top-[calc(50%-10.5px)] w-[575px]" data-name="c25fc2cd-85d9-44ef-9c46-f4346e93c234.webp">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src={imgC25Fc2Cd85D944Ef9C46F4346E93C234Webp} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src={imgC25Fc2Cd85D944Ef9C46F4346E93C234WebpSrc} />
       </div>
     </div>
   );

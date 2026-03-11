@@ -25,6 +25,25 @@ import monteOfelioBarImage from "figma:asset/a1e43a0ca271ca27ec555aa2b403a94e786
 import monteOfelioNewsImage from "figma:asset/d6e8abf341447412a4167b69730c8988829f7af0.png";
 import monteOfelioLocationImage from "figma:asset/e64fabfbb0ba316f86fd5b115ed2ccaa77c94550.png";
 
+const unFp2030ImageSrc = unFp2030Image as unknown as string;
+const mpaOnlineImageSrc = mpaOnlineImage as unknown as string;
+const jewelrySketchImageSrc = jewelrySketchImage as unknown as string;
+const beOriginalToursImageSrc = beOriginalToursImage as unknown as string;
+const beOriginalToursCoverImageSrc = beOriginalToursCoverImage as unknown as string;
+const smileForYouImageSrc = smileForYouImage as unknown as string;
+const hoffmannTechnikImageSrc = hoffmannTechnikImage as unknown as string;
+const hubspotCrmImageSrc = hubspotCrmImage as unknown as string;
+const wickieImageSrc = wickieImage as unknown as string;
+const digidogThreejsImageSrc = digidogThreejsImage as unknown as string;
+const jobsvsImageSrc = jobsvsImage as unknown as string;
+const cibariaItalianaImageSrc = cibariaItalianaImage as unknown as string;
+const cibariaItalianaBolognaImageSrc = cibariaItalianaBolognaImage as unknown as string;
+const cibariaItalianaServicesImageSrc = cibariaItalianaServicesImage as unknown as string;
+const cibariaItalianaMarioImageSrc = cibariaItalianaMarioImage as unknown as string;
+const monteOfelioBarImageSrc = monteOfelioBarImage as unknown as string;
+const monteOfelioNewsImageSrc = monteOfelioNewsImage as unknown as string;
+const monteOfelioLocationImageSrc = monteOfelioLocationImage as unknown as string;
+
 export const projects: ProjectCardData[] = [
   /* ─── Web Design & Development ─── */
   {
@@ -46,7 +65,7 @@ export const projects: ProjectCardData[] = [
       "Complex global health data needed to be presented in an accessible, engaging way that would resonate with a worldwide audience and drive awareness for the FP2030 initiative.",
     solution:
       "A visually stunning website combining interactive Highcharts data visualizations, captivating parallax animations, and user-centric design to make complex data both comprehensible and memorable.",
-    image: unFp2030Image,
+    image: unFp2030ImageSrc,
     year: 2023,
     slug: "united-nations-fp2030",
     service: "Web Design & Development",
@@ -73,7 +92,7 @@ export const projects: ProjectCardData[] = [
       "Medical assistants lacked a dedicated, structured platform to learn essential clinical skills through video-based education.",
     solution:
       "A fullstack streaming platform built with Next.js and Strapi, featuring Vimeo video integration, MongoDB-powered search, and a user-friendly interface designed in Figma.",
-    image: mpaOnlineImage,
+    image: mpaOnlineImageSrc,
     year: 2024,
     slug: "mpa-online",
     service: "Web Design & Development",
@@ -212,7 +231,7 @@ export const projects: ProjectCardData[] = [
       "Outdated website with a low 5% conversion rate — poor mobile experience despite majority mobile traffic, and limited SEO visibility for patient acquisition.",
     solution:
       "Complete website redesign with mobile-first approach, SEO-optimized landing pages, and conversion-focused design — resulting in a 120% conversion rate increase to 11%.",
-    image: smileForYouImage,
+    image: smileForYouImageSrc,
     year: 2023,
     slug: "smileforyou",
     service: "Web Design & Development",
@@ -239,7 +258,7 @@ export const projects: ProjectCardData[] = [
       "A precision engineering company needed a sophisticated digital presence that could showcase their complex service portfolio in an engaging, interactive way while managing a multi-team development process.",
     solution:
       "Fullstack WordPress website with custom jQuery animations, interactive bubble-based service visualization, cards navigation, and PHP backend — delivered through structured project management across a 4-person team.",
-    image: hoffmannTechnikImage,
+    image: hoffmannTechnikImageSrc,
     year: 2023,
     slug: "technik-hoffmann",
     service: "Web Design & Development",
@@ -266,7 +285,7 @@ export const projects: ProjectCardData[] = [
       "An outdated website that no longer reflected the agency's expertise in digital marketing — lacking modern design, responsiveness, and visual appeal to attract potential clients.",
     solution:
       "Full website redesign with a clean, responsive WordPress build that preserves the client's brand identity while delivering a compelling, modern digital presence worthy of a marketing agency.",
-    image: wickieImage,
+    image: wickieImageSrc,
     year: 2022,
     slug: "wickie-agency",
     service: "Web Design & Development",
@@ -293,7 +312,7 @@ export const projects: ProjectCardData[] = [
       "Three.js animations conflicted with Elementor's rendering pipeline — causing layout breaks, performance issues, and plugin incompatibilities that required deep manual code resolution.",
     solution:
       "Separate Three.js development, staged integration, manual codebase adjustments to resolve conflicts, and rigorous cross-browser testing — resulting in a smooth 3D experience with full Elementor compatibility.",
-    image: digidogThreejsImage,
+    image: digidogThreejsImageSrc,
     year: 2023,
     slug: "digidog-threejs",
     service: "Web Design & Development",
@@ -320,7 +339,7 @@ export const projects: ProjectCardData[] = [
       "A recruitment agency needed their provided design implemented into a functional, SEO-optimized website with automated job listing management to avoid manual data entry.",
     solution:
       "Responsive website implementation with Personio API integration for automatic job display, combined with comprehensive SEO services including speed optimization and keyword research.",
-    image: jobsvsImage,
+    image: jobsvsImageSrc,
     year: 2022,
     slug: "jobsvs-recruitment",
     service: "Web Design & Development",
@@ -347,14 +366,14 @@ export const projects: ProjectCardData[] = [
       "An authentic Italian restaurant in Vienna needed a strong digital presence to showcase their unique culinary experience, sell premium imported Italian products online, and enable easy table and course bookings.",
     solution:
       "An elegant, multi-functional website combining eCommerce for Italian products, online table reservations, culinary course bookings, and a brand-true design — with ongoing digital marketing support that contributed to franchise expansion into Germany.",
-    image: cibariaItalianaImage,
+    image: cibariaItalianaImageSrc,
     year: 2021,
     slug: "cibaria-italiana",
     service: "Web Design & Development",
     category: "web",
     client: "Cibaria Italiana",
     link: "/services/web-design",
-    gallery: [cibariaItalianaBolognaImage, cibariaItalianaServicesImage, cibariaItalianaMarioImage],
+    gallery: [cibariaItalianaBolognaImageSrc, cibariaItalianaServicesImageSrc, cibariaItalianaMarioImageSrc],
   },
   {
     title: "Monte Ofelio Group – Multi-Brand Web Strategy",
@@ -375,14 +394,14 @@ export const projects: ProjectCardData[] = [
       "A growing Italian food group in Vienna needed a cohesive multi-brand digital presence to support expansion into new locations, enable online product sales, and maintain their authentic Italian identity across multiple brands.",
     solution:
       "Three strategically aligned websites with online reservation, e-commerce capabilities, and integrated social media management — driving increased sales and exceeding initial project goals through collaborative digital marketing.",
-    image: monteOfelioBarImage,
+    image: monteOfelioBarImageSrc,
     year: 2021,
     slug: "monte-ofelio-group",
     service: "Web Design & Development",
     category: "web",
     client: "Monte Ofelio Group",
     link: "/services/web-design",
-    gallery: [monteOfelioNewsImage, monteOfelioLocationImage],
+    gallery: [monteOfelioNewsImageSrc, monteOfelioLocationImageSrc],
   },
 
   /* ─── AI Solutions & Automation ─── */
@@ -405,7 +424,7 @@ export const projects: ProjectCardData[] = [
       "Manual jewelry sketch creation from email requests consumed 5–10 hours daily — slow, costly, and impossible to scale.",
     solution:
       "End-to-end AI automation in Make that reads emails, extracts requirements, and generates custom jewelry sketches 24/7 with zero manual effort.",
-    image: jewelrySketchImage,
+    image: jewelrySketchImageSrc,
     year: 2024,
     slug: "ai-jewelry-sketch",
     service: "AI Solutions & Automation",
@@ -433,7 +452,7 @@ export const projects: ProjectCardData[] = [
     solution:
       "AI-powered training plan engine with adaptive workouts, real-time tracking, gamification elements, and wearable integration.",
     image:
-      "https://images.unsplash.com/photo-1769893841740-fc98ce39a3cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXRuZXNzJTIwYXBwJTIwbW9iaWxlJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc3MjI2MTY0N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      "https://images.unsplash.com/photo-1769893841740-fc98ce39a3cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXRnZXNzJTIwYXBwJTIwbW9iaWxlJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc3MjI2MTY0N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     year: 2025,
     slug: "fitpulse-app",
     service: "AI Solutions & Automation",
@@ -518,7 +537,7 @@ export const projects: ProjectCardData[] = [
       "Five branches operating with different workflows, no centralized CRM, and complex integration requirements between HubSpot, the orthodontic platform, and the website.",
     solution:
       "Enterprise HubSpot CRM implementation with unified processes, IVORIS API integration, Make.com automation, custom deal pipelines, and comprehensive training programs across all branches.",
-    image: hubspotCrmImage,
+    image: hubspotCrmImageSrc,
     year: 2024,
     slug: "hubspot-dental-crm",
     service: "Custom Software",
@@ -545,7 +564,7 @@ export const projects: ProjectCardData[] = [
       "Manual booking processing, scattered scheduling across spreadsheets, and no centralized view of guides, tours, or payments — leading to errors and inefficiency.",
     solution:
       "End-to-end automated architecture using Make.com, Python email extraction, MongoDB storage, Discord notifications, and a custom Next.js dashboard for full operational control.",
-    image: beOriginalToursCoverImage,
+    image: beOriginalToursCoverImageSrc,
     year: 2024,
     slug: "beoriginaltours-operations",
     service: "Custom Software",

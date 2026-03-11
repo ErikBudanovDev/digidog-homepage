@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 import path from "path";
 import fs from "fs";
-import type { Compiler } from "webpack";
+// webpack types available at build time via next
 
 // Virtual modules directory for figma:asset imports
 // Use a directory outside .next so it works on Vercel builds

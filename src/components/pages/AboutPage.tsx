@@ -21,6 +21,7 @@ import svgPaths from "@/imports/svg-ly9usgqlzn";
 
 /* Figma assets */
 import teamPhoto from "figma:asset/662435b77afb9fc5df300b8a814a4e93a31c97ee.png";
+const teamPhotoSrc = teamPhoto as unknown as string;
 import { SEO } from "@/components/SEO";
 import { useTranslation } from "@/i18n/i18n-context";
 import enPg from "@/translations/pages/english.json";
@@ -410,7 +411,7 @@ function MissionSection() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/30">
               <img
-                src={teamPhoto}
+                src={teamPhotoSrc}
                 alt="Digidog Team"
                 className="w-full aspect-[4/3] object-cover"
               />

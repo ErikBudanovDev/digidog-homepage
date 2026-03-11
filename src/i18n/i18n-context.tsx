@@ -9,9 +9,12 @@ import { tr } from "./locales/tr";
 export type Locale = "DE" | "EN" | "TR";
 
 /* All locale bundles share the same shape */
-export type TranslationBundle = typeof de;
+type DeepStringify<T> = {
+  [K in keyof T]: T[K] extends string ? string : T[K] extends object ? DeepStringify<T[K]> : T[K];
+};
+export type TranslationBundle = DeepStringify<typeof de>;
 
-const bundles: Record<Locale, TranslationBundle> = { DE: de, EN: en, TR: tr };
+const bundles: Record<Locale, TranslationBundle> = { DE: de as TranslationBundle, EN: en, TR: tr as TranslationBundle };
 
 interface I18nContextValue {
   locale: Locale;

@@ -5,7 +5,9 @@ import { colors, fonts } from "./ui/brand";
 import { SectionContainer } from "./ui/section";
 import waveBorder from "figma:asset/1ebd5f724dd0e36f61d36898a311a05f4a075dc1.png";
 import dogLogo from "figma:asset/ebd194b188260fe197aaf1d96b5b4f12cd875dbf.png";
+const dogLogoSrc = dogLogo as unknown as string;
 import digiDogLogo from "figma:asset/58f2cbf574c1863d80d69d3d0c78e56a09d857bc.png";
+const digiDogLogoSrc = digiDogLogo as unknown as string;
 import { useTranslation } from "@/i18n/i18n-context";
 import enT from "@/translations/english.json";
 import deT from "@/translations/german.json";
@@ -274,7 +276,7 @@ export function Footer() {
               {/* Center – Dog logo + Copyright + Legal links */}
               <div className="flex flex-col items-center gap-2 md:flex-row md:gap-3">
                 <img
-                  src={dogLogo}
+                  src={dogLogoSrc}
                   alt="DigiDog"
                   className="h-5 w-auto brightness-0 invert opacity-70"
                 />

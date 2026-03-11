@@ -154,7 +154,7 @@ function ServiceCard({
   index,
   isInView,
 }: {
-  service: (typeof services)[0];
+  service: (typeof services)[0] & { _learnMore?: string; _startProject?: string };
   index: number;
   isInView: boolean;
 }) {

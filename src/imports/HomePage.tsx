@@ -12,6 +12,18 @@ import imgEllipse3 from "figma:asset/bee0d66198ba8ce39053a625ec23a26b92575f01.pn
 import imgImg9092 from "figma:asset/60943bf61b864756cf066b33b037f361c78d9440.png";
 import { imgVector, imgGroup, imgGroup1, imgGroup2, imgGroup3, imgGroup4, imgGroup5, imgGroup6, imgGroup7, imgGroup8, imgGroup9, imgGroup10, imgGroup11, imgGroup12, imgGroup13, imgGroup14, imgGroup15, imgGroup16, imgGroup17, imgGroup18, imgGroup19, imgGroup20, imgGroup21, imgGroup22, imgGroup23, imgGroup24, imgGroup25, imgGroup26, imgGroup27, imgGroup28, imgGroup29, imgGroup30, imgGroup31, imgImg09091 } from "./svg-x3lif";
 
+const img8Bab10D3Ac1140Bd88A41131Bd903B4CWebpSrc = img8Bab10D3Ac1140Bd88A41131Bd903B4CWebp as unknown as string;
+const imgC25Fc2Cd85D944Ef9C46F4346E93C234WebpSrc = imgC25Fc2Cd85D944Ef9C46F4346E93C234Webp as unknown as string;
+const img48F98Ec7C3434A1CB051De9Bde87Ca58WebpSrc = img48F98Ec7C3434A1CB051De9Bde87Ca58Webp as unknown as string;
+const img9Dd949C6E9264Fd5A00EB35A3Ff53F9BWebpSrc = img9Dd949C6E9264Fd5A00EB35A3Ff53F9BWebp as unknown as string;
+const imgFeatureExplorerPngSrc = imgFeatureExplorerPng as unknown as string;
+const imgFeatureHistoryPngSrc = imgFeatureHistoryPng as unknown as string;
+const imgFeatureTvDashboardPngSrc = imgFeatureTvDashboardPng as unknown as string;
+const imgEllipse1Src = imgEllipse1 as unknown as string;
+const imgEllipse2Src = imgEllipse2 as unknown as string;
+const imgEllipse3Src = imgEllipse3 as unknown as string;
+const imgImg9092Src = imgImg9092 as unknown as string;
+
 function Group1() {
   return (
     <div className="absolute inset-[91.12%_1.26%_-52.98%_59.99%] opacity-10" data-name="Group">
@@ -1591,7 +1603,7 @@ function DivDivDivSc1Vbm34Q() {
   return (
     <div className="absolute border-2 border-[rgba(255,255,255,0.59)] border-solid h-[380px] left-[-419px] opacity-50 rounded-[16px] shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] top-[4213.53px] w-[700px]" data-name="div.div__Div-sc-1vbm34q-0" style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 700 380\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(35 19 -35 19 350 190)\\'><stop stop-color=\\'rgba(165,239,255,0.2)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(236,183,210,0.043)\\' offset=\\'0.7708\\'/><stop stop-color=\\'rgba(70,144,213,0)\\' offset=\\'1\\'/></radialGradient></defs></svg>')" }}>
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[301px] left-1/2 opacity-50 rounded-[8px] shadow-[0px_0px_10px_0px_rgba(165,171,192,0.3),0px_2px_2px_0px_rgba(165,171,192,0.6),0px_4px_4px_0px_rgba(165,171,192,0.6),0px_16px_16px_0px_rgba(165,171,192,0.6),0px_32px_32px_0px_rgba(165,171,192,0.6)] top-[calc(50%-11px)] w-[574px]" data-name="8bab10d3-ac11-40bd-88a4-1131bd903b4c.webp">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src={img8Bab10D3Ac1140Bd88A41131Bd903B4CWebp} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src={img8Bab10D3Ac1140Bd88A41131Bd903B4CWebpSrc} />
       </div>
     </div>
   );
@@ -1602,7 +1614,7 @@ function DivDivDivSc1Vbm34Q2() {
     <div className="h-[380px] relative rounded-[16px] shrink-0 w-[700px]" data-name="div.div__Div-sc-1vbm34q-0" style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 700 380\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(35 19 -35 19 350 190)\\'><stop stop-color=\\'rgba(165,239,255,0.2)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(236,183,210,0.043)\\' offset=\\'0.7708\\'/><stop stop-color=\\'rgba(70,144,213,0)\\' offset=\\'1\\'/></radialGradient></defs></svg>')" }}>
       <div aria-hidden="true" className="absolute border-2 border-[rgba(255,255,255,0.59)] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)]" />
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[301px] left-1/2 rounded-[8px] shadow-[0px_0px_10px_0px_rgba(165,171,192,0.3),0px_2px_2px_0px_rgba(165,171,192,0.6),0px_4px_4px_0px_rgba(165,171,192,0.6),0px_16px_16px_0px_rgba(165,171,192,0.6),0px_32px_32px_0px_rgba(165,171,192,0.6)] top-[calc(50%-10.5px)] w-[575px]" data-name="c25fc2cd-85d9-44ef-9c46-f4346e93c234.webp">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src={imgC25Fc2Cd85D944Ef9C46F4346E93C234Webp} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src={imgC25Fc2Cd85D944Ef9C46F4346E93C234WebpSrc} />
       </div>
     </div>
   );
@@ -1700,7 +1712,7 @@ function DivDivDivSc1Vbm34Q5() {
   return (
     <div className="absolute border-2 border-[rgba(255,255,255,0.59)] border-solid h-[380px] left-[1053px] opacity-50 right-[167px] rounded-[16px] shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] top-[4213.53px]" data-name="div.div__Div-sc-1vbm34q-0" style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 700 380\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(35 19 -35 19 350 190)\\'><stop stop-color=\\'rgba(165,239,255,0.2)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(236,183,210,0.043)\\' offset=\\'0.7708\\'/><stop stop-color=\\'rgba(70,144,213,0)\\' offset=\\'1\\'/></radialGradient></defs></svg>')" }}>
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[301px] left-1/2 opacity-50 rounded-[8px] shadow-[0px_0px_10px_0px_rgba(165,171,192,0.3),0px_2px_2px_0px_rgba(165,171,192,0.6),0px_4px_4px_0px_rgba(165,171,192,0.6),0px_16px_16px_0px_rgba(165,171,192,0.6),0px_32px_32px_0px_rgba(165,171,192,0.6)] top-[calc(50%-11px)] w-[574px]" data-name="48f98ec7-c343-4a1c-b051-de9bde87ca58.webp">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src={img48F98Ec7C3434A1CB051De9Bde87Ca58Webp} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src={img48F98Ec7C3434A1CB051De9Bde87Ca58WebpSrc} />
       </div>
     </div>
   );
@@ -1711,7 +1723,7 @@ function DivDivDivSc1Vbm34Q6() {
     <div className="absolute border-2 border-[rgba(255,255,255,0.59)] border-solid h-[380px] left-[1789px] opacity-50 rounded-[16px] shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] top-[4213.53px] w-[700px]" data-name="div.div__Div-sc-1vbm34q-0" style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 700 380\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(35 19 -35 19 350 190)\\'><stop stop-color=\\'rgba(165,239,255,0.2)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(236,183,210,0.043)\\' offset=\\'0.7708\\'/><stop stop-color=\\'rgba(70,144,213,0)\\' offset=\\'1\\'/></radialGradient></defs></svg>')" }}>
       <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[301px] left-1/2 opacity-50 rounded-[8px] shadow-[0px_0px_10px_0px_rgba(165,171,192,0.3),0px_2px_2px_0px_rgba(165,171,192,0.6),0px_4px_4px_0px_rgba(165,171,192,0.6),0px_16px_16px_0px_rgba(165,171,192,0.6),0px_32px_32px_0px_rgba(165,171,192,0.6)] top-[calc(50%-11px)] w-[575px]" data-name="9dd949c6-e926-4fd5-a00e-b35a3ff53f9b.webp">
         <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[8px]">
-          <img alt="" className="absolute left-0 max-w-none size-full top-0" src={img9Dd949C6E9264Fd5A00EB35A3Ff53F9BWebp} />
+          <img alt="" className="absolute left-0 max-w-none size-full top-0" src={img9Dd949C6E9264Fd5A00EB35A3Ff53F9BWebpSrc} />
         </div>
       </div>
     </div>
@@ -6753,7 +6765,7 @@ function Frame61() {
       <div aria-hidden="true" className="absolute border border-black border-solid inset-[-1px]" />
       <div className="h-[294.39px] relative rounded-[12px] shrink-0 w-[367.98px]" data-name="feature-explorer.png">
         <div className="absolute inset-0 overflow-hidden rounded-[12px]">
-          <img alt="" className="absolute left-0 max-w-none size-full top-0" src={imgFeatureExplorerPng} />
+          <img alt="" className="absolute left-0 max-w-none size-full top-0" src={imgFeatureExplorerPngSrc} />
         </div>
         <div aria-hidden="true" className="absolute border border-solid border-white inset-[-1px] rounded-[13px]" />
       </div>
@@ -6803,7 +6815,7 @@ function DivImageStyledBorderRadiusScQk63Nk1() {
     <div className="h-[294.39px] max-h-[294.3900146484375px] max-w-[367.9800109863281px] overflow-clip relative rounded-[8px] shrink-0 w-[367.98px] z-[2]" data-name="div.image__StyledBorderRadius-sc-qk63nk-2">
       <div className="absolute h-[294.39px] left-0 right-0 rounded-[12px] top-0" data-name="feature-history.png">
         <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[12px]">
-          <img alt="" className="absolute left-0 max-w-none size-full top-0" src={imgFeatureHistoryPng} />
+          <img alt="" className="absolute left-0 max-w-none size-full top-0" src={imgFeatureHistoryPngSrc} />
         </div>
       </div>
     </div>
@@ -6854,7 +6866,7 @@ function DivImageStyledBorderRadiusScQk63Nk2() {
     <div className="h-[294.39px] max-h-[294.3900146484375px] max-w-[367.9800109863281px] overflow-clip relative rounded-[8px] shrink-0 w-[367.98px] z-[2]" data-name="div.image__StyledBorderRadius-sc-qk63nk-2">
       <div className="absolute h-[294.39px] left-0 right-0 rounded-[12px] top-0" data-name="feature-tv-dashboard.png">
         <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[12px]">
-          <img alt="" className="absolute left-0 max-w-none size-full top-0" src={imgFeatureTvDashboardPng} />
+          <img alt="" className="absolute left-0 max-w-none size-full top-0" src={imgFeatureTvDashboardPngSrc} />
         </div>
       </div>
     </div>
@@ -14236,7 +14248,7 @@ function Group462() {
     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
       <Group443 />
       <div className="col-1 ml-0 mt-[3px] relative row-1 size-[47.217px]">
-        <img alt="" className="absolute block max-w-none size-full" height="47.217" src={imgEllipse1} width="47.217" />
+        <img alt="" className="absolute block max-w-none size-full" height="47.217" src={imgEllipse1Src} width="47.217" />
       </div>
     </div>
   );
@@ -14616,7 +14628,7 @@ function Frame80() {
   return (
     <div className="content-stretch flex gap-[16px] items-start relative shrink-0">
       <div className="relative shrink-0 size-[47.217px]">
-        <img alt="" className="absolute block max-w-none size-full" height="47.217" src={imgEllipse2} width="47.217" />
+        <img alt="" className="absolute block max-w-none size-full" height="47.217" src={imgEllipse2Src} width="47.217" />
       </div>
       <Group444 />
     </div>
@@ -14997,7 +15009,7 @@ function Frame84() {
   return (
     <div className="content-stretch flex gap-[16px] items-start relative shrink-0">
       <div className="relative shrink-0 size-[47.217px]">
-        <img alt="" className="absolute block max-w-none size-full" height="47.217" src={imgEllipse3} width="47.217" />
+        <img alt="" className="absolute block max-w-none size-full" height="47.217" src={imgEllipse3Src} width="47.217" />
       </div>
       <Group445 />
     </div>
@@ -20302,7 +20314,7 @@ function MaskGroup() {
   return (
     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid place-items-start relative shrink-0" data-name="Mask group">
       <div className="col-1 h-[214px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[1px_1px] mask-size-[143px_143px] ml-[-1px] mt-[-1px] relative row-1 w-[144px]" data-name="IMG_0909 (1)" style={{ maskImage: `url('${imgImg09091}')` }}>
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg9092} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg9092Src} />
       </div>
     </div>
   );

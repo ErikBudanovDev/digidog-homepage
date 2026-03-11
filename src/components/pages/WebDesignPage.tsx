@@ -3,6 +3,7 @@ import { SectionContainer, SectionBadge, SectionHeading } from "@/components/ui/
 import { PrimaryButton, ArrowIcon, LinkWithArrow, openBookingModal } from "@/components/ui/buttons";
 import { HeroLayout } from "@/components/ui/hero-layout";
 import webDesignHeroImage from "figma:asset/f7a8d04658541304c4fc27c4c302b2ecbe7efaef.png";
+const webDesignHeroImageSrc = webDesignHeroImage as unknown as string;
 import { useRef, useEffect } from "react";
 import { motion, useInView } from "motion/react";
 import { Paintbrush, Code, Layers, Smartphone, Server, Gauge, Shield, Wrench, Check, ArrowRight } from "lucide-react";
@@ -311,7 +312,7 @@ function ServiceHero() {
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           >
             <img
-              src={webDesignHeroImage}
+              src={webDesignHeroImageSrc}
               alt="Website Creation and Analytics"
               className="w-full h-full object-contain"
             />

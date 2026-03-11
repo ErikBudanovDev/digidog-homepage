@@ -3,6 +3,7 @@ import { ArrowRight, X, Calendar, Clock } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
 import { motion, AnimatePresence } from "motion/react";
 import erikPhoto from "figma:asset/c28a01d5ca35b1e207da7537c250359543a3aa75.png";
+const erikPhotoSrc = erikPhoto as unknown as string;
 import { Spaceship, Planet, StarShape } from "./CosmicElements";
 import { colors, fonts } from "./ui/brand";
 import { SectionContainer } from "./ui/section";
@@ -192,7 +193,7 @@ export function ContactCTA() {
                 />
                 <div className="relative w-[80px] h-[80px] md:w-[96px] md:h-[96px] rounded-full overflow-hidden border-[3px] border-white/20">
                   <img
-                    src={erikPhoto}
+                    src={erikPhotoSrc}
                     alt="Erik Budanov"
                     className="w-full h-full object-cover"
                   />

@@ -235,6 +235,7 @@ function FilterTabBar({
  * ───────────────────────────────────────────── */
 
 function ProjectsGrid({ filter }: { filter: FilterKey }) {
+  const { locale } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px 0px" });
 
