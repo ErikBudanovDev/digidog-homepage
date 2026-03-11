@@ -1,8 +1,16 @@
-import { Helmet } from "react-helmet-async";
+"use client";
+
+/**
+ * SEO component — NO-OP in Next.js
+ * 
+ * In Next.js, all SEO metadata is handled by the `metadata` export
+ * in each page.tsx file. This component exists only to prevent
+ * import errors in page components that still reference it.
+ */
 
 interface SEOProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   canonical?: string;
   ogImage?: string;
   noindex?: boolean;
@@ -13,47 +21,8 @@ const SITE_NAME = "Digidog";
 const BASE_URL = "https://digidog.org";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/og-default.jpg`;
 
-export function SEO({
-  title,
-  description,
-  canonical,
-  ogImage,
-  noindex = false,
-  schemaMarkup,
-}: SEOProps) {
-  const fullTitle = `${title} | ${SITE_NAME}`;
-  const canonicalUrl = canonical ? `${BASE_URL}${canonical}` : undefined;
-  const image = ogImage || DEFAULT_OG_IMAGE;
-
-  return (
-    <Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      {noindex && <meta name="robots" content="noindex, nofollow" />}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:type" content="website" />
-      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-      <meta property="og:site_name" content={SITE_NAME} />
-
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-
-      {/* Schema.org JSON-LD */}
-      {schemaMarkup && (
-        <script type="application/ld+json">
-          {JSON.stringify(schemaMarkup)}
-        </script>
-      )}
-    </Helmet>
-  );
+export function SEO(_props: SEOProps) {
+  return null;
 }
 
 /* ─── Pre-built Schema Markup ─── */
