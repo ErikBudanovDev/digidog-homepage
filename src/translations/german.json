@@ -1,0 +1,148 @@
+{
+  "seo": {
+    "home": {
+      "title": "KI Agentur & Webentwicklung für mittelständische Unternehmen!",
+      "description": "Digidog ist Ihre KI-Agentur und Full-Stack-Webentwicklungsagentur. Wir entwickeln KI-Automatisierungen, MCP-Integrationen, Websites und Software für Unternehmen mit 50-200 Mitarbeitern.",
+      "ogTitle": "KI Agentur & Webentwicklung | Digidog",
+      "ogDescription": "KI-Automatisierungen, MCP-Integrationen, Webentwicklung und Software für mittelständische Unternehmen."
+    },
+    "aiIntegration": {
+      "title": "KI Agentur | KI-Automatisierung & Beratung für Unternehmen!",
+      "description": "KI-Agentur für den Mittelstand. Wir automatisieren 30-60% Ihrer repetitiven Arbeit durch KI-Workflows, CRM-Integration, MCP-Server und Prozessautomatisierung.",
+      "ogTitle": "KI Agentur | KI-Automatisierung & Beratung | Digidog",
+      "ogDescription": "Wir automatisieren 30-60% repetitiver Arbeit mit KI-Workflows und MCP-Servern."
+    },
+    "aiSolutions": {
+      "title": "KI-Lösungen & Machine Learning Entwicklung | KI Beratung!",
+      "description": "Individuelle KI-Entwicklung: Machine Learning, NLP, Computer Vision, Predictive Analytics und LLM-Integration. Maßgeschneiderte KI-Lösungen für Ihr Unternehmen.",
+      "ogTitle": "KI-Lösungen & Machine Learning | Digidog",
+      "ogDescription": "ML-Modelle, NLP, Computer Vision und LLM-Integration für Unternehmen."
+    },
+    "webDesign": {
+      "title": "Webdesign & WordPress Agentur | Full-Stack Webentwicklung!",
+      "description": "Webdesign-Agentur und WordPress-Entwicklung für den Mittelstand. Responsive, performante Websites mit React, Next.js und WordPress. Wartung & Support inklusive.",
+      "ogTitle": "Webdesign & WordPress Agentur | Digidog",
+      "ogDescription": "Maßgeschneiderte Websites, WordPress-Entwicklung und laufende Wartung."
+    },
+    "customSoftware": {
+      "title": "Individuelle Softwareentwicklung | Interne Tools & SaaS!",
+      "description": "Softwareentwicklung für mittelständische Unternehmen. Interne Tools, API-Integrationen, SaaS-Plattformen, Dashboards und Datenbankarchitektur.",
+      "ogTitle": "Individuelle Softwareentwicklung | Digidog",
+      "ogDescription": "Interne Tools, SaaS-Plattformen, API-Integrationen — Software, die Ihre Systeme verbindet."
+    },
+    "about": {
+      "title": "Über Digidog | KI-Beratung & Webentwicklungs-Team!",
+      "description": "Lernen Sie das Digidog-Team kennen. KI-Beratung und Webentwicklung für mittelständische Unternehmen seit 2021."
+    },
+    "contact": {
+      "title": "Kontakt | Kostenlose KI- & Webentwicklungs-Beratung!",
+      "description": "Kontaktieren Sie Digidog für eine kostenlose Beratung zu KI-Automatisierung, Webentwicklung oder Individualsoftware. Antwort innerhalb von 24 Stunden."
+    },
+    "portfolio": {
+      "title": "Portfolio | KI-Automatisierung & Webentwicklungs-Projekte!",
+      "description": "Echte Fallstudien aus unseren KI-Automatisierungs-, Webentwicklungs- und Softwareprojekten mit messbaren Ergebnissen."
+    },
+    "blog": {
+      "title": "Blog — KI-Automatisierung, Webentwicklung & Software-Insights!",
+      "description": "Fachartikel zu KI-Automatisierung, Webentwicklung, Individualsoftware und Digitalstrategie für mittelständische Unternehmen."
+    },
+    "imprint": {
+      "title": "Impressum!",
+      "description": "Impressum und Unternehmensinformationen der Digidog LLC."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung!",
+      "description": "Datenschutzerklärung und DSGVO-Informationen der Digidog LLC."
+    },
+    "terms": {
+      "title": "Allgemeine Geschäftsbedingungen!",
+      "description": "AGB und allgemeine Geschäftsbedingungen der Digidog LLC."
+    }
+  },
+  "hero": {
+    "title1": "KI-Agentur, die Ihre!",
+    "title2": "digitale Präsenz rockt!",
+    "description": "KI-Automatisierung, Webentwicklung und individuelle Software für mittelständische Unternehmen. Wir bauen intelligente Systeme, die mehr Traffic, mehr Leads und mehr Umsatz bringen — von der Strategie bis zur Produktion.",
+    "cta": "Beratung buchen"
+  },
+  "nav": {
+    "home": "Startseite",
+    "portfolio": "Portfolio",
+    "services": "Dienstleistungen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "blog": "Blog",
+    "allServices": "Alle Dienstleistungen",
+    "webDesign": "Webdesign & Entwicklung",
+    "aiSolutions": "KI-Lösungen & Automatisierung",
+    "customSoftware": "Software & Integrationen"
+  },
+  "servicesSection": {
+    "badge": "Unsere Dienstleistungen",
+    "title1": "Alles was Sie brauchen, !",
+    "title2": "um digital zu wachsen!",
+    "subtitle": "Von der KI-Strategie über Webdesign bis zur individuellen Software — wir begleiten Sie vom Konzept bis zum Ergebnis.",
+    "webTitle": "Webdesign & Full-Stack Entwicklung!",
+    "webSubtitle": "Maßgeschneiderte Websites und Web-Applikationen für Performance, Skalierbarkeit und Wachstum.",
+    "webResult": "Eine schnelle, sichere und skalierbare digitale Plattform, die Ihr Business langfristig unterstützt.",
+    "aiTitle": "KI-Lösungen & Automatisierung!",
+    "aiSubtitle": "Integrieren Sie KI in Ihre Workflows, um Aufgaben zu automatisieren, Effizienz zu steigern und neue Möglichkeiten zu erschließen.",
+    "aiResult": "Weniger manuelle Arbeit, schnellere Abläufe und intelligentere Geschäftsprozesse dank KI.",
+    "softwareTitle": "Software & Integrationen!",
+    "softwareSubtitle": "Verbinden Sie Ihre Systeme mit maßgeschneiderter Software, APIs und Automatisierungslösungen.",
+    "softwareResult": "Vernetzte Systeme, die Engpässe beseitigen und Ihr Wachstum ermöglichen.",
+    "learnMore": "Mehr erfahren",
+    "startProject": "Projekt starten"
+  },
+  "contactCta": {
+    "title": "Lassen Sie uns Ihr nächstes Projekt besprechen!",
+    "subtitle": "Wir analysieren Ihre Website und erstellen einen ersten Entwurf!",
+    "cta": "Buchen Sie Ihre kostenlose Erstberatung!",
+    "founderName": "Erik Budanov",
+    "founderRole": "Gründer & Lead Developer",
+    "thankYou": "Vielen Dank!",
+    "thankYouSub": "Wir melden uns in Kürze bei Ihnen.",
+    "bookConsultation": "Beratung buchen",
+    "duration": "30 Minuten • Kostenlos",
+    "formName": "Ihr Name",
+    "formEmail": "E-Mail-Adresse",
+    "formPhone": "Telefonnummer (optional)",
+    "formMessage": "Ihre Nachricht",
+    "formSubmit": "Termin anfragen"
+  },
+  "ctaBanner": {
+    "title": "Wir freuen uns auf Ihre Nachricht!",
+    "subtitle": "Hören Sie nie auf zu gestalten! Lassen Sie Ihre kreative Energie jederzeit fließen.",
+    "cta": "Termin vereinbaren"
+  },
+  "footer": {
+    "tagline": "Folgen Sie uns auf Social Media für News und Inspiration.",
+    "quickLinks": "Schnelllinks",
+    "ourServices": "Dienstleistungen",
+    "legal": "Rechtliches",
+    "contact": "Kontakt",
+    "home": "Startseite",
+    "about": "Über uns",
+    "portfolio": "Portfolio",
+    "services": "Dienstleistungen",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "rights": "Alle Rechte vorbehalten"
+  },
+  "common": {
+    "services": "Dienstleistungen",
+    "learnMore": "Mehr erfahren",
+    "viewProject": "Zum Projekt",
+    "viewAllProjects": "Alle Projekte ansehen",
+    "startProject": "Projekt starten",
+    "startProjectNow": "Jetzt Projekt starten",
+    "discussProject": "Projekt besprechen",
+    "readMore": "Weiterlesen",
+    "backToBlog": "← Zurück zum Blog",
+    "relatedArticles": "Verwandte Artikel",
+    "readyToStart": "Bereit, das in die Praxis umzusetzen?",
+    "bookConsultation": "Kostenlose Beratung buchen",
+    "bookConsultationCta": "Buchen Sie eine kostenlose Beratung und lassen Sie uns besprechen, wie wir Ihrem Unternehmen helfen können."
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "page": {
+    "heroTitle": "Unser Portfolio –\nProjekte, die begeistern!",
+    "heroDescription": "Entdecken Sie unsere erfolgreich abgeschlossenen Projekte in Webentwicklung, KI-Integration und individueller Softwareentwicklung. Jedes Projekt erzählt seine eigene Erfolgsgeschichte.",
+    "heroBadge": "Unsere Arbeit",
+    "statsTotalProjects": "Projekte gesamt",
+    "statsWebDevelopment": "Webentwicklung",
+    "statsAiIntegration": "KI-Integration",
+    "statsCustomSoftware": "Individualsoftware",
+    "sectionBadge": "Alle Projekte",
+    "sectionTitle": "Projekte nach Kategorie!",
+    "sectionSubtitle": "Filtern Sie nach Kategorie, um die relevantesten Projekte für Sie zu finden.",
+    "filterAll": "Alle Projekte",
+    "filterWeb": "Webentwicklung",
+    "filterAi": "KI-Integration",
+    "filterSoftware": "Individualsoftware",
+    "noProjects": "Keine Projekte in dieser Kategorie gefunden."
+  },
+  "detail": {
+    "overview": "Überblick",
+    "projectGoal": "Projektziel",
+    "improvements": "Wichtigste Verbesserungen",
+    "implementedImprovements": "Umgesetzte Verbesserungen",
+    "challenge": "Die Herausforderung",
+    "solution": "Die Lösung",
+    "gallery": "Projektgalerie",
+    "moreProjects": "Weitere Projekte",
+    "notFound": "Projekt nicht gefunden",
+    "notFoundSub": "Das angeforderte Projekt existiert nicht.",
+    "backToHomepage": "Zurück zur Startseite",
+    "year": "Jahr",
+    "service": "Dienstleistung",
+    "client": "Kunde"
+  },
+  "projects": {
+    "united-nations-fp2030": {
+      "title": "Vereinte Nationen – FP2030!",
+      "description": "Design-Implementierung für die FP2030-Website der Vereinten Nationen mit interaktiven Highcharts-Datenvisualisierungen und Parallax-Animationen.",
+      "overview": "Wir hatten die unglaubliche Möglichkeit, mit den Vereinten Nationen an der Entwicklung einer bemerkenswerten Website für FP2030 zusammenzuarbeiten.",
+      "goal": "Eine visuell beeindruckende, datengetriebene Website für die FP2030-Initiative der UN erstellen.",
+      "problem": "Komplexe globale Gesundheitsdaten mussten zugänglich und ansprechend für ein weltweites Publikum aufbereitet werden.",
+      "solution": "Eine visuell beeindruckende Website mit interaktiven Highcharts-Datenvisualisierungen und fesselnden Parallax-Animationen.",
+      "service": "Webdesign & Entwicklung",
+      "client": "Vereinte Nationen – FP2030"
+    },
+    "mpa-online": {
+      "title": "MPA.online Streaming-Plattform!",
+      "description": "Fullstack-Webanwendung für eine medizinische Bildungs-Streaming-Plattform mit Next.js, Strapi und MongoDB.",
+      "overview": "MPA.online ist eine Streaming-Plattform für medizinische Fachangestellte zum Lernen durch Videokurse.",
+      "goal": "Eine voll funktionsfähige Streaming-Plattform für medizinische Weiterbildung entwickeln.",
+      "problem": "Medizinische Fachangestellte hatten keine strukturierte Plattform für videobasierte Weiterbildung.",
+      "solution": "Eine Fullstack-Streaming-Plattform mit Next.js, Strapi, Vimeo-Integration und MongoDB-basierter Suche.",
+      "service": "Webdesign & Entwicklung",
+      "client": "MPA.online"
+    },
+    "miso-supermarket": {
+      "title": "Miso Supermarkt & Bäckerei!",
+      "description": "Modernes Webdesign und digitale Lösung für einen lokalen Supermarkt mit integriertem Online-Shop.",
+      "overview": "Miso ist ein familiengeführtes Unternehmen in Düsseldorf mit frischen Backwaren und asiatischen Lebensmitteln.",
+      "goal": "Eine professionelle Online-Präsenz mit integriertem Bestell- und Shopsystem aufbauen.",
+      "problem": "Keine Online-Präsenz; Kunden konnten nicht vorbestellen — lange Wartezeiten und Umsatzverluste.",
+      "solution": "Responsive Website mit integriertem Online-Shop, Echtzeit-Bestellsystem und Google Maps.",
+      "service": "Webdesign & Entwicklung",
+      "client": "Miso GmbH"
+    },
+    "techvision-dashboard": {
+      "title": "TechVision Dashboard!",
+      "description": "Komplettes Redesign eines Enterprise-Dashboards mit modernem UI/UX-Design und responsiver Darstellung.",
+      "overview": "TechVision ist ein wachsendes SaaS-Unternehmen für Echtzeit-Analytics mittelständischer Unternehmen.",
+      "goal": "Das Dashboard durch moderne Webentwicklung verbessern — Fokus auf Performance, Usability und Compliance.",
+      "problem": "Veraltetes Dashboard mit schlechter UX — Mitarbeiter brauchten zu lange für wichtige KPIs.",
+      "solution": "Komplett neues UI/UX-Design mit Echtzeit-Datenvisualisierung, rollenbasiertem Zugriff und Mobilansicht.",
+      "service": "Webdesign & Entwicklung",
+      "client": "TechVision AG"
+    },
+    "bold-ideas": {
+      "title": "Bold Ideas Movement!",
+      "description": "Kreative Markenstrategie und visuelles Storytelling für ein innovatives Startup.",
+      "overview": "Bold Ideas Movement ist ein kreatives Startup aus Berlin für nachhaltige Innovationen.",
+      "goal": "Eine starke Markenidentität und eine Storytelling-Website entwickeln, die Investoren überzeugt.",
+      "problem": "Startup ohne klare Markenidentität — kein Wiedererkennungswert und schwache Conversion-Rate.",
+      "solution": "Komplettes Markendesign, Storytelling-Website mit animierter Scroll-Experience und Lead-Generierung.",
+      "service": "Webdesign & Entwicklung",
+      "client": "Bold Ideas GmbH"
+    },
+    "bella-cucina": {
+      "title": "Bella Cucina Restaurant!",
+      "description": "Elegante Website mit Online-Reservierung und digitaler Speisekarte für ein gehobenes italienisches Restaurant.",
+      "overview": "Bella Cucina ist ein gehobenes italienisches Restaurant in der Düsseldorfer Altstadt.",
+      "goal": "Eine elegante, mobilfreundliche Website mit Online-Reservierung und digitaler Speisekarte erstellen.",
+      "problem": "Telefonreservierungen überforderten das Personal; die alte Website war nicht mobilfreundlich.",
+      "solution": "Elegante responsive Website mit Online-Reservierung, digitaler Speisekarte und Mehrsprachigkeit.",
+      "service": "Webdesign & Entwicklung",
+      "client": "Bella Cucina Ristorante"
+    },
+    "smileforyou": {
+      "title": "SmileforYou – Conversion-Optimierung!",
+      "description": "Komplettes Website-Redesign und Conversion-Optimierung für eine führende deutsche Zahnklinikkette — Verdopplung der Conversion-Rate von 5% auf 11%.",
+      "overview": "Zusammenarbeit mit SmileforYou, einer führenden Zahnklinikkette für Kieferorthopädie.",
+      "goal": "Website mit Mobile-First-Ansatz redesignen, um die Conversion-Rate deutlich zu steigern.",
+      "problem": "Veraltete Website mit niedriger 5% Conversion-Rate und schlechter Mobilerfahrung.",
+      "solution": "Komplettes Redesign mit Mobile-First-Ansatz und SEO-optimierten Landingpages — 120% Conversion-Steigerung.",
+      "service": "Webdesign & Entwicklung",
+      "client": "SmileforYou"
+    },
+    "technik-hoffmann": {
+      "title": "Technik Hoffmann – Fullstack-Entwicklung!",
+      "description": "Komplexe Fullstack-Websiteentwicklung für ein deutsches Präzisionstechnikunternehmen.",
+      "overview": "Projekt mit 2 Entwicklern, 1 Designer und 1 QA-Tester für ein Präzisionstechnikunternehmen.",
+      "goal": "Eine komplexe, design-intensive Unternehmenswebsite mit interaktiven jQuery-Animationen umsetzen.",
+      "problem": "Ein Präzisionstechnikunternehmen brauchte eine anspruchsvolle digitale Präsenz.",
+      "solution": "Fullstack WordPress-Website mit jQuery-Animationen und interaktiver Bubble-Visualisierung.",
+      "service": "Webdesign & Entwicklung",
+      "client": "Hoffmann Technik"
+    },
+    "wickie-agency": {
+      "title": "WICKIE – Redesign einer Digitalagentur!",
+      "description": "Komplettes Website-Redesign für eine Digitalagentur mit cleaner, responsiver WordPress-Website.",
+      "overview": "WICKIE hilft Unternehmen bei der Erstellung und Verwaltung ihrer Social-Media-Präsenz.",
+      "goal": "WICKIE's Website mit einem cleanen, responsiven Layout modernisieren.",
+      "problem": "Eine veraltete Website, die die Expertise der Agentur nicht mehr widerspiegelte.",
+      "solution": "Komplettes Redesign mit cleaner, responsiver WordPress-Website unter Bewahrung der Markenidentität.",
+      "service": "Webdesign & Entwicklung",
+      "client": "WICKIE Agentur"
+    },
+    "digidog-threejs": {
+      "title": "Digidog – Three.js & WordPress Integration!",
+      "description": "Lösung komplexer Three.js- und Elementor-Konflikte auf unserer eigenen Agentur-Website.",
+      "overview": "Internes Projekt zur Implementierung von 3D-Animationen mit Three.js auf WordPress.",
+      "goal": "SEO-optimiertes Design mit integrierter Three.js 3D-Animation auf WordPress umsetzen.",
+      "problem": "Three.js-Animationen kollidierten mit Elementors Rendering-Pipeline.",
+      "solution": "Separate Entwicklung, stufenweise Integration und manuelle Code-Anpassungen.",
+      "service": "Webdesign & Entwicklung",
+      "client": "Digidog (Intern)"
+    },
+    "jobsvs-recruitment": {
+      "title": "JobsVS – Personalvermittlungs-Website!",
+      "description": "Design-Implementierung und SEO für eine Personalvermittlung mit Personio-API-Integration.",
+      "overview": "JobsVS ist eine Personalvermittlung, die Unternehmen und Bewerber zusammenbringt.",
+      "goal": "Eine responsive, SEO-optimierte Website mit Personio-API-Integration umsetzen.",
+      "problem": "Automatisiertes Stellenanzeigen-Management zur Vermeidung manueller Dateneingabe benötigt.",
+      "solution": "Responsive Website mit Personio-API-Integration und umfassenden SEO-Dienstleistungen.",
+      "service": "Webdesign & Entwicklung",
+      "client": "JobsVS"
+    },
+    "cibaria-italiana": {
+      "title": "Cibaria Italiana – Restaurant & E-Commerce!",
+      "description": "Elegante Website mit E-Commerce, Online-Reservierung und Kochkurs-Buchung für ein authentisches italienisches Restaurant.",
+      "overview": "Mario bringt die kulinarischen Traditionen aus Genua und Bologna nach Wien mit hausgemachter Pasta.",
+      "goal": "Eine elegante Website mit E-Commerce, Reservierung und Kursbuchung erstellen.",
+      "problem": "Ein authentisches italienisches Restaurant brauchte eine starke digitale Präsenz.",
+      "solution": "Multifunktionale Website mit E-Commerce, Online-Reservierung, Kochkurs-Buchung und markentreuen Design.",
+      "service": "Webdesign & Entwicklung",
+      "client": "Cibaria Italiana"
+    },
+    "monte-ofelio-group": {
+      "title": "Monte Ofelio Group – Multi-Brand-Webstrategie!",
+      "description": "Dynamische Multi-Website-Digitalstrategie für eine italienische Bar- und Food-Gruppe in Wien.",
+      "overview": "Die Monte Ofelio Group wurde von den Brüdern Formisano gegründet, um italienische Nachhaltigkeit nach Wien zu bringen.",
+      "goal": "Eine Multi-Website-Digitalstrategie für Markenbekanntheit und weltweiten Online-Vertrieb erstellen.",
+      "problem": "Eine wachsende italienische Food-Gruppe brauchte eine kohärente Multi-Brand-Präsenz.",
+      "solution": "Drei strategisch ausgerichtete Websites mit Online-Reservierung, E-Commerce und Social-Media-Management.",
+      "service": "Webdesign & Entwicklung",
+      "client": "Monte Ofelio Group"
+    },
+    "ai-jewelry-sketch": {
+      "title": "KI-Schmuckskizzen-Automatisierung!",
+      "description": "Vollständige KI-Automatisierung in Make, die Kunden-E-Mails liest, Anforderungen extrahiert und rund um die Uhr Schmuckskizzen generiert.",
+      "overview": "Ein Schmuckunternehmen verbrachte täglich 5–10 Stunden mit der manuellen Skizzenerstellung. Wir bauten die Automatisierung in nur 6 Stunden.",
+      "goal": "Manuelle Skizzenerstellung durch End-to-End-KI-Automatisierung eliminieren.",
+      "problem": "Manuelle Schmuckskizzen-Erstellung aus E-Mail-Anfragen dauerte 5–10 Stunden täglich.",
+      "solution": "End-to-End-KI-Automatisierung in Make, die E-Mails liest, Anforderungen extrahiert und Skizzen 24/7 generiert.",
+      "service": "KI-Lösungen & Automatisierung",
+      "client": "Schmuckunternehmen (Vertraulich)"
+    },
+    "fitpulse-app": {
+      "title": "FitPulse Gesundheits-App!",
+      "description": "Mobile-First-Fitnessplattform mit KI-gestützten Trainingsplänen und Echtzeit-Fortschrittsverfolgung.",
+      "overview": "FitPulse nutzt KI-Technologie für personalisierte Trainingspläne, die sich dynamisch anpassen.",
+      "goal": "Eine KI-gesteuerte Fitness-App mit adaptiven Trainingsplänen und Gamification entwickeln.",
+      "problem": "Nutzer brachen generische Trainingspläne ab — fehlende Personalisierung und Motivation.",
+      "solution": "KI-gestützte Trainingsplan-Engine mit adaptiven Workouts, Echtzeit-Tracking und Wearable-Integration.",
+      "service": "KI-Lösungen & Automatisierung",
+      "client": "FitPulse GmbH"
+    },
+    "smartassist-chatbot": {
+      "title": "SmartAssist KI-Chatbot!",
+      "description": "Intelligenter KI-Chatbot mit NLP-Integration für automatisierten Kundenservice und Lead-Qualifizierung.",
+      "overview": "Entwickelt für ein mittelständisches Versicherungsunternehmen mit hunderten täglichen Kundenanfragen.",
+      "goal": "KI-gestützte Kundenkommunikation implementieren, die 80% der Standardanfragen automatisch beantwortet.",
+      "problem": "Überlasteter Kundenservice mit langen Wartezeiten — manuelle Bearbeitung war teuer und langsam.",
+      "solution": "KI-Chatbot mit NLP, automatischer Lead-Qualifizierung, CRM-Integration und Sentimentanalyse.",
+      "service": "KI-Lösungen & Automatisierung",
+      "client": "SecureLife Versicherung"
+    },
+    "smarthome-iot": {
+      "title": "SmartHome IoT-Plattform!",
+      "description": "KI-gesteuerte Smart-Home-Plattform mit automatisierter Energieoptimierung und vorausschauender Wartung.",
+      "overview": "Für einen führenden Smart-Home-Anbieter entwickelten wir eine KI-Plattform zur Echtzeit-Energieanalyse.",
+      "goal": "Eine intelligente IoT-Plattform entwickeln, die Energieverbrauch um 30% senkt.",
+      "problem": "Hoher Energieverbrauch durch manuelle Steuerung und keine vorausschauende Wartung.",
+      "solution": "KI-gesteuerte IoT-Plattform mit Echtzeit-Energieoptimierung, Predictive Maintenance und Sprachsteuerung.",
+      "service": "KI-Lösungen & Automatisierung",
+      "client": "NexaHome Technologies"
+    },
+    "hubspot-dental-crm": {
+      "title": "HubSpot CRM – Zahnklinikkette!",
+      "description": "Enterprise HubSpot CRM-Implementierung für eine 5-Standorte-Zahnklinikkette mit IVORIS-API und Make.com.",
+      "overview": "HubSpot CRM-Implementierung für eine kieferorthopädische Klinikkette mit fünf Standorten.",
+      "goal": "Ein einheitliches CRM-System über 5 Standorte implementieren, das Patienten-Workflows standardisiert.",
+      "problem": "Fünf Standorte mit unterschiedlichen Workflows, kein zentrales CRM und komplexe Integrationsanforderungen.",
+      "solution": "Enterprise HubSpot CRM mit einheitlichen Prozessen, IVORIS-API-Integration und Make.com-Automatisierung.",
+      "service": "Individualsoftware",
+      "client": "Zahnklinikkette (Vertraulich)"
+    },
+    "beoriginaltours-operations": {
+      "title": "BeOriginalTours Operations-Plattform!",
+      "description": "Automatisierte Buchungs-, Planungs- und Verwaltungsplattform für eine europäische Touragentur.",
+      "overview": "BeOriginalTours ist eine europäische Touragentur, deren Buchungs- und Planungsprozess wir automatisiert haben.",
+      "goal": "Die gesamte Buchungspipeline mit einem Dashboard für volle Betriebstransparenz automatisieren.",
+      "problem": "Manuelle Buchungsverarbeitung und verstreute Planung in Tabellen führten zu Fehlern.",
+      "solution": "End-to-End-Automatisierung mit Make.com, Python, MongoDB, Discord und einem Next.js-Dashboard.",
+      "service": "Individualsoftware",
+      "client": "BeOriginalTours"
+    },
+    "luxe-mode": {
+      "title": "Luxe Mode Online-Shop!",
+      "description": "High-End E-Commerce-Lösung mit personalisierten Empfehlungen und nahtloser Checkout-Erfahrung.",
+      "overview": "Luxe Mode ist eine Premium-Modemarke für exklusive Designermode.",
+      "goal": "Eine E-Commerce-Plattform mit KI-gestützten Empfehlungen und optimiertem Checkout erstellen.",
+      "problem": "Hohe Warenkorbabbruchrate und keine personalisierten Produktvorschläge.",
+      "solution": "E-Commerce-Plattform mit KI-Empfehlungen, One-Click-Checkout und A/B-optimiertem Funnel.",
+      "service": "Individualsoftware",
+      "client": "Luxe Mode AG"
+    },
+    "logitrack-warehouse": {
+      "title": "LogiTrack Lagerverwaltungssystem!",
+      "description": "Individuelle Lagerverwaltungssoftware mit Echtzeit-Tracking, Barcode-Scanning und automatischer Nachbestellung.",
+      "overview": "Entwickelt für ein wachsendes Logistikunternehmen, das mit Excel an seine Grenzen gestoßen war.",
+      "goal": "Eine skalierbare Lagerverwaltungslösung entwickeln, die Bestandsfehler um 95% reduziert.",
+      "problem": "Manuelle Lagerverwaltung mit Excel — häufige Fehler, kein Echtzeit-Überblick.",
+      "solution": "Individuelle Lagersoftware mit Echtzeit-Tracking, mobilem Barcode-Scanning und Versandintegration.",
+      "service": "Individualsoftware",
+      "client": "LogiTrack Logistics GmbH"
+    },
+    "mediconnect-praxis": {
+      "title": "MediConnect Praxissoftware!",
+      "description": "Individuelle Praxisverwaltungssoftware mit Terminplanung, digitaler Patientenakte und Abrechnungsmodul.",
+      "overview": "Entwickelt für eine Gemeinschaftspraxis in Düsseldorf mit veralteter Praxissoftware.",
+      "goal": "Veraltete Praxissoftware durch eine moderne, integrierte Lösung ersetzen.",
+      "problem": "Veraltete Praxissoftware ohne Online-Buchung — hoher Verwaltungsaufwand.",
+      "solution": "Moderne Praxissoftware mit Online-Buchung, digitaler Patientenakte, Abrechnungsmodul und DSGVO-Konformität.",
+      "service": "Individualsoftware",
+      "client": "Gemeinschaftspraxis Dr. Weber & Partner"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+# Digidog.org Backlink Disavow File
+# Generated: March 2026
+# Based on Ahrefs referring domains analysis
+# Upload to: Google Search Console > Links > Disavow Links
+
+# SEO spam networks (zero traffic, link farms)
+domain:seoflox.io
+domain:rank-your.site
+domain:rankyour.website
+domain:seo-backlink.agency
+domain:prolinkbox.com
+domain:primeseo.xyz

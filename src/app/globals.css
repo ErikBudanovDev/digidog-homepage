@@ -1,0 +1,45 @@
+/* ─────────────────────────────────────────────
+ * Global styles for the Next.js app.
+ * Imports the parent Vite project's styles so
+ * all components render identically.
+ * ───────────────────────────────────────────── */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap');
+
+/* Tailwind v4 — scan parent src/ for class usage */
+@import 'tailwindcss' source(none);
+@source '../../../src/**/*.{js,ts,jsx,tsx}';
+@source '../**/*.{js,ts,jsx,tsx}';
+
+@import 'tw-animate-css';
+
+/* Theme variables from parent project */
+@import '../../../src/styles/theme.css';
+
+/* Custom keyframes & utilities */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@utility animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@utility animate-marquee2 {
+  animation: marquee2 30s linear infinite;
+}

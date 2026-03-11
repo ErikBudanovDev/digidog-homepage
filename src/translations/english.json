@@ -1,0 +1,148 @@
+{
+  "seo": {
+    "home": {
+      "title": "AI Automation & Web Development Agency for Mid-Size Companies!",
+      "description": "Digidog is an AI automation and web development agency. We build custom AI workflows, MCP integrations, websites, and software for mid-size companies (50-200 employees).",
+      "ogTitle": "AI Automation & Web Development Agency | Digidog",
+      "ogDescription": "Custom AI automations, MCP integrations, web development, and software for mid-size companies."
+    },
+    "aiIntegration": {
+      "title": "AI Integration & Automation Agency | AI Consulting for Business!",
+      "description": "AI automation agency for mid-size companies. We automate 30-60% of repetitive work through custom AI workflows, CRM integration, MCP servers, and business process automation.",
+      "ogTitle": "AI Integration & Automation Agency | Digidog",
+      "ogDescription": "We automate 30-60% of repetitive work with custom AI workflows and MCP servers."
+    },
+    "aiSolutions": {
+      "title": "Custom AI Solutions & Machine Learning Development Agency!",
+      "description": "Custom AI development agency: machine learning models, NLP, computer vision, predictive analytics, and LLM integration for mid-size companies.",
+      "ogTitle": "Custom AI Solutions & ML Development | Digidog",
+      "ogDescription": "ML models, NLP, computer vision, and LLM integration for business."
+    },
+    "webDesign": {
+      "title": "Web Design & WordPress Development Agency | Full-Stack Solutions!",
+      "description": "Custom web design, WordPress development, and full-stack solutions for mid-size companies. High-performance websites with React, Next.js, and WordPress.",
+      "ogTitle": "Web Design & WordPress Development Agency | Digidog",
+      "ogDescription": "Custom websites, WordPress development, and ongoing maintenance."
+    },
+    "customSoftware": {
+      "title": "Custom Software Development Agency | Internal Tools & SaaS!",
+      "description": "Custom software development for mid-size companies. Internal tools, API integrations, SaaS platforms, dashboards, and database architecture.",
+      "ogTitle": "Custom Software Development Agency | Digidog",
+      "ogDescription": "Internal tools, SaaS platforms, API integrations — software that connects your systems."
+    },
+    "about": {
+      "title": "About Digidog | AI Consulting & Web Development Team!",
+      "description": "Meet the Digidog team. AI consulting and web development experts helping mid-size companies with digital transformation since 2021."
+    },
+    "contact": {
+      "title": "Contact Us | Free AI & Web Development Consultation!",
+      "description": "Get in touch with Digidog for a free consultation on AI automation, web development, or custom software. We respond within 24 hours."
+    },
+    "portfolio": {
+      "title": "Portfolio | AI Automation & Web Development Case Studies!",
+      "description": "Real case studies from our AI automation, web development, and custom software projects with measurable results."
+    },
+    "blog": {
+      "title": "Blog — AI Automation, Web Development & Software Insights!",
+      "description": "Expert articles on AI automation, web development, custom software, and digital strategy for mid-size companies."
+    },
+    "imprint": {
+      "title": "Imprint!",
+      "description": "Legal imprint and company information for Digidog LLC."
+    },
+    "privacy": {
+      "title": "Privacy Policy!",
+      "description": "Data privacy policy and GDPR information for Digidog LLC."
+    },
+    "terms": {
+      "title": "Terms of Service!",
+      "description": "Terms of service and general business conditions for Digidog LLC."
+    }
+  },
+  "hero": {
+    "title1": "AI Agency That Rocks!",
+    "title2": "Your Digital Presence!",
+    "description": "AI automation, web development, and custom software for mid-size companies. We build intelligent systems that drive more traffic, more leads, and more revenue — from strategy to production.",
+    "cta": "Book a consultation"
+  },
+  "nav": {
+    "home": "Home",
+    "portfolio": "Our Portfolio",
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact",
+    "blog": "Blog",
+    "allServices": "All Services",
+    "webDesign": "Web Design & Development",
+    "aiSolutions": "AI Solutions & Automation",
+    "customSoftware": "Software & Integrations"
+  },
+  "servicesSection": {
+    "badge": "Our Services",
+    "title1": "What we !",
+    "title2": "create!",
+    "subtitle": "From web development to AI solutions to custom software — we deliver digital excellence.",
+    "webTitle": "Web Design & Full-Stack Development!",
+    "webSubtitle": "Custom websites and web applications built for performance, scalability, and growth.",
+    "webResult": "A fast, secure, and scalable digital platform that supports your business long-term.",
+    "aiTitle": "Custom AI Solutions & Automation!",
+    "aiSubtitle": "Integrate AI into your workflows to automate tasks, improve efficiency, and unlock new capabilities.",
+    "aiResult": "Reduced manual work, faster operations, and smarter business processes powered by AI.",
+    "softwareTitle": "Custom Software & Business Integrations!",
+    "softwareSubtitle": "Tailored technical solutions designed to solve your specific business challenges.",
+    "softwareResult": "Efficient, connected systems that eliminate bottlenecks and enable growth.",
+    "learnMore": "Learn more",
+    "startProject": "Start a project"
+  },
+  "contactCta": {
+    "title": "Let's discuss your next project!",
+    "subtitle": "We analyze your website and provide an initial draft!",
+    "cta": "Book your free initial consultation!",
+    "founderName": "Erik Budanov",
+    "founderRole": "Founder & Lead Developer",
+    "thankYou": "Thank you!",
+    "thankYouSub": "We will get back to you shortly.",
+    "bookConsultation": "Book Consultation",
+    "duration": "30 Minutes • Free",
+    "formName": "Your Name",
+    "formEmail": "Email Address",
+    "formPhone": "Phone Number (optional)",
+    "formMessage": "Your Message",
+    "formSubmit": "Request Appointment"
+  },
+  "ctaBanner": {
+    "title": "We look forward to hearing from you!",
+    "subtitle": "Never stop creating! Let your creative energy flow at all times.",
+    "cta": "Book an appointment"
+  },
+  "footer": {
+    "tagline": "Follow us on social media for news and inspiration.",
+    "quickLinks": "Quick Links",
+    "ourServices": "Services",
+    "legal": "Legal",
+    "contact": "Contact",
+    "home": "Home",
+    "about": "About Us",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "imprint": "Imprint",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "rights": "All rights reserved"
+  },
+  "common": {
+    "services": "Services",
+    "learnMore": "Learn More",
+    "viewProject": "View Project",
+    "viewAllProjects": "View All Projects",
+    "startProject": "Start Project",
+    "startProjectNow": "Start Project Now",
+    "discussProject": "Discuss Project",
+    "readMore": "Read More",
+    "backToBlog": "← Back to Blog",
+    "relatedArticles": "Related Articles",
+    "readyToStart": "Ready to put this into practice?",
+    "bookConsultation": "Book a Free Consultation",
+    "bookConsultationCta": "Book a free consultation and let's discuss how we can help your business."
+  }
+}

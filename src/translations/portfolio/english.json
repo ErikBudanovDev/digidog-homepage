@@ -1,0 +1,257 @@
+{
+  "page": {
+    "heroTitle": "Our Portfolio –\nProjects that inspire!",
+    "heroDescription": "Discover our successfully completed projects in web development, AI integration, and custom software solutions. Each project tells its own success story.",
+    "heroBadge": "Our Work",
+    "statsTotalProjects": "Total Projects",
+    "statsWebDevelopment": "Web Development",
+    "statsAiIntegration": "AI Integration",
+    "statsCustomSoftware": "Custom Software",
+    "sectionBadge": "All Projects",
+    "sectionTitle": "Projects by Category!",
+    "sectionSubtitle": "Filter by category to discover the most relevant projects for you.",
+    "filterAll": "All Projects",
+    "filterWeb": "Web Development",
+    "filterAi": "AI Integration",
+    "filterSoftware": "Custom Software",
+    "noProjects": "No projects found in this category."
+  },
+  "detail": {
+    "overview": "Overview",
+    "projectGoal": "Project Goal",
+    "improvements": "Key Improvements",
+    "implementedImprovements": "Implemented Improvements",
+    "challenge": "The Challenge",
+    "solution": "The Solution",
+    "gallery": "Project Gallery",
+    "moreProjects": "More Projects",
+    "notFound": "Project not found",
+    "notFoundSub": "The requested project does not exist.",
+    "backToHomepage": "Back to homepage",
+    "year": "Year",
+    "service": "Service",
+    "client": "Client"
+  },
+  "projects": {
+    "united-nations-fp2030": {
+      "title": "United Nations – FP2030!",
+      "description": "Design implementation for the United Nations FP2030 Progress Report website, featuring interactive Highcharts data visualizations and immersive parallax animations.",
+      "overview": "We had the incredible opportunity to collaborate with the United Nations in developing a remarkable website for FP2030. This project was truly exceptional and allowed us to showcase our expertise and creativity in some truly innovative ways.",
+      "goal": "Build a visually stunning, data-driven website for the United Nations FP2030 initiative that presents complex global health data through interactive charts and immersive animations.",
+      "problem": "Complex global health data needed to be presented in an accessible, engaging way that would resonate with a worldwide audience.",
+      "solution": "A visually stunning website combining interactive Highcharts data visualizations, captivating parallax animations, and user-centric design.",
+      "service": "Web Design & Development",
+      "client": "United Nations – FP2030"
+    },
+    "mpa-online": {
+      "title": "MPA.online Streaming Platform!",
+      "description": "Fullstack web app development for a medical education streaming platform, built with Next.js, Strapi, and MongoDB with Vimeo integration.",
+      "overview": "MPA.online is a streaming platform designed to help medical assistants learn through video courses. Built over approximately 6 months with Next.js and Strapi.",
+      "goal": "Develop a fully functional streaming platform for medical education with structured video courses and seamless search.",
+      "problem": "Medical assistants lacked a dedicated, structured platform to learn essential clinical skills through video-based education.",
+      "solution": "A fullstack streaming platform built with Next.js and Strapi, featuring Vimeo video integration and MongoDB-powered search.",
+      "service": "Web Design & Development",
+      "client": "MPA.online"
+    },
+    "miso-supermarket": {
+      "title": "Miso Supermarket & Bakery!",
+      "description": "Modern web design and digital solution for a local supermarket with integrated online shop and ordering system.",
+      "overview": "Miso Supermarket & Bakery is a local family-run business in Düsseldorf offering fresh baked goods and Asian groceries.",
+      "goal": "Build a professional online presence with an integrated ordering and shop system.",
+      "problem": "No online presence; customers couldn't pre-order — leading to long wait times and revenue loss.",
+      "solution": "Responsive website with integrated online shop, real-time ordering system, and Google Maps integration.",
+      "service": "Web Design & Development",
+      "client": "Miso GmbH"
+    },
+    "techvision-dashboard": {
+      "title": "TechVision Dashboard!",
+      "description": "Complete redesign of an enterprise dashboard with modern UI/UX design and responsive layout.",
+      "overview": "TechVision is a growing SaaS company that provides real-time analytics tools for mid-sized businesses.",
+      "goal": "Improve the dashboard through modern web development — focusing on performance, usability, and compliance.",
+      "problem": "Outdated dashboard with poor UX — employees took too long to find key KPIs, and mobile use was impossible.",
+      "solution": "Completely new UI/UX design with real-time data visualization, role-based access, and mobile view.",
+      "service": "Web Design & Development",
+      "client": "TechVision AG"
+    },
+    "bold-ideas": {
+      "title": "Bold Ideas Movement!",
+      "description": "Creative brand strategy and visual storytelling for an innovative startup with a dynamic web presence.",
+      "overview": "Bold Ideas Movement is a creative startup from Berlin specializing in sustainable innovations.",
+      "goal": "Develop a strong brand identity and a storytelling-driven website that excites investors.",
+      "problem": "Startup without a clear brand identity — no recognition value and weak conversion rate.",
+      "solution": "Complete brand design, storytelling website with animated scroll experience and lead generation system.",
+      "service": "Web Design & Development",
+      "client": "Bold Ideas GmbH"
+    },
+    "bella-cucina": {
+      "title": "Bella Cucina Restaurant!",
+      "description": "Elegant website with online reservation and digital menu for an upscale Italian restaurant.",
+      "overview": "Bella Cucina is an upscale Italian restaurant in Düsseldorf's old town.",
+      "goal": "Create an elegant, mobile-friendly website with online reservation and digital menu.",
+      "problem": "Phone reservations overwhelmed staff; the old website was not mobile-friendly.",
+      "solution": "Elegant responsive website with online reservation system, digital menu, and multilingual support.",
+      "service": "Web Design & Development",
+      "client": "Bella Cucina Ristorante"
+    },
+    "smileforyou": {
+      "title": "SmileforYou – Conversion Optimization!",
+      "description": "Full website redesign and conversion optimization for a leading German dental clinic chain, doubling their conversion rate from 5% to 11%.",
+      "overview": "We worked with SmileforYou, a leading dental clinic chain specializing in orthodontics. Based on mobile-first analytics data, we renewed their entire digital presence.",
+      "goal": "Redesign the website with a mobile-first approach to significantly increase conversion rates.",
+      "problem": "Outdated website with a low 5% conversion rate and poor mobile experience.",
+      "solution": "Complete website redesign with mobile-first approach and SEO-optimized landing pages — resulting in a 120% conversion rate increase.",
+      "service": "Web Design & Development",
+      "client": "SmileforYou"
+    },
+    "technik-hoffmann": {
+      "title": "Technik Hoffmann – Fullstack Development!",
+      "description": "Complex fullstack website development for a German precision engineering company, featuring jQuery animated bubbles and cards view.",
+      "overview": "This project involved a team of 2 developers, 1 designer, and 1 QA tester for a precision engineering company.",
+      "goal": "Implement a complex, design-heavy corporate website with interactive jQuery animations.",
+      "problem": "A precision engineering company needed a sophisticated digital presence for their complex service portfolio.",
+      "solution": "Fullstack WordPress website with custom jQuery animations, interactive bubble-based service visualization.",
+      "service": "Web Design & Development",
+      "client": "Hoffmann Technik"
+    },
+    "wickie-agency": {
+      "title": "WICKIE – Digital Marketing Agency Redesign!",
+      "description": "Complete website redesign for a digital marketing agency, delivering a clean, responsive WordPress site.",
+      "overview": "WICKIE helps businesses create, manage, and improve their social media presence. They approached us for a website refresh.",
+      "goal": "Redesign and modernize WICKIE's website with a clean, responsive layout reflecting their brand.",
+      "problem": "An outdated website that no longer reflected the agency's expertise in digital marketing.",
+      "solution": "Full website redesign with a clean, responsive WordPress build preserving brand identity.",
+      "service": "Web Design & Development",
+      "client": "WICKIE Agentur"
+    },
+    "digidog-threejs": {
+      "title": "Digidog – Three.js & WordPress Integration!",
+      "description": "Resolved complex Three.js and Elementor conflicts on our own agency website, implementing interactive 3D animations.",
+      "overview": "This internal project involved implementing 3D animations with Three.js on WordPress while resolving Elementor conflicts.",
+      "goal": "Implement SEO-optimized design with integrated Three.js 3D animation on WordPress.",
+      "problem": "Three.js animations conflicted with Elementor's rendering pipeline.",
+      "solution": "Separate development, staged integration, and manual codebase adjustments for smooth 3D experience.",
+      "service": "Web Design & Development",
+      "client": "Digidog (Internal)"
+    },
+    "jobsvs-recruitment": {
+      "title": "JobsVS – Recruitment Agency Website!",
+      "description": "Design implementation and SEO for a recruitment agency, featuring Personio API integration for automatic job listings.",
+      "overview": "JobsVS is a recruitment agency that enables companies and applicants to find each other. We handled design implementation and SEO.",
+      "goal": "Implement a responsive, SEO-optimized recruitment website with Personio API integration.",
+      "problem": "A recruitment agency needed automated job listing management to avoid manual data entry.",
+      "solution": "Responsive website with Personio API integration for automatic job display and comprehensive SEO services.",
+      "service": "Web Design & Development",
+      "client": "JobsVS"
+    },
+    "cibaria-italiana": {
+      "title": "Cibaria Italiana – Restaurant & eCommerce!",
+      "description": "Elegant website with eCommerce, online reservation, and culinary course booking for an authentic Italian restaurant.",
+      "overview": "Mario's restaurant brings culinary traditions of Genoa and Bologna to Vienna with homemade pasta and imported Italian products.",
+      "goal": "Build an elegant website with e-commerce, reservation, and course booking while maintaining brand identity.",
+      "problem": "An authentic Italian restaurant needed a strong digital presence to showcase their culinary experience.",
+      "solution": "Multi-functional website combining eCommerce, online reservations, culinary course bookings, and brand-true design.",
+      "service": "Web Design & Development",
+      "client": "Cibaria Italiana"
+    },
+    "monte-ofelio-group": {
+      "title": "Monte Ofelio Group – Multi-Brand Web Strategy!",
+      "description": "Dynamic multi-website digital strategy for an Italian bar and food group in Vienna.",
+      "overview": "The Monte Ofelio Group was founded by the Formisano brothers to bring Italian sustainability and naturalness to Vienna.",
+      "goal": "Create a multi-website digital strategy for brand awareness and worldwide online product sales.",
+      "problem": "A growing Italian food group needed a cohesive multi-brand digital presence for expansion.",
+      "solution": "Three strategically aligned websites with online reservation, e-commerce, and integrated social media management.",
+      "service": "Web Design & Development",
+      "client": "Monte Ofelio Group"
+    },
+    "ai-jewelry-sketch": {
+      "title": "AI Jewelry Sketch Automation!",
+      "description": "Complete AI automation built in Make that reads customer emails, extracts requirements, and generates custom jewelry sketches 24/7.",
+      "overview": "A jewelry business was spending 5–10 hours daily creating custom sketches. We built a complete AI automation in Make in just 6 hours.",
+      "goal": "Eliminate manual sketch creation with end-to-end AI automation.",
+      "problem": "Manual jewelry sketch creation from email requests consumed 5–10 hours daily.",
+      "solution": "End-to-end AI automation in Make that reads emails, extracts requirements, and generates sketches 24/7.",
+      "service": "AI Solutions & Automation",
+      "client": "Jewelry Business (Confidential)"
+    },
+    "fitpulse-app": {
+      "title": "FitPulse Health App!",
+      "description": "Mobile-first fitness platform with AI-powered training plans and real-time progress tracking.",
+      "overview": "FitPulse uses AI technology to create personalized training plans that dynamically adapt to each user's progress.",
+      "goal": "Develop an AI-powered fitness app with adaptive training plans and gamification.",
+      "problem": "Users abandoned generic training plans — lacking personalization and long-term motivation.",
+      "solution": "AI-powered training plan engine with adaptive workouts, real-time tracking, and wearable integration.",
+      "service": "AI Solutions & Automation",
+      "client": "FitPulse GmbH"
+    },
+    "smartassist-chatbot": {
+      "title": "SmartAssist AI Chatbot!",
+      "description": "Intelligent AI chatbot with NLP integration for automated customer service and lead qualification.",
+      "overview": "Developed for a mid-sized insurance company that manually processed hundreds of customer inquiries daily.",
+      "goal": "Implement AI-powered customer communication that answers 80% of standard inquiries automatically.",
+      "problem": "Overwhelmed customer service with long wait times — manual processing was expensive and slow.",
+      "solution": "AI chatbot with NLP, automatic lead qualification, CRM integration, and sentiment analysis.",
+      "service": "AI Solutions & Automation",
+      "client": "SecureLife Insurance"
+    },
+    "smarthome-iot": {
+      "title": "SmartHome IoT Platform!",
+      "description": "AI-controlled smart home platform with automated energy optimization and predictive maintenance.",
+      "overview": "For a leading smart home provider, we developed an AI platform that analyzes energy consumption in real time.",
+      "goal": "Develop an intelligent IoT platform that reduces energy consumption by 30% with predictive maintenance.",
+      "problem": "High energy consumption due to manual control and no predictive maintenance.",
+      "solution": "AI-controlled IoT platform with real-time energy optimization, predictive maintenance, and voice control.",
+      "service": "AI Solutions & Automation",
+      "client": "NexaHome Technologies"
+    },
+    "hubspot-dental-crm": {
+      "title": "HubSpot CRM – Dental Clinic Chain!",
+      "description": "Enterprise HubSpot CRM implementation across a 5-branch dental clinic chain with IVORIS API and Make.com automation.",
+      "overview": "Implemented HubSpot CRM for a multi-branch orthodontic clinic chain with five locations, integrating with IVORIS API.",
+      "goal": "Implement a unified CRM system across 5 branches that standardizes patient workflows.",
+      "problem": "Five branches with different workflows, no centralized CRM, and complex integration requirements.",
+      "solution": "Enterprise HubSpot CRM with unified processes, IVORIS API integration, and Make.com automation.",
+      "service": "Custom Software",
+      "client": "Dental Clinic Chain (Confidential)"
+    },
+    "beoriginaltours-operations": {
+      "title": "BeOriginalTours Operations Platform!",
+      "description": "Automated booking, scheduling, and management platform for a European tour agency with Make.com, Python, and Next.js dashboard.",
+      "overview": "BeOriginalTours is a European tour agency where we automated the booking and scheduling process.",
+      "goal": "Automate the entire booking pipeline with a custom dashboard for full operational visibility.",
+      "problem": "Manual booking processing and scattered scheduling across spreadsheets leading to errors.",
+      "solution": "End-to-end automated architecture using Make.com, Python, MongoDB, Discord, and a custom Next.js dashboard.",
+      "service": "Custom Software",
+      "client": "BeOriginalTours"
+    },
+    "luxe-mode": {
+      "title": "Luxe Mode Online Shop!",
+      "description": "High-end e-commerce solution with personalized recommendations and seamless checkout experience.",
+      "overview": "Luxe Mode is a premium fashion brand specializing in exclusive designer wear.",
+      "goal": "Build a custom e-commerce platform with AI-powered recommendations and optimized checkout.",
+      "problem": "High cart abandonment rate and no personalized product suggestions.",
+      "solution": "Custom e-commerce platform with AI recommendations, one-click checkout, and A/B-optimized funnel.",
+      "service": "Custom Software",
+      "client": "Luxe Mode AG"
+    },
+    "logitrack-warehouse": {
+      "title": "LogiTrack Warehouse System!",
+      "description": "Custom warehouse management software with real-time tracking, barcode scanning, and automatic reordering.",
+      "overview": "Developed for a growing logistics company that had reached its limits with Excel-based inventory management.",
+      "goal": "Develop a scalable warehouse management solution reducing inventory errors by 95%.",
+      "problem": "Manual inventory management with Excel — frequent errors, no real-time overview.",
+      "solution": "Custom warehouse management software with real-time tracking, mobile barcode scanning, and shipping integration.",
+      "service": "Custom Software",
+      "client": "LogiTrack Logistics GmbH"
+    },
+    "mediconnect-praxis": {
+      "title": "MediConnect Practice Software!",
+      "description": "Custom practice management software with appointment scheduling, digital patient records, and billing module.",
+      "overview": "Developed for a group practice in Düsseldorf struggling with outdated practice software.",
+      "goal": "Replace outdated practice software with a modern, integrated solution.",
+      "problem": "Outdated practice software without online booking — high administrative effort.",
+      "solution": "Modern practice management software with online booking, digital records, billing module, and GDPR compliance.",
+      "service": "Custom Software",
+      "client": "Group Practice Dr. Weber & Partners"
+    }
+  }
+}

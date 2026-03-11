@@ -1,0 +1,69 @@
+{
+  "page": {
+    "heroTitle": "Blog — AI, Web Development & Software Insights!",
+    "heroDescription": "Expert articles on AI automation, web development, custom software, and digital strategy for mid-size companies.",
+    "heroBadge": "Our Blog",
+    "filterAll": "All Posts",
+    "filterAi": "AI Automation",
+    "filterWeb": "Web Development",
+    "filterSoftware": "Software",
+    "filterCaseStudy": "Case Studies",
+    "noPosts": "No posts found in this category.",
+    "readMore": "Read more",
+    "backToBlog": "← Back to Blog",
+    "relatedArticles": "Related Articles",
+    "readyToStart": "Ready to put this into practice?",
+    "readyToStartSub": "Book a free consultation and let's discuss how we can help your business.",
+    "bookConsultation": "Book a Free Consultation →"
+  },
+  "posts": {
+    "ai-automation-for-mid-size-companies": {
+      "title": "AI Automation for Mid-Size Companies: A Practical Guide!",
+      "metaTitle": "AI Automation for Mid-Size Companies — Implementation Guide!",
+      "metaDescription": "Learn how mid-size companies (50-200 employees) can implement AI automation to reduce manual work by 30-60%. Real workflows, ROI calculations, and step-by-step implementation roadmap.",
+      "excerpt": "Most mid-size companies waste 30-60% of their team's time on repetitive tasks. Here's exactly how AI automation changes that — with real workflows, not hype.",
+      "tag": "AI Automation",
+      "readTime": "8 min read"
+    },
+    "what-is-mcp-model-context-protocol": {
+      "title": "What Is MCP (Model Context Protocol) and Why It Matters for Business!",
+      "metaTitle": "What Is MCP (Model Context Protocol)? Business Guide 2026!",
+      "metaDescription": "MCP (Model Context Protocol) lets AI assistants connect to your real business tools — CRM, email, databases, and more. Learn how MCP works and why it's the future of AI integration.",
+      "excerpt": "MCP is the protocol that turns AI from a chatbot into a business operator. Here's what it is, how it works, and why your company should care.",
+      "tag": "AI Integration",
+      "readTime": "7 min read"
+    },
+    "website-erstellen-lassen-kosten-ablauf-tipps": {
+      "title": "Website erstellen lassen: Kosten, Ablauf & Tipps für 2026!",
+      "metaTitle": "Website erstellen lassen — Kosten, Ablauf & Tipps 2026!",
+      "metaDescription": "Was kostet es, eine professionelle Website erstellen zu lassen? Alles über Preise, den Ablauf vom Briefing bis zum Launch, und worauf Sie bei der Agenturwahl achten sollten.",
+      "excerpt": "Von der ersten Idee bis zum Launch: Was kostet eine professionelle Website, wie läuft ein Webprojekt ab, und worauf sollten Sie bei der Agenturwahl achten?",
+      "tag": "Web Development",
+      "readTime": "6 min read"
+    },
+    "case-study-ai-automation-crm-integration": {
+      "title": "Case Study: How We Automated CRM Operations with AI — Saving 25 Hours/Week!",
+      "metaTitle": "AI CRM Automation Case Study — 25 Hours/Week Saved!",
+      "metaDescription": "How we built an AI-powered CRM integration using MCP that automated lead qualification, follow-ups, and reporting — saving a mid-size agency 25 hours per week.",
+      "excerpt": "A mid-size agency was drowning in manual CRM work. We built an AI system that handles lead qualification, follow-ups, and reporting automatically.",
+      "tag": "Case Study",
+      "readTime": "6 min read"
+    },
+    "case-study-orthodontist-website-seo": {
+      "title": "Case Study: 340% More Patient Inquiries for an Orthodontist Through Web Design & SEO!",
+      "metaTitle": "Orthodontist Marketing Case Study — 340% More Inquiries!",
+      "metaDescription": "How we redesigned an orthodontist's website and implemented targeted SEO, resulting in 340% more patient inquiries within 6 months.",
+      "excerpt": "An orthodontic practice was invisible online. After a complete website redesign and local SEO strategy, patient inquiries increased by 340%.",
+      "tag": "Case Study",
+      "readTime": "5 min read"
+    },
+    "custom-software-vs-off-the-shelf": {
+      "title": "Custom Software vs. Off-the-Shelf: When to Build and When to Buy!",
+      "metaTitle": "Custom Software vs Off-the-Shelf — Decision Guide 2026!",
+      "metaDescription": "Should you build custom software or buy SaaS? A practical decision framework for mid-size companies, with cost comparisons, timelines, and real examples.",
+      "excerpt": "The build-vs-buy decision can make or break your tech budget. Here's a practical framework for mid-size companies.",
+      "tag": "Software",
+      "readTime": "7 min read"
+    }
+  }
+}
