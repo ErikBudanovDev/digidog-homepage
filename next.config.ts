@@ -4,7 +4,8 @@ import fs from "fs";
 import type { Compiler } from "webpack";
 
 // Virtual modules directory for figma:asset imports
-const virtualDir = path.resolve(__dirname, '.next/figma-virtual-modules');
+// Use a directory outside .next so it works on Vercel builds
+const virtualDir = path.resolve(__dirname, 'node_modules/.cache/figma-virtual-modules');
 if (!fs.existsSync(virtualDir)) {
   fs.mkdirSync(virtualDir, { recursive: true });
 }
