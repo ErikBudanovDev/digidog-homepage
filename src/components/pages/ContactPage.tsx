@@ -35,6 +35,7 @@ import erikPhoto from "figma:asset/c28a01d5ca35b1e207da7537c250359543a3aa75.png"
 const erikPhotoSrc = erikPhoto as unknown as string;
 import { SEO } from "@/components/SEO";
 import { useTranslation } from "@/i18n/i18n-context";
+import { trackContactFormSubmit } from "@/lib/analytics";
 import enPg from "@/translations/pages/english.json";
 import dePg from "@/translations/pages/german.json";
 
@@ -406,6 +407,7 @@ function ContactFormSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    trackContactFormSubmit("contact_page", { name: formData.name, email: formData.email, service: formData.service });
     setSubmitted(true);
   };
 

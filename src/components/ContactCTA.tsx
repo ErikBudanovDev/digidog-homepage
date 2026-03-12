@@ -9,6 +9,7 @@ import { colors, fonts } from "./ui/brand";
 import { SectionContainer } from "./ui/section";
 import { PrimaryButton } from "./ui/buttons";
 import { useTranslation } from "@/i18n/i18n-context";
+import { trackContactFormSubmit } from "@/lib/analytics";
 import enT from "@/translations/english.json";
 import deT from "@/translations/german.json";
 
@@ -95,6 +96,7 @@ export function ContactCTA() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    trackContactFormSubmit("hero_cta_modal", { name: formData.name, email: formData.email });
     setSubmitted(true);
     setTimeout(() => {
       setBookingOpen(false);

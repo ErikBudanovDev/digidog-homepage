@@ -268,7 +268,7 @@ export function StarField({
       duration: 2 + Math.random() * 3,
     }));
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [count, mounted]);
+  }, [count]);
 
   return (
     <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
