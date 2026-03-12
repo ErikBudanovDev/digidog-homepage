@@ -65,7 +65,7 @@ export function useSearchParams(): [URLSearchParams, (params: Record<string, str
 
   /* nextSearchParams is ReadonlyURLSearchParams — wrap in mutable URLSearchParams */
   const mutable = React.useMemo(
-    () => new URLSearchParams(nextSearchParams.toString()),
+    () => new URLSearchParams(nextSearchParams?.toString() ?? ''),
     [nextSearchParams]
   );
 
