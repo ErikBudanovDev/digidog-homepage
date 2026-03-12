@@ -58,7 +58,7 @@ export function useSearchParams(): [URLSearchParams, (params: Record<string, str
     (params: Record<string, string>) => {
       const sp = new URLSearchParams(params);
       const qs = sp.toString();
-      router.push(qs ? `${pathname}?${qs}` : pathname);
+      router.push(qs ? `${pathname || '/'}?${qs}` : pathname || '/');
     },
     [router, pathname]
   );
