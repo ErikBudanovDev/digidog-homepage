@@ -134,7 +134,7 @@ const partners: PartnerDef[] = [
 function PartnerItem({ partner }: { partner: PartnerDef }) {
   const { name } = partner;
   return (
-    <div className="flex items-center gap-3 shrink-0 select-none group cursor-pointer">
+    <div className="flex items-center shrink-0 select-none group cursor-pointer">
       <div className="opacity-50 group-hover:opacity-100 transition-opacity duration-300" style={{ filter: 'grayscale(100%)' }}>
         {partner.image ? (
           <img
@@ -146,12 +146,6 @@ function PartnerItem({ partner }: { partner: PartnerDef }) {
           <partner.Logo size={44} />
         ) : null}
       </div>
-      <span
-        className="text-[#163376] text-[22px] md:text-[26px] opacity-50 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap"
-        style={{ fontFamily: fonts.display, fontWeight: 700 }}
-      >
-        {name}
-      </span>
     </div>
   );
 }
