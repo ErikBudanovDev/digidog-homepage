@@ -168,18 +168,13 @@ export function TrustedPartners() {
         <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
-        <div className="flex overflow-hidden">
-          {/* Track 1 */}
-          <div className="flex animate-marquee items-center gap-14 md:gap-20 whitespace-nowrap">
+        <div className="overflow-hidden">
+          {/* Single track: first half + duplicate half. Slides -50% then resets seamlessly */}
+          <div className="flex animate-marquee items-center gap-14 md:gap-20 whitespace-nowrap w-max">
             {repeated.map((partner, i) => (
               <PartnerItem key={`a-${partner.name}-${i}`} partner={partner} />
             ))}
-          </div>
-          {/* Track 2 (duplicate for seamless loop) */}
-          <div
-            className="flex animate-marquee2 items-center gap-14 md:gap-20 whitespace-nowrap"
-            aria-hidden="true"
-          >
+            {/* Duplicate for seamless loop */}
             {repeated.map((partner, i) => (
               <PartnerItem key={`b-${partner.name}-${i}`} partner={partner} />
             ))}
