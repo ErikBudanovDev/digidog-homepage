@@ -121,14 +121,9 @@ type PartnerDef =
 
 const partners: PartnerDef[] = [
   { name: "Activated Insights", image: "/figma-assets/activated-insights-logo.svg" },
-  { name: "smileforyou", Logo: SmileforYouLogo },
-  { name: "United Nations", Logo: UnitedNationsLogo },
   { name: "Greenventory", image: "/figma-assets/greenventory-logo.webp" },
   { name: "Original Berlin Tours", image: "/figma-assets/original-berlin-tours.webp" },
-  { name: "Hoffmann Group", Logo: HoffmannLogo },
   { name: "Berit Schulen", image: "/figma-assets/berit-schulen.webp" },
-  { name: "Tirecheck Online", Logo: TirecheckOnlineLogo },
-  { name: "Exeros Technologies", Logo: ExerosLogo },
 ];
 
 function PartnerItem({ partner }: { partner: PartnerDef }) {
