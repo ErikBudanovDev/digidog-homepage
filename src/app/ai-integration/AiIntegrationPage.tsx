@@ -276,7 +276,7 @@ const businessTypes = [
 function HeroSection() {
   return (
     <section
-      className="relative min-h-[100vh] flex items-center overflow-hidden pt-28 pb-20"
+      className="relative min-h-[90vh] flex items-center overflow-hidden pt-24 pb-16"
       style={{ background: colors.gradientCosmic }}
     >
       {/* Cosmic BG */}
@@ -348,13 +348,10 @@ function HeroSection() {
 
             <ScrollReveal delay={0.1}>
               <h1
-                className="text-[36px] md:text-[52px] lg:text-[60px] leading-[1.1] mb-6"
+                className="text-[32px] md:text-[42px] lg:text-[48px] leading-[1.1] mb-5"
                 style={{ fontFamily: fonts.heading, fontWeight: 700 }}
               >
-                <span className="text-white">
-                  Your Competitors Are
-                </span>
-                <br />
+                <span className="text-white">Your Competitors Are </span>
                 <span
                   className="bg-clip-text text-transparent"
                   style={{ backgroundImage: "linear-gradient(90deg, #a78bfa 0%, #06b6d4 100%)" }}
@@ -373,7 +370,7 @@ function HeroSection() {
 
             <ScrollReveal delay={0.2}>
               <p
-                className="text-[17px] md:text-[19px] leading-[1.7] mb-8 max-w-[520px]"
+                className="text-[16px] md:text-[17px] leading-[1.7] mb-6 max-w-[500px]"
                 style={{ fontFamily: fonts.body, color: colors.textSlateLighter }}
               >
                 While you're switching between 6 dashboards and copy-pasting data into spreadsheets,
@@ -400,7 +397,7 @@ function HeroSection() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.45}>
-              <div className="flex flex-wrap gap-6 md:gap-10 mt-10 pt-8 border-t border-white/[0.08]">
+              <div className="flex flex-wrap gap-5 md:gap-8 mt-8 pt-6 border-t border-white/[0.08]">
                 {[
                   { icon: Zap, value: "30–60%", label: "Repetitive work automated" },
                   { icon: DollarSign, value: "40%", label: "Average cost reduction" },
