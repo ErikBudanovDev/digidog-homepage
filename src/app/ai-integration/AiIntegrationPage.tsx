@@ -1400,10 +1400,10 @@ function CaseStudiesSection() {
                   }}
                 >
                   <div
-                    className="grid md:grid-cols-[340px_1fr] lg:grid-cols-[420px_1fr]"
+                    className="grid md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr]"
                     style={isReversed ? { direction: "rtl" } : {}}
                   >
-                    <div className="relative h-[240px] md:h-full overflow-hidden" style={{ direction: "ltr" }}>
+                    <div className="relative h-[180px] md:h-full overflow-hidden" style={{ direction: "ltr" }}>
                       <ImageWithFallback
                         src={cs.image}
                         alt={cs.title}
@@ -1432,7 +1432,7 @@ function CaseStudiesSection() {
                       </div>
                     </div>
 
-                    <div className="p-6 md:p-8 lg:p-10 flex flex-col justify-center" style={{ direction: "ltr" }}>
+                    <div className="p-5 md:p-6 lg:p-8 flex flex-col justify-center" style={{ direction: "ltr" }}>
                       <motion.span
                         className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[11px] tracking-wide uppercase mb-4 w-fit"
                         style={{
@@ -1449,38 +1449,38 @@ function CaseStudiesSection() {
                       </motion.span>
 
                       <h3
-                        className="text-white text-[22px] md:text-[26px] leading-[1.25] mb-3"
+                        className="text-white text-[18px] md:text-[20px] leading-[1.25] mb-2"
                         style={{ fontFamily: fonts.heading, fontWeight: 700 }}
                       >
                         {cs.title}
                       </h3>
 
                       <p
-                        className="text-[14px] md:text-[15px] leading-[1.75] mb-5"
+                        className="text-[13px] md:text-[14px] leading-[1.7] mb-4"
                         style={{ fontFamily: fonts.body, color: "rgba(255,255,255,0.5)" }}
                       >
                         {cs.description}
                       </p>
 
-                      <div className="flex flex-col gap-2 mb-6">
-                        {cs.queries.map((q, qi) => (
+                      <div className="flex flex-col gap-1.5 mb-4">
+                        {cs.queries.slice(0, 3).map((q, qi) => (
                           <motion.div
                             key={q}
                             initial={{ opacity: 0, y: 8 }}
                             animate={inView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.4, delay: i * 0.18 + qi * 0.06 + 0.3 }}
-                            className="flex items-center gap-3 px-4 py-3 rounded-xl cursor-default transition-all duration-300 hover:bg-white/[0.06]"
+                            className="flex items-center gap-2.5 px-3 py-2 rounded-lg cursor-default"
                             style={{
                               background: "rgba(255,255,255,0.03)",
                               border: "1px solid rgba(255,255,255,0.08)",
                             }}
                           >
                             <MessageSquare
-                              size={16}
+                              size={13}
                               style={{ color: cs.color, opacity: 0.7, flexShrink: 0 }}
                             />
                             <span
-                              className="text-[13px]"
+                              className="text-[12px]"
                               style={{
                                 fontFamily: fonts.body,
                                 fontWeight: 500,
@@ -1491,27 +1491,18 @@ function CaseStudiesSection() {
                             </span>
                           </motion.div>
                         ))}
-                        <motion.div
-                          initial={{ opacity: 0, y: 8 }}
-                          animate={inView ? { opacity: 1, y: 0 } : {}}
-                          transition={{ duration: 0.4, delay: i * 0.18 + cs.queries.length * 0.06 + 0.3 }}
-                          className="mt-1 px-5 py-3 rounded-xl text-center text-[12px]"
-                          style={{
-                            fontFamily: fonts.body,
-                            fontWeight: 600,
-                            color: "rgba(255,255,255,0.85)",
-                            background: `linear-gradient(135deg, ${cs.color}60, ${cs.color}30)`,
-                          }}
-                        >
-                          AI retrieves answers from your connected systems instantly.
-                        </motion.div>
+                        {cs.queries.length > 3 && (
+                          <span className="text-[11px] pl-3" style={{ fontFamily: fonts.body, color: "rgba(255,255,255,0.3)" }}>
+                            +{cs.queries.length - 3} more queries
+                          </span>
+                        )}
                       </div>
 
                       <motion.div
                         initial={{ opacity: 0, x: -10 }}
                         animate={inView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.5, delay: i * 0.18 + 0.5 }}
-                        className="flex items-center gap-3 px-4 py-3.5 rounded-xl"
+                        className="flex items-center gap-2.5 px-3 py-2.5 rounded-lg"
                         style={{
                           background: `linear-gradient(135deg, ${cs.color}08, ${cs.color}04)`,
                           border: `1px solid ${cs.color}25`,
