@@ -378,13 +378,13 @@ function HeroSection() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <PrimaryButton onClick={() => openBookingModal()}>
                   Book Free Strategy Call
                 </PrimaryButton>
                 <a
                   href="#case-studies"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-white/20 text-white text-[17px] hover:border-white/40 hover:bg-white/5 transition-all cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl border border-white/20 text-white text-[15px] sm:text-[17px] hover:border-white/40 hover:bg-white/5 transition-all cursor-pointer"
                   style={{ fontFamily: fonts.display, fontWeight: 600 }}
                 >
                   See Real Examples
@@ -979,7 +979,7 @@ function WhatWeDoSection() {
         {/* Orbit + Chat Interactive */}
         <div ref={ref} className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* Left: Orbital animation */}
-          <div className="relative w-[320px] h-[320px] md:w-[400px] md:h-[400px] shrink-0 mx-auto lg:mx-0">
+          <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] shrink-0 mx-auto lg:mx-0">
             {/* Orbit ring */}
             <div
               className="absolute inset-4 md:inset-6 rounded-full"
@@ -1400,10 +1400,9 @@ function CaseStudiesSection() {
                   }}
                 >
                   <div
-                    className="grid md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr]"
-                    style={isReversed ? { direction: "rtl" } : {}}
+                    className={`grid grid-cols-1 md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr] ${isReversed ? 'md:[direction:rtl]' : ''}`}
                   >
-                    <div className="relative h-[180px] md:h-full overflow-hidden" style={{ direction: "ltr" }}>
+                    <div className={`relative h-[180px] md:h-full overflow-hidden ${isReversed ? 'md:[direction:ltr]' : ''}`}>
                       <ImageWithFallback
                         src={cs.image}
                         alt={cs.title}
@@ -1432,7 +1431,7 @@ function CaseStudiesSection() {
                       </div>
                     </div>
 
-                    <div className="p-5 md:p-6 lg:p-8 flex flex-col justify-center" style={{ direction: "ltr" }}>
+                    <div className={`p-5 md:p-6 lg:p-8 flex flex-col justify-center ${isReversed ? 'md:[direction:ltr]' : ''}`}>
                       <motion.span
                         className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[11px] tracking-wide uppercase mb-4 w-fit"
                         style={{
@@ -1564,7 +1563,7 @@ function CaseStudiesSection() {
                                 }}
                               >
                                 <code
-                                  className="flex-1 text-[13px] md:text-[14px] text-white/80 truncate select-all"
+                                  className="flex-1 text-[11px] md:text-[14px] text-white/80 select-all break-all"
                                   style={{ fontFamily: "'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', monospace" }}
                                 >
                                   {cs.mcpUrl}
