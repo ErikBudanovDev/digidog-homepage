@@ -146,8 +146,8 @@ function PartnerItem({ partner }: { partner: PartnerDef }) {
 }
 
 export function TrustedPartners() {
-  // Double the array for seamless looping
-  const doubled = [...partners, ...partners];
+  // Repeat enough times to fill wide screens before loop resets
+  const repeated = [...partners, ...partners, ...partners, ...partners, ...partners];
 
   return (
     <section className="bg-white py-12 md:py-16 border-b border-gray-100 overflow-hidden">
@@ -171,7 +171,7 @@ export function TrustedPartners() {
         <div className="flex overflow-hidden">
           {/* Track 1 */}
           <div className="flex animate-marquee items-center gap-14 md:gap-20 whitespace-nowrap">
-            {doubled.map((partner, i) => (
+            {repeated.map((partner, i) => (
               <PartnerItem key={`a-${partner.name}-${i}`} partner={partner} />
             ))}
           </div>
@@ -180,7 +180,7 @@ export function TrustedPartners() {
             className="flex animate-marquee2 items-center gap-14 md:gap-20 whitespace-nowrap"
             aria-hidden="true"
           >
-            {doubled.map((partner, i) => (
+            {repeated.map((partner, i) => (
               <PartnerItem key={`b-${partner.name}-${i}`} partner={partner} />
             ))}
           </div>
