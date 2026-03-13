@@ -1,6 +1,6 @@
 {
   "about": {
-    "heroTitle": "About Digidog — Your AI\n& Web Development\nAgency Partner!",
+    "heroTitle": "About Digidog — Your AI\n& Web Development\nAgency Partner",
     "heroBreadcrumb": "About Us",
     "heroBadge": "About Us",
     "heroCta": "Get in touch",
@@ -22,7 +22,7 @@
     "value3Text": "At Digidog, we value long-term relationships built on a solid foundation of trust and integrity. For us, it's not just about the moment but about continuous mutual growth."
   },
   "contact": {
-    "heroTitle": "Let's discuss your\nnext project\ntogether!",
+    "heroTitle": "Let's discuss your\nnext project\ntogether",
     "heroBreadcrumb": "Contact",
     "heroBadge": "Contact",
     "heroDescription": "We look forward to hearing from you. Tell us about your project and we'll get back to you within 24 hours.",
@@ -51,7 +51,7 @@
     "formMessage": "Message",
     "formMessagePlaceholder": "Describe your project, your goals, and your vision...",
     "formSubmit": "Send message",
-    "formThankYou": "Thank you!",
+    "formThankYou": "Thank you",
     "formThankYouSub": "Your message has been sent successfully. We'll get back to you shortly.",
     "formNewMessage": "Send a new message",
     "serviceOptions": [

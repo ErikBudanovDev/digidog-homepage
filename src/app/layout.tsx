@@ -12,7 +12,7 @@ const GA_ID = "G-W5JP198XEE";
  * ───────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://digidog.org"),
+  metadataBase: new URL("https://www.digidog.org"),
   title: {
     default: "Digidog – AI Automation & Web Development Agency",
     template: "%s | Digidog",
@@ -38,8 +38,8 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Digidog",
-  url: "https://digidog.org",
-  logo: "https://digidog.org/wp-content/uploads/2024/02/Digidog-Mark-Black@4x-e1709122020974.png",
+  url: "https://www.digidog.org",
+  logo: "https://www.digidog.org/wp-content/uploads/2024/02/Digidog-Mark-Black@4x-e1709122020974.png",
   description: "AI Consulting & Full-Stack Web Development Agency",
   sameAs: [
     "https://www.facebook.com/digidog.agency/",

@@ -12,7 +12,12 @@ import { useTranslation } from "@/i18n/i18n-context";
 import enT from "@/translations/english.json";
 import deT from "@/translations/german.json";
 
-const serviceLinks = ["Web Design", "App Development", "SEO", "Content Marketing", "Hosting"];
+const serviceLinks = [
+  { label: "Web Design", href: "/services/web-design" },
+  { label: "AI Solutions", href: "/services/ai-solutions" },
+  { label: "AI Integration", href: "/services/ai-integration" },
+  { label: "Custom Software", href: "/services/custom-software" },
+];
 
 const socialLinksTop = [
   { name: "Instagram", href: "https://www.instagram.com/digidog_agency/", icon: Instagram },
@@ -167,8 +172,13 @@ export function Footer() {
                 </h4>
                 <ul className="space-y-3">
                   {serviceLinks.map((service) => (
-                    <li key={service}>
-                      <FooterLink href="#">{service}</FooterLink>
+                    <li key={service.label}>
+                      <FooterLink
+                        href={service.href}
+                        onClick={(e) => handleNavClick(e, service.href)}
+                      >
+                        {service.label}
+                      </FooterLink>
                     </li>
                   ))}
                 </ul>

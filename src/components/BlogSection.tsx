@@ -11,18 +11,21 @@ const blogPosts: BlogCardData[] = [
     description: "Most mid-size companies waste 30-60% of their team's time on repetitive tasks. Here's exactly how AI automation changes that — with real workflows, not hype.",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1080&q=80",
     tag: "AI Automation",
+    slug: "ai-automation-for-mid-size-companies",
   },
   {
     title: "How We Automated CRM Operations with AI — Saving 25 Hours/Week",
     description: "A mid-size agency was drowning in manual CRM work. We built an AI system that handles lead qualification, follow-ups, and reporting automatically.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1080&q=80",
     tag: "Case Study",
+    slug: "automated-crm-operations-with-ai",
   },
   {
     title: "What Is MCP (Model Context Protocol) and Why It Matters",
     description: "MCP is the protocol that turns AI from a chatbot into a business operator. Here's what it is, how it works, and why your company should care.",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
     tag: "AI Integration",
+    slug: "what-is-mcp-model-context-protocol",
   },
 ];
 

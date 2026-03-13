@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org", "@type": "Service",
   name: "Custom Software Development",
-  provider: { "@type": "Organization", name: "Digidog", url: "https://digidog.org" },
+  provider: { "@type": "Organization", name: "Digidog", url: "https://www.digidog.org" },
   description: "Custom software for mid-size companies including internal tools, API integrations, SaaS platforms, and dashboards.",
   serviceType: "Software Development",
   areaServed: [{ "@type": "Country", name: "Germany" }, { "@type": "Country", name: "United States" }, { "@type": "Country", name: "Austria" }],

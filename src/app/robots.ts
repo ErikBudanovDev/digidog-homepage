@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: "https://digidog.org/sitemap.xml",
+    sitemap: "https://www.digidog.org/sitemap.xml",
   };
 }

@@ -1,6 +1,6 @@
 {
   "about": {
-    "heroTitle": "Über Digidog — Ihr KI-\n& Webentwicklungs-\nAgentur-Partner!",
+    "heroTitle": "Über Digidog — Ihr KI-\n& Webentwicklungs-\nAgentur-Partner",
     "heroBreadcrumb": "Über uns",
     "heroBadge": "Über uns",
     "heroCta": "Kontakt aufnehmen",
@@ -22,7 +22,7 @@
     "value3Text": "Bei Digidog schätzen wir langfristige Beziehungen auf einem soliden Fundament aus Vertrauen und Integrität. Für uns geht es nicht nur um den Moment, sondern um kontinuierliches gegenseitiges Wachstum."
   },
   "contact": {
-    "heroTitle": "Lassen Sie uns Ihr\nnächstes Projekt\ngemeinsam besprechen!",
+    "heroTitle": "Lassen Sie uns Ihr\nnächstes Projekt\ngemeinsam besprechen",
     "heroBreadcrumb": "Kontakt",
     "heroBadge": "Kontakt",
     "heroDescription": "Wir freuen uns auf Ihre Nachricht. Erzählen Sie uns von Ihrem Projekt und wir melden uns innerhalb von 24 Stunden.",
@@ -51,7 +51,7 @@
     "formMessage": "Nachricht",
     "formMessagePlaceholder": "Beschreiben Sie Ihr Projekt, Ihre Ziele und Ihre Vision...",
     "formSubmit": "Nachricht senden",
-    "formThankYou": "Vielen Dank!",
+    "formThankYou": "Vielen Dank",
     "formThankYouSub": "Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns in Kürze bei Ihnen.",
     "formNewMessage": "Neue Nachricht senden",
     "serviceOptions": [

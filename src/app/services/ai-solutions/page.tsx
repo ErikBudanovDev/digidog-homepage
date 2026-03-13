@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org", "@type": "Service",
   name: "Custom AI Solutions & Machine Learning",
-  provider: { "@type": "Organization", name: "Digidog", url: "https://digidog.org" },
+  provider: { "@type": "Organization", name: "Digidog", url: "https://www.digidog.org" },
   description: "Custom AI development including ML models, NLP, computer vision, and LLM integration.",
   serviceType: "AI Development",
   areaServed: [{ "@type": "Country", name: "Germany" }, { "@type": "Country", name: "United States" }, { "@type": "Country", name: "Austria" }],

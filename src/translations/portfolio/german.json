@@ -1,6 +1,6 @@
 {
   "page": {
-    "heroTitle": "Unser Portfolio –\nProjekte, die begeistern!",
+    "heroTitle": "Unser Portfolio –\nProjekte, die begeistern",
     "heroDescription": "Entdecken Sie unsere erfolgreich abgeschlossenen Projekte in Webentwicklung, KI-Integration und individueller Softwareentwicklung. Jedes Projekt erzählt seine eigene Erfolgsgeschichte.",
     "heroBadge": "Unsere Arbeit",
     "statsTotalProjects": "Projekte gesamt",
@@ -8,7 +8,7 @@
     "statsAiIntegration": "KI-Integration",
     "statsCustomSoftware": "Individualsoftware",
     "sectionBadge": "Alle Projekte",
-    "sectionTitle": "Projekte nach Kategorie!",
+    "sectionTitle": "Projekte nach Kategorie",
     "sectionSubtitle": "Filtern Sie nach Kategorie, um die relevantesten Projekte für Sie zu finden.",
     "filterAll": "Alle Projekte",
     "filterWeb": "Webentwicklung",
@@ -34,7 +34,7 @@
   },
   "projects": {
     "united-nations-fp2030": {
-      "title": "Vereinte Nationen – FP2030!",
+      "title": "Vereinte Nationen – FP2030",
       "description": "Design-Implementierung für die FP2030-Website der Vereinten Nationen mit interaktiven Highcharts-Datenvisualisierungen und Parallax-Animationen.",
       "overview": "Wir hatten die unglaubliche Möglichkeit, mit den Vereinten Nationen an der Entwicklung einer bemerkenswerten Website für FP2030 zusammenzuarbeiten.",
       "goal": "Eine visuell beeindruckende, datengetriebene Website für die FP2030-Initiative der UN erstellen.",
@@ -44,7 +44,7 @@
       "client": "Vereinte Nationen – FP2030"
     },
     "mpa-online": {
-      "title": "MPA.online Streaming-Plattform!",
+      "title": "MPA.online Streaming-Plattform",
       "description": "Fullstack-Webanwendung für eine medizinische Bildungs-Streaming-Plattform mit Next.js, Strapi und MongoDB.",
       "overview": "MPA.online ist eine Streaming-Plattform für medizinische Fachangestellte zum Lernen durch Videokurse.",
       "goal": "Eine voll funktionsfähige Streaming-Plattform für medizinische Weiterbildung entwickeln.",
@@ -54,7 +54,7 @@
       "client": "MPA.online"
     },
     "miso-supermarket": {
-      "title": "Miso Supermarkt & Bäckerei!",
+      "title": "Miso Supermarkt & Bäckerei",
       "description": "Modernes Webdesign und digitale Lösung für einen lokalen Supermarkt mit integriertem Online-Shop.",
       "overview": "Miso ist ein familiengeführtes Unternehmen in Düsseldorf mit frischen Backwaren und asiatischen Lebensmitteln.",
       "goal": "Eine professionelle Online-Präsenz mit integriertem Bestell- und Shopsystem aufbauen.",
@@ -64,7 +64,7 @@
       "client": "Miso GmbH"
     },
     "techvision-dashboard": {
-      "title": "TechVision Dashboard!",
+      "title": "TechVision Dashboard",
       "description": "Komplettes Redesign eines Enterprise-Dashboards mit modernem UI/UX-Design und responsiver Darstellung.",
       "overview": "TechVision ist ein wachsendes SaaS-Unternehmen für Echtzeit-Analytics mittelständischer Unternehmen.",
       "goal": "Das Dashboard durch moderne Webentwicklung verbessern — Fokus auf Performance, Usability und Compliance.",
@@ -74,7 +74,7 @@
       "client": "TechVision AG"
     },
     "bold-ideas": {
-      "title": "Bold Ideas Movement!",
+      "title": "Bold Ideas Movement",
       "description": "Kreative Markenstrategie und visuelles Storytelling für ein innovatives Startup.",
       "overview": "Bold Ideas Movement ist ein kreatives Startup aus Berlin für nachhaltige Innovationen.",
       "goal": "Eine starke Markenidentität und eine Storytelling-Website entwickeln, die Investoren überzeugt.",
@@ -84,7 +84,7 @@
       "client": "Bold Ideas GmbH"
     },
     "bella-cucina": {
-      "title": "Bella Cucina Restaurant!",
+      "title": "Bella Cucina Restaurant",
       "description": "Elegante Website mit Online-Reservierung und digitaler Speisekarte für ein gehobenes italienisches Restaurant.",
       "overview": "Bella Cucina ist ein gehobenes italienisches Restaurant in der Düsseldorfer Altstadt.",
       "goal": "Eine elegante, mobilfreundliche Website mit Online-Reservierung und digitaler Speisekarte erstellen.",
@@ -94,7 +94,7 @@
       "client": "Bella Cucina Ristorante"
     },
     "smileforyou": {
-      "title": "SmileforYou – Conversion-Optimierung!",
+      "title": "SmileforYou – Conversion-Optimierung",
       "description": "Komplettes Website-Redesign und Conversion-Optimierung für eine führende deutsche Zahnklinikkette — Verdopplung der Conversion-Rate von 5% auf 11%.",
       "overview": "Zusammenarbeit mit SmileforYou, einer führenden Zahnklinikkette für Kieferorthopädie.",
       "goal": "Website mit Mobile-First-Ansatz redesignen, um die Conversion-Rate deutlich zu steigern.",
@@ -104,7 +104,7 @@
       "client": "SmileforYou"
     },
     "technik-hoffmann": {
-      "title": "Technik Hoffmann – Fullstack-Entwicklung!",
+      "title": "Technik Hoffmann – Fullstack-Entwicklung",
       "description": "Komplexe Fullstack-Websiteentwicklung für ein deutsches Präzisionstechnikunternehmen.",
       "overview": "Projekt mit 2 Entwicklern, 1 Designer und 1 QA-Tester für ein Präzisionstechnikunternehmen.",
       "goal": "Eine komplexe, design-intensive Unternehmenswebsite mit interaktiven jQuery-Animationen umsetzen.",
@@ -114,7 +114,7 @@
       "client": "Hoffmann Technik"
     },
     "wickie-agency": {
-      "title": "WICKIE – Redesign einer Digitalagentur!",
+      "title": "WICKIE – Redesign einer Digitalagentur",
       "description": "Komplettes Website-Redesign für eine Digitalagentur mit cleaner, responsiver WordPress-Website.",
       "overview": "WICKIE hilft Unternehmen bei der Erstellung und Verwaltung ihrer Social-Media-Präsenz.",
       "goal": "WICKIE's Website mit einem cleanen, responsiven Layout modernisieren.",
@@ -124,7 +124,7 @@
       "client": "WICKIE Agentur"
     },
     "digidog-threejs": {
-      "title": "Digidog – Three.js & WordPress Integration!",
+      "title": "Digidog – Three.js & WordPress Integration",
       "description": "Lösung komplexer Three.js- und Elementor-Konflikte auf unserer eigenen Agentur-Website.",
       "overview": "Internes Projekt zur Implementierung von 3D-Animationen mit Three.js auf WordPress.",
       "goal": "SEO-optimiertes Design mit integrierter Three.js 3D-Animation auf WordPress umsetzen.",
@@ -134,7 +134,7 @@
       "client": "Digidog (Intern)"
     },
     "jobsvs-recruitment": {
-      "title": "JobsVS – Personalvermittlungs-Website!",
+      "title": "JobsVS – Personalvermittlungs-Website",
       "description": "Design-Implementierung und SEO für eine Personalvermittlung mit Personio-API-Integration.",
       "overview": "JobsVS ist eine Personalvermittlung, die Unternehmen und Bewerber zusammenbringt.",
       "goal": "Eine responsive, SEO-optimierte Website mit Personio-API-Integration umsetzen.",
@@ -144,7 +144,7 @@
       "client": "JobsVS"
     },
     "cibaria-italiana": {
-      "title": "Cibaria Italiana – Restaurant & E-Commerce!",
+      "title": "Cibaria Italiana – Restaurant & E-Commerce",
       "description": "Elegante Website mit E-Commerce, Online-Reservierung und Kochkurs-Buchung für ein authentisches italienisches Restaurant.",
       "overview": "Mario bringt die kulinarischen Traditionen aus Genua und Bologna nach Wien mit hausgemachter Pasta.",
       "goal": "Eine elegante Website mit E-Commerce, Reservierung und Kursbuchung erstellen.",
@@ -154,7 +154,7 @@
       "client": "Cibaria Italiana"
     },
     "monte-ofelio-group": {
-      "title": "Monte Ofelio Group – Multi-Brand-Webstrategie!",
+      "title": "Monte Ofelio Group – Multi-Brand-Webstrategie",
       "description": "Dynamische Multi-Website-Digitalstrategie für eine italienische Bar- und Food-Gruppe in Wien.",
       "overview": "Die Monte Ofelio Group wurde von den Brüdern Formisano gegründet, um italienische Nachhaltigkeit nach Wien zu bringen.",
       "goal": "Eine Multi-Website-Digitalstrategie für Markenbekanntheit und weltweiten Online-Vertrieb erstellen.",
@@ -164,7 +164,7 @@
       "client": "Monte Ofelio Group"
     },
     "ai-jewelry-sketch": {
-      "title": "KI-Schmuckskizzen-Automatisierung!",
+      "title": "KI-Schmuckskizzen-Automatisierung",
       "description": "Vollständige KI-Automatisierung in Make, die Kunden-E-Mails liest, Anforderungen extrahiert und rund um die Uhr Schmuckskizzen generiert.",
       "overview": "Ein Schmuckunternehmen verbrachte täglich 5–10 Stunden mit der manuellen Skizzenerstellung. Wir bauten die Automatisierung in nur 6 Stunden.",
       "goal": "Manuelle Skizzenerstellung durch End-to-End-KI-Automatisierung eliminieren.",
@@ -174,7 +174,7 @@
       "client": "Schmuckunternehmen (Vertraulich)"
     },
     "fitpulse-app": {
-      "title": "FitPulse Gesundheits-App!",
+      "title": "FitPulse Gesundheits-App",
       "description": "Mobile-First-Fitnessplattform mit KI-gestützten Trainingsplänen und Echtzeit-Fortschrittsverfolgung.",
       "overview": "FitPulse nutzt KI-Technologie für personalisierte Trainingspläne, die sich dynamisch anpassen.",
       "goal": "Eine KI-gesteuerte Fitness-App mit adaptiven Trainingsplänen und Gamification entwickeln.",
@@ -184,7 +184,7 @@
       "client": "FitPulse GmbH"
     },
     "smartassist-chatbot": {
-      "title": "SmartAssist KI-Chatbot!",
+      "title": "SmartAssist KI-Chatbot",
       "description": "Intelligenter KI-Chatbot mit NLP-Integration für automatisierten Kundenservice und Lead-Qualifizierung.",
       "overview": "Entwickelt für ein mittelständisches Versicherungsunternehmen mit hunderten täglichen Kundenanfragen.",
       "goal": "KI-gestützte Kundenkommunikation implementieren, die 80% der Standardanfragen automatisch beantwortet.",
@@ -194,7 +194,7 @@
       "client": "SecureLife Versicherung"
     },
     "smarthome-iot": {
-      "title": "SmartHome IoT-Plattform!",
+      "title": "SmartHome IoT-Plattform",
       "description": "KI-gesteuerte Smart-Home-Plattform mit automatisierter Energieoptimierung und vorausschauender Wartung.",
       "overview": "Für einen führenden Smart-Home-Anbieter entwickelten wir eine KI-Plattform zur Echtzeit-Energieanalyse.",
       "goal": "Eine intelligente IoT-Plattform entwickeln, die Energieverbrauch um 30% senkt.",
@@ -204,7 +204,7 @@
       "client": "NexaHome Technologies"
     },
     "hubspot-dental-crm": {
-      "title": "HubSpot CRM – Zahnklinikkette!",
+      "title": "HubSpot CRM – Zahnklinikkette",
       "description": "Enterprise HubSpot CRM-Implementierung für eine 5-Standorte-Zahnklinikkette mit IVORIS-API und Make.com.",
       "overview": "HubSpot CRM-Implementierung für eine kieferorthopädische Klinikkette mit fünf Standorten.",
       "goal": "Ein einheitliches CRM-System über 5 Standorte implementieren, das Patienten-Workflows standardisiert.",
@@ -214,7 +214,7 @@
       "client": "Zahnklinikkette (Vertraulich)"
     },
     "beoriginaltours-operations": {
-      "title": "BeOriginalTours Operations-Plattform!",
+      "title": "BeOriginalTours Operations-Plattform",
       "description": "Automatisierte Buchungs-, Planungs- und Verwaltungsplattform für eine europäische Touragentur.",
       "overview": "BeOriginalTours ist eine europäische Touragentur, deren Buchungs- und Planungsprozess wir automatisiert haben.",
       "goal": "Die gesamte Buchungspipeline mit einem Dashboard für volle Betriebstransparenz automatisieren.",
@@ -224,7 +224,7 @@
       "client": "BeOriginalTours"
     },
     "luxe-mode": {
-      "title": "Luxe Mode Online-Shop!",
+      "title": "Luxe Mode Online-Shop",
       "description": "High-End E-Commerce-Lösung mit personalisierten Empfehlungen und nahtloser Checkout-Erfahrung.",
       "overview": "Luxe Mode ist eine Premium-Modemarke für exklusive Designermode.",
       "goal": "Eine E-Commerce-Plattform mit KI-gestützten Empfehlungen und optimiertem Checkout erstellen.",
@@ -234,7 +234,7 @@
       "client": "Luxe Mode AG"
     },
     "logitrack-warehouse": {
-      "title": "LogiTrack Lagerverwaltungssystem!",
+      "title": "LogiTrack Lagerverwaltungssystem",
       "description": "Individuelle Lagerverwaltungssoftware mit Echtzeit-Tracking, Barcode-Scanning und automatischer Nachbestellung.",
       "overview": "Entwickelt für ein wachsendes Logistikunternehmen, das mit Excel an seine Grenzen gestoßen war.",
       "goal": "Eine skalierbare Lagerverwaltungslösung entwickeln, die Bestandsfehler um 95% reduziert.",
@@ -244,7 +244,7 @@
       "client": "LogiTrack Logistics GmbH"
     },
     "mediconnect-praxis": {
-      "title": "MediConnect Praxissoftware!",
+      "title": "MediConnect Praxissoftware",
       "description": "Individuelle Praxisverwaltungssoftware mit Terminplanung, digitaler Patientenakte und Abrechnungsmodul.",
       "overview": "Entwickelt für eine Gemeinschaftspraxis in Düsseldorf mit veralteter Praxissoftware.",
       "goal": "Veraltete Praxissoftware durch eine moderne, integrierte Lösung ersetzen.",

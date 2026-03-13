@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { blogPosts } from "./blog/blog-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://digidog.org";
+  const baseUrl = "https://www.digidog.org";
   const now = new Date().toISOString();
 
   const staticPages: MetadataRoute.Sitemap = [

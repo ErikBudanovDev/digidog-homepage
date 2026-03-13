@@ -1,6 +1,6 @@
 {
   "page": {
-    "heroTitle": "Blog — KI, Webentwicklung & Software-Insights!",
+    "heroTitle": "Blog — KI, Webentwicklung & Software-Insights",
     "heroDescription": "Fachartikel zu KI-Automatisierung, Webentwicklung, Individualsoftware und Digitalstrategie für mittelständische Unternehmen.",
     "heroBadge": "Unser Blog",
     "filterAll": "Alle Beiträge",
@@ -18,48 +18,48 @@
   },
   "posts": {
     "ai-automation-for-mid-size-companies": {
-      "title": "KI-Automatisierung für mittelständische Unternehmen: Ein Praxisleitfaden!",
-      "metaTitle": "KI-Automatisierung für den Mittelstand — Praxisleitfaden!",
+      "title": "KI-Automatisierung für mittelständische Unternehmen: Ein Praxisleitfaden",
+      "metaTitle": "KI-Automatisierung für den Mittelstand — Praxisleitfaden",
       "metaDescription": "Erfahren Sie, wie mittelständische Unternehmen (50-200 Mitarbeiter) KI-Automatisierung einsetzen und manuelle Arbeit um 30-60% reduzieren. Echte Workflows, ROI-Berechnungen und Schritt-für-Schritt-Anleitung.",
       "excerpt": "Die meisten mittelständischen Unternehmen verschwenden 30-60% der Arbeitszeit mit repetitiven Aufgaben. So ändert KI-Automatisierung das — mit echten Workflows, nicht Hype.",
       "tag": "KI-Automatisierung",
       "readTime": "8 Min. Lesezeit"
     },
     "what-is-mcp-model-context-protocol": {
-      "title": "Was ist MCP (Model Context Protocol) und warum es für Unternehmen wichtig ist!",
-      "metaTitle": "Was ist MCP (Model Context Protocol)? Business-Guide 2026!",
+      "title": "Was ist MCP (Model Context Protocol) und warum es für Unternehmen wichtig ist",
+      "metaTitle": "Was ist MCP (Model Context Protocol)? Business-Guide 2026",
       "metaDescription": "MCP (Model Context Protocol) verbindet KI-Assistenten mit Ihren echten Business-Tools — CRM, E-Mail, Datenbanken. Erfahren Sie, wie MCP funktioniert und warum es die Zukunft der KI-Integration ist.",
       "excerpt": "MCP ist das Protokoll, das KI vom Chatbot zum operativen Business-Partner macht. Was es ist, wie es funktioniert, und warum Ihr Unternehmen davon profitiert.",
       "tag": "KI-Integration",
       "readTime": "7 Min. Lesezeit"
     },
     "website-erstellen-lassen-kosten-ablauf-tipps": {
-      "title": "Website erstellen lassen: Kosten, Ablauf & Tipps für 2026!",
-      "metaTitle": "Website erstellen lassen — Kosten, Ablauf & Tipps 2026!",
+      "title": "Website erstellen lassen: Kosten, Ablauf & Tipps für 2026",
+      "metaTitle": "Website erstellen lassen — Kosten, Ablauf & Tipps 2026",
       "metaDescription": "Was kostet es, eine professionelle Website erstellen zu lassen? Alles über Preise, den Ablauf vom Briefing bis zum Launch, und worauf Sie bei der Agenturwahl achten sollten.",
       "excerpt": "Von der ersten Idee bis zum Launch: Was kostet eine professionelle Website, wie läuft ein Webprojekt ab, und worauf sollten Sie bei der Agenturwahl achten?",
       "tag": "Webentwicklung",
       "readTime": "6 Min. Lesezeit"
     },
     "case-study-ai-automation-crm-integration": {
-      "title": "Fallstudie: CRM-Automatisierung mit KI — 25 Stunden pro Woche eingespart!",
-      "metaTitle": "KI-CRM-Automatisierung Fallstudie — 25 Stunden/Woche gespart!",
+      "title": "Fallstudie: CRM-Automatisierung mit KI — 25 Stunden pro Woche eingespart",
+      "metaTitle": "KI-CRM-Automatisierung Fallstudie — 25 Stunden/Woche gespart",
       "metaDescription": "Wie wir eine KI-gestützte CRM-Integration mit MCP gebaut haben, die Lead-Qualifizierung, Follow-ups und Reporting automatisiert — und einer Agentur 25 Stunden pro Woche spart.",
       "excerpt": "Eine Agentur mit 35 Mitarbeitern ertrank in manueller CRM-Arbeit. Wir bauten ein KI-System, das Lead-Qualifizierung, Follow-ups und Reporting automatisch erledigt.",
       "tag": "Fallstudie",
       "readTime": "6 Min. Lesezeit"
     },
     "case-study-orthodontist-website-seo": {
-      "title": "Fallstudie: 340% mehr Patientenanfragen für einen Kieferorthopäden durch Webdesign & SEO!",
-      "metaTitle": "Kieferorthopädie-Marketing Fallstudie — 340% mehr Anfragen!",
+      "title": "Fallstudie: 340% mehr Patientenanfragen für einen Kieferorthopäden durch Webdesign & SEO",
+      "metaTitle": "Kieferorthopädie-Marketing Fallstudie — 340% mehr Anfragen",
       "metaDescription": "Wie wir die Website eines Kieferorthopäden neu gestaltet und gezieltes SEO implementiert haben — mit dem Ergebnis von 340% mehr Patientenanfragen in 6 Monaten.",
       "excerpt": "Eine Kieferorthopädie-Praxis war online unsichtbar. Nach einem kompletten Redesign und einer lokalen SEO-Strategie stiegen die Anfragen um 340%.",
       "tag": "Fallstudie",
       "readTime": "5 Min. Lesezeit"
     },
     "custom-software-vs-off-the-shelf": {
-      "title": "Individualsoftware vs. Standardlösung: Wann bauen und wann kaufen?!",
-      "metaTitle": "Individualsoftware vs. Standardlösung — Entscheidungshilfe 2026!",
+      "title": "Individualsoftware vs. Standardlösung: Wann bauen und wann kaufen?",
+      "metaTitle": "Individualsoftware vs. Standardlösung — Entscheidungshilfe 2026",
       "metaDescription": "Soll ich Individualsoftware entwickeln lassen oder SaaS kaufen? Ein praktischer Entscheidungsrahmen für mittelständische Unternehmen mit Kostenvergleich und echten Beispielen.",
       "excerpt": "Die Build-vs-Buy-Entscheidung kann Ihr Tech-Budget retten oder ruinieren. Ein praktischer Entscheidungsrahmen für den Mittelstand.",
       "tag": "Software",

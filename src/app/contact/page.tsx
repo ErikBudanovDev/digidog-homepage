@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org", "@type": "LocalBusiness",
   name: "Digidog — AI & Web Development Agency",
-  url: "https://digidog.org",
+  url: "https://www.digidog.org",
   telephone: "+43-664-93020594",
   email: "info@digidog.org",
   address: { "@type": "PostalAddress", streetAddress: "Lvovyan 17/50", addressLocality: "Yerevan", addressCountry: "AM" },

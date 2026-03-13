@@ -55,6 +55,7 @@ export interface BlogCardData {
   description: string;
   image: string;
   tag: string;
+  slug?: string;
 }
 
 export function BlogCard({
@@ -100,9 +101,11 @@ export function BlogCard({
         >
           {post.description}
         </p>
-        <LinkWithArrow color={colors.textBlueLink} icon="chevron">
-          {t.common.readMore}
-        </LinkWithArrow>
+        <a href={post.slug ? `/blog/${post.slug}` : "/blog"}>
+          <LinkWithArrow color={colors.textBlueLink} icon="chevron">
+            {t.common.readMore}
+          </LinkWithArrow>
+        </a>
       </div>
     </ContentCard>
   );
