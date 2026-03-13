@@ -120,7 +120,7 @@ type PartnerDef =
   | { name: string; image: string; Logo?: undefined };
 
 const partners: PartnerDef[] = [
-  { name: "Activated Insights", image: "/figma-assets/activated-insights-logo.svg" },
+  { name: "Activated Insights", image: "/figma-assets/activated-insights-full.png" },
   { name: "Greenventory", image: "/figma-assets/greenventory-logo.webp" },
   { name: "Original Berlin Tours", image: "/figma-assets/original-berlin-tours.webp" },
   { name: "Berit Schulen", image: "/figma-assets/berit-schulen.webp" },
