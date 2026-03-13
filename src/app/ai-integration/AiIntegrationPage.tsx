@@ -53,9 +53,6 @@ import { colors, fonts, transitions } from "@/components/ui/brand";
 import { SectionContainer, SectionBadge } from "@/components/ui/section";
 import { PrimaryButton, openBookingModal } from "@/components/ui/buttons";
 
-const claudeIcon = "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=200&q=80";
-const aiHubIcon = "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=200&q=80";
-const slackIcon = "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=200&q=80";
 const caseStudy1Image = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1080&q=80";
 
 /* ─────────────────────────────────────────────
@@ -996,14 +993,15 @@ function WhatWeDoSection() {
             {/* Center: Claude logo */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
               <motion.div
-                className="w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden"
+                className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center"
                 style={{
+                  background: "linear-gradient(135deg, #D97706, #F59E0B)",
                   boxShadow: "0 0 40px rgba(245,158,11,0.3), 0 0 80px rgba(245,158,11,0.1)",
                 }}
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
-                <img src={aiHubIcon} alt="AI Hub" className="w-full h-full object-cover" />
+                <Bot size={36} className="text-white" />
               </motion.div>
             </div>
 
@@ -1098,8 +1096,8 @@ function WhatWeDoSection() {
                 className="px-5 py-3 flex items-center gap-3"
                 style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}
               >
-                <div className="w-8 h-8 rounded-lg overflow-hidden">
-                  <img src={aiHubIcon} alt="AI Hub" className="w-full h-full object-cover" />
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #D97706, #F59E0B)' }}>
+                  <Bot size={16} className="text-white" />
                 </div>
                 <div>
                   <span
