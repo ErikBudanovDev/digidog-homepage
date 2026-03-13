@@ -351,20 +351,23 @@ function HeroSection() {
                 className="text-[36px] md:text-[52px] lg:text-[60px] leading-[1.1] mb-6"
                 style={{ fontFamily: fonts.heading, fontWeight: 700 }}
               >
-                <span
-                  className="bg-clip-text text-transparent"
-                  style={{ backgroundImage: "linear-gradient(90deg, #ffffff 0%, #93c5fd 100%)" }}
-                >
-                  Talk to Your
+                <span className="text-white">
+                  Your Competitors Are
                 </span>
                 <br />
                 <span
                   className="bg-clip-text text-transparent"
                   style={{ backgroundImage: "linear-gradient(90deg, #a78bfa 0%, #06b6d4 100%)" }}
                 >
-                  Business
-                </span>{" "}
-                <span className="text-white">With AI</span>
+                  Already Using AI.
+                </span>
+                <br />
+                <span
+                  className="bg-clip-text text-transparent"
+                  style={{ backgroundImage: "linear-gradient(90deg, #ffffff 0%, #93c5fd 100%)" }}
+                >
+                  Don't Stay Behind.
+                </span>
               </h1>
             </ScrollReveal>
 
@@ -373,10 +376,10 @@ function HeroSection() {
                 className="text-[17px] md:text-[19px] leading-[1.7] mb-8 max-w-[520px]"
                 style={{ fontFamily: fonts.body, color: colors.textSlateLighter }}
               >
-                Integrate your operations, data, and workflows into your{" "}
-                <span className="text-white">Claude or GPT Chat</span>.{" "}
-                Access reports, automate tasks, manage operations, and
-                make decisions through natural conversation.
+                While you're switching between 6 dashboards and copy-pasting data into spreadsheets,
+                AI-powered companies are making decisions in seconds. We connect your CRM, email,
+                support, and operations into{" "}
+                <span className="text-white">one AI conversation</span> — so you can too.
               </p>
             </ScrollReveal>
 
@@ -386,11 +389,11 @@ function HeroSection() {
                   Book Free Strategy Call
                 </PrimaryButton>
                 <a
-                  href="/services"
+                  href="#case-studies"
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-white/20 text-white text-[17px] hover:border-white/40 hover:bg-white/5 transition-all cursor-pointer"
                   style={{ fontFamily: fonts.display, fontWeight: 600 }}
                 >
-                  Explore Services
+                  See Real Examples
                   <ArrowRight size={18} />
                 </a>
               </div>
@@ -2192,22 +2195,28 @@ function CtaBanner() {
                 className="text-white text-[28px] md:text-[40px] leading-[1.2] mb-4"
                 style={{ fontFamily: fonts.heading, fontWeight: 700 }}
               >
-                Don't Struggle With What & How to Automate —{" "}
+                Every Week You Wait, Your Competitors{" "}
                 <span
                   className="bg-clip-text text-transparent"
                   style={{ backgroundImage: "linear-gradient(135deg, #38bdf8, #a78bfa)" }}
                 >
-                  Leave It to the Experts
+                  Pull Further Ahead
                 </span>
               </h2>
               <p
-                className="text-white/60 text-[16px] md:text-[17px] mb-8 max-w-[550px] mx-auto"
+                className="text-white/60 text-[16px] md:text-[17px] mb-4 max-w-[550px] mx-auto"
                 style={{ fontFamily: fonts.body }}
               >
-                We handle the complexity so you can focus on running your business. Book a consultation and let us build your AI-powered operations.
+                We build your AI operations system in weeks, not months. Get a free strategy call to see exactly what AI can automate in your business.
+              </p>
+              <p
+                className="text-[13px] mb-6 max-w-[400px] mx-auto"
+                style={{ fontFamily: fonts.body, color: "rgba(245,158,11,0.8)" }}
+              >
+                Limited availability — we take on 3 new clients per month
               </p>
               <PrimaryButton onClick={() => openBookingModal()}>
-                Book AI Integration Call
+                Book Your Free AI Strategy Call
               </PrimaryButton>
             </div>
           </div>
@@ -2229,11 +2238,9 @@ export default function AiIntegrationPage() {
       <CoreIdeaSection />
       <WhatWeDoSection />
       <CaseStudiesSection />
-      <ProcessSection />
-      <OutcomesSection />
       <CtaBanner />
+      <ProcessSection />
       <BusinessTypesSection />
-      <ProblemSection />
       <ContactCTA />
       <Footer />
     </div>

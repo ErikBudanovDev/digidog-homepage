@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Integration for Business | Talk to Your Business With AI | Digidog",
+  title: "AI Integration for Business | Don't Stay Behind | Digidog",
   description:
     "Integrate your CRM, email, support, analytics and operations into one AI conversation. Custom MCP integrations, AI automation, and intelligent business systems for mid-size companies.",
   keywords:
@@ -9,18 +9,18 @@ export const metadata: Metadata = {
   robots: "index, follow",
   alternates: { canonical: "https://www.digidog.org/ai-integration" },
   openGraph: {
-    title: "AI Integration for Business | Digidog",
+    title: "Don't Stay Behind — AI Integration for Business | Digidog",
     description:
-      "Integrate your operations, data, and workflows into one AI conversation. Access reports, automate tasks, and manage operations through natural language.",
+      "Your competitors are already using AI. We connect your CRM, email, support, and operations into one AI conversation. Don't stay behind.",
     url: "https://www.digidog.org/ai-integration",
     type: "website",
     images: [{ url: "https://www.digidog.org/og-default.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Integration for Business | Digidog",
+    title: "Don't Stay Behind — AI Integration for Business | Digidog",
     description:
-      "Integrate your operations into one AI conversation. Custom MCP integrations for mid-size companies.",
+      "Your competitors are already using AI. We connect your operations into one conversation. Don't stay behind.",
     images: [{ url: "https://www.digidog.org/og-default.jpg", width: 1200, height: 630 }],
   },
 };
