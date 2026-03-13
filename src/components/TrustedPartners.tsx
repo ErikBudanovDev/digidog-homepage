@@ -115,23 +115,36 @@ function ExerosLogo({ size = 48 }: { size?: number }) {
 }
 
 /* ─── Partner data ─── */
-const partners = [
-  { name: "Activated Insights", Logo: ActivatedInsightsLogo },
+type PartnerDef =
+  | { name: string; Logo: React.FC<{ size?: number }>; image?: undefined }
+  | { name: string; image: string; Logo?: undefined };
+
+const partners: PartnerDef[] = [
+  { name: "Activated Insights", image: "/figma-assets/activated-insights-logo.svg" },
   { name: "smileforyou", Logo: SmileforYouLogo },
   { name: "United Nations", Logo: UnitedNationsLogo },
-  { name: "Greenventory", Logo: GreenventoryLogo },
-  { name: "Original Berlin Tours", Logo: OriginalBerlinToursLogo },
+  { name: "Greenventory", image: "/figma-assets/greenventory-logo.webp" },
+  { name: "Original Berlin Tours", image: "/figma-assets/original-berlin-tours.webp" },
   { name: "Hoffmann Group", Logo: HoffmannLogo },
+  { name: "Berit Schulen", image: "/figma-assets/berit-schulen.webp" },
   { name: "Tirecheck Online", Logo: TirecheckOnlineLogo },
   { name: "Exeros Technologies", Logo: ExerosLogo },
 ];
 
-function PartnerItem({ partner }: { partner: (typeof partners)[number] }) {
-  const { name, Logo } = partner;
+function PartnerItem({ partner }: { partner: PartnerDef }) {
+  const { name } = partner;
   return (
     <div className="flex items-center gap-3 shrink-0 select-none group cursor-pointer">
-      <div className="opacity-50 group-hover:opacity-100 transition-opacity duration-300">
-        <Logo size={44} />
+      <div className="opacity-50 group-hover:opacity-100 transition-opacity duration-300" style={{ filter: 'grayscale(100%)' }}>
+        {partner.image ? (
+          <img
+            src={partner.image}
+            alt={name}
+            style={{ height: 44, width: 'auto', objectFit: 'contain' }}
+          />
+        ) : partner.Logo ? (
+          <partner.Logo size={44} />
+        ) : null}
       </div>
       <span
         className="text-[#163376] text-[22px] md:text-[26px] opacity-50 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap"
