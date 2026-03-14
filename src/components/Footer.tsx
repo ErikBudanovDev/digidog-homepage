@@ -94,7 +94,7 @@ export function Footer() {
                   <img
                     src="/src/assets/Digidog Primary White@4x.png"
                     alt="DigiDog"
-                    className="h-[24px] w-auto"
+                    className="h-[96px] w-auto"
                     style={{ filter: "brightness(0) saturate(100%) invert(9%) sepia(30%) saturate(5000%) hue-rotate(210deg) brightness(95%) contrast(100%)" }}
                   />
                 </div>
@@ -283,7 +283,7 @@ export function Footer() {
                 <img
                   src={dogLogoSrc}
                   alt="DigiDog"
-                  className="h-[10px] w-auto brightness-0 invert opacity-70"
+                  className="h-[40px] w-auto brightness-0 invert opacity-70"
                 />
                 <div className="flex flex-wrap items-center justify-center gap-x-1 gap-y-1">
                   <span
