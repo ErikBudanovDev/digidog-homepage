@@ -429,6 +429,10 @@ function HeroSection() {
                 ))}
               </div>
             </ScrollReveal>
+
+            <ScrollReveal delay={0.55}>
+              <TrustQuote />
+            </ScrollReveal>
           </div>
 
           {/* Right: AI Hub Diagram */}
@@ -2289,10 +2293,103 @@ function ScrollDepthTracker() {
   return null;
 }
 
+/* ─────────────────────────────────────────────
+ * STICKY MOBILE CTA BAR
+ * ───────────────────────────────────────────── */
+
+function StickyMobileCTA() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setVisible(window.scrollY > 600);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  if (!visible) return null;
+
+  return (
+    <motion.div
+      initial={{ y: 100 }}
+      animate={{ y: 0 }}
+      exit={{ y: 100 }}
+      className="fixed bottom-0 left-0 right-0 z-50 md:hidden"
+      style={{
+        background: "rgba(10,22,40,0.95)",
+        backdropFilter: "blur(12px)",
+        borderTop: "1px solid rgba(255,255,255,0.08)",
+        padding: "12px 16px",
+      }}
+    >
+      <div className="flex items-center gap-3">
+        <div className="flex-1 min-w-0">
+          <p
+            className="text-white text-[13px] leading-tight"
+            style={{ fontFamily: fonts.heading, fontWeight: 600 }}
+          >
+            Don't stay behind
+          </p>
+          <p className="text-white/40 text-[11px]" style={{ fontFamily: fonts.body }}>
+            Free AI strategy call
+          </p>
+        </div>
+        <button
+          onClick={() => { trackCTA('book_strategy_call', 'sticky_bar'); openBookingModal(); }}
+          className="shrink-0 px-5 py-2.5 rounded-xl text-white text-[13px] cursor-pointer"
+          style={{
+            fontFamily: fonts.display,
+            fontWeight: 600,
+            background: colors.green,
+          }}
+        >
+          Book Call
+        </button>
+      </div>
+    </motion.div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+ * TRUST QUOTE (after hero KPIs)
+ * ───────────────────────────────────────────── */
+
+function TrustQuote() {
+  return (
+    <div className="flex items-start gap-3 mt-6 pt-5 border-t border-white/[0.06]">
+      <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 border border-white/10">
+        <img
+          src="/figma-assets/c28a01d5ca35b1e207da7537c250359543a3aa75.png"
+          alt="Erik Budanov"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div>
+        <p
+          className="text-[13px] leading-[1.6] italic"
+          style={{ fontFamily: fonts.body, color: "rgba(255,255,255,0.55)" }}
+        >
+          "We automated 70% of daily operations for Be Original Tours in 3 weeks — from tour scheduling to revenue reporting."
+        </p>
+        <p className="mt-1">
+          <span className="text-[12px] text-white/70" style={{ fontFamily: fonts.body, fontWeight: 600 }}>
+            Erik Budanov
+          </span>
+          <span className="text-[11px] text-white/30" style={{ fontFamily: fonts.body }}>
+            {" "}— Founder, Digidog
+          </span>
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export default function AiIntegrationPage() {
   return (
     <div className="min-h-screen">
       <ScrollDepthTracker />
+      <StickyMobileCTA />
       <Navbar />
       <HeroSection />
       <CoreIdeaSection />
