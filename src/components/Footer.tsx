@@ -94,16 +94,11 @@ export function Footer() {
                   <img
                     src="/src/assets/Digidog Primary White@4x.png"
                     alt="DigiDog"
-                    className="h-[28px] w-auto"
+                    className="h-[48px] w-auto"
                     style={{ filter: "brightness(0) saturate(100%) invert(9%) sepia(30%) saturate(5000%) hue-rotate(210deg) brightness(95%) contrast(100%)" }}
                   />
                 </div>
-                <p
-                  className="text-[14px] leading-[1.6]"
-                  style={{ fontFamily: fonts.display, color: colors.textMuted }}
-                >
-                  {pt.footer.tagline}
-                </p>
+
                 <div className="flex gap-4 mt-4">
                   {socialLinksTop.map((social) => {
                     const Icon = social.icon;
