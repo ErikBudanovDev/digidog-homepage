@@ -36,6 +36,7 @@ const erikPhotoSrc = erikPhoto as unknown as string;
 import { SEO } from "@/components/SEO";
 import { useTranslation } from "@/i18n/i18n-context";
 import { trackContactFormSubmit } from "@/lib/analytics";
+import { submitContactForm } from "@/lib/contact";
 import enPg from "@/translations/pages/english.json";
 import dePg from "@/translations/pages/german.json";
 
@@ -404,11 +405,26 @@ function ContactFormSection() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSending(true);
+    setError("");
     trackContactFormSubmit("contact_page", { name: formData.name, email: formData.email, service: formData.service });
-    setSubmitted(true);
+
+    const result = await submitContactForm({
+      ...formData,
+      source: "Contact Page",
+    });
+
+    setSending(false);
+    if (result.success) {
+      setSubmitted(true);
+    } else {
+      setError(result.error || "Failed to send. Please try again.");
+    }
   };
 
   const inputClasses =

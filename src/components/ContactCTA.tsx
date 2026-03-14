@@ -10,6 +10,7 @@ import { SectionContainer } from "./ui/section";
 import { PrimaryButton } from "./ui/buttons";
 import { useTranslation } from "@/i18n/i18n-context";
 import { trackContactFormSubmit } from "@/lib/analytics";
+import { submitContactForm } from "@/lib/contact";
 import enT from "@/translations/english.json";
 import deT from "@/translations/german.json";
 
@@ -94,15 +95,31 @@ export function ContactCTA() {
     return () => window.removeEventListener("open-booking-modal", handler);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSending(true);
+    setError("");
     trackContactFormSubmit("hero_cta_modal", { name: formData.name, email: formData.email });
-    setSubmitted(true);
-    setTimeout(() => {
-      setBookingOpen(false);
-      setSubmitted(false);
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    }, 2000);
+
+    const result = await submitContactForm({
+      ...formData,
+      source: "Hero CTA Modal",
+    });
+
+    setSending(false);
+    if (result.success) {
+      setSubmitted(true);
+      setTimeout(() => {
+        setBookingOpen(false);
+        setSubmitted(false);
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      }, 3000);
+    } else {
+      setError(result.error || "Failed to send. Please try again.");
+    }
   };
 
   const inputClasses =
