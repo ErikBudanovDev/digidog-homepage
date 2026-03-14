@@ -90,7 +90,7 @@ export function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
               {/* Logo & Description */}
               <div className="lg:col-span-1">
-                <div className="flex items-center gap-1 mb-4">
+                <div className="flex items-center gap-1 mb-8">
                   <img
                     src="/src/assets/Digidog Primary White@4x.png"
                     alt="DigiDog"
@@ -99,7 +99,7 @@ export function Footer() {
                   />
                 </div>
 
-                <div className="flex gap-4 mt-4">
+                <div className="flex gap-4 mt-8 mb-8">
                   {socialLinksTop.map((social) => {
                     const Icon = social.icon;
                     return (
