@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import { motion, useInView, AnimatePresence } from "motion/react";
 import {
   ArrowRight,
@@ -379,11 +379,12 @@ function HeroSection() {
 
             <ScrollReveal delay={0.3}>
               <div className="flex flex-col sm:flex-row gap-3">
-                <PrimaryButton onClick={() => openBookingModal()}>
+                <PrimaryButton onClick={() => { trackCTA('book_strategy_call', 'hero'); openBookingModal(); }}>
                   Book Free Strategy Call
                 </PrimaryButton>
                 <a
                   href="#case-studies"
+                  onClick={() => trackCTA('see_examples', 'hero')}
                   className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl border border-white/20 text-white text-[15px] sm:text-[17px] hover:border-white/40 hover:bg-white/5 transition-all cursor-pointer"
                   style={{ fontFamily: fonts.display, fontWeight: 600 }}
                 >
@@ -1640,7 +1641,7 @@ function CaseStudiesSection() {
               Want to see how AI can transform your business?
             </p>
             <button
-              onClick={openBookingModal}
+              onClick={() => { trackCTA('discuss_use_case', 'case_studies'); openBookingModal(); }}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-[14px] transition-all duration-300 hover:gap-3 cursor-pointer"
               style={{
                 fontFamily: fonts.body,
@@ -2200,7 +2201,7 @@ function CtaBanner() {
               >
                 Limited availability — we take on 3 new clients per month
               </p>
-              <PrimaryButton onClick={() => openBookingModal()}>
+              <PrimaryButton onClick={() => { trackCTA('book_strategy_call', 'cta_banner'); openBookingModal(); }}>
                 Book Your Free AI Strategy Call
               </PrimaryButton>
             </div>
@@ -2215,9 +2216,83 @@ function CtaBanner() {
  * PAGE
  * ───────────────────────────────────────────── */
 
+/* ─────────────────────────────────────────────
+ * ANALYTICS — Section visibility + CTA tracking
+ * ───────────────────────────────────────────── */
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const pushToDataLayer = (data: Record<string, unknown>) => {
+  const w = window as any;
+  if (w.dataLayer) w.dataLayer.push(data);
+};
+
+function useTrackSection(sectionName: string) {
+  const ref = useRef<HTMLDivElement>(null);
+  const tracked = useRef(false);
+
+  useEffect(() => {
+    if (!ref.current || tracked.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !tracked.current) {
+          tracked.current = true;
+          pushToDataLayer({
+            event: "section_view",
+            section_name: sectionName,
+            page: "/ai-integration",
+          });
+        }
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [sectionName]);
+
+  return ref;
+}
+
+function trackCTA(ctaName: string, location: string) {
+  pushToDataLayer({
+    event: "cta_click",
+    cta_name: ctaName,
+    cta_location: location,
+    page: "/ai-integration",
+  });
+}
+
+function ScrollDepthTracker() {
+  useEffect(() => {
+    const milestones = [25, 50, 75, 90];
+    const fired = new Set<number>();
+
+    const handleScroll = () => {
+      const scrollPct = Math.round(
+        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+      );
+      milestones.forEach((m) => {
+        if (scrollPct >= m && !fired.has(m)) {
+          fired.add(m);
+          pushToDataLayer({
+            event: "scroll_depth",
+            scroll_percentage: m,
+            page: "/ai-integration",
+          });
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return null;
+}
+
 export default function AiIntegrationPage() {
   return (
     <div className="min-h-screen">
+      <ScrollDepthTracker />
       <Navbar />
       <HeroSection />
       <CoreIdeaSection />

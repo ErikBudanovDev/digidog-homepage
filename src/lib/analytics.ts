@@ -1,14 +1,11 @@
-declare global {
-  interface Window {
-    dataLayer: Record<string, unknown>[];
-    gtag: (...args: unknown[]) => void;
-  }
-}
+/* eslint-disable @typescript-eslint/no-explicit-any */
+const getWindow = () => window as any;
 
 export function trackEvent(eventName: string, params?: Record<string, unknown>) {
   if (typeof window === "undefined") return;
-  if (window.gtag) window.gtag("event", eventName, params);
-  if (window.dataLayer) window.dataLayer.push({ event: eventName, ...params });
+  const w = getWindow();
+  if (w.gtag) w.gtag("event", eventName, params);
+  if (w.dataLayer) w.dataLayer.push({ event: eventName, ...params });
 }
 
 export function trackContactFormSubmit(formLocation: string, formData?: { name?: string; email?: string; service?: string }) {
