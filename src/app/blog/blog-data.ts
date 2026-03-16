@@ -462,6 +462,274 @@ At Digidog, we specialize in exactly this approach. We help you identify what to
     readTime: "7 min read",
     keywords: ["custom software development agency", "custom software vs saas", "build vs buy software", "software development"],
   },
+
+  /* ─── MCP TUTORIALS (SEO GROWTH — Low KD targets) ─── */
+  {
+    slug: "playwright-mcp-server-complete-guide",
+    title: "Playwright MCP Server: The Complete Setup Guide for 2026",
+    metaTitle: "Playwright MCP Server — Complete Setup & Configuration Guide 2026",
+    metaDescription:
+      "Learn how to set up and configure Playwright MCP Server for browser automation with AI. Step-by-step guide covering installation, Claude Desktop, VS Code, Cursor, and advanced configuration.",
+    excerpt:
+      "Playwright MCP Server lets AI assistants control real browsers through structured commands. Here's everything you need to set it up — from installation to advanced configuration.",
+    content: `
+## What Is Playwright MCP Server?
+
+Playwright MCP Server is a bridge between AI assistants and real web browsers. Built by Microsoft on top of their Playwright testing framework, it exposes browser automation capabilities through the Model Context Protocol (MCP) — the open standard that lets AI tools interact with external services.
+
+In plain terms: instead of taking screenshots and guessing what's on screen, your AI assistant sends structured commands to the Playwright MCP Server, which executes them in a real browser and returns structured results. It's faster, more reliable, and works without vision models.
+
+The server enables actions like navigating to pages, clicking elements, filling forms, extracting text, running JavaScript, and taking screenshots — all orchestrated by an AI through natural language prompts.
+
+## Why Playwright MCP Matters
+
+Traditional browser automation requires writing detailed scripts with selectors, waits, and error handling. With Playwright MCP, you describe what you want in plain language, and the AI translates that into precise Playwright commands.
+
+This changes the game for:
+
+- **QA and testing teams** who can describe test scenarios instead of coding them
+- **Business automation** where AI agents need to interact with web applications that lack APIs
+- **Development workflows** where AI assistants verify their code changes in a real browser
+- **Data extraction** from websites that require authentication or interaction
+
+## Prerequisites
+
+Before setting up Playwright MCP Server, make sure you have:
+
+- **Node.js 18 or newer** — Check with \`node --version\`
+- **A compatible MCP client** — Claude Desktop, VS Code with GitHub Copilot, Cursor, or Windsurf
+- **A terminal** — For running installation commands
+
+## Installation Methods
+
+### Method 1: Quick Install with npx (Recommended)
+
+The fastest way to get started — no global installation needed:
+
+\`\`\`bash
+npx @playwright/mcp@latest
+\`\`\`
+
+This downloads and runs the latest Playwright MCP Server. It works with any MCP-compatible client.
+
+### Method 2: Global Installation via npm
+
+If you want the server permanently available:
+
+\`\`\`bash
+npm install -g @playwright/mcp
+\`\`\`
+
+### Method 3: Via Smithery (for Claude Desktop)
+
+Smithery provides one-click installation for Claude Desktop:
+
+\`\`\`bash
+npx @smithery/cli install @playwright/mcp --client claude
+\`\`\`
+
+## Connecting to Your AI Client
+
+### Claude Desktop
+
+Edit your Claude Desktop configuration file (\`claude_desktop_config.json\`):
+
+\`\`\`json
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    }
+  }
+}
+\`\`\`
+
+On macOS, this file is at: \`~/Library/Application Support/Claude/claude_desktop_config.json\`
+
+Restart Claude Desktop, and you can now say: "Use Playwright to open example.com and tell me what's on the page."
+
+### VS Code with GitHub Copilot
+
+Run this command in your terminal:
+
+\`\`\`bash
+code --add-mcp '{"name":"playwright","command":"npx","args":["@playwright/mcp@latest"]}'
+\`\`\`
+
+Or go to VS Code Settings → Extensions → MCP Servers and add it through the UI.
+
+### Cursor
+
+Go to Cursor Settings → MCP → Add new MCP Server. Set the type to "command" and enter:
+
+\`\`\`
+npx @playwright/mcp@latest
+\`\`\`
+
+### Claude Code (CLI)
+
+For Claude Code users working in the terminal:
+
+\`\`\`bash
+claude mcp add playwright npx @playwright/mcp@latest
+\`\`\`
+
+This persists per-directory in your \`.claude.json\` configuration.
+
+## Configuration Options
+
+Playwright MCP Server supports extensive configuration through command-line arguments and environment variables:
+
+### Browser Selection
+
+By default, Playwright MCP launches Chromium. You can switch browsers:
+
+\`\`\`json
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest", "--browser", "firefox"]
+    }
+  }
+}
+\`\`\`
+
+Options: \`chrome\`, \`firefox\`, \`webkit\`, \`msedge\`
+
+### Headless vs. Headed Mode
+
+By default, the browser runs headed (visible). For CI/CD or server environments, use headless:
+
+\`\`\`json
+{
+  "args": ["-y", "@playwright/mcp@latest", "--headless"]
+}
+\`\`\`
+
+### Vision Mode
+
+Enable screenshot capabilities alongside accessibility tree data:
+
+\`\`\`json
+{
+  "args": ["-y", "@playwright/mcp@latest", "--caps", "vision"]
+}
+\`\`\`
+
+### Custom Port and Host
+
+For remote or multi-client setups:
+
+\`\`\`json
+{
+  "args": ["-y", "@playwright/mcp@latest", "--port", "3100", "--host", "0.0.0.0"]
+}
+\`\`\`
+
+## How Playwright MCP Works Under the Hood
+
+Unlike screenshot-based AI automation, Playwright MCP uses the browser's **accessibility tree** — a structured representation of all interactive elements on the page. This is the same technology screen readers use.
+
+When you ask the AI to "click the login button," here's what happens:
+
+1. The AI sends a tool call to the Playwright MCP Server
+2. The server queries the page's accessibility tree for a button labeled "login"
+3. It executes a precise Playwright click action on that element
+4. The server returns the updated page state to the AI
+
+This approach is deterministic and fast — no image processing, no guessing, no pixel coordinates.
+
+## Available Tools
+
+Playwright MCP exposes these core tools to AI clients:
+
+- **browser_navigate** — Go to a URL
+- **browser_click** — Click an element by its accessibility reference
+- **browser_type** — Type text into an input field
+- **browser_snapshot** — Get the current page's accessibility tree
+- **browser_screenshot** — Capture a screenshot (when vision capability is enabled)
+- **browser_evaluate** — Execute JavaScript in the page context
+- **browser_wait** — Wait for a specific condition
+- **browser_select_option** — Select from dropdown menus
+- **browser_drag** — Drag and drop elements
+- **browser_tab_list** — List open tabs
+- **browser_tab_new** — Open a new tab
+- **browser_tab_close** — Close a tab
+
+## Practical Use Cases
+
+### 1. Automated Testing
+
+Describe test scenarios in natural language:
+
+"Navigate to our login page, enter the test credentials, click submit, and verify the dashboard loads with the user's name displayed."
+
+The AI translates this into a series of Playwright MCP tool calls and reports whether the test passed.
+
+### 2. Web Scraping with Authentication
+
+For sites that require login or interaction:
+
+"Log into our supplier portal, navigate to the orders section, and extract all pending orders from the last 7 days."
+
+### 3. Form Filling and Data Entry
+
+"Open our CRM, create a new contact with these details: [name, email, company], then assign them to the sales pipeline."
+
+### 4. Visual Regression Testing
+
+With vision mode enabled, the AI can compare screenshots before and after code changes to identify unexpected visual differences.
+
+## Troubleshooting Common Issues
+
+### Server Won't Start
+
+Check that Node.js 18+ is installed. If you see port conflicts, specify a different port with \`--port 3100\`.
+
+### Browser Doesn't Launch
+
+Playwright needs browser binaries. Install them with:
+
+\`\`\`bash
+npx playwright install chromium
+\`\`\`
+
+### Elements Not Found
+
+The accessibility tree might not include all elements. Try enabling vision mode for a fallback, or check if the page uses iframes or shadow DOM that need special handling.
+
+### Slow Performance
+
+Large pages generate large accessibility trees. Use \`--caps vision\` for complex pages where the tree is too dense, or navigate to specific sections before querying.
+
+## Playwright MCP vs. Playwright CLI
+
+Microsoft now offers two approaches:
+
+**Playwright MCP** is protocol-based — the AI sends structured commands and gets structured responses. Best for integration with AI assistants in IDE and chat contexts.
+
+**Playwright CLI + SKILLS** is command-line based — the AI runs shell commands directly. More token-efficient for coding agents that work with large codebases.
+
+For most users, Playwright MCP is the easier starting point. Switch to CLI + SKILLS if you're building high-throughput coding agents that need to minimize context window usage.
+
+## What Digidog Builds with MCP
+
+At Digidog, we use MCP extensively — not just Playwright MCP, but custom MCP servers connecting AI to CRM systems, project management tools, databases, email, and more.
+
+Playwright MCP is one piece of the puzzle. The real power comes from combining multiple MCP servers so your AI assistant can browse the web, update your CRM, send emails, and manage tasks — all from a single conversation.
+
+If you're exploring MCP for your business, we build custom integrations from strategy to production. [Book a free consultation](/contact) to discuss what's possible.
+    `,
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
+    tag: "AI Integration",
+    category: "ai",
+    author: "Erik Budanov",
+    date: "2026-03-17",
+    readTime: "12 min read",
+    keywords: ["playwright mcp server", "playwright mcp", "mcp server setup", "playwright browser automation", "playwright mcp guide"],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
