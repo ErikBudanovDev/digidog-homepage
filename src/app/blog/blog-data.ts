@@ -730,6 +730,222 @@ If you're exploring MCP for your business, we build custom integrations from str
     readTime: "12 min read",
     keywords: ["playwright mcp server", "playwright mcp", "mcp server setup", "playwright browser automation", "playwright mcp guide"],
   },
+
+  {
+    slug: "slack-mcp-server-setup-guide",
+    title: "How to Set Up a Slack MCP Server: Connect AI to Your Workspace",
+    metaTitle: "Slack MCP Server — Step-by-Step Setup Guide 2026",
+    metaDescription:
+      "Set up a Slack MCP Server to connect Claude and other AI assistants to your Slack workspace. Send messages, search channels, and automate workflows through AI.",
+    excerpt:
+      "A Slack MCP Server lets AI assistants read, search, and send messages in your workspace. Here's how to set it up in under 10 minutes.",
+    content: `
+## What Is a Slack MCP Server?
+
+A Slack MCP Server connects AI assistants like Claude to your Slack workspace through the Model Context Protocol. Once connected, the AI can search messages, read channels, send messages, manage canvases, and automate workflows — all through natural language commands.
+
+Instead of switching between Claude and Slack dozens of times a day, you tell the AI what you need: "Summarize what the engineering team discussed today" or "Draft a message to the marketing channel about the product launch." The AI reads Slack directly and acts on your behalf.
+
+## Why Connect Slack to AI via MCP?
+
+Most teams spend 2-3 hours daily in Slack. Much of that time is spent on tasks that AI can handle faster:
+
+**Message summarization** — "What happened in #general while I was in meetings?" Instead of scrolling through 200 messages, the AI reads them and gives you a 30-second summary.
+
+**Cross-channel search** — "Find every conversation about the Q2 budget across all channels." The AI searches public and private channels simultaneously and compiles the results.
+
+**Drafting responses** — "Reply to Sarah's question about the deployment timeline with our current ETA." The AI reads the context, drafts the message, and waits for your approval before sending.
+
+**Automated notifications** — When a new lead comes in through your CRM, the AI posts a formatted summary to your sales channel automatically.
+
+**Meeting prep** — "What did the product team decide about the feature priority last week?" The AI searches relevant channels and threads, then gives you a briefing before your meeting.
+
+## Prerequisites
+
+Before setting up your Slack MCP Server, you need:
+
+- **A Slack workspace** where you have admin or app installation permissions
+- **An MCP-compatible AI client** — Claude Desktop, Claude.ai (with MCP connectors), VS Code, or Cursor
+- **Node.js 18+** for self-hosted setups (optional — managed versions don't require this)
+
+## Setup Method 1: Claude.ai Native Integration (Easiest)
+
+If you use Claude.ai (Pro, Team, or Enterprise), Slack MCP is available as a built-in connector:
+
+1. Open Claude.ai and go to your conversation
+2. Click the **MCP connectors** icon (plug icon in the toolbar)
+3. Find **Slack** in the available connectors list
+4. Click **Connect** and authorize Claude to access your Slack workspace
+5. Grant the permissions requested (read messages, send messages, search)
+6. Done — Claude can now interact with your Slack workspace
+
+Test it by asking: "Search Slack for messages about the quarterly review."
+
+This is the fastest path — no code, no configuration files, no terminal commands.
+
+## Setup Method 2: Claude Desktop Configuration
+
+For Claude Desktop users, add this to your \`claude_desktop_config.json\`:
+
+\`\`\`json
+{
+  "mcpServers": {
+    "slack": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/slack-mcp-server"],
+      "env": {
+        "SLACK_BOT_TOKEN": "xoxb-your-bot-token-here",
+        "SLACK_TEAM_ID": "T01234ABCDE"
+      }
+    }
+  }
+}
+\`\`\`
+
+To get these values:
+
+**SLACK_BOT_TOKEN:** Go to [api.slack.com/apps](https://api.slack.com/apps) → Create New App → From Scratch → name it "Claude MCP" → go to OAuth & Permissions → add these Bot Token Scopes: \`channels:read\`, \`channels:history\`, \`chat:write\`, \`search:read\`, \`users:read\` → Install to Workspace → copy the Bot User OAuth Token.
+
+**SLACK_TEAM_ID:** Open Slack in your browser → the URL will be \`app.slack.com/client/T01234ABCDE/...\` → the T-prefixed string is your Team ID.
+
+Restart Claude Desktop, and the Slack tools will appear automatically.
+
+## Setup Method 3: Self-Hosted MCP Server
+
+For teams that want full control over the integration, you can run the server yourself:
+
+\`\`\`bash
+npm install @anthropic/slack-mcp-server
+\`\`\`
+
+Create a \`.env\` file:
+
+\`\`\`bash
+SLACK_BOT_TOKEN=xoxb-your-bot-token
+SLACK_TEAM_ID=T01234ABCDE
+\`\`\`
+
+Run the server:
+
+\`\`\`bash
+npx @anthropic/slack-mcp-server
+\`\`\`
+
+The server exposes MCP tools over stdio by default. For HTTP transport (multiple clients), use:
+
+\`\`\`bash
+npx @anthropic/slack-mcp-server --transport http --port 3100
+\`\`\`
+
+## Available Slack MCP Tools
+
+Once connected, your AI assistant has access to these tools:
+
+**slack_search_public** — Search messages and files across all public channels. Supports Slack's search syntax including \`from:\`, \`in:\`, \`before:\`, \`after:\` filters.
+
+**slack_search_public_and_private** — Same as above but includes private channels you're a member of.
+
+**slack_read_channel** — Read recent messages from a specific channel in reverse chronological order.
+
+**slack_read_thread** — Read an entire thread including all replies.
+
+**slack_send_message** — Send a message to any channel or user. Supports markdown formatting.
+
+**slack_send_message_draft** — Create a draft message that saves to your Drafts without sending.
+
+**slack_schedule_message** — Schedule a message for future delivery.
+
+**slack_search_users** — Find users by name, email, department, or role.
+
+**slack_search_channels** — Search for channels by name or description.
+
+**slack_create_canvas** — Create a Slack Canvas document from markdown content.
+
+**slack_read_canvas** — Read an existing Canvas document.
+
+**slack_update_canvas** — Update a Canvas with new content.
+
+## Real-World Use Cases
+
+### 1. Daily Standup Summary
+
+Prompt: "Read the #engineering channel from the last 24 hours and give me a standup summary — who's working on what, any blockers mentioned, and upcoming deadlines."
+
+The AI reads all messages, identifies status updates, flags blockers, and formats a clean summary — saving you from reading dozens of individual messages.
+
+### 2. Customer Feedback Aggregation
+
+Prompt: "Search all channels for messages mentioning 'customer feedback' or 'bug report' from the past week. Group them by severity and product area."
+
+The AI searches across channels, categorizes the feedback, and presents a structured report.
+
+### 3. Onboarding Automation
+
+Prompt: "Send a welcome message to #new-hires with the onboarding checklist, then create a Canvas document with the full onboarding guide."
+
+The AI composes the welcome message, posts it, and creates a formatted Canvas — all from one request.
+
+### 4. Meeting Follow-Ups
+
+Prompt: "Read the #product-planning thread from yesterday's meeting. Extract all action items and post them as a checklist in #product-tasks."
+
+The AI reads the discussion, identifies commitments and deadlines, formats them as a checklist, and posts to the right channel.
+
+## Security and Permissions
+
+The Slack MCP Server respects your workspace's permission model:
+
+- The bot can only access channels it's been invited to (for private channels)
+- All public channels are readable by default
+- Message sending requires explicit \`chat:write\` scope
+- Admin actions require additional OAuth scopes
+- The bot token has no access to DMs unless explicitly granted
+
+**Best practice:** Create a dedicated Slack bot user for the MCP connection. Give it only the permissions it needs. Review the connected channels periodically.
+
+## Troubleshooting
+
+### Bot Can't See Messages
+
+Make sure the bot has been invited to the channel. For private channels, someone with access must type \`/invite @claude-mcp\` in the channel.
+
+### Search Returns Empty Results
+
+Slack's search API only indexes messages from channels the bot has access to. The bot needs \`search:read\` scope and must be a member of the channels you want to search.
+
+### Rate Limiting
+
+Slack imposes rate limits on API calls. If you're hitting limits, the MCP server will automatically retry with backoff. For high-volume use cases, consider caching frequently-accessed channels.
+
+### Message Sending Fails
+
+Verify the bot has \`chat:write\` scope and has been invited to the target channel. DMs require \`chat:write\` plus \`im:write\` scope.
+
+## Combining Slack MCP with Other MCP Servers
+
+The real power of MCP comes from connecting multiple services. At Digidog, we build integration stacks where AI assistants use Slack MCP alongside:
+
+- **CRM MCP** — New deal closed? AI posts a celebration message to #sales with deal details pulled from the CRM
+- **Project Management MCP** — Task overdue? AI posts a reminder to the team channel and tags the assignee
+- **Email MCP** — Important email received? AI summarizes it and posts to the relevant Slack channel
+- **Database MCP** — Weekly metrics ready? AI queries the database, generates a report, and posts it to #analytics
+
+Each MCP server is a building block. Combined, they create an AI assistant that orchestrates your entire workflow through Slack as the communication hub.
+
+## Getting Started with MCP at Digidog
+
+Slack MCP is one of dozens of MCP integrations we build for mid-size companies. Whether you need AI connected to your CRM, project management tools, databases, or custom internal systems — we design and build the integration from strategy to production.
+
+[Book a free consultation](/contact) to explore what MCP can do for your team.
+    `,
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=1080&q=80",
+    tag: "AI Integration",
+    category: "ai",
+    author: "Erik Budanov",
+    date: "2026-03-17",
+    readTime: "10 min read",
+    keywords: ["slack mcp server", "slack mcp", "slack ai integration", "slack automation", "mcp server slack"],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
