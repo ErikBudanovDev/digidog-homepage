@@ -188,7 +188,7 @@ export function HeroLayout({
 
   /* ── Text column (shared by both layouts) ── */
   const textColumn = (
-    <div className={`${rightContent ? "flex-1" : ""} ${contentMaxWidth} ${textAlign} ${centerAuto}`}>
+    <div className={`text-column ${rightContent ? "flex-1" : ""} ${contentMaxWidth} ${centerAuto}`}>
       {/* Breadcrumbs */}
       {breadcrumbs && breadcrumbs.length > 0 && (
         <motion.div
@@ -242,7 +242,7 @@ export function HeroLayout({
 
       {/* Title */}
       <motion.h1
-        className={`${textAlign} text-[36px] md:text-[48px] lg:text-[56px] ${titleLeading} ${titleMarginBottom}`}
+        className={`text-center lg:text-left text-[36px] md:text-[48px] lg:text-[56px] ${titleLeading} ${titleMarginBottom}`}
         style={{
           fontFamily: titleFont ?? fonts.heading,
           fontWeight: titleWeight ?? 700,

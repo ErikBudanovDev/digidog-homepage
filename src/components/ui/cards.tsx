@@ -101,11 +101,13 @@ export function BlogCard({
         >
           {post.description}
         </p>
-        <a href={post.slug ? `/blog/${post.slug}` : "/blog"}>
-          <LinkWithArrow color={colors.textBlueLink} icon="chevron">
-            {t.common.readMore}
-          </LinkWithArrow>
-        </a>
+        <LinkWithArrow 
+          href={post.slug ? `/blog/${post.slug}` : "/blog"}
+          color={colors.textBlueLink} 
+          icon="chevron"
+        >
+          {t.common.readMore}
+        </LinkWithArrow>
       </div>
     </ContentCard>
   );

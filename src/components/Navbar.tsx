@@ -4,6 +4,7 @@ import { ChevronDown, Menu, X, Code, Bot, Blocks, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { colors, fonts } from "./ui/brand";
 import { useTranslation, type Locale } from "@/i18n/i18n-context";
+import { getLocalizedRoute } from "@/i18n/routes";
 import enT from "@/translations/english.json";
 import deT from "@/translations/german.json";
 
@@ -23,16 +24,16 @@ export function Navbar() {
   const pt = locale === "DE" ? deT : enT;
 
   const serviceSubLinks = [
-    { href: "/services/web-design", label: pt.nav.webDesign, icon: Code, color: "#0057ff" },
-    { href: "/services/ai-solutions", label: pt.nav.aiSolutions, icon: Bot, color: "#a855f7" },
-    { href: "/services/custom-software", label: pt.nav.customSoftware, icon: Blocks, color: "#06b6d4" },
+    { href: getLocalizedRoute("webDesign", locale), label: pt.nav.webDesign, icon: Code, color: "#0057ff" },
+    { href: getLocalizedRoute("aiSolutions", locale), label: pt.nav.aiSolutions, icon: Bot, color: "#a855f7" },
+    { href: getLocalizedRoute("customSoftware", locale), label: pt.nav.customSoftware, icon: Blocks, color: "#06b6d4" },
   ];
 
   const navLinks = [
-    { href: "/portfolio", label: pt.nav.portfolio },
+    { href: getLocalizedRoute("portfolio", locale), label: pt.nav.portfolio },
     { href: "#services", label: pt.nav.services, hasDropdown: "services" as const },
-    { href: "/about", label: pt.nav.about },
-    { href: "/contact", label: pt.nav.contact },
+    { href: getLocalizedRoute("about", locale), label: pt.nav.about },
+    { href: getLocalizedRoute("contact", locale), label: pt.nav.contact },
   ];
   const navigate = useNavigate();
   const location = useLocation();
@@ -79,11 +80,80 @@ export function Navbar() {
 
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    if (location.pathname === "/") {
+    const homeRoute = getLocalizedRoute("home", locale);
+    if (location.pathname === homeRoute) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      navigate("/");
+      navigate(homeRoute);
     }
+  };
+
+  const handleLanguageSwitch = (newLocale: Locale) => {
+    setLangOpen(false);
+    
+    // Map current path to the new locale
+    const currentPath = location.pathname || "/";
+    let targetPath = "/";
+    
+    // Check if we're on a German page
+    if (currentPath.startsWith("/de")) {
+      if (newLocale === "EN") {
+        // Switch from DE to EN
+        if (currentPath === "/de") {
+          targetPath = "/";
+        } else if (currentPath.startsWith("/de/dienstleistungen/ki-loesungen")) {
+          targetPath = "/services/ai-solutions";
+        } else if (currentPath.startsWith("/de/dienstleistungen/ki-integration")) {
+          targetPath = "/services/ai-integration";
+        } else if (currentPath.startsWith("/de/dienstleistungen/webdesign")) {
+          targetPath = "/services/web-design";
+        } else if (currentPath.startsWith("/de/dienstleistungen/individuelle-software")) {
+          targetPath = "/services/custom-software";
+        } else if (currentPath.startsWith("/de/portfolio")) {
+          targetPath = "/portfolio";
+        } else if (currentPath.startsWith("/de/ueber-uns")) {
+          targetPath = "/about";
+        } else if (currentPath.startsWith("/de/kontakt")) {
+          targetPath = "/contact";
+        } else if (currentPath.startsWith("/de/impressum")) {
+          targetPath = "/imprint";
+        } else if (currentPath.startsWith("/de/datenschutz")) {
+          targetPath = "/privacy";
+        } else if (currentPath.startsWith("/de/agb")) {
+          targetPath = "/terms";
+        }
+      }
+    } else {
+      // Switch from EN to DE
+      if (newLocale === "DE") {
+        if (currentPath === "/") {
+          targetPath = "/de";
+        } else if (currentPath.startsWith("/services/ai-solutions")) {
+          targetPath = "/de/dienstleistungen/ki-loesungen";
+        } else if (currentPath.startsWith("/services/ai-integration")) {
+          targetPath = "/de/dienstleistungen/ki-integration";
+        } else if (currentPath.startsWith("/services/web-design")) {
+          targetPath = "/de/dienstleistungen/webdesign";
+        } else if (currentPath.startsWith("/services/custom-software")) {
+          targetPath = "/de/dienstleistungen/individuelle-software";
+        } else if (currentPath.startsWith("/portfolio")) {
+          targetPath = "/de/portfolio";
+        } else if (currentPath.startsWith("/about")) {
+          targetPath = "/de/ueber-uns";
+        } else if (currentPath.startsWith("/contact")) {
+          targetPath = "/de/kontakt";
+        } else if (currentPath.startsWith("/imprint")) {
+          targetPath = "/de/impressum";
+        } else if (currentPath.startsWith("/privacy")) {
+          targetPath = "/de/datenschutz";
+        } else if (currentPath.startsWith("/terms")) {
+          targetPath = "/de/agb";
+        }
+      }
+    }
+    
+    setLocale(newLocale);
+    navigate(targetPath);
   };
 
   return (
@@ -225,7 +295,7 @@ export function Navbar() {
                 {localeOptions.map((opt) => (
                   <button
                     key={opt.code}
-                    onClick={() => { setLocale(opt.code); setLangOpen(false); }}
+                    onClick={() => handleLanguageSwitch(opt.code)}
                     className={`flex items-center gap-2 px-4 py-2.5 text-[13px] w-full cursor-pointer transition-colors ${
                       locale === opt.code ? "text-white bg-white/10" : "text-white/60 hover:text-white hover:bg-white/5"
                     }`}
@@ -305,7 +375,7 @@ export function Navbar() {
               {localeOptions.map((opt) => (
                 <button
                   key={opt.code}
-                  onClick={() => { setLocale(opt.code); setMobileOpen(false); }}
+                  onClick={() => { handleLanguageSwitch(opt.code); setMobileOpen(false); }}
                   className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-[14px] cursor-pointer transition-colors ${
                     locale === opt.code
                       ? "bg-white/15 text-white"

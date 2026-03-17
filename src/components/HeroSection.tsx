@@ -30,7 +30,7 @@ export function HeroSection() {
       titleWeight={900}
       titleLeading="leading-[1.15]"
       titleMarginBottom="mb-8"
-      className="[&_h1]:text-center [&_h1]:lg:text-left [&_p]:text-center [&_p]:lg:text-left [&_.flex.flex-wrap]:justify-center [&_.flex.flex-wrap]:lg:justify-start"
+      className="[&_.text-column]:text-center [&_.text-column]:lg:text-left"
       title={
         <>
           {pt.hero.title1}
@@ -39,11 +39,11 @@ export function HeroSection() {
         </>
       }
       description={pt.hero.description}
-      descriptionClassName="text-white/90 text-[18px] lg:text-[20px] leading-[1.6] mb-10 max-w-[600px] mx-auto lg:mx-0"
+      descriptionClassName="text-white/90 text-[18px] lg:text-[20px] leading-[1.6] mb-10 max-w-[600px] mx-auto lg:mx-0 text-center lg:text-left"
       descriptionStyle={{ fontFamily: fonts.display }}
       actionsMarginTop="mt-0"
       actions={
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 items-center lg:items-start">
           <div>
             <PrimaryButton onClick={handleBooking}>
               {pt.hero.cta}
@@ -94,7 +94,16 @@ export function HeroSection() {
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.5, ease: transitions.smooth }}
         >
-          <div className="relative w-[400px] h-[500px] md:w-[500px] md:h-[600px] lg:w-[600px] lg:h-[700px] mx-auto lg:mx-0">
+          {/* Mobile/Tablet: Static image */}
+          <div className="relative w-[300px] h-[400px] md:w-[400px] md:h-[500px] lg:hidden mx-auto">
+            <ImageWithFallback
+              src="/girl/Loading.png"
+              alt="AI Assistant"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          {/* Desktop: 3D Girl */}
+          <div className="hidden lg:block relative w-[600px] h-[700px] mx-0">
             <Girl3D />
           </div>
         </motion.div>

@@ -9,15 +9,9 @@ const dogLogoSrc = dogLogo as unknown as string;
 import digiDogLogo from "figma:asset/58f2cbf574c1863d80d69d3d0c78e56a09d857bc.png";
 const digiDogLogoSrc = digiDogLogo as unknown as string;
 import { useTranslation } from "@/i18n/i18n-context";
+import { getLocalizedRoute } from "@/i18n/routes";
 import enT from "@/translations/english.json";
 import deT from "@/translations/german.json";
-
-const serviceLinks = [
-  { label: "Web Design", href: "/services/web-design" },
-  { label: "AI Solutions", href: "/services/ai-solutions" },
-  { label: "AI Integration", href: "/services/ai-integration" },
-  { label: "Custom Software", href: "/services/custom-software" },
-];
 
 const socialLinksTop = [
   { name: "Instagram", href: "https://www.instagram.com/digidog_agency/", icon: Instagram },
@@ -56,18 +50,25 @@ export function Footer() {
   const { locale } = useTranslation();
   const pt = locale === "DE" ? deT : enT;
 
+  const serviceLinks = [
+    { label: pt.nav.webDesign, href: getLocalizedRoute("webDesign", locale) },
+    { label: pt.nav.aiSolutions, href: getLocalizedRoute("aiSolutions", locale) },
+    { label: "AI Integration", href: getLocalizedRoute("aiIntegration", locale) },
+    { label: pt.nav.customSoftware, href: getLocalizedRoute("customSoftware", locale) },
+  ];
+
   const quickLinks = [
-    { label: pt.footer.home, href: "/" },
-    { label: pt.footer.about, href: "/about" },
-    { label: pt.footer.portfolio, href: "/portfolio" },
-    { label: pt.footer.services, href: "/services/web-design" },
-    { label: pt.footer.contact, href: "/contact" },
+    { label: pt.footer.home, href: getLocalizedRoute("home", locale) },
+    { label: pt.footer.about, href: getLocalizedRoute("about", locale) },
+    { label: pt.footer.portfolio, href: getLocalizedRoute("portfolio", locale) },
+    { label: pt.footer.services, href: getLocalizedRoute("webDesign", locale) },
+    { label: pt.footer.contact, href: getLocalizedRoute("contact", locale) },
   ];
 
   const legalLinks = [
-    { label: pt.footer.imprint, href: "/imprint" },
-    { label: pt.footer.privacy, href: "/privacy" },
-    { label: pt.footer.terms, href: "/terms" },
+    { label: pt.footer.imprint, href: getLocalizedRoute("imprint", locale) },
+    { label: pt.footer.privacy, href: getLocalizedRoute("privacy", locale) },
+    { label: pt.footer.terms, href: getLocalizedRoute("terms", locale) },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -296,34 +297,34 @@ export function Footer() {
                     &middot;
                   </span>
                   <a
-                    href="/terms"
-                    onClick={(e) => handleNavClick(e, "/terms")}
+                    href={getLocalizedRoute("terms", locale)}
+                    onClick={(e) => handleNavClick(e, getLocalizedRoute("terms", locale))}
                     className="text-[11px] md:text-[12px] opacity-50 transition-opacity hover:opacity-100"
                     style={{ fontFamily: fonts.body, color: "#fff" }}
                   >
-                    Terms of Service
+                    {pt.footer.terms}
                   </a>
                   <span className="text-[11px] md:text-[12px] opacity-30 mx-1" style={{ color: "#fff" }}>
                     &middot;
                   </span>
                   <a
-                    href="/privacy"
-                    onClick={(e) => handleNavClick(e, "/privacy")}
+                    href={getLocalizedRoute("privacy", locale)}
+                    onClick={(e) => handleNavClick(e, getLocalizedRoute("privacy", locale))}
                     className="text-[11px] md:text-[12px] opacity-50 transition-opacity hover:opacity-100"
                     style={{ fontFamily: fonts.body, color: "#fff" }}
                   >
-                    Privacy Policy
+                    {pt.footer.privacy}
                   </a>
                   <span className="text-[11px] md:text-[12px] opacity-30 mx-1" style={{ color: "#fff" }}>
                     &middot;
                   </span>
                   <a
-                    href="/imprint"
-                    onClick={(e) => handleNavClick(e, "/imprint")}
+                    href={getLocalizedRoute("imprint", locale)}
+                    onClick={(e) => handleNavClick(e, getLocalizedRoute("imprint", locale))}
                     className="text-[11px] md:text-[12px] opacity-50 transition-opacity hover:opacity-100"
                     style={{ fontFamily: fonts.body, color: "#fff" }}
                   >
-                    Imprint
+                    {pt.footer.imprint}
                   </a>
                 </div>
               </div>

@@ -25,7 +25,16 @@ interface I18nContextValue {
 const I18nContext = createContext<I18nContextValue | null>(null);
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("EN");
+  const [locale, setLocaleState] = useState<Locale>(() => {
+    // Detect initial locale from URL
+    if (typeof window !== "undefined") {
+      const path = window.location.pathname;
+      if (path.startsWith("/de")) {
+        return "DE";
+      }
+    }
+    return "EN";
+  });
 
   const setLocale = useCallback((l: Locale) => setLocaleState(l), []);
 
