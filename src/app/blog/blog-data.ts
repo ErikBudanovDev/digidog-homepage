@@ -733,6 +733,7 @@ If you're exploring MCP for your business, we build custom integrations from str
 
   {
     slug: "slack-mcp-server-setup-guide",
+    /* Published: 2026-03-16 | Status: PUBLISHED | GSC: Submit for indexing */
     title: "How to Set Up a Slack MCP Server: Connect AI to Your Workspace",
     metaTitle: "Slack MCP Server — Step-by-Step Setup Guide 2026",
     metaDescription:

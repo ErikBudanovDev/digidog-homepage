@@ -12,6 +12,71 @@ if (!fs.existsSync(virtualDir)) {
 
 const nextConfig: NextConfig = {
   /* ─────────────────────────────────────────────
+   * 301 Redirects — Old WordPress URLs → New Next.js routes
+   * Preserves SEO equity from indexed pages
+   * ───────────────────────────────────────────── */
+  async redirects() {
+    return [
+      // === Core Pages ===
+      { source: "/about-us", destination: "/about", permanent: true },
+      { source: "/about-us/", destination: "/about", permanent: true },
+      { source: "/uber-uns", destination: "/about", permanent: true },
+      { source: "/uber-uns/", destination: "/about", permanent: true },
+      { source: "/contact/", destination: "/contact", permanent: true },
+      { source: "/impressum", destination: "/imprint", permanent: true },
+      { source: "/impressum/", destination: "/imprint", permanent: true },
+      { source: "/datenschutz", destination: "/privacy", permanent: true },
+      { source: "/datenschutz/", destination: "/privacy", permanent: true },
+
+      // === Service Pages ===
+      { source: "/web-development-and-implementation", destination: "/services/web-design", permanent: true },
+      { source: "/web-development-and-implementation/", destination: "/services/web-design", permanent: true },
+      { source: "/website-development", destination: "/services/web-design", permanent: true },
+      { source: "/website-development/", destination: "/services/web-design", permanent: true },
+      { source: "/website-development-it", destination: "/services/web-design", permanent: true },
+      { source: "/website-development-it/", destination: "/services/web-design", permanent: true },
+      { source: "/app-development", destination: "/services/custom-software", permanent: true },
+      { source: "/app-development/", destination: "/services/custom-software", permanent: true },
+      { source: "/website-care-and-support-solutions", destination: "/services/web-design", permanent: true },
+      { source: "/website-care-and-support-solutions/", destination: "/services/web-design", permanent: true },
+      { source: "/seo-and-content-marketing", destination: "/services/web-design", permanent: true },
+      { source: "/seo-and-content-marketing/", destination: "/services/web-design", permanent: true },
+      { source: "/suchmaschinenoptimierung-und-content-marketing", destination: "/services/web-design", permanent: true },
+      { source: "/suchmaschinenoptimierung-und-content-marketing/", destination: "/services/web-design", permanent: true },
+      { source: "/webentwicklung-und-implementation", destination: "/services/web-design", permanent: true },
+      { source: "/webentwicklung-und-implementation/", destination: "/services/web-design", permanent: true },
+
+      // === Portfolio / Projects ===
+      { source: "/en/projects/:slug", destination: "/portfolio", permanent: true },
+      { source: "/en/projects/:slug/", destination: "/portfolio", permanent: true },
+      { source: "/projects/:slug", destination: "/portfolio", permanent: true },
+      { source: "/projects/:slug/", destination: "/portfolio", permanent: true },
+      { source: "/projekte/:slug", destination: "/portfolio", permanent: true },
+      { source: "/projekte/:slug/", destination: "/portfolio", permanent: true },
+
+      // === Blog (old WP blog paths) ===
+      { source: "/en/blog/:slug", destination: "/blog", permanent: true },
+      { source: "/en/blog/:slug/", destination: "/blog", permanent: true },
+
+      // === Language prefixed pages ===
+      { source: "/en", destination: "/", permanent: true },
+      { source: "/en/", destination: "/", permanent: true },
+      { source: "/de", destination: "/", permanent: true },
+      { source: "/de/", destination: "/", permanent: true },
+      { source: "/en/about-us", destination: "/about", permanent: true },
+      { source: "/en/about-us/", destination: "/about", permanent: true },
+      { source: "/en/contact", destination: "/contact", permanent: true },
+      { source: "/en/contact/", destination: "/contact", permanent: true },
+
+      // === Old WordPress trailing slashes catch-all ===
+      { source: "/wp-admin", destination: "/", permanent: true },
+      { source: "/wp-login.php", destination: "/", permanent: true },
+      { source: "/feed", destination: "/", permanent: true },
+      { source: "/feed/", destination: "/", permanent: true },
+    ];
+  },
+
+  /* ─────────────────────────────────────────────
    * Transpile components imported from the parent
    * Vite project's src/ directory so Next.js can
    * process JSX / TS files that live outside this
