@@ -1,21 +1,20 @@
 /* ─────────────────────────────────────────────
- * /de/webdesign-agentur-berlin — SSR page
- * Target keyword: "webdesign agentur berlin" (KD 6, 1300 vol)
+ * /de/webdesign-agentur-berlin — German Web Design page
+ * Same design as /services/web-design, German locale
+ * Target: "webdesign agentur berlin" (KD 6, 1300 vol)
  * ───────────────────────────────────────────── */
 import type { Metadata } from "next";
 import WebDesignDEClient from "../../client-pages/WebDesignDEClient";
 
 export const metadata: Metadata = {
-  title: "Webdesign Agentur Berlin — Professionelle Websites & Webentwicklung | DigiDog",
+  title: "Webdesign Agentur Berlin — Professionelle Websites & Webentwicklung",
   description:
-    "Ihre Webdesign Agentur in Berlin: Maßgeschneiderte Websites, moderne Webentwicklung mit React & Next.js, UX/UI Design und SEO. Kostenlose Erstberatung.",
+    "Ihre Webdesign Agentur in Berlin: Maßgeschneiderte Websites, moderne Webentwicklung mit React & Next.js, UX/UI Design und SEO-Optimierung. Kostenloses Erstgespräch.",
   alternates: {
     canonical: "/de/webdesign-agentur-berlin",
-    languages: {
-      "de": "/de/webdesign-agentur-berlin",
-      "en": "/services/web-design",
-    },
+    languages: { de: "/de/webdesign-agentur-berlin", en: "/services/web-design" },
   },
+  keywords: ["webdesign agentur berlin", "webdesign berlin", "webentwicklung berlin", "website erstellen berlin", "webagentur berlin"],
   openGraph: {
     title: "Webdesign Agentur Berlin — DigiDog",
     description: "Professionelle Websites und Webentwicklung für Unternehmen in Berlin. React, Next.js, UX/UI Design.",
@@ -24,17 +23,7 @@ export const metadata: Metadata = {
   },
 };
 
-const berlinConfig = {
-  city: "Berlin",
-  citySlug: "berlin",
-  heroTitle: "Webdesign Agentur Berlin — Websites, die verkaufen",
-  heroSubtitle:
-    "Wir gestalten und entwickeln professionelle Websites für Unternehmen in Berlin. Modernes Design, schnelle Ladezeiten und messbare Ergebnisse — von der Beratung bis zum Launch.",
-  introText:
-    "Berlin ist Deutschlands Startup-Hauptstadt und ein hart umkämpfter Markt. Ihr Unternehmen braucht mehr als eine hübsche Website — Sie brauchen eine digitale Plattform, die Besucher in Kunden verwandelt. Als Webdesign Agentur mit Fokus auf Berlin kombinieren wir modernes Design mit modernster Technologie. Ob Startup im Prenzlauer Berg, Agentur in Kreuzberg oder Mittelständler in Charlottenburg: Wir entwickeln Websites, die Ihre Zielgruppe ansprechen und Ihre Geschäftsziele erreichen. Mit React, Next.js und KI-gestützten Workflows liefern wir schneller und effizienter als traditionelle Agenturen — ohne Kompromisse bei der Qualität.",
-};
-
-const jsonLd = {
+const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "DigiDog — Webdesign Agentur Berlin",
@@ -44,21 +33,26 @@ const jsonLd = {
   serviceType: ["Webdesign", "Webentwicklung", "UX/UI Design", "SEO"],
   priceRange: "€€",
   availableLanguage: ["de", "en"],
-  parentOrganization: {
-    "@type": "Organization",
-    name: "DigiDog",
-    url: "https://www.digidog.org",
-  },
+  parentOrganization: { "@type": "Organization", name: "DigiDog", url: "https://www.digidog.org" },
 };
 
-export default function WebdesignAgenturBerlinPage() {
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Was kostet eine professionelle Website?", acceptedAnswer: { "@type": "Answer", text: "Ab 3.000 € für eine Unternehmenswebsite. Komplexe E-Commerce- oder Web-App-Projekte ab 15.000 €. Transparente Festpreise nach kostenlosem Erstgespräch." }},
+    { "@type": "Question", name: "Wie lange dauert die Entwicklung?", acceptedAnswer: { "@type": "Answer", text: "Landing Page: 2-3 Wochen. Firmenwebsite: 4-8 Wochen. Komplexe Web-Apps: 3-6 Monate." }},
+    { "@type": "Question", name: "Welche Technologien setzt ihr ein?", acceptedAnswer: { "@type": "Answer", text: "React, Next.js, TypeScript, Tailwind CSS, WordPress, Node.js, PostgreSQL und weitere moderne Technologien." }},
+    { "@type": "Question", name: "Bietet ihr auch Wartung an?", acceptedAnswer: { "@type": "Answer", text: "Ja — Sicherheitsupdates, Performance-Monitoring, Content-Updates. Flexibel ohne Vertragsbindung." }},
+  ],
+};
+
+export default function Page() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <WebDesignDEClient config={berlinConfig} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <WebDesignDEClient />
     </>
   );
 }
