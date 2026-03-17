@@ -61,9 +61,9 @@ export const fonts = {
 /* ── Layout constants ── */
 export const layout = {
   maxWidth: "max-w-[1296px]",
-  containerPadding: "px-6 lg:px-20",
+  containerPadding: "px-6 md:px-12 lg:px-20",
   /** Combined Tailwind classes for the standard section container */
-  container: "max-w-[1296px] mx-auto px-6 lg:px-20",
+  container: "max-w-[1296px] mx-auto px-6 md:px-12 lg:px-20",
 } as const;
 
 /* ── Shared transition / animation presets ── */
