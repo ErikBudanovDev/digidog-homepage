@@ -15,6 +15,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    // German landing pages
+    { url: `${baseUrl}/de/webdesign-agentur-berlin`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/de/webdesign-agentur-hamburg`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
