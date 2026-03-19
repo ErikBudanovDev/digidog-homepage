@@ -1,7 +1,11 @@
 "use client";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { useTranslation } from "@/i18n/i18n-context";
 import PortfolioPage from "@/components/pages/PortfolioPage";
+
+function PortfolioInner() {
+  return <PortfolioPage />;
+}
 
 export default function PortfolioDEClient() {
   const { setLocale } = useTranslation();
@@ -9,5 +13,9 @@ export default function PortfolioDEClient() {
     setLocale("DE");
     return () => setLocale("EN");
   }, [setLocale]);
-  return <PortfolioPage />;
+  return (
+    <Suspense>
+      <PortfolioInner />
+    </Suspense>
+  );
 }
