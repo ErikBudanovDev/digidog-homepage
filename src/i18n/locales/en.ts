@@ -331,4 +331,230 @@ export const en: DeepStringify<typeof de> = {
     resultStat4: "Integrated",
     resultCta: "Start Project Now",
   },
+
+  /* ── AI Integration page ── */
+  aiIntegration: {
+    /* SEO */
+    seoTitle: "AI Integration & Workflow Automation Agency",
+    seoDescription:
+      "We integrate your operations, data, and workflows into AI. Access reports, automate tasks, manage operations, and make decisions through natural conversation with Claude or GPT.",
+
+    /* Hero */
+    heroBadge: "AI Integration Agency",
+    heroTitle1: "Talk to Your",
+    heroTitle2: "Business",
+    heroTitle3: "With AI",
+    heroDescription:
+      "Integrate your operations, data, and workflows into your",
+    heroDescHighlight: "Claude or GPT Chat",
+    heroDescEnd:
+      ". Access reports, automate tasks, manage operations, and make decisions through natural conversation.",
+    heroCta: "Book Free Strategy Call",
+    heroCtaSecondary: "Explore Services",
+    heroKpi1Value: "30–60%",
+    heroKpi1Label: "Repetitive work automated",
+    heroKpi2Value: "40%",
+    heroKpi2Label: "Average cost reduction",
+    heroKpi3Value: "3x",
+    heroKpi3Label: "Faster operations",
+    heroHubCaption: "AI connects all your business systems into one intelligent interface",
+
+    /* Hub nodes */
+    hubCrm: "CRM",
+    hubEmail: "Email",
+    hubSupport: "Support",
+    hubAnalytics: "Analytics",
+    hubTasks: "Tasks",
+    hubFinance: "Finance",
+    hubOperations: "Operations",
+
+    /* Core Idea */
+    coreIdeaBadge: "The Core Idea",
+    coreIdeaTitle1: "Your Entire Business.",
+    coreIdeaTitle2: "One AI Conversation.",
+    coreIdeaDescription:
+      "AI connects your business tools and data sources into one intelligent system. Instead of opening dashboards and switching between platforms, you simply ask. The AI retrieves the information from your systems instantly.",
+    corePoint1: "No more switching between platforms",
+    corePoint2: "No manual reporting",
+    corePoint3: "Real-time business visibility",
+    corePoint4: "AI-powered operations",
+
+    /* Example questions */
+    eq1: "How much revenue did we generate this week?",
+    eq2: "Which clients need follow-up?",
+    eq3: "What tasks are still pending?",
+    eq4: "What tasks were done for this project?",
+    eq5: "Which marketing campaigns generated leads?",
+    eq6: "Are there unresolved customer tickets?",
+    eqAnswer: "AI retrieves answers from your connected systems instantly.",
+
+    /* What We Do */
+    whatWeDoBadge: "What We Do",
+    whatWeDoTitle1: "An AI That",
+    whatWeDoTitle2: "Understands Your Business",
+    whatWeDoDescription:
+      "All your tools orbit around one intelligent AI. Ask it anything about your business and get real answers.",
+
+    /* Chat interface */
+    chatTitle: "AI Business Assistant",
+    chatOnline: "Online",
+    chatUserMessage: "What goals did we achieve last quarter?",
+    chatPulling: "Pulling data from your connected tools...",
+    chatResponse: "Here are your Q4 results across all connected platforms:",
+    chatDataConfirm: "Data pulled from HubSpot, Asana, Google Sheets & Ahrefs",
+    chatInputPlaceholder: "Ask about your business...",
+    chatRevenueGrowth: "Revenue Growth",
+    chatNewClients: "New Clients Acquired",
+    chatTasksCompleted: "Tasks Completed",
+    chatSatisfaction: "Customer Satisfaction",
+
+    /* Data sources */
+    dsHubspot: "HubSpot CRM",
+    dsSheets: "Google Sheets",
+    dsAsana: "Asana",
+    dsAhrefs: "Ahrefs",
+
+    /* Case Studies */
+    csBadge: "Real Business Examples",
+    csTitle1: "Real Businesses",
+    csTitle2: "Running on AI Systems",
+    csDescription: "See how businesses across industries use AI to transform their daily operations.",
+    csCta: "Want to see how AI can transform your business?",
+    csCtaButton: "Discuss Your Use Case",
+    csAnswerLine: "AI retrieves answers from your connected systems instantly.",
+    csTryItOut: "Try it out",
+    csMcpServerUrl: "MCP Server URL",
+    csCopy: "Copy",
+    csCopied: "Copied!",
+
+    /* Case study 1 */
+    cs1Title: "AI Operations System for Be Original Tours",
+    cs1Subtitle: "Tour Operations",
+    cs1Description:
+      "Tour operations fully integrated with AI. Managers can ask the system about weekly revenue, customer complaints, tour performance, and website traffic.",
+    cs1Outcome: "Centralized operational intelligence",
+    cs1Q1: "Create a main task to integrate the design of the project",
+    cs1Q2: "Check which client invoices are still unpaid",
+    cs1Q3: "What tasks are still pending for the Berlin tour?",
+    cs1Q4: "Summarize last week's tour performance",
+    cs1Q5: "Which campaigns generated the most bookings?",
+    cs1Q6: "Are there unresolved customer complaints?",
+
+    /* Case study 2 */
+    cs2Title: "AI CRM Account Manager",
+    cs2Subtitle: "Sales & CRM",
+    cs2Description:
+      "AI acts as an account manager — creating clients, managing deals, updating pipelines, tracking communication, generating follow-ups, and monitoring emails.",
+    cs2Outcome: "Sales teams spend less time updating systems and more time closing deals",
+    cs2Q1: "Create a new client profile for Acme Corp",
+    cs2Q2: "Move the Johnson deal to negotiation stage",
+    cs2Q3: "Draft a follow-up email for pending proposals",
+    cs2Q4: "Which deals haven't been updated this week?",
+    cs2Q5: "Show all communication with client XYZ",
+
+    /* Case study 3 */
+    cs3Title: "AI Service Desk for a Digital Agency",
+    cs3Subtitle: "Client Coordination",
+    cs3Description:
+      "AI coordinates client requests across Email, Asana, development environments, and CRM — reading emails, creating tasks, routing projects, and tracking completion.",
+    cs3Outcome: "70-80% of operational coordination automated",
+    cs3Q1: "Create an Asana task from the latest client email",
+    cs3Q2: "Route the new landing page request to development",
+    cs3Q3: "What projects are waiting for client approval?",
+    cs3Q4: "Track completion status of all active projects",
+
+    /* Process */
+    processBadge: "Our Process",
+    processTitle1: "How Your Business Becomes",
+    processTitle2: "AI-Powered",
+    processDescription:
+      "A proven five-phase process that transforms your operations step by step — from analysis to a fully connected AI system.",
+
+    /* Process steps */
+    proc1Title: "AI Opportunity Deep Dive",
+    proc1Short: "Deep Dive",
+    proc1Desc:
+      "We start with a deep operational audit of your business. This includes understanding your workflows, data sources, internal systems, and decision processes.",
+    proc1Details:
+      "We talk with stakeholders and identify where AI can create the most value by automating tasks, connecting data, and simplifying operations. The goal is to understand how your business actually runs before introducing AI.",
+
+    proc2Title: "AI Architecture Design",
+    proc2Short: "Architecture",
+    proc2Desc:
+      "Once we understand your business processes, we design the AI system architecture. This defines how AI will connect to your tools, databases, and operational workflows.",
+    proc2Details:
+      "We plan how your systems will be integrated into a unified AI layer and determine which data sources will become part of the AI environment. This creates the blueprint for your AI-powered operational system.",
+
+    proc3Title: "MCP Integration (AI Foundation)",
+    proc3Short: "MCP Layer",
+    proc3Desc:
+      "We build the first operational AI layer — your Model Context Protocol (MCP). This connects your core systems, databases, and tools into a single AI environment.",
+    proc3Details:
+      "The MCP acts as the bridge between AI and your business infrastructure. At this stage, the AI can already access and understand key parts of your business data.",
+
+    proc4Title: "MVP AI Business Interface",
+    proc4Short: "MVP Launch",
+    proc4Desc:
+      "Once the MCP is in place, we launch a Minimum Viable AI System (MVP). This integrates one part of your business into the AI interface so you can immediately start interacting with it.",
+    proc4Details:
+      "This allows your team to experience AI integration early and shape how the system evolves.",
+    proc4Bullet1: "Generate reports through chat",
+    proc4Bullet2: "Access operational data instantly",
+    proc4Bullet3: "Monitor performance metrics",
+    proc4Bullet4: "Ask questions about your business",
+
+    proc5Title: "Progressive AI Integration",
+    proc5Short: "Scale Up",
+    proc5Desc:
+      "After the MVP launch, we continue expanding the AI system by integrating more business functions. Each new integration increases the capabilities of your AI system.",
+    proc5Bullet1: "CRM",
+    proc5Bullet2: "Support tickets",
+    proc5Bullet3: "Marketing analytics",
+    proc5Bullet4: "Task management",
+    proc5Bullet5: "Financial reporting",
+    proc5Bullet6: "Operational data",
+
+    /* Outcomes */
+    outcome1: "Centralized operational visibility",
+    outcome2: "Faster decision making",
+    outcome3: "Less manual work",
+    outcome4: "Automated reporting",
+    outcome5: "Connected business systems",
+
+    /* Business Types */
+    btBadge: "Who We Help",
+    btTitle1: "Types of Businesses",
+    btTitle2: "We Help",
+    btDescription: "Any business with clients, data, operations, and workflows can benefit from AI integration.",
+
+    bt1Label: "Digital Agencies",
+    bt1Desc: "Automate client workflows, project routing & reporting",
+    bt2Label: "Customer Support Centers",
+    bt2Desc: "AI-powered ticket triage, responses & escalation",
+    bt3Label: "Logistics Companies",
+    bt3Desc: "Route optimization, shipment tracking & dispatch AI",
+    bt4Label: "Home Care / Senior Care",
+    bt4Desc: "Scheduling, caregiver matching & compliance tracking",
+    bt5Label: "Recruitment Agencies",
+    bt5Desc: "Candidate screening, outreach & pipeline management",
+    bt6Label: "Real Estate Brokerages",
+    bt6Desc: "Lead nurturing, listing management & market analysis",
+    bt7Label: "Professional Services",
+    bt7Desc: "Document automation, billing & client communication",
+    bt8Label: "Tour Operators & Travel",
+    bt8Desc: "Booking management, itinerary planning & guest comms",
+    bt9Label: "Managed IT Providers",
+    bt9Desc: "Incident response, monitoring alerts & SLA tracking",
+    bt10Label: "Property Management",
+    bt10Desc: "Tenant communication, maintenance requests & leasing",
+
+    /* CTA Banner */
+    ctaTitle1: "Don't leave automation to chance —",
+    ctaTitle2: "leave it to the experts",
+    ctaDescription: "We handle the complexity so you can focus on your business. Book a consultation and let us build your AI-powered operations.",
+    ctaButton: "Book AI Integration Call",
+
+    /* Services link */
+    servicesLink: "Explore Services",
+  },
 } as const;
