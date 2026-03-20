@@ -64,6 +64,22 @@
       "excerpt": "Die Build-vs-Buy-Entscheidung kann Ihr Tech-Budget retten oder ruinieren. Ein praktischer Entscheidungsrahmen für den Mittelstand.",
       "tag": "Software",
       "readTime": "7 Min. Lesezeit"
+    },
+    "playwright-mcp-server-complete-guide": {
+      "title": "Playwright MCP Server: Der vollständige Setup-Guide für 2026",
+      "metaTitle": "Playwright MCP Server — Komplette Einrichtungsanleitung",
+      "metaDescription": "Schritt-für-Schritt-Anleitung zur Einrichtung eines Playwright MCP Servers. Browser-Automatisierung mit KI-Agenten für Tests, Scraping und Workflows.",
+      "excerpt": "Erfahren Sie, wie Sie einen Playwright MCP Server einrichten und KI-Agenten mit Browser-Automatisierung verbinden — für Tests, Scraping und komplexe Workflows.",
+      "tag": "MCP & KI",
+      "readTime": "12 Min. Lesezeit"
+    },
+    "slack-mcp-server-setup-guide": {
+      "title": "Slack MCP Server einrichten: KI mit Ihrem Workspace verbinden",
+      "metaTitle": "Slack MCP Server — Setup-Anleitung für KI-Integration",
+      "metaDescription": "So richten Sie einen Slack MCP Server ein und verbinden Claude oder GPT mit Ihren Slack-Kanälen. Nachrichten lesen, senden und Workflows automatisieren.",
+      "excerpt": "Verbinden Sie KI-Agenten mit Slack: Nachrichten lesen, senden und Workflows automatisieren — Schritt-für-Schritt-Anleitung für den Slack MCP Server.",
+      "tag": "MCP & KI",
+      "readTime": "10 Min. Lesezeit"
     }
   }
 }

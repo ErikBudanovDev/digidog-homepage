@@ -4,34 +4,80 @@ import { useRef } from "react";
 import { colors } from "./ui/brand";
 import { SectionContainer, SectionHeading } from "./ui/section";
 import { BlogCard, type BlogCardData } from "./ui/cards";
+import { blogPosts as allBlogPosts } from "@/app/blog/blog-data";
+import { useTranslation } from "@/i18n/i18n-context";
+import enBlog from "@/translations/blog/english.json";
+import deBlog from "@/translations/blog/german.json";
 
-const blogPosts: BlogCardData[] = [
-  {
-    title: "AI Automation for Mid-Size Companies: A Practical Guide",
-    description: "Most mid-size companies waste 30-60% of their team's time on repetitive tasks. Here's exactly how AI automation changes that — with real workflows, not hype.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1080&q=80",
-    tag: "AI Automation",
-    slug: "ai-automation-for-mid-size-companies",
-  },
-  {
-    title: "How We Automated CRM Operations with AI — Saving 25 Hours/Week",
-    description: "A mid-size agency was drowning in manual CRM work. We built an AI system that handles lead qualification, follow-ups, and reporting automatically.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1080&q=80",
-    tag: "Case Study",
-    slug: "automated-crm-operations-with-ai",
-  },
-  {
-    title: "What Is MCP (Model Context Protocol) and Why It Matters",
-    description: "MCP is the protocol that turns AI from a chatbot into a business operator. Here's what it is, how it works, and why your company should care.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
-    tag: "AI Integration",
-    slug: "what-is-mcp-model-context-protocol",
-  },
+/** Slugs to feature on the homepage (most recent / highest value) */
+const FEATURED_SLUGS = [
+  "playwright-mcp-server-complete-guide",
+  "slack-mcp-server-setup-guide",
+  "website-erstellen-lassen-kosten-ablauf-tipps",
 ];
+
+/** Fallback featured slugs if the above aren't found */
+const FALLBACK_SLUGS = [
+  "ai-automation-for-mid-size-companies",
+  "case-study-ai-automation-crm-integration",
+  "what-is-mcp-model-context-protocol",
+];
+
+function getFeaturedPosts(locale: string): BlogCardData[] {
+  const translations = (locale === "DE" ? deBlog : enBlog).posts as Record<string, any>;
+
+  // Try featured slugs first, then fallbacks
+  const slugsToTry = [...FEATURED_SLUGS, ...FALLBACK_SLUGS];
+  const posts: BlogCardData[] = [];
+  const seen = new Set<string>();
+
+  for (const slug of slugsToTry) {
+    if (posts.length >= 3) break;
+    if (seen.has(slug)) continue;
+    seen.add(slug);
+
+    const post = allBlogPosts.find((p) => p.slug === slug);
+    if (!post) continue;
+
+    const t = translations[slug];
+    posts.push({
+      title: t?.title || post.title,
+      description: t?.excerpt || t?.metaDescription || post.excerpt,
+      image: post.image,
+      tag: t?.tag || post.tag,
+      slug: post.slug,
+    });
+  }
+
+  // If still not enough, fill from the beginning of allBlogPosts
+  for (const post of allBlogPosts) {
+    if (posts.length >= 3) break;
+    if (seen.has(post.slug)) continue;
+    seen.add(post.slug);
+
+    const t = translations[post.slug];
+    posts.push({
+      title: t?.title || post.title,
+      description: t?.excerpt || t?.metaDescription || post.excerpt,
+      image: post.image,
+      tag: t?.tag || post.tag,
+      slug: post.slug,
+    });
+  }
+
+  return posts;
+}
+
+const SECTION_HEADING: Record<string, string> = {
+  EN: "Explore our world of ideas",
+  DE: "Entdecken Sie unsere Ideenwelt",
+};
 
 export function BlogSection() {
   const cardsRef = useRef(null);
   const cardsInView = useInView(cardsRef, { once: true, margin: "-60px 0px" });
+  const { locale } = useTranslation();
+  const posts = getFeaturedPosts(locale);
 
   return (
     <section
@@ -74,16 +120,16 @@ export function BlogSection() {
         <div className="text-center mb-12">
           <ScrollReveal>
             <SectionHeading theme="dark">
-              Explore our world of ideas
+              {SECTION_HEADING[locale] || SECTION_HEADING.EN}
             </SectionHeading>
           </ScrollReveal>
         </div>
 
         {/* Blog Cards */}
         <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogPosts.map((post, index) => (
+          {posts.map((post, index) => (
             <BlogCard
-              key={post.title}
+              key={post.slug}
               post={post}
               index={index}
               isInView={cardsInView}

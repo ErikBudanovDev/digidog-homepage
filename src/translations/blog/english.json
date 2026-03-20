@@ -64,6 +64,22 @@
       "excerpt": "The build-vs-buy decision can make or break your tech budget. Here's a practical framework for mid-size companies.",
       "tag": "Software",
       "readTime": "7 min read"
+    },
+    "playwright-mcp-server-complete-guide": {
+      "title": "Playwright MCP Server: The Complete Setup Guide for 2026",
+      "metaTitle": "Playwright MCP Server — Complete Setup Guide",
+      "metaDescription": "Step-by-step guide to setting up a Playwright MCP Server. Connect AI agents with browser automation for testing, scraping, and complex workflows.",
+      "excerpt": "Learn how to set up a Playwright MCP Server and connect AI agents with browser automation — for testing, scraping, and complex workflows.",
+      "tag": "MCP & AI",
+      "readTime": "12 min read"
+    },
+    "slack-mcp-server-setup-guide": {
+      "title": "How to Set Up a Slack MCP Server: Connect AI to Your Workspace",
+      "metaTitle": "Slack MCP Server — Setup Guide for AI Integration",
+      "metaDescription": "How to set up a Slack MCP Server and connect Claude or GPT to your Slack channels. Read messages, send updates, and automate workflows.",
+      "excerpt": "Connect AI agents to Slack: read messages, send updates, and automate workflows — step-by-step Slack MCP Server setup guide.",
+      "tag": "MCP & AI",
+      "readTime": "10 min read"
     }
   }
 }
