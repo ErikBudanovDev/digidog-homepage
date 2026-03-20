@@ -22,75 +22,23 @@ import { useTranslation } from "@/i18n/i18n-context";
  * DATA
  * ───────────────────────────────────────────── */
 
-const deliverables = [
-  {
-    icon: Paintbrush,
-    title: "Custom Website Design",
-    text: "Individual design that perfectly represents your brand and converts visitors into customers.",
-  },
-  {
-    icon: Code,
-    title: "Full-Stack Development",
-    text: "Modern frontend and backend development with React, Next.js, Node.js, and other technologies.",
-  },
-  {
-    icon: Layers,
-    title: "UX/UI Design",
-    text: "User-centered design focused on conversions, usability, and a seamless user experience.",
-  },
-  {
-    icon: Smartphone,
-    title: "Responsive Design",
-    text: "Perfect display on all devices — desktop, tablet, and smartphone.",
-  },
-  {
-    icon: Server,
-    title: "CMS & Custom Dashboards",
-    text: "Integration of content management systems or custom admin dashboards.",
-  },
-  {
-    icon: Gauge,
-    title: "Performance & SEO",
-    text: "Technical optimization for lightning-fast load times and top search engine rankings.",
-  },
-  {
-    icon: Shield,
-    title: "Security & Hosting",
-    text: "SSL encryption, secure server configuration, and reliable hosting.",
-  },
-  {
-    icon: Wrench,
-    title: "Maintenance & Support",
-    text: "Ongoing support, updates, and technical assistance for long-term success.",
-  },
+const getDeliverables = (t: any) => [
+  { icon: Paintbrush, title: t.web.del1Title, text: t.web.del1Text },
+  { icon: Code, title: t.web.del2Title, text: t.web.del2Text },
+  { icon: Layers, title: t.web.del3Title, text: t.web.del3Text },
+  { icon: Smartphone, title: t.web.del4Title, text: t.web.del4Text },
+  { icon: Server, title: t.web.del5Title, text: t.web.del5Text },
+  { icon: Gauge, title: t.web.del6Title, text: t.web.del6Text },
+  { icon: Shield, title: t.web.del7Title, text: t.web.del7Text },
+  { icon: Wrench, title: t.web.del8Title, text: t.web.del8Text },
 ];
 
-const processSteps = [
-  {
-    number: "01",
-    title: "Consulting & Analysis",
-    text: "We analyze your goals, target audience, and competitors to develop a tailored strategy.",
-  },
-  {
-    number: "02",
-    title: "Concept & Design",
-    text: "Wireframes and visual design — iteratively refined until every page is perfect.",
-  },
-  {
-    number: "03",
-    title: "Development",
-    text: "Clean, performant code using modern technologies and best practices.",
-  },
-  {
-    number: "04",
-    title: "Testing & Launch",
-    text: "Thorough testing on all devices, performance optimization, and smooth go-live.",
-  },
-  {
-    number: "05",
-    title: "Support & Growth",
-    text: "Ongoing maintenance, analytics, and continuous improvement of your digital platform.",
-  },
+const getProcessSteps = (t: any) => [
+  { number: "01", title: t.web.step1Title, text: t.web.step1Text },
+  { number: "02", title: t.web.step2Title, text: t.web.step2Text },
+  { number: "03", title: t.web.step3Title, text: t.web.step3Text },
+  { number: "04", title: t.web.step4Title, text: t.web.step4Text },
+  { number: "05", title: t.web.step5Title, text: t.web.step5Text },
 ];
 
 const techStack = [
@@ -108,38 +56,30 @@ const techStack = [
   "Docker",
 ];
 
-const portfolioProjects = [
+const getPortfolioProjects = (t: any) => [
   {
-    title: "Miso Supermarket & Bakery",
-    description:
-      "Modern web design and digital solution for a local supermarket with integrated online shop and ordering system.",
-    image:
-      "https://images.unsplash.com/photo-1591538519435-4578c3ba26d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXBlcm1hcmtldCUyMGJha2VyeSUyMHN0b3JlZnJvbnR8ZW58MXx8fHwxNzcyMjE0NzYxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    title: t.web.project1Title,
+    description: t.web.project1Desc,
+    image: "https://images.unsplash.com/photo-1591538519435-4578c3ba26d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXBlcm1hcmtldCUyMGJha2VyeSUyMHN0b3JlZnJvbnR8ZW58MXx8fHwxNzcyMjE0NzYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["Web Design", "E-Commerce", "CMS"],
   },
   {
-    title: "TechVision Dashboard",
-    description:
-      "Complete redesign of an enterprise dashboard with modern UI/UX design and responsive layout.",
-    image:
-      "https://images.unsplash.com/photo-1642054220942-d3c7dd1466cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjB3ZWJzaXRlJTIwcmVkZXNpZ24lMjBtb2NrdXB8ZW58MXx8fHwxNzcyMjY5MzQ2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["Full-Stack", "Dashboard", "React"],
+    title: t.web.project2Title,
+    description: t.web.project2Desc,
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmQlMjBhbmFseXRpY3MlMjBkYXJrfGVufDF8fHx8MTc3MjIxNDc2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+    tags: ["Dashboard", "UI/UX", "React"],
   },
   {
-    title: "Bella Cucina Restaurant",
-    description:
-      "Elegant website with online reservations and digital menu for an upscale Italian restaurant.",
-    image:
-      "https://images.unsplash.com/photo-1681310483042-64aa6776f112?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwd2Vic2l0ZSUyMGVsZWdhbnQlMjBkYXJrfGVufDF8fHx8MTc3MjI2OTM0N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["Web Design", "Responsive", "SEO"],
+    title: t.web.project3Title,
+    description: t.web.project3Desc,
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwaW50ZXJpb3IlMjBlbGVnYW50fGVufDF8fHx8MTc3MjIxNDc2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+    tags: ["Restaurant", "Booking", "CMS"],
   },
   {
-    title: "Luxe Fashion Online Shop",
-    description:
-      "High-end e-commerce solution with personalized recommendations and seamless checkout experience.",
-    image:
-      "https://images.unsplash.com/photo-1548524238-a971a4a3b523?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBlY29tbWVyY2UlMjB3ZWJzaXRlJTIwZGVzaWdufGVufDF8fHx8MTc3MjIyNDU1Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["E-Commerce", "Full-Stack", "Performance"],
+    title: t.web.project4Title,
+    description: t.web.project4Desc,
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwc3RvcmUlMjBsdXh1cnl8ZW58MXx8fHwxNzcyMjE0NzYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    tags: ["E-Commerce", "Fashion", "Next.js"],
   },
 ];
 
@@ -376,7 +316,7 @@ function DeliverablesSection() {
         </div>
 
         <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {deliverables.map((item, index) => {
+          {getDeliverables(t).map((item, index) => {
             const Icon = item.icon;
             return (
               <motion.div
@@ -582,7 +522,7 @@ function ProcessSection() {
         <div ref={ref} className="relative">
           <div className="hidden lg:block absolute top-[36px] left-[10%] right-[10%] h-[2px] bg-white/[0.08]" />
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4">
-            {processSteps.map((step, index) => (
+            {getProcessSteps(t).map((step, index) => (
               <motion.div
                 key={step.number}
                 initial={{ opacity: 0, y: 40 }}
@@ -799,7 +739,7 @@ function PortfolioShowcase() {
         </div>
 
         <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {portfolioProjects.map((project, index) => (
+          {getPortfolioProjects(t).map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 50 }}

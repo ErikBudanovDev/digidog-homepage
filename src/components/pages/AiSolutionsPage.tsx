@@ -42,70 +42,22 @@ import { useTranslation } from "@/i18n/i18n-context";
  * DATA
  * ───────────────────────────────────────────── */
 
-const deliverables = [
-  {
-    icon: Brain,
-    title: "Machine Learning Models",
-    text: "Custom ML models for predictions, classification, and anomaly detection in your business data.",
-  },
-  {
-    icon: MessageSquare,
-    title: "NLP & Text Analysis",
-    text: "Natural language processing for sentiment analysis, document classification, and automatic summarization.",
-  },
-  {
-    icon: Camera,
-    title: "Computer Vision",
-    text: "Image analysis and recognition for quality control, visual search, and automated inspection processes.",
-  },
-  {
-    icon: BarChart3,
-    title: "Predictive Analytics",
-    text: "Data-driven forecasts for revenue, customer behavior, and market trends — for informed business decisions.",
-  },
-  {
-    icon: Workflow,
-    title: "Process Automation",
-    text: "AI-powered automation of recurring tasks — from data collection to document processing.",
-  },
-  {
-    icon: Zap,
-    title: "LLM Integration",
-    text: "Integration of GPT, Claude, and other LLMs into your existing systems and workflows.",
-  },
-  {
-    icon: Target,
-    title: "AI Security & Ethics",
-    text: "Responsible AI development focused on data privacy, fairness, and transparency.",
-  },
+const getDeliverables = (t: any) => [
+  { icon: Brain, title: t.ai.del1Title, text: t.ai.del1Text },
+  { icon: MessageSquare, title: t.ai.del2Title, text: t.ai.del2Text },
+  { icon: Camera, title: t.ai.del3Title, text: t.ai.del3Text },
+  { icon: BarChart3, title: t.ai.del4Title, text: t.ai.del4Text },
+  { icon: Workflow, title: t.ai.del5Title, text: t.ai.del5Text },
+  { icon: Zap, title: t.ai.del6Title, text: t.ai.del6Text },
+  { icon: Target, title: t.ai.del7Title, text: t.ai.del7Text },
 ];
 
-const processSteps = [
-  {
-    number: "01",
-    title: "Analysis & Use Case",
-    text: "Together we identify the AI use cases with the greatest business value for your company.",
-  },
-  {
-    number: "02",
-    title: "Data & Strategy",
-    text: "We analyze your data sources, create a data strategy, and lay the foundation for your AI project.",
-  },
-  {
-    number: "03",
-    title: "Model Development",
-    text: "Training and fine-tuning AI models tailored to your specific requirements and data.",
-  },
-  {
-    number: "04",
-    title: "Integration & Testing",
-    text: "Seamless integration into your existing systems with comprehensive testing and validation.",
-  },
-  {
-    number: "05",
-    title: "Monitoring & Optimization",
-    text: "Continuous monitoring of model performance and iterative improvement for optimal results.",
-  },
+const getProcessSteps = (t: any) => [
+  { number: "01", title: t.ai.step1Title, text: t.ai.step1Text },
+  { number: "02", title: t.ai.step2Title, text: t.ai.step2Text },
+  { number: "03", title: t.ai.step3Title, text: t.ai.step3Text },
+  { number: "04", title: t.ai.step4Title, text: t.ai.step4Text },
+  { number: "05", title: t.ai.step5Title, text: t.ai.step5Text },
 ];
 
 const techStack = [
@@ -125,37 +77,25 @@ const techStack = [
   "Kubernetes",
 ];
 
-const portfolioProjects = [
+const getPortfolioProjects = (t: any) => [
   {
-    title: "AI Customer Service for FinTech",
-    description:
-      "Intelligent chatbot with GPT integration that automatically answers 70% of all customer inquiries and increases customer satisfaction by 35%.",
-    image:
-      "https://images.unsplash.com/photo-1757310998437-b2e8a7bd2e97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMGNoYXRib3QlMjBpbnRlcmZhY2UlMjBtb2Rlcm58ZW58MXx8fHwxNzcyMjcwMzAyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    title: t.ai.project1Title, description: t.ai.project1Desc,
+    image: "https://images.unsplash.com/photo-1757310998437-b2e8a7bd2e97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMGNoYXRib3QlMjBpbnRlcmZhY2UlMjBtb2Rlcm58ZW58MXx8fHwxNzcyMjcwMzAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["NLP", "Chatbot", "GPT"],
   },
   {
-    title: "Predictive Maintenance Dashboard",
-    description:
-      "ML-based prediction system for machine failures in manufacturing with a 95% detection rate.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjBkYXRhJTIwYW5hbHlzaXMlMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzcyMjcwMzAyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    title: t.ai.project2Title, description: t.ai.project2Desc,
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjBkYXRhJTIwYW5hbHlzaXMlMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzcyMjcwMzAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["Machine Learning", "IoT", "Dashboard"],
   },
   {
-    title: "Visual Quality Control",
-    description:
-      "Computer vision system for automatic defect detection in production with real-time analysis and reporting.",
-    image:
-      "https://images.unsplash.com/photo-1695902173528-0b15104c4554?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21wdXRlciUyMHZpc2lvbiUyMGRlZXAlMjBsZWFybmluZ3xlbnwxfHx8fDE3NzIxNjkxNTR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    title: t.ai.project3Title, description: t.ai.project3Desc,
+    image: "https://images.unsplash.com/photo-1695902173528-0b15104c4554?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21wdXRlciUyMHZpc2lvbiUyMGRlZXAlMjBsZWFybmluZ3xlbnwxfHx8fDE3NzIxNjkxNTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["Computer Vision", "Deep Learning", "Automation"],
   },
   {
-    title: "AI-Powered Business Intelligence",
-    description:
-      "Intelligent data analysis platform with natural language queries and automatic insights for management.",
-    image:
-      "https://images.unsplash.com/photo-1638866408990-1b5e583394d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMHBvd2VyZWQlMjBidXNpbmVzcyUyMGFuYWx5dGljc3xlbnwxfHx8fDE3NzIyNzAzMDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    title: t.ai.project4Title, description: t.ai.project4Desc,
+    image: "https://images.unsplash.com/photo-1638866408990-1b5e583394d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMHBvd2VyZWQlMjBidXNpbmVzcyUyMGFuYWx5dGljc3xlbnwxfHx8fDE3NzIyNzAzMDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["Analytics", "NLP", "Full-Stack"],
   },
 ];
@@ -490,7 +430,7 @@ function DeliverablesSection() {
         </div>
 
         <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {deliverables.map((item, index) => {
+          {getDeliverables(t).map((item, index) => {
             const Icon = item.icon;
             return (
               <motion.div
@@ -1437,7 +1377,7 @@ function ProcessSection() {
         <div ref={ref} className="relative">
           <div className="hidden lg:block absolute top-[36px] left-[10%] right-[10%] h-[2px] bg-white/[0.08]" />
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4">
-            {processSteps.map((step, index) => (
+            {getProcessSteps(t).map((step, index) => (
               <motion.div
                 key={step.number}
                 initial={{ opacity: 0, y: 40 }}
@@ -1630,7 +1570,7 @@ function PortfolioShowcase() {
         </div>
 
         <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {portfolioProjects.map((project, index) => (
+          {getPortfolioProjects(t).map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 50 }}

@@ -41,75 +41,23 @@ import { useTranslation } from "@/i18n/i18n-context";
  * DATA
  * ───────────────────────────────────────────── */
 
-const deliverables = [
-  {
-    icon: Terminal,
-    title: "Custom Software",
-    text: "Tailored applications built precisely for your business logic and workflows.",
-  },
-  {
-    icon: Plug,
-    title: "API & System Integration",
-    text: "Seamless connection to third-party systems, CRMs, ERPs, and existing infrastructure.",
-  },
-  {
-    icon: Cog,
-    title: "Workflow Automation",
-    text: "Automation of recurring processes — from data reconciliation to complex business rules.",
-  },
-  {
-    icon: BarChart3,
-    title: "Dashboards & Reporting",
-    text: "Real-time dashboards and reporting systems for data-driven decisions at all levels.",
-  },
-  {
-    icon: Rocket,
-    title: "SaaS & MVP Development",
-    text: "From concept to market-ready product — rapid prototypes and scalable SaaS platforms.",
-  },
-  {
-    icon: Database,
-    title: "Database Architecture",
-    text: "Performant, scalable database designs — from SQL and NoSQL to real-time databases.",
-  },
-  {
-    icon: Shield,
-    title: "Security & Compliance",
-    text: "Enterprise security, role-based access control, and GDPR-compliant data management.",
-  },
-  {
-    icon: RefreshCw,
-    title: "Maintenance & Evolution",
-    text: "Continuous development, monitoring, and technical support for long-term success.",
-  },
+const getDeliverables = (t: any) => [
+  { icon: Terminal, title: t.software.del1Title, text: t.software.del1Text },
+  { icon: Plug, title: t.software.del2Title, text: t.software.del2Text },
+  { icon: Cog, title: t.software.del3Title, text: t.software.del3Text },
+  { icon: BarChart3, title: t.software.del4Title, text: t.software.del4Text },
+  { icon: Rocket, title: t.software.del5Title, text: t.software.del5Text },
+  { icon: Database, title: t.software.del6Title, text: t.software.del6Text },
+  { icon: Shield, title: t.software.del7Title, text: t.software.del7Text },
+  { icon: RefreshCw, title: t.software.del8Title, text: t.software.del8Text },
 ];
 
-const processSteps = [
-  {
-    number: "01",
-    title: "Discovery & Requirements",
-    text: "In-depth analysis of your business processes, bottlenecks, and technical requirements.",
-  },
-  {
-    number: "02",
-    title: "Architecture & Planning",
-    text: "Technical architecture, data modeling, and detailed project planning with clear milestones.",
-  },
-  {
-    number: "03",
-    title: "Agile Development",
-    text: "Iterative development in sprints with regular demos and close feedback loops.",
-  },
-  {
-    number: "04",
-    title: "Integration & QA",
-    text: "System integration, automated testing, security audits, and staging deployments.",
-  },
-  {
-    number: "05",
-    title: "Launch & Scaling",
-    text: "Go-live, performance monitoring, and continuous optimization for growing demands.",
-  },
+const getProcessSteps = (t: any) => [
+  { number: "01", title: t.software.step1Title, text: t.software.step1Text },
+  { number: "02", title: t.software.step2Title, text: t.software.step2Text },
+  { number: "03", title: t.software.step3Title, text: t.software.step3Text },
+  { number: "04", title: t.software.step4Title, text: t.software.step4Text },
+  { number: "05", title: t.software.step5Title, text: t.software.step5Text },
 ];
 
 const techStack = [
@@ -131,37 +79,25 @@ const techStack = [
   "GitHub Actions",
 ];
 
-const portfolioProjects = [
+const getPortfolioProjects = (t: any) => [
   {
-    title: "Enterprise ERP Integration",
-    description:
-      "Complete integration of a legacy ERP system with modern cloud services — including real-time data synchronization and custom API layer.",
-    image:
-      "https://images.unsplash.com/photo-1558550087-a6911654de2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBUEklMjBpbnRlZ3JhdGlvbiUyMGNsb3VkJTIwcGxhdGZvcm18ZW58MXx8fHwxNzcyMjcxMTE4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    title: t.software.project1Title, description: t.software.project1Desc,
+    image: "https://images.unsplash.com/photo-1558550087-a6911654de2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBUEklMjBpbnRlZ3JhdGlvbiUyMGNsb3VkJTIwcGxhdGZvcm18ZW58MXx8fHwxNzcyMjcxMTE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["API Integration", "Cloud", "Enterprise"],
   },
   {
-    title: "Logistics Management Platform",
-    description:
-      "Custom logistics platform with real-time tracking, automatic route optimization, and integrated warehouse management.",
-    image:
-      "https://images.unsplash.com/photo-1760952851538-17a59f691efe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHdvcmtmbG93JTIwYXV0b21hdGlvbiUyMHN5c3RlbXxlbnwxfHx8fDE3NzIyNzExMTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    title: t.software.project2Title, description: t.software.project2Desc,
+    image: "https://images.unsplash.com/photo-1760952851538-17a59f691efe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHdvcmtmbG93JTIwYXV0b21hdGlvbiUyMHN5c3RlbXxlbnwxfHx8fDE3NzIyNzExMTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["Full-Stack", "Automation", "Dashboard"],
   },
   {
-    title: "Custom CRM for Sales",
-    description:
-      "Industry-specific CRM system with pipeline management, lead scoring, and seamless email integration.",
-    image:
-      "https://images.unsplash.com/photo-1669023414162-5bb06bbff0ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbnRlcnByaXNlJTIwZGFzaGJvYXJkJTIwQ1JNJTIwc29mdHdhcmV8ZW58MXx8fHwxNzcyMjcxMTE5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    title: t.software.project3Title, description: t.software.project3Desc,
+    image: "https://images.unsplash.com/photo-1669023414162-5bb06bbff0ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbnRlcnByaXNlJTIwZGFzaGJvYXJkJTIwQ1JNJTIwc29mdHdhcmV8ZW58MXx8fHwxNzcyMjcxMTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["CRM", "SaaS", "Node.js"],
   },
   {
-    title: "DevOps & CI/CD Pipeline",
-    description:
-      "Automated deployment pipeline with infrastructure-as-code, container orchestration, and comprehensive monitoring.",
-    image:
-      "https://images.unsplash.com/photo-1548544027-1a96c4c24c7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZXJ2ZXIlMjBpbmZyYXN0cnVjdHVyZSUyMG1pY3Jvc2VydmljZXN8ZW58MXx8fHwxNzcyMjcxMTE5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    title: t.software.project4Title, description: t.software.project4Desc,
+    image: "https://images.unsplash.com/photo-1548544027-1a96c4c24c7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZXJ2ZXIlMjBpbmZyYXN0cnVjdHVyZSUyMG1pY3Jvc2VydmljZXN8ZW58MXx8fHwxNzcyMjcxMTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["DevOps", "Docker", "Kubernetes"],
   },
 ];
@@ -500,7 +436,7 @@ function DeliverablesSection() {
         </div>
 
         <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {deliverables.map((item, index) => {
+          {getDeliverables(t).map((item, index) => {
             const Icon = item.icon;
             return (
               <motion.div
@@ -706,7 +642,7 @@ function ProcessSection() {
         <div ref={ref} className="relative">
           <div className="hidden lg:block absolute top-[36px] left-[10%] right-[10%] h-[2px] bg-white/[0.08]" />
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4">
-            {processSteps.map((step, index) => (
+            {getProcessSteps(t).map((step, index) => (
               <motion.div
                 key={step.number}
                 initial={{ opacity: 0, y: 40 }}
@@ -899,7 +835,7 @@ function PortfolioShowcase() {
         </div>
 
         <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {portfolioProjects.map((project, index) => (
+          {getPortfolioProjects(t).map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 50 }}
