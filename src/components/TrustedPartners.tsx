@@ -1,4 +1,5 @@
 import { ScrollReveal } from "./ScrollReveal";
+import { useTranslation } from "@/i18n/i18n-context";
 import svgPaths from "@/imports/svg-lf55duofgf";
 import { fonts } from "./ui/brand";
 import { SectionContainer } from "./ui/section";
@@ -146,6 +147,7 @@ function PartnerItem({ partner }: { partner: PartnerDef }) {
 }
 
 export function TrustedPartners() {
+  const { locale } = useTranslation();
   // Repeat enough times to fill wide screens before loop resets
   const repeated = [...partners, ...partners, ...partners, ...partners, ...partners];
 
@@ -157,7 +159,7 @@ export function TrustedPartners() {
             className="text-center text-[#756e6e] text-[18px] md:text-[24px] uppercase tracking-wider mb-10"
             style={{ fontFamily: fonts.ui }}
           >
-            Trusted partner for
+            {locale === "DE" ? "Vertrauensvoller Partner für" : "Trusted partner for"}
           </p>
         </ScrollReveal>
       </SectionContainer>

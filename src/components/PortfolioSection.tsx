@@ -801,20 +801,20 @@ export function PortfolioSection() {
         <div className="text-center mb-12">
           <ScrollReveal>
             <SectionBadge variant="light" className="mb-6">
-              Our Portfolio
+              {pfLocale === "DE" ? "Unser Portfolio" : "Our Portfolio"}
             </SectionBadge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <SectionHeading theme="light">
-              Completed projects
+              {pfLocale === "DE" ? "Abgeschlossene Projekte" : "Completed projects"}
               <br />
-              as a guiding light
+              {pfLocale === "DE" ? "als Wegweiser" : "as a guiding light"}
             </SectionHeading>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
             <div className="mt-4">
-              <LinkWithArrow href="/portfolio">
-                Explore our portfolio
+              <LinkWithArrow href={pfLocale === "DE" ? "/de/portfolio" : "/portfolio"}>
+                {pfLocale === "DE" ? "Unser Portfolio entdecken" : "Explore our portfolio"}
               </LinkWithArrow>
             </div>
           </ScrollReveal>

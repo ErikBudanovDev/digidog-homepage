@@ -6,6 +6,7 @@ import { StarShape, Planet } from "./CosmicElements";
 import { colors, fonts } from "./ui/brand";
 import { SectionContainer, SectionBadge, SectionHeading } from "./ui/section";
 import { LinkWithArrow } from "./ui/buttons";
+import { useTranslation } from "@/i18n/i18n-context";
 import { ReviewCard, type ReviewCardData } from "./ui/cards";
 
 const reviews: ReviewCardData[] = [
@@ -102,6 +103,7 @@ const reviews: ReviewCardData[] = [
 const VISIBLE_COUNT = 3;
 
 export function ReviewsSection() {
+  const { locale } = useTranslation();
   const cardsRef = useRef(null);
   const cardsInView = useInView(cardsRef, { once: true, margin: "-60px 0px" });
   const [page, setPage] = useState(0);
@@ -145,15 +147,17 @@ export function ReviewsSection() {
         <div className="text-center mb-12">
           <ScrollReveal>
             <SectionBadge variant="light" className="mb-6">
-              Client Reviews
+              {locale === "DE" ? "Kundenbewertungen" : "Client Reviews"}
             </SectionBadge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <SectionHeading
               theme="light"
-              subtitle="Discover what our clients say about working with digidog. Authentic reviews from real partners on Upwork."
+              subtitle={locale === "DE"
+                ? "Erfahren Sie, was unsere Kunden über die Zusammenarbeit mit digidog sagen. Authentische Bewertungen von echten Partnern auf Upwork."
+                : "Discover what our clients say about working with digidog. Authentic reviews from real partners on Upwork."}
             >
-              Simply honest!
+              {locale === "DE" ? "Einfach ehrlich!" : "Simply honest!"}
             </SectionHeading>
           </ScrollReveal>
 
@@ -171,7 +175,7 @@ export function ReviewsSection() {
                   className="text-[14px]"
                   style={{ fontFamily: fonts.display, fontWeight: 700, color: "#14A800" }}
                 >
-                  Top Rated on Upwork
+                  {locale === "DE" ? "Top-Bewertet auf Upwork" : "Top Rated on Upwork"}
                 </span>
               </div>
               <div className="h-4 w-px" style={{ background: "rgba(0,0,0,0.12)" }} />
@@ -201,7 +205,7 @@ export function ReviewsSection() {
                   className="text-[13px]"
                   style={{ fontFamily: fonts.display, color: colors.textMuted }}
                 >
-                  ({reviews.length} reviews)
+                  ({reviews.length} {locale === "DE" ? "Bewertungen" : "reviews"})
                 </span>
               </div>
               <div
@@ -212,14 +216,14 @@ export function ReviewsSection() {
                 className="text-[13px] hidden sm:inline"
                 style={{ fontFamily: fonts.display, fontWeight: 600, color: colors.textMuted }}
               >
-                100% Job Success
+                {locale === "DE" ? "100% Projekterfolg" : "100% Job Success"}
               </span>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <div className="mt-4">
-              <LinkWithArrow href="#portfolio">Explore our portfolio</LinkWithArrow>
+              <LinkWithArrow href={locale === "DE" ? "/de/portfolio" : "/portfolio"}>{locale === "DE" ? "Unser Portfolio entdecken" : "Explore our portfolio"}</LinkWithArrow>
             </div>
           </ScrollReveal>
         </div>
