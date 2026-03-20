@@ -18,7 +18,7 @@ import { colors, fonts, transitions, layout } from "@/components/ui/brand";
 import { SectionBadge, SectionHeading } from "@/components/ui/section";
 import { HeroLayout } from "@/components/ui/hero-layout";
 import { ProjectCard } from "@/components/ui/cards";
-import { projects } from "@/components/PortfolioSection";
+import { projects, getLocalizedProjects } from "@/components/PortfolioSection";
 import portfolioHeroImage from "figma:asset/3ddf1a828262e42cebdf9dd204d93f3c3c999f84.png";
 import { SEO } from "@/components/SEO";
 import { useTranslation } from "@/i18n/i18n-context";
@@ -239,10 +239,11 @@ function ProjectsGrid({ filter }: { filter: FilterKey }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px 0px" });
 
+  const localizedProjects = getLocalizedProjects(locale);
   const filtered =
     filter === "all"
-      ? projects
-      : projects.filter((p) => p.category === filter);
+      ? localizedProjects
+      : localizedProjects.filter((p) => p.category === filter);
 
   return (
     <div ref={ref}>

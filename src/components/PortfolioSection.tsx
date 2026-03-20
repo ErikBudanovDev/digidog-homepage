@@ -6,6 +6,8 @@ import { colors, fonts } from "./ui/brand";
 import { SectionContainer, SectionBadge, SectionHeading } from "./ui/section";
 import { LinkWithArrow, CarouselNavButton } from "./ui/buttons";
 import { ProjectCard, type ProjectCardData } from "./ui/cards";
+import enPf from "@/translations/portfolio/english.json";
+import dePf from "@/translations/portfolio/german.json";
 import unFp2030Image from "figma:asset/c117ba0d114ddd4b6f7e4c70e3701d65dc9258d9.png";
 import mpaOnlineImage from "figma:asset/8355901d8310aa8386a87aa2f57c48af458d57b5.png";
 import jewelrySketchImage from "figma:asset/078b70a771f804e92b4698a48f21b197eb8533b2.png";
@@ -24,6 +26,7 @@ import cibariaItalianaMarioImage from "figma:asset/3bd5043c343cc118bf1353e2acfbb
 import monteOfelioBarImage from "figma:asset/a1e43a0ca271ca27ec555aa2b403a94e7865b5b9.png";
 import monteOfelioNewsImage from "figma:asset/d6e8abf341447412a4167b69730c8988829f7af0.png";
 import monteOfelioLocationImage from "figma:asset/e64fabfbb0ba316f86fd5b115ed2ccaa77c94550.png";
+import { useTranslation } from "@/i18n/i18n-context";
 
 const unFp2030ImageSrc = unFp2030Image as unknown as string;
 const mpaOnlineImageSrc = mpaOnlineImage as unknown as string;
@@ -658,6 +661,30 @@ export const projects: ProjectCardData[] = [
   },
 ];
 
+/**
+ * Returns projects with translated text fields based on locale.
+ * Falls back to English (hardcoded) if no translation found.
+ */
+export function getLocalizedProjects(locale: string): ProjectCardData[] {
+  const pf = locale === "DE" ? dePf : enPf;
+  const translations = pf.projects as Record<string, any>;
+  return projects.map((p) => {
+    const t = p.slug ? translations[p.slug] : null;
+    if (!t) return p;
+    return {
+      ...p,
+      title: t.title || p.title,
+      description: t.description || p.description,
+      overview: t.overview || p.overview,
+      goal: t.goal || p.goal,
+      problem: t.problem || p.problem,
+      solution: t.solution || p.solution,
+      service: t.service || p.service,
+      client: t.client || p.client,
+    };
+  });
+}
+
 const DESKTOP_VISIBLE = 3;
 const MOBILE_VISIBLE = 1;
 
@@ -685,6 +712,8 @@ function Timeline({
 }
 
 export function PortfolioSection() {
+  const { locale: pfLocale } = useTranslation();
+  const localizedProjects = getLocalizedProjects(pfLocale);
   const [page, setPage] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const cardsRef = useRef(null);
@@ -698,7 +727,7 @@ export function PortfolioSection() {
   }, []);
 
   const visibleCount = isMobile ? MOBILE_VISIBLE : DESKTOP_VISIBLE;
-  const totalPages = Math.ceil(projects.length / visibleCount);
+  const totalPages = Math.ceil(localizedProjects.length / visibleCount);
 
   useEffect(() => {
     setPage((prev) => Math.min(prev, totalPages - 1));
@@ -729,7 +758,7 @@ export function PortfolioSection() {
     else if (dx > 50) prevPage();
   };
 
-  const visibleProjects = projects.slice(
+  const visibleProjects = localizedProjects.slice(
     page * visibleCount,
     page * visibleCount + visibleCount
   );
