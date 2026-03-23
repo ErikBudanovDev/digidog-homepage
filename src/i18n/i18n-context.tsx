@@ -1,9 +1,12 @@
 /* ─────────────────────────────────────────────
  * i18n CONTEXT — centralised language switching
  *
- * Locale is derived from the URL pathname via
- * Next.js usePathname() — works during both SSG
- * and client-side navigation.
+ * Locale is determined in two ways:
+ * 1. Server-side: passed as `initialLocale` prop from page.tsx
+ * 2. Client-side fallback: derived from pathname via usePathname()
+ *
+ * The server prop is the primary mechanism that ensures
+ * SSG produces correct locale content in static HTML.
  * ───────────────────────────────────────────── */
 "use client";
 
@@ -52,9 +55,15 @@ interface I18nContextValue {
 
 const I18nContext = createContext<I18nContextValue | null>(null);
 
-export function I18nProvider({ children }: { children: ReactNode }) {
+interface I18nProviderProps {
+  children: ReactNode;
+  /** Server-determined locale — takes priority over pathname detection */
+  initialLocale?: Locale;
+}
+
+export function I18nProvider({ children, initialLocale }: I18nProviderProps) {
   const pathname = usePathname() ?? "/";
-  const locale = localeFromPath(pathname);
+  const locale = initialLocale ?? localeFromPath(pathname);
   const t = bundles[locale];
 
   /* Keep <html lang> in sync at runtime */
@@ -68,7 +77,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       locale,
       t,
       setLocale: () => {
-        /* no-op — locale is now derived from the URL path */
+        /* no-op — locale is now derived from URL path or server prop */
       },
     }),
     [locale, t],

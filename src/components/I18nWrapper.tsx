@@ -7,8 +7,14 @@
  * ───────────────────────────────────────────── */
 "use client";
 
-import { I18nProvider } from "@/i18n/i18n-context";
+import { I18nProvider, type Locale } from "@/i18n/i18n-context";
 
-export function I18nWrapper({ children }: { children: React.ReactNode }) {
-  return <I18nProvider>{children}</I18nProvider>;
+export function I18nWrapper({
+  children,
+  locale,
+}: {
+  children: React.ReactNode;
+  locale?: Locale;
+}) {
+  return <I18nProvider initialLocale={locale}>{children}</I18nProvider>;
 }
