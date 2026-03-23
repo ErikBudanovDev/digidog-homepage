@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import HomePageClient from "./client-pages/HomePageClient";
-import en from "../translations/english.json";
+import HomePageClient from "@/app/client-pages/HomePageClient";
+import en from "@/translations/english.json";
 
 export const metadata: Metadata = {
   title: en.seo.home.title,

@@ -6,7 +6,7 @@
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import type { BlogPost } from "../blog/blog-data";
+import type { BlogPost } from "@/lib/blog-data";
 
 export default function BlogListingClient({ posts }: { posts: BlogPost[] }) {
   return (

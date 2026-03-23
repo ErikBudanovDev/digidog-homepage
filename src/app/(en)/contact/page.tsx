@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import ContactPageClient from "../client-pages/ContactPageClient";
-import en from "../../translations/english.json";
+import ContactPageClient from "@/app/client-pages/ContactPageClient";
+import en from "@/translations/english.json";
 
 export const metadata: Metadata = {
   title: en.seo.contact.title,

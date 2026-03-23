@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import PortfolioPageClient from "../client-pages/PortfolioPageClient";
-import en from "../../translations/english.json";
+import PortfolioPageClient from "@/app/client-pages/PortfolioPageClient";
+import en from "@/translations/english.json";
 
 export const metadata: Metadata = {
   title: en.seo.portfolio.title,

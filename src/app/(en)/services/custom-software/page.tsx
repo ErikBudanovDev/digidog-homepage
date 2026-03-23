@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import CustomSoftwarePageClient from "../../client-pages/CustomSoftwarePageClient";
-import en from "../../../translations/english.json";
+import CustomSoftwarePageClient from "@/app/client-pages/CustomSoftwarePageClient";
+import en from "@/translations/english.json";
 
 export const metadata: Metadata = {
   title: en.seo.customSoftware.title,

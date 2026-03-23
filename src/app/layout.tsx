@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
-import { I18nWrapper } from "../components/I18nWrapper";
+
 
 const GTM_ID = "GTM-N8F2BQ4";
 const GA_ID = "G-W5JP198XEE";
@@ -81,7 +81,7 @@ export default function RootLayout({
           />
         </noscript>
 
-        <I18nWrapper>{children}</I18nWrapper>
+        {children}
 
         {/* Google Tag Manager */}
         <Script id="gtm" strategy="afterInteractive">

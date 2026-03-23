@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import AiIntegrationPageClient from "../../client-pages/AiIntegrationPageClient";
-import en from "../../../translations/english.json";
+import AiIntegrationPageClient from "@/app/client-pages/AiIntegrationPageClient";
+import en from "@/translations/english.json";
 
 export const metadata: Metadata = {
   title: en.seo.aiIntegration.title,

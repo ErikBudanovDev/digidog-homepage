@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import PrivacyPageClient from "../client-pages/PrivacyPageClient";
-import en from "../../translations/english.json";
+import PrivacyPageClient from "@/app/client-pages/PrivacyPageClient";
+import en from "@/translations/english.json";
 
 export const metadata: Metadata = {
   title: en.seo.privacy.title,

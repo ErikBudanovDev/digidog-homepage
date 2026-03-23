@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { colors } from "./ui/brand";
 import { SectionContainer, SectionHeading } from "./ui/section";
 import { BlogCard, type BlogCardData } from "./ui/cards";
-import { blogPosts as allBlogPosts } from "@/app/blog/blog-data";
+import { blogPosts as allBlogPosts } from "@/lib/blog-data";
 import { useTranslation } from "@/i18n/i18n-context";
 import enBlog from "@/translations/blog/english.json";
 import deBlog from "@/translations/blog/german.json";

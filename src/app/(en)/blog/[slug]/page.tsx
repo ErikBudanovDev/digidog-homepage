@@ -5,8 +5,8 @@
  * ───────────────────────────────────────────── */
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { blogPosts, getBlogPost } from "../blog-data";
-import BlogPostClient from "../../client-pages/BlogPostClient";
+import { blogPosts, getBlogPost } from "@/lib/blog-data";
+import BlogPostClient from "@/app/client-pages/BlogPostClient";
 
 interface Props {
   params: Promise<{ slug: string }>;

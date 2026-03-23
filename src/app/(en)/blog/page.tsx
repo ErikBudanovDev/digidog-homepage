@@ -2,8 +2,8 @@
  * Blog Listing Page — Server component for SEO metadata
  * ───────────────────────────────────────────── */
 import type { Metadata } from "next";
-import { blogPosts } from "./blog-data";
-import BlogListingClient from "../client-pages/BlogListingClient";
+import { blogPosts } from "@/lib/blog-data";
+import BlogListingClient from "@/app/client-pages/BlogListingClient";
 
 export const metadata: Metadata = {
   title: "Blog — AI Automation, Web Development & Software Insights",

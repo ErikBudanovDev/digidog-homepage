@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import TermsPageClient from "../client-pages/TermsPageClient";
-import en from "../../translations/english.json";
+import TermsPageClient from "@/app/client-pages/TermsPageClient";
+import en from "@/translations/english.json";
 
 export const metadata: Metadata = {
   title: en.seo.terms.title,

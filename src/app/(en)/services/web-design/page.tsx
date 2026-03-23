@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import WebDesignPageClient from "../../client-pages/WebDesignPageClient";
-import en from "../../../translations/english.json";
+import WebDesignPageClient from "@/app/client-pages/WebDesignPageClient";
+import en from "@/translations/english.json";
 
 export const metadata: Metadata = {
   title: en.seo.webDesign.title,
