@@ -1,12 +1,11 @@
 /* ─────────────────────────────────────────────
  * i18n CONTEXT — centralised language switching
  *
- * Locale is determined in two ways:
- * 1. Server-side: passed as `initialLocale` prop from page.tsx
- * 2. Client-side fallback: derived from pathname via usePathname()
+ * Locale is ALWAYS passed explicitly via the `locale` prop
+ * from the nearest layout (de/layout.tsx or (en)/layout.tsx).
  *
- * The server prop is the primary mechanism that ensures
- * SSG produces correct locale content in static HTML.
+ * No runtime pathname detection — this guarantees correct
+ * locale during both SSG and client-side rendering.
  * ───────────────────────────────────────────── */
 "use client";
 
@@ -17,7 +16,6 @@ import {
   useEffect,
   type ReactNode,
 } from "react";
-import { usePathname } from "next/navigation";
 import { de } from "./locales/de";
 import { en } from "./locales/en";
 import { tr } from "./locales/tr";
@@ -39,17 +37,10 @@ const bundles: Record<Locale, TranslationBundle> = {
   TR: tr as TranslationBundle,
 };
 
-/** Derive locale from the current pathname */
-function localeFromPath(pathname: string): Locale {
-  if (pathname.startsWith("/de")) return "DE";
-  if (pathname.startsWith("/tr")) return "TR";
-  return "EN";
-}
-
 interface I18nContextValue {
   locale: Locale;
   t: TranslationBundle;
-  /** @deprecated — locale is now path-driven; only kept for edge cases */
+  /** @deprecated — locale is prop-driven; kept for API compat */
   setLocale: (l: Locale) => void;
 }
 
@@ -57,13 +48,12 @@ const I18nContext = createContext<I18nContextValue | null>(null);
 
 interface I18nProviderProps {
   children: ReactNode;
-  /** Server-determined locale — takes priority over pathname detection */
-  initialLocale?: Locale;
+  /** Locale — must be provided by the layout or client wrapper */
+  initialLocale: Locale;
 }
 
 export function I18nProvider({ children, initialLocale }: I18nProviderProps) {
-  const pathname = usePathname() ?? "/";
-  const locale = initialLocale ?? localeFromPath(pathname);
+  const locale: Locale = initialLocale;
   const t = bundles[locale];
 
   /* Keep <html lang> in sync at runtime */
@@ -77,7 +67,7 @@ export function I18nProvider({ children, initialLocale }: I18nProviderProps) {
       locale,
       t,
       setLocale: () => {
-        /* no-op — locale is now derived from URL path or server prop */
+        /* no-op — locale is prop-driven */
       },
     }),
     [locale, t],

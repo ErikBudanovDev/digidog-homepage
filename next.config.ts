@@ -59,10 +59,9 @@ const nextConfig: NextConfig = {
       { source: "/en/blog/:slug/", destination: "/blog", permanent: true },
 
       // === Language prefixed pages ===
+      // /de and /de/ redirects REMOVED — real German routes now exist
       { source: "/en", destination: "/", permanent: true },
       { source: "/en/", destination: "/", permanent: true },
-      { source: "/de", destination: "/", permanent: true },
-      { source: "/de/", destination: "/", permanent: true },
       { source: "/en/about-us", destination: "/about", permanent: true },
       { source: "/en/about-us/", destination: "/about", permanent: true },
       { source: "/en/contact", destination: "/contact", permanent: true },

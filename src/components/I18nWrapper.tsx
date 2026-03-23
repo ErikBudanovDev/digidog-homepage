@@ -14,7 +14,7 @@ export function I18nWrapper({
   locale,
 }: {
   children: React.ReactNode;
-  locale?: Locale;
+  locale: Locale;
 }) {
   return <I18nProvider initialLocale={locale}>{children}</I18nProvider>;
 }
