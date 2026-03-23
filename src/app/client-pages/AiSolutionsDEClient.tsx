@@ -1,6 +1,7 @@
 "use client";
 import AiSolutionsPage from "@/components/pages/AiSolutionsPage";
+import { I18nProvider } from "@/i18n/i18n-context";
 
 export default function AiSolutionsDEClient() {
-  return <AiSolutionsPage />;
+  return <I18nProvider initialLocale="DE"><AiSolutionsPage /></I18nProvider>;
 }
