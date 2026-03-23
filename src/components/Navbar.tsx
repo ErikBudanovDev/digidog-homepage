@@ -20,7 +20,7 @@ export function Navbar() {
   const [langOpen, setLangOpen] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
   const langRef = useRef<HTMLDivElement>(null);
-  const { locale, setLocale } = useTranslation();
+  const { locale } = useTranslation();
   const pt = locale === "DE" ? deT : enT;
 
   const serviceSubLinks = [
@@ -152,7 +152,7 @@ export function Navbar() {
       }
     }
     
-    setLocale(newLocale);
+    // Locale auto-detected from URL path by I18nProvider
     navigate(targetPath);
   };
 

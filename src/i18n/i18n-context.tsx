@@ -1,51 +1,83 @@
 /* ─────────────────────────────────────────────
  * i18n CONTEXT — centralised language switching
+ *
+ * Locale is derived from the URL pathname via
+ * Next.js usePathname() — works during both SSG
+ * and client-side navigation.
  * ───────────────────────────────────────────── */
-import { createContext, useContext, useState, useCallback, type ReactNode } from "react";
+"use client";
+
+import {
+  createContext,
+  useContext,
+  useMemo,
+  useEffect,
+  type ReactNode,
+} from "react";
+import { usePathname } from "next/navigation";
 import { de } from "./locales/de";
 import { en } from "./locales/en";
 import { tr } from "./locales/tr";
 
 export type Locale = "DE" | "EN" | "TR";
 
-/* All locale bundles share the same shape */
 type DeepStringify<T> = {
-  [K in keyof T]: T[K] extends string ? string : T[K] extends object ? DeepStringify<T[K]> : T[K];
+  [K in keyof T]: T[K] extends string
+    ? string
+    : T[K] extends object
+      ? DeepStringify<T[K]>
+      : T[K];
 };
 export type TranslationBundle = DeepStringify<typeof de>;
 
-const bundles: Record<Locale, TranslationBundle> = { DE: de as TranslationBundle, EN: en, TR: tr as TranslationBundle };
+const bundles: Record<Locale, TranslationBundle> = {
+  DE: de as TranslationBundle,
+  EN: en,
+  TR: tr as TranslationBundle,
+};
+
+/** Derive locale from the current pathname */
+function localeFromPath(pathname: string): Locale {
+  if (pathname.startsWith("/de")) return "DE";
+  if (pathname.startsWith("/tr")) return "TR";
+  return "EN";
+}
 
 interface I18nContextValue {
   locale: Locale;
-  setLocale: (l: Locale) => void;
   t: TranslationBundle;
+  /** @deprecated — locale is now path-driven; only kept for edge cases */
+  setLocale: (l: Locale) => void;
 }
 
 const I18nContext = createContext<I18nContextValue | null>(null);
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>(() => {
-    // Detect initial locale from URL
-    if (typeof window !== "undefined") {
-      const path = window.location.pathname;
-      if (path.startsWith("/de")) {
-        return "DE";
-      }
-    }
-    return "EN";
-  });
+  const pathname = usePathname() ?? "/";
+  const locale = localeFromPath(pathname);
+  const t = bundles[locale];
 
-  const setLocale = useCallback((l: Locale) => setLocaleState(l), []);
+  /* Keep <html lang> in sync at runtime */
+  useEffect(() => {
+    const lang = locale === "DE" ? "de" : locale === "TR" ? "tr" : "en";
+    document.documentElement.lang = lang;
+  }, [locale]);
 
-  return (
-    <I18nContext.Provider value={{ locale, setLocale, t: bundles[locale] }}>
-      {children}
-    </I18nContext.Provider>
+  const value = useMemo<I18nContextValue>(
+    () => ({
+      locale,
+      t,
+      setLocale: () => {
+        /* no-op — locale is now derived from the URL path */
+      },
+    }),
+    [locale, t],
   );
+
+  return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }
 
-/** Hook — returns current locale, setter, and the full translation object `t` */
+/** Hook — returns current locale and the full translation object `t` */
 export function useTranslation() {
   const ctx = useContext(I18nContext);
   if (!ctx) throw new Error("useTranslation must be used inside <I18nProvider>");

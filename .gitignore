@@ -28,3 +28,7 @@ VITE-TO-NEXTJS-MIGRATION.md
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+atlas_*.png
+wp-gateway-index.ts
+wp-nginx.conf
