@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useSearchParams } from "react-router";
 import { motion, AnimatePresence, useInView } from "motion/react";
 import { Layers, Globe, Brain, Code2, Rocket } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
@@ -306,33 +305,14 @@ export default function PortfolioPage() {
     { key: "software", label: pf.page.filterSoftware, icon: <Code2 size={18} /> },
   ];
 
-  const [searchParams, setSearchParams] = useSearchParams();
-  const filterParam = searchParams.get("filter") as FilterKey | null;
-  const [filter, setFilter] = useState<FilterKey>(
-    filterParam && ["all", "web", "ai", "software"].includes(filterParam)
-      ? filterParam
-      : "all"
-  );
+  const [filter, setFilter] = useState<FilterKey>("all");
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Sync filter state when URL params change (e.g. from navbar)
-  useEffect(() => {
-    const f = searchParams.get("filter") as FilterKey | null;
-    if (f && ["all", "web", "ai", "software"].includes(f)) {
-      setFilter(f);
-    }
-  }, [searchParams]);
-
   const handleFilterChange = (key: FilterKey) => {
     setFilter(key);
-    if (key === "all") {
-      setSearchParams({});
-    } else {
-      setSearchParams({ filter: key });
-    }
   };
 
   const counts: Record<FilterKey, number> = {
