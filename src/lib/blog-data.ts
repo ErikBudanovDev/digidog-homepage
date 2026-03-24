@@ -947,6 +947,533 @@ Slack MCP is one of dozens of MCP integrations we build for mid-size companies. 
     readTime: "10 min read",
     keywords: ["slack mcp server", "slack mcp", "slack ai integration", "slack automation", "mcp server slack"],
   },
+
+  /* ─── WEB DESIGN CLUSTER ─── */
+  {
+    slug: "website-redesign-complete-guide",
+    title: "Website Redesign: The Complete 2026 Guide (Strategy, Cost & Timeline)",
+    metaTitle: "Website Redesign Guide 2026 — Strategy, Cost & Timeline | Digidog",
+    metaDescription:
+      "Planning a website redesign? This guide covers strategy, cost breakdown, timeline, SEO migration, and the 7 signs your site needs a rebuild. Real examples from 50+ redesign projects.",
+    excerpt:
+      "Most website redesigns fail because they start with design instead of strategy. Here's the complete playbook — from audit to launch — based on 50+ projects we've delivered.",
+    content: `
+## 7 Signs Your Website Needs a Redesign
+
+Not every website needs a full rebuild. Some need a performance tune-up, others need a content refresh. But there are clear signals that a redesign is the only path forward.
+
+### 1. Your Bounce Rate Exceeds 70%
+
+If more than 70% of visitors leave without interacting, your site isn't meeting their expectations. This usually means the design looks outdated, the page loads too slowly, or the content doesn't match what they searched for.
+
+**What to check:** Open Google Analytics → Behavior → Site Content → Landing Pages. Sort by bounce rate. If your top 5 landing pages all exceed 70%, that's a structural problem a redesign solves.
+
+### 2. Mobile Traffic Is High But Mobile Conversions Are Low
+
+Check your device breakdown. If 60%+ of traffic comes from mobile but your conversion rate on mobile is less than half your desktop rate, your site isn't properly optimized for mobile users. This is one of the most common issues we see in mid-size company websites built before 2022.
+
+### 3. Your Site Takes More Than 3 Seconds to Load
+
+Google's Core Web Vitals now directly impact rankings. Run your site through PageSpeed Insights. If your Largest Contentful Paint (LCP) exceeds 2.5 seconds or your Cumulative Layout Shift (CLS) is above 0.1, you're losing both visitors and search rankings.
+
+**Real example:** A logistics company client came to us with a 6.8-second load time on mobile. Their WordPress theme loaded 47 render-blocking scripts. After redesigning with a modern stack (Next.js + Vercel), their load time dropped to 1.2 seconds and organic traffic increased 340% over 6 months.
+
+### 4. You Can't Update Content Without Calling a Developer
+
+If adding a blog post, changing a phone number, or updating pricing requires a developer, your CMS setup is fundamentally broken. A modern website should give your team the ability to make content changes in minutes.
+
+### 5. Your Competitors' Websites Look 5 Years Newer
+
+Open your website and your top 3 competitors' websites side by side. If the gap is obvious — if their sites look clean, modern, and professional while yours looks dated — your prospects are making the same comparison.
+
+### 6. Your Site Doesn't Rank for Non-Brand Keywords
+
+Check Google Search Console. If 95%+ of your search impressions come from your company name, your website isn't doing its job as a marketing channel. A proper redesign includes SEO architecture that targets the keywords your ideal customers actually search for.
+
+### 7. Your Conversion Rate Is Below Industry Average
+
+E-commerce: below 2%. SaaS: below 3%. B2B services: below 1.5%. If you're under these benchmarks, your website is leaking money.
+
+## The Website Redesign Process: 6 Phases
+
+Most agencies skip straight to mockups. That's why most redesigns disappoint. Here's the process we follow at Digidog, refined over 50+ projects.
+
+### Phase 1: Strategic Audit (Week 1-2)
+
+Before touching any design, we audit everything:
+
+**Performance audit** — PageSpeed scores, Core Web Vitals, server response times, and rendering bottlenecks on both desktop and mobile.
+
+**SEO audit** — Current rankings, keyword gaps, technical SEO issues (broken links, missing meta tags, crawl errors), and content opportunities.
+
+**Conversion audit** — Heatmaps, session recordings, funnel analysis. Where are visitors dropping off? Where are they clicking but not converting?
+
+**Content audit** — Which pages drive traffic? Which are dead weight? Which need to be merged, redirected, or removed?
+
+**Competitive analysis** — What are your top 5 competitors doing better? What gaps can you exploit?
+
+The output is a 15-20 page audit document with prioritized recommendations. This document drives every design and development decision that follows.
+
+### Phase 2: Information Architecture (Week 2-3)
+
+Based on the audit, we restructure the sitemap:
+
+**Navigation hierarchy** — Most business websites have too many nav items. We follow the 7±2 rule: no more than 7 primary navigation items. Every additional item dilutes user attention.
+
+**Content mapping** — Every page gets assigned a primary keyword, a user intent (informational, navigational, or transactional), and a conversion goal.
+
+**URL structure** — Clean, keyword-rich URLs following a logical hierarchy. For example: /services/web-design/ rather than /service-page-23/.
+
+**Internal linking strategy** — Which pages link to which? How does a visitor flow from a blog post to a service page to a contact form?
+
+### Phase 3: UX/UI Design (Week 3-5)
+
+Now we design — but design informed by data, not personal preference.
+
+**Wireframes first** — Low-fidelity wireframes for every unique page template. We validate the layout, content hierarchy, and conversion flow before any visual design begins.
+
+**Design system** — A consistent set of typography, colors, spacing, buttons, cards, and components. This ensures every page feels cohesive and reduces development time by 30-40%.
+
+**Mobile-first design** — We design for mobile screens first, then scale up to desktop. Not the other way around. This ensures the mobile experience isn't an afterthought.
+
+**Prototype review** — Interactive prototypes in Figma that simulate the real user experience. You click through the entire site before a single line of code is written.
+
+### Phase 4: Development (Week 5-8)
+
+This is where the design becomes a real, working website.
+
+**Technology choice matters.** For most mid-size company websites, we recommend Next.js deployed on Vercel. Why? Server-side rendering for SEO, image optimization built-in, edge caching for speed, and a developer experience that means faster iteration.
+
+For e-commerce, WooCommerce or Shopify depending on catalog size. For content-heavy sites, WordPress with a custom theme (not a generic template).
+
+**SEO migration plan** — Every old URL gets mapped to its new equivalent. 301 redirects are configured before launch. We've seen companies lose 60% of their organic traffic because they launched a redesign without a migration plan.
+
+**Content population** — All content is loaded into the CMS, optimized for target keywords, and reviewed for consistency.
+
+**Quality assurance** — Cross-browser testing (Chrome, Firefox, Safari, Edge), cross-device testing (iPhone, Android, iPad, desktop), accessibility testing (WCAG 2.1 AA), and performance testing.
+
+### Phase 5: Launch (Week 8-9)
+
+Launch day is planned, not improvised:
+
+**Pre-launch checklist** — SSL certificate, DNS configuration, analytics tracking, Google Search Console verification, sitemap submission, robots.txt review, 404 page, favicon, and Open Graph tags.
+
+**Staging review** — The complete site runs on a staging URL for final approval. Every page, every form, every link.
+
+**DNS cutover** — We handle the technical DNS switch with zero downtime using blue-green deployment.
+
+**Post-launch monitoring** — We monitor uptime, Core Web Vitals, crawl errors, and analytics for the first 48 hours after launch. Any issues get fixed immediately.
+
+### Phase 6: Optimization (Week 9-12)
+
+The launch isn't the end — it's the beginning of optimization.
+
+**Heatmap analysis** — Where are real users clicking? Where are they scrolling? Where do they stop?
+
+**A/B testing** — We test headline variations, CTA button colors and text, form layouts, and page structures to continuously improve conversion rates.
+
+**SEO monitoring** — Track keyword rankings weekly for the first 3 months. Identify quick wins (keywords ranking positions 5-15 that can be pushed to page 1 with content updates).
+
+**Content expansion** — Launch the blog content strategy targeting keywords identified in the audit. Publish 2-4 articles per month to build organic authority.
+
+## Website Redesign Cost Breakdown
+
+Pricing varies enormously based on scope. Here's what we've seen across 50+ projects:
+
+### Small Business Website (5-15 pages)
+**Investment:** €3,000 – €8,000
+**Timeline:** 4-6 weeks
+**Includes:** Custom design, responsive development, basic SEO, CMS setup, contact form, analytics
+
+### Mid-Size Company Website (15-50 pages)
+**Investment:** €8,000 – €25,000
+**Timeline:** 8-12 weeks
+**Includes:** Everything above plus: content strategy, advanced SEO architecture, custom integrations (CRM, email marketing), multi-language support, performance optimization
+
+### Enterprise / E-Commerce (50+ pages or complex functionality)
+**Investment:** €25,000 – €75,000+
+**Timeline:** 12-20 weeks
+**Includes:** Everything above plus: custom application logic, API integrations, advanced security, load testing, migration from legacy systems
+
+### What Drives Cost Up
+
+Several factors increase project cost significantly:
+
+**Custom functionality** — Calculators, configurators, booking systems, member portals, and dashboards require custom development beyond standard CMS features.
+
+**Multi-language** — Each additional language typically adds 20-30% to content and development costs. Proper i18n (internationalization) requires thoughtful URL structures, hreflang tags, and content management workflows.
+
+**Integrations** — Connecting to CRMs (Salesforce, HubSpot), ERP systems, payment processors, or custom APIs adds complexity and cost.
+
+**Data migration** — Moving content from an old CMS or custom system requires mapping, cleaning, and validating data.
+
+## SEO Migration: The Part Most Agencies Get Wrong
+
+The number one risk of a website redesign is losing organic search traffic. We've been called in to fix redesigns where companies lost 40-80% of their organic traffic because the agency didn't handle SEO migration properly.
+
+### The Non-Negotiable SEO Migration Checklist
+
+**URL mapping** — Create a complete spreadsheet mapping every old URL to its new equivalent. No exceptions. Pages being removed need 301 redirects to the most relevant alternative page.
+
+**301 redirects** — Every single old URL must 301-redirect to its new location. Not 302 (temporary). Not a redirect to the homepage (Google treats that as a soft 404). A direct 301 to the equivalent page.
+
+**Canonical tags** — Every page gets a self-referencing canonical tag. No duplicate content across www/non-www, http/https, or trailing-slash variants.
+
+**XML sitemap** — Submit a new sitemap to Google Search Console immediately after launch. Include all new URLs, exclude all redirected URLs.
+
+**Google Search Console monitoring** — Watch the Coverage report daily for the first 2 weeks. Catch and fix crawl errors before they impact rankings.
+
+**Structured data** — Re-implement all schema markup (Organization, LocalBusiness, Service, FAQ, BreadcrumbList) on the new site. Don't lose structured data that was helping your search appearance.
+
+### The 3-Month SEO Timeline After Redesign
+
+**Week 1-2:** Google begins crawling the new site. You'll see temporary ranking fluctuations. This is normal and expected.
+
+**Month 1:** Rankings should stabilize. If you see significant drops, check for redirect issues, missing pages, or indexing problems.
+
+**Month 2:** With proper migration, traffic should return to pre-redesign levels and start growing as the new SEO architecture kicks in.
+
+**Month 3:** Organic traffic should be growing beyond pre-redesign levels. If it's still declining, there's a migration issue that needs debugging.
+
+## Common Website Redesign Mistakes
+
+### Starting with Design Instead of Strategy
+
+The most expensive mistake. A beautiful website that doesn't convert is just an expensive brochure. Strategy first, design second.
+
+### Ignoring Page Speed
+
+A redesigned site that's slower than the old one is a step backward. Set performance budgets before development begins: LCP under 2.5s, CLS under 0.1, FID under 100ms.
+
+### Launching Without a Redirect Plan
+
+We've seen this kill businesses. One client lost €50,000/month in organic leads because their agency forgot to set up 301 redirects. It took 8 months to recover.
+
+### Trying to Do Everything at Once
+
+The best redesigns are phased. Launch the core site first, then add features in sprints. Don't delay launch by 3 months because the blog commenting system isn't perfect.
+
+### Not Involving Your Sales Team
+
+Your sales team talks to customers every day. They know the questions prospects ask, the objections they raise, and the competitors they mention. This intelligence should drive your content strategy.
+
+## Next Steps
+
+If you're considering a website redesign, we offer a free 30-minute strategy call to assess your current site and discuss the best approach for your business. We'll review your performance data, identify quick wins, and outline what a redesign project would look like for your specific situation.
+
+[Book a free website audit →](/contact)
+
+No pitch, no pressure — just an honest assessment of where you are and what would make the biggest impact.
+`,
+    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1080&q=80",
+    tag: "Web Design",
+    category: "web",
+    author: "Erik Budanov",
+    date: "2026-03-28",
+    readTime: "14 min read",
+    keywords: ["website redesign", "website redesign guide", "website redesign cost", "website redesign process", "website redesign checklist"],
+  },
+  {
+    slug: "supabase-mcp-server-setup-guide",
+    title: "Supabase MCP Server: Complete Setup Guide for AI-Powered Database Workflows",
+    metaTitle: "Supabase MCP Server Setup Guide — Connect AI to Your Database | Digidog",
+    metaDescription:
+      "Learn how to set up a Supabase MCP server to let AI agents query, insert, and manage your Postgres database. Step-by-step tutorial with real code examples.",
+    excerpt:
+      "Supabase + MCP turns your Postgres database into an AI-accessible data layer. Here's how to set it up, secure it, and use it for real automation workflows.",
+    content: `
+## Why Connect Supabase to an MCP Server?
+
+Supabase gives you a full Postgres database with a REST API, authentication, real-time subscriptions, and storage — all out of the box. But until MCP, connecting an AI agent to your Supabase database required custom API wrappers, authentication middleware, and a lot of glue code.
+
+With an MCP server, your AI agent (Claude, Cursor, Windsurf, or any MCP-compatible client) can directly query tables, insert records, update data, and run SQL — all through a standardized protocol. No custom API. No webhook chains. No middleware.
+
+**What this enables:**
+
+**Natural language database queries** — Ask "show me all users who signed up this week" and the AI translates that to the right SQL query, executes it against your Supabase database, and returns formatted results.
+
+**Automated data entry** — An AI agent processing emails can extract structured data and insert it directly into your Supabase tables. Invoice arrives → data gets parsed → row gets created in your invoices table.
+
+**AI-powered reporting** — "Generate a summary of Q1 revenue by product category" → the agent queries your sales table, aggregates the data, and produces a formatted report.
+
+**Real-time data validation** — An AI agent can check new form submissions against existing records, flag duplicates, and enforce business rules before data enters your system.
+
+## Prerequisites
+
+Before starting, make sure you have:
+
+- A Supabase project (free tier works fine for development)
+- Node.js 18+ installed
+- An MCP-compatible client (Claude Desktop, Cursor, VS Code with Copilot, or similar)
+- Basic familiarity with SQL and environment variables
+
+## Option 1: Using the Official Supabase MCP Server
+
+Supabase provides an official MCP server package that handles the connection and exposes your database through the MCP protocol.
+
+### Step 1: Get Your Supabase Credentials
+
+Log into your Supabase dashboard. Navigate to Project Settings → API. You need two values:
+
+**Project URL** — looks like \`https://abcdefgh.supabase.co\`
+
+**Service Role Key** — the \`service_role\` key (not the \`anon\` key). This gives full database access, so treat it like a database password.
+
+**Important:** Never use the service role key in client-side code. It bypasses all Row Level Security policies. In an MCP context, the AI agent runs server-side, so this is acceptable — but still, restrict access to only the tables the agent needs.
+
+### Step 2: Install and Configure
+
+For Claude Desktop, add this to your \`claude_desktop_config.json\`:
+
+\`\`\`json
+{
+  "mcpServers": {
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase@latest", "--supabase-url", "https://YOUR_PROJECT.supabase.co", "--supabase-key", "YOUR_SERVICE_ROLE_KEY"]
+    }
+  }
+}
+\`\`\`
+
+For Cursor or VS Code, the configuration goes in your MCP settings file (usually \`.cursor/mcp.json\` or equivalent):
+
+\`\`\`json
+{
+  "mcpServers": {
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase@latest", "--supabase-url", "https://YOUR_PROJECT.supabase.co", "--supabase-key", "YOUR_SERVICE_ROLE_KEY"]
+    }
+  }
+}
+\`\`\`
+
+### Step 3: Verify the Connection
+
+Restart your MCP client. You should see "supabase" listed as an available MCP server. Try a simple query:
+
+"List all tables in my Supabase database"
+
+The agent should return your table names, confirming the connection works.
+
+## Option 2: Building a Custom MCP Server for Supabase
+
+The official server exposes your entire database. Sometimes you want more control — limiting which tables are accessible, adding business logic, or combining Supabase with other data sources.
+
+### When to Build Custom
+
+**You want read-only access** — The official server allows writes. A custom server can restrict to SELECT queries only.
+
+**You need business logic** — Before returning data, you want to transform it, filter sensitive fields, or combine data from multiple tables into a single response.
+
+**You want to combine data sources** — Your custom server can query Supabase AND a third-party API, merging the results before responding to the AI agent.
+
+**You need audit logging** — Track every query the AI agent makes, who triggered it, and what data was accessed.
+
+### Basic Custom Server Structure
+
+\`\`\`typescript
+import { createClient } from "@supabase/supabase-js";
+import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { z } from "zod";
+
+const supabase = createClient(
+  process.env.SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!
+);
+
+const server = new McpServer({
+  name: "supabase-custom",
+  version: "1.0.0",
+});
+
+// Tool: Query any table with filters
+server.tool(
+  "query_table",
+  "Query a Supabase table with optional filters",
+  {
+    table: z.string().describe("Table name"),
+    select: z.string().optional().describe("Columns to select (default: *)"),
+    filters: z.record(z.string()).optional().describe("Key-value filters"),
+    limit: z.number().optional().describe("Max rows to return"),
+  },
+  async ({ table, select, filters, limit }) => {
+    let query = supabase
+      .from(table)
+      .select(select || "*");
+
+    if (filters) {
+      for (const [key, value] of Object.entries(filters)) {
+        query = query.eq(key, value);
+      }
+    }
+    if (limit) query = query.limit(limit);
+
+    const { data, error } = await query;
+
+    if (error) {
+      return { content: [{ type: "text", text: "Error: " + error.message }] };
+    }
+
+    return {
+      content: [{ type: "text", text: JSON.stringify(data, null, 2) }],
+    };
+  }
+);
+
+// Tool: Insert a record
+server.tool(
+  "insert_record",
+  "Insert a new record into a Supabase table",
+  {
+    table: z.string().describe("Table name"),
+    data: z.record(z.unknown()).describe("Record data as key-value pairs"),
+  },
+  async ({ table, data }) => {
+    const { data: result, error } = await supabase
+      .from(table)
+      .insert(data)
+      .select();
+
+    if (error) {
+      return { content: [{ type: "text", text: "Error: " + error.message }] };
+    }
+
+    return {
+      content: [{ type: "text", text: "Inserted: " + JSON.stringify(result) }],
+    };
+  }
+);
+
+// Start the server
+const transport = new StdioServerTransport();
+await server.connect(transport);
+\`\`\`
+
+### Running the Custom Server
+
+\`\`\`bash
+npx tsx src/index.ts
+\`\`\`
+
+Configure your MCP client to point to this custom server instead of the official one.
+
+## Security Best Practices
+
+Connecting AI to your database is powerful but requires careful security:
+
+### 1. Use a Dedicated Database Role
+
+Don't use the \`service_role\` key for production. Create a dedicated Postgres role with specific table permissions:
+
+\`\`\`sql
+CREATE ROLE mcp_agent WITH LOGIN PASSWORD 'secure_password';
+GRANT SELECT ON customers, orders, products TO mcp_agent;
+GRANT INSERT ON ai_logs TO mcp_agent;
+-- No UPDATE or DELETE permissions
+\`\`\`
+
+### 2. Implement Row Level Security
+
+Even with a restricted role, add RLS policies that limit what the AI agent can access:
+
+\`\`\`sql
+ALTER TABLE customers ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "mcp_agent_read" ON customers
+  FOR SELECT
+  TO mcp_agent
+  USING (is_active = true);
+\`\`\`
+
+### 3. Log Every Query
+
+Your custom MCP server should log every tool call — timestamp, tool name, parameters, and result count. This creates an audit trail for compliance and debugging.
+
+### 4. Rate Limit
+
+Add a simple rate limiter to prevent runaway AI loops from hammering your database:
+
+\`\`\`typescript
+const RATE_LIMIT = 60; // max queries per minute
+let queryCount = 0;
+setInterval(() => { queryCount = 0; }, 60_000);
+
+// In each tool handler:
+if (++queryCount > RATE_LIMIT) {
+  return { content: [{ type: "text", text: "Rate limit exceeded" }] };
+}
+\`\`\`
+
+### 5. Never Expose Credentials in Client Code
+
+MCP servers run server-side. The AI client never sees your database credentials. But make sure your credentials are in environment variables, not hardcoded in config files that get committed to git.
+
+## Real-World Use Cases
+
+### Case 1: AI-Powered Customer Support Dashboard
+
+A customer support team uses Claude to answer "how many tickets are unresolved?" or "show me all critical issues from this week." The Supabase MCP server queries the tickets table, filters by status and priority, and returns structured results that Claude formats into a readable summary.
+
+### Case 2: Automated Lead Qualification
+
+New leads arrive via a web form and get stored in Supabase. An AI agent with MCP access scores each lead by checking: company size (from enrichment data), industry match, budget range, and historical conversion rates for similar profiles. The agent updates the lead_score column and moves qualified leads to the sales pipeline.
+
+### Case 3: Inventory Monitoring
+
+An e-commerce company uses Supabase to track inventory. Their AI agent runs hourly checks: "find all products where stock_count < reorder_threshold." When it finds low-stock items, it creates purchase orders and notifies the procurement team via Slack (using a Slack MCP server in the same chain).
+
+## Troubleshooting Common Issues
+
+### "Permission denied for table"
+
+Your database role doesn't have access to the requested table. Grant the needed permissions:
+
+\`\`\`sql
+GRANT SELECT ON table_name TO mcp_agent;
+\`\`\`
+
+### "Connection refused"
+
+Check that your Supabase project URL is correct and the project is active. Free-tier projects pause after 7 days of inactivity — wake them from the Supabase dashboard.
+
+### "Rate limit exceeded" from Supabase
+
+Supabase free tier allows 500 requests per minute. If your AI agent is making rapid-fire queries, add batching logic or upgrade to a paid plan.
+
+### AI Agent Returns Wrong Data
+
+Usually a SQL interpretation issue. Add table schemas as MCP resources so the agent knows your column names and types:
+
+\`\`\`typescript
+server.resource(
+  "schema://customers",
+  "Customer table schema",
+  async () => ({
+    contents: [{
+      uri: "schema://customers",
+      text: "customers table: id (uuid), name (text), email (text), created_at (timestamp), is_active (bool), plan (text: free|pro|enterprise)"
+    }]
+  })
+);
+\`\`\`
+
+## What's Next
+
+Once you have Supabase connected via MCP, the natural next step is chaining it with other MCP servers — Slack for notifications, Gmail for email triggers, or a custom CRM server for pipeline management. The power of MCP is composability: each server handles one data source, and the AI agent orchestrates across all of them.
+
+If you want help building a custom Supabase MCP server for your specific use case, or connecting it with other tools in your stack, [book a free consultation](/contact). We specialize in exactly this kind of AI integration for mid-size companies.
+`,
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
+    tag: "AI Integration",
+    category: "ai",
+    author: "Erik Budanov",
+    date: "2026-04-04",
+    readTime: "10 min read",
+    keywords: ["supabase mcp server", "supabase mcp", "supabase ai integration", "mcp server database", "supabase automation"],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
