@@ -107,14 +107,32 @@ export default function ImprintPage() {
             <div className="max-w-[800px] mx-auto">
               <LegalSection title="Information according to § 5 TMG">
                 <p>
-                  <strong>DigiDog LLC</strong>
+                  <strong>Digidog LLC</strong>
                   <br />
-                  The Online Marketing Agency
+                  AI Consulting &amp; Web Development Agency
+                </p>
+                <p>
+                  <strong>Registered Agent:</strong>
+                  <br />
+                  Northwest Registered Agent Service Inc
+                  <br />
+                  30 N Gould St, Ste N
+                  <br />
+                  Sheridan, WY 82801, USA
+                </p>
+                <p>
+                  <strong>Managing Member:</strong>
+                  <br />
+                  Erik Budanov
+                  <br />
+                  Lvovyan 17/50
+                  <br />
+                  Yerevan 0056, Armenia
                 </p>
                 <p>
                   Responsible for the content according to § 55 Abs. 2 RStV:
                   <br />
-                  DigiDog LLC
+                  Erik Budanov, Digidog LLC
                 </p>
               </LegalSection>
 
