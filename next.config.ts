@@ -167,8 +167,7 @@ const nextConfig: NextConfig = {
       { source: "/de/portfolio/", destination: "/portfolio", permanent: true },
       { source: "/de/agb", destination: "/de/impressum", permanent: true },
       { source: "/de/agb/", destination: "/de/impressum", permanent: true },
-      { source: "/de/dienstleistungen/ki-integration", destination: "/de/dienstleistungen/ki-loesungen", permanent: true },
-      { source: "/de/dienstleistungen/ki-integration/", destination: "/de/dienstleistungen/ki-loesungen", permanent: true },
+      // REMOVED: /de/dienstleistungen/ki-integration redirect — real German KI landing page now exists for Google Ads
       // Miscellaneous EN 404s
       { source: "/our-portfolio", destination: "/portfolio", permanent: true },
       { source: "/our-portfolio/", destination: "/portfolio", permanent: true },
