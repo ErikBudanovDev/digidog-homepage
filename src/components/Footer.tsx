@@ -220,6 +220,14 @@ export function Footer() {
                 </h4>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
+                    <MapPin size={16} className="mt-1 shrink-0" style={{ color: colors.textMuted }} />
+                    <span className="text-[14px]" style={{ fontFamily: fonts.display, color: colors.textMuted }}>
+                      Digidog LLC<br />
+                      30 N Gould St, Ste N<br />
+                      Sheridan, WY 82801, USA
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
                     <Mail size={16} className="mt-1 shrink-0" style={{ color: colors.textMuted }} />
                     <FooterLink href="mailto:hey@digidog.org">
                       hey@digidog.org
