@@ -5,9 +5,9 @@ import en from "@/translations/english.json";
 export const metadata: Metadata = {
   title: en.seo.aiSolutions.title,
   description: en.seo.aiSolutions.description,
-  alternates: { canonical: "/services/ai-solutions" },
+  alternates: { canonical: "/services/ai-solutions", languages: { "en": "/services/ai-solutions", "de": "/de/dienstleistungen/ki-loesungen", "x-default": "/services/ai-solutions" } },
   keywords: ["custom AI solutions", "AI development agency", "machine learning development", "NLP development", "LLM integration", "KI Beratung"],
-  openGraph: { title: en.seo.aiSolutions.ogTitle, description: en.seo.aiSolutions.ogDescription, type: "website" },
+  openGraph: { title: en.seo.aiSolutions.ogTitle, description: en.seo.aiSolutions.ogDescription, type: "website", url: "/services/ai-solutions" },
   twitter: { card: "summary_large_image", title: en.seo.aiSolutions.ogTitle, description: en.seo.aiSolutions.ogDescription },
 };
 

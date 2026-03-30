@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Expertenbeiträge zu KI-Automatisierung, Webentwicklung, individueller Software und digitaler Strategie für den Mittelstand. Praxisnahe Leitfäden, Fallstudien und Brancheneinblicke von Digidog.",
   alternates: {
     canonical: "/de/blog",
-    languages: { "en": "/blog", "de": "/de/blog" },
+    languages: { "en": "/blog", "de": "/de/blog", "x-default": "/blog" },
   },
 };
 

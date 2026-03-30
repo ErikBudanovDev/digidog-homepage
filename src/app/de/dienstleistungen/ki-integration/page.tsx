@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     languages: {
       "de": "/de/dienstleistungen/ki-integration",
       "en": "/services/ai-integration",
+      "x-default": "/services/ai-integration",
     },
   },
   openGraph: {

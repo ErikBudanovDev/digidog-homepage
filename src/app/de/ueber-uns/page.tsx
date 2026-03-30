@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     languages: {
       "de": "/de/ueber-uns",
       "en": "/about",
+      "x-default": "/about",
     },
   },
   openGraph: {

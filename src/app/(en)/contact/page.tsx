@@ -5,8 +5,8 @@ import en from "@/translations/english.json";
 export const metadata: Metadata = {
   title: en.seo.contact.title,
   description: en.seo.contact.description,
-  alternates: { canonical: "/contact" },
-  openGraph: { title: en.seo.contact.title, description: en.seo.contact.description, type: "website" },
+  alternates: { canonical: "/contact", languages: { "en": "/contact", "de": "/de/kontakt", "x-default": "/contact" } },
+  openGraph: { title: en.seo.contact.title, description: en.seo.contact.description, type: "website", url: "/contact" },
 };
 
 const localBusinessSchema = {

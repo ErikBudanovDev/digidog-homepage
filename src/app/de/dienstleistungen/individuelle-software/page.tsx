@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     languages: {
       "de": "/de/dienstleistungen/individuelle-software",
       "en": "/services/custom-software",
+      "x-default": "/services/custom-software",
     },
   },
   openGraph: {

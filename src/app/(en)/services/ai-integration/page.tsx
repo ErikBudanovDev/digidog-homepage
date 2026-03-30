@@ -5,9 +5,9 @@ import en from "@/translations/english.json";
 export const metadata: Metadata = {
   title: en.seo.aiIntegration.title,
   description: en.seo.aiIntegration.description,
-  alternates: { canonical: "/services/ai-integration" },
+  alternates: { canonical: "/services/ai-integration", languages: { "en": "/services/ai-integration", "de": "/de/dienstleistungen/ki-integration", "x-default": "/services/ai-integration" } },
   keywords: ["AI automation agency", "AI integration consulting", "AI workflow automation", "MCP server development", "CRM AI integration"],
-  openGraph: { title: en.seo.aiIntegration.ogTitle, description: en.seo.aiIntegration.ogDescription, type: "website" },
+  openGraph: { title: en.seo.aiIntegration.ogTitle, description: en.seo.aiIntegration.ogDescription, type: "website", url: "/services/ai-integration" },
   twitter: { card: "summary_large_image", title: en.seo.aiIntegration.ogTitle, description: en.seo.aiIntegration.ogDescription },
 };
 

@@ -5,9 +5,9 @@ import en from "@/translations/english.json";
 export const metadata: Metadata = {
   title: en.seo.webDesign.title,
   description: en.seo.webDesign.description,
-  alternates: { canonical: "/services/web-design" },
+  alternates: { canonical: "/services/web-design", languages: { "en": "/services/web-design", "de": "/de/dienstleistungen/webdesign", "x-default": "/services/web-design" } },
   keywords: ["web design agency", "WordPress development agency", "WordPress maintenance service", "full-stack web development", "Next.js development"],
-  openGraph: { title: en.seo.webDesign.ogTitle, description: en.seo.webDesign.ogDescription, type: "website" },
+  openGraph: { title: en.seo.webDesign.ogTitle, description: en.seo.webDesign.ogDescription, type: "website", url: "/services/web-design" },
   twitter: { card: "summary_large_image", title: en.seo.webDesign.ogTitle, description: en.seo.webDesign.ogDescription },
 };
 

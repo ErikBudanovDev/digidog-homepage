@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     languages: {
       "de": "/de/dienstleistungen/webdesign",
       "en": "/services/web-design",
+      "x-default": "/services/web-design",
     },
   },
   openGraph: {

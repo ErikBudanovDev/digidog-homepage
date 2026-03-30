@@ -5,9 +5,9 @@ import en from "@/translations/english.json";
 export const metadata: Metadata = {
   title: en.seo.customSoftware.title,
   description: en.seo.customSoftware.description,
-  alternates: { canonical: "/services/custom-software" },
+  alternates: { canonical: "/services/custom-software", languages: { "en": "/services/custom-software", "de": "/de/dienstleistungen/individuelle-software", "x-default": "/services/custom-software" } },
   keywords: ["custom software development agency", "internal tools development", "SaaS platform development", "API integration"],
-  openGraph: { title: en.seo.customSoftware.ogTitle, description: en.seo.customSoftware.ogDescription, type: "website" },
+  openGraph: { title: en.seo.customSoftware.ogTitle, description: en.seo.customSoftware.ogDescription, type: "website", url: "/services/custom-software" },
   twitter: { card: "summary_large_image", title: en.seo.customSoftware.ogTitle, description: en.seo.customSoftware.ogDescription },
 };
 

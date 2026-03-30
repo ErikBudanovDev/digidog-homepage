@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Ihre Webdesign Agentur für Hamburg: Maßgeschneiderte Websites, moderne Webentwicklung mit React & Next.js, UX/UI Design und SEO-Optimierung. Kostenloses Erstgespräch.",
   alternates: {
     canonical: "/de/webdesign-agentur-hamburg",
-    languages: { de: "/de/webdesign-agentur-hamburg", en: "/services/web-design" },
+    languages: { de: "/de/webdesign-agentur-hamburg", en: "/services/web-design", "x-default": "/services/web-design" },
   },
   keywords: ["webdesign agentur hamburg", "webdesign hamburg", "webentwicklung hamburg", "website erstellen hamburg", "webagentur hamburg"],
   openGraph: {

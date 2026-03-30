@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Ihre Webdesign Agentur in Berlin: Maßgeschneiderte Websites, moderne Webentwicklung mit React & Next.js, UX/UI Design und SEO-Optimierung. Kostenloses Erstgespräch.",
   alternates: {
     canonical: "/de/webdesign-agentur-berlin",
-    languages: { de: "/de/webdesign-agentur-berlin", en: "/services/web-design" },
+    languages: { de: "/de/webdesign-agentur-berlin", en: "/services/web-design", "x-default": "/services/web-design" },
   },
   keywords: ["webdesign agentur berlin", "webdesign berlin", "webentwicklung berlin", "website erstellen berlin", "webagentur berlin"],
   openGraph: {
