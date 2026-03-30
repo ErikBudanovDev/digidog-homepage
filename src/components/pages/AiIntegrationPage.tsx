@@ -208,7 +208,7 @@ function getBusinessTypes(t: T) {
  * ───────────────────────────────────────────── */
 
 function HeroSection() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const hubNodes = getHubNodes(t);
   return (
     <section
@@ -321,7 +321,7 @@ function HeroSection() {
                   {t.aiIntegration.heroCta}
                 </PrimaryButton>
                 <a
-                  href="/services"
+                  href={locale === "DE" ? "/de/dienstleistungen/ki-loesungen" : "/services/ai-solutions"}
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-white/20 text-white text-[17px] hover:border-white/40 hover:bg-white/5 transition-all cursor-pointer"
                   style={{ fontFamily: fonts.display, fontWeight: 600 }}
                 >
