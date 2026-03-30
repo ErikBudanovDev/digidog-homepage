@@ -163,18 +163,15 @@ const nextConfig: NextConfig = {
       { source: "/de/seo-sea-analytik/", destination: "/de/dienstleistungen/webdesign", permanent: true },
       { source: "/de/category/blog", destination: "/de/blog", permanent: true },
       { source: "/de/category/blog/", destination: "/de/blog", permanent: true },
-      { source: "/de/portfolio", destination: "/portfolio", permanent: true },
-      { source: "/de/portfolio/", destination: "/portfolio", permanent: true },
-      { source: "/de/agb", destination: "/de/impressum", permanent: true },
-      { source: "/de/agb/", destination: "/de/impressum", permanent: true },
+      // REMOVED: /de/portfolio redirect — real German portfolio page now exists
+      // REMOVED: /de/agb redirect — real German AGB page now exists
       // REMOVED: /de/dienstleistungen/ki-integration redirect — real German KI landing page now exists for Google Ads
       // Miscellaneous EN 404s
       { source: "/our-portfolio", destination: "/portfolio", permanent: true },
       { source: "/our-portfolio/", destination: "/portfolio", permanent: true },
       { source: "/feedback/scale-one", destination: "/", permanent: true },
       { source: "/feedback/scale-one/", destination: "/", permanent: true },
-      { source: "/ai-integration", destination: "/services/ai-solutions", permanent: true },
-      { source: "/ai-integration/", destination: "/services/ai-solutions", permanent: true },
+      // REMOVED: /ai-integration redirect — real AI Integration landing page exists at /ai-integration
       { source: "/your-full-service-digital-agency", destination: "/blog", permanent: true },
       { source: "/your-full-service-digital-agency/", destination: "/blog", permanent: true },
       { source: "/why-seo-is-essential-for-your-business-success", destination: "/blog", permanent: true },
