@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: en.seo.webDesign.description,
   alternates: { canonical: "/services/web-design", languages: { "en": "/services/web-design", "de": "/de/dienstleistungen/webdesign", "x-default": "/services/web-design" } },
   keywords: ["web design agency", "WordPress development agency", "WordPress maintenance service", "full-stack web development", "Next.js development"],
-  openGraph: { title: en.seo.webDesign.ogTitle, description: en.seo.webDesign.ogDescription, type: "website", url: "/services/web-design" },
+  openGraph: { title: en.seo.webDesign.ogTitle, description: en.seo.webDesign.ogDescription, type: "website", url: "/services/web-design", images: [{ url: "/og-default.jpg", width: 1200, height: 630 }] },
   twitter: { card: "summary_large_image", title: en.seo.webDesign.ogTitle, description: en.seo.webDesign.ogDescription },
 };
 

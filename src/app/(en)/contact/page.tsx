@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: en.seo.contact.title,
   description: en.seo.contact.description,
   alternates: { canonical: "/contact", languages: { "en": "/contact", "de": "/de/kontakt", "x-default": "/contact" } },
-  openGraph: { title: en.seo.contact.title, description: en.seo.contact.description, type: "website", url: "/contact" },
+  openGraph: { title: en.seo.contact.title, description: en.seo.contact.description, type: "website", url: "/contact", images: [{ url: "/og-default.jpg", width: 1200, height: 630 }] },
 };
 
 const localBusinessSchema = {

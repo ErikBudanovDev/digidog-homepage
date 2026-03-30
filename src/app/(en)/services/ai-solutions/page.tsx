@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: en.seo.aiSolutions.description,
   alternates: { canonical: "/services/ai-solutions", languages: { "en": "/services/ai-solutions", "de": "/de/dienstleistungen/ki-loesungen", "x-default": "/services/ai-solutions" } },
   keywords: ["custom AI solutions", "AI development agency", "machine learning development", "NLP development", "LLM integration", "KI Beratung"],
-  openGraph: { title: en.seo.aiSolutions.ogTitle, description: en.seo.aiSolutions.ogDescription, type: "website", url: "/services/ai-solutions" },
+  openGraph: { title: en.seo.aiSolutions.ogTitle, description: en.seo.aiSolutions.ogDescription, type: "website", url: "/services/ai-solutions", images: [{ url: "/og-default.jpg", width: 1200, height: 630 }] },
   twitter: { card: "summary_large_image", title: en.seo.aiSolutions.ogTitle, description: en.seo.aiSolutions.ogDescription },
 };
 

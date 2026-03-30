@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: en.seo.aiIntegration.description,
   alternates: { canonical: "/services/ai-integration", languages: { "en": "/services/ai-integration", "de": "/de/dienstleistungen/ki-integration", "x-default": "/services/ai-integration" } },
   keywords: ["AI automation agency", "AI integration consulting", "AI workflow automation", "MCP server development", "CRM AI integration"],
-  openGraph: { title: en.seo.aiIntegration.ogTitle, description: en.seo.aiIntegration.ogDescription, type: "website", url: "/services/ai-integration" },
+  openGraph: { title: en.seo.aiIntegration.ogTitle, description: en.seo.aiIntegration.ogDescription, type: "website", url: "/services/ai-integration", images: [{ url: "/og-default.jpg", width: 1200, height: 630 }] },
   twitter: { card: "summary_large_image", title: en.seo.aiIntegration.ogTitle, description: en.seo.aiIntegration.ogDescription },
 };
 

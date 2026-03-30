@@ -55,6 +55,10 @@ export function Footer() {
     { label: pt.nav.aiSolutions, href: getLocalizedRoute("aiSolutions", locale) },
     { label: "AI Integration", href: getLocalizedRoute("aiIntegration", locale) },
     { label: pt.nav.customSoftware, href: getLocalizedRoute("customSoftware", locale) },
+    ...(locale === "DE" ? [
+      { label: "Webdesign Berlin", href: "/de/webdesign-agentur-berlin" },
+      { label: "Webdesign Hamburg", href: "/de/webdesign-agentur-hamburg" },
+    ] : []),
   ];
 
   const quickLinks = [

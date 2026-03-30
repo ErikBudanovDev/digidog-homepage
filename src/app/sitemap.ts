@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-data";
+import { blogPostsDE } from "@/lib/blog-data-de";
 import { projectsMeta } from "@/lib/portfolio-meta";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -28,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/de/portfolio`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/de/ueber-uns`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/de/kontakt`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/de/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/de/impressum`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${baseUrl}/de/datenschutz`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${baseUrl}/de/agb`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
@@ -51,5 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...blogPages, ...portfolioPages];
+  const blogPagesDE: MetadataRoute.Sitemap = blogPostsDE.map((post) => ({
+    url: `${baseUrl}/de/blog/${post.slug}`,
+    lastModified: post.date,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...blogPages, ...blogPagesDE, ...portfolioPages];
 }
