@@ -35,7 +35,7 @@ import erikPhoto from "figma:asset/c28a01d5ca35b1e207da7537c250359543a3aa75.png"
 const erikPhotoSrc = erikPhoto as unknown as string;
 import { SEO } from "@/components/SEO";
 import { useTranslation } from "@/i18n/i18n-context";
-import { trackContactFormSubmit } from "@/lib/analytics";
+import { trackContactFormSubmit, trackGoogleAdsConversion } from "@/lib/analytics";
 import { submitContactForm } from "@/lib/contact";
 import enPg from "@/translations/pages/english.json";
 import dePg from "@/translations/pages/german.json";
@@ -421,6 +421,7 @@ function ContactFormSection() {
 
     setSending(false);
     if (result.success) {
+      trackGoogleAdsConversion();
       setSubmitted(true);
     } else {
       setError(result.error || "Failed to send. Please try again.");

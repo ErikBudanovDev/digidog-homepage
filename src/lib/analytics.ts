@@ -18,6 +18,17 @@ export function trackContactFormSubmit(formLocation: string, formData?: { name?:
   trackEvent("generate_lead", { currency: "EUR", value: 50, form_location: formLocation });
 }
 
+/** Fire Google Ads conversion event on successful contact form submission */
+export function trackGoogleAdsConversion() {
+  if (typeof window === "undefined") return;
+  const w = getWindow();
+  if (w.gtag) {
+    w.gtag("event", "conversion_event_contact_1", {
+      event_timeout: 2000,
+    });
+  }
+}
+
 export function trackBookConsultationClick(location: string) {
   trackEvent("book_consultation_click", { click_location: location });
 }
