@@ -28,12 +28,12 @@ const serviceSchema = {
   "@type": "ProfessionalService",
   name: "DigiDog — Webdesign Agentur Berlin",
   description: "Professionelle Webdesign Agentur in Berlin. Maßgeschneiderte Websites mit React, Next.js und modernen Technologien.",
-  url: "https://www.digidog.org/de/webdesign-agentur-berlin",
+  url: "https://digidog.org/de/webdesign-agentur-berlin",
   areaServed: { "@type": "City", name: "Berlin", "@id": "https://www.wikidata.org/wiki/Q64" },
   serviceType: ["Webdesign", "Webentwicklung", "UX/UI Design", "SEO"],
   priceRange: "€€",
   availableLanguage: ["de", "en"],
-  parentOrganization: { "@type": "Organization", name: "DigiDog", url: "https://www.digidog.org" },
+  parentOrganization: { "@type": "Organization", name: "DigiDog", url: "https://digidog.org" },
 };
 
 const faqSchema = {

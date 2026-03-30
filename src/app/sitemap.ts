@@ -1,15 +1,15 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-data";
+import { projectsMeta } from "@/lib/portfolio-meta";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.digidog.org";
+  const baseUrl = "https://digidog.org";
   const now = new Date().toISOString();
 
   const staticPages: MetadataRoute.Sitemap = [
     // English pages
     { url: baseUrl, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: `${baseUrl}/services/ai-integration`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${baseUrl}/ai-integration`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/services/ai-solutions`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/services/web-design`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/services/custom-software`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
@@ -46,5 +46,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...blogPages];
+  const portfolioPages: MetadataRoute.Sitemap = projectsMeta.map((project) => ({
+    url: `${baseUrl}/portfolio/${project.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...blogPages, ...portfolioPages];
 }

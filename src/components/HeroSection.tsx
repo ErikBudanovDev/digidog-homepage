@@ -103,7 +103,7 @@ export function HeroSection() {
             />
           </div>
           {/* Desktop: 3D Girl */}
-          <div className="hidden lg:block relative w-[600px] h-[700px] mx-0">
+          <div className="hidden lg:block relative w-[520px] h-[650px] mx-0">
             <Girl3D />
           </div>
         </motion.div>

@@ -28,12 +28,12 @@ const serviceSchema = {
   "@type": "ProfessionalService",
   name: "DigiDog — Webdesign Agentur Hamburg",
   description: "Professionelle Webdesign Agentur für Hamburg. Maßgeschneiderte Websites mit React, Next.js und modernen Technologien.",
-  url: "https://www.digidog.org/de/webdesign-agentur-hamburg",
+  url: "https://digidog.org/de/webdesign-agentur-hamburg",
   areaServed: { "@type": "City", name: "Hamburg", "@id": "https://www.wikidata.org/wiki/Q1055" },
   serviceType: ["Webdesign", "Webentwicklung", "UX/UI Design", "SEO"],
   priceRange: "€€",
   availableLanguage: ["de", "en"],
-  parentOrganization: { "@type": "Organization", name: "DigiDog", url: "https://www.digidog.org" },
+  parentOrganization: { "@type": "Organization", name: "DigiDog", url: "https://digidog.org" },
 };
 
 const faqSchema = {

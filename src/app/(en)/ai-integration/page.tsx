@@ -7,21 +7,21 @@ export const metadata: Metadata = {
   keywords:
     "AI integration, MCP integration, AI automation agency, business AI, CRM AI integration, AI operations",
   robots: "index, follow",
-  alternates: { canonical: "https://www.digidog.org/ai-integration" },
+  alternates: { canonical: "https://digidog.org/ai-integration" },
   openGraph: {
     title: "Don't Stay Behind — AI Integration for Business | Digidog",
     description:
       "Your competitors are already using AI. We connect your CRM, email, support, and operations into one AI conversation. Don't stay behind.",
-    url: "https://www.digidog.org/ai-integration",
+    url: "https://digidog.org/ai-integration",
     type: "website",
-    images: [{ url: "https://www.digidog.org/og-default.jpg", width: 1200, height: 630 }],
+    images: [{ url: "https://digidog.org/og-default.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Don't Stay Behind — AI Integration for Business | Digidog",
     description:
       "Your competitors are already using AI. We connect your operations into one conversation. Don't stay behind.",
-    images: [{ url: "https://www.digidog.org/og-default.jpg", width: 1200, height: 630 }],
+    images: [{ url: "https://digidog.org/og-default.jpg", width: 1200, height: 630 }],
   },
 };
 

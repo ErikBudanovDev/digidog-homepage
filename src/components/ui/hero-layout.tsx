@@ -296,7 +296,7 @@ export function HeroLayout({
         {backgroundElements ?? <DefaultCosmicBackground />}
 
         <div
-          className={`relative z-10 max-w-[1296px] mx-auto px-6 md:px-12 lg:px-20 ${padding} flex flex-col lg:flex-row ${flexAlign} gap-12`}
+          className={`relative z-10 max-w-[1296px] mx-auto px-6 md:px-12 lg:px-20 ${padding} flex flex-col lg:flex-row ${flexAlign} gap-8 lg:gap-20`}
         >
           {textColumn}
           {rightContent}

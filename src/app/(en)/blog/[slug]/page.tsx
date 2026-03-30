@@ -57,10 +57,10 @@ export default async function BlogPostPage({ params }: Props) {
     publisher: {
       "@type": "Organization",
       name: "Digidog",
-      url: "https://www.digidog.org",
+      url: "https://digidog.org",
     },
     datePublished: post.date,
-    mainEntityOfPage: `https://www.digidog.org/blog/${post.slug}`,
+    mainEntityOfPage: `https://digidog.org/blog/${post.slug}`,
   };
 
   return (
