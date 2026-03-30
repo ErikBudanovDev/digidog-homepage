@@ -1,31 +1,31 @@
 {
   "seo": {
     "home": {
-      "title": "KI Agentur & Webentwicklung für mittelständische Unternehmen",
+      "title": "KI-Automatisierung & Webentwicklung Agentur",
       "description": "Digidog ist Ihre KI-Agentur und Full-Stack-Webentwicklungsagentur. Wir entwickeln KI-Automatisierungen, MCP-Integrationen, Websites und Software für Unternehmen mit 50-200 Mitarbeitern.",
       "ogTitle": "KI Agentur & Webentwicklung | Digidog",
       "ogDescription": "KI-Automatisierungen, MCP-Integrationen, Webentwicklung und Software für mittelständische Unternehmen."
     },
     "aiIntegration": {
-      "title": "KI Agentur | KI-Automatisierung & Beratung für Unternehmen",
+      "title": "KI-Integration & Automatisierung",
       "description": "KI-Agentur für den Mittelstand. Wir automatisieren 30-60% Ihrer repetitiven Arbeit durch KI-Workflows, CRM-Integration, MCP-Server und Prozessautomatisierung.",
       "ogTitle": "KI Agentur | KI-Automatisierung & Beratung | Digidog",
       "ogDescription": "Wir automatisieren 30-60% repetitiver Arbeit mit KI-Workflows und MCP-Servern."
     },
     "aiSolutions": {
-      "title": "KI-Lösungen & Machine Learning Entwicklung | KI Beratung",
+      "title": "KI-Lösungen & Machine Learning",
       "description": "Individuelle KI-Entwicklung: Machine Learning, NLP, Computer Vision, Predictive Analytics und LLM-Integration. Maßgeschneiderte KI-Lösungen für Ihr Unternehmen.",
       "ogTitle": "KI-Lösungen & Machine Learning | Digidog",
       "ogDescription": "ML-Modelle, NLP, Computer Vision und LLM-Integration für Unternehmen."
     },
     "webDesign": {
-      "title": "Webdesign & WordPress Agentur | Full-Stack Webentwicklung",
+      "title": "Webdesign & Webentwicklung Agentur",
       "description": "Webdesign-Agentur und WordPress-Entwicklung für den Mittelstand. Responsive, performante Websites mit React, Next.js und WordPress. Wartung & Support inklusive.",
       "ogTitle": "Webdesign & WordPress Agentur | Digidog",
       "ogDescription": "Maßgeschneiderte Websites, WordPress-Entwicklung und laufende Wartung."
     },
     "customSoftware": {
-      "title": "Individuelle Softwareentwicklung | Interne Tools & SaaS",
+      "title": "Individuelle Softwareentwicklung",
       "description": "Softwareentwicklung für mittelständische Unternehmen. Interne Tools, API-Integrationen, SaaS-Plattformen, Dashboards und Datenbankarchitektur.",
       "ogTitle": "Individuelle Softwareentwicklung | Digidog",
       "ogDescription": "Interne Tools, SaaS-Plattformen, API-Integrationen — Software, die Ihre Systeme verbindet."
@@ -35,15 +35,15 @@
       "description": "Lernen Sie das Digidog-Team kennen. KI-Beratung und Webentwicklung für mittelständische Unternehmen seit 2021."
     },
     "contact": {
-      "title": "Kontakt | Kostenlose KI- & Webentwicklungs-Beratung",
+      "title": "Kontakt — Kostenlose Erstberatung",
       "description": "Kontaktieren Sie Digidog für eine kostenlose Beratung zu KI-Automatisierung, Webentwicklung oder Individualsoftware. Antwort innerhalb von 24 Stunden."
     },
     "portfolio": {
-      "title": "Portfolio | KI-Automatisierung & Webentwicklungs-Projekte",
+      "title": "Portfolio — Unsere Projekte",
       "description": "Echte Fallstudien aus unseren KI-Automatisierungs-, Webentwicklungs- und Softwareprojekten mit messbaren Ergebnissen."
     },
     "blog": {
-      "title": "Blog — KI-Automatisierung, Webentwicklung & Software-Insights",
+      "title": "Blog — KI, Web & Software Insights",
       "description": "Fachartikel zu KI-Automatisierung, Webentwicklung, Individualsoftware und Digitalstrategie für mittelständische Unternehmen."
     },
     "imprint": {

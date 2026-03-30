@@ -19,7 +19,7 @@ export async function generateMetadata({
   const title = project
     ? `${project.title} – Digidog Digital Agency`
     : "Project – Digidog Digital Agency";
-  const description = "Case study and details for this Digidog project.";
+  const description = project?.description || "Case study and details for this Digidog project.";
 
   return {
     title,

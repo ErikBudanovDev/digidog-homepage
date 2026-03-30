@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 import WebDesignDEClient from "../../client-pages/WebDesignDEClient";
 
 export const metadata: Metadata = {
-  title: "Webdesign Agentur Berlin — Professionelle Websites & Webentwicklung",
+  title: "Webdesign Agentur Berlin — Websites & Webentwicklung",
   description:
     "Ihre Webdesign Agentur in Berlin: Maßgeschneiderte Websites, moderne Webentwicklung mit React & Next.js, UX/UI Design und SEO-Optimierung. Kostenloses Erstgespräch.",
   alternates: {
@@ -29,6 +29,8 @@ const serviceSchema = {
   name: "DigiDog — Webdesign Agentur Berlin",
   description: "Professionelle Webdesign Agentur in Berlin. Maßgeschneiderte Websites mit React, Next.js und modernen Technologien.",
   url: "https://digidog.org/de/webdesign-agentur-berlin",
+  image: "https://digidog.org/og-default.jpg",
+  address: { "@type": "PostalAddress", addressLocality: "Berlin", addressCountry: "DE" },
   areaServed: { "@type": "City", name: "Berlin", "@id": "https://www.wikidata.org/wiki/Q64" },
   serviceType: ["Webdesign", "Webentwicklung", "UX/UI Design", "SEO"],
   priceRange: "€€",

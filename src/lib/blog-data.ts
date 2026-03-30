@@ -467,7 +467,7 @@ At Digidog, we specialize in exactly this approach. We help you identify what to
   {
     slug: "playwright-mcp-server-complete-guide",
     title: "Playwright MCP Server: The Complete Setup Guide for 2026",
-    metaTitle: "Playwright MCP Server — Complete Setup & Configuration Guide 2026",
+    metaTitle: "Playwright MCP Server — Setup & Configuration Guide 2026",
     metaDescription:
       "Learn how to set up and configure Playwright MCP Server for browser automation with AI. Step-by-step guide covering installation, Claude Desktop, VS Code, Cursor, and advanced configuration.",
     excerpt:
@@ -952,7 +952,7 @@ Slack MCP is one of dozens of MCP integrations we build for mid-size companies. 
   {
     slug: "website-redesign-complete-guide",
     title: "Website Redesign: The Complete 2026 Guide (Strategy, Cost & Timeline)",
-    metaTitle: "Website Redesign Guide 2026 — Strategy, Cost & Timeline | Digidog",
+    metaTitle: "Website Redesign Guide 2026 — Strategy, Cost & Timeline",
     metaDescription:
       "Planning a website redesign? This guide covers strategy, cost breakdown, timeline, SEO migration, and the 7 signs your site needs a rebuild. Real examples from 50+ redesign projects.",
     excerpt:
@@ -1176,7 +1176,7 @@ No pitch, no pressure — just an honest assessment of where you are and what wo
   {
     slug: "supabase-mcp-server-setup-guide",
     title: "Supabase MCP Server: Complete Setup Guide for AI-Powered Database Workflows",
-    metaTitle: "Supabase MCP Server Setup Guide — Connect AI to Your Database | Digidog",
+    metaTitle: "Supabase MCP Server Setup Guide — Connect AI to Your Database",
     metaDescription:
       "Learn how to set up a Supabase MCP server to let AI agents query, insert, and manage your Postgres database. Step-by-step tutorial with real code examples.",
     excerpt:

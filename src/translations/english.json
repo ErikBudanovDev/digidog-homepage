@@ -1,13 +1,13 @@
 {
   "seo": {
     "home": {
-      "title": "AI Automation & Web Development Agency for Mid-Size Companies",
+      "title": "AI Automation & Web Development Agency",
       "description": "Digidog is an AI automation and web development agency. We build custom AI workflows, MCP integrations, websites, and software for mid-size companies (50-200 employees).",
       "ogTitle": "AI Automation & Web Development Agency | Digidog",
       "ogDescription": "Custom AI automations, MCP integrations, web development, and software for mid-size companies."
     },
     "aiIntegration": {
-      "title": "AI Integration & Automation Agency | AI Consulting for Business",
+      "title": "AI Integration & Automation Agency",
       "description": "AI automation agency for mid-size companies. We automate 30-60% of repetitive work through custom AI workflows, CRM integration, MCP servers, and business process automation.",
       "ogTitle": "AI Integration & Automation Agency | Digidog",
       "ogDescription": "We automate 30-60% of repetitive work with custom AI workflows and MCP servers."
@@ -19,7 +19,7 @@
       "ogDescription": "ML models, NLP, computer vision, and LLM integration for business."
     },
     "webDesign": {
-      "title": "Web Design & WordPress Development Agency | Full-Stack Solutions",
+      "title": "Web Design & Development Agency",
       "description": "Custom web design, WordPress development, and full-stack solutions for mid-size companies. High-performance websites with React, Next.js, and WordPress.",
       "ogTitle": "Web Design & WordPress Development Agency | Digidog",
       "ogDescription": "Custom websites, WordPress development, and ongoing maintenance."
