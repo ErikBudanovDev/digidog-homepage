@@ -93,6 +93,10 @@ export default function RootLayout({
         <Script id="ga4" strategy="afterInteractive">
           {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
         </Script>
+
+        {/* Calendly widget */}
+        <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+        <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="afterInteractive" />
       </body>
     </html>
   );

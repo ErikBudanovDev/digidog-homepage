@@ -19,6 +19,7 @@ import {
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ContactCTA } from "@/components/ContactCTA";
+import { ContactFormSection } from "@/components/ContactFormSection";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import {
   StarField,
@@ -1745,6 +1746,7 @@ export default function AiSolutionsPage() {
       <PortfolioShowcase />
       <ResultBanner />
       <ContactCTA />
+      <ContactFormSection />
       <Footer />
     </div>
   );

@@ -7,9 +7,18 @@ import { motion } from "motion/react";
 import { ArrowRight, ChevronRight, ChevronLeft } from "lucide-react";
 import { colors, fonts, carouselNavGradient } from "./brand";
 
-/** Dispatch custom event to open the booking modal in ContactCTA */
+const CALENDLY_URL = "https://calendly.com/erik-budanov/beratungsgespraech";
+
+/** Open Calendly popup widget for booking */
 export function openBookingModal() {
-  window.dispatchEvent(new CustomEvent("open-booking-modal"));
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const cal = (window as any).Calendly;
+  if (cal?.initPopupWidget) {
+    cal.initPopupWidget({ url: CALENDLY_URL });
+  } else {
+    // Fallback: open in new tab if script hasn't loaded yet
+    window.open(CALENDLY_URL, "_blank", "noopener,noreferrer");
+  }
 }
 
 /* ── Primary CTA Button (green) ── */

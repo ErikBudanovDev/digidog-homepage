@@ -63,7 +63,7 @@
     "title1": "AI Agency That Rocks",
     "title2": "Your Digital Presence",
     "description": "AI automation, web development, and custom software for mid-size companies. We build intelligent systems that drive more traffic, more leads, and more revenue — from strategy to production.",
-    "cta": "Book a consultation"
+    "cta": "Book a Free Consultation"
   },
   "nav": {
     "home": "Home",
@@ -97,7 +97,7 @@
   "contactCta": {
     "title": "Let's discuss your next project",
     "subtitle": "We analyze your website and provide an initial draft",
-    "cta": "Book your free initial consultation",
+    "cta": "Book a Free Consultation",
     "founderName": "Erik Budanov",
     "founderRole": "Founder & Lead Developer",
     "thankYou": "Thank you",
@@ -113,7 +113,19 @@
   "ctaBanner": {
     "title": "We look forward to hearing from you",
     "subtitle": "Never stop creating! Let your creative energy flow at all times.",
-    "cta": "Book an appointment"
+    "cta": "Book a Free Consultation"
+  },
+  "contactForm": {
+    "title": "Prefer to write? Send us a message",
+    "subtitle": "Fill out the form below and we'll get back to you within 24 hours.",
+    "name": "Your Name",
+    "email": "Email Address",
+    "company": "Company (optional)",
+    "message": "How can we help?",
+    "submit": "Send Message",
+    "thankYou": "Message sent!",
+    "thankYouSub": "We'll get back to you within 24 hours.",
+    "error": "Something went wrong. Please try again."
   },
   "footer": {
     "tagline": "Follow us on social media for news and inspiration.",

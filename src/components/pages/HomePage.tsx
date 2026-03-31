@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { TrustedPartners } from "@/components/TrustedPartners";
 import { ServicesSection } from "@/components/ServicesSection";
 import { ContactCTA } from "@/components/ContactCTA";
+import { ContactFormSection } from "@/components/ContactFormSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { CtaBanner } from "@/components/CtaBanner";
 import { PortfolioSection } from "@/components/PortfolioSection";
@@ -28,6 +29,7 @@ export default function HomePage() {
       <PortfolioSection />
       <BlogSection />
       <ContactCTA />
+      <ContactFormSection />
       <Footer />
     </div>
   );

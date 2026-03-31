@@ -63,7 +63,7 @@
     "title1": "KI-Agentur, die Ihre",
     "title2": "digitale Präsenz rockt",
     "description": "KI-Automatisierung, Webentwicklung und individuelle Software für mittelständische Unternehmen. Wir bauen intelligente Systeme, die mehr Traffic, mehr Leads und mehr Umsatz bringen — von der Strategie bis zur Produktion.",
-    "cta": "Beratung buchen"
+    "cta": "Kostenloses Beratungsgespräch buchen"
   },
   "nav": {
     "home": "Startseite",
@@ -97,7 +97,7 @@
   "contactCta": {
     "title": "Lassen Sie uns Ihr nächstes Projekt besprechen",
     "subtitle": "Wir analysieren Ihre Website und erstellen einen ersten Entwurf",
-    "cta": "Buchen Sie Ihre kostenlose Erstberatung",
+    "cta": "Kostenloses Beratungsgespräch buchen",
     "founderName": "Erik Budanov",
     "founderRole": "Gründer & Lead Developer",
     "thankYou": "Vielen Dank",
@@ -113,7 +113,19 @@
   "ctaBanner": {
     "title": "Wir freuen uns auf Ihre Nachricht",
     "subtitle": "Hören Sie nie auf zu gestalten! Lassen Sie Ihre kreative Energie jederzeit fließen.",
-    "cta": "Termin vereinbaren"
+    "cta": "Kostenloses Beratungsgespräch buchen"
+  },
+  "contactForm": {
+    "title": "Lieber schreiben? Senden Sie uns eine Nachricht",
+    "subtitle": "Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden.",
+    "name": "Ihr Name",
+    "email": "E-Mail-Adresse",
+    "company": "Unternehmen (optional)",
+    "message": "Wie können wir Ihnen helfen?",
+    "submit": "Nachricht senden",
+    "thankYou": "Nachricht gesendet!",
+    "thankYouSub": "Wir melden uns innerhalb von 24 Stunden.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
   },
   "footer": {
     "tagline": "Folgen Sie uns auf Social Media für News und Inspiration.",

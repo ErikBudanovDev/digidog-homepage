@@ -18,6 +18,7 @@ import {
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ContactCTA } from "@/components/ContactCTA";
+import { ContactFormSection } from "@/components/ContactFormSection";
 import { TrustedPartners } from "@/components/TrustedPartners";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import {
@@ -1009,6 +1010,7 @@ export default function CustomSoftwarePage() {
       <PortfolioShowcase />
       <ResultBanner />
       <ContactCTA />
+      <ContactFormSection />
       <Footer />
     </div>
   );

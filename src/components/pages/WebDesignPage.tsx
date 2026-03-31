@@ -13,6 +13,7 @@ import { Footer } from "@/components/Footer";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { TrustedPartners } from "@/components/TrustedPartners";
 import { ContactCTA } from "@/components/ContactCTA";
+import { ContactFormSection } from "@/components/ContactFormSection";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { StarField, ShootingStar, Spaceship, Planet, StarShape } from "@/components/CosmicElements";
 import { SEO, serviceSchema } from "@/components/SEO";
@@ -930,6 +931,7 @@ export default function WebDesignPage() {
       <PortfolioShowcase />
       <ResultBanner />
       <ContactCTA />
+      <ContactFormSection />
       <Footer />
     </div>
   );
