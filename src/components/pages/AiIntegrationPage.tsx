@@ -322,12 +322,16 @@ function HeroSection() {
                   {t.aiIntegration.heroCta}
                 </PrimaryButton>
                 <a
-                  href={locale === "DE" ? "/de/dienstleistungen/ki-loesungen" : "/services/ai-solutions"}
+                  href="#contact-form"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
+                  }}
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-white/20 text-white text-[17px] hover:border-white/40 hover:bg-white/5 transition-all cursor-pointer"
                   style={{ fontFamily: fonts.display, fontWeight: 600 }}
                 >
-                  {t.aiIntegration.heroCtaSecondary}
-                  <ArrowRight size={18} />
+                  {locale === "DE" ? "Nachricht senden" : "Send a Message"}
+                  <Mail size={18} />
                 </a>
               </div>
             </ScrollReveal>
@@ -2122,7 +2126,7 @@ function BusinessTypesSection() {
  * ─���─────────────────────────────────────────── */
 
 function CtaBanner() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   return (
     <section className="relative bg-white py-16 md:py-20">
       <SectionContainer>
@@ -2152,9 +2156,23 @@ function CtaBanner() {
               >
                 {t.aiIntegration.ctaDescription}
               </p>
-              <PrimaryButton onClick={() => openBookingModal()}>
-                {t.aiIntegration.ctaButton}
-              </PrimaryButton>
+              <div className="flex flex-wrap justify-center gap-4">
+                <PrimaryButton onClick={() => openBookingModal()}>
+                  {t.aiIntegration.ctaButton}
+                </PrimaryButton>
+                <a
+                  href="#contact-form"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-white/20 text-white text-[16px] hover:border-white/40 hover:bg-white/5 transition-all cursor-pointer"
+                  style={{ fontFamily: fonts.display, fontWeight: 600 }}
+                >
+                  {locale === "DE" ? "Nachricht senden" : "Send a Message"}
+                  <Mail size={18} />
+                </a>
+              </div>
             </div>
           </div>
         </ScrollReveal>

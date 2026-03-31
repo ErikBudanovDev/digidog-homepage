@@ -57,6 +57,7 @@ export function ContactFormSection() {
 
   return (
     <section
+      id="contact-form"
       className="relative py-16 md:py-24 overflow-hidden"
       style={{ background: colors.navyDeep }}
     >
