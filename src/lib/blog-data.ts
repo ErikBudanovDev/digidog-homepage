@@ -1474,6 +1474,194 @@ If you want help building a custom Supabase MCP server for your specific use cas
     readTime: "10 min read",
     keywords: ["supabase mcp server", "supabase mcp", "supabase ai integration", "mcp server database", "supabase automation"],
   },
+  /* ─── VIBE CODING + VPS ─── */
+  {
+    slug: "vibe-coding-vps-build-deploy-app-with-ai",
+    title: "Vibe Coding + VPS: Build and Deploy Full Apps with AI in 2026",
+    metaTitle: "Vibe Coding + VPS: Build & Deploy Apps with AI — The New Stack",
+    metaDescription:
+      "Stop renting someone else's platform. Learn how vibe coding with Claude AI and a VPS lets you build, deploy, and own full applications — from idea to production in hours.",
+    excerpt:
+      "Everyone's talking about vibe coding with hosted platforms. But the real power move? AI + your own VPS. You build it, you deploy it, you own it. Here's how the new stack actually works.",
+    content: `
+## The Paradigm Shift Nobody's Talking About
+
+There's a new term sweeping the developer world in 2026: **vibe coding**. Describe what you want in plain English, and AI builds it. Tools like Lovable, Bolt.new, and Replit are racing to own this space, promising "idea to app in minutes."
+
+But here's what most vibe coding guides won't tell you: those platforms own your infrastructure. Your app runs on their servers, their database, their rules. When you outgrow their free tier — or they change their pricing, or they shut down — you're locked in.
+
+There's a better path. One where you keep the speed of vibe coding but own everything you build.
+
+**The stack: AI + VPS. That's it.**
+
+## What Is Vibe Coding (And Why It Matters)
+
+Vibe coding is a term that emerged in early 2026 to describe a new way of building software. Instead of writing code line by line, you describe the "vibe" of what you want — the behavior, the look, the logic — and AI generates the implementation.
+
+This is not autocomplete. Modern AI models like Claude don't just suggest the next line. They architect entire systems. You say "build me a dashboard that pulls data from my PostgreSQL database and shows revenue by month with a chart," and you get a working application — frontend, backend, database queries, and deployment config.
+
+The reason this works now and didn't work two years ago is simple: the models got good enough. They can reason about code architecture, debug across multiple files, and produce production-quality implementations. They understand Docker, Nginx, database schemas, authentication flows, and API design.
+
+## Apps Are Becoming Like Reels
+
+There was a time when building software required teams, months, and funding. A simple web application meant hiring a backend developer, a frontend developer, a designer, and a project manager. The minimum viable team was four people, and the minimum viable timeline was three months.
+
+Now? Anyone can create an application in hours.
+
+This is the same shift that happened with content creation. Social media turned everyone into content creators. You didn't need a film crew to make a video — you needed a phone and an idea. The best creators won not because they had the biggest budgets, but because they had the best ideas and the fastest execution.
+
+**AI is doing the same thing to software.** The barrier to building is collapsing. And just like social media, the most creative people will win — not the most technical.
+
+## The Problem with Hosted Vibe Coding Platforms
+
+Every "best AI app builder" article in 2026 recommends the same platforms: Lovable, Bolt.new, Replit, Base44. They're impressive tools. You type a prompt, and minutes later you have a working app with a shareable link.
+
+But dig deeper and the problems emerge:
+
+**You don't own your code.** Some platforms let you export, some don't. Even when you can export, the code is often tightly coupled to their proprietary SDK or hosting layer.
+
+**You don't own your data.** Your database lives on their servers. Your users' data sits in their infrastructure. You have no control over backups, compliance, or data residency.
+
+**You don't control your costs.** Free tiers are generous until they're not. When your app gets traction and you need more compute, storage, or bandwidth, you're at the mercy of their pricing model.
+
+**You can't customize beyond their limits.** Need a custom Nginx configuration? Want to run a background worker? Need to integrate with a legacy system via SSH tunnel? Good luck doing that on a hosted platform.
+
+For prototypes and demos, hosted platforms are fantastic. For anything you plan to run as a real business? You need to own your stack.
+
+## The New Stack: AI + VPS
+
+Let's simplify the alternative down to two components:
+
+**A VPS (Virtual Private Server)** — your own computer running 24/7 in the cloud. You can get one for $5-20/month from providers like Hetzner, DigitalOcean, or Contabo. It's a full Linux machine. You have root access. You can install anything.
+
+**An AI coding assistant** — Claude, Cursor, or Claude Code. This is your builder, architect, and deployer. It writes the code, structures the system, configures the deployment, and debugs issues.
+
+That's the entire stack. No Wix. No WordPress. No complex hosting dashboards. No waiting for developers. No "idea stuck in your head."
+
+## How It Actually Works: Step by Step
+
+Here's the real workflow that replaces months of traditional development:
+
+### Step 1: Design Your App Locally
+
+Open a conversation with Claude or your AI of choice. Describe what you want to build. Be specific about the data model, the user flows, and the business logic. The AI helps you refine requirements you haven't thought of — edge cases, authentication, error handling.
+
+### Step 2: AI Generates the Full Application
+
+The AI writes your backend (Node.js, Python, Go — whatever fits), your frontend (React, Next.js, vanilla HTML), your database schema, and your API endpoints. This isn't a rough prototype. With clear prompts, you get production-quality code with proper error handling, validation, and security.
+
+### Step 3: AI Prepares Deployment
+
+This is where the VPS approach shines. The AI generates everything you need to deploy:
+
+- A **Dockerfile** that packages your app
+- A **docker-compose.yml** that orchestrates your services (app, database, cache)
+- An **Nginx config** that handles SSL, routing, and reverse proxy
+- A **deployment script** that automates the entire process
+
+### Step 4: Ship to Your VPS
+
+One command pushes your code to the server. The deployment script handles the rest — building the Docker image, starting the containers, configuring the database, and setting up SSL certificates with Let's Encrypt.
+
+\`\`\`bash
+# The entire deployment in three commands
+rsync -avz ./app/ root@your-server:/opt/app/
+ssh root@your-server "cd /opt/app && docker compose up -d"
+ssh root@your-server "certbot --nginx -d yourapp.com"
+\`\`\`
+
+### Step 5: Your App Is Live
+
+Your VPS now runs everything: the application, the API, the database, background jobs, and any other services you need. Nginx routes traffic from your domain to the right container. SSL is handled. The app is live globally.
+
+**Total time from idea to production: hours, not months.**
+
+## What Disappears
+
+This is the real disruption. When you combine AI coding with a VPS, entire categories of tools become unnecessary:
+
+- **No more website builders** (Wix, Squarespace, Webflow). AI generates better, custom code.
+- **No more generic CMS platforms** for custom applications. Your app is purpose-built.
+- **No more complex hosting dashboards.** You have a server and a terminal.
+- **No more waiting for developers** to be available. AI is always available.
+- **No more "idea stuck in your head."** If you can explain it, you can build it.
+
+## What You Gain
+
+The AI + VPS approach gives you something no hosted platform can:
+
+**Full ownership.** Your code, your data, your server, your rules. No vendor lock-in, no platform risk.
+
+**Speed.** AI generates code faster than any human team. Changes that used to take a sprint now take a conversation.
+
+**Cost control.** A VPS costs $5-20/month. Compare that to $99/month for a hosted AI builder — and you get far more flexibility.
+
+**Unlimited customization.** Need a cron job that runs every night at 3 AM? A WebSocket server for real-time updates? A custom email pipeline? Just ask the AI to build it and deploy it.
+
+**Learning.** Unlike no-code platforms that abstract everything away, working with AI on a VPS teaches you how software actually works. You see the Docker files, the Nginx configs, the database schemas. The AI explains what it's building and why.
+
+## Real-World Example: What We Built This Way
+
+At Digidog, we run our entire infrastructure using this approach. Here's what's currently running on a single $20/month VPS:
+
+- A **CRM system** with 35 API endpoints (custom MCP server)
+- A **multi-site WordPress management gateway** controlling 3 client websites
+- An **email infrastructure** with Postfix, OpenDKIM, and campaign management
+- A **lead enrichment pipeline** with web scraping and SMTP verification
+- **Financial data APIs** for market analysis
+- A **PostgreSQL database** serving multiple applications
+
+Total monthly cost: $20. Total development time for all of the above: approximately 2 weeks, working with AI. A traditional development team would have quoted $50,000+ and 3 months for this scope.
+
+## The Barrier Is No Longer Technical
+
+We're moving from "Can I build this?" to "What should I build?"
+
+The technical barrier to software development is effectively gone. Anyone who can clearly describe what they want — the logic, the data flow, the user experience — can now build it. The AI handles the implementation. The VPS handles the hosting.
+
+What remains is creativity and clarity of thinking. The people who win in this new world aren't the best coders. They're the best thinkers:
+
+- They understand their users deeply
+- They can describe complex systems in simple terms
+- They know what to build (and more importantly, what not to build)
+- They iterate quickly based on feedback
+
+## How to Get Started
+
+If you want to try this approach, here's the minimum viable setup:
+
+**Step 1:** Get a VPS. Hetzner (EUR 4.50/month) or DigitalOcean ($6/month) are good starting points. Pick the cheapest option with 2GB RAM and 40GB storage.
+
+**Step 2:** Point a domain to your VPS. Update your DNS A record to point to the server's IP address.
+
+**Step 3:** Open Claude, ChatGPT, or Cursor. Describe what you want to build. Start simple — a landing page, a form that saves to a database, a dashboard that displays data from an API.
+
+**Step 4:** Ask the AI to generate deployment configs (Docker, Nginx, SSL). Deploy to your VPS.
+
+**Step 5:** Iterate. Add features. Fix bugs. Scale. All through conversations with AI.
+
+## The Opportunity
+
+Every major technology shift creates a window where the early movers have an unfair advantage. Social media had its window. Mobile apps had their window. AI-powered software development is in that window right now.
+
+The people who learn to think clearly, describe systems precisely, and deploy on infrastructure they own — they'll build the next generation of software companies. Not with venture capital and engineering teams. With an AI assistant and a $20 server.
+
+**The question is no longer "Can I build this?" It's "What should I build?"**
+
+Because now, if you can explain it, you can create it.
+
+---
+
+*At Digidog, we help companies build and deploy AI-powered applications on their own infrastructure. Whether you need a custom tool, an internal dashboard, or a complete SaaS product — we can take you from idea to production in days, not months. [Book a free strategy call](/contact) and tell us what you want to build.*
+`,
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1080&q=80",
+    tag: "AI",
+    category: "ai",
+    author: "Erik Budanov",
+    date: "2026-03-31",
+    readTime: "9 min read",
+    keywords: ["vibe coding", "build app with ai", "vibe coding vps", "ai app development", "deploy app with ai", "ai software development 2026"],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
