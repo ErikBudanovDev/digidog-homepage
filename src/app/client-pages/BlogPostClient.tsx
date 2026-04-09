@@ -142,7 +142,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
             Book a free consultation and let&apos;s discuss how we can help your business.
           </p>
           <a
-            href="https://calendly.com/erik-digidog/30min"
+            href="https://calendly.com/erik-budanov/beratungsgespraech"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold px-8 py-3.5 rounded-full transition-colors"

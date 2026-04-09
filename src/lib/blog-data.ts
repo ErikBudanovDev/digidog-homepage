@@ -92,7 +92,7 @@ AI systems need monitoring. We track accuracy, handle edge cases, and continuous
 
 We don't just "add AI" — we engineer complete workflow systems. Our stack includes Claude and GPT for language tasks, custom ML models for classification, and direct API integrations with your existing tools. Every automation comes with a monitoring dashboard and human fallback.
 
-Ready to see how much time your team could save? [Book a free AI audit](https://calendly.com/erik-digidog/30min).
+Ready to see how much time your team could save? [Book a free AI audit](https://calendly.com/erik-budanov/beratungsgespraech).
     `,
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1080&q=80",
     tag: "AI Automation",
@@ -162,7 +162,7 @@ The barrier to entry is lower than you think:
 3. **Build MCP servers** — Each tool gets a lightweight server exposing its capabilities
 4. **Connect to AI** — Wire up Claude or another AI assistant as the orchestrator
 
-Want to explore MCP for your business? [Talk to our team](https://calendly.com/erik-digidog/30min) — we've been building MCP integrations since the protocol launched.
+Want to explore MCP for your business? [Talk to our team](https://calendly.com/erik-budanov/beratungsgespraech) — we've been building MCP integrations since the protocol launched.
     `,
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
     tag: "AI Integration",
@@ -237,7 +237,7 @@ Eine Website braucht laufende Pflege: Updates, Sicherheit, Performance-Monitorin
 
 Wir kombinieren Design-Expertise mit technischer Tiefe. Unsere Websites sind nicht nur schön — sie performen: schnelle Ladezeiten, SEO-optimiert, und conversion-orientiert.
 
-[Kostenloses Erstgespräch vereinbaren](https://calendly.com/erik-digidog/30min)
+[Kostenloses Erstgespräch vereinbaren](https://calendly.com/erik-budanov/beratungsgespraech)
     `,
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1080&q=80",
     tag: "Web Development",
@@ -305,7 +305,7 @@ Rolled out to the sales team with training. The AI handles routine tasks; humans
 
 The ROI was achieved in 6 weeks. The system cost €12,000 to build and €400/month to maintain. With 25 hours saved weekly at an average team cost of €45/hour, the monthly value is €4,500 — a 10x return on the ongoing cost.
 
-[Want similar results? Let's talk.](https://calendly.com/erik-digidog/30min)
+[Want similar results? Let's talk.](https://calendly.com/erik-budanov/beratungsgespraech)
     `,
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1080&q=80",
     tag: "Case Study",
@@ -372,7 +372,7 @@ A well-established orthodontic practice with 15 years of experience had a websit
 
 For healthcare practices, the combination of modern web design, local SEO, and content strategy delivers compounding returns. The practice now generates more inquiries from their website than from referrals — and the website works 24/7.
 
-[Is your practice invisible online? Get a free audit.](https://calendly.com/erik-digidog/30min)
+[Is your practice invisible online? Get a free audit.](https://calendly.com/erik-budanov/beratungsgespraech)
     `,
     image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1080&q=80",
     tag: "Case Study",
@@ -452,7 +452,7 @@ The smartest strategy is often hybrid: use SaaS for generic functions and build 
 
 At Digidog, we specialize in exactly this approach. We help you identify what to build, what to buy, and how to connect it all.
 
-[Let's map your tech stack together.](https://calendly.com/erik-digidog/30min)
+[Let's map your tech stack together.](https://calendly.com/erik-budanov/beratungsgespraech)
     `,
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1080&q=80",
     tag: "Software",
@@ -720,7 +720,7 @@ At Digidog, we use MCP extensively — not just Playwright MCP, but custom MCP s
 
 Playwright MCP is one piece of the puzzle. The real power comes from combining multiple MCP servers so your AI assistant can browse the web, update your CRM, send emails, and manage tasks — all from a single conversation.
 
-If you're exploring MCP for your business, we build custom integrations from strategy to production. [Book a free consultation](https://calendly.com/erik-digidog/30min) to discuss what's possible.
+If you're exploring MCP for your business, we build custom integrations from strategy to production. [Book a free consultation](https://calendly.com/erik-budanov/beratungsgespraech) to discuss what's possible.
     `,
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
     tag: "AI Integration",
@@ -937,7 +937,7 @@ Each MCP server is a building block. Combined, they create an AI assistant that 
 
 Slack MCP is one of dozens of MCP integrations we build for mid-size companies. Whether you need AI connected to your CRM, project management tools, databases, or custom internal systems — we design and build the integration from strategy to production.
 
-[Book a free consultation](https://calendly.com/erik-digidog/30min) to explore what MCP can do for your team.
+[Book a free consultation](https://calendly.com/erik-budanov/beratungsgespraech) to explore what MCP can do for your team.
     `,
     image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=1080&q=80",
     tag: "AI Integration",
@@ -1161,7 +1161,7 @@ Your sales team talks to customers every day. They know the questions prospects 
 
 If you're considering a website redesign, we offer a free 30-minute strategy call to assess your current site and discuss the best approach for your business. We'll review your performance data, identify quick wins, and outline what a redesign project would look like for your specific situation.
 
-[Book a free website audit →](https://calendly.com/erik-digidog/30min)
+[Book a free website audit →](https://calendly.com/erik-budanov/beratungsgespraech)
 
 No pitch, no pressure — just an honest assessment of where you are and what would make the biggest impact.
 `,
@@ -1464,7 +1464,7 @@ server.resource(
 
 Once you have Supabase connected via MCP, the natural next step is chaining it with other MCP servers — Slack for notifications, Gmail for email triggers, or a custom CRM server for pipeline management. The power of MCP is composability: each server handles one data source, and the AI agent orchestrates across all of them.
 
-If you want help building a custom Supabase MCP server for your specific use case, or connecting it with other tools in your stack, [book a free consultation](https://calendly.com/erik-digidog/30min). We specialize in exactly this kind of AI integration for mid-size companies.
+If you want help building a custom Supabase MCP server for your specific use case, or connecting it with other tools in your stack, [book a free consultation](https://calendly.com/erik-budanov/beratungsgespraech). We specialize in exactly this kind of AI integration for mid-size companies.
 `,
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
     tag: "AI Integration",
@@ -1652,7 +1652,7 @@ Because now, if you can explain it, you can create it.
 
 ---
 
-*At Digidog, we help companies build and deploy AI-powered applications on their own infrastructure. Whether you need a custom tool, an internal dashboard, or a complete SaaS product — we can take you from idea to production in days, not months. [Book a free strategy call](https://calendly.com/erik-digidog/30min) and tell us what you want to build.*
+*At Digidog, we help companies build and deploy AI-powered applications on their own infrastructure. Whether you need a custom tool, an internal dashboard, or a complete SaaS product — we can take you from idea to production in days, not months. [Book a free strategy call](https://calendly.com/erik-budanov/beratungsgespraech) and tell us what you want to build.*
 `,
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1080&q=80",
     tag: "AI",
@@ -1838,7 +1838,7 @@ This works best for service businesses, agencies, operations-heavy teams, and fo
 
 ---
 
-*We help companies replace $2K-10K/month SaaS stacks with custom AI operations systems — usually in 4-8 weeks. The result: lower costs, full data ownership, and a system that actually fits how your business works. [Book a free AI infrastructure audit](https://calendly.com/erik-digidog/30min) to see what's replaceable in your stack.*`,
+*We help companies replace $2K-10K/month SaaS stacks with custom AI operations systems — usually in 4-8 weeks. The result: lower costs, full data ownership, and a system that actually fits how your business works. [Book a free AI infrastructure audit](https://calendly.com/erik-budanov/beratungsgespraech) to see what's replaceable in your stack.*`,
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
     tag: "AI",
     category: "ai",
