@@ -540,7 +540,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white overflow-x-hidden scroll-smooth">
             <SEO
         title="About Us - AI & Web Development Team"
-        description="Meet the Digidog team. We are an AI consulting and web development agency helping mid-size companies with digital transformation, automation, and high-performance websites."
+        description="I ran two businesses on $1,200/month of SaaS. Now they run on $210/month with AI. Here's the story behind Digidog and the AI Operations Systems we build."
         canonical="/about"
       />
       <Navbar />

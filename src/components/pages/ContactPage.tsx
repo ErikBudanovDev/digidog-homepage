@@ -72,11 +72,10 @@ const contactInfo = [
 ];
 
 const serviceOptions = [
-  "Web Design & Development",
-  "AI Solutions & Automation",
-  "Custom Software",
-  "SEO & Marketing",
-  "App Development",
+  "Replace SaaS tools with AI",
+  "Automate operations & workflows",
+  "Build custom internal tools",
+  "Full AI Operations System",
   "Other",
 ];
 

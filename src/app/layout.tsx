@@ -14,11 +14,11 @@ const GA_ID = "G-W5JP198XEE";
 export const metadata: Metadata = {
   metadataBase: new URL("https://digidog.org"),
   title: {
-    default: "Digidog – AI Automation & Web Development Agency",
+    default: "Digidog – AI Operations Systems for Service Businesses",
     template: "%s | Digidog",
   },
   description:
-    "AI consulting and full-stack web development agency for mid-size companies. Custom AI automations, websites, and software that drive growth.",
+    "We build AI Operations Systems that replace bloated SaaS stacks. From $1,200/month to $210 — on infrastructure you own.",
   openGraph: {
     type: "website",
     locale: "en_US",
