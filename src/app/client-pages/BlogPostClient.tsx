@@ -141,12 +141,14 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
           <p className="text-white/70 mb-8">
             Book a free consultation and let&apos;s discuss how we can help your business.
           </p>
-          <Link
-            href="/contact"
+          <a
+            href="https://calendly.com/erik-digidog/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold px-8 py-3.5 rounded-full transition-colors"
           >
             Book a Free Consultation →
-          </Link>
+          </a>
         </div>
       </section>
 
