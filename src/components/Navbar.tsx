@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router";
-import { ChevronDown, Menu, X, Code, Bot, Blocks, Globe } from "lucide-react";
+import { ChevronDown, Menu, X, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { colors, fonts } from "./ui/brand";
 import { useTranslation, type Locale } from "@/i18n/i18n-context";
@@ -16,18 +16,10 @@ const localeOptions: { code: Locale; label: string; flag: string }[] = [
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const servicesRef = useRef<HTMLDivElement>(null);
   const langRef = useRef<HTMLDivElement>(null);
   const { locale } = useTranslation();
   const pt = locale === "DE" ? deT : enT;
-
-  const serviceSubLinks = [
-    { href: getLocalizedRoute("webDesign", locale), label: pt.nav.webDesign, icon: Code, color: "#0057ff" },
-    { href: getLocalizedRoute("aiSolutions", locale), label: pt.nav.aiSolutions, icon: Bot, color: "#a855f7" },
-    { href: getLocalizedRoute("customSoftware", locale), label: pt.nav.customSoftware, icon: Blocks, color: "#06b6d4" },
-  ];
 
   const navLinks = [
     { href: getLocalizedRoute("portfolio", locale), label: pt.nav.portfolio },
@@ -46,9 +38,6 @@ export function Navbar() {
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (servicesRef.current && !servicesRef.current.contains(e.target as Node)) {
-        setServicesOpen(false);
-      }
       if (langRef.current && !langRef.current.contains(e.target as Node)) {
         setLangOpen(false);
       }
@@ -60,7 +49,6 @@ export function Navbar() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setMobileOpen(false);
-    setServicesOpen(false);
 
     if (href.startsWith("#")) {
       if (location.pathname === "/") {
@@ -91,14 +79,11 @@ export function Navbar() {
   const handleLanguageSwitch = (newLocale: Locale) => {
     setLangOpen(false);
     
-    // Map current path to the new locale
     const currentPath = location.pathname || "/";
     let targetPath = "/";
     
-    // Check if we're on a German page
     if (currentPath.startsWith("/de")) {
       if (newLocale === "EN") {
-        // Switch from DE to EN
         if (currentPath === "/de") {
           targetPath = "/";
         } else if (currentPath.startsWith("/de/dienstleistungen/ki-loesungen")) {
@@ -124,7 +109,6 @@ export function Navbar() {
         }
       }
     } else {
-      // Switch from EN to DE
       if (newLocale === "DE") {
         if (currentPath === "/") {
           targetPath = "/de";
@@ -152,7 +136,6 @@ export function Navbar() {
       }
     }
     
-    // Locale auto-detected from URL path by I18nProvider
     navigate(targetPath);
   };
 
@@ -179,97 +162,21 @@ export function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) =>
-            link.hasDropdown === "services" ? (
-              <div key={link.href} ref={servicesRef} className="relative">
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center gap-1.5 text-white text-[17px] hover:text-[#52bd94] transition-colors relative group cursor-pointer"
-                  style={{ fontFamily: fonts.display }}
-                >
-                  {link.label}
-                  <motion.span
-                    animate={{ rotate: servicesOpen ? 180 : 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <ChevronDown size={14} />
-                  </motion.span>
-                  <span
-                    className="absolute -bottom-1 left-0 w-0 h-[2px] group-hover:w-full transition-all duration-300"
-                    style={{ background: colors.green }}
-                  />
-                </button>
-
-                <AnimatePresence>
-                  {servicesOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -8, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: -8, scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-3 border border-white/10 rounded-xl overflow-hidden shadow-xl shadow-black/30 min-w-[280px]"
-                      style={{ background: colors.navyDeep }}
-                    >
-                      <a
-                        href="#services"
-                        onClick={(e) => handleNavClick(e, "#services")}
-                        className="block px-4 py-3 text-[14px] text-white/50 hover:text-white/80 hover:bg-white/5 transition-colors border-b border-white/[0.06]"
-                        style={{ fontFamily: fonts.body }}
-                      >
-                        {pt.nav.allServices}
-                      </a>
-
-                      {serviceSubLinks.map((sub) => {
-                        const Icon = sub.icon;
-                        return (
-                          <a
-                            key={sub.label}
-                            href={sub.href}
-                            onClick={(e) => handleNavClick(e, sub.href)}
-                            className="flex items-center gap-3 px-4 py-3.5 hover:bg-white/5 transition-colors group/item"
-                          >
-                            <div
-                              className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
-                              style={{
-                                background: `${sub.color}18`,
-                                border: `1px solid ${sub.color}30`,
-                              }}
-                            >
-                              <Icon size={16} style={{ color: sub.color }} strokeWidth={1.8} />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <div className="flex items-center gap-2">
-                                <span
-                                  className="text-[14px] text-white group-hover/item:text-white transition-colors truncate"
-                                  style={{ fontFamily: fonts.body, fontWeight: 500 }}
-                                >
-                                  {sub.label}
-                                </span>
-                              </div>
-                            </div>
-                          </a>
-                        );
-                      })}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ) : (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
-                className="text-white text-[17px] hover:text-[#52bd94] transition-colors relative group"
-                style={{ fontFamily: fonts.display }}
-              >
-                {link.label}
-                <span
-                  className="absolute -bottom-1 left-0 w-0 h-[2px] group-hover:w-full transition-all duration-300"
-                  style={{ background: colors.green }}
-                />
-              </a>
-            )
-          )}
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
+              className="text-white text-[17px] hover:text-[#52bd94] transition-colors relative group"
+              style={{ fontFamily: fonts.display }}
+            >
+              {link.label}
+              <span
+                className="absolute -bottom-1 left-0 w-0 h-[2px] group-hover:w-full transition-all duration-300"
+                style={{ background: colors.green }}
+              />
+            </a>
+          ))}
         </div>
 
         {/* Language Switcher (Desktop) */}
@@ -329,47 +236,17 @@ export function Navbar() {
             transition={{ duration: 0.3 }}
             className="lg:hidden mt-4 bg-[#02033d]/95 backdrop-blur-xl rounded-xl p-6 flex flex-col gap-4 overflow-hidden"
           >
-            {navLinks.map((link) =>
-              link.hasDropdown ? (
-                <div key={link.href} className="flex flex-col gap-2">
-                  <span
-                    className="text-white/50 text-[14px] uppercase tracking-wider"
-                    style={{ fontFamily: fonts.body, fontWeight: 600 }}
-                  >
-                    {link.label}
-                  </span>
-                  {serviceSubLinks.map((sub) => {
-                    const Icon = sub.icon;
-                    return (
-                      <a
-                        key={sub.label}
-                        href={sub.href}
-                        onClick={(e) => handleNavClick(e, sub.href)}
-                        className="flex items-center gap-3 pl-2 py-1.5"
-                      >
-                        <Icon size={16} style={{ color: sub.color }} strokeWidth={1.8} />
-                        <span
-                          className="text-white text-[16px]"
-                          style={{ fontFamily: fonts.display }}
-                        >
-                          {sub.label}
-                        </span>
-                      </a>
-                    );
-                  })}
-                </div>
-              ) : (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-white text-[17px] hover:text-[#52bd94] transition-colors"
-                  style={{ fontFamily: fonts.display }}
-                >
-                  {link.label}
-                </a>
-              )
-            )}
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="text-white text-[17px] hover:text-[#52bd94] transition-colors"
+                style={{ fontFamily: fonts.display }}
+              >
+                {link.label}
+              </a>
+            ))}
             {/* Mobile Language Switcher */}
             <div className="flex gap-2 mt-6 pt-4 border-t border-white/10">
               {localeOptions.map((opt) => (
