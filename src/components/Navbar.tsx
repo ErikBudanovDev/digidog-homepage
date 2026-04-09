@@ -31,7 +31,7 @@ export function Navbar() {
 
   const navLinks = [
     { href: getLocalizedRoute("portfolio", locale), label: pt.nav.portfolio },
-    { href: "#services", label: pt.nav.services, hasDropdown: "services" as const },
+    { href: getLocalizedRoute("aiIntegration", locale), label: pt.nav.aiOperations },
     { href: getLocalizedRoute("about", locale), label: pt.nav.about },
     { href: getLocalizedRoute("contact", locale), label: pt.nav.contact },
   ];

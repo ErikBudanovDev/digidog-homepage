@@ -51,9 +51,9 @@ export function Footer() {
   const pt = locale === "DE" ? deT : enT;
 
   const serviceLinks = [
-    { label: "AI Operations Systems", href: getLocalizedRoute("aiSolutions", locale) },
+    { label: locale === "DE" ? "KI-Operations-System" : "AI Operations System", href: getLocalizedRoute("aiIntegration", locale) },
     { label: locale === "DE" ? "SaaS ersetzen" : "Replace SaaS", href: getLocalizedRoute("aiIntegration", locale) },
-    { label: locale === "DE" ? "Prozesse automatisieren" : "Automate Operations", href: getLocalizedRoute("aiSolutions", locale) },
+    { label: locale === "DE" ? "Prozesse automatisieren" : "Automate Operations", href: getLocalizedRoute("aiIntegration", locale) },
     { label: locale === "DE" ? "Web & Infrastruktur" : "Web & Infrastructure", href: getLocalizedRoute("webDesign", locale) },
     ...(locale === "DE" ? [
       { label: "Webdesign Berlin", href: "/de/webdesign-agentur-berlin" },
