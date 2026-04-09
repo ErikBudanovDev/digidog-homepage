@@ -1662,6 +1662,191 @@ Because now, if you can explain it, you can create it.
     readTime: "9 min read",
     keywords: ["vibe coding", "build app with ai", "vibe coding vps", "ai app development", "deploy app with ai", "ai software development 2026"],
   },
+  {
+    slug: "replace-saas-with-ai-vps",
+    title: "How I Cut Our SaaS Stack From $1,200 to $210/Month Using AI + a VPS",
+    metaTitle: "Replace SaaS With AI + VPS: $1,200 to $210/Month | Digidog",
+    metaDescription: "With $200 for Claude Max and $10 for a VPS, you can replace Asana, Pipedrive, Apollo, Make, and more. Here's exactly how — and the one design principle that makes it work.",
+    excerpt: "I canceled my team's subscriptions to Asana, Pipedrive, Apollo, and Make. Replaced them all with Docker containers on a $10 VPS and Claude Max. The secret: design tools for AI, not humans.",
+    content: `## The $3,000/Month SaaS Tax Nobody Questions
+
+Every growing business hits the same wall. You need a CRM, so you sign up for Pipedrive ($59/seat/month). You need project management, so you add Asana ($24.99/seat/month). You need sales outreach, so Apollo ($99/month). You need workflow automation, so Make ($29/month). Then Slack, Google Workspace, analytics tools, email marketing platforms.
+
+Before you know it, your team of five is paying $2,000-3,000/month just for software subscriptions. And here's what nobody says out loud: **you're using maybe 15% of each tool's features.**
+
+You're paying enterprise prices for features designed for enterprise companies, wrapped in interfaces built for humans clicking buttons. But what if your primary operator isn't a human clicking buttons anymore — what if it's an AI managing your entire business workflow?
+
+That's the question I asked six months ago. The answer changed how I run both my companies.
+
+## Who This Is For (And Who It's Not For)
+
+Let me be direct. This approach is for **business owners and operators spending $1,000+/month on SaaS tools** who want more control, lower costs, and a system that actually fits how they work.
+
+This is not a weekend project for hobbyists. It took us months of iteration, failed deployments, broken automations, and architectural redesigns to get this right. I'm sharing the result — not pretending it was easy.
+
+If you're a solo founder using free tiers of 3-4 tools, keep doing that. This only makes sense when your SaaS bill starts hurting and your workflows span enough systems that consolidation creates real leverage.
+
+And one more thing: **if your workflows are still chaotic or undocumented, custom AI infrastructure will amplify the chaos.** Fix the process first, then automate it. We've seen companies try to replace SaaS tools before they understood their own operations. The result is an expensive custom mess instead of an expensive SaaS mess. Know what your team actually does before you rebuild how they do it.
+
+## What I Actually Did
+
+I run two businesses — an AI consulting agency and a multi-city tour operation across Europe. Between both companies, our SaaS stack looked like this:
+
+- **Asana** — project management, task tracking across 4 client projects
+- **Pipedrive** — CRM, deal pipeline, client communication tracking
+- **Apollo** — lead sourcing, email sequences, prospect enrichment
+- **Make (Integromat)** — workflow automation between tools
+- **Plus** various analytics dashboards, reporting tools, email platforms
+
+Total monthly cost: roughly $800-1,200/month depending on seats and tiers.
+
+I replaced the core functionality of all of it. Here's the new stack:
+
+- **Claude Max** — $200/month (the AI brain)
+- **VPS on Hostinger** — $10/month (the infrastructure)
+- **Docker + Nginx** — free (the deployment layer)
+
+Total: **$210/month.** The replacements are custom-built, self-hosted, and owned entirely by me.
+
+## The Architecture: What's Actually Running
+
+On a single $10/month VPS, I'm running:
+
+**Custom CRM** — 35 API endpoints. Clients, deals, communication history, follow-ups, pipeline stages. Connected to AI through MCP (Model Context Protocol), so I can say "create a new client profile for Acme Corp with a $15K deal in negotiation stage" and it executes instantly.
+
+**Task Management System** — Connected to Asana's API for client-facing projects where clients need visibility, but internal task tracking runs through custom tools that AI can read, create, update, and search.
+
+**Email Infrastructure** — Postfix with OpenDKIM across 3 domains. Outbound campaigns, transactional emails, SMTP verification — all self-hosted.
+
+**Lead Pipeline** — Web scraping (Swiss company registrations via SHAB API), SMTP verification, enrichment. Pulls ~200 new company registrations daily into PostgreSQL.
+
+**Multi-Site Management** — A WordPress MCP gateway controlling 3 client websites. AI can create posts, update pages, manage plugins — across all sites from one interface.
+
+**Analytics Hub** — Google Ads data, GA4 reports, Ahrefs metrics — all accessible through MCP tools. I ask "what's the cost per click on our Berlin campaigns this week?" and get the answer in seconds.
+
+**PostgreSQL Database** — One database serving all applications. Proper schemas, indexes, automated backups.
+
+All orchestrated by Docker Compose. All behind Nginx with SSL. All on one server.
+
+## What Nearly Broke Us (The Part Nobody Writes About)
+
+I'd be lying if I said this was smooth. Here's what went wrong along the way — and why most companies shouldn't attempt this without experienced guidance:
+
+**Wrong data architecture, twice.** Our first CRM schema was too normalized. Queries that should have taken milliseconds were crawling. We redesigned the entire data model after three weeks of production use. In Pipedrive, you never think about this — they already solved it.
+
+**AI hallucinations in workflows.** Early on, Claude would occasionally "create" a client that already existed, or update the wrong deal because the tool descriptions were ambiguous. We lost a morning untangling duplicate records. The fix wasn't obvious — it required redesigning every tool interface to eliminate ambiguity.
+
+**Email deliverability nightmares.** Self-hosted email sounds simple until you realize that SPF, DKIM, DMARC, IP warm-up, and reputation management are full-time concerns. It took two weeks of testing before our emails stopped landing in spam.
+
+**Docker networking conflicts.** Three services trying to bind the same port. Nginx configs that worked locally but broke in production. SSL certificates that expired silently. Each of these cost hours to diagnose.
+
+**The uncomfortable truth:** We made these mistakes so our clients don't have to. If you're running a business that depends on these systems, a bad migration can cost you deals, clients, and credibility. This is infrastructure work — it needs to be treated that way.
+
+## The Insight That Changed Everything
+
+Here's the thing that separates a working system from an expensive experiment:
+
+**Avoid human-oriented APIs — design MCPs and tools optimized for AI interaction.**
+
+Traditional SaaS tools are designed for humans. Big dashboards, drag-and-drop interfaces, 47 settings panels, visual workflow builders. All of that is wasted on AI. The AI doesn't need a pretty UI. It doesn't need drag-and-drop. It doesn't need a color-coded Kanban board.
+
+When you build tools for AI consumption, you strip everything down to:
+
+- **Clear input parameters** — what does the tool need?
+- **Minimal token usage** — fewer tokens = more precise results
+- **Structured outputs** — JSON responses the AI can parse and act on
+- **Composable operations** — small tools that chain together
+
+This is the opposite of how SaaS companies build products. They add features to justify pricing tiers. AI tools should subtract features to improve precision.
+
+When I built our CRM MCP server, each tool does exactly one thing. \`create_client\` creates a client. \`update_deal_stage\` updates a deal stage. \`search_clients\` searches clients. No "smart" features, no "AI-powered suggestions" baked in, no complex UI state management. Just clean, minimal operations.
+
+The result? **Claude makes fewer mistakes.** Every tool call uses fewer tokens. Responses are faster. The AI can chain 5-6 operations together without getting confused, because each operation is crystal clear.
+
+**This design principle — AI-optimized interfaces over human-optimized interfaces — is what makes the entire system work.** Without it, you just have a worse version of the SaaS tools you left behind.
+
+## Why Most SaaS Tools Are Overkill for Your Actual Needs
+
+This isn't about SaaS dying. Salesforce isn't going anywhere. Neither is Slack or Google Workspace. The shift is more subtle — and more important.
+
+Most businesses are overpaying for software because their systems weren't designed for an AI-first workflow. They're paying for:
+
+- **Visual interfaces** their AI doesn't use
+- **Collaboration features** for teams of 50 when they have 5
+- **Enterprise compliance** they don't need
+- **Feature depth** they never touch
+
+The SaaS model assumed human users navigating graphical interfaces. When AI becomes the primary operator — reading data, executing actions, generating reports — most of that software becomes expensive overhead.
+
+The companies that will gain an edge aren't the ones that "kill SaaS." They're the ones that **right-size their tools** to match how work actually gets done in 2026 — which increasingly means AI doing the repetitive operations and humans making the strategic decisions.
+
+## The Numbers After 3 Months
+
+Here's what changed:
+
+| Metric | Before | After |
+| --- | --- | --- |
+| Monthly SaaS cost | ~$1,200 | ~$210 |
+| Tools my team uses | 8+ platforms | 1 AI interface + 2 SaaS tools kept |
+| Time switching between dashboards | 2-3 hours/day | 0 |
+| Data portability | Locked in 8 silos | One PostgreSQL database |
+| Customization ability | Limited to vendor roadmap | Unlimited |
+
+The biggest win isn't financial. It's **operational performance.** Lead response time dropped from hours to minutes — the AI monitors inbound and triggers follow-ups automatically. We stopped losing deals to slow replies. Reporting that used to take a Monday morning of dashboard-hopping now takes one sentence: "summarize last week's revenue across all cities." Client task completion visibility went from "check Asana, then Slack, then email" to a single query. Fewer dropped tasks. Fewer missed follow-ups. Cleaner data.
+
+When everything runs through one AI interface, you stop context-switching. You stop logging into 8 different platforms. You stop waiting for "that feature" to ship on someone else's roadmap.
+
+## What I Wouldn't Replace
+
+I'm not dogmatic about this. Some SaaS tools earn their price:
+
+- **Google Workspace** — email, calendar, docs. The collaboration infrastructure justifies the cost.
+- **Slack** — real-time team communication. The AI reads and searches it via MCP, but humans need the chat interface.
+- **Vercel/Cloudflare** — edge hosting for public-facing websites. Global CDN infrastructure is genuinely hard to replicate.
+- **Ahrefs** — SEO data. The crawling infrastructure behind it took years and millions to build.
+
+The pattern: **keep SaaS for things that require massive infrastructure you can't replicate.** Replace SaaS for things that are essentially CRUD operations wrapped in a $50/month UI.
+
+## The Practical Reality
+
+Here's what I want you to take away from this:
+
+**If you're a business owner** spending $1K-5K/month on SaaS tools that your team half-uses, you're sitting on one of the easiest cost reductions available. But — and this is the important part — the savings only materialize if the replacement systems are architected correctly from day one.
+
+Get the data model wrong, and you spend months cleaning up. Get the AI tool interfaces wrong, and the system makes errors that cost you clients. Get the deployment architecture wrong, and you wake up at 3 AM to a crashed server.
+
+We spent months making these mistakes so that when we build these systems for clients, the migration takes weeks instead of months, and the architecture is proven instead of experimental.
+
+**The companies winning with this approach aren't doing it alone.** They're working with teams that have already solved the hard problems — data architecture, AI interface design, deployment reliability, error handling — and can apply those solutions to their specific business.
+
+## The Bigger Picture
+
+Most companies are overpaying for SaaS because their systems weren't designed for AI. The tools were built for a world where humans clicked buttons and dragged cards across boards. That operating model is losing its advantage.
+
+The next generation of operational systems will be:
+
+- **Custom-built** for the specific business
+- **AI-operated** with humans making strategic decisions
+- **Self-hosted** on infrastructure the company owns
+- **Composable** — small tools that chain together
+
+This isn't speculation. This is what we build every day. And the companies that adopt this model now will have a structural cost advantage over competitors still paying the SaaS tax for the next decade.
+
+**$200 for the AI. $10 for the server. Everything you build, you own.**
+
+This works best for service businesses, agencies, operations-heavy teams, and founder-led companies where workflows are repetitive but business logic is specific. If that sounds like you, the question is whether you want to spend months solving the hard problems yourself — or work with a team that's already done it.
+
+---
+
+*We help companies replace $2K-10K/month SaaS stacks with custom AI operations systems — usually in 4-8 weeks. The result: lower costs, full data ownership, and a system that actually fits how your business works. [Book a free AI infrastructure audit](/contact) to see what's replaceable in your stack.*`,
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
+    tag: "AI",
+    category: "ai",
+    author: "Erik Budanov",
+    date: "2026-04-09",
+    readTime: "12 min read",
+    keywords: ["replace saas with ai", "ai replace saas", "cancel saas subscriptions", "ai vps self hosted", "mcp server saas replacement", "ai automation replace software"],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
