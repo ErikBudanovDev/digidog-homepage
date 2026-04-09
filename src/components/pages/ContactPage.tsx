@@ -706,7 +706,7 @@ function ContactFormSection() {
                     Erik Budanov
                   </h3>
                   <p className="text-[13px]" style={{ fontFamily: fonts.body, color: colors.textSlate }}>
-                    Founder & Lead Developer
+                    Founder & AI Systems Architect
                   </p>
                 </div>
               </div>
