@@ -11,9 +11,9 @@ import deBlog from "@/translations/blog/german.json";
 
 /** Slugs to feature on the homepage (most recent / highest value) */
 const FEATURED_SLUGS = [
-  "playwright-mcp-server-complete-guide",
-  "slack-mcp-server-setup-guide",
-  "website-erstellen-lassen-kosten-ablauf-tipps",
+  "replace-saas-with-ai-vps",
+  "vibe-coding-vps-build-deploy-app-with-ai",
+  "what-is-mcp-model-context-protocol",
 ];
 
 /** Fallback featured slugs if the above aren't found */

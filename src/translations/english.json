@@ -1,10 +1,10 @@
 {
   "seo": {
     "home": {
-      "title": "AI Automation & Web Development Agency",
-      "description": "Digidog is an AI automation and web development agency. We build custom AI workflows, MCP integrations, websites, and software for mid-size companies (50-200 employees).",
-      "ogTitle": "AI Automation & Web Development Agency | Digidog",
-      "ogDescription": "Custom AI automations, MCP integrations, web development, and software for mid-size companies."
+      "title": "AI Operations Systems for Service Businesses | Digidog",
+      "description": "We rebuild how your business operates using AI. Replace bloated SaaS, automate workflows, and own your infrastructure.",
+      "ogTitle": "AI Operations Systems for Service Businesses | Digidog",
+      "ogDescription": "From $1,200/month in SaaS to $210 — on AI systems you own. We build the same for service businesses and agencies."
     },
     "aiIntegration": {
       "title": "AI Integration & Automation Agency",
@@ -60,10 +60,10 @@
     }
   },
   "hero": {
-    "title1": "AI Agency That Rocks",
-    "title2": "Your Digital Presence",
-    "description": "AI automation, web development, and custom software for mid-size companies. We build intelligent systems that drive more traffic, more leads, and more revenue — from strategy to production.",
-    "cta": "Book a Free Consultation"
+    "title1": "We Rebuild How Your",
+    "title2": "Business Operates Using AI",
+    "description": "We run two businesses on an AI Operations System that cut our stack from $1,200 to $210/month. Now we build the same for service businesses and agencies.",
+    "cta": "Get Your AI Operations Audit"
   },
   "nav": {
     "home": "Home",
@@ -95,9 +95,9 @@
     "startProject": "Start a project"
   },
   "contactCta": {
-    "title": "Let's discuss your next project",
-    "subtitle": "We analyze your website and provide an initial draft",
-    "cta": "Book a Free Consultation",
+    "title": "Find out what's replaceable in your stack",
+    "subtitle": "We identify replaceable SaaS spend, manual workflows worth automating, and the fastest path to an AI Operations System for your business",
+    "cta": "Get Your AI Operations Audit",
     "founderName": "Erik Budanov",
     "founderRole": "Founder & Lead Developer",
     "thankYou": "Thank you",
@@ -111,9 +111,9 @@
     "formSubmit": "Request Appointment"
   },
   "ctaBanner": {
-    "title": "We look forward to hearing from you",
-    "subtitle": "Never stop creating! Let your creative energy flow at all times.",
-    "cta": "Book a Free Consultation"
+    "title": "What used to take 5 tools and 3 hours now takes one prompt",
+    "subtitle": "This works best for service businesses and agencies with stable workflows. If your operations are still chaotic, AI will only amplify the chaos.",
+    "cta": "Get Your AI Operations Audit"
   },
   "contactForm": {
     "title": "Prefer to write? Send us a message",

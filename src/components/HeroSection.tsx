@@ -10,9 +10,9 @@ import enT from "@/translations/english.json";
 import deT from "@/translations/german.json";
 
 const heroKpis = [
-  { icon: Zap, value: "30-60%", labelEn: "Repetitive work automated", labelDe: "Repetitive Arbeit automatisiert" },
-  { icon: DollarSign, value: "40%", labelEn: "Average cost reduction", labelDe: "Durchschnittliche Kostensenkung" },
-  { icon: Clock, value: "3X", labelEn: "Faster operations", labelDe: "Schnellere Abläufe" },
+  { icon: DollarSign, value: "$1,200→$210", labelEn: "Monthly SaaS cost replaced", labelDe: "Monatliche SaaS-Kosten ersetzt" },
+  { icon: Clock, value: "25 hrs/wk", labelEn: "Manual work eliminated", labelDe: "Manuelle Arbeit eliminiert" },
+  { icon: Zap, value: "1 prompt", labelEn: "Replaces 5 tools + 3 hours", labelDe: "Ersetzt 5 Tools + 3 Stunden" },
 ];
 
 export function HeroSection() {

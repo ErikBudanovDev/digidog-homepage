@@ -15,8 +15,8 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden scroll-smooth">
       <SEO
-        title="AI Automation & Web Development Agency"
-        description="Digidog is an AI consulting and full-stack web development agency. We build custom AI automations, websites, and software for mid-size companies. Get more traffic, leads, and conversions."
+        title="AI Operations Systems for Service Businesses | Digidog"
+        description="We rebuild how your business operates using AI. Replace bloated SaaS, automate workflows, and own your infrastructure. From $1,200/month in SaaS to $210 — on systems you control."
         canonical="/"
         schemaMarkup={organizationSchema}
       />

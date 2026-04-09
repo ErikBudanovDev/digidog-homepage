@@ -1,10 +1,10 @@
 {
   "seo": {
     "home": {
-      "title": "KI-Automatisierung & Webentwicklung Agentur",
-      "description": "Digidog ist Ihre KI-Agentur und Full-Stack-Webentwicklungsagentur. Wir entwickeln KI-Automatisierungen, MCP-Integrationen, Websites und Software für Unternehmen mit 50-200 Mitarbeitern.",
-      "ogTitle": "KI Agentur & Webentwicklung | Digidog",
-      "ogDescription": "KI-Automatisierungen, MCP-Integrationen, Webentwicklung und Software für mittelständische Unternehmen."
+      "title": "KI-Operations-Systeme für Dienstleister | Digidog",
+      "description": "Wir bauen Ihre Geschäftsprozesse mit KI neu auf. SaaS ersetzen, Workflows automatisieren, eigene Infrastruktur besitzen.",
+      "ogTitle": "KI-Operations-Systeme für Dienstleister | Digidog",
+      "ogDescription": "Von 1.200 €/Monat SaaS-Kosten auf 210 € — mit KI-Systemen, die Ihnen gehören."
     },
     "aiIntegration": {
       "title": "KI-Integration & Automatisierung",
@@ -60,10 +60,10 @@
     }
   },
   "hero": {
-    "title1": "KI-Agentur, die Ihre",
-    "title2": "digitale Präsenz rockt",
-    "description": "KI-Automatisierung, Webentwicklung und individuelle Software für mittelständische Unternehmen. Wir bauen intelligente Systeme, die mehr Traffic, mehr Leads und mehr Umsatz bringen — von der Strategie bis zur Produktion.",
-    "cta": "Kostenloses Beratungsgespräch buchen"
+    "title1": "Wir bauen Ihre Geschäfts-",
+    "title2": "prozesse mit KI neu auf",
+    "description": "Wir betreiben zwei Unternehmen mit einem KI-Operations-System, das unseren SaaS-Stack von 1.200 € auf 210 €/Monat reduziert hat. Jetzt bauen wir dasselbe für Dienstleister und Agenturen.",
+    "cta": "Kostenloses KI-Operations-Audit"
   },
   "nav": {
     "home": "Startseite",
@@ -95,9 +95,9 @@
     "startProject": "Projekt starten"
   },
   "contactCta": {
-    "title": "Lassen Sie uns Ihr nächstes Projekt besprechen",
-    "subtitle": "Wir analysieren Ihre Website und erstellen einen ersten Entwurf",
-    "cta": "Kostenloses Beratungsgespräch buchen",
+    "title": "Finden Sie heraus, was in Ihrem Stack ersetzbar ist",
+    "subtitle": "Wir identifizieren ersetzbare SaaS-Kosten, automatisierbare Workflows und den schnellsten Weg zu einem KI-Operations-System für Ihr Unternehmen",
+    "cta": "Kostenloses KI-Operations-Audit",
     "founderName": "Erik Budanov",
     "founderRole": "Gründer & Lead Developer",
     "thankYou": "Vielen Dank",
@@ -111,9 +111,9 @@
     "formSubmit": "Termin anfragen"
   },
   "ctaBanner": {
-    "title": "Wir freuen uns auf Ihre Nachricht",
-    "subtitle": "Hören Sie nie auf zu gestalten! Lassen Sie Ihre kreative Energie jederzeit fließen.",
-    "cta": "Kostenloses Beratungsgespräch buchen"
+    "title": "Was früher 5 Tools und 3 Stunden brauchte, braucht jetzt einen Prompt",
+    "subtitle": "Das funktioniert am besten für Dienstleister und Agenturen mit stabilen Workflows. Wenn Ihre Prozesse noch chaotisch sind, verstärkt KI nur das Chaos.",
+    "cta": "Kostenloses KI-Operations-Audit"
   },
   "contactForm": {
     "title": "Lieber schreiben? Senden Sie uns eine Nachricht",
