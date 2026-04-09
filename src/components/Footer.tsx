@@ -51,10 +51,10 @@ export function Footer() {
   const pt = locale === "DE" ? deT : enT;
 
   const serviceLinks = [
-    { label: pt.nav.webDesign, href: getLocalizedRoute("webDesign", locale) },
-    { label: pt.nav.aiSolutions, href: getLocalizedRoute("aiSolutions", locale) },
-    { label: "AI Integration", href: getLocalizedRoute("aiIntegration", locale) },
-    { label: pt.nav.customSoftware, href: getLocalizedRoute("customSoftware", locale) },
+    { label: "AI Operations Systems", href: getLocalizedRoute("aiSolutions", locale) },
+    { label: locale === "DE" ? "SaaS ersetzen" : "Replace SaaS", href: getLocalizedRoute("aiIntegration", locale) },
+    { label: locale === "DE" ? "Prozesse automatisieren" : "Automate Operations", href: getLocalizedRoute("aiSolutions", locale) },
+    { label: locale === "DE" ? "Web & Infrastruktur" : "Web & Infrastructure", href: getLocalizedRoute("webDesign", locale) },
     ...(locale === "DE" ? [
       { label: "Webdesign Berlin", href: "/de/webdesign-agentur-berlin" },
       { label: "Webdesign Hamburg", href: "/de/webdesign-agentur-hamburg" },
