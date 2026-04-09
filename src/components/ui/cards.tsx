@@ -69,6 +69,7 @@ export function BlogCard({
 }) {
   const { t } = useTranslation();
   return (
+    <a href={post.slug ? `/blog/${post.slug}` : "/blog"} className="block">
     <ContentCard variant="dark" index={index} isInView={isInView} className="group overflow-hidden">
       <div className="h-[200px] overflow-hidden">
         <ImageWithFallback
@@ -110,6 +111,7 @@ export function BlogCard({
         </LinkWithArrow>
       </div>
     </ContentCard>
+    </a>
   );
 }
 
@@ -284,7 +286,9 @@ export function ProjectCard({ project }: { project: ProjectCardData }) {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-  const handleLinkClick = (e: React.MouseEvent) => {
+  const projectHref = project.slug ? `/portfolio/${project.slug}` : project.link || "#";
+
+  const handleCardClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (project.slug) {
       navigate(`/portfolio/${project.slug}`);
@@ -294,7 +298,7 @@ export function ProjectCard({ project }: { project: ProjectCardData }) {
   };
 
   return (
-    <div className="flex flex-col gap-6 pb-6 select-none">
+    <a href={projectHref} onClick={handleCardClick} className="flex flex-col gap-6 pb-6 select-none group cursor-pointer">
       {/* Gradient card with floating image */}
       <div
         className="relative rounded-2xl w-full overflow-hidden"
@@ -363,10 +367,8 @@ export function ProjectCard({ project }: { project: ProjectCardData }) {
         >
           {project.description}
         </p>
-        <a
-          href={project.slug ? `/portfolio/${project.slug}` : project.link || "#"}
-          onClick={handleLinkClick}
-          className="inline-flex items-center gap-4 text-[16px] hover:gap-5 transition-all"
+        <span
+          className="inline-flex items-center gap-4 text-[16px] group-hover:gap-5 transition-all"
           style={{
             fontFamily: fonts.display,
             fontWeight: 700,
@@ -375,8 +377,8 @@ export function ProjectCard({ project }: { project: ProjectCardData }) {
         >
           {t.common.viewProject}
           <ArrowIcon />
-        </a>
+        </span>
       </div>
-    </div>
+    </a>
   );
 }
