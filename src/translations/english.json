@@ -8,7 +8,7 @@
     },
     "aiIntegration": {
       "title": "AI Integration & Automation Agency",
-      "description": "AI automation agency for mid-size companies. We automate 30-60% of repetitive work through custom AI workflows, CRM integration, MCP servers, and business process automation.",
+      "description": "AI Operations Systems for service businesses. We replace bloated SaaS stacks with AI-operated tools on infrastructure you own. From $1,200/month to $210.",
       "ogTitle": "AI Integration & Automation Agency | Digidog",
       "ogDescription": "We automate 30-60% of repetitive work with custom AI workflows and MCP servers."
     },
@@ -74,7 +74,7 @@
     "blog": "Blog",
     "aiOperations": "AI Operations",
     "allServices": "All Services",
-    "webDesign": "Web Design & Development",
+    "webDesign": "Web & Infrastructure",
     "aiSolutions": "AI Solutions & Automation",
     "customSoftware": "Software & Integrations"
   },

@@ -359,7 +359,7 @@ function ProofSection() {
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 rounded-full text-[13px] font-semibold mb-6" style={{ color: "#F59E0B", background: "rgba(245,158,11,0.1)", border: "1px solid rgba(245,158,11,0.2)", fontFamily: fonts.display }}>We run our own businesses on this</span>
             <h2 className="text-[32px] md:text-[42px] text-white leading-[1.15] mb-4" style={{ fontFamily: fonts.display, fontWeight: 800 }}>This isn&apos;t theory — it&apos;s our daily stack</h2>
-            <p className="text-[17px] text-white/50 leading-[1.7] max-w-[600px] mx-auto" style={{ fontFamily: fonts.display }}>We operate two companies — an AI consulting agency and a multi-city European tour operation — entirely on the same system we build for clients.</p>
+            <p className="text-[17px] text-white/50 leading-[1.7] max-w-[600px] mx-auto" style={{ fontFamily: fonts.display }}>We operate two companies — an AI operations company and a multi-city European tour operation — entirely on the same system we build for clients.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
             {["Custom CRM (35 endpoints)", "Multi-site WordPress gateway", "Email infrastructure (3 domains)", "Lead pipeline + enrichment", "Google Ads + GA4 analytics", "PostgreSQL serving all apps"].map((item) => (

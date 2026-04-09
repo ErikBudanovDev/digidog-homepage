@@ -109,7 +109,7 @@ export default function ImprintPage() {
                 <p>
                   <strong>Digidog LLC</strong>
                   <br />
-                  AI Consulting &amp; Web Development Agency
+                  AI Operations Systems
                 </p>
                 <p>
                   <strong>Registered Agent:</strong>

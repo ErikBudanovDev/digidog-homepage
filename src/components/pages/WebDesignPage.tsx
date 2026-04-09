@@ -919,7 +919,7 @@ export default function WebDesignPage() {
         title="Web Design & Full-Stack Development Agency"
         description="Custom website design and full-stack web development by Digidog. We build responsive, high-performance websites with React, Next.js, and modern technologies that convert visitors into customers."
         canonical="/services/web-design"
-        schemaMarkup={serviceSchema("Web Design & Development", "Custom website design and full-stack web development services including UX/UI design, responsive development, CMS integration, and ongoing maintenance.", "/services/web-design")}
+        schemaMarkup={serviceSchema("Web & Infrastructure", "Custom websites, web applications, and digital infrastructure built for performance, conversion, and full ownership.", "/services/web-design")}
       />
       <Navbar />
       <ServiceHero />

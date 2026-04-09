@@ -33,7 +33,7 @@ export const organizationSchema = {
   name: "Digidog",
   url: "https://digidog.org",
   logo: "https://digidog.org/wp-content/uploads/2024/02/Digidog-Mark-Black@4x-e1709122020974.png",
-  description: "AI Consulting & Full-Stack Web Development Agency",
+  description: "AI Operations Systems for Service Businesses",
   sameAs: [
     "https://www.facebook.com/digidog.agency/",
     "https://www.instagram.com/digidog_agency/",

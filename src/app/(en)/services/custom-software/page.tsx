@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: en.seo.customSoftware.title,
   description: en.seo.customSoftware.description,
   alternates: { canonical: "/services/custom-software", languages: { "en": "/services/custom-software", "de": "/de/dienstleistungen/individuelle-software", "x-default": "/services/custom-software" } },
-  keywords: ["custom software development agency", "internal tools development", "SaaS platform development", "API integration"],
+  keywords: ["custom internal tools", "internal tools development", "SaaS platform development", "API integration"],
   openGraph: { title: en.seo.customSoftware.ogTitle, description: en.seo.customSoftware.ogDescription, type: "website", url: "/services/custom-software", images: [{ url: "/og-default.jpg", width: 1200, height: 630 }] },
   twitter: { card: "summary_large_image", title: en.seo.customSoftware.ogTitle, description: en.seo.customSoftware.ogDescription },
 };
