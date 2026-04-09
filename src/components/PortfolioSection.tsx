@@ -48,30 +48,56 @@ const monteOfelioNewsImageSrc = monteOfelioNewsImage as unknown as string;
 const monteOfelioLocationImageSrc = monteOfelioLocationImage as unknown as string;
 
 export const projects: ProjectCardData[] = [
-  /* ─── Web Design & Development ─── */
+  /* ─── AI Operations Systems ─── */
+  {
+    title: "DigiDog AI Operations System",
+    description:
+      "Our own infrastructure: 12+ SaaS tools replaced with AI-operated systems on a single VPS. CRM, task management, reporting, lead automation, cross-platform orchestration — all running for $210/month instead of $1,200.",
+    overview:
+      "We run two businesses on this system — an AI operations company and a multi-city European tour operator. Both used to run on 12+ SaaS subscriptions totaling $1,200/month. We replaced them with AI-operated tools on a single $210/month VPS: custom CRM, automated reporting, AI agents for lead follow-ups, task routing, and cross-platform orchestration via MCP servers.",
+    goal: "Replace a fragmented $1,200/month SaaS stack with a unified AI Operations System running on owned infrastructure.",
+    improvements: [
+      "Custom CRM replacing HubSpot and spreadsheet workflows",
+      "AI agents for automated lead qualification and follow-up",
+      "MCP server architecture connecting Claude to all business tools",
+      "Automated reporting via GA4, Google Ads, and internal dashboards",
+      "PostgreSQL database replacing siloed SaaS data stores",
+      "Docker deployment with automated backups on single VPS",
+    ],
+    problem:
+      "12+ SaaS subscriptions ($1,200/month), data scattered across platforms, manual workflows for reporting, lead follow-up, and task routing consuming 25+ hours per week.",
+    solution:
+      "AI Operations System on a single VPS — custom CRM, AI agents, MCP orchestration, automated reporting. Total infrastructure cost: $210/month. Manual work reduced to a single prompt.",
+    image: digidogThreejsImageSrc,
+    year: 2025,
+    slug: "digidog-ai-operations-system",
+    service: "AI Operations System",
+    category: "ai",
+    client: "DigiDog (Internal)",
+    link: "/services/ai-integration",
+  },
+  /* ─── Web Infrastructure ─── */
   {
     title: "United Nations – FP2030",
     description:
       "Design implementation for the United Nations FP2030 Progress Report website, featuring interactive Highcharts data visualizations and immersive parallax animations.",
     overview:
-      "We had the incredible opportunity to collaborate with the United Nations in developing a remarkable website for FP2030. This project was truly exceptional and allowed us to showcase our expertise and creativity in some truly innovative ways. One of the standout features of the website is the stunning graphics we created using Highcharts JS — an incredible tool that empowers us to build interactive and visually captivating charts for presenting complex data in a way that is easy to comprehend and enjoyable to engage with.",
-    goal: "Build a visually stunning, data-driven website for the United Nations FP2030 initiative that presents complex global health data through interactive charts and immersive animations.",
+      "Collaboration with the United Nations on the FP2030 Progress Report website. Interactive Highcharts data visualizations presenting complex global health data in accessible, engaging formats.",
+    goal: "Present complex global health data through interactive charts and immersive animations for a worldwide audience.",
     improvements: [
       "Interactive data visualizations with Highcharts JS",
-      "Immersive parallax scrolling animations throughout",
-      "WordPress CMS with Elementor page builder",
-      "Responsive design optimized for all devices",
-      "Complex data presented in accessible, engaging formats",
-      "Dynamic storytelling through visual design and motion",
+      "Immersive parallax scrolling animations",
+      "WordPress CMS with Elementor",
+      "Responsive design for all devices",
     ],
     problem:
-      "Complex global health data needed to be presented in an accessible, engaging way that would resonate with a worldwide audience and drive awareness for the FP2030 initiative.",
+      "Complex global health data needed to be presented accessibly for a worldwide audience.",
     solution:
-      "A visually stunning website combining interactive Highcharts data visualizations, captivating parallax animations, and user-centric design to make complex data both comprehensible and memorable.",
+      "Interactive Highcharts visualizations with parallax animations and user-centric design.",
     image: unFp2030ImageSrc,
     year: 2023,
     slug: "united-nations-fp2030",
-    service: "Web Design & Development",
+    service: "Web Infrastructure",
     category: "web",
     client: "United Nations – FP2030",
     link: "/services/web-design",
@@ -98,7 +124,7 @@ export const projects: ProjectCardData[] = [
     image: mpaOnlineImageSrc,
     year: 2024,
     slug: "mpa-online",
-    service: "Web Design & Development",
+    service: "Web Infrastructure",
     category: "web",
     client: "MPA.online",
     link: "/services/web-design",
@@ -108,7 +134,7 @@ export const projects: ProjectCardData[] = [
     description:
       "Modern web design and digital solution for a local supermarket with integrated online shop and ordering system.",
     overview:
-      "Miso Supermarket & Bakery is a local family-run business in Düsseldorf offering fresh baked goods and Asian groceries. To meet growing customer demands, a complete digital transformation was carried out — from initial concept to design and technical implementation.",
+      "Miso Supermarket & Bakery is a local family-run business in Düsseldorf offering fresh baked goods and Asian groceries. To meet growing customer demands, a complete rebuild was carried out — from initial concept to design and technical implementation.",
     goal: "Build a professional online presence with an integrated ordering and shop system to digitally extend the brick-and-mortar business and reach new customer segments.",
     improvements: [
       "Performance optimization for fast load times",
@@ -126,7 +152,7 @@ export const projects: ProjectCardData[] = [
       "https://images.unsplash.com/photo-1591538519435-4578c3ba26d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXBlcm1hcmtldCUyMGJha2VyeSUyMHN0b3JlZnJvbnR8ZW58MXx8fHwxNzcyMjE0NzYxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     year: 2021,
     slug: "miso-supermarket",
-    service: "Web Design & Development",
+    service: "Web Infrastructure",
     category: "web",
     client: "Miso GmbH",
     link: "/services/web-design",
@@ -154,7 +180,7 @@ export const projects: ProjectCardData[] = [
       "https://images.unsplash.com/photo-1772037441147-5301691c4b57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWJzaXRlJTIwZGVzaWduJTIwbW9ja3VwfGVufDF8fHx8MTc3MjE0NzYyM3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     year: 2022,
     slug: "techvision-dashboard",
-    service: "Web Design & Development",
+    service: "Web Infrastructure",
     category: "web",
     client: "TechVision AG",
     link: "/services/web-design",
@@ -175,14 +201,14 @@ export const projects: ProjectCardData[] = [
       "A/B-tested landing pages for maximum conversions",
     ],
     problem:
-      "Startup without a clear brand identity — no recognition value, weak conversion rate, and no convincing digital presence for investors.",
+      "Startup without a clear brand identity — no recognition value, weak conversion rate, and no convincing online platform for investors.",
     solution:
       "Complete brand design, storytelling website with animated scroll experience, lead generation system, and optimized landing pages.",
     image:
       "https://images.unsplash.com/photo-1771792278518-1ae81427d1f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxib2xkJTIwdHlwb2dyYXBoeSUyMG1vdGlvbiUyMGRlc2lnbnxlbnwxfHx8fDE3NzIyMTQ3NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     year: 2023,
     slug: "bold-ideas",
-    service: "Web Design & Development",
+    service: "Web Infrastructure",
     category: "web",
     client: "Bold Ideas GmbH",
     link: "/services/web-design",
@@ -210,7 +236,7 @@ export const projects: ProjectCardData[] = [
       "https://images.unsplash.com/photo-1682778418768-16081e4470a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwd2Vic2l0ZSUyMGRlc2lnbnxlbnwxfHx8fDE3NzIxNzcxNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     year: 2024,
     slug: "bella-cucina",
-    service: "Web Design & Development",
+    service: "Web Infrastructure",
     category: "web",
     client: "Bella Cucina Ristorante",
     link: "/services/web-design",
@@ -220,7 +246,7 @@ export const projects: ProjectCardData[] = [
     description:
       "Full website redesign and conversion optimization for a leading German dental clinic chain, doubling their conversion rate from 5% to 11%.",
     overview:
-      "We had the opportunity to work with SmileforYou, a leading dental clinic chain specializing in orthodontics — from traditional braces to innovative Invisalign technology. Based on Google Analytics data revealing that the majority of traffic comes from mobile devices, we adopted a mobile-first strategy. We renewed their existing website, created specialized landing pages for SEO, and developed a brand-new digital presence that is user-friendly, informative, and aligned with SmileforYou's exceptional standards.",
+      "We had the opportunity to work with SmileforYou, a leading dental clinic chain specializing in orthodontics — from traditional braces to innovative Invisalign technology. Based on Google Analytics data revealing that the majority of traffic comes from mobile devices, we adopted a mobile-first strategy. We renewed their existing website, created specialized landing pages for SEO, and developed a brand-new online platform that is user-friendly, informative, and aligned with SmileforYou's exceptional standards.",
     goal: "Redesign and optimize the SmileforYou website with a mobile-first approach to significantly increase conversion rates and attract more patients through organic search.",
     improvements: [
       "Conversion rate doubled from 5% to 11%",
@@ -237,7 +263,7 @@ export const projects: ProjectCardData[] = [
     image: smileForYouImageSrc,
     year: 2023,
     slug: "smileforyou",
-    service: "Web Design & Development",
+    service: "Web Infrastructure",
     category: "web",
     client: "SmileforYou",
     link: "/services/web-design",
@@ -258,13 +284,13 @@ export const projects: ProjectCardData[] = [
       "Full project management with cross-team coordination",
     ],
     problem:
-      "A precision engineering company needed a sophisticated digital presence that could showcase their complex service portfolio in an engaging, interactive way while managing a multi-team development process.",
+      "A precision engineering company needed a sophisticated online platform that could showcase their complex service portfolio in an engaging, interactive way while managing a multi-team development process.",
     solution:
       "Fullstack WordPress website with custom jQuery animations, interactive bubble-based service visualization, cards navigation, and PHP backend — delivered through structured project management across a 4-person team.",
     image: hoffmannTechnikImageSrc,
     year: 2023,
     slug: "technik-hoffmann",
-    service: "Web Design & Development",
+    service: "Web Infrastructure",
     category: "web",
     client: "Hoffmann Technik",
     link: "/services/web-design",
@@ -287,11 +313,11 @@ export const projects: ProjectCardData[] = [
     problem:
       "An outdated website that no longer reflected the agency's expertise in digital marketing — lacking modern design, responsiveness, and visual appeal to attract potential clients.",
     solution:
-      "Full website redesign with a clean, responsive WordPress build that preserves the client's brand identity while delivering a compelling, modern digital presence worthy of a marketing agency.",
+      "Full website redesign with a clean, responsive WordPress build that preserves the client's brand identity while delivering a compelling, modern online platform worthy of a marketing agency.",
     image: wickieImageSrc,
     year: 2022,
     slug: "wickie-agency",
-    service: "Web Design & Development",
+    service: "Web Infrastructure",
     category: "web",
     client: "WICKIE Agentur",
     link: "/services/web-design",
@@ -318,7 +344,7 @@ export const projects: ProjectCardData[] = [
     image: digidogThreejsImageSrc,
     year: 2023,
     slug: "digidog-threejs",
-    service: "Web Design & Development",
+    service: "Web Infrastructure",
     category: "web",
     client: "Digidog (Internal)",
     link: "/services/web-design",
@@ -345,7 +371,7 @@ export const projects: ProjectCardData[] = [
     image: jobsvsImageSrc,
     year: 2022,
     slug: "jobsvs-recruitment",
-    service: "Web Design & Development",
+    service: "Web Infrastructure",
     category: "web",
     client: "JobsVS",
     link: "/services/web-design",
@@ -355,7 +381,7 @@ export const projects: ProjectCardData[] = [
     description:
       "Elegant website with eCommerce, online reservation, and culinary course booking for an authentic Italian restaurant bringing Genoa and Bologna flavors to Vienna.",
     overview:
-      "Mario is an Italian restaurant manager who wants to bring the culinary traditions of Genoa and Bologna to Vienna. His restaurant is not only a place to eat but also a place where people can experience the Italian atmosphere. Pasta is homemade daily, culinary courses are organized during the day, and high-quality products are imported directly from Italy and sold in the shop. Mario recognized the importance of a strong digital presence and asked DigiDog to build an elegant website with multiple functionalities while maintaining the light concept of the brand.",
+      "Mario is an Italian restaurant manager who wants to bring the culinary traditions of Genoa and Bologna to Vienna. His restaurant is not only a place to eat but also a place where people can experience the Italian atmosphere. Pasta is homemade daily, culinary courses are organized during the day, and high-quality products are imported directly from Italy and sold in the shop. Mario recognized the importance of a strong online platform and asked DigiDog to build an elegant website with multiple functionalities while maintaining the light concept of the brand.",
     goal: "Build an elegant, multi-functional website that increases brand awareness, creates an e-commerce store for premium Italian products, and allows customers to book tables or culinary courses online easily.",
     improvements: [
       "E-commerce store for premium Italian products",
@@ -366,13 +392,13 @@ export const projects: ProjectCardData[] = [
       "Digital marketing support for franchise expansion",
     ],
     problem:
-      "An authentic Italian restaurant in Vienna needed a strong digital presence to showcase their unique culinary experience, sell premium imported Italian products online, and enable easy table and course bookings.",
+      "An authentic Italian restaurant in Vienna needed a strong online platform to showcase their unique culinary experience, sell premium imported Italian products online, and enable easy table and course bookings.",
     solution:
       "An elegant, multi-functional website combining eCommerce for Italian products, online table reservations, culinary course bookings, and a brand-true design — with ongoing digital marketing support that contributed to franchise expansion into Germany.",
     image: cibariaItalianaImageSrc,
     year: 2021,
     slug: "cibaria-italiana",
-    service: "Web Design & Development",
+    service: "Web Infrastructure",
     category: "web",
     client: "Cibaria Italiana",
     link: "/services/web-design",
@@ -383,7 +409,7 @@ export const projects: ProjectCardData[] = [
     description:
       "Dynamic multi-website digital strategy for an Italian bar and food group in Vienna, enabling online reservations, worldwide product sales, and brand expansion.",
     overview:
-      "The Monte Ofelio Group was founded by the Formisano brothers, Dario and Luca, who come from rural Naples. Their goal was to bring the naturalness and sustainability of Italian products to Vienna and export traditional Italian foods to Austria. Their first store was inspired by the traditional Italian bar, where customers can enjoy breakfast and appetizers made exclusively with high-quality Italian products. After several years of success, the brothers decided to expand their business, planning to open more bars and bakeries in Vienna. To support this expansion, they needed a strong digital presence — DigiDog developed three different websites aligned with the group's market strategy, along with several brands connected to the Monte Ofelio Group.",
+      "The Monte Ofelio Group was founded by the Formisano brothers, Dario and Luca, who come from rural Naples. Their goal was to bring the naturalness and sustainability of Italian products to Vienna and export traditional Italian foods to Austria. Their first store was inspired by the traditional Italian bar, where customers can enjoy breakfast and appetizers made exclusively with high-quality Italian products. After several years of success, the brothers decided to expand their business, planning to open more bars and bakeries in Vienna. To support this expansion, they needed a strong online platform — DigiDog developed three different websites aligned with the group's market strategy, along with several brands connected to the Monte Ofelio Group.",
     goal: "Create a multi-website digital strategy that increases brand awareness, allows products to be sold worldwide online, and represents the authentic Italian atmosphere of the Monte Ofelio bars.",
     improvements: [
       "Three separate websites aligned with market strategy",
@@ -391,16 +417,16 @@ export const projects: ProjectCardData[] = [
       "E-commerce for worldwide product ordering",
       "Multiple brand identities under one group umbrella",
       "Social media management integration",
-      "Scalable digital presence for business expansion",
+      "Scalable online platform for business expansion",
     ],
     problem:
-      "A growing Italian food group in Vienna needed a cohesive multi-brand digital presence to support expansion into new locations, enable online product sales, and maintain their authentic Italian identity across multiple brands.",
+      "A growing Italian food group in Vienna needed a cohesive multi-brand online platform to support expansion into new locations, enable online product sales, and maintain their authentic Italian identity across multiple brands.",
     solution:
       "Three strategically aligned websites with online reservation, e-commerce capabilities, and integrated social media management — driving increased sales and exceeding initial project goals through collaborative digital marketing.",
     image: monteOfelioBarImageSrc,
     year: 2021,
     slug: "monte-ofelio-group",
-    service: "Web Design & Development",
+    service: "Web Infrastructure",
     category: "web",
     client: "Monte Ofelio Group",
     link: "/services/web-design",
@@ -430,7 +456,7 @@ export const projects: ProjectCardData[] = [
     image: jewelrySketchImageSrc,
     year: 2024,
     slug: "ai-jewelry-sketch",
-    service: "AI Solutions & Automation",
+    service: "Automation & AI",
     category: "ai",
     client: "Jewelry Business (Confidential)",
     link: "/services/ai-solutions",
@@ -458,7 +484,7 @@ export const projects: ProjectCardData[] = [
       "https://images.unsplash.com/photo-1769893841740-fc98ce39a3cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXRnZXNzJTIwYXBwJTIwbW9iaWxlJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc3MjI2MTY0N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     year: 2025,
     slug: "fitpulse-app",
-    service: "AI Solutions & Automation",
+    service: "Automation & AI",
     category: "ai",
     client: "FitPulse GmbH",
     link: "/services/ai-solutions",
@@ -486,7 +512,7 @@ export const projects: ProjectCardData[] = [
       "https://images.unsplash.com/photo-1757310998437-b2e8a7bd2e97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwY2hhdGJvdCUyMGludGVyZmFjZXxlbnwxfHx8fDE3NzIyNjEyOTR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     year: 2024,
     slug: "smartassist-chatbot",
-    service: "AI Solutions & Automation",
+    service: "Automation & AI",
     category: "ai",
     client: "SecureLife Insurance",
     link: "/services/ai-solutions",
@@ -514,7 +540,7 @@ export const projects: ProjectCardData[] = [
       "https://images.unsplash.com/photo-1623113879540-476117b4be1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydCUyMGhvbWUlMjBhdXRvbWF0aW9uJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc3MjMwODI0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     year: 2025,
     slug: "smarthome-iot",
-    service: "AI Solutions & Automation",
+    service: "Automation & AI",
     category: "ai",
     client: "NexaHome Technologies",
     link: "/services/ai-solutions",
@@ -543,7 +569,7 @@ export const projects: ProjectCardData[] = [
     image: hubspotCrmImageSrc,
     year: 2024,
     slug: "hubspot-dental-crm",
-    service: "Custom Software",
+    service: "Internal Tools",
     category: "software",
     client: "Dental Clinic Chain (Confidential)",
     link: "/services/custom-software",
@@ -570,7 +596,7 @@ export const projects: ProjectCardData[] = [
     image: beOriginalToursCoverImageSrc,
     year: 2024,
     slug: "beoriginaltours-operations",
-    service: "Custom Software",
+    service: "Internal Tools",
     category: "software",
     client: "BeOriginalTours",
     link: "/services/custom-software",
@@ -598,7 +624,7 @@ export const projects: ProjectCardData[] = [
       "https://images.unsplash.com/photo-1585144860106-998ca0f2922a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBmYXNoaW9uJTIwb25saW5lJTIwc2hvcHxlbnwxfHx8fDE3NzIyNjE2NDl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     year: 2025,
     slug: "luxe-mode",
-    service: "Custom Software",
+    service: "Internal Tools",
     category: "software",
     client: "Luxe Mode AG",
     link: "/services/custom-software",
@@ -626,7 +652,7 @@ export const projects: ProjectCardData[] = [
       "https://images.unsplash.com/photo-1627915589334-14a3c3e3a741?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50JTIwc29mdHdhcmV8ZW58MXx8fHwxNzcyMzA4MjQyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     year: 2024,
     slug: "logitrack-warehouse",
-    service: "Custom Software",
+    service: "Internal Tools",
     category: "software",
     client: "LogiTrack Logistics GmbH",
     link: "/services/custom-software",
@@ -654,7 +680,7 @@ export const projects: ProjectCardData[] = [
       "https://images.unsplash.com/photo-1747224317356-6dd1a4a078fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaGVhbHRoY2FyZSUyMHNvZnR3YXJlJTIwcGxhdGZvcm18ZW58MXx8fHwxNzcyMzA4MjQzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     year: 2023,
     slug: "mediconnect-praxis",
-    service: "Custom Software",
+    service: "Internal Tools",
     category: "software",
     client: "Group Practice Dr. Weber & Partners",
     link: "/services/custom-software",

@@ -6,14 +6,14 @@
     "statsTotalProjects": "Total Projects",
     "statsWebDevelopment": "Web Development",
     "statsAiIntegration": "AI Integration",
-    "statsCustomSoftware": "Custom Software",
+    "statsCustomSoftware": "Internal Tools",
     "sectionBadge": "All Projects",
     "sectionTitle": "Projects by Category",
     "sectionSubtitle": "Filter by category to discover the most relevant projects for you.",
     "filterAll": "All Projects",
     "filterWeb": "Web Development",
     "filterAi": "AI Integration",
-    "filterSoftware": "Custom Software",
+    "filterSoftware": "Internal Tools",
     "noProjects": "No projects found in this category."
   },
   "detail": {
@@ -33,6 +33,16 @@
     "client": "Client"
   },
   "projects": {
+    "digidog-ai-operations-system": {
+      "title": "DigiDog AI Operations System",
+      "description": "Our own infrastructure: 12+ SaaS tools replaced with AI-operated systems on a single VPS. $1,200/month → $210/month.",
+      "overview": "We run two businesses on this system — an AI operations company and a multi-city European tour operator. 12+ SaaS subscriptions replaced with AI-operated tools on a single VPS.",
+      "goal": "Replace a fragmented $1,200/month SaaS stack with a unified AI Operations System on owned infrastructure.",
+      "problem": "12+ SaaS subscriptions, data scattered across platforms, 25+ hours/week of manual workflows.",
+      "solution": "AI Operations System on a single VPS — custom CRM, AI agents, MCP orchestration, automated reporting. $210/month.",
+      "service": "AI Operations System",
+      "client": "DigiDog (Internal)"
+    },
     "united-nations-fp2030": {
       "title": "United Nations – FP2030",
       "description": "Design implementation for the United Nations FP2030 Progress Report website, featuring interactive Highcharts data visualizations and immersive parallax animations.",
@@ -40,7 +50,7 @@
       "goal": "Build a visually stunning, data-driven website for the United Nations FP2030 initiative that presents complex global health data through interactive charts and immersive animations.",
       "problem": "Complex global health data needed to be presented in an accessible, engaging way that would resonate with a worldwide audience.",
       "solution": "A visually stunning website combining interactive Highcharts data visualizations, captivating parallax animations, and user-centric design.",
-      "service": "Web Design & Development",
+      "service": "Web Infrastructure",
       "client": "United Nations – FP2030"
     },
     "mpa-online": {
@@ -50,7 +60,7 @@
       "goal": "Develop a fully functional streaming platform for medical education with structured video courses and seamless search.",
       "problem": "Medical assistants lacked a dedicated, structured platform to learn essential clinical skills through video-based education.",
       "solution": "A fullstack streaming platform built with Next.js and Strapi, featuring Vimeo video integration and MongoDB-powered search.",
-      "service": "Web Design & Development",
+      "service": "Web Infrastructure",
       "client": "MPA.online"
     },
     "miso-supermarket": {
@@ -60,7 +70,7 @@
       "goal": "Build a professional online presence with an integrated ordering and shop system.",
       "problem": "No online presence; customers couldn't pre-order — leading to long wait times and revenue loss.",
       "solution": "Responsive website with integrated online shop, real-time ordering system, and Google Maps integration.",
-      "service": "Web Design & Development",
+      "service": "Web Infrastructure",
       "client": "Miso GmbH"
     },
     "techvision-dashboard": {
@@ -70,7 +80,7 @@
       "goal": "Improve the dashboard through modern web development — focusing on performance, usability, and compliance.",
       "problem": "Outdated dashboard with poor UX — employees took too long to find key KPIs, and mobile use was impossible.",
       "solution": "Completely new UI/UX design with real-time data visualization, role-based access, and mobile view.",
-      "service": "Web Design & Development",
+      "service": "Web Infrastructure",
       "client": "TechVision AG"
     },
     "bold-ideas": {
@@ -80,7 +90,7 @@
       "goal": "Develop a strong brand identity and a storytelling-driven website that excites investors.",
       "problem": "Startup without a clear brand identity — no recognition value and weak conversion rate.",
       "solution": "Complete brand design, storytelling website with animated scroll experience and lead generation system.",
-      "service": "Web Design & Development",
+      "service": "Web Infrastructure",
       "client": "Bold Ideas GmbH"
     },
     "bella-cucina": {
@@ -90,17 +100,17 @@
       "goal": "Create an elegant, mobile-friendly website with online reservation and digital menu.",
       "problem": "Phone reservations overwhelmed staff; the old website was not mobile-friendly.",
       "solution": "Elegant responsive website with online reservation system, digital menu, and multilingual support.",
-      "service": "Web Design & Development",
+      "service": "Web Infrastructure",
       "client": "Bella Cucina Ristorante"
     },
     "smileforyou": {
       "title": "SmileforYou – Conversion Optimization",
       "description": "Full website redesign and conversion optimization for a leading German dental clinic chain, doubling their conversion rate from 5% to 11%.",
-      "overview": "We worked with SmileforYou, a leading dental clinic chain specializing in orthodontics. Based on mobile-first analytics data, we renewed their entire digital presence.",
+      "overview": "We worked with SmileforYou, a leading dental clinic chain specializing in orthodontics. Based on mobile-first analytics data, we renewed their entire online platform.",
       "goal": "Redesign the website with a mobile-first approach to significantly increase conversion rates.",
       "problem": "Outdated website with a low 5% conversion rate and poor mobile experience.",
       "solution": "Complete website redesign with mobile-first approach and SEO-optimized landing pages — resulting in a 120% conversion rate increase.",
-      "service": "Web Design & Development",
+      "service": "Web Infrastructure",
       "client": "SmileforYou"
     },
     "technik-hoffmann": {
@@ -108,9 +118,9 @@
       "description": "Complex fullstack website development for a German precision engineering company, featuring jQuery animated bubbles and cards view.",
       "overview": "This project involved a team of 2 developers, 1 designer, and 1 QA tester for a precision engineering company.",
       "goal": "Implement a complex, design-heavy corporate website with interactive jQuery animations.",
-      "problem": "A precision engineering company needed a sophisticated digital presence for their complex service portfolio.",
+      "problem": "A precision engineering company needed a sophisticated online platform for their complex service portfolio.",
       "solution": "Fullstack WordPress website with custom jQuery animations, interactive bubble-based service visualization.",
-      "service": "Web Design & Development",
+      "service": "Web Infrastructure",
       "client": "Hoffmann Technik"
     },
     "wickie-agency": {
@@ -120,7 +130,7 @@
       "goal": "Redesign and modernize WICKIE's website with a clean, responsive layout reflecting their brand.",
       "problem": "An outdated website that no longer reflected the agency's expertise in digital marketing.",
       "solution": "Full website redesign with a clean, responsive WordPress build preserving brand identity.",
-      "service": "Web Design & Development",
+      "service": "Web Infrastructure",
       "client": "WICKIE Agentur"
     },
     "digidog-threejs": {
@@ -130,7 +140,7 @@
       "goal": "Implement SEO-optimized design with integrated Three.js 3D animation on WordPress.",
       "problem": "Three.js animations conflicted with Elementor's rendering pipeline.",
       "solution": "Separate development, staged integration, and manual codebase adjustments for smooth 3D experience.",
-      "service": "Web Design & Development",
+      "service": "Web Infrastructure",
       "client": "Digidog (Internal)"
     },
     "jobsvs-recruitment": {
@@ -140,7 +150,7 @@
       "goal": "Implement a responsive, SEO-optimized recruitment website with Personio API integration.",
       "problem": "A recruitment agency needed automated job listing management to avoid manual data entry.",
       "solution": "Responsive website with Personio API integration for automatic job display and comprehensive SEO services.",
-      "service": "Web Design & Development",
+      "service": "Web Infrastructure",
       "client": "JobsVS"
     },
     "cibaria-italiana": {
@@ -148,9 +158,9 @@
       "description": "Elegant website with eCommerce, online reservation, and culinary course booking for an authentic Italian restaurant.",
       "overview": "Mario's restaurant brings culinary traditions of Genoa and Bologna to Vienna with homemade pasta and imported Italian products.",
       "goal": "Build an elegant website with e-commerce, reservation, and course booking while maintaining brand identity.",
-      "problem": "An authentic Italian restaurant needed a strong digital presence to showcase their culinary experience.",
+      "problem": "An authentic Italian restaurant needed a strong online platform to showcase their culinary experience.",
       "solution": "Multi-functional website combining eCommerce, online reservations, culinary course bookings, and brand-true design.",
-      "service": "Web Design & Development",
+      "service": "Web Infrastructure",
       "client": "Cibaria Italiana"
     },
     "monte-ofelio-group": {
@@ -158,9 +168,9 @@
       "description": "Dynamic multi-website digital strategy for an Italian bar and food group in Vienna.",
       "overview": "The Monte Ofelio Group was founded by the Formisano brothers to bring Italian sustainability and naturalness to Vienna.",
       "goal": "Create a multi-website digital strategy for brand awareness and worldwide online product sales.",
-      "problem": "A growing Italian food group needed a cohesive multi-brand digital presence for expansion.",
+      "problem": "A growing Italian food group needed a cohesive multi-brand online platform for expansion.",
       "solution": "Three strategically aligned websites with online reservation, e-commerce, and integrated social media management.",
-      "service": "Web Design & Development",
+      "service": "Web Infrastructure",
       "client": "Monte Ofelio Group"
     },
     "ai-jewelry-sketch": {
@@ -170,7 +180,7 @@
       "goal": "Eliminate manual sketch creation with end-to-end AI automation.",
       "problem": "Manual jewelry sketch creation from email requests consumed 5–10 hours daily.",
       "solution": "End-to-end AI automation in Make that reads emails, extracts requirements, and generates sketches 24/7.",
-      "service": "AI Solutions & Automation",
+      "service": "Automation & AI",
       "client": "Jewelry Business (Confidential)"
     },
     "fitpulse-app": {
@@ -180,7 +190,7 @@
       "goal": "Develop an AI-powered fitness app with adaptive training plans and gamification.",
       "problem": "Users abandoned generic training plans — lacking personalization and long-term motivation.",
       "solution": "AI-powered training plan engine with adaptive workouts, real-time tracking, and wearable integration.",
-      "service": "AI Solutions & Automation",
+      "service": "Automation & AI",
       "client": "FitPulse GmbH"
     },
     "smartassist-chatbot": {
@@ -190,7 +200,7 @@
       "goal": "Implement AI-powered customer communication that answers 80% of standard inquiries automatically.",
       "problem": "Overwhelmed customer service with long wait times — manual processing was expensive and slow.",
       "solution": "AI chatbot with NLP, automatic lead qualification, CRM integration, and sentiment analysis.",
-      "service": "AI Solutions & Automation",
+      "service": "Automation & AI",
       "client": "SecureLife Insurance"
     },
     "smarthome-iot": {
@@ -200,7 +210,7 @@
       "goal": "Develop an intelligent IoT platform that reduces energy consumption by 30% with predictive maintenance.",
       "problem": "High energy consumption due to manual control and no predictive maintenance.",
       "solution": "AI-controlled IoT platform with real-time energy optimization, predictive maintenance, and voice control.",
-      "service": "AI Solutions & Automation",
+      "service": "Automation & AI",
       "client": "NexaHome Technologies"
     },
     "hubspot-dental-crm": {
@@ -210,7 +220,7 @@
       "goal": "Implement a unified CRM system across 5 branches that standardizes patient workflows.",
       "problem": "Five branches with different workflows, no centralized CRM, and complex integration requirements.",
       "solution": "Enterprise HubSpot CRM with unified processes, IVORIS API integration, and Make.com automation.",
-      "service": "Custom Software",
+      "service": "Internal Tools",
       "client": "Dental Clinic Chain (Confidential)"
     },
     "beoriginaltours-operations": {
@@ -220,7 +230,7 @@
       "goal": "Automate the entire booking pipeline with a custom dashboard for full operational visibility.",
       "problem": "Manual booking processing and scattered scheduling across spreadsheets leading to errors.",
       "solution": "End-to-end automated architecture using Make.com, Python, MongoDB, Discord, and a custom Next.js dashboard.",
-      "service": "Custom Software",
+      "service": "Internal Tools",
       "client": "BeOriginalTours"
     },
     "luxe-mode": {
@@ -230,7 +240,7 @@
       "goal": "Build a custom e-commerce platform with AI-powered recommendations and optimized checkout.",
       "problem": "High cart abandonment rate and no personalized product suggestions.",
       "solution": "Custom e-commerce platform with AI recommendations, one-click checkout, and A/B-optimized funnel.",
-      "service": "Custom Software",
+      "service": "Internal Tools",
       "client": "Luxe Mode AG"
     },
     "logitrack-warehouse": {
@@ -240,7 +250,7 @@
       "goal": "Develop a scalable warehouse management solution reducing inventory errors by 95%.",
       "problem": "Manual inventory management with Excel — frequent errors, no real-time overview.",
       "solution": "Custom warehouse management software with real-time tracking, mobile barcode scanning, and shipping integration.",
-      "service": "Custom Software",
+      "service": "Internal Tools",
       "client": "LogiTrack Logistics GmbH"
     },
     "mediconnect-praxis": {
@@ -250,7 +260,7 @@
       "goal": "Replace outdated practice software with a modern, integrated solution.",
       "problem": "Outdated practice software without online booking — high administrative effort.",
       "solution": "Modern practice management software with online booking, digital records, billing module, and GDPR compliance.",
-      "service": "Custom Software",
+      "service": "Internal Tools",
       "client": "Group Practice Dr. Weber & Partners"
     }
   }
