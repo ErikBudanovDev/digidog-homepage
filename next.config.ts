@@ -181,6 +181,46 @@ const nextConfig: NextConfig = {
       { source: "/wp-content/:path*", destination: "/", permanent: true },
       { source: "/wp-includes/:path*", destination: "/", permanent: true },
       { source: "/wp-json/:path*", destination: "/", permanent: true },
+
+      // ═══════════════════════════════════════════════════════════════════
+      // === GSC audit 2026-04-23 — legacy URLs still indexed in Search Console
+      // Verified against blog-data.ts, blog-data-de.ts, and src/app routes.
+      // Source-of-truth: anything in GSC that isn't a live Next.js route and
+      // isn't already redirected above.
+      // ═══════════════════════════════════════════════════════════════════
+
+      // English legacy pages → closest live equivalent
+      { source: "/blog-en", destination: "/blog", permanent: true },
+      { source: "/blog-en/", destination: "/blog", permanent: true },
+      { source: "/data-privacy-2", destination: "/privacy", permanent: true },
+      { source: "/data-privacy-2/", destination: "/privacy", permanent: true },
+      { source: "/ai-automation", destination: "/ai-integration", permanent: true },
+      { source: "/ai-automation/", destination: "/ai-integration", permanent: true },
+      { source: "/how-to-start-building-a-website", destination: "/blog", permanent: true },
+      { source: "/how-to-start-building-a-website/", destination: "/blog", permanent: true },
+
+      // Stale English blog slug no longer in blog-data.ts (296 impressions / pos 75.9)
+      { source: "/blog/case-study-orthodontist-website-seo", destination: "/blog", permanent: true },
+      { source: "/blog/case-study-orthodontist-website-seo/", destination: "/blog", permanent: true },
+
+      // German legacy pages → closest live DE equivalent
+      { source: "/de/homepage-deutsch", destination: "/de", permanent: true },
+      { source: "/de/homepage-deutsch/", destination: "/de", permanent: true },
+      { source: "/de/marketing-fuer-kieferorthopaedie", destination: "/de/dienstleistungen/ki-loesungen", permanent: true },
+      { source: "/de/marketing-fuer-kieferorthopaedie/", destination: "/de/dienstleistungen/ki-loesungen", permanent: true },
+      { source: "/de/ai-automatisierung", destination: "/de/dienstleistungen/ki-loesungen", permanent: true },
+      { source: "/de/ai-automatisierung/", destination: "/de/dienstleistungen/ki-loesungen", permanent: true },
+      { source: "/de/unser-portfolio", destination: "/de/portfolio", permanent: true },
+      { source: "/de/unser-portfolio/", destination: "/de/portfolio", permanent: true },
+      { source: "/de/web-design-und-implementierung", destination: "/de/dienstleistungen/webdesign", permanent: true },
+      { source: "/de/web-design-und-implementierung/", destination: "/de/dienstleistungen/webdesign", permanent: true },
+      { source: "/de/kunstliche-intelligenz-im-marketing-anwendungen-und-vorteile", destination: "/de/blog", permanent: true },
+      { source: "/de/kunstliche-intelligenz-im-marketing-anwendungen-und-vorteile/", destination: "/de/blog", permanent: true },
+
+      // /de/projects/:slug — 8+ old WP project pages still indexed in GSC
+      // (karine-babajanyan, cibaria-italiana, kalami, kelso-well, monte, mpa-online, sofies-kosmetik, technik-hoffmann)
+      { source: "/de/projects/:slug", destination: "/de/portfolio", permanent: true },
+      { source: "/de/projects/:slug/", destination: "/de/portfolio", permanent: true },
     ];
   },
 
