@@ -6,6 +6,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPosts, getBlogPost } from "@/lib/blog-data";
+import { EN_TO_DE } from "@/lib/blog-slug-pairs";
 import BlogPostClient from "@/app/client-pages/BlogPostClient";
 
 interface Props {
@@ -21,16 +22,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPost(slug);
   if (!post) return { title: "Post Not Found" };
 
+  const dePair = EN_TO_DE[post.slug];
+  const languages: Record<string, string> = {
+    en: `/blog/${post.slug}`,
+    "x-default": `/blog/${post.slug}`,
+  };
+  if (dePair) languages.de = `/de/blog/${dePair}`;
+
   return {
     title: post.metaTitle,
     description: post.metaDescription,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: { canonical: `/blog/${post.slug}`, languages },
     openGraph: {
       title: post.metaTitle,
       description: post.metaDescription,
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
+      locale: "en_US",
+      ...(dePair ? { alternateLocale: ["de_DE"] } : {}),
       images: [{ url: post.image, width: 1200, height: 630 }],
     },
     twitter: {

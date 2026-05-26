@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import HomeDEClient from "@/app/client-pages/HomeDEClient";
 
 export const metadata: Metadata = {
-  title: "DigiDog — KI-Automatisierung & Webentwicklung Agentur",
+  title: "KI-Operations-Systeme für den Mittelstand",
   description:
-    "KI-Beratung und Full-Stack Webentwicklung für mittelständische Unternehmen. Maßgeschneiderte KI-Automatisierungen, Websites und Software.",
+    "Wir ersetzen aufgeblähte SaaS-Stacks durch KI-gestützte Operations-Systeme. Automatisierte Workflows, eigene Infrastruktur, planbare Kosten — gebaut für mittelständische Unternehmen.",
   alternates: {
     canonical: "/de",
     languages: {
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "DigiDog — KI-Automatisierung & Webentwicklung Agentur",
+    title: "KI-Operations-Systeme für den Mittelstand | Digidog",
     description:
-      "KI-Beratung und Full-Stack Webentwicklung für mittelständische Unternehmen. Maßgeschneiderte KI-Automatisierungen, Websites und Software.",
+      "Wir ersetzen aufgeblähte SaaS-Stacks durch KI-gestützte Operations-Systeme. Automatisierte Workflows, eigene Infrastruktur, planbare Kosten.",
     url: "/de",
     locale: "de_DE",
     alternateLocale: ["en_US"],

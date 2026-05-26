@@ -5,6 +5,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPostsDE, getBlogPostDE } from "@/lib/blog-data-de";
+import { DE_TO_EN } from "@/lib/blog-slug-pairs";
 import BlogPostDEClient from "@/app/client-pages/BlogPostDEClient";
 
 interface Props {
@@ -20,12 +21,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPostDE(slug);
   if (!post) return { title: "Beitrag nicht gefunden" };
 
+  const enPair = DE_TO_EN[post.slug];
+  const languages: Record<string, string> = {
+    de: `/de/blog/${post.slug}`,
+    "x-default": `/de/blog/${post.slug}`,
+  };
+  if (enPair) {
+    languages.en = `/blog/${enPair}`;
+    languages["x-default"] = `/blog/${enPair}`;
+  }
+
   return {
     title: post.metaTitle,
     description: post.metaDescription,
     alternates: {
       canonical: `/de/blog/${post.slug}`,
-      languages: { "de": `/de/blog/${post.slug}`, "x-default": `/de/blog/${post.slug}` },
+      languages,
     },
     openGraph: {
       title: post.metaTitle,
@@ -35,6 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       authors: [post.author],
       images: [{ url: post.image, width: 1200, height: 630 }],
       locale: "de_DE",
+      ...(enPair ? { alternateLocale: ["en_US"] } : {}),
     },
     twitter: {
       card: "summary_large_image",
