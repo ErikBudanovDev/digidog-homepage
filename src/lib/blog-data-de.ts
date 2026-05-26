@@ -450,12 +450,12 @@ Bei Digidog sind wir auf genau diesen Ansatz spezialisiert. Wir helfen Ihnen zu 
   /* ─── MCP-TUTORIALS ─── */
   {
     slug: "playwright-mcp-server-anleitung",
-    title: "Playwright MCP Server: Die vollständige Einrichtungsanleitung für 2026",
-    metaTitle: "Playwright MCP Server — Vollständige Einrichtung & Konfiguration 2026",
+    title: "Playwright MCP Server: Einrichten mit Claude Desktop, Cursor & VS Code (2026)",
+    metaTitle: "Playwright MCP Server: Setup für Claude Desktop, Cursor & VS Code",
     metaDescription:
-      "Erfahren Sie, wie Sie den Playwright MCP Server für Browser-Automatisierung mit KI einrichten. Schritt-für-Schritt-Anleitung für Installation, Claude Desktop, VS Code, Cursor und erweiterte Konfiguration.",
+      "Playwright MCP Server in 5 Minuten einrichten — funktioniert mit Claude Desktop, Cursor und VS Code. Schritt-für-Schritt-Konfiguration, Browser-Automatisierungs-Beispiele, Fehlerbehebung.",
     excerpt:
-      "Playwright MCP Server ermöglicht es KI-Assistenten, echte Browser über strukturierte Befehle zu steuern. Hier ist alles, was Sie für die Einrichtung brauchen.",
+      "Richten Sie Playwright MCP Server mit Claude Desktop, Cursor oder VS Code in unter 5 Minuten ein. Komplette Konfiguration, Automatisierungs-Beispiele und Lösungen für häufige Fehler.",
     content: `
 ## Was ist Playwright MCP Server?
 

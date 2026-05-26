@@ -331,12 +331,12 @@ At Digidog, we specialize in exactly this approach. We help you identify what to
   /* ─── MCP TUTORIALS (SEO GROWTH — Low KD targets) ─── */
   {
     slug: "playwright-mcp-server-complete-guide",
-    title: "Playwright MCP Server: The Complete Setup Guide for 2026",
-    metaTitle: "Playwright MCP Server — Setup & Configuration Guide 2026",
+    title: "Playwright MCP Server: Setup with Claude Desktop, Cursor & VS Code (2026)",
+    metaTitle: "Playwright MCP Server: Setup for Claude Desktop, Cursor & VS Code",
     metaDescription:
-      "Learn how to set up and configure Playwright MCP Server for browser automation with AI. Step-by-step guide covering installation, Claude Desktop, VS Code, Cursor, and advanced configuration.",
+      "Set up Playwright MCP Server in 5 minutes — works with Claude Desktop, Cursor, and VS Code. Step-by-step config, browser automation examples, troubleshooting common errors.",
     excerpt:
-      "Playwright MCP Server lets AI assistants control real browsers through structured commands. Here's everything you need to set it up — from installation to advanced configuration.",
+      "Set up Playwright MCP Server with Claude Desktop, Cursor, or VS Code in under 5 minutes. Complete config walkthrough, browser automation examples, and fixes for the errors everyone hits.",
     content: `
 ## What Is Playwright MCP Server?
 
