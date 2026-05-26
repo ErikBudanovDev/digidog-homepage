@@ -568,7 +568,7 @@ Beschreiben Sie Testszenarien in natürlicher Sprache:
 
 "Öffne unser CRM, erstelle einen neuen Kontakt mit diesen Details und weise ihn der Vertriebspipeline zu."
 
-Wenn Sie MCP für Ihr Unternehmen erkunden möchten, entwickeln wir maßgeschneiderte Integrationen von der Strategie bis zur Produktion. [Kostenloses Beratungsgespräch buchen](/contact).
+Wenn Sie MCP für Ihr Unternehmen erkunden möchten, entwickeln wir maßgeschneiderte Integrationen von der Strategie bis zur Produktion — sehen Sie unsere [KI-Integration-Dienstleistung](/de/dienstleistungen/ki-integration) oder [buchen Sie ein kostenloses Beratungsgespräch](https://calendly.com/erik-budanov/beratungsgespraech).
 
 ## Häufige Fragen
 
@@ -690,7 +690,7 @@ Prompt: "Lese den #product-planning-Thread vom gestrigen Meeting. Extrahiere all
 
 ## MCP bei Digidog
 
-Slack MCP ist eine von Dutzenden MCP-Integrationen, die wir für mittelständische Unternehmen entwickeln. [Kostenloses Beratungsgespräch buchen](/contact) um zu erkunden, was MCP für Ihr Team leisten kann.
+Slack MCP ist eine von Dutzenden MCP-Integrationen, die wir für mittelständische Unternehmen entwickeln. Sehen Sie unsere [KI-Integration-Dienstleistung](/de/dienstleistungen/ki-integration) oder [buchen Sie ein kostenloses Beratungsgespräch](https://calendly.com/erik-budanov/beratungsgespraech) um zu erkunden, was MCP für Ihr Team leisten kann.
     `,
     image: "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=1080&q=80",
     tag: "KI-Integration",
@@ -950,7 +950,7 @@ Neue Leads kommen über ein Web-Formular und werden in Supabase gespeichert. Ein
 
 Ein E-Commerce-Unternehmen nutzt Supabase zur Bestandsverfolgung. Ihr KI-Agent führt stündliche Prüfungen durch: "Finde alle Produkte, bei denen der Lagerbestand unter dem Nachbestellungsschwellenwert liegt."
 
-Wenn Sie Hilfe beim Aufbau eines benutzerdefinierten Supabase MCP Servers benötigen, [buchen Sie ein kostenloses Beratungsgespräch](/contact).
+Wenn Sie Hilfe beim Aufbau eines benutzerdefinierten Supabase MCP Servers benötigen, sehen Sie unsere [KI-Integration-Dienstleistung](/de/dienstleistungen/ki-integration) oder [buchen Sie ein kostenloses Beratungsgespräch](https://calendly.com/erik-budanov/beratungsgespraech).
     `,
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
     tag: "KI-Integration",
@@ -1198,7 +1198,7 @@ Die Mittelschicht — der "ich baue dir eine WordPress-Seite mit ein paar Custom
 
 ## Brauchst du Hilfe?
 
-Wenn du mit Vibe Coding startest und stecken bleibst, oder ein konkretes Projekt im Kopf hast und nicht weißt, wie du anfangen sollst: [Buche ein kostenloses KI-Operations-Audit](https://calendly.com/erik-budanov/beratungsgespraech). Wir gehen mit dir durch deinen Use Case und zeigen, wie weit du allein kommen kannst — und wo es sich lohnt, mit uns zusammenzuarbeiten.
+Wenn du mit Vibe Coding startest und stecken bleibst, oder ein konkretes Projekt im Kopf hast und nicht weißt, wie du anfangen sollst: Schau dir unsere [Individuelle Software-Dienstleistung](/de/dienstleistungen/individuelle-software) an, oder [buche ein kostenloses KI-Operations-Audit](https://calendly.com/erik-budanov/beratungsgespraech). Wir gehen mit dir durch deinen Use Case und zeigen, wie weit du allein kommen kannst — und wo es sich lohnt, mit uns zusammenzuarbeiten.
 `,
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1080&q=80",
     tag: "Vibe Coding",
@@ -1396,7 +1396,7 @@ Wenn du überlegst, welche Teile deines Stacks du zuerst auf Skills + MCP migrie
 
 Anthropic hat Skills Ende 2025 veröffentlicht, die Integrationsmuster werden noch entwickelt. Aber die Richtung ist klar: Mehr von dem, was wir heute "SaaS" nennen, werden lokale Anweisungen + gezielter API-Zugriff sein, nicht ausgewachsene Apps.
 
-Wenn du Hilfe dabei brauchst zu identifizieren, welche Teile deines Stacks durch Skills + MCP ersetzbar sind, [buche ein kostenloses KI-Operations-Audit](https://calendly.com/erik-budanov/beratungsgespraech).
+Wenn du Hilfe dabei brauchst zu identifizieren, welche Teile deines Stacks durch Skills + MCP ersetzbar sind, schau dir unsere [KI-Integration-Dienstleistung](/de/dienstleistungen/ki-integration) an, oder [buche ein kostenloses KI-Operations-Audit](https://calendly.com/erik-budanov/beratungsgespraech).
 
 ## Häufige Fragen
 
