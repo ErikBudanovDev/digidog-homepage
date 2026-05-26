@@ -929,6 +929,194 @@ Wenn Sie Hilfe beim Aufbau eines benutzerdefinierten Supabase MCP Servers benöt
     readTime: "9 Min. Lesezeit",
     keywords: ["supabase mcp server", "supabase mcp deutsch", "supabase ki integration", "mcp server datenbank"],
   },
+  {
+    slug: "claude-skills-vs-mcp-server",
+    title: "Claude Skills: Wie sie die Hälfte deiner MCP-Server ersetzen (2026)",
+    metaTitle: "Claude Skills vs MCP-Server: Wann welches nutzen (2026)",
+    metaDescription:
+      "Claude Skills sind Ordner mit Anleitungen, die Claude automatisch liest — kein Server nötig. Erfahre, wann du Skills nutzt, wann MCP, und wie du dein erstes Skill in 10 Minuten baust.",
+    excerpt:
+      "Anthropic hat Claude Skills veröffentlicht — Ordner mit Anleitungen, die Claude bei Bedarf liest. Sie ersetzen die Hälfte der Anwendungsfälle, für die wir früher MCP-Server brauchten. Hier ist die Anleitung.",
+    content: `
+## Was sind Claude Skills?
+
+Ein Claude Skill ist ein Ordner, der eine \`SKILL.md\`-Datei enthält (mit optionalen Skripten, Vorlagen und Referenzdokumenten). Claude liest das Skill *automatisch*, wenn die Beschreibung zu dem passt, was du gerade machst — und folgt dann den Anweisungen darin.
+
+Das war's. Kein Server. Kein API-Key. Kein Deployment. Nur ein Ordner mit Markdown.
+
+Wenn du jemals Claude beibringen wolltest, "so schreiben wir Unternehmens-Memos" oder "verwende immer diese Design-Tokens für React-Komponenten" oder "folge dieser 5-Schritte-Checkliste vor jedem Deploy" — dann sind Skills die Antwort. Sie sind der sauberste Weg, Claude langlebiges, wiederverwendbares Wissen zu geben, ohne deine Prompts aufzublähen.
+
+## Wie Skills funktionieren
+
+Jedes Skill hat die gleiche Struktur:
+
+\`\`\`
+mein-skill/
+├── SKILL.md           # erforderlich: Anweisungen + Auslöser
+├── scripts/           # optional: Code, den Claude ausführen kann
+│   └── helper.py
+├── templates/         # optional: Referenzdateien
+│   └── memo.docx
+└── examples/          # optional: Beispielausgaben
+\`\`\`
+
+Die \`SKILL.md\` hat einen YAML-Frontmatter und einen Markdown-Body:
+
+\`\`\`markdown
+---
+name: firmen-memo
+description: Dieses Skill verwenden, wenn der Nutzer ein Firmen-Memo, eine
+  interne Ankündigung oder formelle Kommunikation schreiben möchte. Wird ausgelöst
+  durch "Memo schreiben", "Ankündigung verfassen", "ans Team senden".
+---
+
+# Firmen-Memo Skill
+
+Memos folgen dieser Struktur:
+- Einzeilige Betreffzeile (unter 60 Zeichen)
+- TL;DR im ersten Absatz
+- Maximal drei Abschnitte: Kontext, Entscheidung, Aktionspunkte
+- Mit "— [Autor], [Position]" unterschreiben
+
+Verwende immer templates/memo.docx als Basisformat.
+\`\`\`
+
+Wenn die Trigger in der Beschreibung zur Anfrage passen, liest Claude die gesamte \`SKILL.md\`, folgt den Anweisungen und produziert Output, der den Standards des Skills entspricht.
+
+## Skills vs MCP-Server: Der echte Unterschied
+
+Beide erweitern, was Claude kann — aber sie lösen verschiedene Probleme:
+
+| | **Skills** | **MCP-Server** |
+|---|---|---|
+| **Was es ist** | Ordner mit Markdown + optionalem Code | Laufender HTTP-Server mit Tools |
+| **Wo es lebt** | Auf der Festplatte, zur Laufzeit gelesen | Auf einem Server, per API aufgerufen |
+| **Am besten für** | Anweisungen, Vorlagen, Workflows | Live-Daten, externe APIs, Echtzeit-Abfragen |
+| **Setup-Zeit** | 5 Minuten (Markdown schreiben) | 2-3 Stunden (Server bauen + deployen) |
+| **Netzwerk nötig** | Nein | Ja |
+| **Drittanbieter-Zugriff** | Nein (privat) | Ja (je nach API) |
+| **Anwendungsfälle** | Schreibstil, Design-System, Code-Style | Gmail lesen, Postgres abfragen, Slack posten |
+
+Die einfache Regel:
+
+- **Skill nutzen, wenn** die Aufgabe "diese Anweisungen befolgen" oder "diese Vorlage nutzen" lautet.
+- **MCP-Server nutzen, wenn** die Aufgabe "diese Live-Daten holen" oder "diese Änderung im externen System machen" lautet.
+
+## Die Built-in Skills von Anthropic
+
+Aus der Box hat Claude Zugriff auf mehrere Skills für gängige Workflows:
+
+- **\`docx\`** — Word-Dokumente erstellen, bearbeiten und lesen. Handhabt Stile, Tabellen, Seitenzahlen, Briefköpfe.
+- **\`pptx\`** — PowerPoint-Decks mit konsistenter Formatierung und Sprechernotizen.
+- **\`xlsx\`** — Excel-Dateien generieren, inklusive Formeln, Diagrammen und mehreren Tabellenblättern.
+- **\`pdf\`** — PDFs erstellen, ausfüllen, mergen, splitten, mit Wasserzeichen versehen, OCR.
+- **\`frontend-design\`** — Production-Grade UI-Patterns und Design-Tokens für React/HTML.
+- **\`pdf-reading\`** — Text, Bilder und Tabellen aus PDFs extrahieren (auch gescannte).
+
+Deshalb kann Claude jetzt ein poliertes Word-Dokument oder PowerPoint-Deck produzieren, ohne dass du jedes Formatierungsdetail spezifizieren musst.
+
+## Wann du Skills nutzen solltest (Echte Beispiele)
+
+### 1. Schreibstile und Standards
+
+Wenn dein Team eine bestimmte Art zu schreiben hat — Ton, Terminologie, Struktur, Verbote — ist das ein Skill. Einmal schreiben, Claude folgt für immer.
+
+### 2. Wiederkehrende Workflows
+
+Alles, was du jede Woche mit den gleichen Schritten machst. Kunden-Onboarding-Checkliste. Deploy-Prozedur. Code-Review-Checkliste. Wöchentlicher Statusbericht.
+
+### 3. Projekt-Kontext
+
+Persistenter Kontext, der nicht in einen Prompt passt. Wir nutzen Skills für laufende Kundenprojekte — den vollständigen Tech-Stack, wichtige Kontakte, Repository-Struktur, offene Probleme.
+
+### 4. Vorlagen mit Logik
+
+Vorlagen, die nicht nur Dateien sind, sondern auch "so füllst du sie aus"-Regeln enthalten.
+
+## Wann du immer noch MCP brauchst
+
+Skills sind mächtig, aber statisch. Sie können nicht:
+
+- Live-Daten abfragen (gestriger Umsatz, aktuelles Wetter, dein Posteingang)
+- Aktionen in externen Systemen ausführen (E-Mail senden, Jira-Ticket erstellen, Code deployen)
+- Auf Drittanbieter-APIs zugreifen (Stripe, GitHub, Salesforce, Google Search Console)
+- Status über Konversationen hinweg halten
+
+Dafür brauchst du einen MCP-Server. Die gute Nachricht: **Skills und MCP-Server lassen sich kombinieren.** Du kannst ein Skill haben, das sagt "wenn der Nutzer Umsatzanalyse anfragt, nutze das \`stripe_get_payments\` MCP-Tool, formatiere als Markdown-Tabelle und kommentiere mit unserer Standard-Struktur."
+
+Das ist tatsächlich das mächtigste Muster. Skills liefern den *Workflow*, MCP-Server liefern die *Daten*.
+
+## Dein erstes Skill in 10 Minuten erstellen
+
+Schritt 1 — Ordner erstellen:
+
+\`\`\`bash
+mkdir -p ~/.claude/skills/mein-erstes-skill
+\`\`\`
+
+Schritt 2 — SKILL.md schreiben:
+
+\`\`\`markdown
+---
+name: meeting-zusammenfassung
+description: Dieses Skill nutzen, wenn der Nutzer Meeting-Notizen oder
+  Call-Transkripte zusammenfassen möchte. Wird ausgelöst durch "Meeting
+  zusammenfassen", "Aktionspunkte extrahieren", "was haben wir entschieden".
+---
+
+# Meeting-Zusammenfassungs-Skill
+
+Erstelle immer eine Zusammenfassung mit genau diesen Abschnitten:
+
+## Getroffene Entscheidungen
+- Stichpunkt-Liste, eine Entscheidung pro Zeile
+- Inkl. Verantwortlicher
+
+## Aktionspunkte
+- Format: [Verantwortlicher] - [Aktion] - [Fällig]
+
+## Offene Fragen
+- Alles Ungelöste
+
+## Nächstes Meeting
+- Datum falls erwähnt
+\`\`\`
+
+Schritt 3 — Teste es. Öffne Claude, paste ein Meeting-Transkript, frag "fasse dieses Meeting zusammen." Das Skill wird automatisch ausgelöst.
+
+Fünf Minuten Arbeit, und Claude hat einen wiederverwendbaren Workflow, der jedes Mal konsistenten Output produziert.
+
+## Die praktische Konsequenz für SaaS
+
+Hier wird's aus geschäftlicher Sicht interessant.
+
+Viele SaaS-Tools heute sind im Grunde teure UIs um die Workflows anderer Leute. Notion-Vorlagen. Asana-Projektstrukturen. Sales-Playbooks. E-Mail-Sequenzen. Onboarding-Checklisten. Unternehmen zahlen 20-200€/Monat pro Nutzer für Produkte, die hauptsächlich eine bestimmte Arbeitsweise erzwingen.
+
+Skills ersetzen dieses Muster zu Quasi-Null-Kosten. Ein Skill, das dein Sales-Playbook definiert, kostet nichts beim "Deploy", kann durch Bearbeitung einer Markdown-Datei aktualisiert werden und läuft in deinem KI-Assistenten statt in einem weiteren Tool, in das sich alle einloggen müssen.
+
+Für interne Workflows — Onboarding, Dokumentation, Reporting, Standardverfahren — werden Skills innerhalb von 12 Monaten einen bedeutenden Teil des SaaS-Stacks ersetzen. Unternehmen, die das früh erkennen, arbeiten mit weniger Tools und schnelleren Zyklen.
+
+## Was als Nächstes
+
+Wenn du überlegst, welche Teile deines Stacks du zuerst auf Skills + MCP migrieren solltest, ist die grobe Reihenfolge:
+
+1. **Interne Dokumentations-Tools** — Notion-Vorlagen, Confluence-Seiten → Skills
+2. **Standard-Arbeitsanweisungen** — How-Tos, Checklisten → Skills
+3. **Leichtes Reporting** — Wöchentliche Statusberichte → Skills + MCP (für Daten)
+4. **Kommunikations-Vorlagen** — Outreach-E-Mails, Follow-ups, Angebote → Skills
+
+Anthropic hat Skills Ende 2025 veröffentlicht, die Integrationsmuster werden noch entwickelt. Aber die Richtung ist klar: Mehr von dem, was wir heute "SaaS" nennen, werden lokale Anweisungen + gezielter API-Zugriff sein, nicht ausgewachsene Apps.
+
+Wenn du Hilfe dabei brauchst zu identifizieren, welche Teile deines Stacks durch Skills + MCP ersetzbar sind, [buche ein kostenloses KI-Operations-Audit](https://calendly.com/erik-budanov/beratungsgespraech).
+`,
+    image: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1080&q=80",
+    tag: "KI-Integration",
+    category: "ai",
+    author: "Erik Budanov",
+    date: "2026-05-26",
+    readTime: "9 Min. Lesezeit",
+    keywords: ["claude skills", "claude skills deutsch", "claude skills vs mcp", "anthropic skills", "claude skills tutorial"],
+  },
 ];
 
 export function getBlogPostDE(slug: string): BlogPost | undefined {

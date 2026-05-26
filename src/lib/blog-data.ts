@@ -1339,6 +1339,214 @@ If you want help building a custom Supabase MCP server for your specific use cas
     readTime: "10 min read",
     keywords: ["supabase mcp server", "supabase mcp", "supabase ai integration", "mcp server database", "supabase automation"],
   },
+  {
+    slug: "claude-skills-vs-mcp-servers",
+    title: "Claude Skills: How They Replace Half of Your MCP Servers (2026 Guide)",
+    metaTitle: "Claude Skills vs MCP Servers: When to Use Which (2026)",
+    metaDescription:
+      "Claude Skills are folders of instructions Claude reads automatically — no server required. Learn when to use Skills, when to use MCP, and how to build your first skill in 10 minutes.",
+    excerpt:
+      "Anthropic shipped Claude Skills — folders of instructions Claude reads on demand. They replace half the use cases we used to need MCP servers for. Here's when to use which, and how to build one.",
+    content: `
+## What Are Claude Skills?
+
+A Claude Skill is a folder containing a single \`SKILL.md\` file (with optional supporting scripts, templates, and reference docs). Claude reads the skill *automatically* when its description matches what you're trying to do, then follows the instructions inside.
+
+That's it. No server. No API key. No deployment. Just a folder with markdown.
+
+If you've ever wanted to teach Claude "here's exactly how to write our company memos" or "always use these design tokens when building React components" or "follow this 5-step checklist before deploying" — Skills are the answer. They're the cleanest way to give Claude long-lived, reusable knowledge that doesn't bloat your prompts.
+
+## How Skills Actually Work
+
+Every skill has the same structure:
+
+\`\`\`
+my-skill/
+├── SKILL.md           # required: instructions + when to trigger
+├── scripts/           # optional: code Claude can run
+│   └── helper.py
+├── templates/         # optional: reference files
+│   └── memo.docx
+└── examples/          # optional: example outputs
+\`\`\`
+
+The \`SKILL.md\` file has a YAML frontmatter and markdown body:
+
+\`\`\`markdown
+---
+name: company-memo
+description: Use this skill whenever the user asks to write a company memo,
+  internal announcement, or formal communication. Triggers on phrases like
+  "draft a memo", "write an announcement", "send to the team".
+---
+
+# Company Memo Skill
+
+Memos follow this structure:
+- One-line subject (under 60 chars)
+- TL;DR in the first paragraph
+- Three sections max: Context, Decision, Action Items
+- Sign with "— [Author], [Title]"
+
+Always use templates/memo.docx as the base format.
+\`\`\`
+
+When the description's trigger phrases match the user's request, Claude reads the entire \`SKILL.md\`, follows the instructions, and produces output that matches the skill's standards.
+
+## Skills vs MCP Servers: The Real Difference
+
+Both Skills and MCP servers extend what Claude can do. But they solve different problems:
+
+| | **Skills** | **MCP Servers** |
+|---|---|---|
+| **What it is** | A folder with markdown + optional code | A running HTTP server exposing tools |
+| **Lives where** | On disk, read at runtime | On a server, called via API |
+| **Best for** | Instructions, templates, workflows | Live data, external APIs, real-time queries |
+| **Setup time** | 5 minutes (write markdown) | 2-3 hours (build + deploy server) |
+| **Network required** | No | Yes |
+| **Third-party access** | No (private to you) | Yes (depends on the API) |
+| **Example use cases** | "How to write our reports", design system rules, code style guide | Read Gmail, query Postgres, post to Slack, fetch from Google Search Console |
+
+The simplest rule:
+
+- **Use a Skill if** the task is "follow these instructions" or "use this template."
+- **Use an MCP server if** the task is "go fetch this live data" or "make this change in an external system."
+
+## The Built-In Skills Anthropic Ships
+
+Out of the box, Claude has access to several skills designed for common workflows:
+
+- **\`docx\`** — Create, edit, and read Word documents (.docx). Handles styles, tables, page numbers, letterheads.
+- **\`pptx\`** — Build PowerPoint decks with consistent formatting and speaker notes.
+- **\`xlsx\`** — Generate Excel files, including formulas, charts, and multi-sheet workbooks.
+- **\`pdf\`** — Create, fill, merge, split, watermark, and OCR PDFs.
+- **\`frontend-design\`** — Production-grade UI patterns and design tokens for React/HTML output.
+- **\`pdf-reading\`** — Extract text, images, and tables from PDFs (including scanned ones).
+- **\`file-reading\`** — Decide which tool to use for which file type (PDF, docx, xlsx, archives, ebooks).
+
+These are why Claude can now produce a polished Word doc or PowerPoint deck without you specifying every formatting detail. The Skills do the heavy lifting.
+
+## When to Use Skills (Real Examples)
+
+### 1. Style guides and writing standards
+
+If your team has a specific way of writing — voice, terminology, structure, no-no phrases — that's a Skill. Write it once, Claude follows it forever.
+
+\`\`\`markdown
+---
+name: digidog-blog-style
+description: Use when writing blog posts for DigiDog. Triggers on "write a blog post",
+  "draft an article", or any content creation task for digidog.org.
+---
+
+DigiDog blog style:
+- Direct, opinionated, no buzzwords
+- Open with the problem, not the solution
+- Code examples must be runnable
+- Always include a comparison table or list
+- End with a real CTA, never "let me know if you have questions"
+\`\`\`
+
+### 2. Recurring workflows
+
+Anything you do every week that has the same steps. Customer onboarding checklist. Deploy procedure. Code review checklist. Weekly status report format.
+
+### 3. Project context
+
+Persistent context that doesn't fit in a prompt. We use skills for ongoing client projects — the full stack details, key contacts, repository structure, ongoing issues. Claude reads it automatically when we mention the project name.
+
+### 4. Templates with logic
+
+Templates that aren't just files but also include "here's how to fill it out" rules. Company memo template + the actual structural rules for memos. A pitch deck template + the narrative arc that must be followed.
+
+## When You Still Need MCP
+
+Skills are powerful but they're static. They can't:
+
+- Query live data (yesterday's revenue, current weather, your inbox)
+- Take actions in external systems (send an email, create a Jira ticket, deploy code)
+- Access third-party APIs (Stripe, GitHub, Salesforce, Google Search Console)
+- Maintain state across conversations (search history, user preferences, cached results)
+
+For any of those, you need an MCP server. The good news: **Skills and MCP servers compose**. You can have a Skill that says "when the user asks for revenue analysis, use the \`stripe_get_payments\` MCP tool, format the output as a Markdown table, and add commentary using our standard structure."
+
+That's actually the most powerful pattern. Skills provide the *workflow*, MCP servers provide the *data*.
+
+## How to Create Your First Skill (10 Minutes)
+
+If you're using Claude Code or Claude Desktop, you can drop skills into your \`~/.claude/skills/\` directory (Claude Code) or configure them in your settings. For Claude API access, you upload skills via the project.
+
+Step 1 — Create the folder:
+
+\`\`\`bash
+mkdir -p ~/.claude/skills/my-first-skill
+\`\`\`
+
+Step 2 — Write the SKILL.md:
+
+\`\`\`markdown
+---
+name: my-first-skill
+description: Use this skill when the user asks to summarize meeting notes
+  or call transcripts. Triggers on "summarize this meeting", "extract action
+  items", "what did we decide", or when given a transcript.
+---
+
+# Meeting Summary Skill
+
+Always produce a summary with exactly these sections:
+
+## Decisions Made
+- Bullet list, one decision per line
+- Include who owns the decision
+
+## Action Items
+- Format: [Owner] - [Action] - [Due]
+- If no due date mentioned, use "No deadline set"
+
+## Open Questions
+- Anything left unresolved
+- Tag with @[person] if a specific person needs to answer
+
+## Next Meeting
+- Date if mentioned, otherwise "TBD"
+\`\`\`
+
+Step 3 — Test it. Open Claude, paste a meeting transcript, and ask "summarize this meeting." The skill triggers automatically because the description matches.
+
+That's the whole loop. Five minutes of work, and Claude now has a reusable workflow that produces consistent output every time.
+
+## The Practical Implication for SaaS
+
+This is where it gets interesting from a business perspective.
+
+A lot of SaaS tools today are essentially expensive UIs wrapped around someone else's workflow. Notion templates. Asana project structures. Sales playbooks. Email sequences. Onboarding checklists. People pay $20-$200/month per user for products that mostly enforce a specific way of doing things.
+
+Skills replace that pattern at near-zero cost. A Skill defining your sales playbook costs nothing to "deploy," can be updated by editing one markdown file, and runs inside your AI assistant rather than requiring everyone to log in to yet another tool.
+
+For internal workflows — onboarding, documentation, reporting, standard procedures — Skills will eat a meaningful chunk of the SaaS stack within 12 months. The companies that recognize this early will operate with fewer tools and faster cycles.
+
+## What's Next
+
+If you're thinking about which parts of your stack to migrate to Skills + MCP first, the rough order is:
+
+1. **Internal documentation tools** — Notion templates, Confluence pages → Skills
+2. **Standard operating procedures** — How-to guides, checklists → Skills
+3. **Light reporting** — Weekly status reports, dashboards → Skills + MCP (for data)
+4. **Communication templates** — Outreach emails, follow-ups, proposals → Skills
+
+The integration patterns are still being figured out — Anthropic only shipped Skills in late 2025 — but the direction is clear: more of what we call "SaaS" today will be local instructions + targeted API access, not full-blown apps.
+
+If you want help mapping which parts of your stack are replaceable with Skills + MCP (and which still need real software), [book a free AI Operations Audit](https://calendly.com/erik-budanov/beratungsgespraech). We'll go through your current tools and show you exactly where the cost can come out.
+`,
+    image: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1080&q=80",
+    tag: "AI Integration",
+    category: "ai",
+    author: "Erik Budanov",
+    date: "2026-05-26",
+    readTime: "9 min read",
+    keywords: ["claude skills", "what are claude skills", "claude skills vs mcp", "anthropic claude skills", "claude skills tutorial", "how to create claude skill"],
+  },
   /* ─── VIBE CODING + VPS ─── */
   {
     slug: "vibe-coding-vps-build-deploy-app-with-ai",
