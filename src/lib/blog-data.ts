@@ -1380,7 +1380,7 @@ If you want help building a custom Supabase MCP server for your specific use cas
     excerpt:
       "Anthropic shipped Claude Skills — folders of instructions Claude reads on demand. They replace half the use cases we used to need MCP servers for. Here's when to use which, and how to build one.",
     content: `
-**Quick answer**: Claude Skills are folders of instructions (a SKILL.md file plus optional code or templates) that Claude reads automatically when its description matches your request. They were introduced by Anthropic in 2025 and require no server, API key, or deployment. Skills are best for instructions, templates, and workflows. MCP servers are best for live data and external APIs. The two compose well: Skills define the workflow, MCP servers fetch the data.
+**Quick answer**: Claude Skills are folders of instructions (a SKILL.md file plus optional code or templates) that Claude reads automatically when its description matches your request. Anthropic launched them on October 16, 2025, then released the Agent Skills specification as an open standard in December 2025. Skills require no server, API key, or deployment. They are best for instructions, templates, and workflows. MCP servers are best for live data and external APIs. The two compose well: Skills define the workflow, MCP servers fetch the data.
 
 ## What Are Claude Skills?
 
@@ -1389,6 +1389,14 @@ A Claude Skill is a folder containing a single \`SKILL.md\` file (with optional 
 That's it. No server. No API key. No deployment. Just a folder with markdown.
 
 If you've ever wanted to teach Claude "here's exactly how to write our company memos" or "always use these design tokens when building React components" or "follow this 5-step checklist before deploying" — Skills are the answer. They're the cleanest way to give Claude long-lived, reusable knowledge that doesn't bloat your prompts.
+
+## Why Skills Matter — Anthropic's Own Numbers
+
+Skills are not a side feature. According to [internal research Anthropic published in December 2025](https://venturebeat.com/technology/anthropic-launches-enterprise-agent-skills-and-opens-the-standard), the company's own engineers used Claude in **60% of their work** and reported a **50% productivity boost** — a two-to-threefold increase over the prior year. Notably, **27% of that Claude-assisted work was tasks that would not have been done otherwise** — internal tools, documentation, and "papercuts" employees called perpetually deprioritized.
+
+That last number is the interesting one. Skills aren't just speeding up existing work; they're making it economical to do work that previously got skipped.
+
+Industry analysts agree this matters. As Arun Chandrasekaran, an analyst at Gartner, told AI Business: "For many of the business use cases that require human input, now you can actually have an AI model with the skill go ahead and do that action on your behalf." That's the practical difference between a chatbot and a workflow tool — and Skills are how Claude crosses that line.
 
 ## How Skills Actually Work
 
@@ -1569,7 +1577,7 @@ If you're thinking about which parts of your stack to migrate to Skills + MCP fi
 3. **Light reporting** — Weekly status reports, dashboards → Skills + MCP (for data)
 4. **Communication templates** — Outreach emails, follow-ups, proposals → Skills
 
-The integration patterns are still being figured out — Anthropic only shipped Skills in late 2025 — but the direction is clear: more of what we call "SaaS" today will be local instructions + targeted API access, not full-blown apps.
+The integration patterns are still being figured out — Anthropic shipped Skills in October 2025 and turned the Agent Skills spec into an open standard that December — but the direction is clear: more of what we call "SaaS" today will be local instructions + targeted API access, not full-blown apps.
 
 If you want help mapping which parts of your stack are replaceable with Skills + MCP (and which still need real software), [book a free AI Operations Audit](https://calendly.com/erik-budanov/beratungsgespraech). We'll go through your current tools and show you exactly where the cost can come out.
 
@@ -1585,7 +1593,7 @@ No. Skills are folders of markdown instructions read at runtime. MCP servers are
 
 ### When did Anthropic release Claude Skills?
 
-Anthropic introduced Claude Skills in 2025 as part of expanding how developers and teams can customize Claude's behavior beyond the system prompt. Skills are supported in Claude Code, Claude Desktop, and through the Claude API.
+Anthropic launched Claude Skills on October 16, 2025. In December 2025, the company released the Agent Skills specification as an open standard — similar to how it had previously open-sourced the Model Context Protocol — and partnered with Atlassian, Canva, Figma, Notion, Stripe, and other vendors to ship a prebuilt skills directory.
 
 ### Where do I install Claude Skills?
 
@@ -1605,7 +1613,7 @@ Yes. Skills are just folders of files, so you can commit them to a Git repositor
     faqs: [
       { question: "What is a Claude Skill?", answer: "A Claude Skill is a folder containing a SKILL.md file with instructions Claude reads automatically when the file's description matches the user's request. Skills can include optional scripts, templates, and reference documents. They require no server, API key, or deployment." },
       { question: "Are Claude Skills the same as MCP servers?", answer: "No. Skills are folders of markdown instructions read at runtime. MCP servers are running HTTP services that expose tools the AI can call. Skills are best for workflows and templates. MCP servers are best for live data and external API access. They compose well — Skills define the workflow, MCP servers fetch the data." },
-      { question: "When did Anthropic release Claude Skills?", answer: "Anthropic introduced Claude Skills in 2025 as part of expanding how developers and teams can customize Claude's behavior beyond the system prompt. Skills are supported in Claude Code, Claude Desktop, and through the Claude API." },
+      { question: "When did Anthropic release Claude Skills?", answer: "Anthropic launched Claude Skills on October 16, 2025. In December 2025, the company released the Agent Skills specification as an open standard — similar to how it had previously open-sourced the Model Context Protocol — and partnered with Atlassian, Canva, Figma, Notion, Stripe, and other vendors to ship a prebuilt skills directory." },
       { question: "Where do I install Claude Skills?", answer: "Personal skills live in your local Claude Code or Claude Desktop directory (typically ~/.claude/skills/). API users upload skills through their project configuration. Each skill is one folder containing a SKILL.md file and any supporting files." },
       { question: "Can I share a Claude Skill with my team?", answer: "Yes. Skills are just folders of files, so you can commit them to a Git repository or share via any file-sharing method. Many marketing and engineering teams maintain Skill repositories that all members install locally for consistent AI behavior across the team." },
     ],
