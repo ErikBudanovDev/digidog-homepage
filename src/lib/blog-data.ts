@@ -20,6 +20,7 @@ export interface BlogPost {
   date: string;
   readTime: string;
   keywords: string[];
+  faqs?: { question: string; answer: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -338,6 +339,8 @@ At Digidog, we specialize in exactly this approach. We help you identify what to
     excerpt:
       "Set up Playwright MCP Server with Claude Desktop, Cursor, or VS Code in under 5 minutes. Complete config walkthrough, browser automation examples, and fixes for the errors everyone hits.",
     content: `
+**Quick answer**: Playwright MCP Server is an open-source bridge built by Microsoft that lets AI assistants like Claude, ChatGPT, and Cursor control real web browsers through structured commands. Installation takes about 5 minutes with \`npx @playwright/mcp@latest\` and a JSON config entry in your AI client. Microsoft released it in 2024 under Apache 2.0 license.
+
 ## What Is Playwright MCP Server?
 
 Playwright MCP Server is a bridge between AI assistants and real web browsers. Built by Microsoft on top of their Playwright testing framework, it exposes browser automation capabilities through the Model Context Protocol (MCP) — the open standard that lets AI tools interact with external services.
@@ -586,6 +589,28 @@ At Digidog, we use MCP extensively — not just Playwright MCP, but custom MCP s
 Playwright MCP is one piece of the puzzle. The real power comes from combining multiple MCP servers so your AI assistant can browse the web, update your CRM, send emails, and manage tasks — all from a single conversation.
 
 If you're exploring MCP for your business, we build custom integrations from strategy to production. [Book a free consultation](https://calendly.com/erik-budanov/beratungsgespraech) to discuss what's possible.
+
+## Frequently Asked Questions
+
+### Is Playwright MCP free?
+
+Yes. Playwright MCP is released by Microsoft under the Apache 2.0 license and is free to use. You'll need access to an AI model (Claude, ChatGPT, etc.) to drive it, which may have its own subscription costs.
+
+### Does Playwright MCP work with Claude Desktop?
+
+Yes. Playwright MCP works with any MCP-compatible client, including Claude Desktop, Claude Code, Cursor, VS Code (via GitHub Copilot), Windsurf, and Kiro. Configuration is identical across clients — only the config file location differs.
+
+### How is Playwright MCP different from regular Playwright?
+
+Regular Playwright requires you to write code (TypeScript or Python) with explicit selectors and waits. Playwright MCP exposes the same browser automation capabilities to an AI assistant through the Model Context Protocol, so you describe what you want in natural language and the AI translates that into Playwright commands.
+
+### Can Playwright MCP run headless on a server?
+
+Yes. Pass --headless in the config to run without a UI. For containerized environments or remote servers, you can also start it with HTTP transport using --port 8931 and connect from anywhere.
+
+### Why doesn't Playwright MCP need a vision model?
+
+Playwright MCP uses the browser's accessibility tree — the same structured representation screen readers use — instead of pixels. This is faster, more deterministic, and avoids the cost of vision model calls.
     `,
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
     tag: "AI Integration",
@@ -594,6 +619,13 @@ If you're exploring MCP for your business, we build custom integrations from str
     date: "2026-03-17",
     readTime: "12 min read",
     keywords: ["playwright mcp server", "playwright mcp", "mcp server setup", "playwright browser automation", "playwright mcp guide"],
+    faqs: [
+      { question: "Is Playwright MCP free?", answer: "Yes. Playwright MCP is released by Microsoft under the Apache 2.0 license and is free to use. You'll need access to an AI model (Claude, ChatGPT, etc.) to drive it, which may have its own subscription costs." },
+      { question: "Does Playwright MCP work with Claude Desktop?", answer: "Yes. Playwright MCP works with any MCP-compatible client, including Claude Desktop, Claude Code, Cursor, VS Code (via GitHub Copilot), Windsurf, and Kiro. Configuration is identical across clients — only the config file location differs." },
+      { question: "How is Playwright MCP different from regular Playwright?", answer: "Regular Playwright requires you to write code with explicit selectors and waits. Playwright MCP exposes the same browser automation capabilities to an AI assistant through the Model Context Protocol, so you describe what you want in natural language and the AI translates that into Playwright commands." },
+      { question: "Can Playwright MCP run headless on a server?", answer: "Yes. Pass --headless in the config to run without a UI. For containerized environments or remote servers, you can also start it with HTTP transport using --port 8931 and connect from anywhere." },
+      { question: "Why doesn't Playwright MCP need a vision model?", answer: "Playwright MCP uses the browser's accessibility tree — the same structured representation screen readers use — instead of pixels. This is faster, more deterministic, and avoids the cost of vision model calls." },
+    ],
   },
 
   {
@@ -1348,6 +1380,8 @@ If you want help building a custom Supabase MCP server for your specific use cas
     excerpt:
       "Anthropic shipped Claude Skills — folders of instructions Claude reads on demand. They replace half the use cases we used to need MCP servers for. Here's when to use which, and how to build one.",
     content: `
+**Quick answer**: Claude Skills are folders of instructions (a SKILL.md file plus optional code or templates) that Claude reads automatically when its description matches your request. They were introduced by Anthropic in 2025 and require no server, API key, or deployment. Skills are best for instructions, templates, and workflows. MCP servers are best for live data and external APIs. The two compose well: Skills define the workflow, MCP servers fetch the data.
+
 ## What Are Claude Skills?
 
 A Claude Skill is a folder containing a single \`SKILL.md\` file (with optional supporting scripts, templates, and reference docs). Claude reads the skill *automatically* when its description matches what you're trying to do, then follows the instructions inside.
@@ -1538,6 +1572,28 @@ If you're thinking about which parts of your stack to migrate to Skills + MCP fi
 The integration patterns are still being figured out — Anthropic only shipped Skills in late 2025 — but the direction is clear: more of what we call "SaaS" today will be local instructions + targeted API access, not full-blown apps.
 
 If you want help mapping which parts of your stack are replaceable with Skills + MCP (and which still need real software), [book a free AI Operations Audit](https://calendly.com/erik-budanov/beratungsgespraech). We'll go through your current tools and show you exactly where the cost can come out.
+
+## Frequently Asked Questions
+
+### What is a Claude Skill?
+
+A Claude Skill is a folder containing a SKILL.md file with instructions Claude reads automatically when the file's description matches the user's request. Skills can include optional scripts, templates, and reference documents. They require no server, API key, or deployment.
+
+### Are Claude Skills the same as MCP servers?
+
+No. Skills are folders of markdown instructions read at runtime. MCP servers are running HTTP services that expose tools the AI can call. Skills are best for workflows and templates. MCP servers are best for live data and external API access. They compose well — Skills define the workflow, MCP servers fetch the data.
+
+### When did Anthropic release Claude Skills?
+
+Anthropic introduced Claude Skills in 2025 as part of expanding how developers and teams can customize Claude's behavior beyond the system prompt. Skills are supported in Claude Code, Claude Desktop, and through the Claude API.
+
+### Where do I install Claude Skills?
+
+Personal skills live in your local Claude Code or Claude Desktop directory (typically ~/.claude/skills/). API users upload skills through their project configuration. Each skill is one folder containing a SKILL.md file and any supporting files.
+
+### Can I share a Claude Skill with my team?
+
+Yes. Skills are just folders of files, so you can commit them to a Git repository or share via any file-sharing method. Many marketing and engineering teams maintain Skill repositories that all members install locally for consistent AI behavior across the team.
 `,
     image: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1080&q=80",
     tag: "AI Integration",
@@ -1546,6 +1602,13 @@ If you want help mapping which parts of your stack are replaceable with Skills +
     date: "2026-05-26",
     readTime: "9 min read",
     keywords: ["claude skills", "what are claude skills", "claude skills vs mcp", "anthropic claude skills", "claude skills tutorial", "how to create claude skill"],
+    faqs: [
+      { question: "What is a Claude Skill?", answer: "A Claude Skill is a folder containing a SKILL.md file with instructions Claude reads automatically when the file's description matches the user's request. Skills can include optional scripts, templates, and reference documents. They require no server, API key, or deployment." },
+      { question: "Are Claude Skills the same as MCP servers?", answer: "No. Skills are folders of markdown instructions read at runtime. MCP servers are running HTTP services that expose tools the AI can call. Skills are best for workflows and templates. MCP servers are best for live data and external API access. They compose well — Skills define the workflow, MCP servers fetch the data." },
+      { question: "When did Anthropic release Claude Skills?", answer: "Anthropic introduced Claude Skills in 2025 as part of expanding how developers and teams can customize Claude's behavior beyond the system prompt. Skills are supported in Claude Code, Claude Desktop, and through the Claude API." },
+      { question: "Where do I install Claude Skills?", answer: "Personal skills live in your local Claude Code or Claude Desktop directory (typically ~/.claude/skills/). API users upload skills through their project configuration. Each skill is one folder containing a SKILL.md file and any supporting files." },
+      { question: "Can I share a Claude Skill with my team?", answer: "Yes. Skills are just folders of files, so you can commit them to a Git repository or share via any file-sharing method. Many marketing and engineering teams maintain Skill repositories that all members install locally for consistent AI behavior across the team." },
+    ],
   },
   /* ─── VIBE CODING + VPS ─── */
   {

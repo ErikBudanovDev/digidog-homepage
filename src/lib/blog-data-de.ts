@@ -457,6 +457,8 @@ Bei Digidog sind wir auf genau diesen Ansatz spezialisiert. Wir helfen Ihnen zu 
     excerpt:
       "Richten Sie Playwright MCP Server mit Claude Desktop, Cursor oder VS Code in unter 5 Minuten ein. Komplette Konfiguration, Automatisierungs-Beispiele und Lösungen für häufige Fehler.",
     content: `
+**Kurzantwort**: Playwright MCP Server ist eine Open-Source-Brücke von Microsoft, die KI-Assistenten wie Claude, ChatGPT und Cursor erlaubt, echte Webbrowser über strukturierte Befehle zu steuern. Die Installation dauert etwa 5 Minuten mit \`npx @playwright/mcp@latest\` und einem JSON-Konfigurationseintrag im KI-Client. Microsoft hat das Projekt 2024 unter der Apache-2.0-Lizenz veröffentlicht.
+
 ## Was ist Playwright MCP Server?
 
 Playwright MCP Server ist eine Brücke zwischen KI-Assistenten und echten Webbrowsern. Aufgebaut von Microsoft auf Basis ihres Playwright-Test-Frameworks, stellt er Browser-Automatisierungsfähigkeiten über das Model Context Protocol (MCP) bereit — den offenen Standard, der es KI-Tools ermöglicht, mit externen Diensten zu interagieren.
@@ -567,6 +569,28 @@ Beschreiben Sie Testszenarien in natürlicher Sprache:
 "Öffne unser CRM, erstelle einen neuen Kontakt mit diesen Details und weise ihn der Vertriebspipeline zu."
 
 Wenn Sie MCP für Ihr Unternehmen erkunden möchten, entwickeln wir maßgeschneiderte Integrationen von der Strategie bis zur Produktion. [Kostenloses Beratungsgespräch buchen](/contact).
+
+## Häufige Fragen
+
+### Ist Playwright MCP kostenlos?
+
+Ja. Playwright MCP wird von Microsoft unter der Apache-2.0-Lizenz veröffentlicht und ist kostenlos nutzbar. Sie benötigen Zugang zu einem KI-Modell (Claude, ChatGPT etc.), das eigene Abo-Kosten haben kann.
+
+### Funktioniert Playwright MCP mit Claude Desktop?
+
+Ja. Playwright MCP funktioniert mit jedem MCP-kompatiblen Client — Claude Desktop, Claude Code, Cursor, VS Code (via GitHub Copilot), Windsurf und Kiro. Die Konfiguration ist überall identisch, nur der Speicherort der Config-Datei unterscheidet sich.
+
+### Wie unterscheidet sich Playwright MCP von normalem Playwright?
+
+Normales Playwright erfordert das Schreiben von Code (TypeScript oder Python) mit expliziten Selektoren und Wartezeiten. Playwright MCP stellt dieselben Browser-Automatisierungs-Fähigkeiten einem KI-Assistenten über das Model Context Protocol zur Verfügung — Sie beschreiben in natürlicher Sprache, was Sie wollen, und die KI übersetzt das in Playwright-Befehle.
+
+### Kann Playwright MCP headless auf einem Server laufen?
+
+Ja. Setzen Sie \`--headless\` in der Config, um ohne UI zu laufen. Für Container-Umgebungen oder Remote-Server können Sie es auch mit HTTP-Transport via \`--port 8931\` starten und von überall verbinden.
+
+### Warum braucht Playwright MCP kein Vision-Modell?
+
+Playwright MCP nutzt den Accessibility-Tree des Browsers — dieselbe strukturierte Darstellung, die auch Screenreader verwenden — statt Pixel. Das ist schneller, deterministischer und vermeidet die Kosten von Vision-Modell-Aufrufen.
     `,
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
     tag: "KI-Integration",
@@ -575,6 +599,13 @@ Wenn Sie MCP für Ihr Unternehmen erkunden möchten, entwickeln wir maßgeschnei
     date: "2026-03-17",
     readTime: "10 Min. Lesezeit",
     keywords: ["playwright mcp server", "playwright mcp deutsch", "mcp server einrichten", "playwright browser automatisierung"],
+    faqs: [
+      { question: "Ist Playwright MCP kostenlos?", answer: "Ja. Playwright MCP wird von Microsoft unter der Apache-2.0-Lizenz veröffentlicht und ist kostenlos nutzbar. Sie benötigen Zugang zu einem KI-Modell (Claude, ChatGPT etc.), das eigene Abo-Kosten haben kann." },
+      { question: "Funktioniert Playwright MCP mit Claude Desktop?", answer: "Ja. Playwright MCP funktioniert mit jedem MCP-kompatiblen Client — Claude Desktop, Claude Code, Cursor, VS Code (via GitHub Copilot), Windsurf und Kiro. Die Konfiguration ist überall identisch, nur der Speicherort der Config-Datei unterscheidet sich." },
+      { question: "Wie unterscheidet sich Playwright MCP von normalem Playwright?", answer: "Normales Playwright erfordert das Schreiben von Code mit expliziten Selektoren und Wartezeiten. Playwright MCP stellt dieselben Browser-Automatisierungs-Fähigkeiten einem KI-Assistenten über das Model Context Protocol zur Verfügung — Sie beschreiben in natürlicher Sprache, was Sie wollen, und die KI übersetzt das in Playwright-Befehle." },
+      { question: "Kann Playwright MCP headless auf einem Server laufen?", answer: "Ja. Setzen Sie --headless in der Config, um ohne UI zu laufen. Für Container-Umgebungen oder Remote-Server können Sie es auch mit HTTP-Transport via --port 8931 starten und von überall verbinden." },
+      { question: "Warum braucht Playwright MCP kein Vision-Modell?", answer: "Playwright MCP nutzt den Accessibility-Tree des Browsers — dieselbe strukturierte Darstellung, die auch Screenreader verwenden — statt Pixel. Das ist schneller, deterministischer und vermeidet die Kosten von Vision-Modell-Aufrufen." },
+    ],
   },
 
   {
@@ -938,6 +969,8 @@ Wenn Sie Hilfe beim Aufbau eines benutzerdefinierten Supabase MCP Servers benöt
     excerpt:
       "Vibe Coding ist der größte Shift im Softwarebau seit zehn Jahren. Statt selbst zu programmieren, beschreibst du, was du willst — die KI baut es. Hier ist die ehrliche Anleitung: was funktioniert, was nicht, und wie du heute startest.",
     content: `
+**Kurzantwort**: Vibe Coding ist eine Arbeitsweise, bei der du auf Deutsch (oder Englisch) beschreibst, was eine Software tun soll, und eine KI wie Claude oder GPT den Code schreibt, testet und deployt. Der Begriff stammt von OpenAI-Mitgründer Andrej Karpathy aus dem Jahr 2025. Typischer Stack: Claude Sonnet 4 oder Opus 4 als KI, Next.js + Vercel fürs Frontend, Supabase für Datenbank und Auth. Einsteiger-Kosten: 30-50€/Monat.
+
 ## Was ist Vibe Coding?
 
 Vibe Coding ist eine neue Art, Software zu bauen: Du beschreibst auf Deutsch (oder Englisch), was du erreichen willst — und eine KI wie Claude oder GPT schreibt den Code. Du musst nicht selbst tippen, debuggen oder Stack-Overflow durchforsten. Du gibst die *Vibes* vor, die KI liefert das Ergebnis.
@@ -1174,6 +1207,14 @@ Wenn du mit Vibe Coding startest und stecken bleibst, oder ein konkretes Projekt
     date: "2026-05-26",
     readTime: "12 Min. Lesezeit",
     keywords: ["vibe coding", "vibe coding deutsch", "vibe coding anleitung", "was ist vibe coding", "vibe coding mit claude", "ki coding", "vibe coding tutorial deutsch"],
+    faqs: [
+      { question: "Was ist Vibe Coding?", answer: "Vibe Coding ist eine Arbeitsweise, bei der du in natürlicher Sprache beschreibst, was eine Software tun soll, und eine KI wie Claude oder GPT den Code schreibt, testet und deployt. Der Begriff stammt von OpenAI-Mitgründer Andrej Karpathy aus dem Jahr 2025." },
+      { question: "Brauche ich Programmierkenntnisse für Vibe Coding?", answer: "Nein, aber Grundverständnis hilft. Du musst nicht JavaScript können, aber du solltest verstehen, was ein API-Endpoint, eine Datenbank-Tabelle und ein Deployment sind. Ein paar Stunden YouTube reichen für den Anfang." },
+      { question: "Welches KI-Modell ist am besten für Vibe Coding?", answer: "Für ernsthaftes Coding: Claude Sonnet 4 oder Opus 4 (Anthropic). Sie sind die mit Abstand stabilsten für Multi-File-Projekte und verstehen Kontext über tausende Zeilen hinweg, nicht nur Einzelschnipsel." },
+      { question: "Wie viel kostet Vibe Coding?", answer: "Einsteiger-Stack liegt bei 30-50€/Monat: Claude Pro für 20€/Monat, VPS bei Hetzner für 5-10€/Monat, Vercel und Supabase gratis bis zur Skalierung, GitHub gratis für private Repos." },
+      { question: "Ist Vibe Coding DSGVO-konform?", answer: "Kann sein, hängt vom Setup ab. Anthropic (Claude) hat einen Standort in den USA — wenn du Kundendaten in den Prompt steckst, ist das relevant. Supabase hat EU-Server in Frankfurt. Für DSGVO-kritische Anwendungen: Self-hosted Setup auf VPS in Deutschland." },
+      { question: "Ersetzt Vibe Coding Entwickler?", answer: "Nicht komplett. Komplexe Systemarchitektur, Performance-Optimierung auf Mikroebene und Security-Audits brauchen weiterhin Expertise. Aber für interne Tools, MVPs, Dashboards und Automatisierungen ist Vibe Coding ein 5-10x Productivity-Multiplikator." },
+    ],
   },
   {
     slug: "claude-skills-vs-mcp-server",
@@ -1184,6 +1225,8 @@ Wenn du mit Vibe Coding startest und stecken bleibst, oder ein konkretes Projekt
     excerpt:
       "Anthropic hat Claude Skills veröffentlicht — Ordner mit Anleitungen, die Claude bei Bedarf liest. Sie ersetzen die Hälfte der Anwendungsfälle, für die wir früher MCP-Server brauchten. Hier ist die Anleitung.",
     content: `
+**Kurzantwort**: Claude Skills sind Ordner mit Anleitungen (eine SKILL.md-Datei plus optional Code oder Vorlagen), die Claude automatisch liest, sobald die Beschreibung zu einer Anfrage passt. Anthropic hat sie 2025 eingeführt. Sie brauchen keinen Server, keinen API-Key, kein Deployment. Skills sind ideal für Anleitungen, Vorlagen und Workflows. MCP-Server sind ideal für Live-Daten und externe APIs. Beides lässt sich kombinieren: Skills definieren den Workflow, MCP-Server holen die Daten.
+
 ## Was sind Claude Skills?
 
 Ein Claude Skill ist ein Ordner, der eine \`SKILL.md\`-Datei enthält (mit optionalen Skripten, Vorlagen und Referenzdokumenten). Claude liest das Skill *automatisch*, wenn die Beschreibung zu dem passt, was du gerade machst — und folgt dann den Anweisungen darin.
@@ -1354,6 +1397,28 @@ Wenn du überlegst, welche Teile deines Stacks du zuerst auf Skills + MCP migrie
 Anthropic hat Skills Ende 2025 veröffentlicht, die Integrationsmuster werden noch entwickelt. Aber die Richtung ist klar: Mehr von dem, was wir heute "SaaS" nennen, werden lokale Anweisungen + gezielter API-Zugriff sein, nicht ausgewachsene Apps.
 
 Wenn du Hilfe dabei brauchst zu identifizieren, welche Teile deines Stacks durch Skills + MCP ersetzbar sind, [buche ein kostenloses KI-Operations-Audit](https://calendly.com/erik-budanov/beratungsgespraech).
+
+## Häufige Fragen
+
+### Was ist ein Claude Skill?
+
+Ein Claude Skill ist ein Ordner mit einer SKILL.md-Datei und optionalen Skripten, Vorlagen oder Referenzdokumenten. Claude liest die SKILL.md automatisch, sobald die darin enthaltene Beschreibung zur Anfrage des Nutzers passt. Skills brauchen weder Server noch API-Key noch Deployment.
+
+### Sind Claude Skills dasselbe wie MCP-Server?
+
+Nein. Skills sind Ordner mit Markdown-Anweisungen, die zur Laufzeit gelesen werden. MCP-Server sind laufende HTTP-Dienste, die Tools bereitstellen, die die KI aufrufen kann. Skills eignen sich für Workflows und Vorlagen, MCP-Server für Live-Daten und externen API-Zugriff. Beides kombiniert sich gut: Skills definieren den Workflow, MCP-Server liefern die Daten.
+
+### Wann hat Anthropic Claude Skills veröffentlicht?
+
+Anthropic hat Claude Skills 2025 eingeführt, um Entwicklern und Teams mehr Möglichkeiten zu geben, Claudes Verhalten über den System-Prompt hinaus anzupassen. Skills werden in Claude Code, Claude Desktop und über die Claude API unterstützt.
+
+### Wo installiere ich Claude Skills?
+
+Persönliche Skills leben im lokalen Claude-Code- oder Claude-Desktop-Verzeichnis (meist ~/.claude/skills/). API-Nutzer laden Skills über ihre Projekt-Konfiguration hoch. Jedes Skill ist ein einzelner Ordner mit einer SKILL.md und beliebigen Hilfsdateien.
+
+### Kann ich ein Claude Skill mit meinem Team teilen?
+
+Ja. Skills sind einfache Datei-Ordner, also lassen sie sich in einem Git-Repository committen oder über jeden anderen Datei-Sharing-Weg teilen. Viele Marketing- und Engineering-Teams pflegen ein gemeinsames Skill-Repository, das alle Mitglieder lokal installieren, um konsistentes KI-Verhalten im Team sicherzustellen.
 `,
     image: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1080&q=80",
     tag: "KI-Integration",
@@ -1362,6 +1427,13 @@ Wenn du Hilfe dabei brauchst zu identifizieren, welche Teile deines Stacks durch
     date: "2026-05-26",
     readTime: "9 Min. Lesezeit",
     keywords: ["claude skills", "claude skills deutsch", "claude skills vs mcp", "anthropic skills", "claude skills tutorial"],
+    faqs: [
+      { question: "Was ist ein Claude Skill?", answer: "Ein Claude Skill ist ein Ordner mit einer SKILL.md-Datei und optionalen Skripten, Vorlagen oder Referenzdokumenten. Claude liest die SKILL.md automatisch, sobald die darin enthaltene Beschreibung zur Anfrage des Nutzers passt. Skills brauchen weder Server noch API-Key noch Deployment." },
+      { question: "Sind Claude Skills dasselbe wie MCP-Server?", answer: "Nein. Skills sind Ordner mit Markdown-Anweisungen, die zur Laufzeit gelesen werden. MCP-Server sind laufende HTTP-Dienste, die Tools bereitstellen, die die KI aufrufen kann. Skills eignen sich für Workflows und Vorlagen, MCP-Server für Live-Daten und externen API-Zugriff. Beides kombiniert sich gut: Skills definieren den Workflow, MCP-Server liefern die Daten." },
+      { question: "Wann hat Anthropic Claude Skills veröffentlicht?", answer: "Anthropic hat Claude Skills 2025 eingeführt, um Entwicklern und Teams mehr Möglichkeiten zu geben, Claudes Verhalten über den System-Prompt hinaus anzupassen. Skills werden in Claude Code, Claude Desktop und über die Claude API unterstützt." },
+      { question: "Wo installiere ich Claude Skills?", answer: "Persönliche Skills leben im lokalen Claude-Code- oder Claude-Desktop-Verzeichnis (meist ~/.claude/skills/). API-Nutzer laden Skills über ihre Projekt-Konfiguration hoch. Jedes Skill ist ein einzelner Ordner mit einer SKILL.md und beliebigen Hilfsdateien." },
+      { question: "Kann ich ein Claude Skill mit meinem Team teilen?", answer: "Ja. Skills sind einfache Datei-Ordner, also lassen sie sich in einem Git-Repository committen oder über jeden anderen Datei-Sharing-Weg teilen. Viele Marketing- und Engineering-Teams pflegen ein gemeinsames Skill-Repository, das alle Mitglieder lokal installieren, um konsistentes KI-Verhalten im Team sicherzustellen." },
+    ],
   },
 ];
 
