@@ -457,13 +457,25 @@ Bei Digidog sind wir auf genau diesen Ansatz spezialisiert. Wir helfen Ihnen zu 
     excerpt:
       "Richten Sie Playwright MCP Server mit Claude Desktop, Cursor oder VS Code in unter 5 Minuten ein. Komplette Konfiguration, Automatisierungs-Beispiele und Lösungen für häufige Fehler.",
     content: `
-**Kurzantwort**: Playwright MCP Server ist eine Open-Source-Brücke von Microsoft, die KI-Assistenten wie Claude, ChatGPT und Cursor erlaubt, echte Webbrowser über strukturierte Befehle zu steuern. Die Installation dauert etwa 5 Minuten mit \`npx @playwright/mcp@latest\` und einem JSON-Konfigurationseintrag im KI-Client. Microsoft hat das Projekt 2024 unter der Apache-2.0-Lizenz veröffentlicht.
+**Kurzantwort**: Playwright MCP Server ist eine Open-Source-Brücke von Microsoft, die KI-Assistenten wie Claude, ChatGPT und Cursor erlaubt, echte Webbrowser über strukturierte Befehle zu steuern. Die Installation dauert etwa 5 Minuten mit \`npx @playwright/mcp@latest\` und einem JSON-Konfigurationseintrag im KI-Client. Microsoft hat das Projekt [am 22. März 2025](https://www.pulsemcp.com/servers/microsoft-playwright) unter der Apache-2.0-Lizenz veröffentlicht. Es hat 33.000+ GitHub-Sterne und liegt auf Platz #1 der meistgenutzten MCP-Server weltweit.
 
 ## Was ist Playwright MCP Server?
 
 Playwright MCP Server ist eine Brücke zwischen KI-Assistenten und echten Webbrowsern. Aufgebaut von Microsoft auf Basis ihres Playwright-Test-Frameworks, stellt er Browser-Automatisierungsfähigkeiten über das Model Context Protocol (MCP) bereit — den offenen Standard, der es KI-Tools ermöglicht, mit externen Diensten zu interagieren.
 
 Vereinfacht gesagt: Anstatt Screenshots zu machen und zu raten, was auf dem Bildschirm ist, sendet Ihr KI-Assistent strukturierte Befehle an den Playwright MCP Server, der sie in einem echten Browser ausführt und strukturierte Ergebnisse zurückgibt. Es ist schneller, zuverlässiger und funktioniert ohne Vision-Modelle.
+
+## Die Zahlen hinter Playwright MCP
+
+Playwright selbst wurde [am 31. Januar 2020](https://en.wikipedia.org/wiki/Playwright_(software)) als Microsofts Antwort auf Puppeteer veröffentlicht. Bis 2025 hatte das zugrundeliegende Framework [über 75.000 GitHub-Sterne, mehr als 20 Millionen NPM-Downloads insgesamt und über 11.000 Stack-Overflow-Fragen](https://en.wikipedia.org/wiki/Playwright_(software)) angesammelt — und gilt damit als das am schnellsten wachsende moderne Web-Testing-Framework.
+
+Die MCP-Server-Variante kam später, am [22. März 2025](https://www.pulsemcp.com/servers/microsoft-playwright). Die Adoption verlief ungewöhnlich schnell: Innerhalb von zwölf Monaten überschritt das offizielle \`microsoft/playwright-mcp\` Repository [33.000 GitHub-Sterne und belegt Platz #1 auf PulseMCPs MCP-Server-Leaderboard](https://www.pulsemcp.com/servers/microsoft-playwright) — vor allen anderen MCP-Servern im öffentlichen Register.
+
+Microsofts eigene Begründung, warum dieses Design funktioniert, [aus dem offiziellen README](https://github.com/microsoft/playwright-mcp):
+
+> "This server enables LLMs to interact with web pages through structured accessibility snapshots, bypassing the need for screenshots or visually-tuned models. Fast and lightweight. Uses Playwright's accessibility tree, not pixel-based input. LLM-friendly. No vision models needed, operates purely on structured data. Deterministic tool application."
+
+Übersetzt: Die KI starrt nicht auf Pixel. Sie liest denselben Accessibility-Tree, den auch Screenreader verwenden — die tatsächliche Struktur der Seite. Deshalb ist sie schneller, günstiger in Tokens und weniger anfällig für halluzinierte Klicks als vision-basierte Browser-Agenten.
 
 ## Warum Playwright MCP wichtig ist
 
