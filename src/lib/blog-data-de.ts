@@ -969,7 +969,7 @@ Wenn Sie Hilfe beim Aufbau eines benutzerdefinierten Supabase MCP Servers benöt
     excerpt:
       "Vibe Coding ist der größte Shift im Softwarebau seit zehn Jahren. Statt selbst zu programmieren, beschreibst du, was du willst — die KI baut es. Hier ist die ehrliche Anleitung: was funktioniert, was nicht, und wie du heute startest.",
     content: `
-**Kurzantwort**: Vibe Coding ist eine Arbeitsweise, bei der du auf Deutsch (oder Englisch) beschreibst, was eine Software tun soll, und eine KI wie Claude oder GPT den Code schreibt, testet und deployt. Der Begriff stammt von OpenAI-Mitgründer Andrej Karpathy aus dem Jahr 2025. Typischer Stack: Claude Sonnet 4 oder Opus 4 als KI, Next.js + Vercel fürs Frontend, Supabase für Datenbank und Auth. Einsteiger-Kosten: 30-50€/Monat.
+**Kurzantwort**: Vibe Coding ist eine Arbeitsweise, bei der du auf Deutsch (oder Englisch) beschreibst, was eine Software tun soll, und eine KI wie Claude oder GPT den Code schreibt, testet und deployt. Der Begriff stammt von OpenAI-Mitgründer Andrej Karpathy (Tweet vom 2. Februar 2025, über 4 Mio. Views). Bei Y Combinators Winter-2025-Batch hatten laut CEO Garry Tan bereits 25 % aller Startups 95 % ihres Codes von KI schreiben lassen. Typischer Stack: Claude Sonnet 4 oder Opus 4 als KI, Next.js + Vercel fürs Frontend, Supabase für Datenbank und Auth. Einsteiger-Kosten: 30-50€/Monat.
 
 ## Was ist Vibe Coding?
 
@@ -978,6 +978,32 @@ Vibe Coding ist eine neue Art, Software zu bauen: Du beschreibst auf Deutsch (od
 Der Begriff wurde 2025 vom OpenAI-Mitgründer Andrej Karpathy geprägt. Die Idee: Statt Code zu schreiben, "fühlst" du dich durch das Projekt. Du sagst "mach das Button blau", "füge eine Login-Funktion hinzu", "deploye das auf einen Server" — und es passiert. Kein Syntax-Wissen nötig.
 
 Das Wichtigste vorab: **Vibe Coding ist kein Hype.** Es ist die echte Antwort auf die Frage, warum eine Person heute Apps bauen kann, für die früher fünf Entwickler nötig waren. Wir nutzen es täglich bei DigiDog — von Kundenprojekten bis zu internen Tools.
+
+## Woher der Begriff kommt — und warum er einschlug
+
+Andrej Karpathy postete den Begriff "vibe coding" am **2. Februar 2025 um 18:17 Uhr** auf X. Karpathy ist OpenAI-Mitgründer und ehemaliger AI-Director bei Tesla — also kein zufälliger Tech-Influencer. Sein wörtliches Statement:
+
+> "There's a new kind of coding I call 'vibe coding', where you fully give in to the vibes, embrace exponentials, and forget that the code even exists."
+
+Der Tweet erreichte innerhalb von zwei Monaten **über vier Millionen Views** ([Quelle: Charly3Pins-Analyse, März 2025](https://charly3pins.dev/blog/vibe-coding-weekend-hack-not-ready/)). Karpathys eigene Beschreibung seiner Arbeitsweise klang fast unbeholfen: "I just see stuff, say stuff, run stuff, and copy paste stuff, and it mostly works."
+
+Der Begriff blieb hängen, weil er etwas benannte, das schon lange passierte aber noch keinen Namen hatte.
+
+## Wie groß das Phänomen wirklich ist
+
+Sechs Wochen nach dem Karpathy-Tweet teilte **Garry Tan**, CEO des Startup-Accelerators Y Combinator, in einem CNBC-Interview konkrete Zahlen aus dem Winter-2025-Batch ([Slashdot-Bericht, März 2025](https://developers.slashdot.org/story/25/03/18/1428226/vibe-coding-is-letting-10-engineers-do-the-work-of-a-team-of-50-to-100-says-yc-ceo); [Business Insider](https://www.aol.com/news/vibe-coding-lets-10-engineers-180804614.html)):
+
+- **81 %** der aktuellen YC-Startups sind KI-Unternehmen
+- **25 %** der Batch-Companies haben **95 % ihres Codes von KI schreiben lassen**
+- Diese Startups erreichen **1–10 Millionen Dollar Jahresumsatz mit weniger als 10 Personen**
+
+Tans Originalzitat:
+
+> "You can just talk to the large language models and they will code entire apps. People are getting to a million dollars to 10 million dollars a year revenue with under 10 people — and that's really never happened before in early stage venture."
+
+Vom Februar-Tweet zur Industrie: **innerhalb eines Jahres wuchs Vibe Coding zu einem geschätzten 4,7-Milliarden-Dollar-Markt** ([Vibe Coder Blog, Februar 2026](https://blog.vibecoder.me/history-of-vibe-coding-from-karpathy-tweet-to-industry)).
+
+Für den deutschen Mittelstand heißt das nicht "alle Entwickler entlassen" — es heißt: ein einzelner Operator kann jetzt interne Tools, Dashboards und Kundenportale bauen, die früher ein Agentur-Projekt mit fünfstelligem Budget gewesen wären.
 
 ## Warum jetzt? Was sich 2025-2026 geändert hat
 
@@ -1208,7 +1234,7 @@ Wenn du mit Vibe Coding startest und stecken bleibst, oder ein konkretes Projekt
     readTime: "12 Min. Lesezeit",
     keywords: ["vibe coding", "vibe coding deutsch", "vibe coding anleitung", "was ist vibe coding", "vibe coding mit claude", "ki coding", "vibe coding tutorial deutsch"],
     faqs: [
-      { question: "Was ist Vibe Coding?", answer: "Vibe Coding ist eine Arbeitsweise, bei der du in natürlicher Sprache beschreibst, was eine Software tun soll, und eine KI wie Claude oder GPT den Code schreibt, testet und deployt. Der Begriff stammt von OpenAI-Mitgründer Andrej Karpathy aus dem Jahr 2025." },
+      { question: "Was ist Vibe Coding?", answer: "Vibe Coding ist eine Arbeitsweise, bei der du in natürlicher Sprache beschreibst, was eine Software tun soll, und eine KI wie Claude oder GPT den Code schreibt, testet und deployt. Der Begriff stammt von OpenAI-Mitgründer Andrej Karpathy (Tweet vom 2. Februar 2025, über 4 Millionen Views). Bei Y Combinators Winter-2025-Batch hatten laut CEO Garry Tan bereits 25 % der Startups 95 % ihres Codes von KI schreiben lassen." },
       { question: "Brauche ich Programmierkenntnisse für Vibe Coding?", answer: "Nein, aber Grundverständnis hilft. Du musst nicht JavaScript können, aber du solltest verstehen, was ein API-Endpoint, eine Datenbank-Tabelle und ein Deployment sind. Ein paar Stunden YouTube reichen für den Anfang." },
       { question: "Welches KI-Modell ist am besten für Vibe Coding?", answer: "Für ernsthaftes Coding: Claude Sonnet 4 oder Opus 4 (Anthropic). Sie sind die mit Abstand stabilsten für Multi-File-Projekte und verstehen Kontext über tausende Zeilen hinweg, nicht nur Einzelschnipsel." },
       { question: "Wie viel kostet Vibe Coding?", answer: "Einsteiger-Stack liegt bei 30-50€/Monat: Claude Pro für 20€/Monat, VPS bei Hetzner für 5-10€/Monat, Vercel und Supabase gratis bis zur Skalierung, GitHub gratis für private Repos." },
