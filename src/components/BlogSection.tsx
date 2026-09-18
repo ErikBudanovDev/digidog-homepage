@@ -4,73 +4,67 @@ import { useRef } from "react";
 import { colors } from "./ui/brand";
 import { SectionContainer, SectionHeading } from "./ui/section";
 import { BlogCard, type BlogCardData } from "./ui/cards";
-import { blogPosts as allBlogPosts } from "@/lib/blog-data";
+import { blogPosts } from "@/lib/blog-data";
+import { blogPostsDE } from "@/lib/blog-data-de";
 import { useTranslation } from "@/i18n/i18n-context";
-import enBlog from "@/translations/blog/english.json";
-import deBlog from "@/translations/blog/german.json";
+import { getLocalizedRoute } from "@/i18n/routes";
 
-/** Slugs to feature on the homepage (most recent / highest value) */
-const FEATURED_SLUGS = [
-  "replace-saas-with-ai-vps",
-  "vibe-coding-vps-build-deploy-app-with-ai",
-  "what-is-mcp-model-context-protocol",
-];
-
-/** Fallback featured slugs if the above aren't found */
-const FALLBACK_SLUGS = [
-  "ai-automation-for-mid-size-companies",
-  "case-study-ai-automation-crm-integration",
-  "what-is-mcp-model-context-protocol",
-];
+/**
+ * Curated homepage picks per locale. Newest-by-date fills any gap, so a new
+ * post surfaces here automatically until it is curated in or out.
+ * Keep the freshest / not-yet-indexed posts here: the homepage is the
+ * strongest internal link on the site and Googlebot follows it first.
+ */
+const FEATURED: Record<string, string[]> = {
+  EN: [
+    "claude-skills-vs-mcp-servers",
+    "vibe-coding-vps-build-deploy-app-with-ai",
+    "replace-saas-with-ai-vps",
+  ],
+  DE: [
+    "vibe-coding-deutschland-anleitung",
+    "claude-skills-vs-mcp-server",
+    "ki-automatisierung-mittelstand",
+  ],
+};
 
 function getFeaturedPosts(locale: string): BlogCardData[] {
-  const translations = (locale === "DE" ? deBlog : enBlog).posts as Record<string, any>;
+  const isDE = locale === "DE";
+  const source = isDE ? blogPostsDE : blogPosts;
+  const base = isDE ? "/de/blog" : "/blog";
+  const picks = FEATURED[isDE ? "DE" : "EN"];
 
-  // Try featured slugs first, then fallbacks
-  const slugsToTry = [...FEATURED_SLUGS, ...FALLBACK_SLUGS];
-  const posts: BlogCardData[] = [];
+  const byDate = [...source].sort((a, b) => (a.date < b.date ? 1 : -1));
+  const ordered = [
+    ...picks.map((s) => source.find((p) => p.slug === s)).filter(Boolean),
+    ...byDate,
+  ] as typeof source;
+
   const seen = new Set<string>();
-
-  for (const slug of slugsToTry) {
-    if (posts.length >= 3) break;
-    if (seen.has(slug)) continue;
-    seen.add(slug);
-
-    const post = allBlogPosts.find((p) => p.slug === slug);
-    if (!post) continue;
-
-    const t = translations[slug];
-    posts.push({
-      title: t?.title || post.title,
-      description: t?.excerpt || t?.metaDescription || post.excerpt,
-      image: post.image,
-      tag: t?.tag || post.tag,
-      slug: post.slug,
-    });
-  }
-
-  // If still not enough, fill from the beginning of allBlogPosts
-  for (const post of allBlogPosts) {
-    if (posts.length >= 3) break;
+  const out: BlogCardData[] = [];
+  for (const post of ordered) {
+    if (out.length >= 3) break;
     if (seen.has(post.slug)) continue;
     seen.add(post.slug);
-
-    const t = translations[post.slug];
-    posts.push({
-      title: t?.title || post.title,
-      description: t?.excerpt || t?.metaDescription || post.excerpt,
+    out.push({
+      title: post.title,
+      description: post.excerpt,
       image: post.image,
-      tag: t?.tag || post.tag,
+      tag: post.tag,
       slug: post.slug,
+      href: `${base}/${post.slug}`,
     });
   }
-
-  return posts;
+  return out;
 }
 
 const SECTION_HEADING: Record<string, string> = {
-  EN: "Explore our world of ideas",
-  DE: "Entdecken Sie unsere Ideenwelt",
+  EN: "MCP guides, AI operations & self-hosting",
+  DE: "MCP-Guides, KI-Operations & Self-Hosting",
+};
+const ALL_POSTS: Record<string, string> = {
+  EN: "All articles",
+  DE: "Alle Artikel",
 };
 
 export function BlogSection() {
@@ -135,6 +129,16 @@ export function BlogSection() {
               isInView={cardsInView}
             />
           ))}
+        </div>
+
+        {/* Link to the blog index — the index itself was an orphan page before this */}
+        <div className="text-center mt-10">
+          <a
+            href={getLocalizedRoute("blog", locale)}
+            className="inline-block text-white/80 hover:text-white underline underline-offset-4 text-[15px]"
+          >
+            {ALL_POSTS[locale] || ALL_POSTS.EN} →
+          </a>
         </div>
       </SectionContainer>
     </section>

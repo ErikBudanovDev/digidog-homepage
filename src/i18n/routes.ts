@@ -24,7 +24,7 @@ export const routes: Record<Locale, Record<string, string>> = {
     portfolio: "/de/portfolio",
     about: "/de/ueber-uns",
     contact: "/de/kontakt",
-    blog: "/blog",
+    blog: "/de/blog",
     imprint: "/de/impressum",
     privacy: "/de/datenschutz",
     terms: "/de/agb",

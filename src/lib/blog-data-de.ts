@@ -580,6 +580,8 @@ Beschreiben Sie Testszenarien in natürlicher Sprache:
 
 "Öffne unser CRM, erstelle einen neuen Kontakt mit diesen Details und weise ihn der Vertriebspipeline zu."
 
+**Weiterführende Anleitungen:** [Claude Skills vs. MCP-Server — wann was?](/de/blog/claude-skills-vs-mcp-server) · [Slack MCP Server einrichten](/de/blog/slack-mcp-server-einrichten) · [Supabase MCP Server einrichten](/de/blog/supabase-mcp-server-einrichten) · [Playwright MCP Server Anleitung](/de/blog/playwright-mcp-server-anleitung) · [Vibe Coding: der deutsche Leitfaden](/de/blog/vibe-coding-deutschland-anleitung)
+
 Wenn Sie MCP für Ihr Unternehmen erkunden möchten, entwickeln wir maßgeschneiderte Integrationen von der Strategie bis zur Produktion — sehen Sie unsere [KI-Integration-Dienstleistung](/de/dienstleistungen/ki-integration) oder [buchen Sie ein kostenloses Beratungsgespräch](https://calendly.com/erik-budanov/beratungsgespraech).
 
 ## Häufige Fragen
@@ -701,6 +703,8 @@ Prompt: "Durchsuche alle Kanäle nach Nachrichten mit 'Kundenfeedback' oder 'Bug
 Prompt: "Lese den #product-planning-Thread vom gestrigen Meeting. Extrahiere alle Aufgaben und poste sie als Checkliste in #product-tasks."
 
 ## MCP bei Digidog
+
+**Weiterführende Anleitungen:** [Claude Skills vs. MCP-Server — wann was?](/de/blog/claude-skills-vs-mcp-server) · [Slack MCP Server einrichten](/de/blog/slack-mcp-server-einrichten) · [Supabase MCP Server einrichten](/de/blog/supabase-mcp-server-einrichten) · [Playwright MCP Server Anleitung](/de/blog/playwright-mcp-server-anleitung) · [Vibe Coding: der deutsche Leitfaden](/de/blog/vibe-coding-deutschland-anleitung)
 
 Slack MCP ist eine von Dutzenden MCP-Integrationen, die wir für mittelständische Unternehmen entwickeln. Sehen Sie unsere [KI-Integration-Dienstleistung](/de/dienstleistungen/ki-integration) oder [buchen Sie ein kostenloses Beratungsgespräch](https://calendly.com/erik-budanov/beratungsgespraech) um zu erkunden, was MCP für Ihr Team leisten kann.
     `,
@@ -961,6 +965,8 @@ Neue Leads kommen über ein Web-Formular und werden in Supabase gespeichert. Ein
 ### Lagerbestandsüberwachung
 
 Ein E-Commerce-Unternehmen nutzt Supabase zur Bestandsverfolgung. Ihr KI-Agent führt stündliche Prüfungen durch: "Finde alle Produkte, bei denen der Lagerbestand unter dem Nachbestellungsschwellenwert liegt."
+
+**Weiterführende Anleitungen:** [Claude Skills vs. MCP-Server — wann was?](/de/blog/claude-skills-vs-mcp-server) · [Slack MCP Server einrichten](/de/blog/slack-mcp-server-einrichten) · [Supabase MCP Server einrichten](/de/blog/supabase-mcp-server-einrichten) · [Playwright MCP Server Anleitung](/de/blog/playwright-mcp-server-anleitung) · [Vibe Coding: der deutsche Leitfaden](/de/blog/vibe-coding-deutschland-anleitung)
 
 Wenn Sie Hilfe beim Aufbau eines benutzerdefinierten Supabase MCP Servers benötigen, sehen Sie unsere [KI-Integration-Dienstleistung](/de/dienstleistungen/ki-integration) oder [buchen Sie ein kostenloses Beratungsgespräch](https://calendly.com/erik-budanov/beratungsgespraech).
     `,

@@ -56,6 +56,8 @@ export interface BlogCardData {
   image: string;
   tag: string;
   slug?: string;
+  /** Explicit link target; overrides the default /blog/{slug} */
+  href?: string;
 }
 
 export function BlogCard({
@@ -69,7 +71,7 @@ export function BlogCard({
 }) {
   const { t } = useTranslation();
   return (
-    <a href={post.slug ? `/blog/${post.slug}` : "/blog"} className="block">
+    <a href={post.href ?? (post.slug ? `/blog/${post.slug}` : "/blog")} className="block">
     <ContentCard variant="dark" index={index} isInView={isInView} className="group overflow-hidden">
       <div className="h-[200px] overflow-hidden">
         <ImageWithFallback
@@ -103,7 +105,7 @@ export function BlogCard({
           {post.description}
         </p>
         <LinkWithArrow 
-          href={post.slug ? `/blog/${post.slug}` : "/blog"}
+          href={post.href ?? (post.slug ? `/blog/${post.slug}` : "/blog")}
           color={colors.textBlueLink} 
           icon="chevron"
         >

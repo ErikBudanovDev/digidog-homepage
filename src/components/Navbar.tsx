@@ -24,6 +24,7 @@ export function Navbar() {
   const navLinks = [
     { href: getLocalizedRoute("portfolio", locale), label: pt.nav.portfolio },
     { href: getLocalizedRoute("aiIntegration", locale), label: pt.nav.aiOperations },
+    { href: getLocalizedRoute("blog", locale), label: pt.nav.blog },
     { href: getLocalizedRoute("about", locale), label: pt.nav.about },
     { href: getLocalizedRoute("contact", locale), label: pt.nav.contact },
   ];

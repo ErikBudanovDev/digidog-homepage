@@ -65,6 +65,7 @@ export function Footer() {
     { label: pt.footer.home, href: getLocalizedRoute("home", locale) },
     { label: pt.footer.about, href: getLocalizedRoute("about", locale) },
     { label: pt.footer.portfolio, href: getLocalizedRoute("portfolio", locale) },
+    { label: pt.nav.blog, href: getLocalizedRoute("blog", locale) },
     { label: pt.footer.services, href: getLocalizedRoute("webDesign", locale) },
     { label: pt.footer.contact, href: getLocalizedRoute("contact", locale) },
   ];

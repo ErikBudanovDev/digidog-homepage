@@ -600,6 +600,8 @@ At Digidog, we use MCP extensively — not just Playwright MCP, but custom MCP s
 
 Playwright MCP is one piece of the puzzle. The real power comes from combining multiple MCP servers so your AI assistant can browse the web, update your CRM, send emails, and manage tasks — all from a single conversation.
 
+**Related guides:** [Claude Skills vs MCP Servers — when to use which](/blog/claude-skills-vs-mcp-servers) · [Slack MCP Server setup](/blog/slack-mcp-server-setup-guide) · [Supabase MCP Server setup](/blog/supabase-mcp-server-setup-guide) · [Playwright MCP Server setup](/blog/playwright-mcp-server-complete-guide)
+
 If you're exploring MCP for your business, we build custom integrations from strategy to production — see our [AI Integration service](/services/ai-integration) for the broader picture, or [book a free consultation](https://calendly.com/erik-budanov/beratungsgespraech) to discuss your specific use case.
 
 ## Frequently Asked Questions
@@ -845,6 +847,8 @@ Each MCP server is a building block. Combined, they create an AI assistant that 
 ## Getting Started with MCP at Digidog
 
 Slack MCP is one of dozens of MCP integrations we build for mid-size companies. Whether you need AI connected to your CRM, project management tools, databases, or custom internal systems — we design and build the integration from strategy to production.
+
+**Related guides:** [Claude Skills vs MCP Servers — when to use which](/blog/claude-skills-vs-mcp-servers) · [Slack MCP Server setup](/blog/slack-mcp-server-setup-guide) · [Supabase MCP Server setup](/blog/supabase-mcp-server-setup-guide) · [Playwright MCP Server setup](/blog/playwright-mcp-server-complete-guide)
 
 See the full picture in our [AI Integration service](/services/ai-integration), or [book a free consultation](https://calendly.com/erik-budanov/beratungsgespraech) to explore what MCP can do for your team.
     `,
@@ -1372,6 +1376,8 @@ server.resource(
 ## What's Next
 
 Once you have Supabase connected via MCP, the natural next step is chaining it with other MCP servers — Slack for notifications, Gmail for email triggers, or a custom CRM server for pipeline management. The power of MCP is composability: each server handles one data source, and the AI agent orchestrates across all of them.
+
+**Related guides:** [Claude Skills vs MCP Servers — when to use which](/blog/claude-skills-vs-mcp-servers) · [Slack MCP Server setup](/blog/slack-mcp-server-setup-guide) · [Supabase MCP Server setup](/blog/supabase-mcp-server-setup-guide) · [Playwright MCP Server setup](/blog/playwright-mcp-server-complete-guide)
 
 If you want help building a custom Supabase MCP server for your specific use case, or connecting it with other tools in your stack, see our [AI Integration service](/services/ai-integration) or [book a free consultation](https://calendly.com/erik-budanov/beratungsgespraech). We specialize in exactly this kind of AI integration for mid-size companies.
 `,
