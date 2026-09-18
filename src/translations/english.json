@@ -7,44 +7,44 @@
       "ogDescription": "From $1,200/month in SaaS to $210 — on AI systems you own. We build the same for service businesses and agencies."
     },
     "aiIntegration": {
-      "title": "AI Integration & Automation Agency",
-      "description": "AI Operations Systems for service businesses. We replace bloated SaaS stacks with AI-operated tools on infrastructure you own. From $1,200/month to $210.",
-      "ogTitle": "AI Integration & Automation Agency | Digidog",
+      "title": "AI Integration & MCP Automation for Businesses",
+      "description": "We wire your CRM, email, support, and operations into one AI system with custom MCP servers, on infrastructure you own. 30-60% of repetitive work automated.",
+      "ogTitle": "AI Integration & MCP Automation | Digidog",
       "ogDescription": "We automate 30-60% of repetitive work with custom AI workflows and MCP servers."
     },
     "aiSolutions": {
-      "title": "Custom AI Solutions & Machine Learning Development Agency",
-      "description": "Custom AI development agency: machine learning models, NLP, computer vision, predictive analytics, and LLM integration for mid-size companies.",
+      "title": "Custom AI Systems: LLM, ML & Predictive Analytics",
+      "description": "Custom AI built for how your business runs: LLM integration, machine learning, NLP, and predictive analytics, deployed on your own stack instead of rented per seat.",
       "ogTitle": "Custom AI Solutions & ML Development | Digidog",
       "ogDescription": "ML models, NLP, computer vision, and LLM integration for business."
     },
     "webDesign": {
-      "title": "Web & Infrastructure",
-      "description": "Custom web design, WordPress development, and full-stack solutions for mid-size companies. High-performance websites with React, Next.js, and WordPress.",
-      "ogTitle": "Web Design & WordPress Development Agency | Digidog",
+      "title": "Websites & Infrastructure You Own (Next.js, VPS)",
+      "description": "High-performance websites on Next.js or WordPress, hosted on infrastructure you control. No vendor lock-in, no surprise price hikes, maintenance included.",
+      "ogTitle": "Websites & Infrastructure You Own | Digidog",
       "ogDescription": "Custom websites, WordPress development, and ongoing maintenance."
     },
     "customSoftware": {
-      "title": "Custom Software Development Agency | Internal Tools & SaaS",
-      "description": "Custom software development for mid-size companies. Internal tools, API integrations, SaaS platforms, dashboards, and database architecture.",
-      "ogTitle": "Custom Software Development Agency | Digidog",
+      "title": "Custom Software That Replaces Your SaaS Stack",
+      "description": "Internal tools, dashboards, API integrations, and SaaS replacements built for mid-size companies, usually shipped in 4-8 weeks, on infrastructure you own.",
+      "ogTitle": "Custom Software That Replaces SaaS | Digidog",
       "ogDescription": "Internal tools, SaaS platforms, API integrations — software that connects your systems."
     },
     "about": {
-      "title": "About Digidog | AI Consulting & Web Development Team",
-      "description": "The story behind Digidog. From $1,200/month SaaS to $210 on our own AI stack — and the AI Operations Systems we now build for service businesses."
+      "title": "About DigiDog: Erik Budanov & AI Operations Team",
+      "description": "The story behind DigiDog: from $1,200/month in SaaS to $210 on our own AI stack, and the AI Operations Systems we now build for service businesses."
     },
     "contact": {
-      "title": "Contact Us | Free AI & Web Development Consultation",
-      "description": "Get in touch with Digidog for a free consultation on AI automation, web development, or custom software. We respond within 24 hours."
+      "title": "Contact DigiDog: Book a Free AI Operations Audit",
+      "description": "Book a free AI Operations Audit. We map your SaaS stack, show what an owned AI system replaces, and what it costs. We reply within 24 hours."
     },
     "portfolio": {
-      "title": "Portfolio | AI Automation & Web Development Case Studies",
-      "description": "Real case studies from our AI automation, web development, and custom software projects with measurable results."
+      "title": "Case Studies: AI Operations Systems in Production",
+      "description": "Real AI Operations Systems shipped for service businesses: SaaS replaced, workflows automated, infrastructure owned, with the numbers to show for it."
     },
     "blog": {
-      "title": "Blog — AI Automation, Web Development & Software Insights",
-      "description": "Expert articles on AI automation, web development, custom software, and digital strategy for mid-size companies."
+      "title": "Blog: MCP Guides, AI Operations & Self-Hosting",
+      "description": "MCP server setup guides, AI operations playbooks, and self-hosting how-tos for teams replacing SaaS with systems they own."
     },
     "imprint": {
       "title": "Imprint",

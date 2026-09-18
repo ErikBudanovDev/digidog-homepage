@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Integration for Business | Don't Stay Behind | Digidog",
+  title: "AI Integration for Business: Don't Stay Behind",
   description:
     "Integrate your CRM, email, support, analytics and operations into one AI conversation. Custom MCP integrations, AI automation, and intelligent business systems for mid-size companies.",
   keywords:

@@ -221,6 +221,36 @@ const nextConfig: NextConfig = {
       // (karine-babajanyan, cibaria-italiana, kalami, kelso-well, monte, mpa-online, sofies-kosmetik, technik-hoffmann)
       { source: "/de/projects/:slug", destination: "/de/portfolio", permanent: true },
       { source: "/de/projects/:slug/", destination: "/de/portfolio", permanent: true },
+
+      // === GA legacy 404s — Sept 18, 2026 (still receiving hits from old index/backlinks) ===
+      { source: "/en/home-01", destination: "/", permanent: true },
+      { source: "/en/services", destination: "/services/ai-integration", permanent: true },
+      { source: "/en/services/", destination: "/services/ai-integration", permanent: true },
+      { source: "/services-it", destination: "/services/custom-software", permanent: true },
+      { source: "/digitaloutsourcing", destination: "/services/custom-software", permanent: true },
+      { source: "/en/digitaloutsourcing", destination: "/services/custom-software", permanent: true },
+      { source: "/digital-consulting", destination: "/services/ai-solutions", permanent: true },
+      { source: "/en/digital-consulting", destination: "/services/ai-solutions", permanent: true },
+      { source: "/en/digital-marketing", destination: "/services/ai-solutions", permanent: true },
+      { source: "/seo-sea-analytics", destination: "/services/web-design", permanent: true },
+      { source: "/website-pflege-und-support-losungen", destination: "/de/dienstleistungen/webdesign", permanent: true },
+      { source: "/marketing-fuer-kieferorthopaedie", destination: "/de/dienstleistungen/ki-loesungen", permanent: true },
+      { source: "/contact-us", destination: "/contact", permanent: true },
+      { source: "/data-privacy", destination: "/privacy", permanent: true },
+      { source: "/de/data-privacy", destination: "/de/datenschutz", permanent: true },
+      { source: "/agb", destination: "/terms", permanent: true },
+      { source: "/pricing", destination: "/contact", permanent: true },
+      { source: "/en/general-terms-and-conditions", destination: "/terms", permanent: true },
+      { source: "/en/en-terms-of-service", destination: "/terms", permanent: true },
+      { source: "/case-studies/:slug", destination: "/portfolio", permanent: true },
+      { source: "/en/portfolio/:slug", destination: "/portfolio", permanent: true },
+      { source: "/en/portfolio/:slug/", destination: "/portfolio", permanent: true },
+      { source: "/en/5-core-elements-in-website-creation", destination: "/blog/website-redesign-complete-guide", permanent: true },
+      { source: "/en/right-people-do-the-right-job-en", destination: "/blog", permanent: true },
+      { source: "/en/website-dot-convert-en", destination: "/blog/website-redesign-complete-guide", permanent: true },
+      { source: "/the-gold-rush-of-the-ai-era-navigating-the-ai-marketplace-and-marketing-landscape", destination: "/blog", permanent: true },
+      // Catch-all for any remaining old /en/* WordPress URL (must stay LAST)
+      { source: "/en/:path*", destination: "/", permanent: true },
     ];
   },
 

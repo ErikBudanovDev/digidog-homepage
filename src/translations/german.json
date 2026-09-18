@@ -1,15 +1,15 @@
 {
   "seo": {
     "home": {
-      "title": "KI-Operations-Systeme für Dienstleister | Digidog",
+      "title": "KI-Operations-Systeme für Dienstleister",
       "description": "Wir bauen Ihre Geschäftsprozesse mit KI neu auf. SaaS ersetzen, Workflows automatisieren, eigene Infrastruktur besitzen.",
       "ogTitle": "KI-Operations-Systeme für Dienstleister | Digidog",
       "ogDescription": "Von 1.200 €/Monat SaaS-Kosten auf 210 € — mit KI-Systemen, die Ihnen gehören."
     },
     "aiIntegration": {
-      "title": "KI-Integration & Automatisierung",
-      "description": "KI-Agentur für den Mittelstand. Wir automatisieren 30-60% Ihrer repetitiven Arbeit durch KI-Workflows, CRM-Integration, MCP-Server und Prozessautomatisierung.",
-      "ogTitle": "KI Agentur | KI-Automatisierung & Beratung | Digidog",
+      "title": "KI-Integration & MCP-Server für Dienstleister",
+      "description": "Wir verbinden CRM, E-Mail, Support und Betrieb zu einem KI-System mit eigenen MCP-Servern, auf Infrastruktur, die Ihnen gehört. 30-60 % repetitiver Arbeit automatisiert.",
+      "ogTitle": "KI-Integration & MCP-Automatisierung | Digidog",
       "ogDescription": "Wir automatisieren 30-60% repetitiver Arbeit mit KI-Workflows und MCP-Servern."
     },
     "aiSolutions": {
@@ -19,9 +19,9 @@
       "ogDescription": "ML-Modelle, NLP, Computer Vision und LLM-Integration für Unternehmen."
     },
     "webDesign": {
-      "title": "Webdesign & Webentwicklung Agentur",
-      "description": "Webdesign-Agentur und WordPress-Entwicklung für den Mittelstand. Responsive, performante Websites mit React, Next.js und WordPress. Wartung & Support inklusive.",
-      "ogTitle": "Webdesign & WordPress Agentur | Digidog",
+      "title": "Websites & Infrastruktur, die Ihnen gehören",
+      "description": "Performante Websites mit Next.js oder WordPress auf Infrastruktur, die Sie kontrollieren. Kein Vendor-Lock-in, keine Preiserhöhungen, Wartung inklusive.",
+      "ogTitle": "Websites & Infrastruktur, die Ihnen gehören | Digidog",
       "ogDescription": "Maßgeschneiderte Websites, WordPress-Entwicklung und laufende Wartung."
     },
     "customSoftware": {
@@ -31,20 +31,20 @@
       "ogDescription": "Interne Tools, SaaS-Plattformen, API-Integrationen — Software, die Ihre Systeme verbindet."
     },
     "about": {
-      "title": "Über Digidog | KI-Operations-Systeme für Dienstleister",
-      "description": "Lernen Sie das Digidog-Team kennen. KI-Beratung und Webentwicklung für mittelständische Unternehmen seit 2021."
+      "title": "Über DigiDog: Erik Budanov & KI-Operations-Team",
+      "description": "Die Geschichte hinter DigiDog: von 1.200 € SaaS im Monat auf 210 € mit eigenem KI-Stack, und die KI-Operations-Systeme, die wir heute für Dienstleister bauen."
     },
     "contact": {
-      "title": "Kontakt — Kostenlose Erstberatung",
-      "description": "Kontaktieren Sie Digidog für eine kostenlose Beratung zu KI-Automatisierung, Webentwicklung oder Individualsoftware. Antwort innerhalb von 24 Stunden."
+      "title": "Kontakt: Kostenloses KI-Operations-Audit buchen",
+      "description": "Buchen Sie ein kostenloses KI-Operations-Audit. Wir analysieren Ihren SaaS-Stack und zeigen, was ein eigenes KI-System ersetzt und was es kostet. Antwort in 24 Stunden."
     },
     "portfolio": {
-      "title": "Portfolio — Unsere Projekte",
-      "description": "Echte Fallstudien aus unseren KI-Automatisierungs-, Webentwicklungs- und Softwareprojekten mit messbaren Ergebnissen."
+      "title": "Fallstudien: KI-Operations-Systeme im Einsatz",
+      "description": "Echte KI-Operations-Systeme, die wir für Dienstleister gebaut haben: SaaS ersetzt, Workflows automatisiert, Infrastruktur im eigenen Besitz, mit Zahlen."
     },
     "blog": {
-      "title": "Blog — KI, Web & Software Insights",
-      "description": "Fachartikel zu KI-Automatisierung, Webentwicklung, Individualsoftware und Digitalstrategie für mittelständische Unternehmen."
+      "title": "Blog: MCP-Guides, KI-Operations & Self-Hosting",
+      "description": "MCP-Server-Anleitungen, KI-Operations-Playbooks und Self-Hosting-Guides für Teams, die SaaS durch eigene Systeme ersetzen."
     },
     "imprint": {
       "title": "Impressum",

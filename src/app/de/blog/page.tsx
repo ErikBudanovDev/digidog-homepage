@@ -6,7 +6,7 @@ import { blogPostsDE } from "@/lib/blog-data-de";
 import BlogListingDEClient from "@/app/client-pages/BlogListingDEClient";
 
 export const metadata: Metadata = {
-  title: "Blog — KI-Automatisierung, Webentwicklung & Software | Digidog",
+  title: "Blog: MCP-Guides, KI-Operations & Self-Hosting",
   description:
     "Expertenbeiträge zu KI-Automatisierung, Webentwicklung, individueller Software und digitaler Strategie für den Mittelstand. Praxisnahe Leitfäden, Fallstudien und Brancheneinblicke von Digidog.",
   alternates: {

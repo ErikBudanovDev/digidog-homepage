@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import AboutDEClient from "@/app/client-pages/AboutDEClient";
 
 export const metadata: Metadata = {
-  title: "Über uns — Das DigiDog Team | DigiDog",
+  title: "Über DigiDog: Erik Budanov & KI-Operations-Team",
   description:
     "Lernen Sie das Team hinter DigiDog kennen. KI-Experten und Full-Stack-Entwickler mit Leidenschaft für digitale Innovation.",
   alternates: {
