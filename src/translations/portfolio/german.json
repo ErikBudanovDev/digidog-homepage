@@ -73,36 +73,6 @@
       "service": "Web-Infrastruktur",
       "client": "Miso GmbH"
     },
-    "techvision-dashboard": {
-      "title": "TechVision Dashboard",
-      "description": "Komplettes Redesign eines Enterprise-Dashboards mit modernem UI/UX-Design und responsiver Darstellung.",
-      "overview": "TechVision ist ein wachsendes SaaS-Unternehmen für Echtzeit-Analytics mittelständischer Unternehmen.",
-      "goal": "Das Dashboard durch moderne Webentwicklung verbessern — Fokus auf Performance, Usability und Compliance.",
-      "problem": "Veraltetes Dashboard mit schlechter UX — Mitarbeiter brauchten zu lange für wichtige KPIs.",
-      "solution": "Komplett neues UI/UX-Design mit Echtzeit-Datenvisualisierung, rollenbasiertem Zugriff und Mobilansicht.",
-      "service": "Web-Infrastruktur",
-      "client": "TechVision AG"
-    },
-    "bold-ideas": {
-      "title": "Bold Ideas Movement",
-      "description": "Kreative Markenstrategie und visuelles Storytelling für ein innovatives Startup.",
-      "overview": "Bold Ideas Movement ist ein kreatives Startup aus Berlin für nachhaltige Innovationen.",
-      "goal": "Eine starke Markenidentität und eine Storytelling-Website entwickeln, die Investoren überzeugt.",
-      "problem": "Startup ohne klare Markenidentität — kein Wiedererkennungswert und schwache Conversion-Rate.",
-      "solution": "Komplettes Markendesign, Storytelling-Website mit animierter Scroll-Experience und Lead-Generierung.",
-      "service": "Web-Infrastruktur",
-      "client": "Bold Ideas GmbH"
-    },
-    "bella-cucina": {
-      "title": "Bella Cucina Restaurant",
-      "description": "Elegante Website mit Online-Reservierung und digitaler Speisekarte für ein gehobenes italienisches Restaurant.",
-      "overview": "Bella Cucina ist ein gehobenes italienisches Restaurant in der Düsseldorfer Altstadt.",
-      "goal": "Eine elegante, mobilfreundliche Website mit Online-Reservierung und digitaler Speisekarte erstellen.",
-      "problem": "Telefonreservierungen überforderten das Personal; die alte Website war nicht mobilfreundlich.",
-      "solution": "Elegante responsive Website mit Online-Reservierung, digitaler Speisekarte und Mehrsprachigkeit.",
-      "service": "Web-Infrastruktur",
-      "client": "Bella Cucina Ristorante"
-    },
     "smileforyou": {
       "title": "SmileforYou – Conversion-Optimierung",
       "description": "Komplettes Website-Redesign und Conversion-Optimierung für eine führende deutsche Zahnklinikkette — Verdopplung der Conversion-Rate von 5% auf 11%.",
@@ -183,36 +153,6 @@
       "service": "Automatisierung & KI",
       "client": "Schmuckunternehmen (Vertraulich)"
     },
-    "fitpulse-app": {
-      "title": "FitPulse Gesundheits-App",
-      "description": "Mobile-First-Fitnessplattform mit KI-gestützten Trainingsplänen und Echtzeit-Fortschrittsverfolgung.",
-      "overview": "FitPulse nutzt KI-Technologie für personalisierte Trainingspläne, die sich dynamisch anpassen.",
-      "goal": "Eine KI-gesteuerte Fitness-App mit adaptiven Trainingsplänen und Gamification entwickeln.",
-      "problem": "Nutzer brachen generische Trainingspläne ab — fehlende Personalisierung und Motivation.",
-      "solution": "KI-gestützte Trainingsplan-Engine mit adaptiven Workouts, Echtzeit-Tracking und Wearable-Integration.",
-      "service": "Automatisierung & KI",
-      "client": "FitPulse GmbH"
-    },
-    "smartassist-chatbot": {
-      "title": "SmartAssist KI-Chatbot",
-      "description": "Intelligenter KI-Chatbot mit NLP-Integration für automatisierten Kundenservice und Lead-Qualifizierung.",
-      "overview": "Entwickelt für ein mittelständisches Versicherungsunternehmen mit hunderten täglichen Kundenanfragen.",
-      "goal": "KI-gestützte Kundenkommunikation implementieren, die 80% der Standardanfragen automatisch beantwortet.",
-      "problem": "Überlasteter Kundenservice mit langen Wartezeiten — manuelle Bearbeitung war teuer und langsam.",
-      "solution": "KI-Chatbot mit NLP, automatischer Lead-Qualifizierung, CRM-Integration und Sentimentanalyse.",
-      "service": "Automatisierung & KI",
-      "client": "SecureLife Versicherung"
-    },
-    "smarthome-iot": {
-      "title": "SmartHome IoT-Plattform",
-      "description": "KI-gesteuerte Smart-Home-Plattform mit automatisierter Energieoptimierung und vorausschauender Wartung.",
-      "overview": "Für einen führenden Smart-Home-Anbieter entwickelten wir eine KI-Plattform zur Echtzeit-Energieanalyse.",
-      "goal": "Eine intelligente IoT-Plattform entwickeln, die Energieverbrauch um 30% senkt.",
-      "problem": "Hoher Energieverbrauch durch manuelle Steuerung und keine vorausschauende Wartung.",
-      "solution": "KI-gesteuerte IoT-Plattform mit Echtzeit-Energieoptimierung, Predictive Maintenance und Sprachsteuerung.",
-      "service": "Automatisierung & KI",
-      "client": "NexaHome Technologies"
-    },
     "hubspot-dental-crm": {
       "title": "HubSpot CRM – Zahnklinikkette",
       "description": "Enterprise HubSpot CRM-Implementierung für eine 5-Standorte-Zahnklinikkette mit IVORIS-API und Make.com.",
@@ -232,36 +172,6 @@
       "solution": "End-to-End-Automatisierung mit Make.com, Python, MongoDB, Discord und einem Next.js-Dashboard.",
       "service": "Interne Tools",
       "client": "BeOriginalTours"
-    },
-    "luxe-mode": {
-      "title": "Luxe Mode Online-Shop",
-      "description": "High-End E-Commerce-Lösung mit personalisierten Empfehlungen und nahtloser Checkout-Erfahrung.",
-      "overview": "Luxe Mode ist eine Premium-Modemarke für exklusive Designermode.",
-      "goal": "Eine E-Commerce-Plattform mit KI-gestützten Empfehlungen und optimiertem Checkout erstellen.",
-      "problem": "Hohe Warenkorbabbruchrate und keine personalisierten Produktvorschläge.",
-      "solution": "E-Commerce-Plattform mit KI-Empfehlungen, One-Click-Checkout und A/B-optimiertem Funnel.",
-      "service": "Interne Tools",
-      "client": "Luxe Mode AG"
-    },
-    "logitrack-warehouse": {
-      "title": "LogiTrack Lagerverwaltungssystem",
-      "description": "Individuelle Lagerverwaltungssoftware mit Echtzeit-Tracking, Barcode-Scanning und automatischer Nachbestellung.",
-      "overview": "Entwickelt für ein wachsendes Logistikunternehmen, das mit Excel an seine Grenzen gestoßen war.",
-      "goal": "Eine skalierbare Lagerverwaltungslösung entwickeln, die Bestandsfehler um 95% reduziert.",
-      "problem": "Manuelle Lagerverwaltung mit Excel — häufige Fehler, kein Echtzeit-Überblick.",
-      "solution": "Individuelle Lagersoftware mit Echtzeit-Tracking, mobilem Barcode-Scanning und Versandintegration.",
-      "service": "Interne Tools",
-      "client": "LogiTrack Logistics GmbH"
-    },
-    "mediconnect-praxis": {
-      "title": "MediConnect Praxissoftware",
-      "description": "Individuelle Praxisverwaltungssoftware mit Terminplanung, digitaler Patientenakte und Abrechnungsmodul.",
-      "overview": "Entwickelt für eine Gemeinschaftspraxis in Düsseldorf mit veralteter Praxissoftware.",
-      "goal": "Veraltete Praxissoftware durch eine moderne, integrierte Lösung ersetzen.",
-      "problem": "Veraltete Praxissoftware ohne Online-Buchung — hoher Verwaltungsaufwand.",
-      "solution": "Moderne Praxissoftware mit Online-Buchung, digitaler Patientenakte, Abrechnungsmodul und DSGVO-Konformität.",
-      "service": "Interne Tools",
-      "client": "Gemeinschaftspraxis Dr. Weber & Partner"
     }
   }
 }

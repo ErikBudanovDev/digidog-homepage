@@ -249,6 +249,16 @@ const nextConfig: NextConfig = {
       { source: "/en/right-people-do-the-right-job-en", destination: "/blog", permanent: true },
       { source: "/en/website-dot-convert-en", destination: "/blog/website-redesign-complete-guide", permanent: true },
       { source: "/the-gold-rush-of-the-ai-era-navigating-the-ai-marketplace-and-marketing-landscape", destination: "/blog", permanent: true },
+      // === Placeholder portfolio projects removed — Sept 21, 2026 ===
+      { source: "/portfolio/techvision-dashboard", destination: "/portfolio", permanent: true },
+      { source: "/portfolio/bold-ideas", destination: "/portfolio", permanent: true },
+      { source: "/portfolio/bella-cucina", destination: "/portfolio", permanent: true },
+      { source: "/portfolio/fitpulse-app", destination: "/portfolio", permanent: true },
+      { source: "/portfolio/smartassist-chatbot", destination: "/portfolio", permanent: true },
+      { source: "/portfolio/smarthome-iot", destination: "/portfolio", permanent: true },
+      { source: "/portfolio/luxe-mode", destination: "/portfolio", permanent: true },
+      { source: "/portfolio/logitrack-warehouse", destination: "/portfolio", permanent: true },
+      { source: "/portfolio/mediconnect-praxis", destination: "/portfolio", permanent: true },
       // Catch-all for any remaining old /en/* WordPress URL (must stay LAST)
       { source: "/en/:path*", destination: "/", permanent: true },
     ];
