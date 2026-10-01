@@ -115,11 +115,11 @@
     },
     "jobsvs-recruitment": {
       "title": "JobsVS – Recruitment Agency Website",
-      "description": "Design implementation and SEO for a recruitment agency, featuring Personio API integration for automatic job listings.",
+      "description": "Design implementation and SEO for a recruitment agency, featuring Persy API integration for automatic job listings.",
       "overview": "JobsVS is a recruitment agency that enables companies and applicants to find each other. We handled design implementation and SEO.",
-      "goal": "Implement a responsive, SEO-optimized recruitment website with Personio API integration.",
+      "goal": "Implement a responsive, SEO-optimized recruitment website with Persy API integration.",
       "problem": "A recruitment agency needed automated job listing management to avoid manual data entry.",
-      "solution": "Responsive website with Personio API integration for automatic job display and comprehensive SEO services.",
+      "solution": "Responsive website with Persy API integration for automatic job display and comprehensive SEO services.",
       "service": "Web Infrastructure",
       "client": "JobsVS"
     },

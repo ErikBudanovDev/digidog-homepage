@@ -115,11 +115,11 @@
     },
     "jobsvs-recruitment": {
       "title": "JobsVS – Personalvermittlungs-Website",
-      "description": "Design-Implementierung und SEO für eine Personalvermittlung mit Personio-API-Integration.",
+      "description": "Design-Implementierung und SEO für eine Personalvermittlung mit Persy-API-Integration.",
       "overview": "JobsVS ist eine Personalvermittlung, die Unternehmen und Bewerber zusammenbringt.",
-      "goal": "Eine responsive, SEO-optimierte Website mit Personio-API-Integration umsetzen.",
+      "goal": "Eine responsive, SEO-optimierte Website mit Persy-API-Integration umsetzen.",
       "problem": "Automatisiertes Stellenanzeigen-Management zur Vermeidung manueller Dateneingabe benötigt.",
-      "solution": "Responsive Website mit Personio-API-Integration und umfassenden SEO-Dienstleistungen.",
+      "solution": "Responsive Website mit Persy-API-Integration und umfassenden SEO-Dienstleistungen.",
       "service": "Web-Infrastruktur",
       "client": "JobsVS"
     },

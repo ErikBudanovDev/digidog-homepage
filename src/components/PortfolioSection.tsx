@@ -268,12 +268,12 @@ export const projects: ProjectCardData[] = [
   {
     title: "JobsVS – Recruitment Agency Website",
     description:
-      "Design implementation and SEO for a recruitment agency, featuring Personio API integration to automatically display job listings from the client's HR platform.",
+      "Design implementation and SEO for a recruitment agency, featuring Persy API integration to automatically display job listings from the client's HR platform.",
     overview:
-      "Our client JobsVS is a recruitment agency that enables companies and applicants to find each other. We handled design implementation and SEO for JobsVS, building a responsive and clear website. The website integrates with Personio (Persy) via API, so the website owner doesn't have to duplicate work — job applications are pulled directly from Personio and displayed on the website automatically. The client provided the design, and our team of experts implemented it with a focus on creating an appealing yet clear and quality look. We also provided personalized SEO services including speed optimization, keyword research, and backend updates.",
-    goal: "Implement a provided design into a responsive, SEO-optimized recruitment website with seamless Personio API integration for automatic job listing synchronization.",
+      "Our client JobsVS is a recruitment agency that enables companies and applicants to find each other. We handled design implementation and SEO for JobsVS, building a responsive and clear website. The website integrates with Persy (Persy) via API, so the website owner doesn't have to duplicate work — job applications are pulled directly from Persy and displayed on the website automatically. The client provided the design, and our team of experts implemented it with a focus on creating an appealing yet clear and quality look. We also provided personalized SEO services including speed optimization, keyword research, and backend updates.",
+    goal: "Implement a provided design into a responsive, SEO-optimized recruitment website with seamless Persy API integration for automatic job listing synchronization.",
     improvements: [
-      "Personio API integration for automatic job listings",
+      "Persy API integration for automatic job listings",
       "Responsive and clear design implementation",
       "Personalized SEO with keyword research and optimization",
       "Website speed optimization and backend updates",
@@ -283,7 +283,7 @@ export const projects: ProjectCardData[] = [
     problem:
       "A recruitment agency needed their provided design implemented into a functional, SEO-optimized website with automated job listing management to avoid manual data entry.",
     solution:
-      "Responsive website implementation with Personio API integration for automatic job display, combined with comprehensive SEO services including speed optimization and keyword research.",
+      "Responsive website implementation with Persy API integration for automatic job display, combined with comprehensive SEO services including speed optimization and keyword research.",
     image: jobsvsImageSrc,
     year: 2022,
     slug: "jobsvs-recruitment",
