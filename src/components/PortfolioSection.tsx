@@ -103,6 +103,58 @@ export const projects: ProjectCardData[] = [
     link: "/services/web-design",
   },
   {
+    title: "PRÜFTECHNIK (Fluke) – Enterprise Web Administration",
+    description:
+      "Three years of enterprise web administration and content management for PRÜFTECHNIK, the industrial condition-monitoring brand of Fluke, part of the Fortive group (Fortune 500).",
+    overview:
+      "PRÜFTECHNIK is a global industrial maintenance technology brand, acquired by Fluke Corporation in 2019 and part of the Fortive group. From 2022 to 2025 we handled the majority of the website's updates: publishing content, quality control, troubleshooting CMS issues and continuous improvement, coordinated in German and English with product owners and stakeholders across time zones, and with developers to implement reliable solutions.",
+    goal: "Keep a global enterprise website accurate, current and reliable while coordinating many stakeholders in two languages.",
+    improvements: [
+      "Ongoing enterprise web administration (2022–2025)",
+      "Content publishing and quality control",
+      "CMS troubleshooting with the development team",
+      "German and English coordination across time zones",
+      "Continuous improvement of the web presence",
+    ],
+    problem:
+      "A global enterprise brand needed one dependable owner for daily website operations across languages, teams and time zones.",
+    solution:
+      "A long-term web administration and content management engagement covering publishing, quality control and CMS support.",
+    image: "/figma-assets/portfolio-pruftechnik.jpg",
+    year: 2025,
+    slug: "pruftechnik-fluke",
+    service: "Web Infrastructure",
+    category: "web",
+    client: "PRÜFTECHNIK (Fluke / Fortive)",
+    link: "/services/web-design",
+  },
+  {
+    title: "Activated Insights – M&A Website Consolidation",
+    description:
+      "Website consolidation after an acquisition: CareAcademy and WeCareConnect merged into the Activated Insights web presence, with 200+ pages redesigned and consolidated.",
+    overview:
+      "After Activated Insights acquired CareAcademy and WeCareConnect, we consolidated their websites into the Activated Insights web presence. Each page was migrated and adapted to the destination brand rather than copied mechanically: layouts and visual elements reworked, content preserved and restructured, links and responsive behavior checked, and the rollout coordinated to create one consistent experience across the healthcare workforce platform.",
+    goal: "Merge two acquired brands' websites into one consistent Activated Insights experience without losing content.",
+    improvements: [
+      "200+ pages migrated and consolidated",
+      "Each page adapted to the destination brand",
+      "Layouts and visual elements reworked",
+      "Content preserved and restructured",
+      "Links and responsive behavior checked before rollout",
+    ],
+    problem:
+      "After an acquisition, three separate web presences had to become one brand without losing content or search visibility.",
+    solution:
+      "Page-by-page WordPress migration and redesign into the Activated Insights site, with a coordinated rollout.",
+    image: "/figma-assets/portfolio-activatedinsights.jpg",
+    year: 2025,
+    slug: "activated-insights-migration",
+    service: "Web Infrastructure",
+    category: "web",
+    client: "Activated Insights",
+    link: "/services/web-design",
+  },
+  {
     title: "MPA.online Streaming Platform",
     description:
       "Fullstack web app development for a medical education streaming platform, built with Next.js, Strapi, and MongoDB with Vimeo integration.",

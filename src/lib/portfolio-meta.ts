@@ -11,6 +11,8 @@ export interface ProjectMeta {
 
 export const projectsMeta: ProjectMeta[] = [
   { slug: "united-nations-fp2030", title: "United Nations – FP2030", description: "Design implementation for the United Nations FP2030 Progress Report website, featuring interactive Highcharts data visualizations and parallax animations." },
+  { slug: "pruftechnik-fluke", title: "PRÜFTECHNIK (Fluke) – Enterprise Web Administration", description: "Three years of enterprise web administration and content management for PRÜFTECHNIK, the industrial condition-monitoring brand of Fluke (Fortive group)." },
+  { slug: "activated-insights-migration", title: "Activated Insights – M&A Website Consolidation", description: "CareAcademy and WeCareConnect merged into the Activated Insights web presence after the acquisition, with 200+ pages redesigned and consolidated." },
   { slug: "mpa-online", title: "MPA.online Streaming Platform", description: "Fullstack web app development for a medical education streaming platform, built with Next.js, Strapi, and MongoDB with Vimeo integration." },
   { slug: "miso-supermarket", title: "Miso Supermarket & Bakery", description: "Modern web design and digital solution for a local supermarket with integrated online shop and ordering system." },
   { slug: "smileforyou", title: "SmileforYou – Conversion Optimization", description: "Full website redesign and conversion optimization for a leading German dental clinic chain, doubling their conversion rate from 5% to 11%." },

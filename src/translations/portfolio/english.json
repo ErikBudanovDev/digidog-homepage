@@ -53,6 +53,26 @@
       "service": "Web Infrastructure",
       "client": "United Nations – FP2030"
     },
+    "pruftechnik-fluke": {
+      "title": "PRÜFTECHNIK (Fluke) – Enterprise Web Administration",
+      "description": "Three years of enterprise web administration and content management for PRÜFTECHNIK, the industrial condition-monitoring brand of Fluke (Fortive group, Fortune 500).",
+      "overview": "From 2022 to 2025 we handled the majority of PRÜFTECHNIK's website updates, coordinated in German and English across time zones.",
+      "goal": "Keep a global enterprise website accurate, current and reliable.",
+      "problem": "A global enterprise brand needed one dependable owner for daily website operations across languages and teams.",
+      "solution": "Long-term web administration and content management: publishing, quality control and CMS support.",
+      "service": "Web Infrastructure",
+      "client": "PRÜFTECHNIK (Fluke / Fortive)"
+    },
+    "activated-insights-migration": {
+      "title": "Activated Insights – M&A Website Consolidation",
+      "description": "CareAcademy and WeCareConnect merged into the Activated Insights web presence after the acquisition, with 200+ pages redesigned and consolidated.",
+      "overview": "Page-by-page migration of two acquired brands into the Activated Insights website, each page adapted to the destination brand.",
+      "goal": "Merge two acquired brands' websites into one consistent experience without losing content.",
+      "problem": "After an acquisition, three web presences had to become one brand.",
+      "solution": "Page-by-page WordPress migration and redesign with a coordinated rollout.",
+      "service": "Web Infrastructure",
+      "client": "Activated Insights"
+    },
     "mpa-online": {
       "title": "MPA.online Streaming Platform",
       "description": "Fullstack web app development for a medical education streaming platform, built with Next.js, Strapi, and MongoDB with Vimeo integration.",

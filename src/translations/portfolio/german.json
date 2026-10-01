@@ -53,6 +53,26 @@
       "service": "Web-Infrastruktur",
       "client": "Vereinte Nationen – FP2030"
     },
+    "pruftechnik-fluke": {
+      "title": "PRÜFTECHNIK (Fluke) – Enterprise-Webadministration",
+      "description": "Drei Jahre Enterprise-Webadministration und Content-Management für PRÜFTECHNIK, die Condition-Monitoring-Marke von Fluke (Fortive-Gruppe, Fortune 500).",
+      "overview": "Von 2022 bis 2025 haben wir den Großteil der Website-Aktualisierungen von PRÜFTECHNIK übernommen – abgestimmt auf Deutsch und Englisch über Zeitzonen hinweg.",
+      "goal": "Eine globale Unternehmenswebsite korrekt, aktuell und zuverlässig halten.",
+      "problem": "Eine globale Marke brauchte eine verlässliche Verantwortung für den täglichen Website-Betrieb über Sprachen und Teams hinweg.",
+      "solution": "Langfristige Webadministration und Content-Management: Veröffentlichung, Qualitätskontrolle und CMS-Support.",
+      "service": "Web-Infrastruktur",
+      "client": "PRÜFTECHNIK (Fluke / Fortive)"
+    },
+    "activated-insights-migration": {
+      "title": "Activated Insights – Website-Konsolidierung nach M&A",
+      "description": "CareAcademy und WeCareConnect wurden nach der Übernahme in den Webauftritt von Activated Insights integriert – über 200 Seiten neu gestaltet und konsolidiert.",
+      "overview": "Seite für Seite migriert: zwei übernommene Marken in die Website von Activated Insights, jede Seite an die Zielmarke angepasst.",
+      "goal": "Die Websites zweier übernommener Marken ohne Inhaltsverlust zu einem einheitlichen Auftritt zusammenführen.",
+      "problem": "Nach einer Übernahme mussten drei Webauftritte zu einer Marke werden.",
+      "solution": "Seitenweise WordPress-Migration und Redesign mit koordiniertem Rollout.",
+      "service": "Web-Infrastruktur",
+      "client": "Activated Insights"
+    },
     "mpa-online": {
       "title": "MPA.online Streaming-Plattform",
       "description": "Fullstack-Webanwendung für eine medizinische Bildungs-Streaming-Plattform mit Next.js, Strapi und MongoDB.",
