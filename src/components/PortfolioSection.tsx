@@ -95,7 +95,7 @@ export const projects: ProjectCardData[] = [
     solution:
       "Interactive Highcharts visualizations with parallax animations and user-centric design.",
     image: unFp2030ImageSrc,
-    year: 2023,
+    year: 2020,
     slug: "united-nations-fp2030",
     service: "Web Infrastructure",
     category: "web",
