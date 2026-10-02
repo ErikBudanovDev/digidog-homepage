@@ -175,9 +175,9 @@
     },
     "hubspot-dental-crm": {
       "title": "HubSpot CRM – Dental Clinic Chain",
-      "description": "Enterprise HubSpot CRM implementation across a 5-branch dental clinic chain with IVORIS API and Make.com automation.",
-      "overview": "Implemented HubSpot CRM for a multi-branch orthodontic clinic chain with five locations, integrating with IVORIS API.",
-      "goal": "Implement a unified CRM system across 5 branches that standardizes patient workflows.",
+      "description": "Enterprise HubSpot CRM implementation across a 7-branch dental clinic chain with IVORIS API and Make.com automation.",
+      "overview": "Implemented HubSpot CRM for a multi-branch orthodontic clinic chain with seven locations, integrating with IVORIS API.",
+      "goal": "Implement a unified CRM system across 7 branches that standardizes patient workflows.",
       "problem": "Five branches with different workflows, no centralized CRM, and complex integration requirements.",
       "solution": "Enterprise HubSpot CRM with unified processes, IVORIS API integration, and Make.com automation.",
       "service": "Internal Tools",

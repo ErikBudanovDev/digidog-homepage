@@ -23,6 +23,6 @@ export const projectsMeta: ProjectMeta[] = [
   { slug: "cibaria-italiana", title: "Cibaria Italiana – Restaurant & eCommerce", description: "Elegant website with eCommerce, online reservation, and culinary course booking for an authentic Italian restaurant in Vienna." },
   { slug: "monte-ofelio-group", title: "Monte Ofelio Group – Multi-Brand Web Strategy", description: "Dynamic multi-website strategy for an Italian food group in Vienna, enabling online reservations, worldwide product sales, and brand storytelling." },
   { slug: "ai-jewelry-sketch", title: "AI Jewelry Sketch Automation", description: "AI automation built in Make that reads customer emails, extracts requirements, and generates custom jewelry sketches 24/7 — eliminating manual work." },
-  { slug: "hubspot-dental-crm", title: "HubSpot CRM – Dental Clinic Chain", description: "Enterprise HubSpot CRM implementation across a 5-branch dental clinic chain, integrating patient workflows, IVORIS API, and Make.com automation." },
+  { slug: "hubspot-dental-crm", title: "HubSpot CRM – Dental Clinic Chain", description: "Enterprise HubSpot CRM implementation across a 7-branch dental clinic chain, integrating patient workflows, IVORIS API, and Make.com automation." },
   { slug: "beoriginaltours-operations", title: "BeOriginalTours Operations Platform", description: "Automated booking, scheduling, and management platform for a European tour agency, built with Make.com, Python, MongoDB, and a custom Next.js dashboard." },
 ];

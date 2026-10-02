@@ -433,12 +433,12 @@ export const projects: ProjectCardData[] = [
   {
     title: "HubSpot CRM – Dental Clinic Chain",
     description:
-      "Enterprise HubSpot CRM implementation across a 5-branch dental clinic chain, integrating patient workflows, IVORIS API, and Make.com automation.",
+      "Enterprise HubSpot CRM implementation across a 7-branch dental clinic chain, integrating patient workflows, IVORIS API, and Make.com automation.",
     overview:
-      "We implemented HubSpot CRM for a multi-branch orthodontic clinic chain with five locations. The project involved defining a unified process across all branches — standardizing workflows, patient management, and administrative practices. We integrated HubSpot with the internal Orthodontic Platform via IVORIS API and the clinic website, using Make.com to orchestrate the entire integration. Patient data was managed as both contacts and deals, with careful data migration ensuring accuracy and compliance with healthcare regulations.",
-    goal: "Implement a unified CRM system across 5 dental clinic branches that standardizes patient workflows, automates deal pipelines, and integrates seamlessly with existing orthodontic software.",
+      "We implemented HubSpot CRM for a multi-branch orthodontic clinic chain with seven locations. The project involved defining a unified process across all branches — standardizing workflows, patient management, and administrative practices. We integrated HubSpot with the internal Orthodontic Platform via IVORIS API and the clinic website, using Make.com to orchestrate the entire integration. Patient data was managed as both contacts and deals, with careful data migration ensuring accuracy and compliance with healthcare regulations.",
+    goal: "Implement a unified CRM system across 7 dental clinic branches that standardizes patient workflows, automates deal pipelines, and integrates seamlessly with existing orthodontic software.",
     improvements: [
-      "Unified CRM process across 5 clinic branches",
+      "Unified CRM process across 7 clinic branches",
       "HubSpot integration with IVORIS orthodontic API",
       "Make.com workflow automation for seamless data flow",
       "Custom deal pipeline with orthodontic-specific stages",

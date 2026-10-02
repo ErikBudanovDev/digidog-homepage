@@ -175,9 +175,9 @@
     },
     "hubspot-dental-crm": {
       "title": "HubSpot CRM – Zahnklinikkette",
-      "description": "Enterprise HubSpot CRM-Implementierung für eine 5-Standorte-Zahnklinikkette mit IVORIS-API und Make.com.",
-      "overview": "HubSpot CRM-Implementierung für eine kieferorthopädische Klinikkette mit fünf Standorten.",
-      "goal": "Ein einheitliches CRM-System über 5 Standorte implementieren, das Patienten-Workflows standardisiert.",
+      "description": "Enterprise HubSpot CRM-Implementierung für eine 7-Standorte-Zahnklinikkette mit IVORIS-API und Make.com.",
+      "overview": "HubSpot CRM-Implementierung für eine kieferorthopädische Klinikkette mit sieben Standorten.",
+      "goal": "Ein einheitliches CRM-System über 7 Standorte implementieren, das Patienten-Workflows standardisiert.",
       "problem": "Fünf Standorte mit unterschiedlichen Workflows, kein zentrales CRM und komplexe Integrationsanforderungen.",
       "solution": "Enterprise HubSpot CRM mit einheitlichen Prozessen, IVORIS-API-Integration und Make.com-Automatisierung.",
       "service": "Interne Tools",
