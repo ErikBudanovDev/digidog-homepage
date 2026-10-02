@@ -1,6 +1,6 @@
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { motion } from "motion/react";
-import { Zap, DollarSign, Clock } from "lucide-react";
+import { Code, User, Languages } from "lucide-react";
 import { colors, fonts, transitions } from "./ui/brand";
 import { PrimaryButton, openBookingModal } from "./ui/buttons";
 import { HeroLayout } from "./ui/hero-layout";
@@ -10,9 +10,9 @@ import enT from "@/translations/english.json";
 import deT from "@/translations/german.json";
 
 const heroKpis = [
-  { icon: DollarSign, value: "$1,200→$210", labelEn: "Monthly SaaS cost replaced", labelDe: "Monatliche SaaS-Kosten ersetzt" },
-  { icon: Clock, value: "25 hrs/wk", labelEn: "Manual work eliminated", labelDe: "Manuelle Arbeit eliminiert" },
-  { icon: Zap, value: "1 prompt", labelEn: "Replaces 5 tools + 3 hours", labelDe: "Ersetzt 5 Tools + 3 Stunden" },
+  { icon: User, value: "Erik Budanov", labelEn: "Your direct engineer", labelDe: "Ihr direkter Entwickler" },
+  { icon: Code, value: "Web · MVP · AI", labelEn: "From scope to launch", labelDe: "Von der Planung bis zum Launch" },
+  { icon: Languages, value: "DE / EN", labelEn: "German & English", labelDe: "Deutsch & Englisch" },
 ];
 
 export function HeroSection() {

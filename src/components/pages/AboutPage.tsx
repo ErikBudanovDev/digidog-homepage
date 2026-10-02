@@ -20,8 +20,8 @@ import { HeroLayout } from "@/components/ui/hero-layout";
 import svgPaths from "@/imports/svg-ly9usgqlzn";
 
 /* Figma assets */
-import teamPhoto from "figma:asset/662435b77afb9fc5df300b8a814a4e93a31c97ee.png";
-const teamPhotoSrc = teamPhoto as unknown as string;
+import erikPhoto from "figma:asset/c28a01d5ca35b1e207da7537c250359543a3aa75.png";
+const erikPhotoSrc = erikPhoto as unknown as string;
 import { SEO } from "@/components/SEO";
 import { useTranslation } from "@/i18n/i18n-context";
 import enPg from "@/translations/pages/english.json";
@@ -402,7 +402,7 @@ function MissionSection() {
             </div>
           </motion.div>
 
-          {/* Team photo */}
+          {/* Founder photo */}
           <motion.div
             className="flex-1 order-1 lg:order-2 w-full max-w-[520px]"
             initial={{ opacity: 0, x: 40 }}
@@ -411,9 +411,11 @@ function MissionSection() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/30">
               <img
-                src={teamPhotoSrc}
-                alt="Digidog Team"
-                className="w-full aspect-[4/3] object-cover"
+                src={erikPhotoSrc}
+                alt="Erik Budanov"
+                width={768}
+                height={723}
+                className="w-full h-auto"
               />
               <div
                 className="absolute inset-0 pointer-events-none"

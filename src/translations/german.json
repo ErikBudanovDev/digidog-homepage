@@ -1,28 +1,28 @@
 {
   "seo": {
     "home": {
-      "title": "KI-Operations-Systeme für Dienstleister",
-      "description": "Wir bauen Ihre Geschäftsprozesse mit KI neu auf. SaaS ersetzen, Workflows automatisieren, eigene Infrastruktur besitzen.",
-      "ogTitle": "KI-Operations-Systeme für Dienstleister | Digidog",
-      "ogDescription": "Von 1.200 €/Monat SaaS-Kosten auf 210 € — mit KI-Systemen, die Ihnen gehören."
+      "title": "Website-Redesign & MVP-Entwicklung",
+      "description": "Website-Redesigns, MVPs und Integrationen mit Erik Budanov. Direkte technische Verantwortung, klare Projektziele und Zusammenarbeit auf Deutsch oder Englisch.",
+      "ogTitle": "Website-Redesign & MVP-Entwicklung | DigiDog",
+      "ogDescription": "Website-Redesigns, MVPs und Integrationen mit Erik Budanov. Direkte technische Verantwortung, klare Projektziele und Zusammenarbeit auf Deutsch oder Englisch."
     },
     "aiIntegration": {
-      "title": "KI-Integration & MCP-Server für Dienstleister",
-      "description": "Wir verbinden CRM, E-Mail, Support und Betrieb zu einem KI-System mit eigenen MCP-Servern, auf Infrastruktur, die Ihnen gehört. 30-60 % repetitiver Arbeit automatisiert.",
-      "ogTitle": "KI-Integration & MCP-Automatisierung | Digidog",
-      "ogDescription": "Wir automatisieren 30-60% repetitiver Arbeit mit KI-Workflows und MCP-Servern."
+      "title": "KI-Integration & Workflow-Automatisierung",
+      "description": "Geschäftssysteme verbinden und definierte Abläufe automatisieren — mit Erik Budanov als direktem technischen Ansprechpartner.",
+      "ogTitle": "KI-Integration & Workflow-Automatisierung | DigiDog",
+      "ogDescription": "Geschäftssysteme verbinden und definierte Abläufe automatisieren — mit Erik Budanov als direktem technischen Ansprechpartner."
     },
     "aiSolutions": {
-      "title": "KI-Lösungen & Machine Learning",
-      "description": "Individuelle KI-Entwicklung: Machine Learning, NLP, Computer Vision, Predictive Analytics und LLM-Integration. Maßgeschneiderte KI-Lösungen für Ihr Unternehmen.",
-      "ogTitle": "KI-Lösungen & Machine Learning | Digidog",
-      "ogDescription": "ML-Modelle, NLP, Computer Vision und LLM-Integration für Unternehmen."
+      "title": "Individuelle KI-Lösungen & Integrationen",
+      "description": "Praktische KI-Integrationen und Geschäftsanwendungen mit Erik Budanov. Klarer Umfang, passende Berechtigungen und menschliche Prüfung.",
+      "ogTitle": "Individuelle KI-Lösungen & Integrationen | DigiDog",
+      "ogDescription": "Praktische KI-Integrationen und Geschäftsanwendungen mit Erik Budanov. Klarer Umfang, passende Berechtigungen und menschliche Prüfung."
     },
     "webDesign": {
-      "title": "Websites & Infrastruktur, die Ihnen gehören",
-      "description": "Performante Websites mit Next.js oder WordPress auf Infrastruktur, die Sie kontrollieren. Kein Vendor-Lock-in, keine Preiserhöhungen, Wartung inklusive.",
-      "ogTitle": "Websites & Infrastruktur, die Ihnen gehören | Digidog",
-      "ogDescription": "Maßgeschneiderte Websites, WordPress-Entwicklung und laufende Wartung."
+      "title": "Website-Redesign & Webentwicklung",
+      "description": "Website-Redesigns mit Erik Budanov: klare Inhalte, responsive Gestaltung, technische SEO und CRM-Anbindung.",
+      "ogTitle": "Website-Redesign & Webentwicklung | DigiDog",
+      "ogDescription": "Website-Redesigns mit Erik Budanov: klare Inhalte, responsive Gestaltung, technische SEO und CRM-Anbindung."
     },
     "customSoftware": {
       "title": "Individuelle Softwareentwicklung",
@@ -31,12 +31,12 @@
       "ogDescription": "Interne Tools, SaaS-Plattformen, API-Integrationen — Software, die Ihre Systeme verbindet."
     },
     "about": {
-      "title": "Über DigiDog: Erik Budanov & KI-Operations-Team",
-      "description": "Die Geschichte hinter DigiDog: von 1.200 € SaaS im Monat auf 210 € mit eigenem KI-Stack, und die KI-Operations-Systeme, die wir heute für Dienstleister bauen."
+      "title": "Erik Budanov — Gründer & Produktentwickler",
+      "description": "Lernen Sie Erik Budanov kennen: unabhängiger Produktentwickler und Gründer von DigiDog. Persönliche Umsetzung mit Unterstützung durch KI-Agenten."
     },
     "contact": {
-      "title": "Kontakt: Kostenloses KI-Operations-Audit buchen",
-      "description": "Buchen Sie ein kostenloses KI-Operations-Audit. Wir analysieren Ihren SaaS-Stack und zeigen, was ein eigenes KI-System ersetzt und was es kostet. Antwort in 24 Stunden."
+      "title": "Kontakt mit Erik Budanov — Projekt besprechen",
+      "description": "Website-Redesign, MVP oder Integration geplant? Besprechen Sie Ihr Vorhaben direkt mit Erik Budanov, dem unabhängigen Produktentwickler hinter DigiDog."
     },
     "portfolio": {
       "title": "Fallstudien: KI-Operations-Systeme im Einsatz",
@@ -60,49 +60,70 @@
     }
   },
   "hero": {
-    "title1": "Wir bauen Ihre Geschäfts-",
-    "title2": "prozesse mit KI neu auf",
-    "description": "Wir betreiben zwei Unternehmen mit einem KI-Operations-System, das unseren SaaS-Stack von 1.200 € auf 210 €/Monat reduziert hat. Jetzt bauen wir dasselbe für Dienstleister und Agenturen.",
-    "cta": "Kostenloses KI-Operations-Audit"
+    "title1": "Websites, die überzeugen.",
+    "title2": "Produkte, die weiterbringen.",
+    "description": "Ich bin Erik Budanov, Gründer von DigiDog. Ich modernisiere Websites und entwickle MVPs und Integrationen — als Ihr direkter Ansprechpartner von der Planung bis zum Launch. Zusammenarbeit auf Deutsch oder Englisch.",
+    "cta": "Projekt mit Erik besprechen"
   },
   "nav": {
     "home": "Startseite",
     "portfolio": "Portfolio",
     "services": "Dienstleistungen",
-    "about": "Über uns",
+    "about": "Über Erik",
     "contact": "Kontakt",
     "blog": "Blog",
     "aiOperations": "KI-Operations",
     "allServices": "Alle Dienstleistungen",
-    "webDesign": "Web & Infrastruktur",
+    "webDesign": "Website-Redesign",
     "aiSolutions": "KI-Lösungen & Automatisierung",
-    "customSoftware": "Software & Integrationen"
+    "customSoftware": "MVP & Software"
   },
   "servicesSection": {
-    "badge": "KI-Operations-System",
-    "title1": "So bauen wir Ihre ",
-    "title2": "Prozesse neu auf",
-    "subtitle": "Für Dienstleister und Agenturen mit 5–50 Mitarbeitern, die 1.000–10.000 €/Monat für SaaS-Tools ausgeben.",
-    "webTitle": "SaaS ersetzen",
-    "webSubtitle": "Hören Sie auf, für Funktionen zu bezahlen, die Sie nicht nutzen. Wir bauen KI-gesteuerte Tools, die Ihnen gehören — CRM, Aufgabenverwaltung, Lead-Pipelines.",
-    "webResult": "Unternehmen reduzieren SaaS-Kosten typischerweise um 40–80%. Volle Datenhoheit. Kein Vendor Lock-in.",
-    "aiTitle": "Prozesse automatisieren",
-    "aiSubtitle": "Lead-Follow-ups, Reporting, Aufgabenverteilung, Kunden-Onboarding — automatisch, ohne dass Sie ein Dashboard anfassen.",
-    "aiResult": "Lead-Reaktionszeit sinkt von Stunden auf Minuten. Teams arbeiten mit weniger Tools und weniger Fehlern.",
-    "softwareTitle": "Eigene Systeme besitzen",
-    "softwareSubtitle": "Ihre Daten, Ihr Server, Ihre Regeln. Wir bauen Umsatz-Infrastruktur — Websites, Dashboards und Plattformen — die Sie vollständig kontrollieren.",
-    "softwareResult": "Eine schnelle, sichere digitale Plattform, die Ihnen gehört — nicht von der Roadmap anderer abhängig.",
+    "badge": "Website & Produkt",
+    "title1": "Von Ihrer Idee ",
+    "title2": "zur Umsetzung",
+    "subtitle": "Für Unternehmen mit einer bestehenden Website und Gründer mit einer konkreten Produktidee, ersten Kunden oder einem Pilotprojekt.",
+    "webTitle": "Website-Redesign",
+    "webSubtitle": "Ich verbinde klare Inhalte, nutzerfreundliches Design und technische Umsetzung, damit Besucher Ihr Angebot verstehen und Kontakt aufnehmen können.",
+    "webResult": "Ziel: ein klarer Weg von der ersten Frage zur qualifizierten Anfrage.",
+    "aiTitle": "KI & Integrationen",
+    "aiSubtitle": "Ich verbinde vorhandene Systeme und automatisiere klar definierte Abläufe — mit passenden Berechtigungen und menschlicher Kontrolle.",
+    "aiResult": "Ziel: weniger manuelle Übergaben zwischen Ihren Systemen.",
+    "softwareTitle": "MVP & Produktentwicklung",
+    "softwareSubtitle": "Ich übersetze Ihre Produktidee in einen realistischen Umfang und entwickle die Funktionen, die Ihre ersten Kunden oder Ihr Pilotprojekt benötigen.",
+    "softwareResult": "Ziel: ein nutzbares Produkt mit klaren nächsten Schritten.",
     "learnMore": "Mehr erfahren",
-    "startProject": "Kostenloses KI-Operations-Audit"
+    "startProject": "Projekt besprechen",
+    "webDeliverables": [
+      "Inhalte und Kontaktwege prüfen",
+      "Responsive Design und Umsetzung",
+      "Technische SEO und URL-Erhalt",
+      "Formulare und CRM-Anbindung",
+      "Launch und Übergabe"
+    ],
+    "aiDeliverables": [
+      "Einen konkreten Workflow auswählen",
+      "CRM, E-Mail und weitere Systeme verbinden",
+      "KI- und MCP-Integration nach Bedarf",
+      "Berechtigungen und Freigaben definieren",
+      "Ergebnisse prüfen und dokumentieren"
+    ],
+    "softwareDeliverables": [
+      "Anforderungen und Umfang klären",
+      "Erste nutzbare Produktversion",
+      "Datenmodell und API-Integrationen",
+      "Tests und technische Dokumentation",
+      "Deployment und nächste Ausbauschritte"
+    ]
   },
   "contactCta": {
-    "title": "Finden Sie heraus, was in Ihrem Stack ersetzbar ist",
-    "subtitle": "Wir identifizieren ersetzbare SaaS-Kosten, automatisierbare Workflows und den schnellsten Weg zu einem KI-Operations-System für Ihr Unternehmen",
-    "cta": "Kostenloses KI-Operations-Audit",
+    "title": "Was soll Ihr nächstes Projekt verbessern?",
+    "subtitle": "Zeigen Sie mir Ihre Website oder beschreiben Sie Ihr Produktvorhaben. Wir besprechen Ziele, technische Anforderungen und einen sinnvollen ersten Schritt.",
+    "cta": "Projekt mit Erik besprechen",
     "founderName": "Erik Budanov",
-    "founderRole": "Gründer",
+    "founderRole": "Gründer & Produktentwickler",
     "thankYou": "Vielen Dank",
-    "thankYouSub": "Wir melden uns in Kürze bei Ihnen.",
+    "thankYouSub": "Ich melde mich in Kürze bei Ihnen.",
     "bookConsultation": "Beratung buchen",
     "duration": "30 Minuten • Kostenlos",
     "formName": "Ihr Name",
@@ -112,20 +133,20 @@
     "formSubmit": "Termin anfragen"
   },
   "ctaBanner": {
-    "title": "Was früher 5 Tools und 3 Stunden brauchte, braucht jetzt einen Prompt",
-    "subtitle": "Das funktioniert am besten für Dienstleister und Agenturen mit stabilen Workflows. Wenn Ihre Prozesse noch chaotisch sind, verstärkt KI nur das Chaos.",
-    "cta": "Kostenloses KI-Operations-Audit"
+    "title": "Ein Ansprechpartner. Direkte Verantwortung.",
+    "subtitle": "Ich arbeite selbstständig und nutze KI-Agenten für Recherche, Umsetzung und Tests. Technische Entscheidungen, Prüfung und Verantwortung bleiben bei mir.",
+    "cta": "Projekt mit Erik besprechen"
   },
   "contactForm": {
-    "title": "Lieber schreiben? Senden Sie uns eine Nachricht",
-    "subtitle": "Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden.",
+    "title": "Beschreiben Sie mir Ihr Projekt",
+    "subtitle": "Senden Sie Ihre Website, Ihr Ziel und den gewünschten Zeitrahmen. Ich melde mich mit den nächsten Schritten.",
     "name": "Ihr Name",
     "email": "E-Mail-Adresse",
     "company": "Unternehmen (optional)",
-    "message": "Wie können wir Ihnen helfen?",
+    "message": "Was möchten Sie verbessern oder entwickeln?",
     "submit": "Nachricht senden",
     "thankYou": "Nachricht gesendet!",
-    "thankYouSub": "Wir melden uns innerhalb von 24 Stunden.",
+    "thankYouSub": "Ich melde mich in Kürze bei Ihnen.",
     "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
   },
   "footer": {
@@ -135,7 +156,7 @@
     "legal": "Rechtliches",
     "contact": "Kontakt",
     "home": "Startseite",
-    "about": "Über uns",
+    "about": "Über Erik",
     "portfolio": "Portfolio",
     "services": "Dienstleistungen",
     "imprint": "Impressum",
@@ -156,6 +177,6 @@
     "relatedArticles": "Verwandte Artikel",
     "readyToStart": "Bereit, das in die Praxis umzusetzen?",
     "bookConsultation": "Kostenlose Beratung buchen",
-    "bookConsultationCta": "Buchen Sie eine kostenlose Beratung und lassen Sie uns besprechen, wie wir Ihrem Unternehmen helfen können."
+    "bookConsultationCta": "Besprechen Sie Ihr Projekt direkt mit Erik Budanov."
   }
 }

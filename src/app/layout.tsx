@@ -14,11 +14,11 @@ const GA_ID = "G-W5JP198XEE";
 export const metadata: Metadata = {
   metadataBase: new URL("https://digidog.org"),
   title: {
-    default: "Digidog – AI Operations Systems for Service Businesses",
+    default: "Website Redesigns & Product Engineering | DigiDog",
     template: "%s | Digidog",
   },
   description:
-    "We build AI Operations Systems that replace bloated SaaS stacks. From $1,200/month to $210 — on infrastructure you own.",
+    "Website redesigns, MVPs and integrations with independent product engineer Erik Budanov. Direct senior ownership, supported by AI agents.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -40,7 +40,8 @@ const organizationJsonLd = {
   name: "Digidog",
   url: "https://digidog.org",
   logo: "https://digidog.org/wp-content/uploads/2024/02/Digidog-Mark-Black@4x-e1709122020974.png",
-  description: "AI Operations Systems for Service Businesses",
+  description: "Independent product engineering by Erik Budanov: website redesigns, MVPs and integrations.",
+  founder: { "@type": "Person", name: "Erik Budanov" },
   sameAs: [
     "https://www.facebook.com/digidog.agency/",
     "https://www.instagram.com/digidog_agency/",

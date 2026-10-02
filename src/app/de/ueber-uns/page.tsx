@@ -1,10 +1,10 @@
+import de from "@/translations/german.json";
 import { Metadata } from "next";
 import AboutDEClient from "@/app/client-pages/AboutDEClient";
 
 export const metadata: Metadata = {
-  title: "Über DigiDog: Erik Budanov & KI-Operations-Team",
-  description:
-    "Lernen Sie das Team hinter DigiDog kennen. KI-Experten und Full-Stack-Entwickler mit Leidenschaft für digitale Innovation.",
+  title: de.seo.about.title,
+  description: de.seo.about.description,
   alternates: {
     canonical: "/de/ueber-uns",
     languages: {
@@ -14,9 +14,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Über uns — Das DigiDog Team | DigiDog",
-    description:
-      "Lernen Sie das Team hinter DigiDog kennen. KI-Experten und Full-Stack-Entwickler mit Leidenschaft für digitale Innovation.",
+    title: de.seo.about.title,
+    description: de.seo.about.description,
     url: "/de/ueber-uns",
     locale: "de_DE",
     alternateLocale: ["en_US"],

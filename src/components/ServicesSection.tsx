@@ -8,6 +8,7 @@ import { colors, fonts, transitions } from "./ui/brand";
 import { SectionContainer, SectionBadge, SectionHeading } from "./ui/section";
 import { openBookingModal } from "./ui/buttons";
 import { useTranslation } from "@/i18n/i18n-context";
+import { getLocalizedRoute } from "@/i18n/routes";
 import enT from "@/translations/english.json";
 import deT from "@/translations/german.json";
 
@@ -222,7 +223,7 @@ function ServiceCard({
               lineHeight: 1,
             }}
           >
-            {service.number}
+            {String(index + 1).padStart(2, "0")}
           </span>
           <motion.div
             animate={{ rotate: hovered ? 8 : 0, scale: hovered ? 1.1 : 1 }}
@@ -317,15 +318,6 @@ function ServiceCard({
               className="text-[13px] leading-[1.65]"
               style={{ fontFamily: fonts.body, color: colors.textSlate }}
             >
-              <span
-                className="bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: `linear-gradient(135deg, ${service.glowColor}, #fff)`,
-                  fontWeight: 600,
-                }}
-              >
-                Result:{" "}
-              </span>
               {service.result}
             </p>
           </div>
@@ -365,12 +357,14 @@ export function ServicesSection() {
 
   const translatedServices = services.map((s, i) => {
     const overrides = i === 0
-      ? { title: pt.servicesSection.webTitle, subtitle: pt.servicesSection.webSubtitle, result: pt.servicesSection.webResult }
+      ? { title: pt.servicesSection.webTitle, subtitle: pt.servicesSection.webSubtitle, result: pt.servicesSection.webResult, deliverables: pt.servicesSection.webDeliverables, link: getLocalizedRoute("webDesign", locale) }
       : i === 1
-      ? { title: pt.servicesSection.aiTitle, subtitle: pt.servicesSection.aiSubtitle, result: pt.servicesSection.aiResult }
-      : { title: pt.servicesSection.softwareTitle, subtitle: pt.servicesSection.softwareSubtitle, result: pt.servicesSection.softwareResult };
+      ? { title: pt.servicesSection.aiTitle, subtitle: pt.servicesSection.aiSubtitle, result: pt.servicesSection.aiResult, deliverables: pt.servicesSection.aiDeliverables, link: getLocalizedRoute("aiSolutions", locale) }
+      : { title: pt.servicesSection.softwareTitle, subtitle: pt.servicesSection.softwareSubtitle, result: pt.servicesSection.softwareResult, deliverables: pt.servicesSection.softwareDeliverables, link: getLocalizedRoute("customSoftware", locale) };
     return { ...s, ...overrides, _learnMore: pt.servicesSection.learnMore, _startProject: pt.servicesSection.startProject };
   });
+
+  if (locale === "DE") translatedServices.splice(1, 0, translatedServices.pop()!);
 
   return (
     <section
@@ -478,7 +472,7 @@ export function ServicesSection() {
         >
           {translatedServices.map((service, index) => (
             <ServiceCard
-              key={service.number}
+              key={service.link}
               service={service as any}
               index={index}
               isInView={isInView}

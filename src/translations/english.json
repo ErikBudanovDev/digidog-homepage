@@ -1,42 +1,42 @@
 {
   "seo": {
     "home": {
-      "title": "AI Operations Systems for Service Businesses",
-      "description": "We replace bloated SaaS stacks with AI Operations Systems on infrastructure you own. From $1,200/month down to $210. Built for mid-size service businesses.",
-      "ogTitle": "AI Operations Systems for Service Businesses | Digidog",
-      "ogDescription": "From $1,200/month in SaaS to $210 — on AI systems you own. We build the same for service businesses and agencies."
+      "title": "Website Redesign & MVP Development",
+      "description": "Website redesigns, MVPs and AI integrations with independent product engineer Erik Budanov. Direct senior ownership from scope to launch.",
+      "ogTitle": "Website Redesign & MVP Development | DigiDog",
+      "ogDescription": "Website redesigns, MVPs and AI integrations with independent product engineer Erik Budanov. Direct senior ownership from scope to launch."
     },
     "aiIntegration": {
-      "title": "AI Integration & MCP Automation for Businesses",
-      "description": "We wire your CRM, email, support, and operations into one AI system with custom MCP servers, on infrastructure you own. 30-60% of repetitive work automated.",
-      "ogTitle": "AI Integration & MCP Automation | Digidog",
-      "ogDescription": "We automate 30-60% of repetitive work with custom AI workflows and MCP servers."
+      "title": "AI Integration & Workflow Automation",
+      "description": "Connect business tools and automate defined workflows with independent product engineer Erik Budanov.",
+      "ogTitle": "AI Integration & Workflow Automation | DigiDog",
+      "ogDescription": "Connect business tools and automate defined workflows with independent product engineer Erik Budanov."
     },
     "aiSolutions": {
-      "title": "Custom AI Systems: LLM, ML & Predictive Analytics",
-      "description": "Custom AI built for how your business runs: LLM integration, machine learning, NLP, and predictive analytics, deployed on your own stack instead of rented per seat.",
-      "ogTitle": "Custom AI Solutions & ML Development | Digidog",
-      "ogDescription": "ML models, NLP, computer vision, and LLM integration for business."
+      "title": "Custom AI Solutions & Integrations",
+      "description": "Practical AI integrations and business tools with Erik Budanov. Clear scope, permissions and human review.",
+      "ogTitle": "Custom AI Solutions & Integrations | DigiDog",
+      "ogDescription": "Practical AI integrations and business tools with Erik Budanov. Clear scope, permissions and human review."
     },
     "webDesign": {
-      "title": "Websites & Infrastructure You Own (Next.js, VPS)",
-      "description": "High-performance websites on Next.js or WordPress, hosted on infrastructure you control. No vendor lock-in, no surprise price hikes, maintenance included.",
-      "ogTitle": "Websites & Infrastructure You Own | Digidog",
-      "ogDescription": "Custom websites, WordPress development, and ongoing maintenance."
+      "title": "Website Redesign & Web Development",
+      "description": "Website redesigns with Erik Budanov: clear content, responsive design, technical SEO and CRM integration.",
+      "ogTitle": "Website Redesign & Web Development | DigiDog",
+      "ogDescription": "Website redesigns with Erik Budanov: clear content, responsive design, technical SEO and CRM integration."
     },
     "customSoftware": {
-      "title": "Custom Software That Replaces Your SaaS Stack",
-      "description": "Internal tools, dashboards, API integrations, and SaaS replacements built for mid-size companies, usually shipped in 4-8 weeks, on infrastructure you own.",
-      "ogTitle": "Custom Software That Replaces SaaS | Digidog",
-      "ogDescription": "Internal tools, SaaS platforms, API integrations — software that connects your systems."
+      "title": "MVP & Custom Software Development",
+      "description": "MVPs, internal tools and API integrations with Erik Budanov. Direct technical ownership from requirements to launch.",
+      "ogTitle": "MVP & Custom Software Development | DigiDog",
+      "ogDescription": "MVPs, internal tools and API integrations with Erik Budanov. Direct technical ownership from requirements to launch."
     },
     "about": {
-      "title": "About DigiDog: Erik Budanov & AI Operations Team",
-      "description": "The story behind DigiDog: from $1,200/month in SaaS to $210 on our own AI stack, and the AI Operations Systems we now build for service businesses."
+      "title": "Erik Budanov — Independent Product Engineer",
+      "description": "Meet Erik Budanov, founder of DigiDog and independent product engineer. Senior ownership of redesigns, MVPs and integrations, supported by AI agents."
     },
     "contact": {
-      "title": "Contact DigiDog: Book a Free AI Operations Audit",
-      "description": "Book a free AI Operations Audit. We map your SaaS stack, show what an owned AI system replaces, and what it costs. We reply within 24 hours."
+      "title": "Contact Erik Budanov — Discuss Your Project",
+      "description": "Planning a website redesign, MVP or integration? Discuss your project directly with Erik Budanov, the independent product engineer behind DigiDog."
     },
     "portfolio": {
       "title": "Case Studies: AI Operations Systems in Production",
@@ -60,49 +60,70 @@
     }
   },
   "hero": {
-    "title1": "We Rebuild How Your",
-    "title2": "Business Operates Using AI",
-    "description": "We run two businesses on an AI Operations System that cut our stack from $1,200 to $210/month. Now we build the same for service businesses and agencies.",
-    "cta": "Get Your AI Operations Audit"
+    "title1": "Better websites.",
+    "title2": "Products built to move you forward.",
+    "description": "I’m Erik Budanov, founder of DigiDog and independent product engineer. I redesign websites, build MVPs and connect business tools with AI — with direct senior ownership from the first conversation to launch.",
+    "cta": "Discuss your project with Erik"
   },
   "nav": {
     "home": "Home",
     "portfolio": "Our Portfolio",
     "services": "Services",
-    "about": "About Us",
+    "about": "About Erik",
     "contact": "Contact",
     "blog": "Blog",
     "aiOperations": "AI Operations",
     "allServices": "All Services",
-    "webDesign": "Web & Infrastructure",
+    "webDesign": "Website Redesign",
     "aiSolutions": "AI Solutions & Automation",
-    "customSoftware": "Software & Integrations"
+    "customSoftware": "MVP & Software"
   },
   "servicesSection": {
-    "badge": "AI Operations System",
-    "title1": "How we rebuild ",
-    "title2": "your operations",
-    "subtitle": "Built for service businesses and agencies with 5–50 people spending $1K–$10K/month on SaaS tools.",
-    "webTitle": "Replace SaaS",
-    "webSubtitle": "Stop paying for features you don't use. We build AI-operated tools you own — CRM, task management, lead pipelines — on infrastructure you control.",
-    "webResult": "Companies typically reduce SaaS spend by 40–80%. Full data ownership. No vendor lock-in.",
-    "aiTitle": "Automate Operations",
-    "aiSubtitle": "Lead follow-ups, reporting, task routing, client onboarding — running automatically without you touching a dashboard.",
-    "aiResult": "Lead response time drops from hours to minutes. Teams operate with fewer tools and fewer errors.",
-    "softwareTitle": "Own Your Systems",
-    "softwareSubtitle": "Your data, your server, your rules. We build revenue infrastructure — websites, dashboards, and platforms — that you control completely.",
-    "softwareResult": "A fast, secure digital platform you own — not rented from someone else's roadmap.",
+    "badge": "Websites & Products",
+    "title1": "From your next step ",
+    "title2": "to a working product",
+    "subtitle": "For businesses improving an existing website and founders with a concrete product idea, early customers or a pilot to deliver.",
+    "webTitle": "Website Redesign",
+    "webSubtitle": "I bring content, design and engineering together so visitors can understand your offer and take the next step.",
+    "webResult": "The goal: a clearer path from first visit to qualified enquiry.",
+    "aiTitle": "AI & Integrations",
+    "aiSubtitle": "I connect your existing tools and automate defined workflows, with appropriate permissions and human review.",
+    "aiResult": "The goal: fewer manual handoffs between your systems.",
+    "softwareTitle": "MVP & Product Development",
+    "softwareSubtitle": "I turn your product idea into a practical scope and build the features your first customers or pilot actually need.",
+    "softwareResult": "The goal: a usable product with clear next steps.",
     "learnMore": "Learn more",
-    "startProject": "Get Your AI Operations Audit"
+    "startProject": "Discuss your project",
+    "webDeliverables": [
+      "Review content and enquiry paths",
+      "Responsive design and implementation",
+      "Technical SEO and URL preservation",
+      "Forms and CRM integration",
+      "Launch and handover"
+    ],
+    "aiDeliverables": [
+      "Scope one concrete workflow",
+      "Connect CRM, email and business tools",
+      "AI and MCP integration where useful",
+      "Define permissions and approval steps",
+      "Validate and document the result"
+    ],
+    "softwareDeliverables": [
+      "Define requirements and scope",
+      "Build the first usable product",
+      "Data model and API integrations",
+      "Testing and technical documentation",
+      "Deployment and next steps"
+    ]
   },
   "contactCta": {
-    "title": "Find out what's replaceable in your stack",
-    "subtitle": "We identify replaceable SaaS spend, manual workflows worth automating, and the fastest path to an AI Operations System for your business",
-    "cta": "Get Your AI Operations Audit",
+    "title": "What should your next project improve?",
+    "subtitle": "Share your website or product brief. We’ll discuss the business goal, technical requirements and a practical first step.",
+    "cta": "Discuss your project with Erik",
     "founderName": "Erik Budanov",
-    "founderRole": "Founder",
+    "founderRole": "Founder & Product Engineer",
     "thankYou": "Thank you",
-    "thankYouSub": "We will get back to you shortly.",
+    "thankYouSub": "I’ll get back to you shortly.",
     "bookConsultation": "Book Consultation",
     "duration": "30 Minutes • Free",
     "formName": "Your Name",
@@ -112,20 +133,20 @@
     "formSubmit": "Request Appointment"
   },
   "ctaBanner": {
-    "title": "What used to take 5 tools and 3 hours now takes one prompt",
-    "subtitle": "This works best for service businesses and agencies with stable workflows. If your operations are still chaotic, AI will only amplify the chaos.",
-    "cta": "Get Your AI Operations Audit"
+    "title": "One engineer. Direct ownership.",
+    "subtitle": "I work independently, using AI agents to support research, implementation and testing. I make the engineering decisions, review the work and remain responsible for delivery.",
+    "cta": "Discuss your project with Erik"
   },
   "contactForm": {
-    "title": "Prefer to write? Send us a message",
-    "subtitle": "Fill out the form below and we'll get back to you within 24 hours.",
+    "title": "Tell me about your project",
+    "subtitle": "Send your website, project goal and target timeline. I’ll get back to you with next steps.",
     "name": "Your Name",
     "email": "Email Address",
     "company": "Company (optional)",
-    "message": "How can we help?",
+    "message": "What would you like to improve or build?",
     "submit": "Send Message",
     "thankYou": "Message sent!",
-    "thankYouSub": "We'll get back to you within 24 hours.",
+    "thankYouSub": "I’ll get back to you shortly.",
     "error": "Something went wrong. Please try again."
   },
   "footer": {
@@ -135,7 +156,7 @@
     "legal": "Legal",
     "contact": "Contact",
     "home": "Home",
-    "about": "About Us",
+    "about": "About Erik",
     "portfolio": "Portfolio",
     "services": "Services",
     "imprint": "Imprint",
@@ -156,6 +177,6 @@
     "relatedArticles": "Related Articles",
     "readyToStart": "Ready to put this into practice?",
     "bookConsultation": "Book a Free Consultation",
-    "bookConsultationCta": "Book a free consultation and let's discuss how we can help your business."
+    "bookConsultationCta": "Discuss your project directly with Erik Budanov."
   }
 }

@@ -71,31 +71,9 @@ const contactInfo = [
   },
 ];
 
-const serviceOptions = [
-  "Replace SaaS tools with AI",
-  "Automate operations & workflows",
-  "Build custom internal tools",
-  "Full AI Operations System",
-  "Other",
-];
 
-const whyChoose = [
-  {
-    icon: Zap,
-    title: "Fast Response Time",
-    text: "We respond to your inquiry within 24 hours.",
-  },
-  {
-    icon: Users,
-    title: "Personal Consultation",
-    text: "Every project gets a dedicated point of contact.",
-  },
-  {
-    icon: MessageSquare,
-    title: "Free Initial Consultation",
-    text: "30-minute introductory call with no obligations.",
-  },
-];
+
+const whyChoose = [Zap, Users, MessageSquare];
 
 const faqItems = [
   {
@@ -598,7 +576,7 @@ function ContactFormSection() {
                       <option value="" className="bg-[#0f1d35] text-white/50">
                         Please select...
                       </option>
-                      {serviceOptions.map((s) => (
+                      {t.serviceOptions.map((s) => (
                         <option key={s} value={s} className="bg-[#0f1d35] text-white">
                           {s}
                         </option>
@@ -648,7 +626,7 @@ function ContactFormSection() {
                     Message *
                   </label>
                   <textarea
-                    placeholder="Describe your project, your goals, and your vision..."
+                    placeholder={t.formMessagePlaceholder}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     required
@@ -705,7 +683,7 @@ function ContactFormSection() {
                     Erik Budanov
                   </h3>
                   <p className="text-[13px]" style={{ fontFamily: fonts.body, color: colors.textSlate }}>
-                    Founder & AI Systems Architect
+                    {locale === "DE" ? "Gründer & Produktentwickler" : "Founder & Product Engineer"}
                   </p>
                 </div>
               </div>
@@ -734,10 +712,10 @@ function ContactFormSection() {
             {/* Why choose us */}
             <div className="space-y-4">
               {whyChoose.map((item, index) => {
-                const Icon = item.icon;
+                const Icon = item;
                 return (
                   <div
-                    key={item.title}
+                    key={[t.whyTitle1, t.whyTitle2, t.whyTitle3][index]}
                     className="p-5 rounded-xl border border-white/[0.06] flex gap-4"
                     style={{ background: colors.cardDark }}
                   >
@@ -752,13 +730,13 @@ function ContactFormSection() {
                         className="text-white text-[15px] mb-1"
                         style={{ fontFamily: fonts.heading, fontWeight: 600 }}
                       >
-                        {item.title}
+                        {[t.whyTitle1, t.whyTitle2, t.whyTitle3][index]}
                       </h4>
                       <p
                         className="text-[13px] leading-[1.6]"
                         style={{ fontFamily: fonts.body, color: colors.textSlate }}
                       >
-                        {item.text}
+                        {[t.whyText1, t.whyText2, t.whyText3][index]}
                       </p>
                     </div>
                   </div>

@@ -23,7 +23,7 @@ export function Navbar() {
 
   const navLinks = [
     { href: getLocalizedRoute("portfolio", locale), label: pt.nav.portfolio },
-    { href: getLocalizedRoute("aiIntegration", locale), label: pt.nav.aiOperations },
+    { href: getLocalizedRoute("webDesign", locale), label: pt.nav.webDesign },
     { href: getLocalizedRoute("blog", locale), label: pt.nav.blog },
     { href: getLocalizedRoute("about", locale), label: pt.nav.about },
     { href: getLocalizedRoute("contact", locale), label: pt.nav.contact },
@@ -155,7 +155,7 @@ export function Navbar() {
         {/* Logo */}
         <a href="/" onClick={handleLogoClick} className="flex items-center cursor-pointer">
           <img
-            src="/src/assets/Digidog secondary negative@4x.png"
+            src="/src/assets/Digidog%20secondary%20negative%404x.png"
             alt="DigiDog"
             className="h-[44px] w-auto"
           />
@@ -221,6 +221,8 @@ export function Navbar() {
         {/* Mobile Menu Button */}
         <button
           className="lg:hidden text-white"
+          aria-label={locale === "DE" ? "Navigation umschalten" : "Toggle navigation"}
+          aria-expanded={mobileOpen}
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           {mobileOpen ? <X size={28} /> : <Menu size={28} />}

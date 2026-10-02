@@ -1,10 +1,10 @@
+import de from "@/translations/german.json";
 import { Metadata } from "next";
 import ContactDEClient from "@/app/client-pages/ContactDEClient";
 
 export const metadata: Metadata = {
-  title: "Kontakt — Kostenloses Erstgespräch buchen | DigiDog",
-  description:
-    "Nehmen Sie Kontakt auf für ein kostenloses 30-minütiges Erstgespräch. Wir besprechen Ihre Anforderungen und zeigen Ihnen, wie wir helfen können.",
+  title: de.seo.contact.title,
+  description: de.seo.contact.description,
   alternates: {
     canonical: "/de/kontakt",
     languages: {
@@ -14,9 +14,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Kontakt — Kostenloses Erstgespräch buchen | DigiDog",
-    description:
-      "Nehmen Sie Kontakt auf für ein kostenloses 30-minütiges Erstgespräch. Wir besprechen Ihre Anforderungen und zeigen Ihnen, wie wir helfen können.",
+    title: de.seo.contact.title,
+    description: de.seo.contact.description,
     url: "/de/kontakt",
     locale: "de_DE",
     alternateLocale: ["en_US"],

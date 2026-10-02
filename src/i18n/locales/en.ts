@@ -39,7 +39,7 @@ export const en: DeepStringify<typeof de> = {
     heroTitle1: "Artificial Intelligence!!",
     heroTitle2: "for Your Business!!",
     heroDescription:
-      "From intelligent chatbots and predictive analytics to computer vision — we develop custom AI solutions that automate your processes and accelerate your growth.",
+      "I build AI integrations and business tools for clearly defined tasks. Work directly with me, Erik Budanov, from planning through implementation.",
     heroCtaPrimary: "Start AI Consulting",
     heroCtaSecondary: "Learn More",
 
@@ -182,7 +182,7 @@ export const en: DeepStringify<typeof de> = {
     heroTitle1: "Websites That Inspire!!",
     heroTitle2: "and Convert!!",
     heroDescription:
-      "From the first sketch to ongoing operations — we design and develop custom websites and web applications that take your business to the next level.",
+      "I redesign websites with clear content, responsive design and technical SEO. Work directly with me, Erik Budanov, from planning to launch.",
     heroCtaPrimary: "Start Project",
     heroCtaSecondary: "Learn More",
 
@@ -291,7 +291,7 @@ export const en: DeepStringify<typeof de> = {
     heroTitle1: "Software That Connects!!",
     heroTitle2: "Your Processes!!",
     heroDescription:
-      "From internal tools and API integrations to complete SaaS platforms — we develop custom software that connects your systems and makes your team more productive.",
+      "I build MVPs, internal tools and API integrations. As an independent product engineer, I own the technical work from requirements through handover.",
     heroCtaPrimary: "Discuss Project",
     heroCtaSecondary: "Learn More",
 
@@ -396,12 +396,12 @@ export const en: DeepStringify<typeof de> = {
   /* ── AI Integration page ── */
   aiIntegration: {
     /* SEO */
-    seoTitle: "AI Integration & Workflow Automation Agency",
+    seoTitle: "AI Integration & Workflow Automation",
     seoDescription:
       "We integrate your operations, data, and workflows into AI. Access reports, automate tasks, manage operations, and make decisions through natural conversation with Claude or GPT.",
 
     /* Hero */
-    heroBadge: "AI Integration Agency",
+    heroBadge: "AI Integration with Erik Budanov",
     heroTitle1: "Talk to Your",
     heroTitle2: "Business",
     heroTitle3: "With AI",
@@ -412,12 +412,12 @@ export const en: DeepStringify<typeof de> = {
       ". Access reports, automate tasks, manage operations, and make decisions through natural conversation.",
     heroCta: "Book Free Strategy Call",
     heroCtaSecondary: "Explore Services",
-    heroKpi1Value: "30–60%",
-    heroKpi1Label: "Repetitive work automated",
-    heroKpi2Value: "40%",
-    heroKpi2Label: "Average cost reduction",
-    heroKpi3Value: "3x",
-    heroKpi3Label: "Faster operations",
+    heroKpi1Value: "1:1",
+    heroKpi1Label: "Your direct engineer",
+    heroKpi2Value: "MCP / API",
+    heroKpi2Label: "Purposeful integrations",
+    heroKpi3Value: "DE / EN",
+    heroKpi3Label: "German & English",
     heroHubCaption: "AI connects all your business systems into one intelligent interface",
 
     /* Hub nodes */
