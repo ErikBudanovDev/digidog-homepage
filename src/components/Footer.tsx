@@ -51,10 +51,9 @@ export function Footer() {
   const pt = locale === "DE" ? deT : enT;
 
   const serviceLinks = [
-    { label: locale === "DE" ? "KI-Operations-System" : "AI Operations System", href: getLocalizedRoute("aiIntegration", locale) },
-    { label: locale === "DE" ? "SaaS ersetzen" : "Replace SaaS", href: getLocalizedRoute("aiIntegration", locale) },
-    { label: locale === "DE" ? "Prozesse automatisieren" : "Automate Operations", href: getLocalizedRoute("aiIntegration", locale) },
-    { label: locale === "DE" ? "Web & Infrastruktur" : "Web & Infrastructure", href: getLocalizedRoute("webDesign", locale) },
+    { label: pt.nav.webDesign, href: getLocalizedRoute("webDesign", locale) },
+    { label: pt.nav.customSoftware, href: getLocalizedRoute("customSoftware", locale) },
+    { label: pt.nav.aiSolutions, href: getLocalizedRoute("aiSolutions", locale) },
     ...(locale === "DE" ? [
       { label: "Webdesign Berlin", href: "/de/webdesign-agentur-berlin" },
       { label: "Webdesign Hamburg", href: "/de/webdesign-agentur-hamburg" },
@@ -98,7 +97,7 @@ export function Footer() {
               <div className="lg:col-span-1">
                 <div className="flex items-center gap-1 mb-8">
                   <img
-                    src="/src/assets/Digidog Primary White@4x.png"
+                    src="/src/assets/Digidog%20Primary%20White%404x.png"
                     alt="DigiDog"
                     className="h-[96px] w-auto"
                     style={{ filter: "brightness(0) saturate(100%) invert(9%) sepia(30%) saturate(5000%) hue-rotate(210deg) brightness(95%) contrast(100%)" }}

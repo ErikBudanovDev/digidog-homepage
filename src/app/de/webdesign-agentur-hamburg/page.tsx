@@ -7,16 +7,16 @@ import type { Metadata } from "next";
 import WebDesignDEClient from "../../client-pages/WebDesignDEClient";
 
 export const metadata: Metadata = {
-  title: "Webdesign Agentur Hamburg — Websites & Webentwicklung",
+  title: "Webdesign für Hamburg — Websites & Webentwicklung",
   description:
-    "Ihre Webdesign Agentur für Hamburg: Maßgeschneiderte Websites, moderne Webentwicklung mit React & Next.js, UX/UI Design und SEO-Optimierung. Kostenloses Erstgespräch.",
+    "Website-Redesign für Unternehmen in Hamburg mit Erik Budanov. Klare Inhalte, responsive Gestaltung und technische SEO. Direkt vom Entwickler.",
   alternates: {
     canonical: "/de/webdesign-agentur-hamburg",
     languages: { de: "/de/webdesign-agentur-hamburg", en: "/services/web-design", "x-default": "/services/web-design" },
   },
   keywords: ["webdesign agentur hamburg", "webdesign hamburg", "webentwicklung hamburg", "website erstellen hamburg", "webagentur hamburg"],
   openGraph: {
-    title: "Webdesign Agentur Hamburg — DigiDog",
+    title: "Webdesign für Hamburg — DigiDog",
     description: "Professionelle Websites und Webentwicklung für Unternehmen in Hamburg. React, Next.js, UX/UI Design.",
     type: "website",
     locale: "de_DE",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "DigiDog — Webdesign Agentur Hamburg",
-  description: "Professionelle Webdesign Agentur für Hamburg. Maßgeschneiderte Websites mit React, Next.js und modernen Technologien.",
+  name: "DigiDog — Webdesign für Hamburg",
+  description: "Webdesign für Unternehmen in Hamburg mit Erik Budanov. Maßgeschneiderte Websites mit React, Next.js und modernen Technologien.",
   url: "https://digidog.org/de/webdesign-agentur-hamburg",
   image: "https://digidog.org/og-default.jpg",
   address: { "@type": "PostalAddress", addressLocality: "Hamburg", addressCountry: "DE" },

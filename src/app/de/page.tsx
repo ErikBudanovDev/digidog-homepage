@@ -1,10 +1,10 @@
+import de from "@/translations/german.json";
 import { Metadata } from "next";
 import HomeDEClient from "@/app/client-pages/HomeDEClient";
 
 export const metadata: Metadata = {
-  title: "KI-Operations-Systeme für den Mittelstand",
-  description:
-    "Wir ersetzen aufgeblähte SaaS-Stacks durch KI-gestützte Operations-Systeme. Automatisierte Workflows, eigene Infrastruktur, planbare Kosten — gebaut für mittelständische Unternehmen.",
+  title: de.seo.home.title,
+  description: de.seo.home.description,
   alternates: {
     canonical: "/de",
     languages: {
@@ -14,9 +14,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "KI-Operations-Systeme für den Mittelstand | Digidog",
-    description:
-      "Wir ersetzen aufgeblähte SaaS-Stacks durch KI-gestützte Operations-Systeme. Automatisierte Workflows, eigene Infrastruktur, planbare Kosten.",
+    title: de.seo.home.title,
+    description: de.seo.home.description,
     url: "/de",
     locale: "de_DE",
     alternateLocale: ["en_US"],

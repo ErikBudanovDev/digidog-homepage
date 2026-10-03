@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: en.seo.home.title,
   description: en.seo.home.description,
   alternates: { canonical: "/", languages: { "en": "/", "de": "/de", "x-default": "/" } },
-  keywords: ["AI operations system", "replace SaaS with AI", "AI business automation", "KI Operations", "SaaS replacement", "MCP integration"],
+  keywords: ["website redesign", "independent product engineer", "MVP development", "AI integration", "Erik Budanov"],
   openGraph: {
     title: en.seo.home.ogTitle,
     description: en.seo.home.ogDescription,

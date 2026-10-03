@@ -625,95 +625,92 @@ Playwright MCP nutzt den Accessibility-Tree des Browsers — dieselbe strukturie
   {
     slug: "slack-mcp-server-einrichten",
     title: "Slack MCP Server einrichten: KI mit Ihrem Workspace verbinden",
-    metaTitle: "Slack MCP Server — Schritt-für-Schritt-Einrichtung 2026",
+    metaTitle: "Slack MCP Server: OAuth & Self-Hosting erklärt",
     metaDescription:
-      "Richten Sie einen Slack MCP Server ein, um Claude und andere KI-Assistenten mit Ihrem Slack-Workspace zu verbinden. Nachrichten senden, Kanäle durchsuchen und Workflows automatisieren.",
+      "Slack mit KI verbinden: offizieller OAuth-Connector, Community-Server, Berechtigungen, Entwürfe und Fehlerbehebung.",
     excerpt:
-      "Ein Slack MCP Server ermöglicht KI-Assistenten, Nachrichten in Ihrem Workspace zu lesen, zu suchen und zu senden — in weniger als 10 Minuten eingerichtet.",
+      "Offiziellen Slack-Connector und Community-Server unterscheiden: Einrichtung, Zugriffsrechte und Entwürfe verständlich erklärt.",
     content: `
 ## Was ist ein Slack MCP Server?
 
-Ein Slack MCP Server verbindet KI-Assistenten wie Claude über das Model Context Protocol mit Ihrem Slack-Workspace. Einmal verbunden, kann die KI Nachrichten suchen, Kanäle lesen, Nachrichten senden, Canvases verwalten und Workflows automatisieren — alles durch natürlichsprachliche Befehle.
+Ein Slack MCP Server verbindet einen KI-Client über das Model Context Protocol mit Slack. Entscheidend ist der Unterschied zwischen **Slacks offiziellem, gehostetem Server mit OAuth-Anmeldung** und **Community- oder selbst gehosteten Implementierungen**, die beispielsweise Bot-Tokens verwenden und andere Tools bereitstellen können.
 
-Anstatt täglich dutzende Male zwischen Claude und Slack zu wechseln, sagen Sie der KI, was Sie brauchen: "Fasse zusammen, was das Engineering-Team heute besprochen hat" oder "Entwurf eine Nachricht an den Marketing-Kanal über den Produktlaunch."
+Die [offizielle Slack-MCP-Dokumentation](https://docs.slack.dev/ai/slack-mcp-server/) beschreibt unterstützte Clients, Tools und Zugriffsbedingungen. npm-Befehle oder Bot-Token-Konfigurationen eines Community-Projekts gehören nicht automatisch zur offiziellen Verbindung.
 
-## Warum Slack über MCP mit KI verbinden?
+## Wofür eignet sich Slack MCP?
 
-Die meisten Teams verbringen 2–3 Stunden täglich in Slack. Ein Großteil dieser Zeit wird für Aufgaben aufgewendet, die KI schneller erledigen kann:
+Sinnvolle erste Aufgaben sind die Suche nach Gesprächen, Thread-Zusammenfassungen und Antwortentwürfe. Beispiel: „Finde die Diskussion zum Quartalsreview, fasse die Entscheidungen zusammen und verlinke die Quellen.“
 
-**Nachrichtenzusammenfassung** — "Was ist in #general passiert, während ich in Meetings war?" Anstatt durch 200 Nachrichten zu scrollen, liest die KI sie und gibt Ihnen eine 30-sekündige Zusammenfassung.
+Die Ergebnisse hängen von den Zugriffsrechten des verbundenen Kontos und den verfügbaren Tools ab. Die Verbindung gewährt keinen pauschalen Zugriff auf alle öffentlichen Kanäle, privaten Kanäle oder Direktnachrichten.
 
-**Kanalübergreifende Suche** — "Finde jedes Gespräch über das Q2-Budget in allen Kanälen." Die KI durchsucht öffentliche und private Kanäle gleichzeitig.
+## Einrichtung: Offizieller gehosteter Slack-Connector
 
-**Antworten entwerfen** — "Antworte auf Sarahs Frage zur Deployment-Timeline mit unserer aktuellen ETA." Die KI liest den Kontext, entwirft die Nachricht und wartet auf Ihre Genehmigung.
+Für Claude verwenden Sie [Slacks offizielle Verbindungsanleitung](https://docs.slack.dev/ai/slack-mcp-server/connect-to-claude/). Verfügbarkeit und Anforderungen können sich ändern; prüfen Sie dort den aktuellen Ablauf.
 
-## Einrichtung: Claude.ai Native Integration (Einfachste Methode)
+1. Prüfen Sie die Anforderungen an Client und Workspace. Klären Sie eine notwendige App- oder Connector-Freigabe durch Ihre Organisation vorab.
+2. Wählen Sie den Slack-Connector über den unterstützten Einrichtungsweg Ihres Clients.
+3. Melden Sie sich im gewünschten Workspace an und prüfen Sie die OAuth-Berechtigungen vor der Autorisierung.
+4. Testen Sie zunächst eine reine Leseanfrage für ein Gespräch, auf das Sie bereits in Slack zugreifen können.
+5. Prüfen Sie die Quellen. Testen Sie Schreibfunktionen separat und kontrollieren Sie Ziel und Nachricht vor dem Versand.
 
-Wenn Sie Claude.ai (Pro, Team oder Enterprise) verwenden, ist Slack MCP als integrierter Connector verfügbar:
+Für diese gehostete OAuth-Verbindung müssen Sie kein npm-Paket installieren und kein Bot-Token in eine lokale Konfigurationsdatei kopieren.
 
-1. Öffnen Sie Claude.ai und gehen Sie zu Ihrer Konversation
-2. Klicken Sie auf das **MCP-Connectors**-Symbol in der Symbolleiste
-3. Finden Sie **Slack** in der Liste der verfügbaren Connectors
-4. Klicken Sie auf **Verbinden** und autorisieren Sie Claude für Ihren Slack-Workspace
-5. Fertig — Claude kann jetzt mit Ihrem Slack-Workspace interagieren
+## Einrichtung: Community- oder selbst gehosteter Server
 
-Testen Sie es mit: "Suche in Slack nach Nachrichten über das Quartalsreview."
+Eine eigene Implementierung kann für individuelle Tools oder die Kontrolle über das Deployment sinnvoll sein. Sie ist nicht mit dem offiziellen Connector gleichzusetzen.
 
-## Einrichtung: Claude Desktop Konfiguration
+Wählen Sie zuerst eine konkrete Implementierung. Prüfen Sie deren gepflegte Dokumentation zu Installation, Laufzeit, Authentifizierung und Transport sowie den Paketinhaber und das Repository. Die bisherigen npm-Beispiele in diesem Artikel waren nicht belegt und wurden entfernt. Das bedeutet nicht, dass ein ähnlich benanntes Paket grundsätzlich nicht existieren kann.
 
-Fügen Sie dies zu Ihrer \`claude_desktop_config.json\` hinzu:
+Falls die Implementierung eine Slack-App benötigt, richten Sie diese über die Slack-App-Verwaltung ein und vergeben Sie nur die dokumentierten Berechtigungen. Bot- und Benutzer-Tokens haben unterschiedliche Fähigkeiten. Ein zusätzlicher Such-Scope verleiht einem Bot nicht automatisch denselben Zugriff wie der offizielle OAuth-Connector.
 
-\`\`\`json
-{
-  "mcpServers": {
-    "slack": {
-      "command": "npx",
-      "args": ["-y", "@anthropic/slack-mcp-server"],
-      "env": {
-        "SLACK_BOT_TOKEN": "xoxb-ihr-bot-token",
-        "SLACK_TEAM_ID": "T01234ABCDE"
-      }
-    }
-  }
-}
-\`\`\`
+Speichern Sie Tokens nicht im Quellcode. Beachten Sie die App-Freigaben des Workspaces und testen Sie mit dem vorgesehenen Konto.
 
-## Verfügbare Slack MCP Tools
+## Tools und Nachrichtenentwürfe
 
-- **slack_search_public** — Nachrichten in allen öffentlichen Kanälen durchsuchen
-- **slack_read_channel** — Aktuelle Nachrichten aus einem bestimmten Kanal lesen
-- **slack_read_thread** — Einen vollständigen Thread lesen
-- **slack_send_message** — Eine Nachricht an jeden Kanal oder Benutzer senden
-- **slack_send_message_draft** — Eine Nachricht als Entwurf speichern
-- **slack_schedule_message** — Eine Nachricht für die spätere Zustellung planen
-- **slack_create_canvas** — Ein Slack Canvas-Dokument erstellen
+Welche Tools verfügbar sind, hängt von Server, Client und erteilten Berechtigungen ab. Prüfen Sie die aktuelle Dokumentation, bevor Sie Suche, Kanal- oder Thread-Zugriff, Versand, Planung oder Canvas-Funktionen voraussetzen.
 
-## Reale Anwendungsfälle
+**Ein Entwurf wird nicht automatisch in Slack unter „Entwürfe“ gespeichert.** Die offizielle Dokumentation beschreibt das Entwerfen im KI-Client. Prüfen Sie den Text dort. Versand und geplanter Versand sind separate Aktionen, die vor der Ausführung geprüft werden sollten.
+
+## Anwendungsfälle
 
 ### Tägliche Standup-Zusammenfassung
 
-Prompt: "Lese den #engineering-Kanal der letzten 24 Stunden und gib mir eine Standup-Zusammenfassung — wer arbeitet woran, welche Blocker wurden erwähnt und welche Deadlines stehen an."
+Prompt: „Fasse die Diskussion in #engineering aus den letzten 24 Stunden zusammen. Nenne Blocker und verlinke die jeweiligen Nachrichten. Poste nichts.“
 
-### Kunden-Feedback-Aggregation
+### Kundenfeedback sammeln
 
-Prompt: "Durchsuche alle Kanäle nach Nachrichten mit 'Kundenfeedback' oder 'Bug-Report' aus der letzten Woche. Gruppiere sie nach Schweregrad und Produktbereich."
+Prompt: „Suche in zugänglichen Gesprächen nach Kundenfeedback und Bug-Reports der letzten Woche. Gruppiere die Ergebnisse nach Produktbereich und verlinke die Quellen.“
 
 ### Meeting-Follow-ups
 
-Prompt: "Lese den #product-planning-Thread vom gestrigen Meeting. Extrahiere alle Aufgaben und poste sie als Checkliste in #product-tasks."
+Prompt: „Lies diesen Planungsthread und entwirf hier eine Aufgabenliste zur Prüfung. Sende sie noch nicht.“
 
-## MCP bei Digidog
+Automatische Benachrichtigungen benötigen zusätzlich einen Auslöser oder einen geplanten Workflow. Die MCP-Verbindung allein startet keine Hintergrundautomatisierung.
+
+## Berechtigungen und Fehlerbehebung
+
+**Connector fehlt:** Prüfen Sie die dokumentierten Client-Anforderungen und die App- und Connector-Richtlinien Ihrer Organisation. App-Freigabe und persönliche OAuth-Autorisierung sind getrennte Schritte.
+
+**Nachrichten fehlen oder die Suche bleibt leer:** Prüfen Sie zunächst den Zugriff des verbundenen Kontos direkt in Slack. Bei Community-Servern kommen Token-Typ, Scopes, Kanalmitgliedschaft und unterstützte Such-API hinzu. Benutzerautorisierung und Bot-Mitgliedschaft sind unterschiedliche Zugriffsmodelle.
+
+**Versand schlägt fehl:** Prüfen Sie, ob das Tool verfügbar ist und die nötigen Berechtigungen sowie der Zugriff auf das Ziel vorliegen. Erteilen Sie nicht pauschal mehr Rechte, ohne die Ursache zu klären.
+
+**Rate Limits:** Grenzen hängen von Slack-API-Methode und App-Kontext ab. Beachten Sie die Antwort und Wiederholungsanweisungen, einschließlich Retry-After, sofern geliefert. Automatische Wiederholungen mit Wartezeit hängen von der Implementierung ab und sind keine allgemeine MCP-Garantie.
+
+## MCP bei DigiDog
+
+Ich bin Erik Budanov, unabhängiger Produktentwickler und Gründer von DigiDog. Ich plane und entwickle Integrationen mit direkter technischer Verantwortung und KI-Unterstützung. Beginnen wir mit einem konkreten Workflow, klaren Zugriffsrechten und definierten Freigaben. [Kostenloses Beratungsgespräch buchen](/contact).
 
 **Weiterführende Anleitungen:** [Claude Skills vs. MCP-Server — wann was?](/de/blog/claude-skills-vs-mcp-server) · [Slack MCP Server einrichten](/de/blog/slack-mcp-server-einrichten) · [Supabase MCP Server einrichten](/de/blog/supabase-mcp-server-einrichten) · [Playwright MCP Server Anleitung](/de/blog/playwright-mcp-server-anleitung) · [Vibe Coding: der deutsche Leitfaden](/de/blog/vibe-coding-deutschland-anleitung)
 
-Slack MCP ist eine von Dutzenden MCP-Integrationen, die wir für mittelständische Unternehmen entwickeln. Sehen Sie unsere [KI-Integration-Dienstleistung](/de/dienstleistungen/ki-integration) oder [buchen Sie ein kostenloses Beratungsgespräch](https://calendly.com/erik-budanov/beratungsgespraech) um zu erkunden, was MCP für Ihr Team leisten kann.
+[KI-Integration](/de/dienstleistungen/ki-integration) · [Beratungsgespräch buchen](https://calendly.com/erik-budanov/beratungsgespraech)
     `,
     image: "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=1080&q=80",
     tag: "KI-Integration",
     category: "ai",
     author: "Erik Budanov",
     date: "2026-03-17",
-    readTime: "8 Min. Lesezeit",
+    readTime: "6 Min. Lesezeit",
     keywords: ["slack mcp server", "slack mcp deutsch", "slack ki integration", "slack automatisierung"],
   },
 

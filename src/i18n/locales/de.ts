@@ -33,7 +33,7 @@ export const de = {
     heroTitle1: "Künstliche Intelligenz!!",
     heroTitle2: "für Ihr Business!!",
     heroDescription:
-      "Von intelligenten Chatbots über Predictive Analytics bis hin zu Computer Vision — wir entwickeln maßgeschneiderte KI-Lösungen, die Ihre Prozesse automatisieren und Ihr Wachstum beschleunigen.",
+      "Ich entwickle KI-Integrationen und Geschäftsanwendungen für klar definierte Aufgaben. Sie arbeiten direkt mit mir, Erik Budanov, von der Planung bis zur Umsetzung.",
     heroCtaPrimary: "KI-Beratung starten",
     heroCtaSecondary: "Mehr erfahren",
 
@@ -178,7 +178,7 @@ export const de = {
     heroTitle1: "Websites, die begeistern!!",
     heroTitle2: "und konvertieren!!",
     heroDescription:
-      "Von der ersten Skizze bis zum laufenden Betrieb — wir designen und entwickeln maßgeschneiderte Websites und Web-Applikationen, die Ihr Business auf das nächste Level heben.",
+      "Ich modernisiere Websites mit klaren Inhalten, responsivem Design und technischer SEO. Sie arbeiten direkt mit mir, Erik Budanov, von der Planung bis zum Launch.",
     heroCtaPrimary: "Projekt starten",
     heroCtaSecondary: "Mehr erfahren",
 
@@ -289,7 +289,7 @@ export const de = {
     heroTitle1: "Software, die Ihre!!",
     heroTitle2: "Prozesse verbindet!!",
     heroDescription:
-      "Von internen Tools über API-Integrationen bis hin zu kompletten SaaS-Plattformen — wir entwickeln maßgeschneiderte Software, die Ihre Systeme verbindet und Ihr Team produktiver macht.",
+      "Ich entwickle MVPs, interne Tools und API-Integrationen. Als unabhängiger Produktentwickler übernehme ich die technische Verantwortung von der Anforderung bis zur Übergabe.",
     heroCtaPrimary: "Projekt besprechen",
     heroCtaSecondary: "Mehr erfahren",
 
@@ -398,12 +398,12 @@ export const de = {
   /* ── AI Integration page ── */
   aiIntegration: {
     /* SEO */
-    seoTitle: "KI-Integration & Workflow-Automatisierung Agentur",
+    seoTitle: "KI-Integration & Workflow-Automatisierung",
     seoDescription:
       "Wir integrieren Ihre Abläufe, Daten und Workflows in KI. Greifen Sie auf Berichte zu, automatisieren Sie Aufgaben, verwalten Sie Abläufe und treffen Sie Entscheidungen durch natürliche Konversation mit Claude oder GPT.",
 
     /* Hero */
-    heroBadge: "KI-Integrations-Agentur",
+    heroBadge: "KI-Integration mit Erik Budanov",
     heroTitle1: "Sprechen Sie mit",
     heroTitle2: "Ihrem Unternehmen",
     heroTitle3: "Mit KI",
@@ -414,12 +414,12 @@ export const de = {
       ". Greifen Sie auf Berichte zu, automatisieren Sie Aufgaben, verwalten Sie Abläufe und treffen Sie Entscheidungen durch natürliche Konversation.",
     heroCta: "Kostenloses Strategiegespräch buchen",
     heroCtaSecondary: "Dienstleistungen entdecken",
-    heroKpi1Value: "30–60 %",
-    heroKpi1Label: "Wiederkehrende Arbeit automatisiert",
-    heroKpi2Value: "40 %",
-    heroKpi2Label: "Durchschnittliche Kostensenkung",
-    heroKpi3Value: "3x",
-    heroKpi3Label: "Schnellere Abläufe",
+    heroKpi1Value: "1:1",
+    heroKpi1Label: "Ihr direkter Entwickler",
+    heroKpi2Value: "MCP / API",
+    heroKpi2Label: "Passende Integrationen",
+    heroKpi3Value: "DE / EN",
+    heroKpi3Label: "Deutsch & Englisch",
     heroHubCaption: "KI verbindet alle Ihre Geschäftssysteme in einer intelligenten Oberfläche",
 
     /* Hub nodes */
