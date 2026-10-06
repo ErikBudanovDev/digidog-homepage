@@ -8,14 +8,12 @@ export function trackEvent(eventName: string, params?: Record<string, unknown>) 
   if (w.dataLayer) w.dataLayer.push({ event: eventName, ...params });
 }
 
-export function trackContactFormSubmit(formLocation: string, formData?: { name?: string; email?: string; service?: string }) {
+export function trackContactFormSubmit(formLocation: string, formData?: { service?: string }) {
   trackEvent("contact_form_submit", {
     form_location: formLocation,
-    contact_name: formData?.name || "",
-    contact_email: formData?.email || "",
     service_interest: formData?.service || "",
   });
-  trackEvent("generate_lead", { currency: "EUR", value: 50, form_location: formLocation });
+  trackEvent("generate_lead", { form_location: formLocation });
 }
 
 /** Fire Google Ads conversion event on successful contact form submission */

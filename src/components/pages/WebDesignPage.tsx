@@ -310,8 +310,7 @@ function DeliverablesSection() {
               className="text-[16px] md:text-[17px] max-w-[560px] mx-auto leading-[1.7]"
               style={{ fontFamily: fonts.body, color: colors.textSubtle }}
             >
-              From design to development to hosting — we cover
-              the entire lifecycle of your digital project.
+              {t.web.deliverablesSubtitle}
             </p>
           </ScrollReveal>
         </div>
@@ -834,81 +833,13 @@ function PortfolioShowcase() {
 }
 
 /* ── Result / Outcome Banner ── */
-function ResultBanner() {
-  const { t } = useTranslation();
-  return (
-    <section
-      className="relative py-16 md:py-20 overflow-hidden"
-      style={{ background: `linear-gradient(135deg, ${colors.navyDeep}, ${colors.navy})` }}
-    >
-      <SectionContainer className="relative z-10">
-        <ScrollReveal>
-          <div
-            className="rounded-2xl p-8 md:p-12 border"
-            style={{
-              background: `linear-gradient(135deg, ${colors.blue}08, ${colors.purple}06, transparent)`,
-              borderColor: `${colors.blue}20`,
-            }}
-          >
-            <div className="flex flex-col lg:flex-row items-center gap-8">
-              <div className="flex-1">
-                <h2
-                  className="text-white text-[28px] md:text-[36px] leading-[1.25] mb-4"
-                  style={{ fontFamily: fonts.heading, fontWeight: 700 }}
-                >
-                  {t.web.resultTitle}
-                </h2>
-                <p
-                  className="text-[16px] md:text-[17px] leading-[1.7] mb-6"
-                  style={{ fontFamily: fonts.body, color: colors.textSlate }}
-                >
-                  A fast, secure, and scalable digital platform that supports
-                  your business long-term — with measurable
-                  results that convince.
-                </p>
-
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  {[
-                    { value: "99%", label: "Uptime" },
-                    { value: "<1s", label: "Load Time" },
-                    { value: "100", label: "Lighthouse" },
-                    { value: "24/7", label: "Support" },
-                  ].map((stat) => (
-                    <div key={stat.label} className="text-center">
-                      <div
-                        className="text-[28px] md:text-[32px] mb-1"
-                        style={{ fontFamily: fonts.heading, fontWeight: 700, color: colors.blue }}
-                      >
-                        {stat.value}
-                      </div>
-                      <div className="text-[13px]" style={{ fontFamily: fonts.body, color: colors.textSlate }}>
-                        {stat.label}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="shrink-0">
-                <PrimaryButton
-                  onClick={() => openBookingModal()}
-                >
-                  {t.web.resultCta}
-                </PrimaryButton>
-              </div>
-            </div>
-          </div>
-        </ScrollReveal>
-      </SectionContainer>
-    </section>
-  );
-}
 
 /* ─────────────────────────────────────────────
  * PAGE
  * ───────────────────────────────────────────── */
 
 export default function WebDesignPage() {
+  const { locale } = useTranslation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -928,8 +859,14 @@ export default function WebDesignPage() {
       <ShowcaseSection />
       <ProcessSection />
       <TechStackSection />
-      <PortfolioShowcase />
-      <ResultBanner />
+      {locale === "DE" ? (
+        <section className="py-16 bg-white">
+          <SectionContainer>
+            <h2 className="text-3xl font-bold mb-4" style={{ color: colors.navy, fontFamily: fonts.heading }}>Relevante Projekterfahrung</h2>
+            <p className="max-w-3xl text-lg leading-relaxed" style={{ color: colors.textDark, fontFamily: fonts.body }}>Zu meiner Projekterfahrung gehören der Website-Relaunch und die weitere Webentwicklung für greenventory. Heute arbeiten Sie direkt mit mir als unabhängigem Product Engineer und Full-Stack-Entwickler.</p>
+          </SectionContainer>
+        </section>
+      ) : <PortfolioShowcase />}
       <ContactCTA />
       <ContactFormSection />
       <Footer />

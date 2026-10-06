@@ -31,10 +31,6 @@ export function ContactFormSection() {
     e.preventDefault();
     setSending(true);
     setError("");
-    trackContactFormSubmit("bottom_contact_form", {
-      name: formData.name,
-      email: formData.email,
-    });
 
     const result = await submitContactForm({
       name: formData.name,
@@ -46,6 +42,7 @@ export function ContactFormSection() {
 
     setSending(false);
     if (result.success) {
+      trackContactFormSubmit("bottom_contact_form");
       setSubmitted(true);
     } else {
       setError(result.error || pt.contactForm.error);

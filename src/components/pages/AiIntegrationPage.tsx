@@ -708,15 +708,30 @@ function CoreIdeaSection() {
 }
 
 /* ─────────────────────────────────────────────
- * 3. THE PROBLEM
+ * WEBSITE ENQUIRY WORKFLOW
  * ───────────────────────────────────────────── */
 
-function ProblemSection() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-60px 0px" });
-
+function EnquiryWorkflowSection() {
+  const { locale } = useTranslation();
+  if (locale !== "EN") return null;
   return (
-    null
+    <section className="py-16 md:py-24 bg-white" style={{ color: colors.textDark, fontFamily: fonts.body }}>
+      <SectionContainer>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: colors.navy, fontFamily: fonts.heading }}>Connect website enquiries to the next step in your quoting process</h2>
+        <p className="max-w-3xl text-lg leading-relaxed mb-8">Start with one handoff: a website enquiry creates a record in your CRM and reaches the right person. I map the current process with you, define what happens when information is missing, and implement and test the connection.</p>
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="rounded-xl border border-slate-200 p-6"><h3 className="text-xl font-semibold mb-3">One enquiry, one destination</h3><p className="leading-relaxed">Agree which fields and attachments should reach which record, system and person. Check available APIs and restrictions in your existing software plans before fixing the scope.</p></div>
+          <div className="rounded-xl border border-slate-200 p-6"><h3 className="text-xl font-semibold mb-3">Missing information and duplicates</h3><p className="leading-relaxed">Decide how incomplete submissions and repeated enquiries are handled. Keep exceptions visible for your team to resolve.</p></div>
+          <div className="rounded-xl border border-slate-200 p-6"><h3 className="text-xl font-semibold mb-3">Review before important decisions</h3><p className="leading-relaxed">Define which steps run automatically and which need a person to check them. Preparing information for a quote does not require choosing a price or sending the quote automatically.</p></div>
+          <div className="rounded-xl border border-slate-200 p-6"><h3 className="text-xl font-semibold mb-3">Failure handling and testing</h3><p className="leading-relaxed">Test the agreed flow with representative examples, including unsuccessful transfers. Agree how failures are surfaced, the manual fallback and who looks after the integration.</p></div>
+        </div>
+        <p className="max-w-3xl leading-relaxed mb-4">For free-text enquiries, AI may help prepare a summary or suggest a category for review. Suitability depends on the information involved, the accuracy required and how errors will be handled.</p>
+        <p className="max-w-3xl leading-relaxed mb-4">Example scope, not a customer case: enquiry form → CRM record → responsible team member. Missing or uncertain information goes to manual review. Automatic pricing and quote sending are outside this example.</p>
+        <p className="max-w-3xl leading-relaxed mb-4">My project experience includes recruitment API integration for JobsVS. For your enquiry process, we would first check the tools, data and handoff you need before agreeing an implementation.</p>
+        <a href="#contact-form" className="inline-block font-semibold underline mt-4">Discuss your workflow</a>
+        <p className="mt-3">Share the website, CRM and quoting tools involved, and the step you would like to improve.</p>
+      </SectionContainer>
+    </section>
   );
 }
 
@@ -2199,12 +2214,12 @@ export default function AiIntegrationPage() {
       <HeroSection />
       <CoreIdeaSection />
       <WhatWeDoSection />
+      <EnquiryWorkflowSection />
       <CaseStudiesSection />
       <ProcessSection />
       <OutcomesSection />
       <CtaBanner />
       <BusinessTypesSection />
-      <ProblemSection />
       <ContactCTA />
       <ContactFormSection />
       <Footer />
