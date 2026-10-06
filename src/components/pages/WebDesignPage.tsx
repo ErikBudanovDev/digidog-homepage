@@ -864,6 +864,7 @@ export default function WebDesignPage() {
           <SectionContainer>
             <h2 className="text-3xl font-bold mb-4" style={{ color: colors.navy, fontFamily: fonts.heading }}>Relevante Projekterfahrung</h2>
             <p className="max-w-3xl text-lg leading-relaxed" style={{ color: colors.textDark, fontFamily: fonts.body }}>Zu meiner Projekterfahrung gehören der Website-Relaunch und die weitere Webentwicklung für greenventory. Heute arbeiten Sie direkt mit mir als unabhängigem Product Engineer und Full-Stack-Entwickler.</p>
+            <p className="max-w-3xl text-lg leading-relaxed mt-4" style={{ color: colors.textDark, fontFamily: fonts.body }}>Bei einem früheren DigiDog-Projekt für SmileforYou wurde die bestehende Website mit einem Mobile-First-Ansatz überarbeitet und um zusätzliche Landingpages ergänzt. Erik war an Gestaltung, Umsetzung und Tests beteiligt.</p>
           </SectionContainer>
         </section>
       ) : <PortfolioShowcase />}
