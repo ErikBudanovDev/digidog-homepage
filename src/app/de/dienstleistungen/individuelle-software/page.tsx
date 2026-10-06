@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import CustomSoftwareDEClient from "@/app/client-pages/CustomSoftwareDEClient";
 
 export const metadata: Metadata = {
-  title: "Individuelle Softwareentwicklung | DigiDog",
+  title: "Individuelle Software & MVP-Entwicklung",
   description:
-    "Maßgeschneiderte Software, API-Integrationen und SaaS-Plattformen. Von internen Tools bis zu kompletten Geschäftsanwendungen.",
+    "Individuelle Webanwendungen, MVPs und Integrationen für konkrete Geschäftsprozesse. Klarer Umfang und direkte technische Verantwortung mit Erik Budanov.",
   alternates: {
     canonical: "/de/dienstleistungen/individuelle-software",
     languages: {
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Individuelle Softwareentwicklung | DigiDog",
+    title: "Individuelle Software & MVP-Entwicklung",
     description:
-      "Maßgeschneiderte Software, API-Integrationen und SaaS-Plattformen. Von internen Tools bis zu kompletten Geschäftsanwendungen.",
+      "Individuelle Webanwendungen, MVPs und Integrationen für konkrete Geschäftsprozesse. Klarer Umfang und direkte technische Verantwortung mit Erik Budanov.",
     url: "/de/dienstleistungen/individuelle-software",
     locale: "de_DE",
     alternateLocale: ["en_US"],

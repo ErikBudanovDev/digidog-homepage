@@ -430,8 +430,7 @@ function DeliverablesSection() {
               className="text-[16px] md:text-[17px] max-w-[560px] mx-auto leading-[1.7]"
               style={{ fontFamily: fonts.body, color: colors.textSubtle }}
             >
-              From requirements analysis to architecture to
-              go-live — we deliver software that truly works.
+              {t.software.deliverablesSubtitle}
             </p>
           </ScrollReveal>
         </div>
@@ -913,81 +912,13 @@ function PortfolioShowcase() {
 }
 
 /* ── Result / Outcome Banner ── */
-function ResultBanner() {
-  const { t } = useTranslation();
-  return (
-    <section
-      className="relative py-16 md:py-20 overflow-hidden"
-      style={{ background: `linear-gradient(135deg, ${colors.navyDeep}, ${colors.navy})` }}
-    >
-      <SectionContainer className="relative z-10">
-        <ScrollReveal>
-          <div
-            className="rounded-2xl p-8 md:p-12 border"
-            style={{
-              background: `linear-gradient(135deg, ${colors.teal}08, ${colors.green}06, transparent)`,
-              borderColor: `${colors.teal}20`,
-            }}
-          >
-            <div className="flex flex-col lg:flex-row items-center gap-8">
-              <div className="flex-1">
-                <h2
-                  className="text-white text-[28px] md:text-[36px] leading-[1.25] mb-4"
-                  style={{ fontFamily: fonts.heading, fontWeight: 700 }}
-                >
-                  {t.software.resultTitle}
-                </h2>
-                <p
-                  className="text-[16px] md:text-[17px] leading-[1.7] mb-6"
-                  style={{ fontFamily: fonts.body, color: colors.textSlate }}
-                >
-                  Efficient, connected systems that eliminate bottlenecks,
-                  reduce manual work, and enable your growth —
-                  with measurable results.
-                </p>
-
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  {[
-                    { value: "60%", label: "Less Manual Work" },
-                    { value: "99.9%", label: "Uptime" },
-                    { value: "5x", label: "Faster" },
-                    { value: "100%", label: "Integrated" },
-                  ].map((stat) => (
-                    <div key={stat.label} className="text-center">
-                      <div
-                        className="text-[28px] md:text-[32px] mb-1"
-                        style={{ fontFamily: fonts.heading, fontWeight: 700, color: colors.teal }}
-                      >
-                        {stat.value}
-                      </div>
-                      <div className="text-[13px]" style={{ fontFamily: fonts.body, color: colors.textSlate }}>
-                        {stat.label}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="shrink-0">
-                <PrimaryButton
-                  onClick={() => openBookingModal()}
-                >
-                  {t.software.resultCta}
-                </PrimaryButton>
-              </div>
-            </div>
-          </div>
-        </ScrollReveal>
-      </SectionContainer>
-    </section>
-  );
-}
 
 /* ─────────────────────────────────────────────
  * PAGE
  * ───────────────────────────────────────────── */
 
 export default function CustomSoftwarePage() {
+  const { locale } = useTranslation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -1007,8 +938,14 @@ export default function CustomSoftwarePage() {
       <ShowcaseSection />
       <ProcessSection />
       <TechStackSection />
-      <PortfolioShowcase />
-      <ResultBanner />
+      {locale === "DE" ? (
+        <section className="py-16 bg-white">
+          <SectionContainer>
+            <h2 className="text-3xl font-bold mb-4" style={{ color: colors.navy, fontFamily: fonts.heading }}>Erfahrung mit Webplattformen</h2>
+            <p className="max-w-3xl text-lg leading-relaxed" style={{ color: colors.textDark, fontFamily: fonts.body }}>Zu meiner Projekterfahrung gehört MedPers, eine Schweizer Personalplattform. Heute begleite ich Ihr Projekt als unabhängiger Product Engineer direkt von der Klärung des Geschäftsprozesses bis zur technischen Umsetzung.</p>
+          </SectionContainer>
+        </section>
+      ) : <PortfolioShowcase />}
       <ContactCTA />
       <ContactFormSection />
       <Footer />

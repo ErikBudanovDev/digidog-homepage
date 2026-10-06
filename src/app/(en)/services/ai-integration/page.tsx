@@ -20,21 +20,10 @@ const serviceSchema = {
   areaServed: [{ "@type": "Country", name: "Germany" }, { "@type": "Country", name: "United States" }, { "@type": "Country", name: "Austria" }],
 };
 
-const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "What is AI automation and how can it help my business?", acceptedAnswer: { "@type": "Answer", text: "AI automation handles repetitive tasks like lead qualification, data entry, email responses, and CRM updates. For mid-size companies, this saves 30-60% of time on manual processes, with ROI in 3-4 months." }},
-    { "@type": "Question", name: "What is an MCP server?", acceptedAnswer: { "@type": "Answer", text: "MCP (Model Context Protocol) lets AI assistants connect to your business tools — CRM, email, databases, project management. It turns AI from a chatbot into an operational team member." }},
-    { "@type": "Question", name: "How much does AI automation cost?", acceptedAnswer: { "@type": "Answer", text: "Typical projects cost €10,000-€25,000 for implementation, €300-€800/month maintenance. Payback is usually 2-4 months." }},
-    { "@type": "Question", name: "How long does implementation take?", acceptedAnswer: { "@type": "Answer", text: "A pilot deploys in 2-4 weeks. Full implementation across multiple workflows takes 2-3 months." }},
-  ],
-};
-
 export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <AiIntegrationPageClient />
     </>
   );

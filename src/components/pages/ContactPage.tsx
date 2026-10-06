@@ -389,7 +389,6 @@ function ContactFormSection() {
     e.preventDefault();
     setSending(true);
     setError("");
-    trackContactFormSubmit("contact_page", { name: formData.name, email: formData.email, service: formData.service });
 
     const result = await submitContactForm({
       ...formData,
@@ -398,6 +397,7 @@ function ContactFormSection() {
 
     setSending(false);
     if (result.success) {
+      trackContactFormSubmit("contact_page", { service: formData.service });
       trackGoogleAdsConversion();
       setSubmitted(true);
     } else {

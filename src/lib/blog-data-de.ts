@@ -7,6 +7,138 @@
 import type { BlogPost } from "./blog-data";
 
 export const blogPostsDE: BlogPost[] = [
+  {
+    "slug": "mvp-entwicklung-planen",
+    "title": "MVP-Entwicklung planen: Umfang, Prototyp und erste nutzbare Version",
+    "metaTitle": "MVP-Entwicklung planen: Umfang, Prototyp & erste Version",
+    "metaDescription": "Welche Funktionen gehören in ein MVP? Klären Sie Nutzer, Abläufe, Daten, Schnittstellen und Tests, bevor Sie den ersten Entwicklungsschritt beauftragen.",
+    "excerpt": "Ein Leitfaden für den nächsten nutzbaren Entwicklungsschritt: Nutzer, Ablauf, Funktionen, Daten und Abnahmekriterien gemeinsam klären.",
+    "content": `
+Ein MVP beginnt mit einer Frage: Was muss eine bestimmte Person mit der ersten Version tatsächlich erledigen können? Die Antwort hilft, Funktionen zu ordnen und einen überprüfbaren Entwicklungsumfang zu vereinbaren.
+
+Dieser Leitfaden richtet sich an Gründer und Unternehmen, die eine erste Produktversion oder einen neuen digitalen Geschäftsprozess planen. Falls noch offen ist, ob Sie überhaupt eigene Software brauchen, beginnen Sie mit dem Vergleich [individuelle Software oder Standardsoftware](/de/blog/individuelle-software-vs-standardsoftware). Hier geht es um den nächsten Schritt: Was soll konkret gebaut und geprüft werden?
+
+## 1. Beschreiben Sie einen vollständigen Ablauf
+
+„Ein Kundenportal“ ist noch kein klarer Umfang. Beschreiben Sie stattdessen, wer etwas tut, welche Informationen gebraucht werden und woran ein erfolgreicher Abschluss erkennbar ist.
+
+Eine hilfreiche Formulierung lautet:
+
+**Als [Nutzer] möchte ich [Aufgabe] erledigen, damit [konkreter Zweck]. Der Ablauf beginnt mit [Auslöser] und endet, wenn [prüfbares Ergebnis].**
+
+Notieren Sie auch den heutigen Ablauf. Welche Schritte erledigen Menschen per E-Mail, Tabelle oder Telefon? Ein manueller Schritt darf zunächst bestehen bleiben, wenn seine Zuständigkeit und seine Grenzen klar sind.
+
+## 2. Entscheiden Sie, was der nächste Test zeigen soll
+
+Ein klickbarer Prototyp kann helfen, Navigation und Verständlichkeit zu prüfen. Er belegt noch nicht, dass Daten zuverlässig gespeichert oder Schnittstellen korrekt angebunden werden.
+
+Soll ein Pilot mit echten Nutzern arbeiten, müssen die dafür nötigen Funktionen, Zugriffe und Fehlerfälle umgesetzt sein. Schreiben Sie deshalb auf, welche Frage Sie beantworten möchten und welche Art von Umsetzung dafür erforderlich ist. Nicht jede offene Frage verlangt bereits ein vollständiges Produkt.
+
+## 3. Grenzen Sie Funktionen und Abhängigkeiten ab
+
+Ordnen Sie Wünsche drei Gruppen zu: notwendig für den ersten Einsatz, später sinnvoll und noch ungeklärt. Ein ungeklärter Punkt ist keine automatisch zugesagte Funktion.
+
+Berücksichtigen Sie neben sichtbaren Seiten auch Datenquellen, Zugriffsrollen, vorhandene Systeme und die Betreuung nach dem Start. Prüfen Sie vor der Zusage einer Schnittstelle, ob Zugang, Dokumentation und benötigte Funktionen tatsächlich verfügbar sind. Bestehende Softwareverträge oder Tarife können den möglichen Umfang begrenzen.
+
+## Arbeitsblatt: den ersten Entwicklungsschritt festlegen
+
+### Wer nutzt die erste Version?
+
+**Ihre Festlegung:** Konkrete Nutzergruppe und erreichbare Testpersonen
+
+**Offener Punkt / zuständige Person:** ________________
+
+### Welche Aufgabe muss vollständig funktionieren?
+
+**Ihre Festlegung:** Auslöser, wichtigste Schritte, Abschluss
+
+**Offener Punkt / zuständige Person:** ________________
+
+### Was gehört ausdrücklich dazu?
+
+**Ihre Festlegung:** Notwendige Funktionen und Daten
+
+**Offener Punkt / zuständige Person:** ________________
+
+### Was bleibt zunächst außerhalb?
+
+**Ihre Festlegung:** Spätere Funktionen und bewusst manuelle Schritte
+
+**Offener Punkt / zuständige Person:** ________________
+
+### Welche Systeme werden benötigt?
+
+**Ihre Festlegung:** Datenquelle, Schnittstelle, Zugang und Ansprechpartner
+
+**Offener Punkt / zuständige Person:** ________________
+
+### Wer darf was sehen oder ändern?
+
+**Ihre Festlegung:** Rollen und Zugriffsgrenzen
+
+**Offener Punkt / zuständige Person:** ________________
+
+### Was geschieht bei Fehlern?
+
+**Ihre Festlegung:** Sichtbare Meldung, zuständige Person, manueller Ersatzweg
+
+**Offener Punkt / zuständige Person:** ________________
+
+### Woran wird die Umsetzung abgenommen?
+
+**Ihre Festlegung:** Testfall, erwartetes Ergebnis, prüfende Person
+
+**Offener Punkt / zuständige Person:** ________________
+
+### Was passiert nach dem ersten Einsatz?
+
+**Ihre Festlegung:** Feedback, Fehlerbetreuung und nächste Entscheidung
+
+**Offener Punkt / zuständige Person:** ________________
+
+Das Arbeitsblatt ist eine Gesprächsgrundlage. Aufwand und Angebot hängen davon ab, welche Annahmen bestätigt werden und welche Anforderungen noch hinzukommen.
+
+## Hypothetisches Beispiel: ein Portal für Wartungsanfragen
+
+Dieses Beispiel ist frei erfunden und beschreibt kein Kundenprojekt.
+
+Ein Dienstleistungsbetrieb erhält Wartungsanfragen per E-Mail. Für einen ersten Pilot sollen ausgewählte Bestandskunden eine Anfrage erfassen und deren Bearbeitungsstand sehen können. Eine verantwortliche Person im Betrieb prüft die Angaben und aktualisiert den Status.
+
+**Im ersten Umfang:** Zugang für die Pilotkunden, ein vereinbartes Anfrageformular, eine interne Übersicht und eine Statusanzeige. Kunden dürfen nur ihre eigenen Anfragen sehen.
+
+**Zunächst außerhalb:** automatische Preise, Rechnungsstellung, Einsatzplanung und Anbindung an weitere Systeme. Die Terminabstimmung bleibt vorerst persönlich.
+
+**Noch zu klären:** Wer richtet Zugänge ein? Welche Angaben sind erforderlich? Wer übernimmt unvollständige Anfragen? Welche Daten werden für den Pilot wirklich gebraucht?
+
+**Beispiel für eine Abnahmeprüfung:** Ein Pilotkunde sendet eine vollständig ausgefüllte Anfrage. Sie erscheint genau einmal in der internen Übersicht. Nach einer Statusänderung sieht der Kunde den neuen Stand. Ein anderer Kunde kann diese Anfrage nicht aufrufen. Fehlen Pflichtangaben, zeigt das Formular eine verständliche Rückmeldung.
+
+So entsteht ein begrenzter, überprüfbarer Ablauf, ohne spätere Ausbaustufen vorwegzunehmen.
+
+## 4. Planen Sie Feedback und Verantwortung mit
+
+Legen Sie vor dem ersten Einsatz fest, wer testet, wo Rückmeldungen gesammelt werden und wer Probleme bewertet. Trennen Sie dabei Fehler gegenüber dem vereinbarten Umfang von neuen Funktionswünschen. Beides ist wichtig, führt aber zu unterschiedlichen Entscheidungen.
+
+Für den nächsten Entwicklungsschritt helfen konkrete Beobachtungen: Wo bleibt ein Nutzer hängen? Welche Information fehlt? Welcher manuelle Schritt verursacht tatsächlich Aufwand? Daraus lassen sich neue Prioritäten ableiten, ohne jede ursprüngliche Idee sofort umzusetzen.
+
+## Ihren Anwendungsfall besprechen
+
+Ich bin Erik Budanov, unabhängiger Product Engineer und Full-Stack-Entwickler. Ich unterstütze Sie dabei, einen konkreten Ablauf abzugrenzen und technisch umzusetzen. Umfang, Aufwand und die nächsten Schritte klären wir anhand Ihres Vorhabens.
+
+Mehr zur [individuellen Softwareentwicklung und MVP-Umsetzung](/de/dienstleistungen/individuelle-software). Für eine erste [Projektanfrage](/de/kontakt) helfen eine Beschreibung des heutigen Ablaufs, vorhandene Skizzen und eine Liste der beteiligten Systeme.
+    `,
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1080&q=80",
+    "tag": "Software",
+    "category": "software",
+    "author": "Erik Budanov",
+    "date": "2026-10-06",
+    "readTime": "5 Min. Lesezeit",
+    "keywords": [
+      "MVP Entwicklung planen",
+      "MVP Umfang",
+      "MVP Prototyp",
+      "MVP Anforderungen"
+    ]
+  },
   /* ─── KI-AUTOMATISIERUNG ─── */
   {
     slug: "ki-automatisierung-mittelstand",
@@ -717,110 +849,152 @@ Ich bin Erik Budanov, unabhängiger Produktentwickler und Gründer von DigiDog. 
   /* ─── WEBDESIGN ─── */
   {
     slug: "website-relaunch-leitfaden",
-    title: "Website-Relaunch: Der vollständige Leitfaden 2026 (Strategie, Kosten & Zeitplan)",
-    metaTitle: "Website-Relaunch Leitfaden 2026 — Strategie, Kosten & Zeitplan | Digidog",
+    title: "Website-Relaunch planen: Inhalte, Technik und Übergabe",
+    metaTitle: "Website-Relaunch planen: Inhalte, Technik & Übergabe",
     metaDescription:
-      "Website-Relaunch planen? Dieser Leitfaden deckt Strategie, Kostenaufschlüsselung, Zeitplan, SEO-Migration und die 7 Zeichen, dass Ihre Website einen Neustart braucht. Echte Beispiele aus 50+ Relaunch-Projekten.",
+      "Website-Relaunch vorbereiten: Ziele klären, Inhalte und URLs erfassen, Aufwand abgrenzen und Anfragewege vor der Veröffentlichung prüfen.",
     excerpt:
-      "Die meisten Website-Relaunches scheitern, weil sie mit Design statt Strategie beginnen. Hier ist das vollständige Playbook — von der Analyse bis zum Launch — basierend auf 50+ von uns umgesetzten Projekten.",
+      "Ein praktischer Leitfaden für die Bestandsaufnahme, den vereinbarten Umfang und die Prüfung vor dem Relaunch — ohne pauschale Preis- oder Erfolgsversprechen.",
     content: `
-## 7 Zeichen, dass Ihre Website einen Relaunch braucht
+Ein Website-Relaunch kann Inhalte, Gestaltung und technische Abläufe verbessern. Er ist aber nicht für jedes Problem die passende Antwort. Manchmal reicht es, eine Leistungsseite zu überarbeiten, ein Formular zu vereinfachen oder die Pflege der Inhalte zu erleichtern.
 
-### 1. Ihre Absprungrate überschreitet 70 %
+Dieser Leitfaden hilft Ihnen, den tatsächlichen Änderungsbedarf zu beschreiben, einen nachvollziehbaren Umfang zu vereinbaren und die Veröffentlichung vorzubereiten. Im Mittelpunkt steht die Frage: Was soll die Website für Interessenten und Ihr Unternehmen besser leisten?
 
-Wenn mehr als 70 % der Besucher ohne Interaktion abspringen, erfüllt Ihre Website ihre Erwartungen nicht. Das bedeutet meist: veraltetes Design, zu lange Ladezeiten oder Inhalte, die nicht zu ihrer Suchanfrage passen.
+## Zuerst prüfen: Was funktioniert nicht — und was soll bleiben?
 
-### 2. Mobile-Traffic ist hoch, aber mobile Conversions sind niedrig
+Beginnen Sie mit konkreten Beobachtungen statt mit einem pauschalen Urteil über das Design.
 
-Wenn 60 %+ des Traffics mobil kommt, Ihre Conversion-Rate auf mobilen Geräten aber weniger als die Hälfte der Desktop-Rate ist, ist Ihre Website nicht ordentlich für mobile Nutzer optimiert.
+- **Leistungen:** Finden Besucher heraus, welches Angebot zu ihrem Anliegen passt? Sind Leistungsumfang und nächste Schritte verständlich?
+- **Referenzen:** Helfen Projektbeispiele bei der Auswahl, oder fehlen Informationen zu Ausgangslage und tatsächlicher Arbeit?
+- **Anfragen:** Funktionieren Kontaktwege auf mobilen Geräten und am Desktop? Erreichen Anfragen die zuständige Person?
+- **Inhaltspflege:** Können die verantwortlichen Mitarbeiter die vorgesehenen Änderungen vornehmen? Welche Aufgaben sollen bewusst technisch betreut bleiben?
+- **Technik:** Gibt es reproduzierbare Probleme mit Darstellung, Navigation, Formularen oder Ladeverhalten?
+- **Auffindbarkeit:** Für welche Suchanfragen und Seiten zeigt die Search Console überhaupt Daten? Passen diese zum Angebot?
 
-### 3. Ihre Website lädt länger als 3 Sekunden
+Kennzahlen liefern Hinweise, aber keine automatische Diagnose. Prüfen Sie Messung, Zeitraum und Kontext. Eine abweichende Conversion-Rate zwischen Mobilgerät und Desktop oder ein hoher Anteil an Markensuchen begründet allein noch keinen Relaunch.
 
-Googles Core Web Vitals beeinflussen jetzt direkt die Rankings. Läuft Ihr Largest Contentful Paint (LCP) über 2,5 Sekunden, verlieren Sie sowohl Besucher als auch Suchmaschinenrankings.
+Halten Sie auch fest, was erhalten bleiben soll: hilfreiche Inhalte, funktionierende Anfragewege, wiedererkennbare Gestaltung oder vorhandene Schnittstellen.
 
-**Echtes Beispiel:** Ein Logistik-Kunde kam zu uns mit 6,8 Sekunden Ladezeit auf mobilen Geräten. Ihr WordPress-Theme lud 47 render-blockierende Skripte. Nach dem Redesign mit modernem Stack (Next.js + Vercel) sank die Ladezeit auf 1,2 Sekunden und der organische Traffic stieg in 6 Monaten um 340 %.
+## Den Umfang vor dem Entwurf festlegen
 
-### 4. Sie können keine Inhalte ohne Entwickler aktualisieren
+Erstellen Sie eine gemeinsame Bestandsliste. Sie verbindet den heutigen Zustand mit den Entscheidungen für die neue Website.
 
-Wenn das Hinzufügen eines Blogbeitrags, Ändern einer Telefonnummer oder Aktualisieren von Preisen einen Entwickler erfordert, ist Ihr CMS-Setup grundlegend kaputt.
+### Leistungsseiten
 
-### 5. Die Websites Ihrer Wettbewerber sehen 5 Jahre moderner aus
+**Entscheidung:** Behalten, überarbeiten oder zusammenführen
 
-Öffnen Sie Ihre Website und die Ihrer 3 besten Wettbewerber nebeneinander. Wenn der Unterschied offensichtlich ist, machen Ihre Interessenten denselben Vergleich.
+**Offene Frage und Verantwortung:** Welche Informationen brauchen Interessenten?
 
-### 6. Ihre Website rankt nicht für Non-Brand-Keywords
+### Projektbeispiele
 
-Prüfen Sie die Google Search Console. Wenn 95 %+ Ihrer Suchabdrücke von Ihrem Unternehmensnamen kommen, funktioniert Ihre Website nicht als Marketing-Kanal.
+**Entscheidung:** Geeignete Referenzen auswählen und prüfen
 
-### 7. Ihre Conversion-Rate liegt unter dem Branchendurchschnitt
+**Offene Frage und Verantwortung:** Wer bestätigt Text, Bilder und Nutzungsrechte?
 
-E-Commerce: unter 2 %. SaaS: unter 3 %. B2B-Dienstleistungen: unter 1,5 %. Wenn Sie unter diesen Benchmarks liegen, verliert Ihre Website Geld.
+### Inhalte und Sprachen
 
-## Der Website-Relaunch-Prozess: 6 Phasen
+**Entscheidung:** Übernahme, Überarbeitung oder Neuerstellung festlegen
 
-### Phase 1: Strategische Analyse (Woche 1–2)
+**Offene Frage und Verantwortung:** Wer liefert und prüft die Inhalte?
 
-Vor jeder Designarbeit analysieren wir alles: Performance, SEO, Conversions, Inhalte und Wettbewerber. Das Ergebnis ist ein 15–20-seitiges Analysedokument mit priorisierten Empfehlungen.
+### Formulare und Buchung
 
-### Phase 2: Informationsarchitektur (Woche 2–3)
+**Entscheidung:** Benötigte Angaben und Empfänger bestimmen
 
-Basierend auf der Analyse strukturieren wir die Sitemap neu: Navigation, Content-Mapping, URL-Struktur und interne Verlinkungsstrategie.
+**Offene Frage und Verantwortung:** Welche Systeme und Personen sind beteiligt?
 
-### Phase 3: UX/UI-Design (Woche 3–5)
+### Technik und Pflege
 
-Erst Wireframes, dann visuelle Design auf Basis von Daten. Mobile-First-Design. Interaktive Prototypen in Figma vor Entwicklungsbeginn.
+**Entscheidung:** Bestehendes System prüfen oder Alternativen vergleichen
 
-### Phase 4: Entwicklung (Woche 5–8)
+**Offene Frage und Verantwortung:** Wer pflegt Inhalte und betreut die Technik?
 
-Für die meisten mittelständischen Unternehmenswebsites empfehlen wir Next.js auf Vercel: Server-Side-Rendering für SEO, eingebaute Bildoptimierung, Edge-Caching für Geschwindigkeit.
+### URLs und Verlinkung
 
-**SEO-Migrations-Plan** — Jede alte URL wird ihrer neuen Entsprechung zugeordnet. 301-Weiterleitungen werden vor dem Launch konfiguriert. Wir haben gesehen, dass Unternehmen 60 % ihres organischen Traffics verloren, weil sie einen Relaunch ohne Migrationsplan gestartet haben.
+**Entscheidung:** Bestehende Adressen und geplante Änderungen erfassen
 
-### Phase 5: Launch (Woche 8–9)
+**Offene Frage und Verantwortung:** Welche Nachfolgeseite passt zu welchem Inhalt?
 
-Launch-Tag wird geplant, nicht improvisiert. Pre-Launch-Checkliste, Staging-Review, DNS-Umstellung, 48-Stunden-Monitoring.
+Ein Relaunch erfordert nicht automatisch einen neuen technischen Unterbau. Vergleichen Sie Optionen anhand von Inhaltspflege, bestehenden Funktionen, Integrationen, Betrieb und Übergabe. Die Technologie sollte zu diesen Anforderungen passen.
 
-### Phase 6: Optimierung (Woche 9–12)
+## Ein möglicher Ablauf mit klaren Entscheidungen
 
-Heatmap-Analyse, A/B-Tests, SEO-Monitoring und Content-Expansion.
+### Bestandsaufnahme
 
-## Kosten eines Website-Relaunchs
+Sammeln Sie Probleme, Ziele und vorhandene Materialien. Prüfen Sie die wichtigsten Seiten und Abläufe. Das Ergebnis ist eine priorisierte Liste von Änderungen und offenen Fragen; der Umfang der Dokumentation richtet sich nach dem Projekt.
 
-### Kleine Unternehmenswebsite (5–15 Seiten)
-**Investition:** 3.000 – 8.000 €
-**Zeitplan:** 4–6 Wochen
+### Struktur und Inhalte
 
-### Mittelständische Unternehmenswebsite (15–50 Seiten)
-**Investition:** 8.000 – 25.000 €
-**Zeitplan:** 8–12 Wochen
+Legen Sie fest, welche Seiten gebraucht werden, wie sie zusammenhängen und welche Fragen sie beantworten. Bestimmen Sie Verantwortliche für Texte, Bilder, Referenzen und Freigaben. Planen Sie bestehende URLs und mögliche Änderungen bereits hier mit ein.
 
-### Enterprise / E-Commerce (50+ Seiten oder komplexe Funktionen)
-**Investition:** 25.000 – 75.000+ €
-**Zeitplan:** 12–20 Wochen
+### Entwurf
 
-## SEO-Migration: Der Teil, den die meisten Agenturen falsch machen
+Prüfen Sie Struktur und Gestaltung anhand der wichtigsten Aufgaben Ihrer Besucher. Je nach Vorhaben helfen einfache Skizzen, Wireframes oder ein klickbarer Prototyp. Entscheiden Sie, was vor der Umsetzung bestätigt werden muss.
 
-Das größte Risiko eines Website-Relaunchs ist der Verlust von organischem Suchtraffic. Wir wurden gerufen, um Relaunches zu reparieren, bei denen Unternehmen 40–80 % ihres organischen Traffics verloren, weil die Agentur die SEO-Migration nicht richtig gehandhabt hat.
+### Umsetzung
 
-**Die unverzichtbare SEO-Migrations-Checkliste:**
+Entwickeln und übernehmen Sie die vereinbarten Seiten und Funktionen. Halten Sie neue Wünsche und Abweichungen vom Umfang fest, damit Auswirkungen auf Aufwand und Ablauf besprochen werden können.
 
-- URL-Mapping für jede alte URL
-- 301-Weiterleitungen für alle alten URLs
-- Canonical-Tags auf jeder Seite
-- XML-Sitemap sofort nach Launch einreichen
-- Google Search Console Coverage-Bericht täglich beobachten
-- Strukturierte Daten neu implementieren
+### Prüfung und Veröffentlichung
 
-[Kostenlosen Website-Audit buchen →](/contact)
+Prüfen Sie die vereinbarten Anforderungen in einer geeigneten Testumgebung. Dokumentieren Sie offene Punkte, Freigabe und Zuständigkeiten. Eine Änderung von Domain oder Hosting gehört nur dazu, wenn sie ausdrücklich Teil des Vorhabens ist.
 
-Keine Verkaufsgespräch, kein Druck — nur eine ehrliche Einschätzung, wo Sie stehen und was den größten Einfluss hätte.
+### Übergabe und weitere Betreuung
+
+Klären Sie Zugänge, Inhaltspflege, technische Betreuung und den Umgang mit Fehlern. Nach der Veröffentlichung prüfen Sie die wichtigsten Abläufe erneut. Weitere Verbesserungen werden anhand tatsächlicher Beobachtungen priorisiert.
+
+## Was Aufwand und Zeitplan beeinflusst
+
+Eine Seitenzahl allein beschreibt den Umfang nicht. Eine einzelne Seite mit einer individuellen Schnittstelle kann andere Anforderungen haben als mehrere Seiten, die dieselbe Vorlage verwenden.
+
+Für eine belastbare Planung sind unter anderem relevant:
+
+- Zustand und Vollständigkeit der vorhandenen Inhalte;
+- Anzahl unterschiedlicher Seitentypen und Funktionen;
+- zusätzliche Sprachen und notwendige Abstimmungen;
+- Formulare, Buchungssysteme und andere Schnittstellen;
+- Übernahme bestehender Daten und URLs;
+- Prüfungen, Freigaben und Verfügbarkeit der beteiligten Personen;
+- Anforderungen an Betrieb, Übergabe und spätere Betreuung.
+
+Vereinbaren Sie, was enthalten ist, welche Annahmen gelten und welche Leistungen separat geplant werden. Erst daraus entsteht ein Angebot mit einem zum Vorhaben passenden Zeitplan. Dieser Leitfaden nennt deshalb keine pauschalen Projektpreise oder festen Lieferfristen.
+
+## Inhalte und URLs beim Wechsel erhalten
+
+Ordnen Sie bestehenden URLs eine bewusste Entscheidung zu: Adresse behalten, auf eine passende Nachfolgeseite weiterleiten oder Inhalt ohne Ersatz entfernen. Eine unverändert weiterverwendete URL benötigt keine Weiterleitung. Leiten Sie entfernte Inhalte nicht pauschal auf die Startseite um.
+
+Prüfen Sie interne Links, Canonicals, gegebenenfalls Sprachalternativen und die Sitemap gegen die vorgesehenen Seiten. Vorhandene strukturierte Daten sollten zu den tatsächlichen Inhalten passen. Die Veröffentlichung ist kein Grund, solche Angaben ungeprüft neu zu erstellen.
+
+Eine URL-Liste allein reicht nicht: Testen Sie das geplante Verhalten der betroffenen Adressen vor der Freigabe und kontrollieren Sie es nach der Veröffentlichung erneut.
+
+## Den Weg einer Anfrage vollständig testen
+
+Eine sichtbare Erfolgsmeldung im Formular allein zeigt noch nicht, dass die Anfrage beim richtigen Empfänger angekommen ist. Vereinbaren Sie einen Test mit klar gekennzeichneten Testdaten: Welche Angaben werden übermittelt, wo erscheinen sie und wer übernimmt den nächsten Schritt?
+
+Prüfen Sie auch unvollständige Angaben und einen fehlgeschlagenen Versand. Für den Fehlerfall braucht es eine verständliche Rückmeldung und einen vereinbarten Ersatzweg. Beziehen Sie externe Buchungsschritte ein, sofern sie Teil Ihres Anfragewegs sind.
+
+Notieren Sie für jeden Test das erwartete Ergebnis, das beobachtete Ergebnis und die verantwortliche Person. So entsteht eine konkrete Grundlage für die Freigabe.
+
+## Nach der Veröffentlichung beobachten
+
+Kontrollieren Sie zunächst die vereinbarten Seiten, Kontaktwege und Weiterleitungen. Dokumentieren Sie den Veröffentlichungszeitpunkt und wesentliche Änderungen.
+
+Vergleichen Sie Suchdaten erst über geeignete Zeiträume und berücksichtigen Sie deren Aktualisierungsstand. Änderungen in Suchanfragen, Kampagnen, Saisonalität oder Messung können das Bild beeinflussen. Suchklicks allein belegen keine qualifizierten Anfragen. Kurzfristige Schwankungen sind weder ein Erfolgsnachweis noch automatisch ein technischer Fehler.
+
+## Ihren Relaunch vorbereiten
+
+Für ein erstes Gespräch helfen Ihre aktuelle Website, die wichtigsten Probleme und eine Liste der Inhalte oder Funktionen, die erhalten bleiben sollen.
+
+Ich bin Erik Budanov, unabhängiger Product Engineer und Full-Stack-Entwickler. Mehr zur direkten Zusammenarbeit finden Sie beim [Website-Redesign](/de/dienstleistungen/webdesign). Über die [Projektanfrage](/de/kontakt) können Sie Ihr Vorhaben beschreiben.
+
+Wenn stattdessen eine eigene Kundenplattform oder ein interner Geschäftsprozess entstehen soll, finden Sie mehr zur [individuellen Softwareentwicklung](/de/dienstleistungen/individuelle-software).
     `,
     image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1080&q=80",
     tag: "Webdesign",
     category: "web",
     author: "Erik Budanov",
     date: "2026-03-28",
-    readTime: "12 Min. Lesezeit",
+    readTime: "6 Min. Lesezeit",
     keywords: ["website relaunch", "website redesign kosten", "website redesign prozess", "website relaunch leitfaden"],
   },
 
