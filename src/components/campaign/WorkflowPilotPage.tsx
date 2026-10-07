@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { submitContactForm } from "@/lib/contact";
-import { trackEvent, trackContactFormSubmit } from "@/lib/analytics";
 import copy from "./copy.json";
 import styles from "./WorkflowPilotPage.module.css";
 
@@ -11,10 +10,6 @@ export function WorkflowPilotPage({ variant }: { variant: "a" | "b" }) {
   const [sending, setSending] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
-  const formLocation = `workflow_pilot_${variant}`;
-  useEffect(() => {
-    trackEvent("campaign_landing_view", { campaign: "workflow_pilot", variant });
-  }, [variant]);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (sending) return;
@@ -29,11 +24,10 @@ export function WorkflowPilotPage({ variant }: { variant: "a" | "b" }) {
     });
     setSending(false);
     if (result.success) {
-      trackContactFormSubmit(formLocation);
       setSubmitted(true);
     } else setError(result.error || "Could not send your enquiry. Please try again.");
   };
-  const cta = <a className={styles.button} href="#pilot-enquiry" onClick={() => trackEvent("campaign_cta_click", { campaign: "workflow_pilot", variant })}>Discuss a workflow pilot <span aria-hidden="true">↗</span></a>;
+  const cta = <a className={styles.button} href="#pilot-enquiry">Discuss a workflow pilot <span aria-hidden="true">↗</span></a>;
   return <div className={styles.page}>
     <a className={styles.skip} href="#main">Skip to content</a>
     <header className={styles.header}><a href="/" className={styles.logo}>digi<span>dog</span><i aria-hidden="true">.</i></a><span>Independent product engineering<br /><strong>Erik Budanov</strong></span></header>

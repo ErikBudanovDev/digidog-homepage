@@ -32,11 +32,10 @@ function load(file, globals) {
     assert.equal(request.url, '/api/contact'); assert.equal(request.body.source, `Workflow pilot ${variant.toUpperCase()}`);
     assert.equal(request.body.email, fields.email); assert(request.body.message.includes(fields.message));
     assert.equal(submitted, outcome === 'success'); assert.equal(Boolean(error), outcome !== 'success');
-    assert.deepEqual(events.map(e => e[1]), outcome === 'success' ? ['contact_form_submit', 'generate_lead'] : []);
+    assert.deepEqual(events, []); assert.deepEqual(layer, []);
     const serialized = JSON.stringify([events, layer]);
     for (const value of Object.values(fields)) assert(!serialized.includes(value), 'No enquiry data in analytics');
-    if (submitted) assert.equal(events[1][2].form_location, `workflow_pilot_${variant}`);
     count++;
   }
-  console.log(`PASS: ${count} campaign variant success/HTTP/network cases. Success-only events, no enquiry data in analytics, existing contact destination.`);
+  console.log(`PASS: ${count} campaign variant success/HTTP/network cases. No preview analytics events; success-only confirmation; existing contact destination.`);
 })().catch(e => { console.error(e); process.exitCode = 1; });
