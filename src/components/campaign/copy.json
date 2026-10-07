@@ -1,0 +1,123 @@
+{
+  "benefits": [
+    [
+      "Investigate the question",
+      "Explore approved sources, connect relevant evidence, and surface gaps that need a closer look."
+    ],
+    [
+      "Reason through the options",
+      "Compare possible approaches against your constraints, with assumptions and trade-offs made explicit."
+    ],
+    [
+      "Turn decisions into action",
+      "Develop a working plan, prepare communications, and carry out approved steps in your existing systems."
+    ],
+    [
+      "Progress beyond office hours",
+      "Configure selected workflows to pick up incoming work outside team hours and prepare the next step for review. Keep human approval where the work calls for it."
+    ]
+  ],
+  "workflows": [
+    [
+      "Research a business question",
+      "Investigate approved documents and sources, reconcile conflicting information, and develop an evidence-linked brief with open questions for your team."
+    ],
+    [
+      "Compare options and build a plan",
+      "Analyze a service or operational problem, compare approaches against agreed constraints, and draft a plan with dependencies, risks, and decisions for the owner to review."
+    ],
+    [
+      "Work through a complex support case",
+      "Connect an issue with approved technical documentation and case history, propose explanations and next checks, and draft a response for a specialist to verify."
+    ],
+    [
+      "Move an approved decision forward",
+      "Turn an agreed approach into tasks and communications, and connect approved execution steps to the systems your team already uses."
+    ]
+  ],
+  "steps": [
+    [
+      "1. Paid discovery",
+      "Understand the problem, the decisions involved, and the systems and evidence your team uses. Select one bounded use case and agree on scope, cost, and success measures before a pilot begins."
+    ],
+    [
+      "2. A human-reviewed pilot",
+      "Test how AI can contribute to the agreed research, reasoning, planning, or execution work using approved tools and data. Define what it may do, what people must check, and when to escalate."
+    ],
+    [
+      "3. Review the evidence",
+      "Compare representative work against the current approach. Assess factual grounding, usefulness, quality, and review effort, alongside how well incoming work is covered and queues progress outside team hours. Include correction effort and total handling time. Decide whether to continue, revise, or stop."
+    ]
+  ],
+  "guards": [
+    "People accountable for decisions and approval of consequential actions",
+    "Approved sources, with evidence traceable and assumptions made explicit",
+    "Agreed data access, handling, and action permissions before testing",
+    "Human checks and a fallback when evidence or outputs are uncertain",
+    "Agreed operating hours, failure handling, and escalation for unattended work",
+    "Results that include coverage, queue progress, errors, rework, and review time"
+  ],
+  "faqs": [
+    [
+      "Who is this for?",
+      "Established B2B software, IoT, and technical service companies in the US and Canada with a valuable business problem, a clear owner, and people available to evaluate the work. The starting point can involve research, analysis, planning, customer support, or carrying a decision through to execution."
+    ],
+    [
+      "What are we buying?",
+      "Paid discovery followed, if there is a suitable use case and you approve the scope, by one bounded AI workflow pilot. Scope, cost, and timing are agreed before each phase."
+    ],
+    [
+      "Will the AI act on its own?",
+      "AI can investigate, propose analyses and plans, and perform specifically approved steps. People remain accountable for decisions. Permissions and review points are agreed in advance, and any expansion needs a separate decision."
+    ],
+    [
+      "Can work continue while our team is offline?",
+      "Selected workflows can be configured to analyze incoming requests, explore options, and prepare outputs outside office hours. Work that needs human approval waits for a reviewer. Availability depends on the agreed setup and connected services; operating hours and failure handling are part of the pilot scope."
+    ],
+    [
+      "What if the pilot does not help?",
+      "That is a useful result. The review should make it clear where evidence, usefulness, quality, coverage, or effort falls short, so you can decide whether to adjust the approach or stop."
+    ],
+    [
+      "How should we prepare?",
+      "Bring one business problem or decision, its owner, and a description of the information and work involved. Avoid sending confidential records or customer data with your initial enquiry."
+    ]
+  ],
+  "proof": [
+    [
+      "Customer emails into custom jewelry sketches.",
+      "A Make workflow interprets design requirements, generates sketches with AI, and validates the result before repeating where needed.",
+      "Confidential jewelry business."
+    ],
+    [
+      "Be Original Tours: operational information in one AI conversation.",
+      "Connected booking workflows and business systems so managers can ask about revenue, outstanding work and tour performance.",
+      "An implementation in Erik's own business."
+    ]
+  ],
+  "audience": "For established B2B software, IoT, and technical service companies in the US and Canada. Start with one valuable business problem, a bounded pilot, and people guiding the work.",
+  "variants": {
+    "a": {
+      "title": "Put AI intelligence to work in your business",
+      "intro": "Help your team investigate questions, reason through complex information and turn decisions into action, connected to your existing systems.",
+      "benefitTitle": "Bring intelligence into the work that matters",
+      "benefitHeads": [
+        "Investigate the question",
+        "Reason through the options",
+        "Turn decisions into action"
+      ],
+      "closing": "Choose one business problem where better investigation, reasoning, or execution could matter. Test the contribution AI can make before a wider commitment."
+    },
+    "b": {
+      "title": "Give your team more capacity to think",
+      "intro": "Bring AI into research, planning, customer support and daily decisions, with your people guiding the work and checking what matters.",
+      "benefitTitle": "Give your team room to explore, evaluate, and act",
+      "benefitHeads": [
+        "More capacity to investigate",
+        "More capacity to weigh options",
+        "More capacity to follow through"
+      ],
+      "closing": "Choose one business problem your team needs more capacity to work through. Test the contribution AI can make before a wider commitment."
+    }
+  }
+}
