@@ -1,19 +1,34 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 import { randomUUID } from "node:crypto";
+import { validateContact, escapeContactHtml, contactRateLimit } from "../../lib/contact-guard";
 import { sanitizeEnquiryAttribution } from "../../lib/enquiry-attribution";
+
+export const config = { api: { bodyParser: { sizeLimit: "16kb" } } };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
+    res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { name, email, phone, company, service, budget, message, source } = req.body;
-
-  if (!name || !email || !message) {
-    console.log("[Contact API] Validation failed - missing fields");
-    return res.status(400).json({ error: "Name, email, and message are required" });
+  if (req.headers["content-type"]?.split(";")[0].trim().toLowerCase() !== "application/json") {
+    return res.status(415).json({ error: "Expected application/json" });
   }
+  // Trust forwarded IPs only when the configured ingress overwrites that header.
+  const header = process.env.CONTACT_TRUST_PROXY === "true" ? req.headers["x-forwarded-for"] : undefined;
+  const ip = (typeof header === "string" ? header.split(",")[0].trim() : undefined) || req.socket.remoteAddress || "unknown";
+  const retryAfter = contactRateLimit(ip);
+  if (retryAfter) {
+    res.setHeader("Retry-After", String(retryAfter));
+    return res.status(429).json({ error: "Too many attempts. Please try again later or contact us by email." });
+  }
+  const validated = validateContact(req.body);
+  if (!validated.data) return res.status(400).json({ error: validated.error });
+  const raw = validated.data;
+  const { name, email, phone, company, service, budget, message, source } = Object.fromEntries(
+    Object.entries(raw).map(([key, value]) => [key, escapeContactHtml(value)])
+  );
 
   const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
@@ -62,9 +77,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     await transporter.sendMail({
       from: `"Digidog Website" <${process.env.EMAIL_USER}>`,
-      replyTo: email,
+      replyTo: raw.email,
       to: receivers,
-      subject: `New inquiry from ${name}${service ? ` — ${service}` : ""}`,
+      subject: `New inquiry from ${raw.name}${raw.service ? ` — ${raw.service}` : ""}`,
       html: htmlBody,
     });
 

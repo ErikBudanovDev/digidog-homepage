@@ -36,6 +36,7 @@ const erikPhotoSrc = erikPhoto as unknown as string;
 import { SEO } from "@/components/SEO";
 import { useTranslation } from "@/i18n/i18n-context";
 import { trackContactFormSubmit, trackGoogleAdsConversion } from "@/lib/analytics";
+import { ContactHoneypot } from "@/components/ContactHoneypot";
 import { submitContactForm } from "@/lib/contact";
 import enPg from "@/translations/pages/english.json";
 import dePg from "@/translations/pages/german.json";
@@ -391,6 +392,7 @@ function ContactFormSection() {
     setError("");
 
     const result = await submitContactForm({
+      contactFax: String(new FormData(e.currentTarget as HTMLFormElement).get("contactFax") || ""),
       ...formData,
       source: "Contact Page",
     });
@@ -487,6 +489,7 @@ function ContactFormSection() {
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
+                <ContactHoneypot />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label

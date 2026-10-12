@@ -9,6 +9,7 @@ export interface ContactFormData {
   budget?: string;
   message: string;
   source?: string;
+  contactFax?: string;
   attribution?: EnquiryAttribution;
 }
 
