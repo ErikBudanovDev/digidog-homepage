@@ -203,7 +203,7 @@ export const de = {
     del7Title: "Sicherheit & Hosting",
     del7Text: "SSL-Verschlüsselung, sichere Server-Konfiguration und zuverlässiges Hosting.",
     del8Title: "Wartung & Support",
-    del8Text: "Laufender Support, Updates und technische Betreuung für langfristigen Erfolg.",
+    del8Text: "Vor Projektstart klären wir, wer Inhalte pflegt, technische Updates übernimmt und bei Fehlern Ansprechpartner ist. Laufende Wartung und weitere Verbesserungen vereinbaren Sie bei Bedarf separat mit mir.",
     step1Title: "Beratung & Analyse",
     step1Text: "Wir analysieren Ihre Ziele, Zielgruppe und Wettbewerber, um eine maßgeschneiderte Strategie zu entwickeln.",
     step2Title: "Konzept & Design",
