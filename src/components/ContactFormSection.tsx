@@ -8,6 +8,7 @@ import { colors, fonts } from "./ui/brand";
 import { SectionContainer } from "./ui/section";
 import { PrimaryButton } from "./ui/buttons";
 import { useTranslation } from "@/i18n/i18n-context";
+import { ContactHoneypot } from "@/components/ContactHoneypot";
 import { submitContactForm } from "@/lib/contact";
 import { trackContactFormSubmit } from "@/lib/analytics";
 import enT from "@/translations/english.json";
@@ -33,6 +34,7 @@ export function ContactFormSection() {
     setError("");
 
     const result = await submitContactForm({
+      contactFax: String(new FormData(e.currentTarget as HTMLFormElement).get("contactFax") || ""),
       name: formData.name,
       email: formData.email,
       company: formData.company || undefined,
@@ -127,6 +129,7 @@ export function ContactFormSection() {
                     initial={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                   >
+                    <ContactHoneypot />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <input
                         type="text"
