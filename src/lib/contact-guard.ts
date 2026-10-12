@@ -1,7 +1,9 @@
+import { isIP } from "node:net";
+
 // One shared guard for every contact form; no external services or visitor tracking.
 const limits: Record<string, number> = {
   name: 120, email: 254, phone: 80, company: 200,
-  service: 120, budget: 120, message: 5000, source: 120,
+  service: 120, budget: 120, message: 5000, source: 120, website: 2048, country: 120,
 };
 
 export function validateContact(body: unknown) {
@@ -46,4 +48,13 @@ export function contactRateLimit(key: string, now = Date.now()): number {
   }
   if (++entry.count > 5) return Math.ceil((entry.expires - now) / 1000);
   return 0;
+}
+
+// No socket/unknown fallback: proxy peers can represent unrelated visitors.
+// Enable only after verifying this header is overwritten by the deployed ingress.
+export function contactRateLimitKey(header: string | string[] | undefined, trustProxy: boolean): string | undefined {
+  if (!trustProxy || typeof header !== "string") return;
+  const ip = header.trim();
+  if (!isIP(ip)) return;
+  return ip.startsWith("::ffff:") && isIP(ip.slice(7)) === 4 ? ip.slice(7) : ip.toLowerCase();
 }

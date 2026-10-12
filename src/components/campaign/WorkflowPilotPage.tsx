@@ -20,10 +20,12 @@ export function WorkflowPilotPage({ variant }: { variant: "a" | "b" }) {
     const fields = new FormData(e.currentTarget);
     const attribution = readEnquiryAttribution(window.location.pathname, window.location.search);
     const result = await submitContactForm({
-      contactFax: String(new FormData(e.currentTarget as HTMLFormElement).get("contactFax") || ""),
+      contactFax: String(fields.get("contactFax") || ""),
       name: String(fields.get("name")), email: String(fields.get("email")),
       company: String(fields.get("company")),
-      message: `Company website: ${fields.get("website") || "Not provided"}\nBased in: ${fields.get("country")}\n\n${fields.get("message")}`,
+      message: String(fields.get("message")),
+      website: String(fields.get("website") || ""),
+      country: String(fields.get("country") || ""),
       source: `Workflow pilot ${variant.toUpperCase()}`,
       attribution,
     });

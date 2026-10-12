@@ -5,7 +5,7 @@ const ts = require('typescript');
 const attributionExports = {};
 vm.runInNewContext(ts.transpileModule(fs.readFileSync('src/lib/enquiry-attribution.ts', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText, { exports: attributionExports, URLSearchParams });
 const guardExports = {};
-vm.runInNewContext(ts.transpileModule(fs.readFileSync('src/lib/contact-guard.ts', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText, { exports: guardExports });
+vm.runInNewContext(ts.transpileModule(fs.readFileSync('src/lib/contact-guard.ts', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText, { exports: guardExports, require });
 const compiled = ts.transpileModule(fs.readFileSync('src/pages/api/contact.ts', 'utf8'), {
   compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true }
 }).outputText;

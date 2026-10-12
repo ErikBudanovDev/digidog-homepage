@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 import { randomUUID } from "node:crypto";
-import { validateContact, escapeContactHtml, contactRateLimit } from "../../lib/contact-guard";
+import { validateContact, escapeContactHtml, contactRateLimit, contactRateLimitKey } from "../../lib/contact-guard";
 import { sanitizeEnquiryAttribution } from "../../lib/enquiry-attribution";
 
 export const config = { api: { bodyParser: { sizeLimit: "16kb" } } };
@@ -15,10 +15,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.headers["content-type"]?.split(";")[0].trim().toLowerCase() !== "application/json") {
     return res.status(415).json({ error: "Expected application/json" });
   }
-  // Trust forwarded IPs only when the configured ingress overwrites that header.
-  const header = process.env.CONTACT_TRUST_PROXY === "true" ? req.headers["x-forwarded-for"] : undefined;
-  const ip = (typeof header === "string" ? header.split(",")[0].trim() : undefined) || req.socket.remoteAddress || "unknown";
-  const retryAfter = contactRateLimit(ip);
+  const ip = contactRateLimitKey(req.headers["x-forwarded-for"], process.env.CONTACT_TRUST_PROXY === "true");
+  // Best-effort per-instance only; an unverified/missing identity is not pooled.
+  const retryAfter = ip ? contactRateLimit(ip) : 0;
   if (retryAfter) {
     res.setHeader("Retry-After", String(retryAfter));
     return res.status(429).json({ error: "Too many attempts. Please try again later or contact us by email." });
@@ -26,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const validated = validateContact(req.body);
   if (!validated.data) return res.status(400).json({ error: validated.error });
   const raw = validated.data;
-  const { name, email, phone, company, service, budget, message, source } = Object.fromEntries(
+  const { name, email, phone, company, service, budget, message, source, website, country } = Object.fromEntries(
     Object.entries(raw).map(([key, value]) => [key, escapeContactHtml(value)])
   );
 
@@ -66,7 +65,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         </table>
         <div style="margin-top: 16px; padding: 16px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px;">
           <p style="color: #64748b; font-size: 12px; margin: 0 0 8px; text-transform: uppercase; letter-spacing: 0.5px;">Message</p>
-          <p style="color: #1e293b; font-size: 15px; margin: 0; white-space: pre-wrap; line-height: 1.6;">${message}</p>
+          <p style="color: #1e293b; font-size: 15px; margin: 0; white-space: pre-wrap; line-height: 1.6;">${website ? `Company website: ${website}<br>` : ""}${country ? `Based in: ${country}<br><br>` : ""}${message}</p>
         </div>
       </div>
     </div>
