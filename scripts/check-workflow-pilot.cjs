@@ -10,6 +10,7 @@ function load(file, globals) {
 (async () => {
   const source = fs.readFileSync('src/components/campaign/WorkflowPilotPage.tsx', 'utf8');
   const handler = source.match(/const handleSubmit = async \(e: React.FormEvent<HTMLFormElement>\) => \{([\s\S]*?)\n  \};/)[1];
+  const attribution = load('src/lib/enquiry-attribution.ts', { URLSearchParams });
   let count = 0;
   for (const variant of ['a', 'b']) for (const outcome of ['success', 'http-error', 'network-error']) {
     const events = [], layer = [];
@@ -23,13 +24,14 @@ function load(file, globals) {
     } });
     const fields = { name: 'PRIVATE_NAME', email: 'private@example.invalid', company: 'PRIVATE_COMPANY', website: 'https://private.invalid', country: 'Canada', message: 'PRIVATE_MESSAGE' };
     const run = vm.runInNewContext('(async e => {' + handler + '})', {
-      ...analytics, ...contact, variant, formLocation: `workflow_pilot_${variant}`, sending: false,
+      ...analytics, ...contact, ...attribution, window: { location: { pathname: `/campaigns/workflow-pilot-${variant}`, search: "?utm_source=linkedin&utm_medium=social&utm_campaign=workflow_pilot" } }, variant, formLocation: `workflow_pilot_${variant}`, sending: false,
       FormData: class { get(k) { return fields[k]; } }, setSending() {}, setError(v) { error = v; }, setSubmitted(v) { submitted = v; }
     });
     const execution = run({ preventDefault() {}, currentTarget: {} });
     assert.equal(events.length, 0); assert.equal(layer.length, 0);
     resolveRequest(); await execution;
     assert.equal(request.url, '/api/contact'); assert.equal(request.body.source, `Workflow pilot ${variant.toUpperCase()}`);
+    assert.equal(request.body.attribution.variant, variant); assert.equal(request.body.attribution.source, 'linkedin');
     assert.equal(request.body.email, fields.email); assert(request.body.message.includes(fields.message));
     assert.equal(submitted, outcome === 'success'); assert.equal(Boolean(error), outcome !== 'success');
     assert.deepEqual(events, []); assert.deepEqual(layer, []);

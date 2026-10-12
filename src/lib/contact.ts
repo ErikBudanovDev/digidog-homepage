@@ -1,3 +1,5 @@
+import type { EnquiryAttribution } from "./enquiry-attribution";
+
 export interface ContactFormData {
   name: string;
   email: string;
@@ -7,9 +9,10 @@ export interface ContactFormData {
   budget?: string;
   message: string;
   source?: string;
+  attribution?: EnquiryAttribution;
 }
 
-export async function submitContactForm(data: ContactFormData): Promise<{ success: boolean; error?: string }> {
+export async function submitContactForm(data: ContactFormData): Promise<{ success: boolean; error?: string; enquiryId?: string }> {
   try {
     const res = await fetch("/api/contact", {
       method: "POST",
@@ -22,7 +25,8 @@ export async function submitContactForm(data: ContactFormData): Promise<{ succes
       return { success: false, error: body.error || "Failed to send message" };
     }
 
-    return { success: true };
+    const body = await res.json().catch(() => ({}));
+    return { success: true, enquiryId: typeof body.enquiryId === "string" ? body.enquiryId : undefined };
   } catch {
     return { success: false, error: "Network error. Please try again." };
   }
