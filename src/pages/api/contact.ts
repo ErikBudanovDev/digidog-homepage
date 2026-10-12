@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
+import { randomUUID } from "node:crypto";
+import { sanitizeEnquiryAttribution } from "../../lib/enquiry-attribution";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
@@ -25,9 +27,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const receivers = process.env.EMAIL_RECEIVER || process.env.EMAIL_RECIEVER || "hey@digidog.org";
 
+  const enquiryId = randomUUID();
+  const attribution = sanitizeEnquiryAttribution(req.body.attribution);
+  const attributionLine = attribution
+    ? `Variant: ${attribution.variant}; source: ${attribution.source || "unknown"}; medium: ${attribution.medium || "unknown"}; campaign: ${attribution.campaign || "unknown"}`
+    : "Attribution: unknown";
+
   const htmlBody = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
       <div style="background: #02033d; padding: 24px; border-radius: 12px 12px 0 0;">
+        <p style="color: #ffffff;">Enquiry reference: ${enquiryId}<br>${attributionLine}</p>
         <h1 style="color: #ffffff; margin: 0; font-size: 20px;">New Contact Form Submission</h1>
         <p style="color: #52bd94; margin: 4px 0 0; font-size: 14px;">via digidog.org${source ? ` — ${source}` : ""}</p>
       </div>
@@ -60,7 +69,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
 
     console.log("[Contact API] Email sent successfully");
-    return res.status(200).json({ success: true });
+    return res.status(200).json({ success: true, enquiryId });
   } catch {
     console.error("[Contact API] Email delivery failed");
     return res.status(500).json({ error: "Failed to send email" });

@@ -6,7 +6,7 @@ Source: approved copy draft Library `libfile_c37a373cb4f481919799ec893fbabb47`. 
 
 Contact reuses `submitContactForm` and `/api/contact`; variant is included in operational email source. Name/email/company/message stay in the contact payload, never analytics. The website and country fields are included in the email message. Confirmation occurs only after server success. Campaign analytics events are disabled for public review. No real enquiries were sent during QA.
 
-Public review: campaign view/CTA/lead tracking is inactive. Shared GA/GTM initialization is omitted on the two campaign routes; other routes retain existing analytics. No allocation, browser storage, advertising setup or account changes. The operational email retains the variant source. Account delivery is not verified.
+Public review: campaign view/CTA/lead tracking is inactive. Shared GA/GTM initialization is omitted on the two campaign routes; other routes retain existing analytics. No allocation, browser storage, advertising setup or account changes. The operational email retains the variant source. The approved operational-only attribution adds a random enquiry reference and allowlisted current-URL source/medium/campaign labels; the server sanitizes them again, and missing or rejected labels remain unknown. Sources: google/linkedin/email/referral; media: organic/social/email/referral/cpc; campaign: workflow_pilot. No identifiers belong in campaign URLs. There is no persistent storage or cross-page attribution. The existing operational recipient is unchanged; account delivery is not verified. No analytics activation helper is included in this release.
 
 ## Proposed test, requiring launch approval
 

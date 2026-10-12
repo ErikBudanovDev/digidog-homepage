@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { submitContactForm } from "@/lib/contact";
+import { readEnquiryAttribution } from "@/lib/enquiry-attribution";
 import copy from "./copy.json";
 import styles from "./WorkflowPilotPage.module.css";
 
@@ -16,11 +17,13 @@ export function WorkflowPilotPage({ variant }: { variant: "a" | "b" }) {
     setSending(true);
     setError("");
     const fields = new FormData(e.currentTarget);
+    const attribution = readEnquiryAttribution(window.location.pathname, window.location.search);
     const result = await submitContactForm({
       name: String(fields.get("name")), email: String(fields.get("email")),
       company: String(fields.get("company")),
       message: `Company website: ${fields.get("website") || "Not provided"}\nBased in: ${fields.get("country")}\n\n${fields.get("message")}`,
       source: `Workflow pilot ${variant.toUpperCase()}`,
+      attribution,
     });
     setSending(false);
     if (result.success) {
