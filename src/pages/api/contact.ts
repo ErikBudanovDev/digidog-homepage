@@ -8,8 +8,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { name, email, phone, company, service, budget, message, source } = req.body;
 
-  console.log("[Contact API] Received submission:", { name, email, phone, company, service, source });
-
   if (!name || !email || !message) {
     console.log("[Contact API] Validation failed - missing fields");
     return res.status(400).json({ error: "Name, email, and message are required" });
@@ -26,14 +24,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   });
 
   const receivers = process.env.EMAIL_RECEIVER || process.env.EMAIL_RECIEVER || "hey@digidog.org";
-
-  console.log("[Contact API] SMTP config:", {
-    host: process.env.EMAIL_HOST,
-    port: process.env.EMAIL_PORT,
-    user: process.env.EMAIL_USER ? "***set***" : "NOT SET",
-    pass: process.env.EMAIL_PASS ? "***set***" : "NOT SET",
-    receivers,
-  });
 
   const htmlBody = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -71,8 +61,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     console.log("[Contact API] Email sent successfully");
     return res.status(200).json({ success: true });
-  } catch (error: unknown) {
-    console.error("[Contact API] Email send error:", error);
+  } catch {
+    console.error("[Contact API] Email delivery failed");
     return res.status(500).json({ error: "Failed to send email" });
   }
 }

@@ -718,11 +718,13 @@ These requests begin with retrieval and review. Automated notifications need an 
 
 **Rate limits:** Limits depend on the Slack API method and app context. Follow Slack’s response and retry guidance, including Retry-After where returned. Automatic backoff is implementation-dependent; do not assume every MCP server retries for you.
 
-## Combining Slack MCP with Other Business Tools
+## Is the native connector enough?
 
-Slack can be one part of an integration connecting a CRM, project-management system or database. Start with one concrete workflow, define what the AI can read and change, and decide where human review is required.
+Start with the task. If you need to find and summarise Slack conversations, first check whether the native connector in your chosen AI tool meets your access and workflow requirements.
 
-I’m Erik Budanov, the independent product engineer behind DigiDog. I scope and build integrations with direct technical ownership and AI-assisted delivery. [Book a free consultation](https://calendly.com/erik-budanov/beratungsgespraech) to discuss a workflow in your business.
+For a process spanning Slack and other systems, map what it must read, decide and change. Define permitted actions and where a person must review or approve the result. Use an existing connector when it covers those requirements; consider a scoped integration for any remaining gaps.
+
+I work directly with you to define and build the workflow, using AI to support research, analysis and planning. My [AI integration services](https://digidog.org/services/ai-integration) explain the approach.
 
 **Related guides:** [Claude Skills vs MCP Servers — when to use which](/blog/claude-skills-vs-mcp-servers) · [Slack MCP Server setup](/blog/slack-mcp-server-setup-guide) · [Supabase MCP Server setup](/blog/supabase-mcp-server-setup-guide) · [Playwright MCP Server setup](/blog/playwright-mcp-server-complete-guide) · [GitHub MCP Server setup](/blog/github-mcp-server-setup-guide)
 
