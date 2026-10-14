@@ -24,6 +24,134 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "senior-developers-ai-future-software-engineering",
+    title: "Why Senior Developers May Be the Last Generation of Traditional Software Engineers",
+    metaTitle: "Senior Developers and the Future of Software Engineering",
+    metaDescription: "How AI coding agents could reshape software careers, from junior tasks to technical leadership—with research, a client example, and the limits of automation.",
+    excerpt: "AI is moving from helping with individual tasks to organizing whole workflows. The same shift could eventually reach technical leadership.",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1080&q=80",
+    tag: "AI & Software Engineering",
+    category: "software",
+    author: "Erik Budanov",
+    date: "2026-10-14",
+    readTime: "7 min read",
+    keywords: ["AI coding agents", "senior developers", "future of software engineering"],
+    content: `
+AI is moving from helping with individual tasks to organizing whole workflows. The same shift could eventually reach technical leadership.
+
+A booking arrives by email. A guide needs a schedule. A payment needs to be tracked. Behind a tour business, there is a constant flow of work that customers never see.
+
+For our client [Be Original Tours](/portfolio/beoriginaltours-operations), we connected those operational pieces. Booking information was extracted from emails and stored alongside guide records. Automation supported scheduling, and a dashboard brought together schedules, guides, and payments. Discord delivered notifications.
+
+The foundation was connected software and business information. Managers could then use that information by asking questions about revenue, outstanding work, and tour performance.
+
+That is a useful example of what is changing. Software still handles the records and workflows, but people can increasingly ask for an answer instead of working through each interface themselves.
+
+This is one business’s shift toward connected systems and conversational access. It opens a broader question: how far can agents reach into the work of building and maintaining software itself?
+
+## From a chat window to a working system
+
+On November 30, 2022, ChatGPT launched with code debugging among its examples. The basic interaction was conversational: describe a problem, get an explanation or code to work with.
+
+By November 2024, Cursor’s early Composer agent could choose relevant project information and use the terminal. AI assistance was moving deeper into the coding environment.
+
+In May 2025, Codex could edit a project’s code and run automated tests and code checks. By September 2025, Cursor offered detailed planning alongside browser tools for screenshots and interface improvements.
+
+The workflow had expanded from asking for a function to planning changes, implementing them, running automated checks, and inspecting the interface. These capabilities still required validation. A screenshot alone cannot establish that every user flow works.
+
+## We are getting better at building with AI
+
+The tools are improving. So is the way we use them.
+
+A vague request such as “build the feature” leaves too much open. A better starting point describes what the user should be able to do, what must never happen, and how the result will be checked. That gives both the agent and the reviewer a clear target.
+
+The work can then be divided into small changes. Automated tests check expected behavior. Browser checks test whether the visible page actually works. A safe release process limits the damage if something was missed.
+
+Separate checks matter. Asking another agent whether the first agent’s work looks correct is not enough. Both can make the same wrong assumption, so the checks need to test the result against the original requirements.
+
+There is also value in making the software simpler. Less repeated setup code and fewer unnecessary moving parts give agents and people less to misunderstand. Better results come from better instructions, stronger checks, and simpler systems, not merely from adding more agents.
+
+## The first pressure is already visible
+
+A June 2026 IZA study found a 14–15% relative decline in junior versus senior US software developer job openings after ChatGPT’s release. That measures advertised positions, not jobs already lost.
+
+Stanford researchers examined employment through June 2026. Among workers aged 22 to 25, employment in jobs most exposed to AI was about 19% below the level implied by trends in less-exposed jobs.
+
+The studies cover different groups. One concerns software job openings; the other covers young workers across occupations. The Stanford finding is descriptive and does not prove AI caused the gap.
+
+These figures do not establish the future of the profession. They do make the question about junior hiring harder to ignore: if fewer beginners get paid experience, where do future seniors come from?
+
+The bigger question is how many seniors companies will need.
+
+## Five stages that could change the career ladder
+
+The Be Original Tours example shows a change in how work can be done. The following stages go further. They describe a possible direction for software teams, not something that the business has already demonstrated.
+
+### 1. Junior work moves to agents
+
+An agent investigates a small bug, changes the code, and adds a test. A human reviews the result.
+
+The company gets the task completed with fewer human hours. But a beginner also loses some of the paid work through which developers traditionally learned.
+
+### 2. Agents build complete features
+
+The next assignment spans several parts of an application: the visible page, the stored data, and a connection to another service. Specialized agents can share the work.
+
+If they complete these larger assignments reliably, fewer people are needed for everyday implementation. Engineers focus on difficult cases and checking outcomes.
+
+### 3. Senior decisions become easier to automate
+
+Senior engineers decide how systems fit together and what could go wrong. They compare approaches, investigate failures, and judge the consequences of a change.
+
+Those activities are harder than producing a small piece of code. But if agents become better at understanding systems and testing alternatives, more of that work can move to them too.
+
+### 4. A technical leader directs the agents
+
+One experienced person could coordinate a team of agents while the business owner sets priorities. The role starts to resemble a CTO, or chief technology officer, organizing technical decisions and delivery.
+
+This creates a powerful transition role. It also creates another set of tasks to automate: assigning work, comparing solutions, checking progress, and deciding what needs another attempt.
+
+### 5. Agents coordinate other agents
+
+A coordinating agent could turn a business goal into tasks, assign specialists, examine their results, and send failed work back for changes. If this becomes dependable, parts of technical leadership move into the system as well.
+
+People and companies would still make business commitments and carry legal responsibility. That is separate from personally performing every technical function of a CTO.
+
+These stages may overlap, stall, or arrive in a different order. The important point is that automation does not have to stop when the work becomes senior or managerial.
+
+## More software does not guarantee more developer jobs
+
+Cheaper development could make [custom software](/services/custom-software) affordable for many more businesses. That creates demand for products that would otherwise never get built.
+
+But the outcome for employment depends on who serves that demand. If agents build and maintain much of the additional software, a growing market does not automatically require a growing human workforce.
+
+The same pressure affects prices. Developers can become more productive while customers expect cheaper projects. Competitors have access to the tools too.
+
+## The last traditional generation
+
+Current agents still make mistakes. They can miss security problems, misunderstand a business rule, and produce changes that pass a narrow test while breaking the real workflow. An impressive demonstration is not the same as running a dependable service for months.
+
+For businesses, the practical value comes from defining the right outcome, checking the real workflow, and releasing changes safely. Experienced engineers remain valuable because they can connect those pieces and recognize failures that automated checks miss.
+
+That value does not guarantee a permanent role supervising AI. Supervision itself can become more automated as the systems improve.
+
+Today’s seniors may be a transitional generation. They gained their experience through years of implementation and production problems, and they may now help automate the process that trained them.
+
+There is no reliable date for that outcome. But software could become more abundant while the traditional profession of producing it becomes smaller.
+
+What will you create, manage, or own when writing code is no longer the scarce skill?
+
+## Sources
+
+- [IZA: Generative AI and the Redefinition of Entry-Level Software Work, June 2026](https://www.iza.org/publications/dp/18723/generative-ai-and-the-redefinition-of-entry-level-software-work).
+- [Stanford Digital Economy Lab: Canaries in the Coal Mine, August 2026 update, with data through June 2026](https://digitaleconomy.stanford.edu/news/canariesaug26/).
+- [OpenAI: Introducing ChatGPT, November 30, 2022](https://openai.com/index/chatgpt/).
+- [Cursor: Early Composer agent, November 24, 2024](https://cursor.com/changelog/0-43-x).
+- [OpenAI: Introducing Codex, May 16, 2025](https://openai.com/index/introducing-codex/).
+- [Cursor: Plan Mode and browser tools, September 29, 2025](https://cursor.com/changelog/1-7).
+    `,
+  },
   /* ─── AI CLUSTER ─── */
   {
     slug: "ai-automation-for-mid-size-companies",
