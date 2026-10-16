@@ -192,6 +192,26 @@
       "solution": "End-to-End-Automatisierung mit Make.com, Python, MongoDB, Discord und einem Next.js-Dashboard.",
       "service": "Interne Tools",
       "client": "BeOriginalTours"
+    },
+    "apartment-renovation-vr": {
+      "title": "Wohnungsrenovierung in VR geplant",
+      "description": "Ein leerer Rohbau in Jerewan, gescannt und als begehbares VR-Modell aufgebaut, in dem Möbel, Licht, Steckdosen und Leitungen auf Meta Quest maßstabsgetreu geplant werden.",
+      "overview": "Die Wohnung Lvovyan in Jerewan war ein leerer Rohbau mit raumhohen Fenstern. Statt die Renovierung auf Papier zu planen, haben wir den Raum gescannt, in Blender nachgebaut und als WebXR-Modell veröffentlicht, das im Browser und auf Meta Quest läuft. Möbel aus einer Asset-Bibliothek werden maßstabsgetreu platziert, Elektro- und Sanitärplanung liegen im selben Modell. Beim Rundgang mit dem Headset werden Notizen direkt an der betreffenden Stelle eingesprochen. Jede Notiz wird transkribiert, in Blender umgesetzt und neu veröffentlicht, sodass die Änderung wenige Minuten später wieder in VR sichtbar ist.",
+      "goal": "Renovierungsentscheidungen im echten Raum und in echter Größe treffen, bevor Geld für Bau oder Möbel ausgegeben wird.",
+      "problem": "Grundrisse und Renderings machen es schwer, Proportionen, Sichtachsen und die Lage von Steckdosen oder Leitungen einzuschätzen. Fehler fallen meist erst auf, wenn die Wände geschlossen sind.",
+      "solution": "Ein gescanntes, begehbares VR-Modell der echten Wohnung mit einem Live-Feedback-Kreislauf: Im Headset gesprochene Notizen werden im Modell umgesetzt und kommen als aktualisierte VR-Szene zurück.",
+      "service": "3D & VR",
+      "client": "Wohnung Lvovyan, Jerewan"
+    },
+    "solar-system-vr": {
+      "title": "Sonnensystem in VR",
+      "description": "Ein armenischsprachiges Sonnensystem, das Kinder im Browser und auf Meta Quest erkunden: mit Monden, NASA-Raumsonden, Sprecher und Landung auf der Erde.",
+      "overview": "Das Sonnensystem in VR ist ein Lernerlebnis auf Armenisch. Kinder fliegen zur Sonne und zu allen acht Planeten, sehen Monde und Umlaufbahnen und entdecken NASA-Raumsondenmodelle wie Cassini am Saturn. Jede Station hat kurze Fakten und gesprochene Erklärungen, ein Kindermodus hält die Texte einfach. Ein Klick landet auf der Erde, auf einer Wiese aus gescannten Pflanzen, Felsen und einem echten Himmelspanorama. Alles läuft im normalen Browser und wechselt auf Meta Quest in VR.",
+      "goal": "Astronomie für armenischsprachige Kinder greifbar machen, mit einem Erlebnis, das sie selbst erkunden, am Laptop oder im VR-Headset.",
+      "problem": "Lernmaterial über das Weltall besteht meist aus flachen Bildern und Texten, und auf Armenisch gibt es davon sehr wenig.",
+      "solution": "Ein three.js- und WebXR-Erlebnis mit echten Texturen, gescannten 3D-Assets und armenischer Vertonung, als statische Seite, die auf jedem Gerät sofort öffnet.",
+      "service": "3D & VR",
+      "client": "DigiDog"
     }
   }
 }

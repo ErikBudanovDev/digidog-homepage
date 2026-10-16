@@ -178,5 +178,65 @@
     "readyToStart": "Bereit, das in die Praxis umzusetzen?",
     "bookConsultation": "Kostenlose Beratung buchen",
     "bookConsultationCta": "Besprechen Sie Ihr Projekt direkt mit Erik Budanov."
+  },
+  "immersiveSection": {
+    "badge": "3D · VR · Räume",
+    "title1": "Begehen Sie es, ",
+    "title2": "bevor es existiert",
+    "subtitle": "Ich entwickle interaktive 3D- und VR-Erlebnisse für den Browser und Meta Quest, aus echten Räumen, echten Daten und echten Landschaften.",
+    "cases": [
+      {
+        "tag": "Immobilien & Innenausbau",
+        "title": "Wohnungsrenovierung, geplant in VR",
+        "place": "Wohnung Lvovyan, Jerewan",
+        "body": "Ein leerer Rohbau, gescannt und in ein begehbares 3D-Modell verwandelt. Möbel, Licht, Steckdosen und Leitungen werden maßstabsgetreu platziert. Sprachnotizen aus dem Headset werden in Blender umgesetzt und sind wenige Minuten später wieder in VR sichtbar.",
+        "points": [
+          "Raumscan über Blender zum WebXR-Modell",
+          "Möbel maßstabsgetreu platziert",
+          "Elektro- und Sanitärplanung in 3D",
+          "Sprachnotizen aus dem Headset, live umgesetzt"
+        ],
+        "thumbs": [
+          "Rohbau vor den Arbeiten",
+          "Leitungsplanung in 3D",
+          "Blender-Modell der Wohnung"
+        ]
+      },
+      {
+        "tag": "Bildung",
+        "title": "Sonnensystem in VR",
+        "place": "Lernerlebnis auf Armenisch",
+        "body": "Ein begehbares Sonnensystem für Kinder: Planeten mit Monden und Umlaufbahnen, NASA-Raumsondenmodelle und gesprochene Erklärungen auf Armenisch. Ein Klick landet auf der Erde, auf einer Wiese aus gescannten Pflanzen und Felsen.",
+        "points": [
+          "Alle 8 Planeten mit Monden und Umlaufbahnen",
+          "NASA-Raumsondenmodelle",
+          "Sprecher und Kindermodus",
+          "Läuft im Browser und auf Meta Quest"
+        ],
+        "thumbs": [
+          "Erde und Mond",
+          "Jupiter und seine Monde",
+          "Landung auf der Erde: die Wiese"
+        ]
+      }
+    ],
+    "liveDemo": "Im Browser ausprobieren",
+    "useCasesTitle": "Wo es hilft",
+    "useCases": [
+      {
+        "title": "Immobilien & Innenausbau",
+        "text": "Zeigen Sie Käufern und Kunden den fertigen Raum, bevor die Arbeiten beginnen."
+      },
+      {
+        "title": "Bildung & Museen",
+        "text": "Orte und Objekte erlebbar machen, die man nicht selbst besuchen kann."
+      },
+      {
+        "title": "Produkte & Locations",
+        "text": "Maschinen, Werke oder Eventflächen in echter Größe präsentieren."
+      }
+    ],
+    "cta": "3D- oder VR-Projekt besprechen",
+    "caseStudy": "Fallstudie lesen"
   }
 }

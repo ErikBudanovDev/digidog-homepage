@@ -48,6 +48,72 @@ const monteOfelioNewsImageSrc = monteOfelioNewsImage as unknown as string;
 const monteOfelioLocationImageSrc = monteOfelioLocationImage as unknown as string;
 
 export const projects: ProjectCardData[] = [
+  {
+    title: "Apartment Renovation Planned in VR",
+    description:
+      "An empty apartment shell in Yerevan, scanned and turned into a walkable VR model where furniture, lighting, sockets and plumbing are planned at real scale on Meta Quest.",
+    overview:
+      "The Lvovyan apartment in Yerevan was an empty concrete shell with floor-to-ceiling windows. Instead of planning the renovation on paper, we scanned the space, rebuilt it in Blender and published it as a WebXR model that runs in the browser and on Meta Quest. Furniture from a local asset library is placed at real scale, and the electrical and plumbing layout is drawn into the same model. While walking through the apartment in the headset, the owner records voice notes next to the spot they refer to. Each note is transcribed, applied to the Blender scene and republished, so the change is visible back in VR a few minutes later.",
+    goal: "Make renovation decisions inside the real space, at real scale, before any money is spent on construction or furniture.",
+    improvements: [
+      "Room scan rebuilt as a Blender model",
+      "WebXR walkthrough in the browser and on Meta Quest",
+      "Furniture library placed at real scale",
+      "Electrical and plumbing plan inside the 3D model",
+      "Voice notes recorded in the headset and transcribed",
+      "Changes applied in Blender and republished to VR within minutes",
+    ],
+    problem:
+      "Floor plans and renders make it hard to judge proportions, sight lines and where sockets or pipes should go. Mistakes are usually found after the walls are closed.",
+    solution:
+      "A scanned, walkable VR model of the actual apartment with a live feedback loop: notes spoken in the headset are applied to the model and come back as an updated VR scene.",
+    image: "/images/immersive/apartment-vr-furniture.webp",
+    gallery: [
+      "/images/immersive/apartment-empty-shell.webp",
+      "/images/immersive/apartment-vr-wiring.webp",
+      "/images/immersive/apartment-mep-plan.webp",
+      "/images/immersive/apartment-blender-model.webp",
+    ],
+    year: 2026,
+    slug: "apartment-renovation-vr",
+    service: "3D & VR",
+    category: "software",
+    client: "Lvovyan apartment, Yerevan",
+    link: "/services/custom-software",
+  },
+  {
+    title: "Solar System VR",
+    description:
+      "An Armenian-language solar system children can explore in the browser and on Meta Quest, with moons, NASA spacecraft models, narration and a landing on Earth.",
+    overview:
+      "Solar System VR is an educational experience in Armenian. Children can fly to the Sun and each of the eight planets, see their moons and orbits, and find NASA spacecraft models such as Cassini near Saturn. Every stop has short facts and spoken narration, and a kids' mode keeps the text simple. One button lands the visitor on Earth, in a meadow built from scanned plants, rocks and a real sky panorama. The whole experience runs in a normal browser and switches to VR on Meta Quest.",
+    goal: "Make astronomy tangible for Armenian-speaking children with an experience they can explore themselves, on a laptop or in a VR headset.",
+    improvements: [
+      "All 8 planets with moons and orbits",
+      "NASA spacecraft models placed in context",
+      "Facts and narration in Armenian",
+      "Kids' mode with simpler language",
+      "'Land on Earth' meadow from scanned plants and rocks",
+      "Runs in the browser and in VR on Meta Quest",
+    ],
+    problem:
+      "Learning material about space is mostly flat pictures and text, and very little of it exists in Armenian.",
+    solution:
+      "A three.js and WebXR experience with real textures, scanned 3D assets and Armenian narration, hosted as a static site that opens instantly on any device.",
+    image: "/images/immersive/solar-saturn.webp",
+    gallery: [
+      "/images/immersive/solar-earth.webp",
+      "/images/immersive/solar-jupiter.webp",
+      "/images/immersive/solar-nature-meadow.webp",
+      "/images/immersive/solar-nature-meadow-2.webp",
+    ],
+    year: 2026,
+    slug: "solar-system-vr",
+    service: "3D & VR",
+    category: "software",
+    client: "DigiDog",
+    link: "/services/custom-software",
+  },
   /* ─── AI Operations Systems ─── */
   {
     title: "DigiDog AI Operations System",

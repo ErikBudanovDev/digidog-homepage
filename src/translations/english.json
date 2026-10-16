@@ -178,5 +178,65 @@
     "readyToStart": "Ready to put this into practice?",
     "bookConsultation": "Book a Free Consultation",
     "bookConsultationCta": "Discuss your project directly with Erik Budanov."
+  },
+  "immersiveSection": {
+    "badge": "3D · VR · Spatial",
+    "title1": "Walk through it ",
+    "title2": "before it exists",
+    "subtitle": "I build interactive 3D and VR experiences that run in the browser and on Meta Quest, made from real rooms, real data and real landscapes.",
+    "cases": [
+      {
+        "tag": "Real estate & interiors",
+        "title": "Apartment renovation, planned in VR",
+        "place": "Lvovyan apartment, Yerevan",
+        "body": "An empty concrete shell, scanned and turned into a walkable 3D model. Furniture, lighting, sockets and plumbing are placed at real scale. Notes spoken inside the headset are applied in Blender and show up back in VR a few minutes later.",
+        "points": [
+          "Room scan to Blender to WebXR model",
+          "Furniture placed at real scale",
+          "Electrical and plumbing plan in 3D",
+          "Voice notes from the headset, applied live"
+        ],
+        "thumbs": [
+          "Empty shell before the work",
+          "Wiring planned in 3D",
+          "Blender model of the apartment"
+        ]
+      },
+      {
+        "tag": "Education",
+        "title": "Solar System VR",
+        "place": "Armenian-language learning experience",
+        "body": "An explorable solar system for children: planets with their moons and orbits, NASA spacecraft models and spoken narration in Armenian. One button lands you on Earth, in a meadow built from scanned plants and rocks.",
+        "points": [
+          "All 8 planets with moons and orbits",
+          "NASA spacecraft models",
+          "Narration and a kids' mode",
+          "Runs in the browser and on Meta Quest"
+        ],
+        "thumbs": [
+          "Earth and Moon",
+          "Jupiter and its moons",
+          "Landing on Earth: the meadow"
+        ]
+      }
+    ],
+    "liveDemo": "Try it in your browser",
+    "useCasesTitle": "Where it helps",
+    "useCases": [
+      {
+        "title": "Real estate & interiors",
+        "text": "Show buyers and clients the finished space before any work starts."
+      },
+      {
+        "title": "Education & museums",
+        "text": "Let people explore places and objects they can't visit in person."
+      },
+      {
+        "title": "Products & venues",
+        "text": "Present machines, factories or event spaces at real scale."
+      }
+    ],
+    "cta": "Discuss a 3D or VR project",
+    "caseStudy": "Read the case study"
   }
 }
