@@ -204,12 +204,12 @@
       "client": "Wohnung Lvovyan, Jerewan"
     },
     "solar-system-vr": {
-      "title": "Sonnensystem in VR",
-      "description": "Ein armenischsprachiges Sonnensystem, das Kinder im Browser und auf Meta Quest erkunden: mit Monden, NASA-Raumsonden, Sprecher und Landung auf der Erde.",
-      "overview": "Das Sonnensystem in VR ist ein Lernerlebnis auf Armenisch. Kinder fliegen zur Sonne und zu allen acht Planeten, sehen Monde und Umlaufbahnen und entdecken NASA-Raumsondenmodelle wie Cassini am Saturn. Jede Station hat kurze Fakten und gesprochene Erklärungen, ein Kindermodus hält die Texte einfach. Ein Klick landet auf der Erde, auf einer Wiese aus gescannten Pflanzen, Felsen und einem echten Himmelspanorama. Alles läuft im normalen Browser und wechselt auf Meta Quest in VR.",
-      "goal": "Astronomie für armenischsprachige Kinder greifbar machen, mit einem Erlebnis, das sie selbst erkunden, am Laptop oder im VR-Headset.",
-      "problem": "Lernmaterial über das Weltall besteht meist aus flachen Bildern und Texten, und auf Armenisch gibt es davon sehr wenig.",
-      "solution": "Ein three.js- und WebXR-Erlebnis mit echten Texturen, gescannten 3D-Assets und armenischer Vertonung, als statische Seite, die auf jedem Gerät sofort öffnet.",
+      "title": "3D-Lern-Enzyklopädie",
+      "description": "Eine armenischsprachige Enzyklopädie aus 3D-Welten für Kinder: das Sonnensystem, eine Zeitmaschine zu den Dinosauriern und eine Mikrowelt in Wasser, Blut und Zellen. Für Browser und Meta Quest.",
+      "overview": "Die 3D-Lern-Enzyklopädie begann als begehbares Sonnensystem und wuchs zu mehreren Welten, die Kinder selbst erkunden. Im All fliegen sie zur Sonne und zu allen acht Planeten, sehen Monde und Umlaufbahnen und entdecken NASA-Raumsonden wie Cassini am Saturn. Auf der Erde führt eine Zeitmaschine zu den Dinosauriern, und ein Schrumpfstrahl bringt sie in einen Wassertropfen, den Blutkreislauf und eine lebende Zelle, wo jede Mikrobe und Zelle antippbar ist. Jede Station hat kurze Fakten und armenische Vertonung, ein Kindermodus hält die Texte einfach. Die Welten entstanden mit KI-gestützten 3D-Pipelines und laufen im Browser oder in VR auf Meta Quest.",
+      "goal": "Naturwissenschaften für armenischsprachige Kinder greifbar machen, mit Welten, die sie selbst erkunden, am Laptop oder im VR-Headset.",
+      "problem": "Lernmaterial über Weltall, Urzeit und Biologie besteht meist aus flachen Bildern und Texten, und auf Armenisch gibt es davon sehr wenig.",
+      "solution": "Eine three.js- und WebXR-Enzyklopädie mit gescannten und KI-gestützten 3D-Assets, armenischer Vertonung und einer gemeinsamen Navigation für All, Urzeit und Mikrowelt.",
       "service": "3D & VR",
       "client": "DigiDog"
     }

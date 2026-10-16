@@ -1,10 +1,10 @@
 {
   "seo": {
     "home": {
-      "title": "Website Redesign & MVP Development",
-      "description": "Website redesigns, MVPs and AI integrations with independent product engineer Erik Budanov. Direct senior ownership from scope to launch.",
-      "ogTitle": "Website Redesign & MVP Development | DigiDog",
-      "ogDescription": "Website redesigns, MVPs and AI integrations with independent product engineer Erik Budanov. Direct senior ownership from scope to launch."
+      "title": "Immersive 3D, VR & AR Development with AI",
+      "description": "Interactive 3D worlds, VR walkthroughs and AR experiences built with AI by Erik Budanov. Runs in the browser and on Meta Quest. Websites and MVPs too.",
+      "ogTitle": "Immersive 3D, VR & AR Development | DigiDog",
+      "ogDescription": "Interactive 3D worlds, VR walkthroughs and AR experiences built with AI by Erik Budanov. Runs in the browser and on Meta Quest."
     },
     "aiIntegration": {
       "title": "AI Integration & Workflow Automation",
@@ -60,10 +60,10 @@
     }
   },
   "hero": {
-    "title1": "Better websites.",
-    "title2": "Products built to move you forward.",
-    "description": "I’m Erik Budanov, founder of DigiDog and independent product engineer. I redesign websites, build MVPs and connect business tools with AI — with direct senior ownership from the first conversation to launch.",
-    "cta": "Discuss your project with Erik"
+    "title1": "Immersive worlds,",
+    "title2": "built with AI.",
+    "description": "I’m Erik Budanov, founder of DigiDog. I use AI to build interactive 3D, VR and AR experiences: learning worlds, walkable spaces and product showcases that run in the browser and on Meta Quest. Websites, MVPs and AI integrations remain part of the work.",
+    "cta": "Discuss your 3D project"
   },
   "nav": {
     "home": "Home",
@@ -180,7 +180,7 @@
     "bookConsultationCta": "Discuss your project directly with Erik Budanov."
   },
   "immersiveSection": {
-    "badge": "3D · VR · Spatial",
+    "badge": "3D · VR · AR",
     "title1": "Walk through it ",
     "title2": "before it exists",
     "subtitle": "I build interactive 3D and VR experiences that run in the browser and on Meta Quest, made from real rooms, real data and real landscapes.",
@@ -204,19 +204,19 @@
       },
       {
         "tag": "Education",
-        "title": "Solar System VR",
-        "place": "Armenian-language learning experience",
-        "body": "An explorable solar system for children: planets with their moons and orbits, NASA spacecraft models and spoken narration in Armenian. One button lands you on Earth, in a meadow built from scanned plants and rocks.",
+        "title": "3D Learning Encyclopedia",
+        "place": "Armenian-language worlds for children",
+        "body": "A growing encyclopedia of 3D worlds children can walk through: the solar system with moons and NASA spacecraft, a time machine back to the dinosaurs, and a shrink ray into a drop of pond water, the bloodstream and a living cell. Every stop has narration in Armenian.",
         "points": [
-          "All 8 planets with moons and orbits",
-          "NASA spacecraft models",
-          "Narration and a kids' mode",
+          "Solar system, dinosaurs and the micro world",
+          "Narration and a kids' mode in Armenian",
+          "Built with AI-assisted 3D pipelines",
           "Runs in the browser and on Meta Quest"
         ],
         "thumbs": [
-          "Earth and Moon",
-          "Jupiter and its moons",
-          "Landing on Earth: the meadow"
+          "The solar system: Saturn",
+          "Inside the bloodstream",
+          "Inside a living cell"
         ]
       }
     ],

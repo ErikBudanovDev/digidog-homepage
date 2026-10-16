@@ -29,11 +29,11 @@ const caseMedia = [
   },
   {
     accent: "#ffcf5a",
-    main: "/images/immersive/solar-saturn.webp",
+    main: "/images/immersive/enc-dinosaurs.webp",
     thumbs: [
-      "/images/immersive/solar-earth.webp",
-      "/images/immersive/solar-jupiter.webp",
-      "/images/immersive/solar-nature-meadow.webp",
+      "/images/immersive/solar-saturn.webp",
+      "/images/immersive/enc-micro-blood.webp",
+      "/images/immersive/enc-micro-cell.webp",
     ],
     demo: SOLAR_DEMO_URL,
     caseStudy: "/portfolio/solar-system-vr",

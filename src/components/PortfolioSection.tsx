@@ -82,30 +82,32 @@ export const projects: ProjectCardData[] = [
     link: "/services/custom-software",
   },
   {
-    title: "Solar System VR",
+    title: "3D Learning Encyclopedia",
     description:
-      "An Armenian-language solar system children can explore in the browser and on Meta Quest, with moons, NASA spacecraft models, narration and a landing on Earth.",
+      "An Armenian-language encyclopedia of 3D worlds for children: the solar system, a time machine to the dinosaurs and a micro world inside water, blood and cells. Runs in the browser and on Meta Quest.",
     overview:
-      "Solar System VR is an educational experience in Armenian. Children can fly to the Sun and each of the eight planets, see their moons and orbits, and find NASA spacecraft models such as Cassini near Saturn. Every stop has short facts and spoken narration, and a kids' mode keeps the text simple. One button lands the visitor on Earth, in a meadow built from scanned plants, rocks and a real sky panorama. The whole experience runs in a normal browser and switches to VR on Meta Quest.",
-    goal: "Make astronomy tangible for Armenian-speaking children with an experience they can explore themselves, on a laptop or in a VR headset.",
+      "The 3D Learning Encyclopedia started as an explorable solar system and grew into a set of worlds children can walk through. In space they fly to the Sun and all eight planets, see moons and orbits, and find NASA spacecraft such as Cassini near Saturn. On Earth, a time machine takes them back to the dinosaurs, and a shrink ray takes them into a drop of pond water, the bloodstream and a living cell, where they can tap each microbe or cell to learn about it. Every stop has short facts and narration in Armenian, with a kids' mode that keeps the text simple. The worlds were built with AI-assisted 3D pipelines and run in a normal browser or in VR on Meta Quest.",
+    goal: "Make science tangible for Armenian-speaking children with worlds they can explore themselves, on a laptop or in a VR headset.",
     improvements: [
-      "All 8 planets with moons and orbits",
-      "NASA spacecraft models placed in context",
-      "Facts and narration in Armenian",
-      "Kids' mode with simpler language",
-      "'Land on Earth' meadow from scanned plants and rocks",
+      "Solar system with moons, orbits and NASA spacecraft",
+      "Time machine to the dinosaurs",
+      "Micro world: pond water, bloodstream and a living cell",
+      "Facts and narration in Armenian, with a kids' mode",
+      "AI-assisted 3D asset pipeline",
       "Runs in the browser and in VR on Meta Quest",
     ],
     problem:
-      "Learning material about space is mostly flat pictures and text, and very little of it exists in Armenian.",
+      "Learning material about space, prehistory and biology is mostly flat pictures and text, and very little of it exists in Armenian.",
     solution:
-      "A three.js and WebXR experience with real textures, scanned 3D assets and Armenian narration, hosted as a static site that opens instantly on any device.",
-    image: "/images/immersive/solar-saturn.webp",
+      "A three.js and WebXR encyclopedia with scanned and AI-assisted 3D assets, Armenian narration and one shared navigation for space, Earth's past and the micro world.",
+    image: "/images/immersive/enc-dinosaurs.webp",
     gallery: [
-      "/images/immersive/solar-earth.webp",
-      "/images/immersive/solar-jupiter.webp",
+      "/images/immersive/solar-saturn.webp",
+      "/images/immersive/enc-dinosaurs-2.webp",
+      "/images/immersive/enc-micro-pond.webp",
+      "/images/immersive/enc-micro-blood.webp",
+      "/images/immersive/enc-micro-cell.webp",
       "/images/immersive/solar-nature-meadow.webp",
-      "/images/immersive/solar-nature-meadow-2.webp",
     ],
     year: 2026,
     slug: "solar-system-vr",
@@ -114,6 +116,7 @@ export const projects: ProjectCardData[] = [
     client: "DigiDog",
     link: "/services/custom-software",
   },
+
   /* ─── AI Operations Systems ─── */
   {
     title: "DigiDog AI Operations System",

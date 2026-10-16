@@ -16,16 +16,16 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden scroll-smooth">
       <SEO
-        title="AI Operations Systems for Service Businesses | Digidog"
-        description="We rebuild how your business operates using AI. Replace bloated SaaS, automate workflows, and own your infrastructure. From $1,200/month in SaaS to $210 — on systems you control."
+        title="Immersive 3D, VR & AR Development with AI | DigiDog"
+        description="Interactive 3D worlds, VR walkthroughs and AR experiences built with AI by Erik Budanov. Runs in the browser and on Meta Quest."
         canonical="/"
         schemaMarkup={organizationSchema}
       />
       <Navbar />
       <HeroSection />
       <TrustedPartners />
-      <ServicesSection />
       <ImmersiveSection />
+      <ServicesSection />
       <ReviewsSection />
       <CtaBanner />
       <PortfolioSection />

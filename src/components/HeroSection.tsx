@@ -1,6 +1,6 @@
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { motion } from "motion/react";
-import { Code, User, Languages } from "lucide-react";
+import { Box, User, Languages } from "lucide-react";
 import { colors, fonts, transitions } from "./ui/brand";
 import { PrimaryButton, openBookingModal } from "./ui/buttons";
 import { HeroLayout } from "./ui/hero-layout";
@@ -11,7 +11,7 @@ import deT from "@/translations/german.json";
 
 const heroKpis = [
   { icon: User, value: "Erik Budanov", labelEn: "Your direct engineer", labelDe: "Ihr direkter Entwickler" },
-  { icon: Code, value: "Web · MVP · AI", labelEn: "From scope to launch", labelDe: "Von der Planung bis zum Launch" },
+  { icon: Box, value: "3D · VR · AR", labelEn: "Browser & Meta Quest", labelDe: "Browser & Meta Quest" },
   { icon: Languages, value: "DE / EN", labelEn: "German & English", labelDe: "Deutsch & Englisch" },
 ];
 
@@ -98,12 +98,15 @@ export function HeroSection() {
           <div className="relative w-[300px] h-[400px] md:w-[400px] md:h-[500px] lg:hidden mx-auto">
             <ImageWithFallback
               src="/girl/Loading.png"
-              alt="AI Assistant"
+              alt="Immersive 3D world illustration"
               className="w-full h-full object-contain"
             />
           </div>
           {/* Desktop: 3D Girl */}
-          <div className="hidden lg:block relative w-[520px] h-[650px] mx-0">
+          <div
+            className="hidden lg:block relative w-[600px] h-[720px] -mr-6 xl:mr-0"
+            style={{ WebkitMaskImage: "linear-gradient(to bottom, #000 56%, transparent 69%)", maskImage: "linear-gradient(to bottom, #000 56%, transparent 69%)" }}
+          >
             <Girl3D />
           </div>
         </motion.div>
