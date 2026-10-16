@@ -48,6 +48,75 @@ const monteOfelioNewsImageSrc = monteOfelioNewsImage as unknown as string;
 const monteOfelioLocationImageSrc = monteOfelioLocationImage as unknown as string;
 
 export const projects: ProjectCardData[] = [
+  {
+    title: "Apartment Renovation Planned in VR",
+    description:
+      "An empty apartment shell in Yerevan, scanned and turned into a walkable VR model where furniture, lighting, sockets and plumbing are planned at real scale on Meta Quest.",
+    overview:
+      "The Lvovyan apartment in Yerevan was an empty concrete shell with floor-to-ceiling windows. Instead of planning the renovation on paper, we scanned the space, rebuilt it in Blender and published it as a WebXR model that runs in the browser and on Meta Quest. Furniture from a local asset library is placed at real scale, and the electrical and plumbing layout is drawn into the same model. While walking through the apartment in the headset, the owner records voice notes next to the spot they refer to. Each note is transcribed, applied to the Blender scene and republished, so the change is visible back in VR a few minutes later.",
+    goal: "Make renovation decisions inside the real space, at real scale, before any money is spent on construction or furniture.",
+    improvements: [
+      "Room scan rebuilt as a Blender model",
+      "WebXR walkthrough in the browser and on Meta Quest",
+      "Furniture library placed at real scale",
+      "Electrical and plumbing plan inside the 3D model",
+      "Voice notes recorded in the headset and transcribed",
+      "Changes applied in Blender and republished to VR within minutes",
+    ],
+    problem:
+      "Floor plans and renders make it hard to judge proportions, sight lines and where sockets or pipes should go. Mistakes are usually found after the walls are closed.",
+    solution:
+      "A scanned, walkable VR model of the actual apartment with a live feedback loop: notes spoken in the headset are applied to the model and come back as an updated VR scene.",
+    image: "/images/immersive/apartment-vr-furniture.webp",
+    gallery: [
+      "/images/immersive/apartment-empty-shell.webp",
+      "/images/immersive/apartment-vr-wiring.webp",
+      "/images/immersive/apartment-mep-plan.webp",
+      "/images/immersive/apartment-blender-model.webp",
+    ],
+    year: 2026,
+    slug: "apartment-renovation-vr",
+    service: "3D & VR",
+    category: "software",
+    client: "Lvovyan apartment, Yerevan",
+    link: "/services/custom-software",
+  },
+  {
+    title: "3D Learning Encyclopedia",
+    description:
+      "An Armenian-language encyclopedia of 3D worlds for children: the solar system, a time machine to the dinosaurs and a micro world inside water, blood and cells. Runs in the browser and on Meta Quest.",
+    overview:
+      "The 3D Learning Encyclopedia started as an explorable solar system and grew into a set of worlds children can walk through. In space they fly to the Sun and all eight planets, see moons and orbits, and find NASA spacecraft such as Cassini near Saturn. On Earth, a time machine takes them back to the dinosaurs, and a shrink ray takes them into a drop of pond water, the bloodstream and a living cell, where they can tap each microbe or cell to learn about it. Every stop has short facts and narration in Armenian, with a kids' mode that keeps the text simple. The worlds were built with AI-assisted 3D pipelines and run in a normal browser or in VR on Meta Quest.",
+    goal: "Make science tangible for Armenian-speaking children with worlds they can explore themselves, on a laptop or in a VR headset.",
+    improvements: [
+      "Solar system with moons, orbits and NASA spacecraft",
+      "Time machine to the dinosaurs",
+      "Micro world: pond water, bloodstream and a living cell",
+      "Facts and narration in Armenian, with a kids' mode",
+      "AI-assisted 3D asset pipeline",
+      "Runs in the browser and in VR on Meta Quest",
+    ],
+    problem:
+      "Learning material about space, prehistory and biology is mostly flat pictures and text, and very little of it exists in Armenian.",
+    solution:
+      "A three.js and WebXR encyclopedia with scanned and AI-assisted 3D assets, Armenian narration and one shared navigation for space, Earth's past and the micro world.",
+    image: "/images/immersive/enc-dinosaurs.webp",
+    gallery: [
+      "/images/immersive/solar-saturn.webp",
+      "/images/immersive/enc-dinosaurs-2.webp",
+      "/images/immersive/enc-micro-pond.webp",
+      "/images/immersive/enc-micro-blood.webp",
+      "/images/immersive/enc-micro-cell.webp",
+      "/images/immersive/solar-nature-meadow.webp",
+    ],
+    year: 2026,
+    slug: "solar-system-vr",
+    service: "3D & VR",
+    category: "software",
+    client: "DigiDog",
+    link: "/services/custom-software",
+  },
+
   /* ─── AI Operations Systems ─── */
   {
     title: "DigiDog AI Operations System",

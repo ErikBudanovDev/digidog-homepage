@@ -1,10 +1,10 @@
 {
   "seo": {
     "home": {
-      "title": "Website Redesign & MVP Development",
-      "description": "Website redesigns, MVPs and AI integrations with independent product engineer Erik Budanov. Direct senior ownership from scope to launch.",
-      "ogTitle": "Website Redesign & MVP Development | DigiDog",
-      "ogDescription": "Website redesigns, MVPs and AI integrations with independent product engineer Erik Budanov. Direct senior ownership from scope to launch."
+      "title": "Immersive 3D, VR & AR Development with AI",
+      "description": "Interactive 3D worlds, VR walkthroughs and AR experiences built with AI by Erik Budanov. Runs in the browser and on Meta Quest. Websites and MVPs too.",
+      "ogTitle": "Immersive 3D, VR & AR Development | DigiDog",
+      "ogDescription": "Interactive 3D worlds, VR walkthroughs and AR experiences built with AI by Erik Budanov. Runs in the browser and on Meta Quest."
     },
     "aiIntegration": {
       "title": "AI Integration & Workflow Automation",
@@ -60,10 +60,10 @@
     }
   },
   "hero": {
-    "title1": "Better websites.",
-    "title2": "Products built to move you forward.",
-    "description": "I’m Erik Budanov, founder of DigiDog and independent product engineer. I redesign websites, build MVPs and connect business tools with AI — with direct senior ownership from the first conversation to launch.",
-    "cta": "Discuss your project with Erik"
+    "title1": "Immersive worlds,",
+    "title2": "built with AI.",
+    "description": "I’m Erik Budanov, founder of DigiDog. I use AI to build interactive 3D, VR and AR experiences: learning worlds, walkable spaces and product showcases that run in the browser and on Meta Quest. Websites, MVPs and AI integrations remain part of the work.",
+    "cta": "Discuss your 3D project"
   },
   "nav": {
     "home": "Home",
@@ -178,5 +178,65 @@
     "readyToStart": "Ready to put this into practice?",
     "bookConsultation": "Book a Free Consultation",
     "bookConsultationCta": "Discuss your project directly with Erik Budanov."
+  },
+  "immersiveSection": {
+    "badge": "3D · VR · AR",
+    "title1": "Walk through it ",
+    "title2": "before it exists",
+    "subtitle": "I build interactive 3D and VR experiences that run in the browser and on Meta Quest, made from real rooms, real data and real landscapes.",
+    "cases": [
+      {
+        "tag": "Real estate & interiors",
+        "title": "Apartment renovation, planned in VR",
+        "place": "Lvovyan apartment, Yerevan",
+        "body": "An empty concrete shell, scanned and turned into a walkable 3D model. Furniture, lighting, sockets and plumbing are placed at real scale. Notes spoken inside the headset are applied in Blender and show up back in VR a few minutes later.",
+        "points": [
+          "Room scan to Blender to WebXR model",
+          "Furniture placed at real scale",
+          "Electrical and plumbing plan in 3D",
+          "Voice notes from the headset, applied live"
+        ],
+        "thumbs": [
+          "Empty shell before the work",
+          "Wiring planned in 3D",
+          "Blender model of the apartment"
+        ]
+      },
+      {
+        "tag": "Education",
+        "title": "3D Learning Encyclopedia",
+        "place": "Armenian-language worlds for children",
+        "body": "A growing encyclopedia of 3D worlds children can walk through: the solar system with moons and NASA spacecraft, a time machine back to the dinosaurs, and a shrink ray into a drop of pond water, the bloodstream and a living cell. Every stop has narration in Armenian.",
+        "points": [
+          "Solar system, dinosaurs and the micro world",
+          "Narration and a kids' mode in Armenian",
+          "Built with AI-assisted 3D pipelines",
+          "Runs in the browser and on Meta Quest"
+        ],
+        "thumbs": [
+          "The solar system: Saturn",
+          "Inside the bloodstream",
+          "Inside a living cell"
+        ]
+      }
+    ],
+    "liveDemo": "Try it in your browser",
+    "useCasesTitle": "Where it helps",
+    "useCases": [
+      {
+        "title": "Real estate & interiors",
+        "text": "Show buyers and clients the finished space before any work starts."
+      },
+      {
+        "title": "Education & museums",
+        "text": "Let people explore places and objects they can't visit in person."
+      },
+      {
+        "title": "Products & venues",
+        "text": "Present machines, factories or event spaces at real scale."
+      }
+    ],
+    "cta": "Discuss a 3D or VR project",
+    "caseStudy": "Read the case study"
   }
 }

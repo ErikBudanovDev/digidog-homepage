@@ -192,6 +192,26 @@
       "solution": "End-to-end automated architecture using Make.com, Python, MongoDB, Discord, and a custom Next.js dashboard.",
       "service": "Internal Tools",
       "client": "BeOriginalTours"
+    },
+    "apartment-renovation-vr": {
+      "title": "Apartment Renovation Planned in VR",
+      "description": "An empty apartment shell in Yerevan, scanned and turned into a walkable VR model where furniture, lighting, sockets and plumbing are planned at real scale on Meta Quest.",
+      "overview": "The Lvovyan apartment in Yerevan was an empty concrete shell with floor-to-ceiling windows. Instead of planning the renovation on paper, we scanned the space, rebuilt it in Blender and published it as a WebXR model that runs in the browser and on Meta Quest. Furniture from a local asset library is placed at real scale, and the electrical and plumbing layout is drawn into the same model. While walking through the apartment in the headset, the owner records voice notes next to the spot they refer to. Each note is transcribed, applied to the Blender scene and republished, so the change is visible back in VR a few minutes later.",
+      "goal": "Make renovation decisions inside the real space, at real scale, before any money is spent on construction or furniture.",
+      "problem": "Floor plans and renders make it hard to judge proportions, sight lines and where sockets or pipes should go. Mistakes are usually found after the walls are closed.",
+      "solution": "A scanned, walkable VR model of the actual apartment with a live feedback loop: notes spoken in the headset are applied to the model and come back as an updated VR scene.",
+      "service": "3D & VR",
+      "client": "Lvovyan apartment, Yerevan"
+    },
+    "solar-system-vr": {
+      "title": "3D Learning Encyclopedia",
+      "description": "An Armenian-language encyclopedia of 3D worlds for children: the solar system, a time machine to the dinosaurs and a micro world inside water, blood and cells. Runs in the browser and on Meta Quest.",
+      "overview": "The 3D Learning Encyclopedia started as an explorable solar system and grew into a set of worlds children can walk through. In space they fly to the Sun and all eight planets, see moons and orbits, and find NASA spacecraft such as Cassini near Saturn. On Earth, a time machine takes them back to the dinosaurs, and a shrink ray takes them into a drop of pond water, the bloodstream and a living cell, where they can tap each microbe or cell to learn about it. Every stop has short facts and narration in Armenian, with a kids' mode that keeps the text simple. The worlds were built with AI-assisted 3D pipelines and run in a normal browser or in VR on Meta Quest.",
+      "goal": "Make science tangible for Armenian-speaking children with worlds they can explore themselves, on a laptop or in a VR headset.",
+      "problem": "Learning material about space, prehistory and biology is mostly flat pictures and text, and very little of it exists in Armenian.",
+      "solution": "A three.js and WebXR encyclopedia with scanned and AI-assisted 3D assets, Armenian narration and one shared navigation for space, Earth's past and the micro world.",
+      "service": "3D & VR",
+      "client": "DigiDog"
     }
   }
 }

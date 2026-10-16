@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { TrustedPartners } from "@/components/TrustedPartners";
 import { ServicesSection } from "@/components/ServicesSection";
+import { ImmersiveSection } from "@/components/ImmersiveSection";
 import { ContactCTA } from "@/components/ContactCTA";
 import { ContactFormSection } from "@/components/ContactFormSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
@@ -15,14 +16,15 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden scroll-smooth">
       <SEO
-        title="AI Operations Systems for Service Businesses | Digidog"
-        description="We rebuild how your business operates using AI. Replace bloated SaaS, automate workflows, and own your infrastructure. From $1,200/month in SaaS to $210 — on systems you control."
+        title="Immersive 3D, VR & AR Development with AI | DigiDog"
+        description="Interactive 3D worlds, VR walkthroughs and AR experiences built with AI by Erik Budanov. Runs in the browser and on Meta Quest."
         canonical="/"
         schemaMarkup={organizationSchema}
       />
       <Navbar />
       <HeroSection />
       <TrustedPartners />
+      <ImmersiveSection />
       <ServicesSection />
       <ReviewsSection />
       <CtaBanner />

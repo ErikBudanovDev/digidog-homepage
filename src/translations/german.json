@@ -1,10 +1,10 @@
 {
   "seo": {
     "home": {
-      "title": "Website-Redesign & MVP-Entwicklung",
-      "description": "Website-Redesigns, MVPs und Integrationen mit Erik Budanov. Direkte technische Verantwortung, klare Projektziele und Zusammenarbeit auf Deutsch oder Englisch.",
-      "ogTitle": "Website-Redesign & MVP-Entwicklung | DigiDog",
-      "ogDescription": "Website-Redesigns, MVPs und Integrationen mit Erik Budanov. Direkte technische Verantwortung, klare Projektziele und Zusammenarbeit auf Deutsch oder Englisch."
+      "title": "Immersive 3D-, VR- & AR-Entwicklung mit KI",
+      "description": "Interaktive 3D-Welten, VR-Rundgänge und AR-Erlebnisse, mit KI entwickelt von Erik Budanov. Für Browser und Meta Quest. Websites und MVPs ebenfalls.",
+      "ogTitle": "Immersive 3D-, VR- & AR-Entwicklung | DigiDog",
+      "ogDescription": "Interaktive 3D-Welten, VR-Rundgänge und AR-Erlebnisse, mit KI entwickelt von Erik Budanov. Für Browser und Meta Quest."
     },
     "aiIntegration": {
       "title": "KI-Integration & Workflow-Automatisierung",
@@ -60,10 +60,10 @@
     }
   },
   "hero": {
-    "title1": "Websites, die überzeugen.",
-    "title2": "Produkte, die weiterbringen.",
-    "description": "Ich bin Erik Budanov, Gründer von DigiDog. Ich modernisiere Websites und entwickle MVPs und Integrationen — als Ihr direkter Ansprechpartner von der Planung bis zum Launch. Zusammenarbeit auf Deutsch oder Englisch.",
-    "cta": "Projekt mit Erik besprechen"
+    "title1": "Immersive Welten,",
+    "title2": "entwickelt mit KI.",
+    "description": "Ich bin Erik Budanov, Gründer von DigiDog. Mit KI entwickle ich interaktive 3D-, VR- und AR-Erlebnisse: Lernwelten, begehbare Räume und Produktpräsentationen für den Browser und Meta Quest. Websites, MVPs und KI-Integrationen gehören weiterhin dazu.",
+    "cta": "3D-Projekt besprechen"
   },
   "nav": {
     "home": "Startseite",
@@ -178,5 +178,65 @@
     "readyToStart": "Bereit, das in die Praxis umzusetzen?",
     "bookConsultation": "Kostenlose Beratung buchen",
     "bookConsultationCta": "Besprechen Sie Ihr Projekt direkt mit Erik Budanov."
+  },
+  "immersiveSection": {
+    "badge": "3D · VR · AR",
+    "title1": "Begehen Sie es, ",
+    "title2": "bevor es existiert",
+    "subtitle": "Ich entwickle interaktive 3D- und VR-Erlebnisse für den Browser und Meta Quest, aus echten Räumen, echten Daten und echten Landschaften.",
+    "cases": [
+      {
+        "tag": "Immobilien & Innenausbau",
+        "title": "Wohnungsrenovierung, geplant in VR",
+        "place": "Wohnung Lvovyan, Jerewan",
+        "body": "Ein leerer Rohbau, gescannt und in ein begehbares 3D-Modell verwandelt. Möbel, Licht, Steckdosen und Leitungen werden maßstabsgetreu platziert. Sprachnotizen aus dem Headset werden in Blender umgesetzt und sind wenige Minuten später wieder in VR sichtbar.",
+        "points": [
+          "Raumscan über Blender zum WebXR-Modell",
+          "Möbel maßstabsgetreu platziert",
+          "Elektro- und Sanitärplanung in 3D",
+          "Sprachnotizen aus dem Headset, live umgesetzt"
+        ],
+        "thumbs": [
+          "Rohbau vor den Arbeiten",
+          "Leitungsplanung in 3D",
+          "Blender-Modell der Wohnung"
+        ]
+      },
+      {
+        "tag": "Bildung",
+        "title": "3D-Lern-Enzyklopädie",
+        "place": "Armenischsprachige Welten für Kinder",
+        "body": "Eine wachsende Enzyklopädie begehbarer 3D-Welten: das Sonnensystem mit Monden und NASA-Raumsonden, eine Zeitmaschine zu den Dinosauriern und ein Schrumpfstrahl in einen Wassertropfen, den Blutkreislauf und eine lebende Zelle. Jede Station mit armenischer Vertonung.",
+        "points": [
+          "Sonnensystem, Dinosaurier und Mikrowelt",
+          "Sprecher und Kindermodus auf Armenisch",
+          "Mit KI-gestützten 3D-Pipelines gebaut",
+          "Läuft im Browser und auf Meta Quest"
+        ],
+        "thumbs": [
+          "Das Sonnensystem: Saturn",
+          "Im Blutkreislauf",
+          "In einer lebenden Zelle"
+        ]
+      }
+    ],
+    "liveDemo": "Im Browser ausprobieren",
+    "useCasesTitle": "Wo es hilft",
+    "useCases": [
+      {
+        "title": "Immobilien & Innenausbau",
+        "text": "Zeigen Sie Käufern und Kunden den fertigen Raum, bevor die Arbeiten beginnen."
+      },
+      {
+        "title": "Bildung & Museen",
+        "text": "Orte und Objekte erlebbar machen, die man nicht selbst besuchen kann."
+      },
+      {
+        "title": "Produkte & Locations",
+        "text": "Maschinen, Werke oder Eventflächen in echter Größe präsentieren."
+      }
+    ],
+    "cta": "3D- oder VR-Projekt besprechen",
+    "caseStudy": "Fallstudie lesen"
   }
 }
