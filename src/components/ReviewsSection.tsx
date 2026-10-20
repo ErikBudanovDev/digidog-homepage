@@ -154,10 +154,10 @@ export function ReviewsSection() {
             <SectionHeading
               theme="light"
               subtitle={locale === "DE"
-                ? "Erfahren Sie, was unsere Kunden über die Zusammenarbeit mit digidog sagen. Authentische Bewertungen von echten Partnern auf Upwork."
-                : "Discover what our clients say about working with digidog. Authentic reviews from real partners on Upwork."}
+                ? "Bewertungen von Kunden aus abgeschlossenen Upwork-Projekten, unverändert übernommen."
+                : "Reviews from clients on completed Upwork projects, quoted as written."}
             >
-              {locale === "DE" ? "Einfach ehrlich!" : "Simply honest!"}
+              {locale === "DE" ? "Was Kunden sagen" : "What clients say"}
             </SectionHeading>
           </ScrollReveal>
 
@@ -175,37 +175,23 @@ export function ReviewsSection() {
                   className="text-[14px]"
                   style={{ fontFamily: fonts.display, fontWeight: 700, color: "#14A800" }}
                 >
-                  {locale === "DE" ? "Top-Bewertet auf Upwork" : "Top Rated on Upwork"}
+                  {locale === "DE" ? "Top Rated Plus auf Upwork" : "Top Rated Plus on Upwork"}
                 </span>
               </div>
               <div className="h-4 w-px" style={{ background: "rgba(0,0,0,0.12)" }} />
               <div className="flex items-center gap-1.5">
-                <div className="flex">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <svg
-                      key={i}
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="#14A800"
-                      stroke="#14A800"
-                      strokeWidth="2"
-                    >
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                    </svg>
-                  ))}
-                </div>
+
                 <span
                   className="text-[14px]"
                   style={{ fontFamily: fonts.display, fontWeight: 600, color: colors.textDark }}
                 >
-                  5.0
+                  33
                 </span>
                 <span
                   className="text-[13px]"
                   style={{ fontFamily: fonts.display, color: colors.textMuted }}
                 >
-                  ({reviews.length} {locale === "DE" ? "Bewertungen" : "reviews"})
+                  {locale === "DE" ? "Kundenbewertungen" : "client reviews"}
                 </span>
               </div>
               <div
@@ -216,14 +202,14 @@ export function ReviewsSection() {
                 className="text-[13px] hidden sm:inline"
                 style={{ fontFamily: fonts.display, fontWeight: 600, color: colors.textMuted }}
               >
-                {locale === "DE" ? "100% Projekterfolg" : "100% Job Success"}
+                {locale === "DE" ? "64 abgeschlossene Projekte" : "64 completed projects"}
               </span>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <div className="mt-4">
-              <LinkWithArrow href={locale === "DE" ? "/de/portfolio" : "/portfolio"}>{locale === "DE" ? "Unser Portfolio entdecken" : "Explore our portfolio"}</LinkWithArrow>
+              <LinkWithArrow href="https://www.upwork.com/freelancers/~017064d1a9c71f1de6">{locale === "DE" ? "Alle Bewertungen auf Upwork lesen" : "Read all reviews on Upwork"}</LinkWithArrow>
             </div>
           </ScrollReveal>
         </div>
