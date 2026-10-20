@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { TrustedPartners } from "@/components/TrustedPartners";
 import { ServicesSection } from "@/components/ServicesSection";
 import { ImmersiveSection } from "@/components/ImmersiveSection";
+import { UpworkProofSection } from "@/components/UpworkProofSection";
 import { ContactCTA } from "@/components/ContactCTA";
 import { ContactFormSection } from "@/components/ContactFormSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
@@ -26,6 +27,7 @@ export default function HomePage() {
       <TrustedPartners />
       <ImmersiveSection />
       <ServicesSection />
+      <UpworkProofSection />
       <ReviewsSection />
       <CtaBanner />
       <PortfolioSection />

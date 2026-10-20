@@ -1,6 +1,6 @@
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { motion } from "motion/react";
-import { Box, User, Languages } from "lucide-react";
+import { Box, BadgeCheck, Languages } from "lucide-react";
 import { colors, fonts, transitions } from "./ui/brand";
 import { PrimaryButton, openBookingModal } from "./ui/buttons";
 import { HeroLayout } from "./ui/hero-layout";
@@ -10,7 +10,7 @@ import enT from "@/translations/english.json";
 import deT from "@/translations/german.json";
 
 const heroKpis = [
-  { icon: User, value: "Erik Budanov", labelEn: "Your direct engineer", labelDe: "Ihr direkter Entwickler" },
+  { icon: BadgeCheck, value: "Top Rated Plus", labelEn: "Upwork · 64 projects", labelDe: "Upwork · 64 Projekte", href: "#upwork" },
   { icon: Box, value: "3D · VR · AR", labelEn: "Browser & Meta Quest", labelDe: "Browser & Meta Quest" },
   { icon: Languages, value: "DE / EN", labelEn: "German & English", labelDe: "Deutsch & Englisch" },
 ];
@@ -53,8 +53,9 @@ export function HeroSection() {
             {heroKpis.map((kpi) => {
               const Icon = kpi.icon;
               return (
-                <motion.div
+                <motion.a
                   key={kpi.value}
+                  href={(kpi as { href?: string }).href}
                   className="flex items-center gap-2.5"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -80,7 +81,7 @@ export function HeroSection() {
                       {locale === "DE" ? kpi.labelDe : kpi.labelEn}
                     </span>
                   </div>
-                </motion.div>
+                </motion.a>
               );
             })}
           </div>

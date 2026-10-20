@@ -30,8 +30,8 @@ export const de = {
     breadcrumbService: "Dienstleistungen",
     breadcrumbPage: "KI-Lösungen",
     heroBadge: "AI Solutions & Automation",
-    heroTitle1: "Künstliche Intelligenz!!",
-    heroTitle2: "für Ihr Business!!",
+    heroTitle1: "Künstliche Intelligenz",
+    heroTitle2: "für Ihr Unternehmen",
     heroDescription:
       "Ich entwickle KI-Integrationen und Geschäftsanwendungen für klar definierte Aufgaben. Sie arbeiten direkt mit mir, Erik Budanov, von der Planung bis zur Umsetzung.",
     heroCtaPrimary: "KI-Beratung starten",

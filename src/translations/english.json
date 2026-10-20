@@ -238,5 +238,59 @@
     ],
     "cta": "Discuss a 3D or VR project",
     "caseStudy": "Read the case study"
+  },
+  "upworkSection": {
+    "kicker": "Track record",
+    "title": "From a medical education platform to the United Nations",
+    "intro": "For five years, companies have hired me through Upwork, mostly for websites, platforms and integrations. 64 completed projects later, the profile carries Upwork's Top Rated Plus badge, which goes to the top-performing freelancers on the platform. These five show the range:",
+    "role": "Independent product engineer · DigiDog",
+    "badge": "Top Rated Plus on Upwork",
+    "stats": [
+      {
+        "value": "$300K+",
+        "label": "earned on Upwork"
+      },
+      {
+        "value": "64",
+        "label": "completed projects"
+      },
+      {
+        "value": "33",
+        "label": "client reviews"
+      },
+      {
+        "value": "4",
+        "label": "languages: EN, DE, RU, HY"
+      }
+    ],
+    "background": "MSc Engineering, TU Wien. Before DigiDog: system development at SMA Solar Technology and digital project management at Siemens. Identity verified on Upwork.",
+    "cta": "View my Upwork profile",
+    "story": [
+      {
+        "kind": "Medical education",
+        "client": "MPA.online",
+        "text": "A full-stack streaming platform for medical education, built with Next.js, Strapi and MongoDB, with Vimeo video."
+      },
+      {
+        "kind": "Healthcare",
+        "client": "SmileforYou",
+        "text": "Website redesign for a German dental clinic chain. The conversion rate went from 5% to 11%."
+      },
+      {
+        "kind": "Industrial enterprise",
+        "client": "PRÜFTECHNIK (Fluke)",
+        "text": "Three years of web administration for the condition-monitoring brand of Fluke, part of the Fortive group."
+      },
+      {
+        "kind": "US healthcare education",
+        "client": "Activated Insights",
+        "text": "After an acquisition, two brands merged into one website: 200+ pages redesigned and consolidated."
+      },
+      {
+        "kind": "International organisation",
+        "client": "United Nations – FP2030",
+        "text": "The FP2030 Progress Report website, with interactive Highcharts data visualisations."
+      }
+    ]
   }
 }
