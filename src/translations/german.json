@@ -242,28 +242,28 @@
   "upworkSection": {
     "kicker": "Erfahrung",
     "title": "Von der Medizin-Lernplattform bis zu den Vereinten Nationen",
-    "intro": "Seit fünf Jahren beauftragen mich Unternehmen über Upwork, vor allem für Websites, Plattformen und Integrationen. Nach 64 abgeschlossenen Projekten trägt das Profil das Abzeichen Top Rated Plus, das Upwork an die leistungsstärksten Freelancer vergibt. Diese fünf zeigen die Bandbreite:",
+    "intro": "Seit fünf Jahren beauftragen mich Unternehmen über Upwork, vor allem für Websites, Plattformen und Integrationen. Nach 54 Aufträgen und 7.830 Stunden hat das Profil einen Job Success Score von 100 % und das Abzeichen Top Rated Plus. Diese fünf zeigen die Bandbreite:",
     "role": "Unabhängiger Produktentwickler · DigiDog",
     "badge": "Top Rated Plus auf Upwork",
     "stats": [
+      {
+        "value": "100 %",
+        "label": "Job Success Score"
+      },
       {
         "value": "$300K+",
         "label": "Umsatz auf Upwork"
       },
       {
-        "value": "64",
-        "label": "abgeschlossene Projekte"
+        "value": "54",
+        "label": "Aufträge, abgeschlossen oder laufend"
       },
       {
-        "value": "33",
-        "label": "Kundenbewertungen"
-      },
-      {
-        "value": "4",
-        "label": "Sprachen: DE, EN, RU, HY"
+        "value": "7.830",
+        "label": "abgerechnete Stunden"
       }
     ],
-    "background": "MSc Engineering, TU Wien. Vor DigiDog: Systementwicklung bei SMA Solar Technology und digitales Projektmanagement bei Siemens. Identität auf Upwork verifiziert.",
+    "background": "MSc Engineering, TU Wien. Vor DigiDog: Systementwicklung bei SMA Solar Technology und digitales Projektmanagement bei Siemens. Identität auf Upwork verifiziert. Sprachen: Deutsch, Englisch, Russisch, Armenisch.",
     "cta": "Mein Upwork-Profil ansehen",
     "story": [
       {

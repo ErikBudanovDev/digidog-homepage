@@ -242,28 +242,28 @@
   "upworkSection": {
     "kicker": "Track record",
     "title": "From a medical education platform to the United Nations",
-    "intro": "For five years, companies have hired me through Upwork, mostly for websites, platforms and integrations. 64 completed projects later, the profile carries Upwork's Top Rated Plus badge, which goes to the top-performing freelancers on the platform. These five show the range:",
+    "intro": "For five years, companies have hired me through Upwork, mostly for websites, platforms and integrations. 54 jobs and 7,830 hours later, the profile holds a 100% Job Success score and Upwork's Top Rated Plus badge. These five show the range:",
     "role": "Independent product engineer · DigiDog",
     "badge": "Top Rated Plus on Upwork",
     "stats": [
+      {
+        "value": "100%",
+        "label": "Job Success score"
+      },
       {
         "value": "$300K+",
         "label": "earned on Upwork"
       },
       {
-        "value": "64",
-        "label": "completed projects"
+        "value": "54",
+        "label": "jobs completed or in progress"
       },
       {
-        "value": "33",
-        "label": "client reviews"
-      },
-      {
-        "value": "4",
-        "label": "languages: EN, DE, RU, HY"
+        "value": "7,830",
+        "label": "hours billed"
       }
     ],
-    "background": "MSc Engineering, TU Wien. Before DigiDog: system development at SMA Solar Technology and digital project management at Siemens. Identity verified on Upwork.",
+    "background": "MSc Engineering, TU Wien. Before DigiDog: system development at SMA Solar Technology and digital project management at Siemens. Identity verified on Upwork. Languages: English, German, Russian, Armenian.",
     "cta": "View my Upwork profile",
     "story": [
       {

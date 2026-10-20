@@ -141,7 +141,7 @@ export function ReviewCard({
 }) {
   const isUpwork = review.source === "Upwork";
 
-  const upworkUrl = "https://www.upwork.com/freelancers/~017064d1a9c71f1de6";
+  const upworkUrl = "https://www.upwork.com/freelancers/erikbudanov";
 
   return (
     <a

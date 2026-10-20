@@ -11,13 +11,72 @@ import { ReviewCard, type ReviewCardData } from "./ui/cards";
 
 const reviews: ReviewCardData[] = [
   {
+    name: "CAPPA",
+    role: "WordPress development & site optimisation",
+    rating: 5,
+    date: "Sep 2025 – May 2026",
+    text: "Erik has been an exceptional partner for our team. While he joined us as a contractor, he quickly became an integral part of our day-to-day operations and truly feels like an in-house team member. … Erik is incredibly reliable and dependable. We can count on him to deliver on time, communicate clearly, and follow through on every detail.",
+    image: "",
+    source: "Upwork",
+    project: "WordPress",
+  },
+  {
+    name: "AI agents & automation client",
+    role: "AI in lead generation, outreach and CRM",
+    rating: 5,
+    date: "Feb – May 2026",
+    text: "Erik is a great developer. He helped us integrate AI into our lead generation pipeline and outreach system, including integration with our CRM system, which enabled automated outreach records and follow-ups. We have been working with Erik for a long time and have already completed many projects together.",
+    image: "",
+    source: "Upwork",
+    project: "AI Agents",
+  },
+  {
+    name: "Upwork enterprise client",
+    role: "Web administration after an acquisition",
+    rating: 5,
+    date: "Aug 2022 – Dec 2025",
+    text: "Erik transitioned into our team after an acquisition and was responsible for the majority of site updates for several years. Erik was great to work with, communicated well, and often times thought outside of the box … In the future, we likely will reach out to Erik when we are in need of a web dev.",
+    image: "",
+    source: "Upwork",
+    project: "Enterprise web",
+  },
+  {
+    name: "WooCommerce client, Germany",
+    role: "WooCommerce & WordPress support",
+    rating: 5,
+    date: "May 2022 – Sep 2026",
+    text: "Erik and his team are very professional and responsive. They were a great support for all our Wordpress projects. Meanwhile, we hired an internal person for this task. We thank Erik for his valuable work!",
+    image: "",
+    source: "Upwork",
+    project: "WooCommerce",
+  },
+  {
+    name: "Strapi project client",
+    role: "Custom plugin on Strapi",
+    rating: 5,
+    date: "Jan 2025",
+    text: "Eric is an excellent full-stack JavaScript developer, and it was a pleasure having him on my Strapi project. He showcased his expertise by supporting us with the installation of a custom plugin on Strapi and successfully implementing it.",
+    image: "",
+    source: "Upwork",
+    project: "Strapi / JavaScript",
+  },
+  {
+    name: "WordPress, SEO & Python client",
+    role: "WordPress, SEO and Python",
+    rating: 5,
+    date: "Aug 2024 – May 2025",
+    text: "Great communicator and always on point!",
+    image: "",
+    source: "Upwork",
+    project: "WordPress / SEO",
+  },
+  {
     name: "Callbot Crypto",
     role: "Project Manager for MVP development",
     rating: 5,
     date: "Nov 2022 – Jul 2023",
     text: "Outstanding work! Managed the MVP project proficiently, demonstrating deep knowledge of React. Great communication also, and timely delivery. Highly recommend for future projects. Thanks.",
-    image:
-      "https://images.unsplash.com/photo-1634133472760-e5c2bd346787?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYW4lMjB0ZWNoJTIwc3RhcnR1cCUyMHByb2Zlc3Npb25hbCUyMGhlYWRzaG90fGVufDF8fHx8MTc3MzA1Mjc3M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "",
     source: "Upwork",
     project: "React / MVP",
   },
@@ -27,8 +86,7 @@ const reviews: ReviewCardData[] = [
     rating: 5,
     date: "Apr – Jul 2022",
     text: "Top Work! Reliable, honest and determined to complete promises. Very good know-how in the field of expertise.",
-    image:
-      "https://images.unsplash.com/photo-1685328403783-00925c2a4301?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaWRkbGUlMjBhZ2VkJTIwYnVzaW5lc3NtYW4lMjBwb3J0cmFpdCUyMGNvbmZpZGVudHxlbnwxfHx8fDE3NzMwNTI3NzN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "",
     source: "Upwork",
     project: "Web Architecture",
   },
@@ -38,8 +96,7 @@ const reviews: ReviewCardData[] = [
     rating: 5,
     date: "Feb – Apr 2022",
     text: "DigiDog is super reliable and supportive. They always consulted and followed the time schedule. They work precisely and accurately. I can recommend working with them to anyone.",
-    image:
-      "https://images.unsplash.com/photo-1565828052994-aa2276b131a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxldXJvcGVhbiUyMHdvbWFuJTIwcHJvZmVzc2lvbmFsJTIwb2ZmaWNlJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzczMDUyNzc0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "",
     source: "Upwork",
     project: "WordPress",
   },
@@ -49,8 +106,7 @@ const reviews: ReviewCardData[] = [
     rating: 5,
     date: "Jan 2022",
     text: "Good WordPress developer, highly recommended.",
-    image:
-      "https://images.unsplash.com/photo-1524666041070-9d87656c25bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicml0aXNoJTIwbWFuJTIwZGV2ZWxvcGVyJTIwY2FzdWFsJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzczMDUyNzc0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "",
     source: "Upwork",
     project: "WordPress",
   },
@@ -60,8 +116,7 @@ const reviews: ReviewCardData[] = [
     rating: 5,
     date: "Nov 2021 – Jan 2022",
     text: "DigiDog was very pleasant to work with, they did a great job. Thank you!",
-    image:
-      "https://images.unsplash.com/photo-1590496552566-41aca09db352?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzd2lzcyUyMG1hbiUyMGJ1c2luZXNzJTIwcHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzczMDUyNzc1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "",
     source: "Upwork",
     project: "WordPress",
   },
@@ -71,8 +126,7 @@ const reviews: ReviewCardData[] = [
     rating: 5,
     date: "Oct – Nov 2021",
     text: "DigiDog was great, it was a pleasure working with them! They did a great job, finished ahead of schedule and communicated very well throughout the project. Can definitely recommend!",
-    image:
-      "https://images.unsplash.com/photo-1675186914580-94356f7c012c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGRldmVsb3BlciUyMHByb2Zlc3Npb25hbCUyMHNtaWxpbmclMjBoZWFkc2hvdHxlbnwxfHx8fDE3NzMwNTI3NzV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "",
     source: "Upwork",
     project: "WordPress",
   },
@@ -82,8 +136,7 @@ const reviews: ReviewCardData[] = [
     rating: 5,
     date: "Aug – Dec 2021",
     text: "DigiDog is one of best one's out there. When they take on a new project, they don't need to have all the information needed for the project, but take it as the project evolves.",
-    image:
-      "https://images.unsplash.com/photo-1590665157754-d7f52a57bf41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2FuZGluYXZpYW4lMjBtYW4lMjBjcmVhdGl2ZSUyMHByb2Zlc3Npb25hbCUyMHBvcnRyYWl0fGVufDF8fHx8MTc3MzA1Mjc3NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "",
     source: "Upwork",
     project: "WordPress",
   },
@@ -93,8 +146,7 @@ const reviews: ReviewCardData[] = [
     rating: 5,
     date: "Jul 2021",
     text: "It is always a pleasure to work with DigiDog, they are perfect consultants and understand also business requirements and not only blind coding. We worked together twice – was always nice to cooperate.",
-    image:
-      "https://images.unsplash.com/photo-1764711274301-dcd9c97db41c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpdGFsaWFuJTIwbWFuJTIwcmVzdGF1cmFudCUyMG93bmVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzczMDUyNzc2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "",
     source: "Upwork",
     project: "WooCommerce",
   },
@@ -115,7 +167,7 @@ export function ReviewsSection() {
   );
 
   return (
-    <section className="bg-white py-16 md:py-24 relative overflow-hidden">
+    <section id="reviews" className="bg-white py-16 md:py-24 relative overflow-hidden">
       {/* Subtle cosmic decorations */}
       <motion.div
         className="absolute hidden lg:block"
@@ -178,20 +230,20 @@ export function ReviewsSection() {
                   {locale === "DE" ? "Top Rated Plus auf Upwork" : "Top Rated Plus on Upwork"}
                 </span>
               </div>
-              <div className="h-4 w-px" style={{ background: "rgba(0,0,0,0.12)" }} />
+              <div className="h-4 w-px hidden sm:block" style={{ background: "rgba(0,0,0,0.12)" }} />
               <div className="flex items-center gap-1.5">
 
                 <span
                   className="text-[14px]"
                   style={{ fontFamily: fonts.display, fontWeight: 600, color: colors.textDark }}
                 >
-                  33
+                  100%
                 </span>
                 <span
                   className="text-[13px]"
                   style={{ fontFamily: fonts.display, color: colors.textMuted }}
                 >
-                  {locale === "DE" ? "Kundenbewertungen" : "client reviews"}
+                  Job Success
                 </span>
               </div>
               <div
@@ -202,14 +254,14 @@ export function ReviewsSection() {
                 className="text-[13px] hidden sm:inline"
                 style={{ fontFamily: fonts.display, fontWeight: 600, color: colors.textMuted }}
               >
-                {locale === "DE" ? "64 abgeschlossene Projekte" : "64 completed projects"}
+                {locale === "DE" ? "$300K+ · 7.830 Stunden" : "$300K+ · 7,830 hours"}
               </span>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <div className="mt-4">
-              <LinkWithArrow href="https://www.upwork.com/freelancers/~017064d1a9c71f1de6">{locale === "DE" ? "Alle Bewertungen auf Upwork lesen" : "Read all reviews on Upwork"}</LinkWithArrow>
+              <LinkWithArrow href="https://www.upwork.com/freelancers/erikbudanov">{locale === "DE" ? "Alle Bewertungen auf Upwork lesen" : "Read all reviews on Upwork"}</LinkWithArrow>
             </div>
           </ScrollReveal>
         </div>

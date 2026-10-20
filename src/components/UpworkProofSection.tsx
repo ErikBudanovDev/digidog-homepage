@@ -14,7 +14,7 @@ const erikPhotoSrc = erikPhoto as unknown as string;
 import enT from "@/translations/english.json";
 import deT from "@/translations/german.json";
 
-export const UPWORK_PROFILE_URL = "https://www.upwork.com/freelancers/~017064d1a9c71f1de6";
+export const UPWORK_PROFILE_URL = "https://www.upwork.com/freelancers/erikbudanov";
 
 const STORY_SLUGS = ["mpa-online", "smileforyou", "pruftechnik-fluke", "activated-insights-migration", "united-nations-fp2030"];
 

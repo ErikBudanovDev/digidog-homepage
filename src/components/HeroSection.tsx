@@ -10,7 +10,7 @@ import enT from "@/translations/english.json";
 import deT from "@/translations/german.json";
 
 const heroKpis = [
-  { icon: BadgeCheck, value: "Top Rated Plus", labelEn: "Upwork · 64 projects", labelDe: "Upwork · 64 Projekte", href: "#upwork" },
+  { icon: BadgeCheck, value: "Top Rated Plus", labelEn: "Upwork · 100% Job Success", labelDe: "Upwork · 100 % Job Success", href: "#upwork" },
   { icon: Box, value: "3D · VR · AR", labelEn: "Browser & Meta Quest", labelDe: "Browser & Meta Quest" },
   { icon: Languages, value: "DE / EN", labelEn: "German & English", labelDe: "Deutsch & Englisch" },
 ];
