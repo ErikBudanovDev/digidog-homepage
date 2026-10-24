@@ -4,6 +4,8 @@ const vm = require('node:vm');
 const ts = require('typescript');
 const attributionExports = {};
 vm.runInNewContext(ts.transpileModule(fs.readFileSync('src/lib/enquiry-attribution.ts', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText, { exports: attributionExports, URLSearchParams });
+const guardExports = {};
+vm.runInNewContext(ts.transpileModule(fs.readFileSync('src/lib/contact-guard.ts', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText, { exports: guardExports, require });
 const compiled = ts.transpileModule(fs.readFileSync('src/pages/api/contact.ts', 'utf8'), {
   compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true }
 }).outputText;
@@ -16,6 +18,7 @@ const compiled = ts.transpileModule(fs.readFileSync('src/pages/api/contact.ts', 
       console: { log: (...args) => logs.push(args), error: (...args) => logs.push(args) },
       require: name => {
         if (name === 'node:crypto') return { randomUUID: () => '00000000-0000-4000-8000-000000000001' };
+        if (name === '../../lib/contact-guard') return guardExports;
         if (name === '../../lib/enquiry-attribution') return attributionExports;
         assert.equal(name, 'nodemailer');
         return { createTransport: () => ({ sendMail: async payload => {
@@ -24,10 +27,11 @@ const compiled = ts.transpileModule(fs.readFileSync('src/pages/api/contact.ts', 
         } }) };
       }
     });
-    const body = { name: 'PRIVATE_NAME', email: 'PRIVATE_EMAIL', phone: 'PRIVATE_PHONE', company: 'PRIVATE_COMPANY', service: 'PRIVATE_SERVICE', source: 'PRIVATE_SOURCE', message: 'PRIVATE_MESSAGE' };
+    const body = { name: 'PRIVATE_NAME', email: 'PRIVATE_EMAIL@example.invalid', phone: 'PRIVATE_PHONE', company: 'PRIVATE_COMPANY', service: 'PRIVATE_SERVICE', source: 'PRIVATE_SOURCE', message: 'PRIVATE_MESSAGE' };
     body.attribution = { variant: 'a', source: 'PRIVATE_EMAIL', medium: 'email', campaign: 'workflow_pilot', extra: 'PRIVATE_MESSAGE' };
     if (outcome === 'missing-fields') delete body.email;
-    await exports.default({ method: outcome === 'wrong-method' ? 'GET' : 'POST', body }, {
+    await exports.default({ method: outcome === 'wrong-method' ? 'GET' : 'POST', body, headers: { 'content-type': 'application/json' }, socket: { remoteAddress: outcome } }, {
+      setHeader() {},
       status(code) { status = code; return this; }, json(value) { response = value; }
     });
     assert.equal(status, { success: 200, 'smtp-error': 500, 'missing-fields': 400, 'wrong-method': 405 }[outcome]);

@@ -8,7 +8,10 @@ export interface ContactFormData {
   service?: string;
   budget?: string;
   message: string;
+  website?: string;
+  country?: string;
   source?: string;
+  contactFax?: string;
   attribution?: EnquiryAttribution;
 }
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ContactHoneypot } from "@/components/ContactHoneypot";
 import { submitContactForm } from "@/lib/contact";
 import { readEnquiryAttribution } from "@/lib/enquiry-attribution";
 import copy from "./copy.json";
@@ -19,9 +20,12 @@ export function WorkflowPilotPage({ variant }: { variant: "a" | "b" }) {
     const fields = new FormData(e.currentTarget);
     const attribution = readEnquiryAttribution(window.location.pathname, window.location.search);
     const result = await submitContactForm({
+      contactFax: String(fields.get("contactFax") || ""),
       name: String(fields.get("name")), email: String(fields.get("email")),
       company: String(fields.get("company")),
-      message: `Company website: ${fields.get("website") || "Not provided"}\nBased in: ${fields.get("country")}\n\n${fields.get("message")}`,
+      message: String(fields.get("message")),
+      website: String(fields.get("website") || ""),
+      country: String(fields.get("country") || ""),
       source: `Workflow pilot ${variant.toUpperCase()}`,
       attribution,
     });
@@ -53,6 +57,7 @@ export function WorkflowPilotPage({ variant }: { variant: "a" | "b" }) {
       <section id="pilot-enquiry" className={styles.contact}><div><p className={styles.eyebrow}>START WITH ONE VALUABLE PROBLEM</p><h2>Make your next AI decision with evidence</h2><p>{framing.closing}</p><p className={styles.small}>Paid discovery followed by a pilot only if there is a suitable use case and you approve the scope. Cost and timing are agreed before each phase.</p></div><div>
         <h3>What would you like your team to work through?</h3>
         {submitted ? <p role="status" className={styles.success}>Thanks. Your workflow enquiry has been received.</p> : <form onSubmit={handleSubmit}>
+          <ContactHoneypot />
           <div className={styles.fields}><label>Name<input name="name" autoComplete="name" required /></label><label>Work email<input name="email" type="email" autoComplete="email" required /></label><label>Company<input name="company" autoComplete="organization" required /></label><label>Company website (optional)<input name="website" type="url" placeholder="https://" autoComplete="url" /></label></div>
           <label>Where is your company based?<input name="country" autoComplete="country-name" required /></label>
           <label>What business problem or decision would you like help working through?<textarea name="message" rows={4} required aria-describedby="enquiry-help" /></label>

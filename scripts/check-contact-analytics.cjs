@@ -31,8 +31,9 @@ function load(file, globals) {
         if (outcome === 'network-error') throw new Error('mock offline');
         return { ok: outcome === 'success', json: async () => ({ error: 'mock failure' }) };
       } });
-      const run = vm.runInNewContext('(async (e) => {' + handler + '\n})', {
+      const run = vm.runInNewContext('(async (e) => {' + ts.transpileModule(handler, { compilerOptions: { target: ts.ScriptTarget.ES2020 } }).outputText + '\n})', {
         ...analytics, ...contact,
+        FormData: class { get() { return ""; } },
         formData: { name: 'SYNTHETIC_NAME', email: 'synthetic@example.invalid', message: 'Test only', service: 'software' },
         setSending: () => {}, setError: value => { error = value; },
         setSubmitted: value => { submitted = value; }, pt: { contactForm: { error: 'Error' } }
