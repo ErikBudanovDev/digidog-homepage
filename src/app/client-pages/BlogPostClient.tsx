@@ -9,7 +9,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import type { BlogPost } from "@/lib/blog-data";
 
-function markdownToHtml(md: string): string {
+export function markdownToHtml(md: string): string {
   let html = md;
 
   // Fenced code blocks: ```lang ... ```
@@ -74,7 +74,13 @@ function toSeconds(time: string): number {
   return time.split(":").reduce((acc, part) => acc * 60 + Number(part), 0);
 }
 
-function VideoWithChapters({ video }: { video: NonNullable<BlogPost["video"]> }) {
+export function VideoWithChapters({
+  video,
+  label = "Chapters",
+}: {
+  video: NonNullable<BlogPost["video"]>;
+  label?: string;
+}) {
   const [start, setStart] = useState<number | null>(null);
   const src =
     `https://www.youtube-nocookie.com/embed/${video.youtubeId}?rel=0` +
@@ -94,7 +100,7 @@ function VideoWithChapters({ video }: { video: NonNullable<BlogPost["video"]> })
       </div>
       <div className="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-4 sm:p-6">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-gray-500 mb-3">
-          Chapters
+          {label}
         </h2>
         <ol className="grid gap-1 sm:grid-cols-2">
           {video.chapters.map((c) => (

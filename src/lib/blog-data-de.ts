@@ -8,6 +8,184 @@ import type { BlogPost } from "./blog-data";
 
 export const blogPostsDE: BlogPost[] = [
   {
+    slug: "mit-ki-bauen-claude-workshop",
+    title: "Mit KI bauen: Von der Idee zur fertigen Business-App mit Claude (Workshop-Video)",
+    metaTitle: "Mit KI bauen: Business-App mit Claude live entwickelt | Workshop",
+    metaDescription: "Workshop-Video: Claude beantwortet Marketing-Fragen aus echten Daten, MCP verbindet KI mit Ihren Tools, und eine QR-Lager-App geht in 25 Minuten live.",
+    excerpt: "Ein ganzer Workshop als Video: Claude holt echte Geschäftsdaten, schreibt und testet Code, pusht ihn zu GitHub und bringt eine App live, während ein Mensch die Richtung vorgibt.",
+    image: "/images/blog/building-with-ai/layers.webp",
+    tag: "KI-Workshop · Video",
+    category: "ai",
+    author: "Erik Budanov",
+    date: "2026-10-26",
+    readTime: "8 Min. Lesezeit · 78 Min. Video (Englisch)",
+    keywords: ["mit KI bauen", "Claude Workshop", "KI Agenten für Unternehmen", "MCP", "App mit KI entwickeln", "Claude Cowork"],
+    video: {
+      youtubeId: "",
+      title: "Building with AI: From Idea to a Live Business App with Claude",
+      duration: "PT1H18M5S",
+      chapters: [
+        { time: "0:00", title: "Einleitung und Agenda" },
+        { time: "2:58", title: "KI als neue Ebene der Informatik" },
+        { time: "7:13", title: "Live-Demo: Claude als Marketing-Manager" },
+        { time: "14:45", title: "MCP: So spricht KI mit Ihren Apps" },
+        { time: "18:19", title: "Skills: Kontext einmal speichern, immer nutzen" },
+        { time: "19:52", title: "Planen, umsetzen, testen" },
+        { time: "22:49", title: "Die App: QR-Lagerverwaltung für einen kleinen Laden" },
+        { time: "23:42", title: "Planung mit ChatGPT und Claude" },
+        { time: "37:29", title: "GitHub und Vercel: vom Code zum Live-Link" },
+        { time: "42:10", title: "Demo: einscannen, ausscannen, Zahlen sehen" },
+        { time: "46:49", title: "Neue Funktion live: Produktkategorien" },
+        { time: "50:31", title: "Zweite Meinung: Sicherheits-Audit mit Codex" },
+        { time: "57:52", title: "Wie Claude Code vom Mac aus gepusht hat" },
+        { time: "1:00:48", title: "Die neue Funktion in der Live-App testen" },
+        { time: "1:04:31", title: "Ergebnis: ca. 25 Minuten statt 1–2 Tage" },
+        { time: "1:06:35", title: "Q&A: Investments, Leads, Cowork vs. Code" },
+      ],
+    },
+    faqs: [
+      {
+        question: "Was ist MCP, einfach erklärt?",
+        answer: "MCP (Model Context Protocol) ist ein einheitlicher Standard, über den KI mit Business-Apps spricht. Statt für jede API eigenen Code zu schreiben, nutzt Claude einen Connector und kann Daten in Tools wie Gmail, Asana, GitHub oder Google Analytics lesen und schreiben.",
+      },
+      {
+        question: "Wie lange hat die Entwicklung der Lager-App mit Claude gedauert?",
+        answer: "Etwa 25 Minuten vom Plan bis zur Live-App auf Vercel, inklusive einer neuen Funktion, die während des Workshops ergänzt wurde. Ein Entwickler braucht dafür normalerweise ein bis zwei Tage.",
+      },
+      {
+        question: "Muss ich Entwickler sein, um mit Claude Apps zu bauen?",
+        answer: "Sie brauchen ein Grundverständnis von Software-Entwicklung, um gut zu planen, zu bauen und zu testen. Claude übernimmt die Hauptarbeit, aber ein Mensch gibt die Richtung vor und prüft das Ergebnis.",
+      },
+      {
+        question: "Was ist der Unterschied zwischen Claude Cowork und Claude Code?",
+        answer: "Beide nutzen dasselbe Modell und dieselben Tools. Claude Code ist für Entwickler gemacht und arbeitet mit Branches. Cowork eignet sich besser, wenn Sie viel Kontext, Dokumente und Connectors an einem Ort brauchen.",
+      },
+    ],
+    content: `
+Die meisten KI-Demos zeigen einen Chatbot, der Fragen beantwortet. Dieser Workshop zeigt etwas anderes: Claude holt echte Geschäftsdaten, schreibt und testet Code, pusht ihn zu GitHub und bringt eine funktionierende App live. Ein Mensch gibt dabei nur die Richtung vor.
+
+Ich habe diesen Vortrag bei einem Event der KI-Community [Aibuben](https://aibuben.xyz) gehalten. Die komplette Aufnahme (auf Englisch) finden Sie oben. Mit einem Klick auf ein Kapitel springen Sie direkt zum passenden Teil.
+
+## Was Sie lernen
+
+- Warum natürliche Sprache eine neue Ebene der Informatik ist und was das für Ihr Team bedeutet.
+- Wie Claude Geschäftsfragen aus Google Analytics, Ahrefs und einem Buchungssystem in einem einzigen Chat beantwortet.
+- Was MCP ist und warum es wie ein USB-C-Anschluss für Ihre Business-Apps funktioniert.
+- Wie Sie eine kleine Business-App mit Claude planen, bauen, testen und veröffentlichen.
+- Wie Sie eine zweite KI als unabhängigen Prüfer für Sicherheit und Codequalität einsetzen.
+
+## 1. KI ist eine neue Ebene der Informatik
+
+Computer begannen mit Strom an und Strom aus. Dann kamen Assembler, C und später JavaScript und Python. Jede Ebene machte es leichter, dem Computer Befehle zu geben.
+
+Natürliche Sprache ist die nächste Ebene. Sie erklären der Maschine nicht mehr Schritt für Schritt, wie etwas geht. Sie sagen, was Sie wollen, und die KI schreibt den Code, führt ihn aus und prüft das Ergebnis.
+
+![Jede Ebene verdeckt die vorherige: von Transistoren bis zur natürlichen Sprache](/images/blog/building-with-ai/layers.webp)
+
+Ich nutze dafür ein Bild aus der Seefahrt. Ein Matrose zieht jedes Seil selbst, beobachtet den Wind und liest die Sterne. Ein Kapitän legt das Ziel fest und entscheidet, wohin das Schiff fährt. Mit KI wird Ihre Rolle vom Matrosen zum Kapitän.
+
+## 2. Live-Demo: Claude als Marketing-Manager
+
+Die erste Demo zeigt ein echtes Unternehmen: [Be Original Tours](/portfolio/beoriginaltours-operations), einen Touranbieter in Europa, der Stadt-, Tages- und Nachttouren online verkauft.
+
+Früher wechselte ein SEO-Manager ständig zwischen Google Analytics, Ahrefs und dem Buchungssystem, exportierte Berichte und verbrachte Stunden damit, die Zahlen zusammenzuführen. In der Demo stelle ich einfach Fragen in einem Chat:
+
+- Welche Seiten und Keywords bringen den meisten Traffic?
+- Zeig mir die Buchungen der letzten 10 Tage.
+- Aus welchen Ländern kommen meine Besucher?
+
+Claude wählt für jede Frage das passende Tool. Als der Connector des Buchungssystems nicht funktionierte, wechselte Claude selbstständig zur API und lieferte trotzdem die Zahlen.
+
+![Claude beantwortet eine Frage zu Buchungen aus echten Geschäftsdaten](/images/blog/building-with-ai/claude-analytics.webp)
+
+Die Kernaussage: Sie brauchen keine 20 Dashboards mehr. Sie brauchen einen Ort, an dem Sie Fragen stellen und die Antworten verknüpfen können.
+
+## 3. MCP: ein USB-C-Anschluss für Business-Apps
+
+Vor MCP (Model Context Protocol) hatte jede App ihre eigene API. Um E-Mails aus Gmail oder Termine aus einem Kalender zu holen, musste ein Entwickler die Dokumentation lesen und für jeden Dienst eigenen Code schreiben.
+
+MCP ist ein einheitlicher Standard, über den KI mit Apps spricht. In Claude heißen diese Verbindungen Connectors: Gmail, Asana, ClickUp, Ahrefs, GitHub, Vercel und viele mehr. Sie können auch eigene bauen. Mehr dazu in unserem Leitfaden: [Was ist MCP?](/de/blog/was-ist-mcp-model-context-protocol)
+
+Ein Beispiel aus dem Vortrag: Geben Sie Claude eine Tabelle mit 100 Aufgaben, und Claude legt alle in Asana an, mit der richtigen Person und Priorität.
+
+## 4. Skills: Schluss mit Wiederholungen
+
+Nach einer langen Sitzung, zum Beispiel beim Einrichten eines Servers, kann Claude einen Skill schreiben. Ein Skill ist eine kurze Anleitung zum Projekt: wie der Code aufgebaut ist, wo die Daten liegen und was geändert werden darf. Jede neue Sitzung kann ihn sofort nutzen.
+
+Mein Tipp: Wenn Sie ein Projekt fertig eingerichtet haben, speichern Sie einen Skill.
+
+## 5. Planen, umsetzen, testen
+
+Wer ohne Plan losbaut, landet nach fünf oder sechs Prompts bei einer App, die niemand mehr nachvollziehen kann. Dann geht die Zeit für Fehlersuche drauf.
+
+Investieren Sie deshalb mehr Zeit in den Plan. Legen Sie Datenmodelle, Technologie und API fest, bevor Code entsteht. Schreiben Sie Tests ab dem ersten Tag, denn je größer die App wird, desto schwerer finden Sie Fehler ohne sie.
+
+## 6. Die App: QR-Lagerverwaltung für einen kleinen Laden
+
+Live gebaut wird eine kleine Logistik-App:
+
+- Ware kommt an: QR-Code scannen, der Bestand steigt.
+- Ware wird verkauft: erneut scannen, der Bestand sinkt.
+- Ein Dashboard zeigt Umsatz, Verkäufe und Warnungen bei niedrigem Bestand.
+
+![Die Workshop-App: Lagerverwaltung für einen kleinen Laden mit QR-Codes](/images/blog/building-with-ai/inventory-app.webp)
+
+**Technologie:** Next.js, TypeScript im Strict-Modus, MongoDB Atlas, GitHub und Vercel.
+
+Zuerst habe ich ChatGPT um einen Überblick gebeten, dann Claude daraus einen detaillierten Plan erstellen lassen: Ordnerstruktur, Datenmodelle (Produkt, Lagerbewegung, Verkauf), API-Routen und eine Test-Checkliste. Die Warnung bei niedrigem Bestand hat Claude von sich aus ergänzt.
+
+Warum React und Next.js? Es sind die am weitesten verbreiteten Web-Technologien, und je mehr Beispiele eine KI kennt, desto präziser arbeitet sie. Strict-TypeScript gibt der KI außerdem klare Regeln, sodass weniger unordentlicher Code entsteht.
+
+## 7. Vom Code zum Live-Link
+
+Der Code liegt auf GitHub. Vercel beobachtet das Repository und baut und veröffentlicht die App bei jedem neuen Push automatisch. Die Datenbankverbindung tragen Sie nur einmal ein.
+
+In der Demo scanne ich eine Packung Spaghetti als neuen Bestand ein, verkaufe zwei und sehe, wie der Bestand von 30 auf 28 sinkt, während das Dashboard den Umsatz aktualisiert.
+
+![Ein neues Produkt wird zum ersten Mal eingescannt](/images/blog/building-with-ai/scan-new-product.webp)
+
+## 8. Eine neue Funktion, live
+
+Als Nächstes bitte ich Claude, beim Scannen eines neuen Produkts eine Kategorie auswählbar zu machen. Claude liest den vorhandenen Code, schlägt vor, wie die Funktion arbeiten soll, und baut sie. Danach laufen Typprüfung und Build, dann Commit und Push.
+
+Zwei Momente stechen heraus:
+
+- **Eine zweite KI als Prüfer.** Während Claude baut, liest Codex dasselbe Projekt und schreibt ein Audit zu Sicherheit und Codequalität in eine Datei, ohne Code zu ändern. Eine zweite Meinung findet, was das erste Modell übersieht.
+- **Probleme selbst lösen.** GitHub lehnte den Push aus Claudes Sandbox ab. Claude wechselte zu Desktop Commander, führte den Push von meinem Mac aus, und Vercel veröffentlichte das Update.
+
+Wenige Minuten später waren die Kategorien in der App live.
+
+![Das neue Kategorie-Feld, wenige Minuten später live in der App](/images/blog/building-with-ai/categories.webp)
+
+## 9. Das Ergebnis
+
+Vom Plan bis zur Live-App vergingen etwa 25 Minuten. Ein Entwickler braucht dafür normalerweise ein bis zwei Tage.
+
+Es gibt Grenzen. Sie brauchen weiterhin ein Grundverständnis von Software-Entwicklung, um gut zu planen, zu bauen und zu testen. Die KI übernimmt die schwere Arbeit, aber der Kapitän entscheidet, wohin das Schiff fährt.
+
+## 10. Highlights aus der Fragerunde
+
+- **Investments filtern.** Ein Teilnehmer aus der Finanzbranche fragte, wie man 1.000 mögliche Investments auf 10 eingrenzt. Meine Antwort: Kriterien aufschreiben, öffentliche Daten per Code sammeln und Claude auf diesen Daten arbeiten lassen. So läuft auch unser Lead-Generator: Er findet neu registrierte Firmen in Zürich und recherchiert, wem sie gehören.
+- **Cowork oder Claude Code?** Dasselbe Modell und dieselben Tools. Claude Code ist für Entwickler gemacht und arbeitet mit Branches. Cowork passt besser, wenn Sie viel Kontext, Dokumente und Connectors an einem Ort brauchen.
+- **Geplante Aufgaben.** Ich nutze sie bereits für SEO-Arbeit. Claude arbeitet eine Tabelle ab, notiert, was erledigt ist, und macht in der nächsten Sitzung weiter.
+
+## Die wichtigsten Erkenntnisse
+
+1. Ihre Rolle wechselt von der Ausführung zur Richtungsvorgabe.
+2. MCP-Connectors machen aus vielen Dashboards ein einziges Gespräch.
+3. Erst planen, von Anfang an testen und eine zweite KI prüfen lassen.
+4. Prototypen, die früher Tage dauerten, entstehen heute an einem Nachmittag.
+
+## Wo passen Claude oder KI-Agenten in Ihr Unternehmen?
+
+Wir bieten einen **kostenlosen 45-minütigen KI-Prozess-Check** an. Gemeinsam gehen wir einen Ihrer Geschäftsprozesse durch, etwa Buchungen, Reporting, Lead-Recherche oder Lager, und zeigen, wo Claude oder ein KI-Agent die wiederkehrende Arbeit übernehmen kann. Sie erhalten eine kurze Liste konkreter nächster Schritte, ganz unabhängig davon, ob Sie mit uns arbeiten.
+
+**[Kostenlosen KI-Prozess-Check buchen →](https://calendly.com/erik-budanov/beratungsgespraech)**
+
+Danke an Aram Adamyan und die Aibuben-Community für die Organisation des Events.
+    `,
+  },
+  {
     "slug": "mvp-entwicklung-planen",
     "title": "MVP-Entwicklung planen: Umfang, Prototyp und erste nutzbare Version",
     "metaTitle": "MVP-Entwicklung planen: Umfang, Prototyp & erste Version",
