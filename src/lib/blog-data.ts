@@ -21,9 +21,194 @@ export interface BlogPost {
   readTime: string;
   keywords: string[];
   faqs?: { question: string; answer: string }[];
+  /** Optional YouTube video shown above the article, with clickable chapters */
+  video?: {
+    youtubeId: string;
+    title: string;
+    duration: string; // ISO 8601, e.g. "PT1H18M5S"
+    chapters: { time: string; title: string }[];
+  };
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "building-with-ai-claude-workshop",
+    title: "Building with AI: From Idea to a Live Business App with Claude (Full Workshop)",
+    metaTitle: "Building with AI: A Live Business App with Claude | Full Workshop",
+    metaDescription: "Full workshop video: Claude answers marketing questions from live data, MCP connects AI to business apps, and a QR inventory app goes from plan to live on Vercel.",
+    excerpt: "A full workshop recording: Claude pulls real business data, writes and tests code, pushes it to GitHub and ships a working app while a person sets the direction.",
+    image: "/images/blog/building-with-ai/layers.webp",
+    tag: "AI Workshop · Video",
+    category: "ai",
+    author: "Erik Budanov",
+    date: "2026-10-26",
+    readTime: "8 min read · 78 min video",
+    keywords: ["building with AI", "Claude workshop", "Claude Cowork", "MCP", "AI app development", "AI agents for business"],
+    video: {
+      youtubeId: "RW-hpB3bRtw",
+      title: "Building with AI: From Idea to a Live Business App with Claude",
+      duration: "PT1H18M5S",
+      chapters: [
+        { time: "0:00", title: "Introduction and agenda" },
+        { time: "2:58", title: "AI as a new layer of computing" },
+        { time: "7:13", title: "Live demo: Claude as a marketing manager" },
+        { time: "14:45", title: "MCP: how AI talks to your apps" },
+        { time: "18:19", title: "Skills: save context once, reuse it" },
+        { time: "19:52", title: "Plan, implement, test" },
+        { time: "22:49", title: "The app: QR inventory for a small shop" },
+        { time: "23:42", title: "Planning the app with ChatGPT and Claude" },
+        { time: "37:29", title: "GitHub and Vercel: from code to a live link" },
+        { time: "42:10", title: "Demo: scan in, scan out, watch the numbers" },
+        { time: "46:49", title: "Adding a feature live: product categories" },
+        { time: "50:31", title: "A second opinion: security audit with Codex" },
+        { time: "57:52", title: "How Claude pushed code from the Mac" },
+        { time: "1:00:48", title: "Testing the new feature in the live app" },
+        { time: "1:04:31", title: "Result: about 25 minutes instead of 1–2 days" },
+        { time: "1:06:35", title: "Q&A: investing, lead generation, Cowork vs Code" },
+      ],
+    },
+    faqs: [
+      {
+        question: "What is MCP in simple words?",
+        answer: "MCP (Model Context Protocol) is one standard way for AI to talk to business apps. Instead of custom code for every API, a connector lets Claude read and write data in tools like Gmail, Asana, GitHub or Google Analytics.",
+      },
+      {
+        question: "How long did it take to build the inventory app with Claude?",
+        answer: "About 25 minutes from plan to a live app on Vercel, including a new feature added during the workshop. An engineer would normally need one to two days.",
+      },
+      {
+        question: "Do I need to be a developer to build apps with Claude?",
+        answer: "You need a basic understanding of engineering to plan, build and test well. Claude does the heavy lifting, but a person still sets the direction and checks the result.",
+      },
+      {
+        question: "What is the difference between Claude Cowork and Claude Code?",
+        answer: "Both use the same model and tools. Claude Code is built for developers and works with branches. Cowork is better when you want lots of context, documents and connectors in one place.",
+      },
+    ],
+    content: `
+Most AI demos show a chatbot answering questions. This workshop shows something different. Claude pulls real business data, writes and tests code, pushes it to GitHub and ships a working app, while a person sets the direction.
+
+I gave this talk at an event of the [Aibuben](https://aibuben.xyz) AI community. The full recording is above. Click a chapter to jump straight to the part you need.
+
+## What you will learn
+
+- Why natural language is a new layer of computing, and what that changes for your team.
+- How Claude answers business questions from Google Analytics, Ahrefs and a booking system in one chat.
+- What MCP is, and why it works like a USB-C port for your business apps.
+- How to plan, build, test and deploy a small business app with Claude.
+- How to use a second AI as an independent reviewer for security and code quality.
+
+## 1. AI is a new layer of computing
+
+Computers started with electricity on and off. Then came assembly, C, and later JavaScript and Python. Each layer let people give commands in a way that was easier to read.
+
+Natural language is the next layer. You no longer tell the machine how to do something step by step. You tell it what you want, and it writes the code, runs it and checks the result.
+
+![Each layer hides the last: from transistors to natural language](/images/blog/building-with-ai/layers.webp)
+
+I use a sailing picture for this. A sailor pulls every rope by hand, watches the wind and reads the stars. A captain sets the destination and decides where the boat should go. With AI, your job moves from sailor to captain.
+
+## 2. Live demo: Claude as a marketing manager
+
+The first demo uses a real business: [Be Original Tours](/portfolio/beoriginaltours-operations), a tour operator in Europe that sells walking, day and night tours online.
+
+An SEO manager used to jump between Google Analytics, Ahrefs and the booking system, export reports, and spend hours joining the numbers. In the demo, I just ask questions in one chat:
+
+- Which pages and keywords drive the most traffic?
+- Show me the bookings from the last 10 days.
+- Which countries do my visitors come from?
+
+Claude picks the right tool for each question. When the booking system's connector failed, it switched to the API by itself and still returned the numbers.
+
+![Claude answering a bookings question from live business data](/images/blog/building-with-ai/claude-analytics.webp)
+
+The point: you no longer need 20 dashboards. You need one place where you can ask questions and connect the answers.
+
+## 3. MCP: a USB-C port for business apps
+
+Before MCP (Model Context Protocol), every app had its own API. To pull emails from Gmail or events from a calendar, a developer had to read the documentation and write custom code for each service.
+
+MCP is one standard way for AI to talk to apps. In Claude, these are called connectors: Gmail, Asana, ClickUp, Ahrefs, GitHub, Vercel and more. You can also build your own. Read more in our guide: [What is MCP?](/blog/what-is-mcp-model-context-protocol)
+
+One example from the talk: give Claude a spreadsheet with 100 tasks, and it creates all of them in Asana with the right owner and priority.
+
+## 4. Skills: stop repeating yourself
+
+After a long session, for example setting up a server, Claude can write a skill. A skill is a short guide to the project: how the code is organised, where the data lives and what can be changed. Every new session can use it right away.
+
+My advice: when you finish setting up a project, save a skill.
+
+## 5. Plan, implement, test
+
+If you start building without a plan, after five or six prompts the app reaches a state you cannot follow. Then you spend your time debugging.
+
+So spend more time on the plan. Choose the data models, the stack and the API before writing any code. Add tests from day one, because the bigger the app gets, the harder it is to find errors without them.
+
+## 6. The app: QR inventory for a small shop
+
+The live build is a small logistics app:
+
+- Scan a QR code when goods arrive, and the stock goes up.
+- Scan it again when you sell, and the stock goes down.
+- A dashboard shows revenue, sales and low-stock alerts.
+
+![The workshop app: a small shop's inventory with QR codes](/images/blog/building-with-ai/inventory-app.webp)
+
+**Stack:** Next.js, TypeScript in strict mode, MongoDB Atlas, GitHub and Vercel.
+
+I first asked ChatGPT for an overview, then asked Claude to turn it into a detailed plan: folder structure, data models (product, stock movement, sale), API routes and a test checklist. Claude added a low-stock alert on its own.
+
+Why React and Next.js? They are the most common web technologies online, and the more examples an AI has seen, the more precise its output is. Strict TypeScript also keeps the AI inside clear rules, so it writes less messy code.
+
+## 7. From code to a live link
+
+The code lives on GitHub. Vercel watches the repository, and every time new code is pushed, it rebuilds and publishes the app. You only add the database connection once.
+
+In the demo, I scan a spaghetti package as new stock, sell two, and watch the stock drop from 30 to 28 while the revenue updates on the dashboard.
+
+![Scanning a new product into stock for the first time](/images/blog/building-with-ai/scan-new-product.webp)
+
+## 8. A new feature, live
+
+Next, I ask Claude to let me pick a category when I scan a new product. Claude reads the existing code, proposes how the feature should work and builds it. Then it runs the type check and the build, commits and pushes.
+
+Two moments stand out:
+
+- **A second AI as reviewer.** While Claude builds, Codex reads the same project and writes a security and code-quality audit into a file, without changing any code. A second opinion catches what the first model misses.
+- **Solving its own problem.** GitHub refused the push from Claude's sandbox. Claude switched to Desktop Commander, ran the push from my Mac, and Vercel deployed the update.
+
+A few minutes later, the categories were live in the app.
+
+![The new category field, live in the app a few minutes later](/images/blog/building-with-ai/categories.webp)
+
+## 9. The result
+
+The app went from plan to live in about 25 minutes. An engineer would normally need one or two days.
+
+There are limits. You still need a basic understanding of engineering to plan, build and test well. AI does the heavy lifting, but the captain still decides where the ship goes.
+
+## 10. Q&A highlights
+
+- **Screening investments.** An attendee from finance asked about narrowing 1,000 possible investments down to 10. My answer: write your criteria down, let code collect the public data, and let Claude work on top of that data. We run a lead generator the same way: it finds newly registered companies in Zurich and researches who owns them.
+- **Cowork or Claude Code?** Same model and the same tools underneath. Claude Code is built for developers and works with branches. Cowork is better when you want lots of context, documents and connectors in one place.
+- **Scheduled tasks.** I already use them for SEO work. Claude works through a sheet, notes what it did, and continues in the next session.
+
+## Key takeaways
+
+1. Your role moves from doing the work to setting the direction.
+2. MCP connectors turn many dashboards into one conversation.
+3. Plan first, test from the start, and use a second AI as a reviewer.
+4. Prototypes that took days can now take an afternoon.
+
+## Where could Claude or AI agents fit in your business?
+
+We run a **free 45-minute AI process walk-through**. We go through one of your business processes with you, such as bookings, reporting, lead research or inventory, and show where Claude or an AI agent can take over the repetitive work. You leave with a short list of concrete next steps, whether or not you work with us.
+
+**[Book your free AI process walk-through →](https://calendly.com/erik-budanov/beratungsgespraech)**
+
+Thanks to Aram Adamyan and the Aibuben community for hosting the event.
+    `,
+  },
   {
     slug: "senior-developers-ai-future-software-engineering",
     title: "Why Senior Developers May Be the Last Generation of Traditional Software Engineers",
