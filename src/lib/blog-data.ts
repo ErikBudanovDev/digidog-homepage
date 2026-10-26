@@ -45,7 +45,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "8 min read · 78 min video",
     keywords: ["building with AI", "Claude workshop", "Claude Cowork", "MCP", "AI app development", "AI agents for business"],
     video: {
-      youtubeId: "",
+      youtubeId: "DOEg9ertBTU",
       title: "Building with AI: From Idea to a Live Business App with Claude",
       duration: "PT1H18M5S",
       chapters: [
