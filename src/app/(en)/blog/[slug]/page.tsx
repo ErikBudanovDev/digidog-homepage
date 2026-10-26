@@ -90,6 +90,24 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      {post.video?.youtubeId && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "VideoObject",
+              name: post.video.title,
+              description: post.metaDescription,
+              thumbnailUrl: `https://i.ytimg.com/vi/${post.video.youtubeId}/maxresdefault.jpg`,
+              uploadDate: post.date,
+              duration: post.video.duration,
+              embedUrl: `https://www.youtube-nocookie.com/embed/${post.video.youtubeId}`,
+              contentUrl: `https://www.youtube.com/watch?v=${post.video.youtubeId}`,
+            }),
+          }}
+        />
+      )}
       {faqSchema && (
         <script
           type="application/ld+json"

@@ -4,6 +4,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import type { BlogPost } from "@/lib/blog-data";
@@ -28,6 +29,12 @@ function markdownToHtml(md: string): string {
   html = html.replace(/^### (.+)$/gm, "<h3>$1</h3>");
   html = html.replace(/^## (.+)$/gm, "<h2>$1</h2>");
 
+  // Images on their own line: ![caption](src)
+  html = html.replace(
+    /^!\[(.*?)\]\((.+?)\)$/gm,
+    '<figure><img src="$2" alt="$1" loading="lazy" /><figcaption>$1</figcaption></figure>'
+  );
+
   // Bold
   html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
 
@@ -50,15 +57,62 @@ function markdownToHtml(md: string): string {
   // Lists
   html = html.replace(/^- (.+)$/gm, "<li>$1</li>");
   html = html.replace(/(<li>.*<\/li>\n?)+/g, (m) => `<ul>${m}</ul>`);
+  html = html.replace(/^\d+\. (.+)$/gm, '<li class="ol">$1</li>');
+  html = html.replace(/(<li class="ol">.*<\/li>\n?)+/g, (m) => `<ol>${m}</ol>`);
 
   // Paragraphs
   html = html.replace(/\n{2,}/g, "</p><p>");
-  html = html.replace(/^(?!<[hultapc])(.+)$/gm, "<p>$1</p>");
+  html = html.replace(/^(?!<[hultapcfo])(.+)$/gm, "<p>$1</p>");
   html = html.replace(/<p><\/p>/g, "");
-  html = html.replace(/<p>(<[hultapc])/g, "$1");
-  html = html.replace(/(<\/[hultapc][^>]*>)<\/p>/g, "$1");
+  html = html.replace(/<p>(<[hultapcfo])/g, "$1");
+  html = html.replace(/(<\/[hultapcfo][^>]*>)<\/p>/g, "$1");
 
   return html;
+}
+
+function toSeconds(time: string): number {
+  return time.split(":").reduce((acc, part) => acc * 60 + Number(part), 0);
+}
+
+function VideoWithChapters({ video }: { video: NonNullable<BlogPost["video"]> }) {
+  const [start, setStart] = useState<number | null>(null);
+  const src =
+    `https://www.youtube-nocookie.com/embed/${video.youtubeId}?rel=0` +
+    (start !== null ? `&start=${start}&autoplay=1` : "");
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 -mt-8">
+      <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg bg-black">
+        <iframe
+          key={start ?? "initial"}
+          src={src}
+          title={video.title}
+          className="absolute inset-0 w-full h-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+      <div className="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-4 sm:p-6">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-gray-500 mb-3">
+          Chapters
+        </h2>
+        <ol className="grid gap-1 sm:grid-cols-2">
+          {video.chapters.map((c) => (
+            <li key={c.time}>
+              <button
+                type="button"
+                onClick={() => setStart(toSeconds(c.time))}
+                className="w-full flex gap-3 text-left rounded-lg px-2 py-1.5 hover:bg-white transition-colors"
+              >
+                <span className="font-mono text-sm text-cyan-700 shrink-0 w-14">{c.time}</span>
+                <span className="text-sm text-gray-700">{c.title}</span>
+              </button>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  );
 }
 
 export default function BlogPostClient({ post }: { post: BlogPost }) {
@@ -98,14 +152,18 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
         </div>
       </section>
 
-      {/* Featured Image */}
-      <div className="max-w-4xl mx-auto px-6 -mt-8">
-        <img
-          src={post.image}
-          alt={post.title}
-          className="w-full rounded-xl shadow-lg aspect-[2/1] object-cover"
-        />
-      </div>
+      {/* Featured video (with chapters) or image */}
+      {post.video?.youtubeId ? (
+        <VideoWithChapters video={post.video} />
+      ) : (
+        <div className="max-w-4xl mx-auto px-6 -mt-8">
+          <img
+            src={post.image}
+            alt={post.title}
+            className="w-full rounded-xl shadow-lg aspect-[2/1] object-cover"
+          />
+        </div>
+      )}
 
       {/* Content */}
       <article className="max-w-3xl mx-auto px-6 py-16">
@@ -125,6 +183,11 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
           .blog-content th { background: #f8fafc; padding: 0.75rem 1rem; text-align: left; font-weight: 600; color: #1f2937; border: 1px solid #e5e7eb; font-size: 0.95rem; }
           .blog-content td { padding: 0.75rem 1rem; border: 1px solid #e5e7eb; color: #4b5563; font-size: 0.95rem; }
           .blog-content tr:nth-child(even) td { background: #f9fafb; }
+          .blog-content ol { margin: 1rem 0 1.5rem 1.5rem; list-style: decimal; }
+          .blog-content figure { margin: 2rem 0; }
+          .blog-content figure img { width: 100%; border-radius: 0.75rem; border: 1px solid #e5e7eb; box-shadow: 0 4px 16px rgba(15,23,42,0.08); }
+          .blog-content figcaption { margin-top: 0.6rem; font-size: 0.9rem; color: #6b7280; text-align: center; }
+          @media (max-width: 640px) { .blog-content table { display: block; overflow-x: auto; } }
         `}</style>
         <div
           className="blog-content"
