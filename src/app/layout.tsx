@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { SiteAnalytics } from "@/components/SiteAnalytics";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 
@@ -74,6 +75,7 @@ export default function RootLayout({
       <body>
         {children}
         <SiteAnalytics />
+        <Analytics />
 
         {/* Calendly widget */}
         <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
