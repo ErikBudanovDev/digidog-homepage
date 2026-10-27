@@ -8,38 +8,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import type { BlogPost } from "@/lib/blog-data";
-
-function markdownToHtml(md: string): string {
-  let html = md;
-  html = html.replace(/```(\w*)\n([\s\S]*?)```/g, (_m, lang, code) => {
-    const escaped = code.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").trimEnd();
-    return `<pre class="code-block"><code class="language-${lang || "text"}">${escaped}</code></pre>`;
-  });
-  html = html.replace(/`([^`]+)`/g, '<code class="inline-code">$1</code>');
-  html = html.replace(/^### (.+)$/gm, "<h3>$1</h3>");
-  html = html.replace(/^## (.+)$/gm, "<h2>$1</h2>");
-  html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
-  html = html.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>');
-  html = html.replace(/^\| (.+) \|$/gm, (match) => {
-    const cells = match.split("|").filter(Boolean).map((c) => c.trim());
-    return "<tr>" + cells.map((c) => `<td>${c}</td>`).join("") + "</tr>";
-  });
-  html = html.replace(/^\|[-| ]+\|$/gm, "");
-  html = html.replace(/(<tr>.*<\/tr>\n?)+/g, (m) => {
-    const rows = m.trim().split("\n");
-    const header = rows[0]?.replace(/<td>/g, "<th>").replace(/<\/td>/g, "</th>");
-    const body = rows.slice(1).join("\n");
-    return `<table><thead>${header}</thead><tbody>${body}</tbody></table>`;
-  });
-  html = html.replace(/^- (.+)$/gm, "<li>$1</li>");
-  html = html.replace(/(<li>.*<\/li>\n?)+/g, (m) => `<ul>${m}</ul>`);
-  html = html.replace(/\n{2,}/g, "</p><p>");
-  html = html.replace(/^(?!<[hultapc])(.+)$/gm, "<p>$1</p>");
-  html = html.replace(/<p><\/p>/g, "");
-  html = html.replace(/<p>(<[hultapc])/g, "$1");
-  html = html.replace(/(<\/[hultapc][^>]*>)<\/p>/g, "$1");
-  return html;
-}
+import { markdownToHtml, VideoWithChapters } from "./BlogPostClient";
 
 export default function BlogPostDEClient({ post }: { post: BlogPost }) {
   return (
@@ -78,14 +47,18 @@ export default function BlogPostDEClient({ post }: { post: BlogPost }) {
         </div>
       </section>
 
-      {/* Featured Image */}
-      <div className="max-w-4xl mx-auto px-6 -mt-8">
-        <img
-          src={post.image}
-          alt={post.title}
-          className="w-full rounded-xl shadow-lg aspect-[2/1] object-cover"
-        />
-      </div>
+      {/* Featured video (with chapters) or image */}
+      {post.video?.youtubeId ? (
+        <VideoWithChapters video={post.video} label="Kapitel" />
+      ) : (
+        <div className="max-w-4xl mx-auto px-6 -mt-8">
+          <img
+            src={post.image}
+            alt={post.title}
+            className="w-full rounded-xl shadow-lg aspect-[2/1] object-cover"
+          />
+        </div>
+      )}
 
       {/* Content */}
       <article className="max-w-3xl mx-auto px-6 py-16">
@@ -105,6 +78,11 @@ export default function BlogPostDEClient({ post }: { post: BlogPost }) {
           .blog-content th { background: #f8fafc; padding: 0.75rem 1rem; text-align: left; font-weight: 600; color: #1f2937; border: 1px solid #e5e7eb; font-size: 0.95rem; }
           .blog-content td { padding: 0.75rem 1rem; border: 1px solid #e5e7eb; color: #4b5563; font-size: 0.95rem; }
           .blog-content tr:nth-child(even) td { background: #f9fafb; }
+          .blog-content ol { margin: 1rem 0 1.5rem 1.5rem; list-style: decimal; }
+          .blog-content figure { margin: 2rem 0; }
+          .blog-content figure img { width: 100%; border-radius: 0.75rem; border: 1px solid #e5e7eb; box-shadow: 0 4px 16px rgba(15,23,42,0.08); }
+          .blog-content figcaption { margin-top: 0.6rem; font-size: 0.9rem; color: #6b7280; text-align: center; }
+          @media (max-width: 640px) { .blog-content table { display: block; overflow-x: auto; } }
         `}</style>
         <div
           className="blog-content"
