@@ -401,7 +401,7 @@ export const en: DeepStringify<typeof de> = {
       "We integrate your operations, data, and workflows into AI. Access reports, automate tasks, manage operations, and make decisions through natural conversation with Claude or GPT.",
 
     /* Hero */
-    heroBadge: "AI Integration with Erik Budanov",
+    heroBadge: "AI integration services & Claude consulting",
     heroTitle1: "Talk to Your",
     heroTitle2: "Business",
     heroTitle3: "With AI",
@@ -410,7 +410,7 @@ export const en: DeepStringify<typeof de> = {
     heroDescHighlight: "Claude or GPT Chat",
     heroDescEnd:
       ". Access reports, automate tasks, manage operations, and make decisions through natural conversation.",
-    heroCta: "Book Free Strategy Call",
+    heroCta: "Book a free AI process walk-through",
     heroCtaSecondary: "Explore Services",
     heroKpi1Value: "1:1",
     heroKpi1Label: "Your direct engineer",

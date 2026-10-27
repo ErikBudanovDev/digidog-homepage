@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { TrustedPartners } from "@/components/TrustedPartners";
 import { ServicesSection } from "@/components/ServicesSection";
 import { ImmersiveSection } from "@/components/ImmersiveSection";
+import { AiCasesSection } from "@/components/AiCasesSection";
 import { UpworkProofSection } from "@/components/UpworkProofSection";
 import { ContactCTA } from "@/components/ContactCTA";
 import { ContactFormSection } from "@/components/ContactFormSection";
@@ -17,18 +18,19 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden scroll-smooth">
       <SEO
-        title="Immersive 3D, VR & AR Development with AI | DigiDog"
-        description="Interactive 3D worlds, VR walkthroughs and AR experiences built with AI by Erik Budanov. Runs in the browser and on Meta Quest."
+        title="Claude & AI Integration for Businesses | DigiDog"
+        description="AI integration services by Erik Budanov: Claude, AI agents and MCP connected to your CRM, bookings, email and analytics. Real client cases."
         canonical="/"
         schemaMarkup={organizationSchema}
       />
       <Navbar />
       <HeroSection />
       <TrustedPartners />
-      <ImmersiveSection />
-      <ServicesSection />
+      <AiCasesSection />
       <UpworkProofSection />
       <ReviewsSection />
+      <ServicesSection />
+      <ImmersiveSection />
       <CtaBanner />
       <PortfolioSection />
       <BlogSection />

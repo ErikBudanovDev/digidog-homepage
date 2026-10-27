@@ -1,6 +1,6 @@
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { motion } from "motion/react";
-import { Box, BadgeCheck, Languages } from "lucide-react";
+import { Bot, BadgeCheck, Languages } from "lucide-react";
 import { colors, fonts, transitions } from "./ui/brand";
 import { PrimaryButton, openBookingModal } from "./ui/buttons";
 import { HeroLayout } from "./ui/hero-layout";
@@ -11,7 +11,7 @@ import deT from "@/translations/german.json";
 
 const heroKpis = [
   { icon: BadgeCheck, value: "Top Rated Plus", labelEn: "Upwork · 100% Job Success", labelDe: "Upwork · 100 % Job Success", href: "#upwork" },
-  { icon: Box, value: "3D · VR · AR", labelEn: "Browser & Meta Quest", labelDe: "Browser & Meta Quest" },
+  { icon: Bot, value: "Claude · MCP · Agents", labelEn: "Running in real businesses", labelDe: "Im Einsatz in echten Unternehmen", href: "#ai-cases" },
   { icon: Languages, value: "DE / EN", labelEn: "German & English", labelDe: "Deutsch & Englisch" },
 ];
 

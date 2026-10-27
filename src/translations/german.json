@@ -1,10 +1,10 @@
 {
   "seo": {
     "home": {
-      "title": "Immersive 3D-, VR- & AR-Entwicklung mit KI",
-      "description": "Interaktive 3D-Welten, VR-Rundgänge und AR-Erlebnisse, mit KI entwickelt von Erik Budanov. Für Browser und Meta Quest. Websites und MVPs ebenfalls.",
-      "ogTitle": "Immersive 3D-, VR- & AR-Entwicklung | DigiDog",
-      "ogDescription": "Interaktive 3D-Welten, VR-Rundgänge und AR-Erlebnisse, mit KI entwickelt von Erik Budanov. Für Browser und Meta Quest."
+      "title": "KI-Integration & KI-Beratung für Unternehmen",
+      "description": "KI-Agentur für Unternehmen in Deutschland, Österreich und der Schweiz: Claude, KI-Agenten und MCP, verbunden mit CRM, Buchungen, E-Mail und Analytics. Echte Kundenprojekte. Kostenloser KI-Prozess-Check.",
+      "ogTitle": "KI-Integration & KI-Beratung für Unternehmen | DigiDog",
+      "ogDescription": "Claude und KI-Agenten, verbunden mit den Tools, die Ihr Unternehmen schon nutzt. Echte Kundenprojekte, Top Rated Plus auf Upwork."
     },
     "aiIntegration": {
       "title": "KI-Integration & Workflow-Automatisierung",
@@ -60,10 +60,10 @@
     }
   },
   "hero": {
-    "title1": "Immersive Welten,",
-    "title2": "entwickelt mit KI.",
-    "description": "Ich bin Erik Budanov, Gründer von DigiDog. Mit KI entwickle ich interaktive 3D-, VR- und AR-Erlebnisse: Lernwelten, begehbare Räume und Produktpräsentationen für den Browser und Meta Quest. Websites, MVPs und KI-Integrationen gehören weiterhin dazu.",
-    "cta": "3D-Projekt besprechen"
+    "title1": "KI-Integration,",
+    "title2": "mit Claude.",
+    "description": "Ich bin Erik Budanov, Gründer von DigiDog. Ich verbinde Claude und KI-Agenten mit den Tools, die Sie schon nutzen, etwa CRM, Buchungen, E-Mail und Analytics. So fragt Ihr Team nach Antworten, statt sie zu suchen. Echte Projekte, vom Touranbieter bis zur Zahnklinik.",
+    "cta": "Kostenlosen KI-Prozess-Check buchen"
   },
   "nav": {
     "home": "Startseite",
@@ -292,5 +292,82 @@
         "text": "Die Website des FP2030 Progress Report mit interaktiven Highcharts-Datenvisualisierungen."
       }
     ]
+  },
+  "aiCasesSection": {
+    "badge": "KI-Integration in der Praxis",
+    "title1": "Unternehmen, die wir ",
+    "title2": "mit KI verbunden haben",
+    "subtitle": "Keine Demos. Diese Systeme laufen heute in echten Unternehmen. Jedes begann mit demselben Schritt: einen Geschäftsprozess durchgehen und finden, wo KI am meisten Zeit spart.",
+    "readCase": "Fallstudie lesen",
+    "cases": [
+      {
+        "slug": "beoriginaltours-operations",
+        "industry": "Touranbieter · Europa",
+        "title": "Buchungen, Guides und Zahlungen in einem KI-System",
+        "body": "Buchungen kommen per E-Mail, Guides brauchen Pläne, Zahlungen müssen verfolgt werden. Wir haben alles verbunden, sodass das Management einfach nach Umsatz, offenen Aufgaben oder Tourleistung fragt.",
+        "points": [
+          "Buchungsdaten automatisch aus E-Mails",
+          "Guide-Pläne und Zahlungen in einem Dashboard",
+          "Fragen an Claude statt Berichte öffnen"
+        ],
+        "tools": [
+          "Claude",
+          "MCP",
+          "Make.com",
+          "Python",
+          "MongoDB",
+          "Next.js"
+        ]
+      },
+      {
+        "slug": "hubspot-dental-crm",
+        "industry": "Zahnklinik-Kette · 7 Standorte",
+        "title": "Ein CRM und automatisierte Patientenabläufe für 7 Kliniken",
+        "body": "Sieben Standorte, eine Patientenreise. HubSpot ist per API mit der Praxissoftware verbunden, Automatisierungen bewegen Patienten und Aufgaben ohne manuelles Kopieren.",
+        "points": [
+          "Patientenabläufe über alle Standorte",
+          "Praxissoftware per API angebunden",
+          "Automatisierung statt manueller Dateneingabe"
+        ],
+        "tools": [
+          "HubSpot",
+          "IVORIS API",
+          "Make.com"
+        ]
+      },
+      {
+        "slug": "ai-jewelry-sketch",
+        "industry": "Schmuckmarke",
+        "title": "Kunden-E-Mails werden zu Schmuckskizzen, rund um die Uhr",
+        "body": "KI liest Kundenanfragen, erkennt die Anforderungen und erstellt automatisch eine erste Skizze. Das Team startet mit einem Entwurf statt mit einem leeren Blatt.",
+        "points": [
+          "Anforderungen aus jeder E-Mail erkannt",
+          "Erste Skizze automatisch erstellt",
+          "Läuft Tag und Nacht ohne manuelle Schritte"
+        ],
+        "tools": [
+          "KI-Bildgenerierung",
+          "Make.com",
+          "E-Mail"
+        ]
+      }
+    ],
+    "internalTitle": "Und wir führen unser eigenes Unternehmen damit",
+    "internal": [
+      {
+        "title": "KI-CRM-Account-Manager",
+        "body": "Unser eigener MCP-Server lässt Claude Kunden anlegen, Deals verschieben, Follow-ups entwerfen und Kommunikation verfolgen, direkt im Chat.",
+        "link": "So funktioniert es",
+        "href": "/de/dienstleistungen/ki-integration"
+      },
+      {
+        "title": "Von der Idee zur Live-App in 25 Minuten",
+        "body": "Der komplette Workshop: Claude beantwortet Geschäftsfragen aus echten Daten, plant, programmiert, testet und veröffentlicht eine App.",
+        "link": "Workshop ansehen",
+        "href": "/de/blog/mit-ki-bauen-claude-workshop"
+      }
+    ],
+    "cta": "Kostenlosen 45-minütigen KI-Prozess-Check buchen",
+    "ctaNote": "Wir gehen einen Ihrer Prozesse durch und zeigen, wo Claude oder KI-Agenten passen. Unverbindlich."
   }
 }

@@ -6,7 +6,8 @@ import { motion } from "motion/react";
 import { useNavigate } from "react-router";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 import { colors, fonts, portfolioCardGradientBg } from "./brand";
-import { ArrowIcon, LinkWithArrow } from "./buttons";
+import { ArrowIcon } from "./buttons";
+import { ChevronRight } from "lucide-react";
 import { useTranslation } from "../../i18n/i18n-context";
 
 /* ── Content Card (generic hover-lift card for Reviews, Blog, etc.) ── */
@@ -71,7 +72,7 @@ export function BlogCard({
 }) {
   const { t } = useTranslation();
   return (
-    <a href={post.href ?? (post.slug ? `/blog/${post.slug}` : "/blog")} className="block">
+    <a href={post.href ?? (post.slug ? `/blog/${post.slug}` : "/blog")} className="block group">
     <ContentCard variant="dark" index={index} isInView={isInView} className="group overflow-hidden">
       <div className="h-[200px] overflow-hidden">
         <ImageWithFallback
@@ -104,13 +105,14 @@ export function BlogCard({
         >
           {post.description}
         </p>
-        <LinkWithArrow 
-          href={post.href ?? (post.slug ? `/blog/${post.slug}` : "/blog")}
-          color={colors.textBlueLink} 
-          icon="chevron"
+        {/* the whole card is already a link, so this is a styled span (no nested <a>) */}
+        <span
+          className="inline-flex items-center gap-2 text-[15px] group-hover:gap-3 transition-all"
+          style={{ fontFamily: fonts.display, fontWeight: 700, color: colors.textBlueLink }}
         >
           {t.common.readMore}
-        </LinkWithArrow>
+          <ChevronRight size={16} />
+        </span>
       </div>
     </ContentCard>
     </a>
