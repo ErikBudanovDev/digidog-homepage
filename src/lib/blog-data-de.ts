@@ -8,6 +8,91 @@ import type { BlogPost } from "./blog-data";
 
 export const blogPostsDE: BlogPost[] = [
   {
+    slug: "claude-code-fuer-unternehmen",
+    title: "Claude Code für Unternehmen: Was es in Ihrer Firma leisten kann",
+    metaTitle: "Claude Code für Unternehmen: 5 echte Einsatzbeispiele",
+    metaDescription: "Claude Code schreibt nicht nur Code, es führt ihn aus. 5 echte Einsätze aus Betrieb, CRM, Marketing und IT, die Bausteine erklärt und ein risikoarmer Einstieg.",
+    excerpt: "Claude Code schreibt nicht nur Code, es führt ihn aus. Was das für Betrieb, CRM, Marketing und Server bedeutet, mit echten Beispielen.",
+    image: "/images/blog/building-with-ai/claude-analytics.webp",
+    tag: "Claude Code · KI-Integration",
+    category: "ai",
+    author: "Erik Budanov",
+    date: "2026-10-28",
+    readTime: "7 Min. Lesezeit",
+    keywords: ["Claude Code für Unternehmen", "Claude Code", "KI-Integration", "KI-Agenten für Unternehmen", "KI-Beratung", "MCP"],
+    faqs: [
+      { question: "Was ist Claude Code?", answer: "Claude Code ist der Agent von Anthropic, der direkt an Ihren Projekten arbeitet. Sie beschreiben ein Ziel in normaler Sprache; er liest Dateien, plant, schreibt und führt Code aus, prüft das Ergebnis und behebt Fehler." },
+      { question: "Ist Claude Code nur für Entwickler?", answer: "Nein. Weil es Code ausführt, kann es Geschäftsdaten lesen, Ihre Tools über MCP-Connectors nutzen, Berichte erstellen und Abläufe in Betrieb, Vertrieb, Marketing und IT automatisieren." },
+      { question: "Wie starten wir sicher mit Claude Code?", answer: "Einen Prozess wählen, vor dem Bauen planen, mit Lesezugriff beginnen und E-Mails, Zahlungen und alles Öffentliche von einem Menschen freigeben lassen." },
+    ],
+    content: `
+Bei „Claude Code" denken die meisten an ein Werkzeug für Programmierer. Damit hat es angefangen. Der eigentliche Wandel ist aber ein anderer: Claude Code schreibt nicht nur Code, es führt ihn auch aus. Und Code kann Ihre Daten lesen, Ihre Tools ansprechen, E-Mails versenden, Berichte erstellen und Zahlen neu berechnen. Damit ist es weit über die IT-Abteilung hinaus nützlich.
+
+Bei DigiDog nutzen wir Claude Code jeden Tag: für Kundensysteme, für unser eigenes Marketing und für unsere Server. Dieser Beitrag zeigt, wie das in der Praxis aussieht, was es für Unternehmen bedeutet und wie Sie ohne Risiko starten.
+
+## Was Claude Code eigentlich ist
+
+Claude Code ist der Agent von Anthropic, der direkt an Ihren Projekten arbeitet. Er läuft im Terminal, im Code-Editor, in der Desktop-App oder im Browser. Sie beschreiben das Ziel in normaler Sprache. Claude liest die passenden Dateien, macht einen Plan, schreibt den Code, führt ihn aus, prüft das Ergebnis und behebt, was nicht funktioniert.
+
+Der Unterschied zum Chatbot: Ein Chatbot gibt Ihnen eine Antwort zum Kopieren. Claude Code erledigt die Arbeit und zeigt Ihnen, was es getan hat.
+
+## 5 Dinge, die Claude Code in echten Unternehmen erledigt
+
+### 1. Steuert das Tagesgeschäft
+
+Bei [Be Original Tours](/portfolio/beoriginaltours-operations), einem Touranbieter in Europa, kommen Buchungen per E-Mail, Guides brauchen Einsatzpläne und Zahlungen müssen verfolgt werden. Wir haben diese Teile verbunden. Buchungsdaten werden automatisch aus E-Mails übernommen, Guides, Pläne und Zahlungen liegen in einem Dashboard. Das Management fragt heute „Wie liefen die Berlin-Touren letzte Woche?", statt Berichte zu öffnen.
+
+### 2. Arbeitet als CRM-Assistent
+
+Unser eigenes CRM hat einen MCP-Server. Claude kann damit Kunden anlegen, Deals in die nächste Phase schieben, Follow-ups entwerfen oder die gesamte Kommunikation mit einem Kunden zeigen, direkt im Chat. Niemand pflegt das CRM mehr von Hand.
+
+### 3. Übernimmt die Marketing-Analyse
+
+Bevor dieser Beitrag entstand, hat Claude Suchtrends für fünf Länder abgerufen, unsere Search-Console-Daten geprüft, Keywords verglichen und die Themen vorgeschlagen. Es veröffentlicht auch Beiträge, beantragt die Indexierung bei Google und bereitet den Wochenbericht vor. Ein Marketing-Manager brauchte dafür früher zehn Tabs und einen halben Tag.
+
+### 4. Kümmert sich um Server und Deployments
+
+Unser internes Aufgabenboard läuft auf unserem eigenen Server. Claude Code entwickelt es weiter, führt die Tests aus, spielt neue Versionen ein und prüft, ob alles online ist. Schlägt ein Deployment fehl, liest es die Logs und behebt die Ursache.
+
+### 5. Baut interne Tools in Stunden statt Wochen
+
+In einem [Live-Workshop](/de/blog/mit-ki-bauen-claude-workshop) hat Claude eine QR-Lager-App für einen kleinen Laden gebaut, vom Plan bis zum Live-Link in etwa 25 Minuten. Die meisten Unternehmen haben Dutzende solcher kleinen Tools nie gebaut, weil sie „zu klein für ein Projekt" waren. Das ist vorbei.
+
+## Die Bausteine, verständlich erklärt
+
+Die technischen Namen müssen Sie sich nicht merken, aber es hilft zu wissen, was möglich ist:
+
+- **Projektgedächtnis (CLAUDE.md):** Regeln, die Claude jedes Mal befolgt, zum Beispiel „deutsche Texte immer in der Sie-Form" oder „nie ohne Test auf den Live-Server".
+- **Skills:** gespeichertes Wissen. Nach einer langen Sitzung schreibt Claude auf, wie Ihr Projekt funktioniert. Beim nächsten Mal startet es genau dort.
+- **MCP-Connectors:** die Brücke zu Ihren Tools: CRM, Google Analytics, Gmail, Asana, Ihre Datenbank. Ein Chat statt zwanzig Dashboards.
+- **Subagenten:** Claude kann Teile einer Aufgabe an Helfer übergeben, die parallel arbeiten, zum Beispiel einer recherchiert, einer prüft das Ergebnis.
+- **Hooks:** automatische Prüfungen, die jedes Mal laufen, zum Beispiel „nach jeder Änderung die Tests ausführen" oder „diesen Befehl blockieren". Das sind Regeln, die Claude nicht überspringen kann.
+
+## So starten Sie ohne Risiko
+
+1. **Wählen Sie einen Prozess.** Nicht „KI für alles", sondern eine Aufgabe, die jede Woche Zeit kostet: Reporting, Lead-Recherche, Buchungen, Rechnungen.
+2. **Erst planen, dann bauen.** Schreiben Sie auf, was passieren soll, was nie passieren darf und wie Sie das Ergebnis prüfen. Nach unserer Erfahrung ist die Planung der wichtigste Teil.
+3. **Beginnen Sie mit Lesezugriff.** Claude liest und berichtet zuerst. Schreibrechte kommen, wenn Sie den Ergebnissen vertrauen.
+4. **Ein Mensch bleibt beteiligt.** Claude bereitet vor, eine Person gibt frei. E-Mails, Zahlungen und alles Öffentliche bekommen eine letzte Prüfung.
+
+## Was es nicht ersetzt
+
+Claude Code ist schnell, aber keine Magie. Jemand muss weiterhin das Ziel festlegen, verstehen, wie gute Software entsteht, und das Ergebnis prüfen. Deshalb funktionieren die besten Lösungen mit einem erfahrenen Entwickler, der Ihr Geschäft kennt, nicht mit einem leeren Prompt.
+
+## Wo passt Claude in Ihr Unternehmen?
+
+Wir bieten einen **kostenlosen 45-minütigen KI-Prozess-Check** an. Gemeinsam gehen wir einen Ihrer Prozesse durch und zeigen, wo Claude Code oder ein KI-Agent die wiederkehrende Arbeit übernehmen kann. Sie erhalten konkrete nächste Schritte, ganz unabhängig davon, ob Sie mit uns arbeiten.
+
+**[Kostenlosen KI-Prozess-Check buchen →](https://calendly.com/erik-budanov/beratungsgespraech)**
+
+## Quellen
+
+- [Anthropic: Claude Code erweitern (CLAUDE.md, Skills, MCP, Subagenten, Hooks)](https://code.claude.com/docs/en/features-overview)
+- [DigiDog: Mit KI bauen, kompletter Workshop](/de/blog/mit-ki-bauen-claude-workshop)
+
+    `,
+  },
+  {
     slug: "mit-ki-bauen-claude-workshop",
     title: "Mit KI bauen: Von der Idee zur fertigen Business-App mit Claude (Workshop-Video)",
     metaTitle: "Mit KI bauen: Business-App mit Claude live entwickelt | Workshop",

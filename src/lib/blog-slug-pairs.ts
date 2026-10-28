@@ -17,6 +17,7 @@ export const EN_TO_DE: Record<string, string> = {
   "claude-skills-vs-mcp-servers":         "claude-skills-vs-mcp-server",
   "vibe-coding-vps-build-deploy-app-with-ai": "vibe-coding-deutschland-anleitung",
   "building-with-ai-claude-workshop":     "mit-ki-bauen-claude-workshop",
+  "claude-code-for-business":             "claude-code-fuer-unternehmen",
   // EN-only (no DE counterpart): replace-saas-with-ai-vps
 };
 

@@ -32,6 +32,91 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "claude-code-for-business",
+    title: "Claude Code for Business: What It Can Do in Your Company",
+    metaTitle: "Claude Code for Business: 5 Real Uses in Companies",
+    metaDescription: "Claude Code doesn't only write code, it runs it. 5 real uses from operations, CRM, marketing and DevOps, the building blocks explained, and how to start without risk.",
+    excerpt: "Claude Code doesn't only write code, it runs it. Here is what that means for operations, CRM, marketing and servers, with real examples.",
+    image: "/images/blog/building-with-ai/claude-analytics.webp",
+    tag: "Claude Code · AI integration",
+    category: "ai",
+    author: "Erik Budanov",
+    date: "2026-10-28",
+    readTime: "7 min read",
+    keywords: ["Claude Code for business", "Claude Code", "AI integration", "AI agents for business", "MCP", "Claude consulting"],
+    faqs: [
+      { question: "What is Claude Code?", answer: "Claude Code is Anthropic's agent that works directly on your projects. You describe a goal in plain language; it reads files, plans, writes and runs code, checks the result and fixes problems." },
+      { question: "Is Claude Code only for developers?", answer: "No. Because it runs code, it can read business data, use your tools through MCP connectors, build reports and automate workflows in operations, sales, marketing and IT." },
+      { question: "How do we start with Claude Code safely?", answer: "Pick one process, plan before building, start with read-only access, and keep a human approving emails, payments and anything public." },
+    ],
+    content: `
+Most people hear "Claude Code" and think of a tool for programmers. That's where it started. But the real shift is something else: Claude Code doesn't only write code, it runs it. And code can read your data, call your tools, send emails, build reports and recalculate numbers. That makes it useful far beyond the IT department.
+
+At DigiDog we use Claude Code every day: for client systems, for our own marketing, for our servers. This post shows what that looks like in practice, what it means for a business, and how to start without risk.
+
+## What Claude Code actually is
+
+Claude Code is Anthropic's agent that works directly on your projects. It runs in the terminal, in your code editor, in the desktop app or in the browser. You describe the goal in plain language. Claude reads the relevant files, makes a plan, writes the code, runs it, checks the result and fixes what doesn't work.
+
+The difference to a chatbot: a chatbot gives you an answer to copy. Claude Code does the work and shows you what it did.
+
+## 5 things Claude Code does in real companies
+
+### 1. Runs daily operations
+
+For [Be Original Tours](/portfolio/beoriginaltours-operations), a tour operator in Europe, bookings arrive by email, guides need schedules and payments need tracking. We connected these pieces. Booking data is pulled from emails automatically, and guides, schedules and payments sit in one dashboard. The managers now ask questions like "How did the Berlin tours do last week?" instead of opening reports.
+
+### 2. Works as a CRM assistant
+
+Our own CRM has an MCP server. That means Claude can create a client, move a deal to the next stage, draft a follow-up or show all communication with a customer, right from the chat. Nobody updates the CRM by hand anymore.
+
+### 3. Does the marketing analysis
+
+Before this post was written, Claude pulled search trends for five countries, checked our Search Console data, compared keywords and suggested the topics. It also publishes posts, requests indexing in Google and prepares the weekly report. A marketing manager used to need ten tabs and half a day for this.
+
+### 4. Takes care of servers and deployments
+
+Our internal task board runs on our own server. Claude Code builds it, runs the tests, deploys new versions and checks that everything is online. If a deploy fails, it reads the logs and fixes the cause.
+
+### 5. Builds internal tools in hours instead of weeks
+
+In a [live workshop](/blog/building-with-ai-claude-workshop), Claude built a QR inventory app for a small shop, from plan to live link, in about 25 minutes. Most companies have dozens of small tools like this they never built because they were "too small for a project". Now they aren't.
+
+## The building blocks, explained for business
+
+You don't need to remember technical names, but it helps to know what's possible:
+
+- **Project memory (CLAUDE.md):** rules Claude follows every time, for example "always write German texts formally" or "never touch the live server without a test".
+- **Skills:** saved know-how. After a long session, Claude writes down how your project works. Next time it starts from there.
+- **MCP connectors:** the bridge to your tools: CRM, Google Analytics, Gmail, Asana, your database. One chat instead of twenty dashboards.
+- **Subagents:** Claude can hand parts of a job to helpers that work in parallel, for example one researches, one checks the result.
+- **Hooks:** automatic checks that run every time, for example "run the tests after every change" or "block this command". They are rules Claude can't skip.
+
+## How to start without risk
+
+1. **Pick one process.** Not "AI for everything", but one task that costs time every week: reporting, lead research, booking handling, invoices.
+2. **Plan before you build.** Write down what should happen, what must never happen and how you'll check the result. In our experience, planning is the main part.
+3. **Start with read-only access.** Let Claude read and report first. Write access comes after you trust the results.
+4. **Keep a human in the loop.** Claude prepares, a person approves. Emails, payments and anything public get a final check.
+
+## What it doesn't replace
+
+Claude Code is fast, but it isn't magic. Someone still needs to define the goal, understand how good software is built and check the result. That's why the best setups pair Claude with an experienced engineer who knows your business, not with a blank prompt.
+
+## Where could Claude fit in your business?
+
+We run a **free 45-minute AI process walk-through**. We go through one of your processes with you and show where Claude Code or an AI agent can take over the repetitive work. You leave with concrete next steps, whether or not you work with us.
+
+**[Book your free AI process walk-through →](https://calendly.com/erik-budanov/beratungsgespraech)**
+
+## Sources
+
+- [Anthropic: Extend Claude Code (CLAUDE.md, skills, MCP, subagents, hooks)](https://code.claude.com/docs/en/features-overview)
+- [DigiDog: Building with AI, full workshop video](/blog/building-with-ai-claude-workshop)
+
+    `,
+  },
+  {
     slug: "building-with-ai-claude-workshop",
     title: "Building with AI: From Idea to a Live Business App with Claude (Full Workshop)",
     metaTitle: "Building with AI: A Live Business App with Claude | Full Workshop",
