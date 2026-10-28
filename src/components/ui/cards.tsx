@@ -6,7 +6,8 @@ import { motion } from "motion/react";
 import { useNavigate } from "react-router";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 import { colors, fonts, portfolioCardGradientBg } from "./brand";
-import { ArrowIcon, LinkWithArrow } from "./buttons";
+import { ArrowIcon } from "./buttons";
+import { ChevronRight } from "lucide-react";
 import { useTranslation } from "../../i18n/i18n-context";
 
 /* ── Content Card (generic hover-lift card for Reviews, Blog, etc.) ── */
@@ -71,7 +72,7 @@ export function BlogCard({
 }) {
   const { t } = useTranslation();
   return (
-    <a href={post.href ?? (post.slug ? `/blog/${post.slug}` : "/blog")} className="block">
+    <a href={post.href ?? (post.slug ? `/blog/${post.slug}` : "/blog")} className="block group">
     <ContentCard variant="dark" index={index} isInView={isInView} className="group overflow-hidden">
       <div className="h-[200px] overflow-hidden">
         <ImageWithFallback
@@ -104,13 +105,14 @@ export function BlogCard({
         >
           {post.description}
         </p>
-        <LinkWithArrow 
-          href={post.href ?? (post.slug ? `/blog/${post.slug}` : "/blog")}
-          color={colors.textBlueLink} 
-          icon="chevron"
+        {/* the whole card is already a link, so this is a styled span (no nested <a>) */}
+        <span
+          className="inline-flex items-center gap-2 text-[15px] group-hover:gap-3 transition-all"
+          style={{ fontFamily: fonts.display, fontWeight: 700, color: colors.textBlueLink }}
         >
           {t.common.readMore}
-        </LinkWithArrow>
+          <ChevronRight size={16} />
+        </span>
       </div>
     </ContentCard>
     </a>
@@ -141,16 +143,16 @@ export function ReviewCard({
 }) {
   const isUpwork = review.source === "Upwork";
 
-  const upworkUrl = "https://www.upwork.com/agencies/1477959724143390720/";
+  const upworkUrl = "https://www.upwork.com/freelancers/erikbudanov";
 
   return (
     <a
       href={upworkUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="block"
+      className="block h-full"
     >
-      <ContentCard variant="light" index={index} isInView={isInView} className="p-6">
+      <ContentCard variant="light" index={index} isInView={isInView} className="p-6 h-full flex flex-col">
         {/* Source badge */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
@@ -215,7 +217,7 @@ export function ReviewCard({
 
         {/* Text */}
         <p
-          className="text-[14px] leading-[1.7] mb-5"
+          className="text-[14px] leading-[1.7] mb-5 flex-1"
           style={{ fontFamily: fonts.display, color: colors.textDark }}
         >
           &ldquo;{review.text}&rdquo;
@@ -223,12 +225,12 @@ export function ReviewCard({
 
         {/* Footer: avatar + info */}
         <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-          <div className="w-[40px] h-[40px] rounded-full overflow-hidden">
-            <ImageWithFallback
-              src={review.image}
-              alt={review.name}
-              className="w-full h-full object-cover"
-            />
+          <div
+            className="w-[40px] h-[40px] rounded-full flex items-center justify-center shrink-0 text-[14px]"
+            style={{ background: isUpwork ? "rgba(20,168,0,0.1)" : "rgba(0,87,255,0.08)", color: isUpwork ? "#108a00" : colors.blue, fontFamily: fonts.display, fontWeight: 700 }}
+            aria-hidden="true"
+          >
+            {review.name.split(/\s+/).map((w) => w[0]).slice(0, 2).join("").toUpperCase()}
           </div>
           <div>
             <p

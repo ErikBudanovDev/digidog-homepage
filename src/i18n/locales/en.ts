@@ -36,8 +36,8 @@ export const en: DeepStringify<typeof de> = {
     breadcrumbService: "Services",
     breadcrumbPage: "AI Solutions",
     heroBadge: "AI Solutions & Automation",
-    heroTitle1: "Artificial Intelligence!!",
-    heroTitle2: "for Your Business!!",
+    heroTitle1: "Artificial Intelligence",
+    heroTitle2: "for Your Business",
     heroDescription:
       "I build AI integrations and business tools for clearly defined tasks. Work directly with me, Erik Budanov, from planning through implementation.",
     heroCtaPrimary: "Start AI Consulting",
@@ -179,8 +179,8 @@ export const en: DeepStringify<typeof de> = {
     breadcrumbService: "Services",
     breadcrumbPage: "Web Design & Development",
     heroBadge: "Web Design & Full-Stack Development",
-    heroTitle1: "Websites That Inspire!!",
-    heroTitle2: "and Convert!!",
+    heroTitle1: "Website redesigns",
+    heroTitle2: "that bring enquiries",
     heroDescription:
       "I redesign websites with clear content, responsive design and technical SEO. Work directly with me, Erik Budanov, from planning to launch.",
     heroCtaPrimary: "Start Project",
@@ -288,8 +288,8 @@ export const en: DeepStringify<typeof de> = {
     breadcrumbService: "Services",
     breadcrumbPage: "Custom Software",
     heroBadge: "Software & Integrations",
-    heroTitle1: "Software That Connects!!",
-    heroTitle2: "Your Processes!!",
+    heroTitle1: "Software that connects",
+    heroTitle2: "your processes",
     heroDescription:
       "I build MVPs, internal tools and API integrations. As an independent product engineer, I own the technical work from requirements through handover.",
     heroCtaPrimary: "Discuss Project",
@@ -401,7 +401,7 @@ export const en: DeepStringify<typeof de> = {
       "We integrate your operations, data, and workflows into AI. Access reports, automate tasks, manage operations, and make decisions through natural conversation with Claude or GPT.",
 
     /* Hero */
-    heroBadge: "AI Integration with Erik Budanov",
+    heroBadge: "AI integration services & Claude consulting",
     heroTitle1: "Talk to Your",
     heroTitle2: "Business",
     heroTitle3: "With AI",
@@ -410,7 +410,7 @@ export const en: DeepStringify<typeof de> = {
     heroDescHighlight: "Claude or GPT Chat",
     heroDescEnd:
       ". Access reports, automate tasks, manage operations, and make decisions through natural conversation.",
-    heroCta: "Book Free Strategy Call",
+    heroCta: "Book a free AI process walk-through",
     heroCtaSecondary: "Explore Services",
     heroKpi1Value: "1:1",
     heroKpi1Label: "Your direct engineer",

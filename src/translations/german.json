@@ -1,10 +1,10 @@
 {
   "seo": {
     "home": {
-      "title": "Website-Redesign & MVP-Entwicklung",
-      "description": "Website-Redesigns, MVPs und Integrationen mit Erik Budanov. Direkte technische Verantwortung, klare Projektziele und Zusammenarbeit auf Deutsch oder Englisch.",
-      "ogTitle": "Website-Redesign & MVP-Entwicklung | DigiDog",
-      "ogDescription": "Website-Redesigns, MVPs und Integrationen mit Erik Budanov. Direkte technische Verantwortung, klare Projektziele und Zusammenarbeit auf Deutsch oder Englisch."
+      "title": "KI-Integration & KI-Beratung für Unternehmen",
+      "description": "KI-Agentur für Unternehmen in Deutschland, Österreich und der Schweiz: Claude, KI-Agenten und MCP, verbunden mit CRM, Buchungen, E-Mail und Analytics. Echte Kundenprojekte. Kostenloser KI-Prozess-Check.",
+      "ogTitle": "KI-Integration & KI-Beratung für Unternehmen | DigiDog",
+      "ogDescription": "Claude und KI-Agenten, verbunden mit den Tools, die Ihr Unternehmen schon nutzt. Echte Kundenprojekte, Top Rated Plus auf Upwork."
     },
     "aiIntegration": {
       "title": "KI-Integration & Workflow-Automatisierung",
@@ -60,10 +60,10 @@
     }
   },
   "hero": {
-    "title1": "Websites, die überzeugen.",
-    "title2": "Produkte, die weiterbringen.",
-    "description": "Ich bin Erik Budanov, Gründer von DigiDog. Ich modernisiere Websites und entwickle MVPs und Integrationen — als Ihr direkter Ansprechpartner von der Planung bis zum Launch. Zusammenarbeit auf Deutsch oder Englisch.",
-    "cta": "Projekt mit Erik besprechen"
+    "title1": "KI-Integration,",
+    "title2": "mit Claude.",
+    "description": "Ich bin Erik Budanov, Gründer von DigiDog. Ich verbinde Claude und KI-Agenten mit den Tools, die Sie schon nutzen, etwa CRM, Buchungen, E-Mail und Analytics. So fragt Ihr Team nach Antworten, statt sie zu suchen. Echte Projekte, vom Touranbieter bis zur Zahnklinik.",
+    "cta": "Kostenlosen KI-Prozess-Check buchen"
   },
   "nav": {
     "home": "Startseite",
@@ -178,5 +178,196 @@
     "readyToStart": "Bereit, das in die Praxis umzusetzen?",
     "bookConsultation": "Kostenlose Beratung buchen",
     "bookConsultationCta": "Besprechen Sie Ihr Projekt direkt mit Erik Budanov."
+  },
+  "immersiveSection": {
+    "badge": "3D · VR · AR",
+    "title1": "Begehen Sie es, ",
+    "title2": "bevor es existiert",
+    "subtitle": "Ich entwickle interaktive 3D- und VR-Erlebnisse für den Browser und Meta Quest, aus echten Räumen, echten Daten und echten Landschaften.",
+    "cases": [
+      {
+        "tag": "Immobilien & Innenausbau",
+        "title": "Wohnungsrenovierung, geplant in VR",
+        "place": "Wohnung Lvovyan, Jerewan",
+        "body": "Ein leerer Rohbau, gescannt und in ein begehbares 3D-Modell verwandelt. Möbel, Licht, Steckdosen und Leitungen werden maßstabsgetreu platziert. Sprachnotizen aus dem Headset werden in Blender umgesetzt und sind wenige Minuten später wieder in VR sichtbar.",
+        "points": [
+          "Raumscan über Blender zum WebXR-Modell",
+          "Möbel maßstabsgetreu platziert",
+          "Elektro- und Sanitärplanung in 3D",
+          "Sprachnotizen aus dem Headset, live umgesetzt"
+        ],
+        "thumbs": [
+          "Rohbau vor den Arbeiten",
+          "Leitungsplanung in 3D",
+          "Blender-Modell der Wohnung"
+        ]
+      },
+      {
+        "tag": "Bildung",
+        "title": "3D-Lern-Enzyklopädie",
+        "place": "Armenischsprachige Welten für Kinder",
+        "body": "Eine wachsende Enzyklopädie begehbarer 3D-Welten: das Sonnensystem mit Monden und NASA-Raumsonden, eine Zeitmaschine zu den Dinosauriern und ein Schrumpfstrahl in einen Wassertropfen, den Blutkreislauf und eine lebende Zelle. Jede Station mit armenischer Vertonung.",
+        "points": [
+          "Sonnensystem, Dinosaurier und Mikrowelt",
+          "Sprecher und Kindermodus auf Armenisch",
+          "Mit KI-gestützten 3D-Pipelines gebaut",
+          "Läuft im Browser und auf Meta Quest"
+        ],
+        "thumbs": [
+          "Das Sonnensystem: Saturn",
+          "Im Blutkreislauf",
+          "In einer lebenden Zelle"
+        ]
+      }
+    ],
+    "liveDemo": "Im Browser ausprobieren",
+    "useCasesTitle": "Wo es hilft",
+    "useCases": [
+      {
+        "title": "Immobilien & Innenausbau",
+        "text": "Zeigen Sie Käufern und Kunden den fertigen Raum, bevor die Arbeiten beginnen."
+      },
+      {
+        "title": "Bildung & Museen",
+        "text": "Orte und Objekte erlebbar machen, die man nicht selbst besuchen kann."
+      },
+      {
+        "title": "Produkte & Locations",
+        "text": "Maschinen, Werke oder Eventflächen in echter Größe präsentieren."
+      }
+    ],
+    "cta": "3D- oder VR-Projekt besprechen",
+    "caseStudy": "Fallstudie lesen"
+  },
+  "upworkSection": {
+    "kicker": "Erfahrung",
+    "title": "Von der Medizin-Lernplattform bis zu den Vereinten Nationen",
+    "intro": "Seit fünf Jahren beauftragen mich Unternehmen über Upwork, vor allem für Websites, Plattformen und Integrationen. Nach 54 Aufträgen und 7.830 Stunden hat das Profil einen Job Success Score von 100 % und das Abzeichen Top Rated Plus. Diese fünf zeigen die Bandbreite:",
+    "role": "Unabhängiger Produktentwickler · DigiDog",
+    "badge": "Top Rated Plus auf Upwork",
+    "stats": [
+      {
+        "value": "100 %",
+        "label": "Job Success Score"
+      },
+      {
+        "value": "$300K+",
+        "label": "Umsatz auf Upwork"
+      },
+      {
+        "value": "54",
+        "label": "Aufträge, abgeschlossen oder laufend"
+      },
+      {
+        "value": "7.830",
+        "label": "abgerechnete Stunden"
+      }
+    ],
+    "background": "MSc Engineering, TU Wien. Vor DigiDog: Systementwicklung bei SMA Solar Technology und digitales Projektmanagement bei Siemens. Identität auf Upwork verifiziert. Sprachen: Deutsch, Englisch, Russisch, Armenisch.",
+    "cta": "Mein Upwork-Profil ansehen",
+    "story": [
+      {
+        "kind": "Medizinische Bildung",
+        "client": "MPA.online",
+        "text": "Eine Full-Stack-Streamingplattform für medizinische Weiterbildung mit Next.js, Strapi, MongoDB und Vimeo."
+      },
+      {
+        "kind": "Gesundheitswesen",
+        "client": "SmileforYou",
+        "text": "Website-Redesign für eine deutsche Zahnklinik-Kette. Die Conversion-Rate stieg von 5 % auf 11 %."
+      },
+      {
+        "kind": "Industrie",
+        "client": "PRÜFTECHNIK (Fluke)",
+        "text": "Drei Jahre Web-Administration für die Condition-Monitoring-Marke von Fluke (Fortive-Gruppe)."
+      },
+      {
+        "kind": "Bildung im US-Gesundheitswesen",
+        "client": "Activated Insights",
+        "text": "Nach einer Übernahme wurden zwei Marken zu einer Website: über 200 Seiten neu gestaltet und zusammengeführt."
+      },
+      {
+        "kind": "Internationale Organisation",
+        "client": "Vereinte Nationen – FP2030",
+        "text": "Die Website des FP2030 Progress Report mit interaktiven Highcharts-Datenvisualisierungen."
+      }
+    ]
+  },
+  "aiCasesSection": {
+    "badge": "KI-Integration in der Praxis",
+    "title1": "Unternehmen, die wir ",
+    "title2": "mit KI verbunden haben",
+    "subtitle": "Keine Demos. Diese Systeme laufen heute in echten Unternehmen. Jedes begann mit demselben Schritt: einen Geschäftsprozess durchgehen und finden, wo KI am meisten Zeit spart.",
+    "readCase": "Fallstudie lesen",
+    "cases": [
+      {
+        "slug": "beoriginaltours-operations",
+        "industry": "Touranbieter · Europa",
+        "title": "Buchungen, Guides und Zahlungen in einem KI-System",
+        "body": "Buchungen kommen per E-Mail, Guides brauchen Pläne, Zahlungen müssen verfolgt werden. Wir haben alles verbunden, sodass das Management einfach nach Umsatz, offenen Aufgaben oder Tourleistung fragt.",
+        "points": [
+          "Buchungsdaten automatisch aus E-Mails",
+          "Guide-Pläne und Zahlungen in einem Dashboard",
+          "Fragen an Claude statt Berichte öffnen"
+        ],
+        "tools": [
+          "Claude",
+          "MCP",
+          "Make.com",
+          "Python",
+          "MongoDB",
+          "Next.js"
+        ]
+      },
+      {
+        "slug": "hubspot-dental-crm",
+        "industry": "Zahnklinik-Kette · 7 Standorte",
+        "title": "Ein CRM und automatisierte Patientenabläufe für 7 Kliniken",
+        "body": "Sieben Standorte, eine Patientenreise. HubSpot ist per API mit der Praxissoftware verbunden, Automatisierungen bewegen Patienten und Aufgaben ohne manuelles Kopieren.",
+        "points": [
+          "Patientenabläufe über alle Standorte",
+          "Praxissoftware per API angebunden",
+          "Automatisierung statt manueller Dateneingabe"
+        ],
+        "tools": [
+          "HubSpot",
+          "IVORIS API",
+          "Make.com"
+        ]
+      },
+      {
+        "slug": "ai-jewelry-sketch",
+        "industry": "Schmuckmarke",
+        "title": "Kunden-E-Mails werden zu Schmuckskizzen, rund um die Uhr",
+        "body": "KI liest Kundenanfragen, erkennt die Anforderungen und erstellt automatisch eine erste Skizze. Das Team startet mit einem Entwurf statt mit einem leeren Blatt.",
+        "points": [
+          "Anforderungen aus jeder E-Mail erkannt",
+          "Erste Skizze automatisch erstellt",
+          "Läuft Tag und Nacht ohne manuelle Schritte"
+        ],
+        "tools": [
+          "KI-Bildgenerierung",
+          "Make.com",
+          "E-Mail"
+        ]
+      }
+    ],
+    "internalTitle": "Und wir führen unser eigenes Unternehmen damit",
+    "internal": [
+      {
+        "title": "KI-CRM-Account-Manager",
+        "body": "Unser eigener MCP-Server lässt Claude Kunden anlegen, Deals verschieben, Follow-ups entwerfen und Kommunikation verfolgen, direkt im Chat.",
+        "link": "So funktioniert es",
+        "href": "/de/dienstleistungen/ki-integration"
+      },
+      {
+        "title": "Von der Idee zur Live-App in 25 Minuten",
+        "body": "Der komplette Workshop: Claude beantwortet Geschäftsfragen aus echten Daten, plant, programmiert, testet und veröffentlicht eine App.",
+        "link": "Workshop ansehen",
+        "href": "/de/blog/mit-ki-bauen-claude-workshop"
+      }
+    ],
+    "cta": "Kostenlosen 45-minütigen KI-Prozess-Check buchen",
+    "ctaNote": "Wir gehen einen Ihrer Prozesse durch und zeigen, wo Claude oder KI-Agenten passen. Unverbindlich."
   }
 }

@@ -242,7 +242,7 @@ function ServiceHero() {
       }
       rightContent={
         <motion.div
-          className="hidden lg:block relative w-[780px] h-[600px] shrink-0"
+          className="hidden lg:block relative w-full max-w-[520px] xl:max-w-[600px] aspect-[13/10] min-w-0"
           initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: transitions.smooth }}

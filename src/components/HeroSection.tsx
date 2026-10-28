@@ -1,6 +1,6 @@
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { motion } from "motion/react";
-import { Code, User, Languages } from "lucide-react";
+import { Bot, BadgeCheck, Languages } from "lucide-react";
 import { colors, fonts, transitions } from "./ui/brand";
 import { PrimaryButton, openBookingModal } from "./ui/buttons";
 import { HeroLayout } from "./ui/hero-layout";
@@ -10,8 +10,8 @@ import enT from "@/translations/english.json";
 import deT from "@/translations/german.json";
 
 const heroKpis = [
-  { icon: User, value: "Erik Budanov", labelEn: "Your direct engineer", labelDe: "Ihr direkter Entwickler" },
-  { icon: Code, value: "Web · MVP · AI", labelEn: "From scope to launch", labelDe: "Von der Planung bis zum Launch" },
+  { icon: BadgeCheck, value: "Top Rated Plus", labelEn: "Upwork · 100% Job Success", labelDe: "Upwork · 100 % Job Success", href: "#upwork" },
+  { icon: Bot, value: "Claude · MCP · Agents", labelEn: "Running in real businesses", labelDe: "Im Einsatz in echten Unternehmen", href: "#ai-cases" },
   { icon: Languages, value: "DE / EN", labelEn: "German & English", labelDe: "Deutsch & Englisch" },
 ];
 
@@ -53,8 +53,9 @@ export function HeroSection() {
             {heroKpis.map((kpi) => {
               const Icon = kpi.icon;
               return (
-                <motion.div
+                <motion.a
                   key={kpi.value}
+                  href={(kpi as { href?: string }).href}
                   className="flex items-center gap-2.5"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -80,7 +81,7 @@ export function HeroSection() {
                       {locale === "DE" ? kpi.labelDe : kpi.labelEn}
                     </span>
                   </div>
-                </motion.div>
+                </motion.a>
               );
             })}
           </div>
@@ -98,12 +99,15 @@ export function HeroSection() {
           <div className="relative w-[300px] h-[400px] md:w-[400px] md:h-[500px] lg:hidden mx-auto">
             <ImageWithFallback
               src="/girl/Loading.png"
-              alt="AI Assistant"
+              alt="Immersive 3D world illustration"
               className="w-full h-full object-contain"
             />
           </div>
           {/* Desktop: 3D Girl */}
-          <div className="hidden lg:block relative w-[520px] h-[650px] mx-0">
+          <div
+            className="hidden lg:block relative w-[600px] h-[720px] -mr-6 xl:mr-0"
+            style={{ WebkitMaskImage: "linear-gradient(to bottom, #000 56%, transparent 69%)", maskImage: "linear-gradient(to bottom, #000 56%, transparent 69%)" }}
+          >
             <Girl3D />
           </div>
         </motion.div>

@@ -30,8 +30,8 @@ export const de = {
     breadcrumbService: "Dienstleistungen",
     breadcrumbPage: "KI-Lösungen",
     heroBadge: "AI Solutions & Automation",
-    heroTitle1: "Künstliche Intelligenz!!",
-    heroTitle2: "für Ihr Business!!",
+    heroTitle1: "Künstliche Intelligenz",
+    heroTitle2: "für Ihr Unternehmen",
     heroDescription:
       "Ich entwickle KI-Integrationen und Geschäftsanwendungen für klar definierte Aufgaben. Sie arbeiten direkt mit mir, Erik Budanov, von der Planung bis zur Umsetzung.",
     heroCtaPrimary: "KI-Beratung starten",
@@ -403,7 +403,7 @@ export const de = {
       "Wir integrieren Ihre Abläufe, Daten und Workflows in KI. Greifen Sie auf Berichte zu, automatisieren Sie Aufgaben, verwalten Sie Abläufe und treffen Sie Entscheidungen durch natürliche Konversation mit Claude oder GPT.",
 
     /* Hero */
-    heroBadge: "KI-Integration mit Erik Budanov",
+    heroBadge: "KI-Beratung & KI-Integration mit Claude",
     heroTitle1: "Sprechen Sie mit",
     heroTitle2: "Ihrem Unternehmen",
     heroTitle3: "Mit KI",
@@ -412,7 +412,7 @@ export const de = {
     heroDescHighlight: "Claude- oder GPT-Chat",
     heroDescEnd:
       ". Greifen Sie auf Berichte zu, automatisieren Sie Aufgaben, verwalten Sie Abläufe und treffen Sie Entscheidungen durch natürliche Konversation.",
-    heroCta: "Kostenloses Strategiegespräch buchen",
+    heroCta: "Kostenlosen KI-Prozess-Check buchen",
     heroCtaSecondary: "Dienstleistungen entdecken",
     heroKpi1Value: "1:1",
     heroKpi1Label: "Ihr direkter Entwickler",

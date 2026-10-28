@@ -1,16 +1,16 @@
 {
   "seo": {
     "home": {
-      "title": "Website Redesign & MVP Development",
-      "description": "Website redesigns, MVPs and AI integrations with independent product engineer Erik Budanov. Direct senior ownership from scope to launch.",
-      "ogTitle": "Website Redesign & MVP Development | DigiDog",
-      "ogDescription": "Website redesigns, MVPs and AI integrations with independent product engineer Erik Budanov. Direct senior ownership from scope to launch."
+      "title": "Claude & AI Integration for Businesses",
+      "description": "AI integration services by Erik Budanov: Claude, AI agents and MCP connected to your CRM, bookings, email and analytics. Real client cases. Free 45-minute AI process walk-through.",
+      "ogTitle": "Claude & AI Integration for Businesses | DigiDog",
+      "ogDescription": "Claude and AI agents connected to the tools your business already uses. Real client cases, Top Rated Plus on Upwork."
     },
     "aiIntegration": {
-      "title": "AI Integration & Workflow Automation",
-      "description": "Connect business tools and automate defined workflows with independent product engineer Erik Budanov.",
-      "ogTitle": "AI Integration & Workflow Automation | DigiDog",
-      "ogDescription": "Connect business tools and automate defined workflows with independent product engineer Erik Budanov."
+      "title": "AI Integration Services & Claude Consulting for Business",
+      "description": "AI integration services and AI consulting: Claude, AI agents and MCP connected to your CRM, email, bookings and analytics. Real client cases in Europe, the UK and the US. Free AI process walk-through.",
+      "ogTitle": "AI Integration Services & Claude Consulting | DigiDog",
+      "ogDescription": "Claude, AI agents and MCP connected to the tools your business already uses. Real client cases. Free 45-minute AI process walk-through."
     },
     "aiSolutions": {
       "title": "Custom AI Solutions & Integrations",
@@ -60,10 +60,10 @@
     }
   },
   "hero": {
-    "title1": "Better websites.",
-    "title2": "Products built to move you forward.",
-    "description": "I’m Erik Budanov, founder of DigiDog and independent product engineer. I redesign websites, build MVPs and connect business tools with AI — with direct senior ownership from the first conversation to launch.",
-    "cta": "Discuss your project with Erik"
+    "title1": "AI integration,",
+    "title2": "built on Claude.",
+    "description": "I’m Erik Budanov, founder of DigiDog. I connect Claude and AI agents to the tools you already use, like your CRM, bookings, email and analytics, so your team asks for answers instead of searching for them. Real projects, from tour operators to dental clinics.",
+    "cta": "Book a free AI walk-through"
   },
   "nav": {
     "home": "Home",
@@ -178,5 +178,196 @@
     "readyToStart": "Ready to put this into practice?",
     "bookConsultation": "Book a Free Consultation",
     "bookConsultationCta": "Discuss your project directly with Erik Budanov."
+  },
+  "immersiveSection": {
+    "badge": "3D · VR · AR",
+    "title1": "Walk through it ",
+    "title2": "before it exists",
+    "subtitle": "I build interactive 3D and VR experiences that run in the browser and on Meta Quest, made from real rooms, real data and real landscapes.",
+    "cases": [
+      {
+        "tag": "Real estate & interiors",
+        "title": "Apartment renovation, planned in VR",
+        "place": "Lvovyan apartment, Yerevan",
+        "body": "An empty concrete shell, scanned and turned into a walkable 3D model. Furniture, lighting, sockets and plumbing are placed at real scale. Notes spoken inside the headset are applied in Blender and show up back in VR a few minutes later.",
+        "points": [
+          "Room scan to Blender to WebXR model",
+          "Furniture placed at real scale",
+          "Electrical and plumbing plan in 3D",
+          "Voice notes from the headset, applied live"
+        ],
+        "thumbs": [
+          "Empty shell before the work",
+          "Wiring planned in 3D",
+          "Blender model of the apartment"
+        ]
+      },
+      {
+        "tag": "Education",
+        "title": "3D Learning Encyclopedia",
+        "place": "Armenian-language worlds for children",
+        "body": "A growing encyclopedia of 3D worlds children can walk through: the solar system with moons and NASA spacecraft, a time machine back to the dinosaurs, and a shrink ray into a drop of pond water, the bloodstream and a living cell. Every stop has narration in Armenian.",
+        "points": [
+          "Solar system, dinosaurs and the micro world",
+          "Narration and a kids' mode in Armenian",
+          "Built with AI-assisted 3D pipelines",
+          "Runs in the browser and on Meta Quest"
+        ],
+        "thumbs": [
+          "The solar system: Saturn",
+          "Inside the bloodstream",
+          "Inside a living cell"
+        ]
+      }
+    ],
+    "liveDemo": "Try it in your browser",
+    "useCasesTitle": "Where it helps",
+    "useCases": [
+      {
+        "title": "Real estate & interiors",
+        "text": "Show buyers and clients the finished space before any work starts."
+      },
+      {
+        "title": "Education & museums",
+        "text": "Let people explore places and objects they can't visit in person."
+      },
+      {
+        "title": "Products & venues",
+        "text": "Present machines, factories or event spaces at real scale."
+      }
+    ],
+    "cta": "Discuss a 3D or VR project",
+    "caseStudy": "Read the case study"
+  },
+  "upworkSection": {
+    "kicker": "Track record",
+    "title": "From a medical education platform to the United Nations",
+    "intro": "For five years, companies have hired me through Upwork, mostly for websites, platforms and integrations. 54 jobs and 7,830 hours later, the profile holds a 100% Job Success score and Upwork's Top Rated Plus badge. These five show the range:",
+    "role": "Independent product engineer · DigiDog",
+    "badge": "Top Rated Plus on Upwork",
+    "stats": [
+      {
+        "value": "100%",
+        "label": "Job Success score"
+      },
+      {
+        "value": "$300K+",
+        "label": "earned on Upwork"
+      },
+      {
+        "value": "54",
+        "label": "jobs completed or in progress"
+      },
+      {
+        "value": "7,830",
+        "label": "hours billed"
+      }
+    ],
+    "background": "MSc Engineering, TU Wien. Before DigiDog: system development at SMA Solar Technology and digital project management at Siemens. Identity verified on Upwork. Languages: English, German, Russian, Armenian.",
+    "cta": "View my Upwork profile",
+    "story": [
+      {
+        "kind": "Medical education",
+        "client": "MPA.online",
+        "text": "A full-stack streaming platform for medical education, built with Next.js, Strapi and MongoDB, with Vimeo video."
+      },
+      {
+        "kind": "Healthcare",
+        "client": "SmileforYou",
+        "text": "Website redesign for a German dental clinic chain. The conversion rate went from 5% to 11%."
+      },
+      {
+        "kind": "Industrial enterprise",
+        "client": "PRÜFTECHNIK (Fluke)",
+        "text": "Three years of web administration for the condition-monitoring brand of Fluke, part of the Fortive group."
+      },
+      {
+        "kind": "US healthcare education",
+        "client": "Activated Insights",
+        "text": "After an acquisition, two brands merged into one website: 200+ pages redesigned and consolidated."
+      },
+      {
+        "kind": "International organisation",
+        "client": "United Nations – FP2030",
+        "text": "The FP2030 Progress Report website, with interactive Highcharts data visualisations."
+      }
+    ]
+  },
+  "aiCasesSection": {
+    "badge": "AI integration in practice",
+    "title1": "Businesses we ",
+    "title2": "integrated with AI",
+    "subtitle": "Not demos. These systems run in real companies today. Each one started with the same step: walking through one business process and finding where AI saves the most time.",
+    "readCase": "Read the case",
+    "cases": [
+      {
+        "slug": "beoriginaltours-operations",
+        "industry": "Tour operator · Europe",
+        "title": "Bookings, guides and payments in one AI system",
+        "body": "Bookings arrive by email, guides need schedules, payments need tracking. We connected all of it, so managers simply ask about revenue, open tasks or tour performance.",
+        "points": [
+          "Booking data pulled from emails automatically",
+          "Guide schedules and payments in one dashboard",
+          "Managers ask Claude instead of opening reports"
+        ],
+        "tools": [
+          "Claude",
+          "MCP",
+          "Make.com",
+          "Python",
+          "MongoDB",
+          "Next.js"
+        ]
+      },
+      {
+        "slug": "hubspot-dental-crm",
+        "industry": "Dental clinic chain · 7 branches",
+        "title": "One CRM and automated patient flows for 7 clinics",
+        "body": "Seven branches, one patient journey. HubSpot connected to the clinic software through its API, with automations that move patients and tasks without manual copying.",
+        "points": [
+          "Patient workflows across all branches",
+          "Clinic software connected via API",
+          "Automations instead of manual data entry"
+        ],
+        "tools": [
+          "HubSpot",
+          "IVORIS API",
+          "Make.com"
+        ]
+      },
+      {
+        "slug": "ai-jewelry-sketch",
+        "industry": "Jewelry brand",
+        "title": "Customer emails turned into jewelry sketches, 24/7",
+        "body": "AI reads customer requests, pulls out the requirements and creates a first sketch automatically. The team starts from a draft instead of a blank page.",
+        "points": [
+          "Requirements extracted from every email",
+          "First sketch generated automatically",
+          "Runs day and night without manual steps"
+        ],
+        "tools": [
+          "AI image generation",
+          "Make.com",
+          "Email"
+        ]
+      }
+    ],
+    "internalTitle": "And we run our own company on it",
+    "internal": [
+      {
+        "title": "AI CRM account manager",
+        "body": "Our own MCP server lets Claude create clients, move deals, draft follow-ups and track communication, right from the chat.",
+        "link": "See how it works",
+        "href": "/services/ai-integration"
+      },
+      {
+        "title": "From idea to live app in 25 minutes",
+        "body": "Watch a full workshop: Claude answers business questions from live data, plans, codes, tests and ships an app.",
+        "link": "Watch the workshop",
+        "href": "/blog/building-with-ai-claude-workshop"
+      }
+    ],
+    "cta": "Book a free 45-minute AI process walk-through",
+    "ctaNote": "We go through one of your processes and show where Claude or AI agents fit. No obligation."
   }
 }
