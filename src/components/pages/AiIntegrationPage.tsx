@@ -53,6 +53,7 @@ import { colors, fonts, transitions } from "@/components/ui/brand";
 import { SectionContainer, SectionBadge } from "@/components/ui/section";
 import { PrimaryButton, openBookingModal } from "@/components/ui/buttons";
 import { SEO, serviceSchema } from "@/components/SEO";
+import { AiAgentOffer } from "@/components/AiAgentOffer";
 import { useTranslation } from "@/i18n/i18n-context";
 import _aiHubIcon from "figma:asset/4f2027a2c62d225b0ecf9eacbb0e13452dda79c0.png";
 import _caseStudy1Image from "figma:asset/9ed0c7c0c8be419432fbd0b2078b09a0ca40e899.png";
@@ -2218,6 +2219,7 @@ export default function AiIntegrationPage() {
       <CaseStudiesSection />
       <ProcessSection />
       <OutcomesSection />
+      <AiAgentOffer />
       <CtaBanner />
       <BusinessTypesSection />
       <ContactCTA />
