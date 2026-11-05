@@ -404,14 +404,14 @@ export const de = {
 
     /* Hero */
     heroBadge: "KI-Beratung & KI-Integration mit Claude",
-    heroTitle1: "KI-Integration",
+    heroTitle1: "KI-Agenten",
     heroTitle2: "für Ihr Unternehmen",
-    heroTitle3: "mit Claude",
+    heroTitle3: "mit",
     heroDescription:
-      "Integrieren Sie Ihre Abläufe, Daten und Workflows in Ihren",
-    heroDescHighlight: "Claude- oder GPT-Chat",
+      "KI-Integration, die Ihre Abläufe, Daten und Tools verbindet mit",
+    heroDescHighlight: "Claude, ChatGPT, Grok oder einem lokalen Modell",
     heroDescEnd:
-      ". Greifen Sie auf Berichte zu, automatisieren Sie Aufgaben, verwalten Sie Abläufe und treffen Sie Entscheidungen durch natürliche Konversation.",
+      ". Ihre Agenten beantworten Kunden, halten Sie sichtbar und erstellen Ihre Berichte, und Sie fragen sie in normaler Sprache.",
     heroCta: "Kostenlosen KI-Prozess-Check buchen",
     heroCtaSecondary: "Dienstleistungen entdecken",
     heroKpi1Value: "1:1",
@@ -478,10 +478,10 @@ export const de = {
     dsAhrefs: "Ahrefs",
 
     /* Case Studies */
-    csBadge: "Echte Geschäftsbeispiele",
-    csTitle1: "Echte Unternehmen",
-    csTitle2: "die auf KI-Systemen laufen",
-    csDescription: "Sehen Sie, wie Unternehmen aus verschiedenen Branchen KI nutzen, um ihre täglichen Abläufe zu transformieren.",
+    csBadge: "Fallstudien",
+    csTitle1: "Unsere Arbeit:",
+    csTitle2: "KI-Systeme im Einsatz",
+    csDescription: "Echte Projekte, die wir gebaut haben und betreiben. Jedes begann mit einem Prozess und einer Frage: Wo spart KI am meisten Zeit?",
     csCta: "Möchten Sie sehen, wie KI Ihr Unternehmen transformieren kann?",
     csCtaButton: "Ihren Anwendungsfall besprechen",
     csAnswerLine: "KI ruft Antworten sofort aus Ihren verbundenen Systemen ab.",
