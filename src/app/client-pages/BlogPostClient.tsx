@@ -194,6 +194,9 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
           .blog-content figure { margin: 2rem 0; }
           .blog-content figure img { width: 100%; border-radius: 0.75rem; border: 1px solid #e5e7eb; box-shadow: 0 4px 16px rgba(15,23,42,0.08); }
           .blog-content figcaption { margin-top: 0.6rem; font-size: 0.9rem; color: #6b7280; text-align: center; }
+          .blog-content { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+          .blog-content .code-block { max-width: 100%; }
+          .blog-content .inline-code { overflow-wrap: anywhere; word-break: break-word; }
           @media (max-width: 640px) { .blog-content table { display: block; overflow-x: auto; } }
         `}</style>
         <div

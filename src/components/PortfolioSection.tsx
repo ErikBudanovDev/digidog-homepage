@@ -19,13 +19,6 @@ import hubspotCrmImage from "figma:asset/aceaf579e31eebab925faabe40f3b9f4e46272d
 import wickieImage from "figma:asset/d849760fd1f5b6f771197fd106f62a4c614281cb.png";
 import digidogThreejsImage from "figma:asset/a2f594d236ef884b789dbcc942e670e16a1f1fca.png";
 import jobsvsImage from "figma:asset/d6bb65eaf8c1ef470fbf5ba285c0a0dc7dfd85a5.png";
-import cibariaItalianaImage from "figma:asset/f3344c5d874bdaed8597c2a2a7697db100cfd76c.png";
-import cibariaItalianaBolognaImage from "figma:asset/4aa21ed2e847271510ccf7d90dc12d67d518010f.png";
-import cibariaItalianaServicesImage from "figma:asset/860b1f96f437e65d2e83efa384e45c4ac65fc981.png";
-import cibariaItalianaMarioImage from "figma:asset/3bd5043c343cc118bf1353e2acfbb7852f23e18c.png";
-import monteOfelioBarImage from "figma:asset/a1e43a0ca271ca27ec555aa2b403a94e7865b5b9.png";
-import monteOfelioNewsImage from "figma:asset/d6e8abf341447412a4167b69730c8988829f7af0.png";
-import monteOfelioLocationImage from "figma:asset/e64fabfbb0ba316f86fd5b115ed2ccaa77c94550.png";
 import { useTranslation } from "@/i18n/i18n-context";
 
 const unFp2030ImageSrc = unFp2030Image as unknown as string;
@@ -39,13 +32,6 @@ const hubspotCrmImageSrc = hubspotCrmImage as unknown as string;
 const wickieImageSrc = wickieImage as unknown as string;
 const digidogThreejsImageSrc = digidogThreejsImage as unknown as string;
 const jobsvsImageSrc = jobsvsImage as unknown as string;
-const cibariaItalianaImageSrc = cibariaItalianaImage as unknown as string;
-const cibariaItalianaBolognaImageSrc = cibariaItalianaBolognaImage as unknown as string;
-const cibariaItalianaServicesImageSrc = cibariaItalianaServicesImage as unknown as string;
-const cibariaItalianaMarioImageSrc = cibariaItalianaMarioImage as unknown as string;
-const monteOfelioBarImageSrc = monteOfelioBarImage as unknown as string;
-const monteOfelioNewsImageSrc = monteOfelioNewsImage as unknown as string;
-const monteOfelioLocationImageSrc = monteOfelioLocationImage as unknown as string;
 
 export const projects: ProjectCardData[] = [
   {
@@ -412,62 +398,6 @@ export const projects: ProjectCardData[] = [
     category: "web",
     client: "JobsVS",
     link: "/services/web-design",
-  },
-  {
-    title: "Cibaria Italiana – Restaurant & eCommerce",
-    description:
-      "Elegant website with eCommerce, online reservation, and culinary course booking for an authentic Italian restaurant bringing Genoa and Bologna flavors to Vienna.",
-    overview:
-      "Mario is an Italian restaurant manager who wants to bring the culinary traditions of Genoa and Bologna to Vienna. His restaurant is not only a place to eat but also a place where people can experience the Italian atmosphere. Pasta is homemade daily, culinary courses are organized during the day, and high-quality products are imported directly from Italy and sold in the shop. Mario recognized the importance of a strong online platform and asked DigiDog to build an elegant website with multiple functionalities while maintaining the light concept of the brand.",
-    goal: "Build an elegant, multi-functional website that increases brand awareness, creates an e-commerce store for premium Italian products, and allows customers to book tables or culinary courses online easily.",
-    improvements: [
-      "E-commerce store for premium Italian products",
-      "Online table reservation system",
-      "Culinary course booking integration",
-      "Elegant design maintaining the light brand concept",
-      "Multiple functionalities within a cohesive experience",
-      "Digital marketing support for franchise expansion",
-    ],
-    problem:
-      "An authentic Italian restaurant in Vienna needed a strong online platform to showcase their unique culinary experience, sell premium imported Italian products online, and enable easy table and course bookings.",
-    solution:
-      "An elegant, multi-functional website combining eCommerce for Italian products, online table reservations, culinary course bookings, and a brand-true design — with ongoing digital marketing support that contributed to franchise expansion into Germany.",
-    image: cibariaItalianaImageSrc,
-    year: 2021,
-    slug: "cibaria-italiana",
-    service: "Web Infrastructure",
-    category: "web",
-    client: "Cibaria Italiana",
-    link: "/services/web-design",
-    gallery: [cibariaItalianaBolognaImageSrc, cibariaItalianaServicesImageSrc, cibariaItalianaMarioImageSrc],
-  },
-  {
-    title: "Monte Ofelio Group – Multi-Brand Web Strategy",
-    description:
-      "Dynamic multi-website digital strategy for an Italian bar and food group in Vienna, enabling online reservations, worldwide product sales, and brand expansion.",
-    overview:
-      "The Monte Ofelio Group was founded by the Formisano brothers, Dario and Luca, who come from rural Naples. Their goal was to bring the naturalness and sustainability of Italian products to Vienna and export traditional Italian foods to Austria. Their first store was inspired by the traditional Italian bar, where customers can enjoy breakfast and appetizers made exclusively with high-quality Italian products. After several years of success, the brothers decided to expand their business, planning to open more bars and bakeries in Vienna. To support this expansion, they needed a strong online platform — DigiDog developed three different websites aligned with the group's market strategy, along with several brands connected to the Monte Ofelio Group.",
-    goal: "Create a multi-website digital strategy that increases brand awareness, allows products to be sold worldwide online, and represents the authentic Italian atmosphere of the Monte Ofelio bars.",
-    improvements: [
-      "Three separate websites aligned with market strategy",
-      "Online table reservation system across locations",
-      "E-commerce for worldwide product ordering",
-      "Multiple brand identities under one group umbrella",
-      "Social media management integration",
-      "Scalable online platform for business expansion",
-    ],
-    problem:
-      "A growing Italian food group in Vienna needed a cohesive multi-brand online platform to support expansion into new locations, enable online product sales, and maintain their authentic Italian identity across multiple brands.",
-    solution:
-      "Three strategically aligned websites with online reservation, e-commerce capabilities, and integrated social media management — driving increased sales and exceeding initial project goals through collaborative digital marketing.",
-    image: monteOfelioBarImageSrc,
-    year: 2021,
-    slug: "monte-ofelio-group",
-    service: "Web Infrastructure",
-    category: "web",
-    client: "Monte Ofelio Group",
-    link: "/services/web-design",
-    gallery: [monteOfelioNewsImageSrc, monteOfelioLocationImageSrc],
   },
 
   /* ─── AI Solutions & Automation ─── */

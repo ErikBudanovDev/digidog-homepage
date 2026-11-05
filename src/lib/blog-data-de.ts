@@ -1100,7 +1100,7 @@ Ich bin Erik Budanov, unabhängiger Produktentwickler und Gründer von DigiDog. 
 
 [KI-Integration](/de/dienstleistungen/ki-integration) · [Beratungsgespräch buchen](https://calendly.com/erik-budanov/beratungsgespraech)
     `,
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=1080&q=80",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
     tag: "KI-Integration",
     category: "ai",
     author: "Erik Budanov",
