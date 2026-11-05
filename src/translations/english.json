@@ -1,9 +1,9 @@
 {
   "seo": {
     "home": {
-      "title": "Claude & AI Integration for Businesses",
+      "title": "DigiDog – AI Agents & Claude for Your Business",
       "description": "AI integration services by Erik Budanov: Claude, AI agents and MCP connected to your CRM, bookings, email and analytics. Real client cases. Free 45-minute AI process walk-through.",
-      "ogTitle": "Claude & AI Integration for Businesses | DigiDog",
+      "ogTitle": "DigiDog – AI Agents & Claude for Your Business",
       "ogDescription": "Claude and AI agents connected to the tools your business already uses. Real client cases, Top Rated Plus on Upwork."
     },
     "aiIntegration": {
@@ -60,7 +60,7 @@
     }
   },
   "hero": {
-    "title1": "AI integration,",
+    "title1": "AI agents for your business,",
     "title2": "built on Claude.",
     "description": "I’m Erik Budanov, founder of DigiDog. I connect Claude and AI agents to the tools you already use, like your CRM, bookings, email and analytics, so your team asks for answers instead of searching for them. Real projects, from tour operators to dental clinics.",
     "cta": "Book a free AI walk-through"
@@ -75,7 +75,7 @@
     "aiOperations": "AI Operations",
     "allServices": "All Services",
     "webDesign": "Website Redesign",
-    "aiSolutions": "AI Solutions & Automation",
+    "aiSolutions": "AI Integration & Agents",
     "customSoftware": "MVP & Software"
   },
   "servicesSection": {

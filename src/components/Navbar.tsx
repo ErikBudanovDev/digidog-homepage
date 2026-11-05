@@ -22,6 +22,7 @@ export function Navbar() {
   const pt = locale === "DE" ? deT : enT;
 
   const navLinks = [
+    { href: getLocalizedRoute("aiIntegration", locale), label: pt.nav.aiSolutions },
     { href: getLocalizedRoute("portfolio", locale), label: pt.nav.portfolio },
     { href: getLocalizedRoute("webDesign", locale), label: pt.nav.webDesign },
     { href: getLocalizedRoute("blog", locale), label: pt.nav.blog },
@@ -87,8 +88,6 @@ export function Navbar() {
       if (newLocale === "EN") {
         if (currentPath === "/de") {
           targetPath = "/";
-        } else if (currentPath.startsWith("/de/dienstleistungen/ki-loesungen")) {
-          targetPath = "/services/ai-solutions";
         } else if (currentPath.startsWith("/de/dienstleistungen/ki-integration")) {
           targetPath = "/services/ai-integration";
         } else if (currentPath.startsWith("/de/dienstleistungen/webdesign")) {
@@ -113,8 +112,6 @@ export function Navbar() {
       if (newLocale === "DE") {
         if (currentPath === "/") {
           targetPath = "/de";
-        } else if (currentPath.startsWith("/services/ai-solutions")) {
-          targetPath = "/de/dienstleistungen/ki-loesungen";
         } else if (currentPath.startsWith("/services/ai-integration")) {
           targetPath = "/de/dienstleistungen/ki-integration";
         } else if (currentPath.startsWith("/services/web-design")) {

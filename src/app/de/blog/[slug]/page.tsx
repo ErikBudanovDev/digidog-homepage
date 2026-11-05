@@ -66,16 +66,17 @@ export default async function DEBlogPostPage({ params }: Props) {
     "@type": "Article",
     headline: post.title,
     description: post.metaDescription,
-    image: post.image,
-    author: { "@type": "Person", name: post.author },
+    image: post.image.startsWith("http") ? post.image : `https://digidog.org${post.image}`,
+    author: { "@type": "Person", name: post.author, url: "https://digidog.org/de/ueber-uns" },
     publisher: {
       "@type": "Organization",
-      name: "Digidog",
-      url: "https://www.digidog.org",
+      name: "DigiDog",
+      url: "https://digidog.org",
+      logo: { "@type": "ImageObject", url: "https://digidog.org/images/digidog-logo-512.png" },
     },
     inLanguage: "de",
     datePublished: post.date,
-    mainEntityOfPage: `https://www.digidog.org/de/blog/${post.slug}`,
+    mainEntityOfPage: `https://digidog.org/de/blog/${post.slug}`,
   };
 
   const faqSchema = post.faqs && post.faqs.length > 0 ? {

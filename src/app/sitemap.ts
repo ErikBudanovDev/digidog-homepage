@@ -11,7 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // English pages
     { url: baseUrl, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: `${baseUrl}/services/ai-integration`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${baseUrl}/services/ai-solutions`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/services/web-design`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/services/custom-software`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/portfolio`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
@@ -22,7 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     
     // German pages
     { url: `${baseUrl}/de`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
-    { url: `${baseUrl}/de/dienstleistungen/ki-loesungen`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/de/dienstleistungen/ki-integration`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/de/dienstleistungen/webdesign`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/de/dienstleistungen/individuelle-software`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },

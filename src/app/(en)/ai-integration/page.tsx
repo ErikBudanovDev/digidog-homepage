@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "Integrate your CRM, email, support, analytics and operations into one AI conversation. Custom MCP integrations, AI automation, and intelligent business systems for mid-size companies.",
   keywords:
     "AI integration, MCP integration, AI operations system, business AI, CRM AI integration, AI operations",
-  robots: "index, follow",
+  robots: "noindex, follow",
   alternates: { canonical: "https://digidog.org/ai-integration" },
   openGraph: {
     title: "Don't Stay Behind — AI Integration for Business | Digidog",

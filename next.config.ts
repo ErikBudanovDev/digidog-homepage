@@ -17,6 +17,9 @@ const nextConfig: NextConfig = {
    * ───────────────────────────────────────────── */
   async redirects() {
     return [
+      // === AI pages consolidated (SEO audit 2026-11-05) ===
+      { source: "/services/ai-solutions", destination: "/services/ai-integration", permanent: true },
+      { source: "/de/dienstleistungen/ki-loesungen", destination: "/de/dienstleistungen/ki-integration", permanent: true },
       // === Core Pages ===
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/about-us/", destination: "/about", permanent: true },

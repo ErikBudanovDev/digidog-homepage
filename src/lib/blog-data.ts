@@ -491,7 +491,7 @@ AI systems need monitoring. We track accuracy, handle edge cases, and continuous
 
 We don't just "add AI" — we engineer complete workflow systems. Our stack includes Claude and GPT for language tasks, custom ML models for classification, and direct API integrations with your existing tools. Every automation comes with a monitoring dashboard and human fallback.
 
-Ready to see how much time your team could save? See our [AI Solutions service](/services/ai-solutions) for the menu, or [book a free AI audit](https://calendly.com/erik-budanov/beratungsgespraech) for your specific stack.
+Ready to see how much time your team could save? See our [AI Integration service](/services/ai-integration) for the menu, or [book a free AI audit](https://calendly.com/erik-budanov/beratungsgespraech) for your specific stack.
     `,
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1080&q=80",
     tag: "AI Automation",
@@ -2276,7 +2276,7 @@ This works best for service businesses, agencies, operations-heavy teams, and fo
 
 ---
 
-*We help companies replace $2K-10K/month SaaS stacks with custom AI operations systems — usually in 4-8 weeks. The result: lower costs, full data ownership, and a system that actually fits how your business works. See our [AI Solutions service](/services/ai-solutions), or [book a free AI infrastructure audit](https://calendly.com/erik-budanov/beratungsgespraech) to see what's replaceable in your stack.*`,
+*We help companies replace $2K-10K/month SaaS stacks with custom AI operations systems — usually in 4-8 weeks. The result: lower costs, full data ownership, and a system that actually fits how your business works. See our [AI Solutions service](/services/ai-integration), or [book a free AI infrastructure audit](https://calendly.com/erik-budanov/beratungsgespraech) to see what's replaceable in your stack.*`,
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
     tag: "AI",
     category: "ai",

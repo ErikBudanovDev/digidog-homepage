@@ -496,7 +496,7 @@ export const projects: ProjectCardData[] = [
     service: "Automation & AI",
     category: "ai",
     client: "Jewelry Business (Confidential)",
-    link: "/services/ai-solutions",
+    link: "/services/ai-integration",
   },
   /* ─── Custom Software ─── */
   {
