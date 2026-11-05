@@ -115,8 +115,7 @@ function getCaseStudies(t: T) {
       outcome: t.aiIntegration.cs2Outcome,
       color: "#8B5CF6",
       mcpUrl: "https://mcp-crm.digidog-services.com/mcp",
-      image:
-        "https://images.unsplash.com/photo-1645102270210-e47d263db8c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2NvdW50YW50JTIwQUklMjBkYXNoYm9hcmQlMjBhbmFseXRpY3MlMjBsYXB0b3B8ZW58MXx8fHwxNzcyOTU5MDQ0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/figma-assets/aceaf579e31eebab925faabe40f3b9f4e46272d5.png",
     },
     {
       title: t.aiIntegration.cs3Title,
@@ -125,8 +124,7 @@ function getCaseStudies(t: T) {
       queries: [t.aiIntegration.cs3Q1, t.aiIntegration.cs3Q2, t.aiIntegration.cs3Q3, t.aiIntegration.cs3Q4],
       outcome: t.aiIntegration.cs3Outcome,
       color: "#10B981",
-      image:
-        "https://images.unsplash.com/photo-1758873271824-a3216c80d1ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwYWdlbmN5JTIwdGVhbSUyMGNvbGxhYm9yYXRpb258ZW58MXx8fHwxNzcyOTUzMzczfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "/images/blog/covers/agent-desk.webp",
     },
   ];
 }

@@ -32,11 +32,11 @@
     },
     "about": {
       "title": "Erik Budanov — Gründer & Produktentwickler",
-      "description": "Lernen Sie Erik Budanov kennen: unabhängiger Produktentwickler und Gründer von DigiDog. Persönliche Umsetzung mit Unterstützung durch KI-Agenten."
+      "description": "Lernen Sie Erik Budanov kennen: unabhängiger Produktentwickler und Gründer von DigiDog. Er verbindet Claude und KI-Agenten mit CRM, Buchungen, E-Mail und Analytics."
     },
     "contact": {
       "title": "Kontakt mit Erik Budanov — Projekt besprechen",
-      "description": "Website-Redesign, MVP oder Integration geplant? Besprechen Sie Ihr Vorhaben direkt mit Erik Budanov, dem unabhängigen Produktentwickler hinter DigiDog."
+      "description": "Soll ein KI-Agent manuelle Arbeit übernehmen? Besprechen Sie Ihren Prozess direkt mit Erik Budanov, dem unabhängigen Produktentwickler hinter DigiDog."
     },
     "portfolio": {
       "title": "Fallstudien: KI-Operations-Systeme im Einsatz",
@@ -117,9 +117,9 @@
     ]
   },
   "contactCta": {
-    "title": "Was soll Ihr nächstes Projekt verbessern?",
-    "subtitle": "Zeigen Sie mir Ihre Website oder beschreiben Sie Ihr Produktvorhaben. Wir besprechen Ziele, technische Anforderungen und einen sinnvollen ersten Schritt.",
-    "cta": "Projekt mit Erik besprechen",
+    "title": "Welche Aufgabe soll ein KI-Agent übernehmen?",
+    "subtitle": "Sagen Sie mir, welche Arbeit Ihre Woche frisst und welche Tools Sie nutzen. Wir schauen, was Claude und ein KI-Agent zuerst übernehmen können.",
+    "cta": "Mit Erik über einen KI-Agenten sprechen",
     "founderName": "Erik Budanov",
     "founderRole": "Gründer & Produktentwickler",
     "thankYou": "Vielen Dank",
@@ -135,11 +135,11 @@
   "ctaBanner": {
     "title": "Ein Ansprechpartner. Direkte Verantwortung.",
     "subtitle": "Ich arbeite selbstständig und nutze KI-Agenten für Recherche, Umsetzung und Tests. Technische Entscheidungen, Prüfung und Verantwortung bleiben bei mir.",
-    "cta": "Projekt mit Erik besprechen"
+    "cta": "Mit Erik über einen KI-Agenten sprechen"
   },
   "contactForm": {
     "title": "Beschreiben Sie mir Ihr Projekt",
-    "subtitle": "Senden Sie Ihre Website, Ihr Ziel und den gewünschten Zeitrahmen. Ich melde mich mit den nächsten Schritten.",
+    "subtitle": "Beschreiben Sie die manuelle Arbeit und die beteiligten Tools. Ich melde mich mit einem ersten Schritt für einen KI-Agenten.",
     "name": "Ihr Name",
     "email": "E-Mail-Adresse",
     "company": "Unternehmen (optional)",

@@ -24,7 +24,6 @@ export function Navbar() {
   const navLinks = [
     { href: getLocalizedRoute("aiIntegration", locale), label: pt.nav.aiSolutions },
     { href: getLocalizedRoute("portfolio", locale), label: pt.nav.portfolio },
-    { href: getLocalizedRoute("webDesign", locale), label: pt.nav.webDesign },
     { href: getLocalizedRoute("blog", locale), label: pt.nav.blog },
     { href: getLocalizedRoute("about", locale), label: pt.nav.about },
     { href: getLocalizedRoute("contact", locale), label: pt.nav.contact },
@@ -90,10 +89,6 @@ export function Navbar() {
           targetPath = "/";
         } else if (currentPath.startsWith("/de/dienstleistungen/ki-integration")) {
           targetPath = "/services/ai-integration";
-        } else if (currentPath.startsWith("/de/dienstleistungen/webdesign")) {
-          targetPath = "/services/web-design";
-        } else if (currentPath.startsWith("/de/dienstleistungen/individuelle-software")) {
-          targetPath = "/services/custom-software";
         } else if (currentPath.startsWith("/de/portfolio")) {
           targetPath = "/portfolio";
         } else if (currentPath.startsWith("/de/ueber-uns")) {
@@ -114,10 +109,6 @@ export function Navbar() {
           targetPath = "/de";
         } else if (currentPath.startsWith("/services/ai-integration")) {
           targetPath = "/de/dienstleistungen/ki-integration";
-        } else if (currentPath.startsWith("/services/web-design")) {
-          targetPath = "/de/dienstleistungen/webdesign";
-        } else if (currentPath.startsWith("/services/custom-software")) {
-          targetPath = "/de/dienstleistungen/individuelle-software";
         } else if (currentPath.startsWith("/portfolio")) {
           targetPath = "/de/portfolio";
         } else if (currentPath.startsWith("/about")) {

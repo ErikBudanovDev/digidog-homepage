@@ -1,3 +1,4 @@
+import { useTranslation } from "@/i18n/i18n-context";
 import { useEffect } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -77,6 +78,8 @@ function LegalSection({
 }
 
 export default function TermsPage() {
+  const { locale } = useTranslation();
+  const isDE = locale === "DE";
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -95,9 +98,9 @@ export default function TermsPage() {
       <HeroLayout
         backgroundElements={<HeroBackground />}
         minHeight="min-h-[340px] md:min-h-[400px]"
-        badge="Legal"
-        title="Terms of Service"
-        description="We dive deep into the thoughts of our customers to understand their needs."
+        badge={isDE ? "Rechtliches" : "Legal"}
+        title={isDE ? "AGB" : "Terms of Service"}
+        description={isDE ? "Allgemeine Geschäftsbedingungen der DigiDog LLC." : "General terms and conditions of DigiDog LLC."}
         align="center"
         padding="py-[100px] lg:py-[120px]"
       />

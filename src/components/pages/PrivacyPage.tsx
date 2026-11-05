@@ -1,3 +1,4 @@
+import { useTranslation } from "@/i18n/i18n-context";
 import { useEffect } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -74,6 +75,8 @@ function LegalSection({
 }
 
 export default function PrivacyPage() {
+  const { locale } = useTranslation();
+  const isDE = locale === "DE";
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -92,9 +95,9 @@ export default function PrivacyPage() {
       <HeroLayout
         backgroundElements={<HeroBackground />}
         minHeight="min-h-[340px] md:min-h-[400px]"
-        badge="Legal"
-        title="Data Privacy"
-        description="We delve deep into the minds of customers to understand their needs."
+        badge={isDE ? "Rechtliches" : "Legal"}
+        title={isDE ? "Datenschutz" : "Data Privacy"}
+        description={isDE ? "Wie DigiDog personenbezogene Daten verarbeitet und schützt." : "How DigiDog processes and protects personal data."}
         align="center"
         padding="py-[100px] lg:py-[120px]"
       />

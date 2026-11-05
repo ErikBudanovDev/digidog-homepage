@@ -1,15 +1,12 @@
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { TrustedPartners } from "@/components/TrustedPartners";
-import { ServicesSection } from "@/components/ServicesSection";
-import { ImmersiveSection } from "@/components/ImmersiveSection";
 import { AiCasesSection } from "@/components/AiCasesSection";
 import { UpworkProofSection } from "@/components/UpworkProofSection";
 import { ContactCTA } from "@/components/ContactCTA";
 import { ContactFormSection } from "@/components/ContactFormSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
-import { CtaBanner } from "@/components/CtaBanner";
-import { PortfolioSection } from "@/components/PortfolioSection";
+import { AiAgentOffer } from "@/components/AiAgentOffer";
 import { BlogSection } from "@/components/BlogSection";
 import { Footer } from "@/components/Footer";
 import { SEO, organizationSchema } from "@/components/SEO";
@@ -28,11 +25,8 @@ export default function HomePage() {
       <TrustedPartners />
       <AiCasesSection />
       <UpworkProofSection />
+      <AiAgentOffer />
       <ReviewsSection />
-      <ServicesSection />
-      <ImmersiveSection />
-      <CtaBanner />
-      <PortfolioSection />
       <BlogSection />
       <ContactCTA />
       <ContactFormSection />

@@ -12,8 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // English pages
     { url: baseUrl, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: `${baseUrl}/services/ai-integration`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${baseUrl}/services/web-design`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${baseUrl}/services/custom-software`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/portfolio`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
@@ -23,8 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // German pages
     { url: `${baseUrl}/de`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: `${baseUrl}/de/dienstleistungen/ki-integration`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${baseUrl}/de/dienstleistungen/webdesign`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${baseUrl}/de/dienstleistungen/individuelle-software`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/de/portfolio`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/de/ueber-uns`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/de/kontakt`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
@@ -34,8 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/de/agb`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     
     // German landing pages
-    { url: `${baseUrl}/de/webdesign-agentur-berlin`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${baseUrl}/de/webdesign-agentur-hamburg`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({

@@ -51,13 +51,13 @@ export function Footer() {
   const pt = locale === "DE" ? deT : enT;
 
   const serviceLinks = [
-    { label: pt.nav.webDesign, href: getLocalizedRoute("webDesign", locale) },
-    { label: pt.nav.customSoftware, href: getLocalizedRoute("customSoftware", locale) },
     { label: pt.nav.aiSolutions, href: getLocalizedRoute("aiSolutions", locale) },
-    ...(locale === "DE" ? [
-      { label: "Webdesign Berlin", href: "/de/webdesign-agentur-berlin" },
-      { label: "Webdesign Hamburg", href: "/de/webdesign-agentur-hamburg" },
-    ] : []),
+    locale === "DE"
+      ? { label: "Claude Code für Unternehmen", href: "/de/blog/claude-code-fuer-unternehmen" }
+      : { label: "Claude Code for business", href: "/blog/claude-code-for-business" },
+    locale === "DE"
+      ? { label: "Claude Skills vs. MCP-Server", href: "/de/blog/claude-skills-vs-mcp-server" }
+      : { label: "Claude Skills vs MCP servers", href: "/blog/claude-skills-vs-mcp-servers" },
   ];
 
   const quickLinks = [
@@ -65,7 +65,7 @@ export function Footer() {
     { label: pt.footer.about, href: getLocalizedRoute("about", locale) },
     { label: pt.footer.portfolio, href: getLocalizedRoute("portfolio", locale) },
     { label: pt.nav.blog, href: getLocalizedRoute("blog", locale) },
-    { label: pt.footer.services, href: getLocalizedRoute("webDesign", locale) },
+    { label: pt.footer.services, href: getLocalizedRoute("aiIntegration", locale) },
     { label: pt.footer.contact, href: getLocalizedRoute("contact", locale) },
   ];
 

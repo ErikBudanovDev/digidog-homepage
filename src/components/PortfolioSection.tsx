@@ -34,6 +34,358 @@ const digidogThreejsImageSrc = digidogThreejsImage as unknown as string;
 const jobsvsImageSrc = jobsvsImage as unknown as string;
 
 export const projects: ProjectCardData[] = [
+  /* ─── AI systems & integrations ─── */
+  {
+    title: "DigiDog AI Operations System",
+    description:
+      "Our own infrastructure: 12+ SaaS tools replaced with AI-operated systems on a single VPS. CRM, task management, reporting, lead automation, cross-platform orchestration — all running for $210/month instead of $1,200.",
+    overview:
+      "We run two businesses on this system — an AI operations company and a multi-city European tour operator. Both used to run on 12+ SaaS subscriptions totaling $1,200/month. We replaced them with AI-operated tools on a single $210/month VPS: custom CRM, automated reporting, AI agents for lead follow-ups, task routing, and cross-platform orchestration via MCP servers.",
+    goal: "Replace a fragmented $1,200/month SaaS stack with a unified AI Operations System running on owned infrastructure.",
+    improvements: [
+      "Custom CRM replacing HubSpot and spreadsheet workflows",
+      "AI agents for automated lead qualification and follow-up",
+      "MCP server architecture connecting Claude to all business tools",
+      "Automated reporting via GA4, Google Ads, and internal dashboards",
+      "PostgreSQL database replacing siloed SaaS data stores",
+      "Docker deployment with automated backups on single VPS",
+    ],
+    problem:
+      "12+ SaaS subscriptions ($1,200/month), data scattered across platforms, manual workflows for reporting, lead follow-up, and task routing consuming 25+ hours per week.",
+    solution:
+      "AI Operations System on a single VPS — custom CRM, AI agents, MCP orchestration, automated reporting. Total infrastructure cost: $210/month. Manual work reduced to a single prompt.",
+    image: "/images/blog/covers/ai-ops.webp",
+    year: 2025,
+    slug: "digidog-ai-operations-system",
+    service: "AI Operations System",
+    category: "ai",
+    client: "DigiDog (Internal)",
+    link: "/services/ai-integration",
+  },
+  {
+    title: "BeOriginalTours Operations Platform",
+    description:
+      "Automated booking, scheduling, and management platform for a European tour agency, built with Make.com, Python, MongoDB, and a custom Next.js dashboard.",
+    overview:
+      "BeOriginalTours is a European tour agency that we helped automate the booking and scheduling process for. The platform utilizes Make.com to automate workflows, and Python scripts were used to extract email information from bookings. We also built an event scheduling system to streamline the process. Additionally, a custom dashboard was created using Next.js, where the team can view monthly and weekly tour schedules, track guides, and manage payments. The entire architecture runs seamlessly through Make.com and Discord, ensuring an efficient and automated workflow for the agency.",
+    goal: "Automate the entire booking and scheduling pipeline for a tour agency — from email extraction to guide management and payment tracking — with a custom dashboard for full operational visibility.",
+    improvements: [
+      "Make.com workflow automation for booking pipeline",
+      "Python scripts for automated email data extraction",
+      "Custom Next.js dashboard for schedules and payments",
+      "MongoDB database for bookings and guide management",
+      "Discord integration for team communication and alerts",
+      "Event scheduling system for weekly and monthly tours",
+    ],
+    problem:
+      "Manual booking processing, scattered scheduling across spreadsheets, and no centralized view of guides, tours, or payments — leading to errors and inefficiency.",
+    solution:
+      "End-to-end automated architecture using Make.com, Python email extraction, MongoDB storage, Discord notifications, and a custom Next.js dashboard for full operational control.",
+    image: beOriginalToursCoverImageSrc,
+    year: 2024,
+    slug: "beoriginaltours-operations",
+    service: "Internal Tools",
+    category: "software",
+    client: "BeOriginalTours",
+    link: "/services/ai-integration",
+  },
+  {
+    title: "AI Jewelry Sketch Automation",
+    description:
+      "Complete AI automation built in Make that reads customer emails, extracts requirements, and generates custom jewelry sketches 24/7 — eliminating 5–10 hours of daily manual work.",
+    overview:
+      "A jewelry business was spending 5–10 hours daily creating custom sketches from email requests. We built a complete AI automation in Make in just 6 hours that automatically reads customer emails, extracts requirements, and generates jewelry sketches nonstop. The result: eliminated manual work, enabled 24/7 sketch generation, reduced costs, improved response time, and created a fully scalable workflow that increased overall profitability.",
+    goal: "Eliminate manual sketch creation by building an end-to-end AI automation that reads customer emails, extracts jewelry requirements, and generates custom sketches automatically around the clock.",
+    improvements: [
+      "AI-powered email parsing and requirement extraction",
+      "Automated jewelry sketch generation via AI image models",
+      "24/7 nonstop operation without human intervention",
+      "Make automation workflow built in just 6 hours",
+      "Fully scalable pipeline for growing order volumes",
+      "Dramatic cost reduction and faster customer response times",
+    ],
+    problem:
+      "Manual jewelry sketch creation from email requests consumed 5–10 hours daily — slow, costly, and impossible to scale.",
+    solution:
+      "End-to-end AI automation in Make that reads emails, extracts requirements, and generates custom jewelry sketches 24/7 with zero manual effort.",
+    image: jewelrySketchImageSrc,
+    year: 2024,
+    slug: "ai-jewelry-sketch",
+    service: "Automation & AI",
+    category: "ai",
+    client: "Jewelry Business (Confidential)",
+    link: "/services/ai-integration",
+  },
+  {
+    title: "HubSpot CRM – Dental Clinic Chain",
+    description:
+      "Enterprise HubSpot CRM implementation across a 7-branch dental clinic chain, integrating patient workflows, IVORIS API, and Make.com automation.",
+    overview:
+      "We implemented HubSpot CRM for a multi-branch orthodontic clinic chain with seven locations. The project involved defining a unified process across all branches — standardizing workflows, patient management, and administrative practices. We integrated HubSpot with the internal Orthodontic Platform via IVORIS API and the clinic website, using Make.com to orchestrate the entire integration. Patient data was managed as both contacts and deals, with careful data migration ensuring accuracy and compliance with healthcare regulations.",
+    goal: "Implement a unified CRM system across 7 dental clinic branches that standardizes patient workflows, automates deal pipelines, and integrates seamlessly with existing orthodontic software.",
+    improvements: [
+      "Unified CRM process across 7 clinic branches",
+      "HubSpot integration with IVORIS orthodontic API",
+      "Make.com workflow automation for seamless data flow",
+      "Custom deal pipeline with orthodontic-specific stages",
+      "Comprehensive staff training across all locations",
+      "Ongoing monitoring and iterative improvement system",
+    ],
+    problem:
+      "Five branches operating with different workflows, no centralized CRM, and complex integration requirements between HubSpot, the orthodontic platform, and the website.",
+    solution:
+      "Enterprise HubSpot CRM implementation with unified processes, IVORIS API integration, Make.com automation, custom deal pipelines, and comprehensive training programs across all branches.",
+    image: hubspotCrmImageSrc,
+    year: 2024,
+    slug: "hubspot-dental-crm",
+    service: "Internal Tools",
+    category: "software",
+    client: "Dental Clinic Chain (Confidential)",
+    link: "/services/ai-integration",
+  },
+
+  /* ─── Earlier web projects ─── */
+  {
+    title: "United Nations – FP2030",
+    description:
+      "Design implementation for the United Nations FP2030 Progress Report website, featuring interactive Highcharts data visualizations and immersive parallax animations.",
+    overview:
+      "Collaboration with the United Nations on the FP2030 Progress Report website. Interactive Highcharts data visualizations presenting complex global health data in accessible, engaging formats.",
+    goal: "Present complex global health data through interactive charts and immersive animations for a worldwide audience.",
+    improvements: [
+      "Interactive data visualizations with Highcharts JS",
+      "Immersive parallax scrolling animations",
+      "WordPress CMS with Elementor",
+      "Responsive design for all devices",
+    ],
+    problem:
+      "Complex global health data needed to be presented accessibly for a worldwide audience.",
+    solution:
+      "Interactive Highcharts visualizations with parallax animations and user-centric design.",
+    image: unFp2030ImageSrc,
+    year: 2020,
+    slug: "united-nations-fp2030",
+    service: "Web Infrastructure",
+    category: "web",
+    client: "United Nations – FP2030",
+    link: "/portfolio",
+  },
+  {
+    title: "PRÜFTECHNIK (Fluke) – Enterprise Web Administration",
+    description:
+      "Three years of enterprise web administration and content management for PRÜFTECHNIK, the industrial condition-monitoring brand of Fluke, part of the Fortive group (Fortune 500).",
+    overview:
+      "PRÜFTECHNIK is a global industrial maintenance technology brand, acquired by Fluke Corporation in 2019 and part of the Fortive group. From 2022 to 2025 we handled the majority of the website's updates: publishing content, quality control, troubleshooting CMS issues and continuous improvement, coordinated in German and English with product owners and stakeholders across time zones, and with developers to implement reliable solutions.",
+    goal: "Keep a global enterprise website accurate, current and reliable while coordinating many stakeholders in two languages.",
+    improvements: [
+      "Ongoing enterprise web administration (2022–2025)",
+      "Content publishing and quality control",
+      "CMS troubleshooting with the development team",
+      "German and English coordination across time zones",
+      "Continuous improvement of the web presence",
+    ],
+    problem:
+      "A global enterprise brand needed one dependable owner for daily website operations across languages, teams and time zones.",
+    solution:
+      "A long-term web administration and content management engagement covering publishing, quality control and CMS support.",
+    image: "/figma-assets/portfolio-pruftechnik.jpg",
+    year: 2025,
+    slug: "pruftechnik-fluke",
+    service: "Web Infrastructure",
+    category: "web",
+    client: "PRÜFTECHNIK (Fluke / Fortive)",
+    link: "/portfolio",
+  },
+  {
+    title: "Activated Insights – M&A Website Consolidation",
+    description:
+      "Website consolidation after an acquisition: CareAcademy and WeCareConnect merged into the Activated Insights web presence, with 200+ pages redesigned and consolidated.",
+    overview:
+      "After Activated Insights acquired CareAcademy and WeCareConnect, we consolidated their websites into the Activated Insights web presence. Each page was migrated and adapted to the destination brand rather than copied mechanically: layouts and visual elements reworked, content preserved and restructured, links and responsive behavior checked, and the rollout coordinated to create one consistent experience across the healthcare workforce platform.",
+    goal: "Merge two acquired brands' websites into one consistent Activated Insights experience without losing content.",
+    improvements: [
+      "200+ pages migrated and consolidated",
+      "Each page adapted to the destination brand",
+      "Layouts and visual elements reworked",
+      "Content preserved and restructured",
+      "Links and responsive behavior checked before rollout",
+    ],
+    problem:
+      "After an acquisition, three separate web presences had to become one brand without losing content or search visibility.",
+    solution:
+      "Page-by-page WordPress migration and redesign into the Activated Insights site, with a coordinated rollout.",
+    image: "/figma-assets/portfolio-activatedinsights.jpg",
+    year: 2025,
+    slug: "activated-insights-migration",
+    service: "Web Infrastructure",
+    category: "web",
+    client: "Activated Insights",
+    link: "/portfolio",
+  },
+  {
+    title: "MPA.online Streaming Platform",
+    description:
+      "Fullstack web app development for a medical education streaming platform, built with Next.js, Strapi, and MongoDB with Vimeo integration.",
+    overview:
+      "MPA.online is a streaming platform designed to help medical assistants learn through video courses. Built over approximately 6 months, the project began with a discovery call where we drafted the architecture. After designing the site in Figma, we implemented the platform using Next.js and Strapi to create a seamless learning experience with integrated video streaming and powerful search capabilities.",
+    goal: "Develop a fully functional streaming platform for medical education that enables medical assistants to learn through structured video courses with seamless search and playback.",
+    improvements: [
+      "Next.js frontend with server-side rendering for performance",
+      "Strapi headless CMS for flexible content management",
+      "Vimeo integration for reliable video streaming",
+      "MongoDB with Mongo Atlas as Elasticsearch for video search",
+      "Docker containerization for scalable deployment",
+      "Custom-coded features for full platform functionality",
+    ],
+    problem:
+      "Medical assistants lacked a dedicated, structured platform to learn essential clinical skills through video-based education.",
+    solution:
+      "A fullstack streaming platform built with Next.js and Strapi, featuring Vimeo video integration, MongoDB-powered search, and a user-friendly interface designed in Figma.",
+    image: mpaOnlineImageSrc,
+    year: 2024,
+    slug: "mpa-online",
+    service: "Web Infrastructure",
+    category: "web",
+    client: "MPA.online",
+    link: "/portfolio",
+  },
+  {
+    title: "SmileforYou – Conversion Optimization",
+    description:
+      "Full website redesign and conversion optimization for a leading German dental clinic chain, doubling their conversion rate from 5% to 11%.",
+    overview:
+      "We had the opportunity to work with SmileforYou, a leading dental clinic chain specializing in orthodontics — from traditional braces to innovative Invisalign technology. Based on Google Analytics data revealing that the majority of traffic comes from mobile devices, we adopted a mobile-first strategy. We renewed their existing website, created specialized landing pages for SEO, and developed a brand-new online platform that is user-friendly, informative, and aligned with SmileforYou's exceptional standards.",
+    goal: "Redesign and optimize the SmileforYou website with a mobile-first approach to significantly increase conversion rates and attract more patients through organic search.",
+    improvements: [
+      "Conversion rate doubled from 5% to 11%",
+      "Mobile-first responsive design strategy",
+      "SEO-optimized landing pages for patient acquisition",
+      "WordPress CMS for easy content management",
+      "Modern, friendly design reflecting the clinic's brand",
+      "Ongoing collaboration for continuous enhancement",
+    ],
+    problem:
+      "Outdated website with a low 5% conversion rate — poor mobile experience despite majority mobile traffic, and limited SEO visibility for patient acquisition.",
+    solution:
+      "Complete website redesign with mobile-first approach, SEO-optimized landing pages, and conversion-focused design — resulting in a 120% conversion rate increase to 11%.",
+    image: smileForYouImageSrc,
+    year: 2023,
+    slug: "smileforyou",
+    service: "Web Infrastructure",
+    category: "web",
+    client: "SmileforYou",
+    link: "/portfolio",
+  },
+  {
+    title: "Technik Hoffmann – Fullstack Development",
+    description:
+      "Complex fullstack website development for a German precision engineering company, featuring jQuery animated bubbles, cards view, and intricate design implementation.",
+    overview:
+      "This project involved a team of 2 developers, 1 designer, and 1 QA tester, with the design completed by an external company. As the project manager, we oversaw the implementation and management of the project, which utilized technologies such as WordPress, jQuery, and PHP. The project was complex due to the length of time required for communication and decision-making processes. Key highlights include a visually striking animated bubbles interface built with jQuery and an interactive cards-based navigation system.",
+    goal: "Implement a complex, design-heavy corporate website for a precision engineering company with interactive jQuery animations, cards-based navigation, and seamless WordPress CMS integration.",
+    improvements: [
+      "jQuery animated bubbles for interactive service visualization",
+      "Cards-view navigation with smooth transitions",
+      "WordPress CMS with custom PHP development",
+      "Complex design implementation from external design specs",
+      "Multilingual support (German/English)",
+      "Full project management with cross-team coordination",
+    ],
+    problem:
+      "A precision engineering company needed a sophisticated online platform that could showcase their complex service portfolio in an engaging, interactive way while managing a multi-team development process.",
+    solution:
+      "Fullstack WordPress website with custom jQuery animations, interactive bubble-based service visualization, cards navigation, and PHP backend — delivered through structured project management across a 4-person team.",
+    image: hoffmannTechnikImageSrc,
+    year: 2023,
+    slug: "technik-hoffmann",
+    service: "Web Infrastructure",
+    category: "web",
+    client: "Hoffmann Technik",
+    link: "/portfolio",
+  },
+  {
+    title: "WICKIE – Digital Marketing Agency Redesign",
+    description:
+      "Complete website redesign for a digital marketing agency, delivering a clean, responsive, and visually compelling WordPress site that preserves the client's brand identity.",
+    overview:
+      "Our client WICKIE helps businesses create, manage, and improve their social media presence. They develop strategies and campaigns to increase visibility, along with SEO strategies to drive more visitors to their website. WICKIE approached us with the idea of renewing and polishing their existing website. The goal was to create a clean, responsive, yet compelling and attractive redesign that fits the client's needs while staying true to their brand colors and fonts. We delivered a complete redesign of the entire website, and the project received a beautiful and grateful testimonial from the client.",
+    goal: "Redesign and modernize WICKIE's existing website with a clean, responsive layout that reflects their brand identity and enhances their digital marketing credibility.",
+    improvements: [
+      "Complete website redesign preserving brand colors and fonts",
+      "Responsive design optimized for all devices",
+      "WordPress with WooCommerce integration",
+      "Modern UX & UI design for improved engagement",
+      "Clean, compelling visual layout for agency credibility",
+      "5-star client testimonial received upon delivery",
+    ],
+    problem:
+      "An outdated website that no longer reflected the agency's expertise in digital marketing — lacking modern design, responsiveness, and visual appeal to attract potential clients.",
+    solution:
+      "Full website redesign with a clean, responsive WordPress build that preserves the client's brand identity while delivering a compelling, modern online platform worthy of a marketing agency.",
+    image: wickieImageSrc,
+    year: 2022,
+    slug: "wickie-agency",
+    service: "Web Infrastructure",
+    category: "web",
+    client: "WICKIE Agentur",
+    link: "/portfolio",
+  },
+  {
+    title: "Digidog – Three.js & WordPress Integration",
+    description:
+      "Resolved complex Three.js and Elementor conflicts on our own agency website, implementing interactive 3D animations with SEO-optimized design on WordPress.",
+    overview:
+      "This internal project involved implementing a new design for our own agency website (digidog.org) that blends seamlessly with keyword optimization, while integrating a Three.js 3D animation without compromising performance or layout within Elementor. The main challenge was a conflict between Three.js and Elementor — requiring manual code adjustments to ensure seamless integration. After developing the animation separately, staging integration, conflict identification, and rigorous cross-browser testing, the result was a smooth, interactive 3D experience with full Elementor and plugin compatibility.",
+    goal: "Implement a new SEO-optimized design with integrated Three.js 3D animation on WordPress, resolving technical conflicts between Three.js and Elementor without compromising performance.",
+    improvements: [
+      "Three.js 3D animation integrated with WordPress/Elementor",
+      "Manual code adjustments to resolve JS/Elementor conflicts",
+      "SEO keyword optimization blended with new design",
+      "Cross-browser and cross-device compatibility testing",
+      "Staging environment for safe integration testing",
+      "Full plugin compatibility maintained post-integration",
+    ],
+    problem:
+      "Three.js animations conflicted with Elementor's rendering pipeline — causing layout breaks, performance issues, and plugin incompatibilities that required deep manual code resolution.",
+    solution:
+      "Separate Three.js development, staged integration, manual codebase adjustments to resolve conflicts, and rigorous cross-browser testing — resulting in a smooth 3D experience with full Elementor compatibility.",
+    image: digidogThreejsImageSrc,
+    year: 2023,
+    slug: "digidog-threejs",
+    service: "Web Infrastructure",
+    category: "web",
+    client: "Digidog (Internal)",
+    link: "/portfolio",
+  },
+  {
+    title: "JobsVS – Recruitment Agency Website",
+    description:
+      "Design implementation and SEO for a recruitment agency, featuring Persy API integration to automatically display job listings from the client's HR platform.",
+    overview:
+      "Our client JobsVS is a recruitment agency that enables companies and applicants to find each other. We handled design implementation and SEO for JobsVS, building a responsive and clear website. The website integrates with Persy (Persy) via API, so the website owner doesn't have to duplicate work — job applications are pulled directly from Persy and displayed on the website automatically. The client provided the design, and our team of experts implemented it with a focus on creating an appealing yet clear and quality look. We also provided personalized SEO services including speed optimization, keyword research, and backend updates.",
+    goal: "Implement a provided design into a responsive, SEO-optimized recruitment website with seamless Persy API integration for automatic job listing synchronization.",
+    improvements: [
+      "Persy API integration for automatic job listings",
+      "Responsive and clear design implementation",
+      "Personalized SEO with keyword research and optimization",
+      "Website speed optimization and backend updates",
+      "Clean, appealing UX that matches agency branding",
+      "Automated job data sync eliminating manual duplicate work",
+    ],
+    problem:
+      "A recruitment agency needed their provided design implemented into a functional, SEO-optimized website with automated job listing management to avoid manual data entry.",
+    solution:
+      "Responsive website implementation with Persy API integration for automatic job display, combined with comprehensive SEO services including speed optimization and keyword research.",
+    image: jobsvsImageSrc,
+    year: 2022,
+    slug: "jobsvs-recruitment",
+    service: "Web Infrastructure",
+    category: "web",
+    client: "JobsVS",
+    link: "/portfolio",
+  },
+
+  /* ─── 3D & VR ─── */
   {
     title: "Apartment Renovation Planned in VR",
     description:
@@ -65,7 +417,7 @@ export const projects: ProjectCardData[] = [
     service: "3D & VR",
     category: "software",
     client: "Lvovyan apartment, Yerevan",
-    link: "/services/custom-software",
+    link: "/services/ai-integration",
   },
   {
     title: "3D Learning Encyclopedia",
@@ -100,388 +452,7 @@ export const projects: ProjectCardData[] = [
     service: "3D & VR",
     category: "software",
     client: "DigiDog",
-    link: "/services/custom-software",
-  },
-
-  /* ─── AI Operations Systems ─── */
-  {
-    title: "DigiDog AI Operations System",
-    description:
-      "Our own infrastructure: 12+ SaaS tools replaced with AI-operated systems on a single VPS. CRM, task management, reporting, lead automation, cross-platform orchestration — all running for $210/month instead of $1,200.",
-    overview:
-      "We run two businesses on this system — an AI operations company and a multi-city European tour operator. Both used to run on 12+ SaaS subscriptions totaling $1,200/month. We replaced them with AI-operated tools on a single $210/month VPS: custom CRM, automated reporting, AI agents for lead follow-ups, task routing, and cross-platform orchestration via MCP servers.",
-    goal: "Replace a fragmented $1,200/month SaaS stack with a unified AI Operations System running on owned infrastructure.",
-    improvements: [
-      "Custom CRM replacing HubSpot and spreadsheet workflows",
-      "AI agents for automated lead qualification and follow-up",
-      "MCP server architecture connecting Claude to all business tools",
-      "Automated reporting via GA4, Google Ads, and internal dashboards",
-      "PostgreSQL database replacing siloed SaaS data stores",
-      "Docker deployment with automated backups on single VPS",
-    ],
-    problem:
-      "12+ SaaS subscriptions ($1,200/month), data scattered across platforms, manual workflows for reporting, lead follow-up, and task routing consuming 25+ hours per week.",
-    solution:
-      "AI Operations System on a single VPS — custom CRM, AI agents, MCP orchestration, automated reporting. Total infrastructure cost: $210/month. Manual work reduced to a single prompt.",
-    image: digidogThreejsImageSrc,
-    year: 2025,
-    slug: "digidog-ai-operations-system",
-    service: "AI Operations System",
-    category: "ai",
-    client: "DigiDog (Internal)",
     link: "/services/ai-integration",
-  },
-  /* ─── Web Infrastructure ─── */
-  {
-    title: "United Nations – FP2030",
-    description:
-      "Design implementation for the United Nations FP2030 Progress Report website, featuring interactive Highcharts data visualizations and immersive parallax animations.",
-    overview:
-      "Collaboration with the United Nations on the FP2030 Progress Report website. Interactive Highcharts data visualizations presenting complex global health data in accessible, engaging formats.",
-    goal: "Present complex global health data through interactive charts and immersive animations for a worldwide audience.",
-    improvements: [
-      "Interactive data visualizations with Highcharts JS",
-      "Immersive parallax scrolling animations",
-      "WordPress CMS with Elementor",
-      "Responsive design for all devices",
-    ],
-    problem:
-      "Complex global health data needed to be presented accessibly for a worldwide audience.",
-    solution:
-      "Interactive Highcharts visualizations with parallax animations and user-centric design.",
-    image: unFp2030ImageSrc,
-    year: 2020,
-    slug: "united-nations-fp2030",
-    service: "Web Infrastructure",
-    category: "web",
-    client: "United Nations – FP2030",
-    link: "/services/web-design",
-  },
-  {
-    title: "PRÜFTECHNIK (Fluke) – Enterprise Web Administration",
-    description:
-      "Three years of enterprise web administration and content management for PRÜFTECHNIK, the industrial condition-monitoring brand of Fluke, part of the Fortive group (Fortune 500).",
-    overview:
-      "PRÜFTECHNIK is a global industrial maintenance technology brand, acquired by Fluke Corporation in 2019 and part of the Fortive group. From 2022 to 2025 we handled the majority of the website's updates: publishing content, quality control, troubleshooting CMS issues and continuous improvement, coordinated in German and English with product owners and stakeholders across time zones, and with developers to implement reliable solutions.",
-    goal: "Keep a global enterprise website accurate, current and reliable while coordinating many stakeholders in two languages.",
-    improvements: [
-      "Ongoing enterprise web administration (2022–2025)",
-      "Content publishing and quality control",
-      "CMS troubleshooting with the development team",
-      "German and English coordination across time zones",
-      "Continuous improvement of the web presence",
-    ],
-    problem:
-      "A global enterprise brand needed one dependable owner for daily website operations across languages, teams and time zones.",
-    solution:
-      "A long-term web administration and content management engagement covering publishing, quality control and CMS support.",
-    image: "/figma-assets/portfolio-pruftechnik.jpg",
-    year: 2025,
-    slug: "pruftechnik-fluke",
-    service: "Web Infrastructure",
-    category: "web",
-    client: "PRÜFTECHNIK (Fluke / Fortive)",
-    link: "/services/web-design",
-  },
-  {
-    title: "Activated Insights – M&A Website Consolidation",
-    description:
-      "Website consolidation after an acquisition: CareAcademy and WeCareConnect merged into the Activated Insights web presence, with 200+ pages redesigned and consolidated.",
-    overview:
-      "After Activated Insights acquired CareAcademy and WeCareConnect, we consolidated their websites into the Activated Insights web presence. Each page was migrated and adapted to the destination brand rather than copied mechanically: layouts and visual elements reworked, content preserved and restructured, links and responsive behavior checked, and the rollout coordinated to create one consistent experience across the healthcare workforce platform.",
-    goal: "Merge two acquired brands' websites into one consistent Activated Insights experience without losing content.",
-    improvements: [
-      "200+ pages migrated and consolidated",
-      "Each page adapted to the destination brand",
-      "Layouts and visual elements reworked",
-      "Content preserved and restructured",
-      "Links and responsive behavior checked before rollout",
-    ],
-    problem:
-      "After an acquisition, three separate web presences had to become one brand without losing content or search visibility.",
-    solution:
-      "Page-by-page WordPress migration and redesign into the Activated Insights site, with a coordinated rollout.",
-    image: "/figma-assets/portfolio-activatedinsights.jpg",
-    year: 2025,
-    slug: "activated-insights-migration",
-    service: "Web Infrastructure",
-    category: "web",
-    client: "Activated Insights",
-    link: "/services/web-design",
-  },
-  {
-    title: "MPA.online Streaming Platform",
-    description:
-      "Fullstack web app development for a medical education streaming platform, built with Next.js, Strapi, and MongoDB with Vimeo integration.",
-    overview:
-      "MPA.online is a streaming platform designed to help medical assistants learn through video courses. Built over approximately 6 months, the project began with a discovery call where we drafted the architecture. After designing the site in Figma, we implemented the platform using Next.js and Strapi to create a seamless learning experience with integrated video streaming and powerful search capabilities.",
-    goal: "Develop a fully functional streaming platform for medical education that enables medical assistants to learn through structured video courses with seamless search and playback.",
-    improvements: [
-      "Next.js frontend with server-side rendering for performance",
-      "Strapi headless CMS for flexible content management",
-      "Vimeo integration for reliable video streaming",
-      "MongoDB with Mongo Atlas as Elasticsearch for video search",
-      "Docker containerization for scalable deployment",
-      "Custom-coded features for full platform functionality",
-    ],
-    problem:
-      "Medical assistants lacked a dedicated, structured platform to learn essential clinical skills through video-based education.",
-    solution:
-      "A fullstack streaming platform built with Next.js and Strapi, featuring Vimeo video integration, MongoDB-powered search, and a user-friendly interface designed in Figma.",
-    image: mpaOnlineImageSrc,
-    year: 2024,
-    slug: "mpa-online",
-    service: "Web Infrastructure",
-    category: "web",
-    client: "MPA.online",
-    link: "/services/web-design",
-  },
-  {
-    title: "Miso Supermarket & Bakery",
-    description:
-      "Modern web design and digital solution for a local supermarket with integrated online shop and ordering system.",
-    overview:
-      "Miso Supermarket & Bakery is a local family-run business in Düsseldorf offering fresh baked goods and Asian groceries. To meet growing customer demands, a complete rebuild was carried out — from initial concept to design and technical implementation.",
-    goal: "Build a professional online presence with an integrated ordering and shop system to digitally extend the brick-and-mortar business and reach new customer segments.",
-    improvements: [
-      "Performance optimization for fast load times",
-      "Responsive design for all devices",
-      "Integrated online ordering system with real-time availability",
-      "Google Maps and location integration",
-      "SEO optimization for local search terms",
-      "Intuitive navigation and user-friendly interface",
-    ],
-    problem:
-      "No online presence; customers couldn't pre-order — leading to long wait times and revenue loss during peak hours.",
-    solution:
-      "Responsive website with integrated online shop, real-time ordering system, and Google Maps integration for a seamless customer experience.",
-    image:
-      "https://images.unsplash.com/photo-1591538519435-4578c3ba26d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXBlcm1hcmtldCUyMGJha2VyeSUyMHN0b3JlZnJvbnR8ZW58MXx8fHwxNzcyMjE0NzYxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    year: 2021,
-    slug: "miso-supermarket",
-    service: "Web Infrastructure",
-    category: "web",
-    client: "Miso GmbH",
-    link: "/services/web-design",
-  },
-  {
-    title: "SmileforYou – Conversion Optimization",
-    description:
-      "Full website redesign and conversion optimization for a leading German dental clinic chain, doubling their conversion rate from 5% to 11%.",
-    overview:
-      "We had the opportunity to work with SmileforYou, a leading dental clinic chain specializing in orthodontics — from traditional braces to innovative Invisalign technology. Based on Google Analytics data revealing that the majority of traffic comes from mobile devices, we adopted a mobile-first strategy. We renewed their existing website, created specialized landing pages for SEO, and developed a brand-new online platform that is user-friendly, informative, and aligned with SmileforYou's exceptional standards.",
-    goal: "Redesign and optimize the SmileforYou website with a mobile-first approach to significantly increase conversion rates and attract more patients through organic search.",
-    improvements: [
-      "Conversion rate doubled from 5% to 11%",
-      "Mobile-first responsive design strategy",
-      "SEO-optimized landing pages for patient acquisition",
-      "WordPress CMS for easy content management",
-      "Modern, friendly design reflecting the clinic's brand",
-      "Ongoing collaboration for continuous enhancement",
-    ],
-    problem:
-      "Outdated website with a low 5% conversion rate — poor mobile experience despite majority mobile traffic, and limited SEO visibility for patient acquisition.",
-    solution:
-      "Complete website redesign with mobile-first approach, SEO-optimized landing pages, and conversion-focused design — resulting in a 120% conversion rate increase to 11%.",
-    image: smileForYouImageSrc,
-    year: 2023,
-    slug: "smileforyou",
-    service: "Web Infrastructure",
-    category: "web",
-    client: "SmileforYou",
-    link: "/services/web-design",
-  },
-  {
-    title: "Technik Hoffmann – Fullstack Development",
-    description:
-      "Complex fullstack website development for a German precision engineering company, featuring jQuery animated bubbles, cards view, and intricate design implementation.",
-    overview:
-      "This project involved a team of 2 developers, 1 designer, and 1 QA tester, with the design completed by an external company. As the project manager, we oversaw the implementation and management of the project, which utilized technologies such as WordPress, jQuery, and PHP. The project was complex due to the length of time required for communication and decision-making processes. Key highlights include a visually striking animated bubbles interface built with jQuery and an interactive cards-based navigation system.",
-    goal: "Implement a complex, design-heavy corporate website for a precision engineering company with interactive jQuery animations, cards-based navigation, and seamless WordPress CMS integration.",
-    improvements: [
-      "jQuery animated bubbles for interactive service visualization",
-      "Cards-view navigation with smooth transitions",
-      "WordPress CMS with custom PHP development",
-      "Complex design implementation from external design specs",
-      "Multilingual support (German/English)",
-      "Full project management with cross-team coordination",
-    ],
-    problem:
-      "A precision engineering company needed a sophisticated online platform that could showcase their complex service portfolio in an engaging, interactive way while managing a multi-team development process.",
-    solution:
-      "Fullstack WordPress website with custom jQuery animations, interactive bubble-based service visualization, cards navigation, and PHP backend — delivered through structured project management across a 4-person team.",
-    image: hoffmannTechnikImageSrc,
-    year: 2023,
-    slug: "technik-hoffmann",
-    service: "Web Infrastructure",
-    category: "web",
-    client: "Hoffmann Technik",
-    link: "/services/web-design",
-  },
-  {
-    title: "WICKIE – Digital Marketing Agency Redesign",
-    description:
-      "Complete website redesign for a digital marketing agency, delivering a clean, responsive, and visually compelling WordPress site that preserves the client's brand identity.",
-    overview:
-      "Our client WICKIE helps businesses create, manage, and improve their social media presence. They develop strategies and campaigns to increase visibility, along with SEO strategies to drive more visitors to their website. WICKIE approached us with the idea of renewing and polishing their existing website. The goal was to create a clean, responsive, yet compelling and attractive redesign that fits the client's needs while staying true to their brand colors and fonts. We delivered a complete redesign of the entire website, and the project received a beautiful and grateful testimonial from the client.",
-    goal: "Redesign and modernize WICKIE's existing website with a clean, responsive layout that reflects their brand identity and enhances their digital marketing credibility.",
-    improvements: [
-      "Complete website redesign preserving brand colors and fonts",
-      "Responsive design optimized for all devices",
-      "WordPress with WooCommerce integration",
-      "Modern UX & UI design for improved engagement",
-      "Clean, compelling visual layout for agency credibility",
-      "5-star client testimonial received upon delivery",
-    ],
-    problem:
-      "An outdated website that no longer reflected the agency's expertise in digital marketing — lacking modern design, responsiveness, and visual appeal to attract potential clients.",
-    solution:
-      "Full website redesign with a clean, responsive WordPress build that preserves the client's brand identity while delivering a compelling, modern online platform worthy of a marketing agency.",
-    image: wickieImageSrc,
-    year: 2022,
-    slug: "wickie-agency",
-    service: "Web Infrastructure",
-    category: "web",
-    client: "WICKIE Agentur",
-    link: "/services/web-design",
-  },
-  {
-    title: "Digidog – Three.js & WordPress Integration",
-    description:
-      "Resolved complex Three.js and Elementor conflicts on our own agency website, implementing interactive 3D animations with SEO-optimized design on WordPress.",
-    overview:
-      "This internal project involved implementing a new design for our own agency website (digidog.org) that blends seamlessly with keyword optimization, while integrating a Three.js 3D animation without compromising performance or layout within Elementor. The main challenge was a conflict between Three.js and Elementor — requiring manual code adjustments to ensure seamless integration. After developing the animation separately, staging integration, conflict identification, and rigorous cross-browser testing, the result was a smooth, interactive 3D experience with full Elementor and plugin compatibility.",
-    goal: "Implement a new SEO-optimized design with integrated Three.js 3D animation on WordPress, resolving technical conflicts between Three.js and Elementor without compromising performance.",
-    improvements: [
-      "Three.js 3D animation integrated with WordPress/Elementor",
-      "Manual code adjustments to resolve JS/Elementor conflicts",
-      "SEO keyword optimization blended with new design",
-      "Cross-browser and cross-device compatibility testing",
-      "Staging environment for safe integration testing",
-      "Full plugin compatibility maintained post-integration",
-    ],
-    problem:
-      "Three.js animations conflicted with Elementor's rendering pipeline — causing layout breaks, performance issues, and plugin incompatibilities that required deep manual code resolution.",
-    solution:
-      "Separate Three.js development, staged integration, manual codebase adjustments to resolve conflicts, and rigorous cross-browser testing — resulting in a smooth 3D experience with full Elementor compatibility.",
-    image: digidogThreejsImageSrc,
-    year: 2023,
-    slug: "digidog-threejs",
-    service: "Web Infrastructure",
-    category: "web",
-    client: "Digidog (Internal)",
-    link: "/services/web-design",
-  },
-  {
-    title: "JobsVS – Recruitment Agency Website",
-    description:
-      "Design implementation and SEO for a recruitment agency, featuring Persy API integration to automatically display job listings from the client's HR platform.",
-    overview:
-      "Our client JobsVS is a recruitment agency that enables companies and applicants to find each other. We handled design implementation and SEO for JobsVS, building a responsive and clear website. The website integrates with Persy (Persy) via API, so the website owner doesn't have to duplicate work — job applications are pulled directly from Persy and displayed on the website automatically. The client provided the design, and our team of experts implemented it with a focus on creating an appealing yet clear and quality look. We also provided personalized SEO services including speed optimization, keyword research, and backend updates.",
-    goal: "Implement a provided design into a responsive, SEO-optimized recruitment website with seamless Persy API integration for automatic job listing synchronization.",
-    improvements: [
-      "Persy API integration for automatic job listings",
-      "Responsive and clear design implementation",
-      "Personalized SEO with keyword research and optimization",
-      "Website speed optimization and backend updates",
-      "Clean, appealing UX that matches agency branding",
-      "Automated job data sync eliminating manual duplicate work",
-    ],
-    problem:
-      "A recruitment agency needed their provided design implemented into a functional, SEO-optimized website with automated job listing management to avoid manual data entry.",
-    solution:
-      "Responsive website implementation with Persy API integration for automatic job display, combined with comprehensive SEO services including speed optimization and keyword research.",
-    image: jobsvsImageSrc,
-    year: 2022,
-    slug: "jobsvs-recruitment",
-    service: "Web Infrastructure",
-    category: "web",
-    client: "JobsVS",
-    link: "/services/web-design",
-  },
-
-  /* ─── AI Solutions & Automation ─── */
-  {
-    title: "AI Jewelry Sketch Automation",
-    description:
-      "Complete AI automation built in Make that reads customer emails, extracts requirements, and generates custom jewelry sketches 24/7 — eliminating 5–10 hours of daily manual work.",
-    overview:
-      "A jewelry business was spending 5–10 hours daily creating custom sketches from email requests. We built a complete AI automation in Make in just 6 hours that automatically reads customer emails, extracts requirements, and generates jewelry sketches nonstop. The result: eliminated manual work, enabled 24/7 sketch generation, reduced costs, improved response time, and created a fully scalable workflow that increased overall profitability.",
-    goal: "Eliminate manual sketch creation by building an end-to-end AI automation that reads customer emails, extracts jewelry requirements, and generates custom sketches automatically around the clock.",
-    improvements: [
-      "AI-powered email parsing and requirement extraction",
-      "Automated jewelry sketch generation via AI image models",
-      "24/7 nonstop operation without human intervention",
-      "Make automation workflow built in just 6 hours",
-      "Fully scalable pipeline for growing order volumes",
-      "Dramatic cost reduction and faster customer response times",
-    ],
-    problem:
-      "Manual jewelry sketch creation from email requests consumed 5–10 hours daily — slow, costly, and impossible to scale.",
-    solution:
-      "End-to-end AI automation in Make that reads emails, extracts requirements, and generates custom jewelry sketches 24/7 with zero manual effort.",
-    image: jewelrySketchImageSrc,
-    year: 2024,
-    slug: "ai-jewelry-sketch",
-    service: "Automation & AI",
-    category: "ai",
-    client: "Jewelry Business (Confidential)",
-    link: "/services/ai-integration",
-  },
-  /* ─── Custom Software ─── */
-  {
-    title: "HubSpot CRM – Dental Clinic Chain",
-    description:
-      "Enterprise HubSpot CRM implementation across a 7-branch dental clinic chain, integrating patient workflows, IVORIS API, and Make.com automation.",
-    overview:
-      "We implemented HubSpot CRM for a multi-branch orthodontic clinic chain with seven locations. The project involved defining a unified process across all branches — standardizing workflows, patient management, and administrative practices. We integrated HubSpot with the internal Orthodontic Platform via IVORIS API and the clinic website, using Make.com to orchestrate the entire integration. Patient data was managed as both contacts and deals, with careful data migration ensuring accuracy and compliance with healthcare regulations.",
-    goal: "Implement a unified CRM system across 7 dental clinic branches that standardizes patient workflows, automates deal pipelines, and integrates seamlessly with existing orthodontic software.",
-    improvements: [
-      "Unified CRM process across 7 clinic branches",
-      "HubSpot integration with IVORIS orthodontic API",
-      "Make.com workflow automation for seamless data flow",
-      "Custom deal pipeline with orthodontic-specific stages",
-      "Comprehensive staff training across all locations",
-      "Ongoing monitoring and iterative improvement system",
-    ],
-    problem:
-      "Five branches operating with different workflows, no centralized CRM, and complex integration requirements between HubSpot, the orthodontic platform, and the website.",
-    solution:
-      "Enterprise HubSpot CRM implementation with unified processes, IVORIS API integration, Make.com automation, custom deal pipelines, and comprehensive training programs across all branches.",
-    image: hubspotCrmImageSrc,
-    year: 2024,
-    slug: "hubspot-dental-crm",
-    service: "Internal Tools",
-    category: "software",
-    client: "Dental Clinic Chain (Confidential)",
-    link: "/services/custom-software",
-  },
-  {
-    title: "BeOriginalTours Operations Platform",
-    description:
-      "Automated booking, scheduling, and management platform for a European tour agency, built with Make.com, Python, MongoDB, and a custom Next.js dashboard.",
-    overview:
-      "BeOriginalTours is a European tour agency that we helped automate the booking and scheduling process for. The platform utilizes Make.com to automate workflows, and Python scripts were used to extract email information from bookings. We also built an event scheduling system to streamline the process. Additionally, a custom dashboard was created using Next.js, where the team can view monthly and weekly tour schedules, track guides, and manage payments. The entire architecture runs seamlessly through Make.com and Discord, ensuring an efficient and automated workflow for the agency.",
-    goal: "Automate the entire booking and scheduling pipeline for a tour agency — from email extraction to guide management and payment tracking — with a custom dashboard for full operational visibility.",
-    improvements: [
-      "Make.com workflow automation for booking pipeline",
-      "Python scripts for automated email data extraction",
-      "Custom Next.js dashboard for schedules and payments",
-      "MongoDB database for bookings and guide management",
-      "Discord integration for team communication and alerts",
-      "Event scheduling system for weekly and monthly tours",
-    ],
-    problem:
-      "Manual booking processing, scattered scheduling across spreadsheets, and no centralized view of guides, tours, or payments — leading to errors and inefficiency.",
-    solution:
-      "End-to-end automated architecture using Make.com, Python email extraction, MongoDB storage, Discord notifications, and a custom Next.js dashboard for full operational control.",
-    image: beOriginalToursCoverImageSrc,
-    year: 2024,
-    slug: "beoriginaltours-operations",
-    service: "Internal Tools",
-    category: "software",
-    client: "BeOriginalTours",
-    link: "/services/custom-software",
   },
 ];
 
