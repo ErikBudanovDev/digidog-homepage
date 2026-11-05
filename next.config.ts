@@ -36,6 +36,8 @@ const nextConfig: NextConfig = {
       { source: "/blog/website-erstellen-lassen-kosten-ablauf-tipps", destination: "/de/blog/website-erstellen-lassen-kosten-ablauf-tipps", permanent: true },
       { source: "/unser-portfolio", destination: "/portfolio", permanent: true },
       { source: "/unser-portfolio/", destination: "/portfolio", permanent: true },
+      { source: "/portfolio/cibaria-italiana", destination: "/portfolio", permanent: true },
+      { source: "/portfolio/monte-ofelio-group", destination: "/portfolio", permanent: true },
       // === Core Pages ===
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/about-us/", destination: "/about", permanent: true },
