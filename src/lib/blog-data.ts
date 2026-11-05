@@ -300,7 +300,7 @@ Thanks to Aram Adamyan and the Aibuben community for hosting the event.
     metaTitle: "Senior Developers and the Future of Software Engineering",
     metaDescription: "How AI coding agents could reshape software careers, from junior tasks to technical leadership—with research, a client example, and the limits of automation.",
     excerpt: "AI is moving from helping with individual tasks to organizing whole workflows. The same shift could eventually reach technical leadership.",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1080&q=80",
+    image: "/images/blog/covers/claude-code-team.webp",
     tag: "AI & Software Engineering",
     category: "software",
     author: "Erik Budanov",
@@ -392,7 +392,7 @@ These stages may overlap, stall, or arrive in a different order. The important p
 
 ## More software does not guarantee more developer jobs
 
-Cheaper development could make [custom software](/services/custom-software) affordable for many more businesses. That creates demand for products that would otherwise never get built.
+Cheaper development could make custom software affordable for many more businesses. That creates demand for products that would otherwise never get built.
 
 But the outcome for employment depends on who serves that demand. If agents build and maintain much of the additional software, a growing market does not automatically require a growing human workforce.
 
@@ -493,7 +493,7 @@ We don't just "add AI" — we engineer complete workflow systems. Our stack incl
 
 Ready to see how much time your team could save? See our [AI Integration service](/services/ai-integration) for the menu, or [book a free AI audit](https://calendly.com/erik-budanov/beratungsgespraech) for your specific stack.
     `,
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1080&q=80",
+    image: "/images/blog/covers/ai-automation.webp",
     tag: "AI Automation",
     category: "ai",
     author: "Erik Budanov",
@@ -563,7 +563,7 @@ The barrier to entry is lower than you think:
 
 Want to explore MCP for your business? See how we approach it in our [AI Integration service](/services/ai-integration), or [talk to our team](https://calendly.com/erik-budanov/beratungsgespraech) — we've been building MCP integrations since the protocol launched.
     `,
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
+    image: "/images/blog/covers/what-is-mcp.webp",
     tag: "AI Integration",
     category: "ai",
     author: "Erik Budanov",
@@ -643,9 +643,9 @@ The smartest strategy is often hybrid: use SaaS for generic functions and build 
 
 At Digidog, we specialize in exactly this approach. We help you identify what to build, what to buy, and how to connect it all.
 
-See how we structure [website builds end-to-end](/services/web-design), or [let's map your tech stack together](https://calendly.com/erik-budanov/beratungsgespraech).
+See how we [connect AI agents to your existing tools](/services/ai-integration), or [let's map your tech stack together](https://calendly.com/erik-budanov/beratungsgespraech).
     `,
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1080&q=80",
+    image: "/images/blog/covers/build-vs-buy.webp",
     tag: "Software",
     category: "software",
     author: "Erik Budanov",
@@ -951,7 +951,7 @@ Yes. Pass --headless in the config to run without a UI. For containerized enviro
 
 Playwright MCP uses the browser's accessibility tree — the same structured representation screen readers use — instead of pixels. This is faster, more deterministic, and avoids the cost of vision model calls.
     `,
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
+    image: "/images/blog/covers/playwright-mcp.webp",
     tag: "AI Integration",
     category: "ai",
     author: "Erik Budanov",
@@ -1055,7 +1055,7 @@ I work directly with you to define and build the workflow, using AI to support r
 
 [AI Integration service](/services/ai-integration)
     `,
-    image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=1080&q=80",
+    image: "/images/blog/covers/slack-mcp.webp",
     tag: "AI Integration",
     category: "ai",
     author: "Erik Budanov",
@@ -1277,11 +1277,11 @@ Your sales team talks to customers every day. They know the questions prospects 
 
 If you're considering a website redesign, we offer a free 30-minute strategy call to assess your current site and discuss the best approach for your business. We'll review your performance data, identify quick wins, and outline what a redesign project would look like for your specific situation.
 
-See how we approach [website redesigns end-to-end](/services/web-design), or [book a free website audit →](https://calendly.com/erik-budanov/beratungsgespraech)
+See how we [connect Claude and AI agents to your website, CRM and email](/services/ai-integration), or [book a free call →](https://calendly.com/erik-budanov/beratungsgespraech)
 
 No pitch, no pressure — just an honest assessment of where you are and what would make the biggest impact.
 `,
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1080&q=80",
+    image: "/images/blog/covers/website.webp",
     tag: "Web Design",
     category: "web",
     author: "Erik Budanov",
@@ -1584,7 +1584,7 @@ Once you have Supabase connected via MCP, the natural next step is chaining it w
 
 If you want help building a custom Supabase MCP server for your specific use case, or connecting it with other tools in your stack, see our [AI Integration service](/services/ai-integration) or [book a free consultation](https://calendly.com/erik-budanov/beratungsgespraech). We specialize in exactly this kind of AI integration for mid-size companies.
 `,
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
+    image: "/images/blog/covers/supabase-mcp.webp",
     tag: "AI Integration",
     category: "ai",
     author: "Erik Budanov",
@@ -1824,7 +1824,7 @@ Personal skills live in your local Claude Code or Claude Desktop directory (typi
 
 Yes. Skills are just folders of files, so you can commit them to a Git repository or share via any file-sharing method. Many marketing and engineering teams maintain Skill repositories that all members install locally for consistent AI behavior across the team.
 `,
-    image: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1080&q=80",
+    image: "/images/blog/covers/skills-vs-mcp.webp",
     tag: "AI Integration",
     category: "ai",
     author: "Erik Budanov",
@@ -2017,9 +2017,9 @@ Because now, if you can explain it, you can create it.
 
 ---
 
-*At Digidog, we help companies build and deploy AI-powered applications on their own infrastructure. Whether you need a custom tool, an internal dashboard, or a complete SaaS product — we can take you from idea to production in days, not months. See our [Custom Software service](/services/custom-software), or [book a free strategy call](https://calendly.com/erik-budanov/beratungsgespraech) and tell us what you want to build.*
+*At Digidog, we help companies build and deploy AI-powered applications on their own infrastructure. Whether you need a custom tool, an internal dashboard, or a complete SaaS product — we can take you from idea to production in days, not months. See our [AI integration service](/services/ai-integration), or [book a free strategy call](https://calendly.com/erik-budanov/beratungsgespraech) and tell us what you want to build.*
 `,
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1080&q=80",
+    image: "/images/blog/covers/vibe-coding.webp",
     tag: "AI",
     category: "ai",
     author: "Erik Budanov",
@@ -2204,7 +2204,7 @@ This works best for service businesses, agencies, operations-heavy teams, and fo
 ---
 
 *We help companies replace $2K-10K/month SaaS stacks with custom AI operations systems — usually in 4-8 weeks. The result: lower costs, full data ownership, and a system that actually fits how your business works. See our [AI Solutions service](/services/ai-integration), or [book a free AI infrastructure audit](https://calendly.com/erik-budanov/beratungsgespraech) to see what's replaceable in your stack.*`,
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
+    image: "/images/blog/covers/replace-saas.webp",
     tag: "AI",
     category: "ai",
     author: "Erik Budanov",
@@ -2398,7 +2398,7 @@ They refer to \`@modelcontextprotocol/server-github\`, which was deprecated in A
 
 If you want GitHub, Slack and your other tools wired into one AI workflow for your team, see our [AI Integration service](/services/ai-integration) or [book a free consultation](https://calendly.com/erik-budanov/beratungsgespraech).
 `,
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
+    image: "/images/blog/covers/github-mcp.webp",
     tag: "AI Integration",
     category: "ai",
     author: "Erik Budanov",

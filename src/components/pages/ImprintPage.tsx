@@ -1,3 +1,4 @@
+import { useTranslation } from "@/i18n/i18n-context";
 import { useEffect } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -75,6 +76,8 @@ function LegalSection({
 }
 
 export default function ImprintPage() {
+  const { locale } = useTranslation();
+  const isDE = locale === "DE";
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -93,9 +96,9 @@ export default function ImprintPage() {
       <HeroLayout
         backgroundElements={<HeroBackground />}
         minHeight="min-h-[340px] md:min-h-[400px]"
-        badge="Legal"
-        title="Imprint"
-        description="Legal information and responsible party details for DigiDog."
+        badge={isDE ? "Rechtliches" : "Legal"}
+        title={isDE ? "Impressum" : "Imprint"}
+        description={isDE ? "Rechtliche Angaben und verantwortliche Stelle für DigiDog." : "Legal information and responsible party details for DigiDog."}
         align="center"
         padding="py-[100px] lg:py-[120px]"
       />

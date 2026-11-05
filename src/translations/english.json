@@ -32,11 +32,11 @@
     },
     "about": {
       "title": "Erik Budanov — Independent Product Engineer",
-      "description": "Meet Erik Budanov, founder of DigiDog and independent product engineer. Senior ownership of redesigns, MVPs and integrations, supported by AI agents."
+      "description": "Meet Erik Budanov, founder of DigiDog and independent product engineer. He connects Claude and AI agents to CRM, bookings, email and analytics."
     },
     "contact": {
       "title": "Contact Erik Budanov — Discuss Your Project",
-      "description": "Planning a website redesign, MVP or integration? Discuss your project directly with Erik Budanov, the independent product engineer behind DigiDog."
+      "description": "Want an AI agent to take over manual work? Discuss your process directly with Erik Budanov, the independent product engineer behind DigiDog."
     },
     "portfolio": {
       "title": "Case Studies: AI Operations Systems in Production",
@@ -117,9 +117,9 @@
     ]
   },
   "contactCta": {
-    "title": "What should your next project improve?",
-    "subtitle": "Share your website or product brief. We’ll discuss the business goal, technical requirements and a practical first step.",
-    "cta": "Discuss your project with Erik",
+    "title": "Which task should an AI agent take off your plate?",
+    "subtitle": "Tell me which work eats your week and which tools you use. We’ll look at what Claude and an AI agent can take over first.",
+    "cta": "Talk to Erik about an AI agent",
     "founderName": "Erik Budanov",
     "founderRole": "Founder & Product Engineer",
     "thankYou": "Thank you",
@@ -135,11 +135,11 @@
   "ctaBanner": {
     "title": "One engineer. Direct ownership.",
     "subtitle": "I work independently, using AI agents to support research, implementation and testing. I make the engineering decisions, review the work and remain responsible for delivery.",
-    "cta": "Discuss your project with Erik"
+    "cta": "Talk to Erik about an AI agent"
   },
   "contactForm": {
     "title": "Tell me about your project",
-    "subtitle": "Send your website, project goal and target timeline. I’ll get back to you with next steps.",
+    "subtitle": "Describe the manual work and the tools involved. I’ll get back to you with a first step for an AI agent.",
     "name": "Your Name",
     "email": "Email Address",
     "company": "Company (optional)",

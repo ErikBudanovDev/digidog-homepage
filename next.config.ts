@@ -38,6 +38,15 @@ const nextConfig: NextConfig = {
       { source: "/unser-portfolio/", destination: "/portfolio", permanent: true },
       { source: "/portfolio/cibaria-italiana", destination: "/portfolio", permanent: true },
       { source: "/portfolio/monte-ofelio-group", destination: "/portfolio", permanent: true },
+      { source: "/portfolio/miso-supermarket", destination: "/portfolio", permanent: true },
+      { source: "/de/portfolio/miso-supermarket", destination: "/de/portfolio", permanent: true },
+      // === AI-only site (2026-11-05): web design / custom software removed ===
+      { source: "/services/web-design", destination: "/services/ai-integration", permanent: true },
+      { source: "/services/custom-software", destination: "/services/ai-integration", permanent: true },
+      { source: "/de/dienstleistungen/webdesign", destination: "/de/dienstleistungen/ki-integration", permanent: true },
+      { source: "/de/dienstleistungen/individuelle-software", destination: "/de/dienstleistungen/ki-integration", permanent: true },
+      { source: "/de/webdesign-agentur-berlin", destination: "/de/dienstleistungen/ki-integration", permanent: true },
+      { source: "/de/webdesign-agentur-hamburg", destination: "/de/dienstleistungen/ki-integration", permanent: true },
       // === Core Pages ===
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/about-us/", destination: "/about", permanent: true },

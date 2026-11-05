@@ -387,9 +387,9 @@ Für den nächsten Entwicklungsschritt helfen konkrete Beobachtungen: Wo bleibt 
 
 Ich bin Erik Budanov, unabhängiger Product Engineer und Full-Stack-Entwickler. Ich unterstütze Sie dabei, einen konkreten Ablauf abzugrenzen und technisch umzusetzen. Umfang, Aufwand und die nächsten Schritte klären wir anhand Ihres Vorhabens.
 
-Mehr zur [individuellen Softwareentwicklung und MVP-Umsetzung](/de/dienstleistungen/individuelle-software). Für eine erste [Projektanfrage](/de/kontakt) helfen eine Beschreibung des heutigen Ablaufs, vorhandene Skizzen und eine Liste der beteiligten Systeme.
+Mehr zur [KI-Integration mit Claude und KI-Agenten](/de/dienstleistungen/ki-integration). Für eine erste [Projektanfrage](/de/kontakt) helfen eine Beschreibung des heutigen Ablaufs, vorhandene Skizzen und eine Liste der beteiligten Systeme.
     `,
-    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1080&q=80",
+    "image": "/images/blog/covers/build-vs-buy.webp",
     "tag": "Software",
     "category": "software",
     "author": "Erik Budanov",
@@ -473,7 +473,7 @@ Wir „fügen nicht einfach KI hinzu" — wir entwickeln vollständige Workflow-
 
 Möchten Sie sehen, wie viel Zeit Ihr Team sparen könnte? [Kostenloses KI-Audit buchen](/contact).
     `,
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1080&q=80",
+    image: "/images/blog/covers/ai-automation.webp",
     tag: "KI-Automatisierung",
     category: "ai",
     author: "Erik Budanov",
@@ -543,7 +543,7 @@ Die Einstiegshürde ist niedriger als Sie denken:
 
 Möchten Sie MCP für Ihr Unternehmen erkunden? [Sprechen Sie mit unserem Team](/contact) — wir entwickeln MCP-Integrationen seit der Einführung des Protokolls.
     `,
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
+    image: "/images/blog/covers/what-is-mcp.webp",
     tag: "KI-Integration",
     category: "ai",
     author: "Erik Budanov",
@@ -618,7 +618,7 @@ Wir kombinieren Design-Expertise mit technischer Tiefe. Unsere Websites sind nic
 
 [Kostenloses Erstgespräch vereinbaren](/contact)
     `,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1080&q=80",
+    image: "/images/blog/covers/website-de.webp",
     tag: "Webentwicklung",
     category: "web",
     author: "Erik Budanov",
@@ -686,7 +686,7 @@ Der ROI wurde in 6 Wochen erreicht. Das System kostete 12.000 € in der Entwick
 
 [Möchten Sie ähnliche Ergebnisse? Sprechen Sie uns an.](/contact)
     `,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1080&q=80",
+    image: "/images/blog/covers/crm-case.webp",
     tag: "Fallstudie",
     category: "case-study",
     author: "Erik Budanov",
@@ -753,7 +753,7 @@ Für Gesundheitspraxen liefert die Kombination aus modernem Webdesign, lokaler S
 
 [Ist Ihre Praxis online unsichtbar? Kostenloses Audit anfordern.](/contact)
     `,
-    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1080&q=80",
+    image: "/images/blog/covers/dental-case.webp",
     tag: "Fallstudie",
     category: "case-study",
     author: "Erik Budanov",
@@ -833,7 +833,7 @@ Bei Digidog sind wir auf genau diesen Ansatz spezialisiert. Wir helfen Ihnen zu 
 
 [Lassen Sie uns gemeinsam Ihren Tech-Stack planen.](/contact)
     `,
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1080&q=80",
+    image: "/images/blog/covers/build-vs-buy.webp",
     tag: "Software",
     category: "software",
     author: "Erik Budanov",
@@ -1001,7 +1001,7 @@ Ja. Setzen Sie \`--headless\` in der Config, um ohne UI zu laufen. Für Containe
 
 Playwright MCP nutzt den Accessibility-Tree des Browsers — dieselbe strukturierte Darstellung, die auch Screenreader verwenden — statt Pixel. Das ist schneller, deterministischer und vermeidet die Kosten von Vision-Modell-Aufrufen.
     `,
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
+    image: "/images/blog/covers/playwright-mcp.webp",
     tag: "KI-Integration",
     category: "ai",
     author: "Erik Budanov",
@@ -1100,7 +1100,7 @@ Ich bin Erik Budanov, unabhängiger Produktentwickler und Gründer von DigiDog. 
 
 [KI-Integration](/de/dienstleistungen/ki-integration) · [Beratungsgespräch buchen](https://calendly.com/erik-budanov/beratungsgespraech)
     `,
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
+    image: "/images/blog/covers/slack-mcp.webp",
     tag: "KI-Integration",
     category: "ai",
     author: "Erik Budanov",
@@ -1248,11 +1248,11 @@ Vergleichen Sie Suchdaten erst über geeignete Zeiträume und berücksichtigen S
 
 Für ein erstes Gespräch helfen Ihre aktuelle Website, die wichtigsten Probleme und eine Liste der Inhalte oder Funktionen, die erhalten bleiben sollen.
 
-Ich bin Erik Budanov, unabhängiger Product Engineer und Full-Stack-Entwickler. Mehr zur direkten Zusammenarbeit finden Sie beim [Website-Redesign](/de/dienstleistungen/webdesign). Über die [Projektanfrage](/de/kontakt) können Sie Ihr Vorhaben beschreiben.
+Ich bin Erik Budanov, unabhängiger Product Engineer und Full-Stack-Entwickler. Mehr zur direkten Zusammenarbeit finden Sie bei der [KI-Integration](/de/dienstleistungen/ki-integration). Über die [Projektanfrage](/de/kontakt) können Sie Ihr Vorhaben beschreiben.
 
-Wenn stattdessen eine eigene Kundenplattform oder ein interner Geschäftsprozess entstehen soll, finden Sie mehr zur [individuellen Softwareentwicklung](/de/dienstleistungen/individuelle-software).
+Wenn stattdessen eine eigene Kundenplattform oder ein interner Geschäftsprozess entstehen soll, finden Sie mehr zur [KI-Integration mit Claude](/de/dienstleistungen/ki-integration).
     `,
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1080&q=80",
+    image: "/images/blog/covers/website-de.webp",
     tag: "Webdesign",
     category: "web",
     author: "Erik Budanov",
@@ -1404,7 +1404,7 @@ Ein E-Commerce-Unternehmen nutzt Supabase zur Bestandsverfolgung. Ihr KI-Agent f
 
 Wenn Sie Hilfe beim Aufbau eines benutzerdefinierten Supabase MCP Servers benötigen, sehen Sie unsere [KI-Integration-Dienstleistung](/de/dienstleistungen/ki-integration) oder [buchen Sie ein kostenloses Beratungsgespräch](https://calendly.com/erik-budanov/beratungsgespraech).
     `,
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1080&q=80",
+    image: "/images/blog/covers/supabase-mcp.webp",
     tag: "KI-Integration",
     category: "ai",
     author: "Erik Budanov",
@@ -1676,9 +1676,9 @@ Die Mittelschicht — der "ich baue dir eine WordPress-Seite mit ein paar Custom
 
 ## Brauchst du Hilfe?
 
-Wenn du mit Vibe Coding startest und stecken bleibst, oder ein konkretes Projekt im Kopf hast und nicht weißt, wie du anfangen sollst: Schau dir unsere [Individuelle Software-Dienstleistung](/de/dienstleistungen/individuelle-software) an, oder [buche ein kostenloses KI-Operations-Audit](https://calendly.com/erik-budanov/beratungsgespraech). Wir gehen mit dir durch deinen Use Case und zeigen, wie weit du allein kommen kannst — und wo es sich lohnt, mit uns zusammenzuarbeiten.
+Wenn du mit Vibe Coding startest und stecken bleibst, oder ein konkretes Projekt im Kopf hast und nicht weißt, wie du anfangen sollst: Schau dir unsere [KI-Integration](/de/dienstleistungen/ki-integration) an, oder [buche ein kostenloses KI-Operations-Audit](https://calendly.com/erik-budanov/beratungsgespraech). Wir gehen mit dir durch deinen Use Case und zeigen, wie weit du allein kommen kannst — und wo es sich lohnt, mit uns zusammenzuarbeiten.
 `,
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1080&q=80",
+    image: "/images/blog/covers/vibe-coding.webp",
     tag: "Vibe Coding",
     category: "ai",
     author: "Erik Budanov",
@@ -1898,7 +1898,7 @@ Persönliche Skills leben im lokalen Claude-Code- oder Claude-Desktop-Verzeichni
 
 Ja. Skills sind einfache Datei-Ordner, also lassen sie sich in einem Git-Repository committen oder über jeden anderen Datei-Sharing-Weg teilen. Viele Marketing- und Engineering-Teams pflegen ein gemeinsames Skill-Repository, das alle Mitglieder lokal installieren, um konsistentes KI-Verhalten im Team sicherzustellen.
 `,
-    image: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1080&q=80",
+    image: "/images/blog/covers/skills-vs-mcp.webp",
     tag: "KI-Integration",
     category: "ai",
     author: "Erik Budanov",

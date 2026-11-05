@@ -958,8 +958,8 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen overflow-x-hidden scroll-smooth" style={{ background: colors.navyDeep }}>
             <SEO
-        title="Contact Us - Free AI & Web Development Consultation"
-        description="Get in touch with Digidog for a free consultation on AI automation, web development, or custom software. We respond within 24 hours."
+        title="Contact Erik Budanov – AI Agents & Claude Integration"
+        description="Get in touch with Digidog for a free call about AI agents and Claude integration for your business. We respond within 24 hours."
         canonical="/contact"
       />
       <Navbar />
