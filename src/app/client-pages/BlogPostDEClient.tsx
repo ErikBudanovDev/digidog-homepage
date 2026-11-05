@@ -5,6 +5,7 @@
 "use client";
 
 import Link from "next/link";
+import { AuthorBox } from "@/components/AuthorBox";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import type { BlogPost } from "@/lib/blog-data";
@@ -88,6 +89,7 @@ export default function BlogPostDEClient({ post }: { post: BlogPost }) {
           className="blog-content"
           dangerouslySetInnerHTML={{ __html: markdownToHtml(post.content) }}
         />
+        <AuthorBox locale="DE" currentSlug={post.slug} />
       </article>
 
       {/* CTA — German */}

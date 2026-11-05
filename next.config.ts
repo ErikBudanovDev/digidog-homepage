@@ -15,11 +15,27 @@ const nextConfig: NextConfig = {
    * 301 Redirects — Old WordPress URLs → New Next.js routes
    * Preserves SEO equity from indexed pages
    * ───────────────────────────────────────────── */
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       // === AI pages consolidated (SEO audit 2026-11-05) ===
       { source: "/services/ai-solutions", destination: "/services/ai-integration", permanent: true },
       { source: "/de/dienstleistungen/ki-loesungen", destination: "/de/dienstleistungen/ki-integration", permanent: true },
+      { source: "/blog/website-erstellen-lassen-kosten-ablauf-tipps", destination: "/de/blog/website-erstellen-lassen-kosten-ablauf-tipps", permanent: true },
+      { source: "/unser-portfolio", destination: "/portfolio", permanent: true },
+      { source: "/unser-portfolio/", destination: "/portfolio", permanent: true },
       // === Core Pages ===
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/about-us/", destination: "/about", permanent: true },

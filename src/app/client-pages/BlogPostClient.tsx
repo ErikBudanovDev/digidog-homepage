@@ -4,6 +4,7 @@
 "use client";
 
 import Link from "next/link";
+import { AuthorBox } from "@/components/AuthorBox";
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -199,6 +200,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
           className="blog-content"
           dangerouslySetInnerHTML={{ __html: markdownToHtml(post.content) }}
         />
+        <AuthorBox locale="EN" currentSlug={post.slug} />
       </article>
 
       {/* CTA */}
