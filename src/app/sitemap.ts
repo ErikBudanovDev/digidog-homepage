@@ -5,7 +5,8 @@ import { projectsMeta } from "@/lib/portfolio-meta";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://digidog.org";
-  const now = new Date().toISOString();
+  // Real last-content-change date. Update when page content changes (not on every build).
+  const now = "2026-11-05";
 
   const staticPages: MetadataRoute.Sitemap = [
     // English pages

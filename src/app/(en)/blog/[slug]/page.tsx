@@ -63,7 +63,8 @@ export default async function BlogPostPage({ params }: Props) {
     headline: post.title,
     description: post.metaDescription,
     image: post.image.startsWith("http") ? post.image : `https://digidog.org${post.image}`,
-    author: { "@type": "Person", name: post.author, url: "https://digidog.org/about" },
+    author: { "@type": "Person", "@id": "https://digidog.org/#erik", name: post.author, url: "https://digidog.org/about", jobTitle: "Founder", sameAs: ["https://www.upwork.com/freelancers/erikbudanov"] },
+    dateModified: post.date,
     publisher: {
       "@type": "Organization",
       name: "DigiDog",

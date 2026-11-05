@@ -17,14 +17,14 @@ import { getLocalizedRoute } from "@/i18n/routes";
  */
 const FEATURED: Record<string, string[]> = {
   EN: [
+    "claude-code-for-business",
     "claude-skills-vs-mcp-servers",
     "vibe-coding-vps-build-deploy-app-with-ai",
-    "replace-saas-with-ai-vps",
   ],
   DE: [
-    "vibe-coding-deutschland-anleitung",
-    "claude-skills-vs-mcp-server",
+    "claude-code-fuer-unternehmen",
     "ki-automatisierung-mittelstand",
+    "claude-skills-vs-mcp-server",
   ],
 };
 

@@ -510,10 +510,10 @@ function ProcessSection() {
             <SectionBadge variant="dark" className="mb-6">{t.web.processBadge}</SectionBadge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <SectionHeading theme="dark" subtitle="Five clearly defined phases for maximum project success.">
-              From Idea to{" "}
+            <SectionHeading theme="dark" subtitle={t.web.processSubtitle}>
+              {t.web.processTitle1}
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: colors.gradientServicesAccent }}>
-                Result
+                {t.web.processTitle2}
               </span>
             </SectionHeading>
           </ScrollReveal>
@@ -667,9 +667,9 @@ function TechStackSection() {
           <ScrollReveal delay={0.1}>
             <SectionHeading
               theme="light"
-              subtitle="We rely on proven, modern technologies for maximum performance and future-proofing."
+              subtitle={t.web.techSubtitle}
             >
-              Our Tech Stack
+              {t.web.techTitle}
             </SectionHeading>
           </ScrollReveal>
         </div>

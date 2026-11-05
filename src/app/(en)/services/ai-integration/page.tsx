@@ -14,7 +14,9 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org", "@type": "Service",
   name: "AI Integration Services & Claude Consulting",
-  provider: { "@type": "Organization", name: "Digidog", url: "https://digidog.org" },
+  provider: { "@id": "https://digidog.org/#org" },
+  url: "https://digidog.org/services/ai-integration",
+  inLanguage: "en",
   description: "AI automation consulting and implementation for mid-size companies.",
   serviceType: "AI Consulting",
   areaServed: [{ "@type": "Country", name: "United States" }, { "@type": "Country", name: "United Kingdom" }, { "@type": "Country", name: "Germany" }, { "@type": "Country", name: "Austria" }, { "@type": "Country", name: "Switzerland" }],

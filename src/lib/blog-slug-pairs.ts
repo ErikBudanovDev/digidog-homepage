@@ -8,7 +8,6 @@
 export const EN_TO_DE: Record<string, string> = {
   "ai-automation-for-mid-size-companies": "ki-automatisierung-mittelstand",
   "what-is-mcp-model-context-protocol":   "was-ist-mcp-model-context-protocol",
-  "website-erstellen-lassen-kosten-ablauf-tipps": "website-erstellen-lassen-kosten-ablauf-tipps",
   "custom-software-vs-off-the-shelf":     "individuelle-software-vs-standardsoftware",
   "playwright-mcp-server-complete-guide": "playwright-mcp-server-anleitung",
   "slack-mcp-server-setup-guide":         "slack-mcp-server-einrichten",

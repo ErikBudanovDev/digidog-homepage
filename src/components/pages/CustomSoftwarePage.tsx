@@ -556,37 +556,25 @@ function ShowcaseSection() {
   const { t } = useTranslation();
   const showcases = [
     {
-      title: "Connecting Systems Seamlessly",
-      text: "Your existing tools — CRM, ERP, accounting, email — often work in isolation. We create a unified data bridge that synchronizes all systems.",
-      bullets: [
-        "REST & GraphQL API development",
-        "Bidirectional data synchronization",
-        "Webhooks and event-driven architecture",
-      ],
+      title: t.software.showcase1Title,
+      text: t.software.showcase1Text,
+      bullets: [...t.software.showcase1Bullets],
       image:
         "https://images.unsplash.com/photo-1558550087-a6911654de2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBUEklMjBpbnRlZ3JhdGlvbiUyMGNsb3VkJTIwcGxhdGZvcm18ZW58MXx8fHwxNzcyMjcxMTE4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       reverse: false,
     },
     {
-      title: "Automating Processes",
-      text: "Manual data entry, document processing, and recurring workflows cost time and money. Our automation solutions eliminate bottlenecks.",
-      bullets: [
-        "Workflow orchestration and task queues",
-        "Automatic data validation and cleansing",
-        "Rule-based and AI-powered decisions",
-      ],
+      title: t.software.showcase2Title,
+      text: t.software.showcase2Text,
+      bullets: [...t.software.showcase2Bullets],
       image:
         "https://images.unsplash.com/photo-1760952851538-17a59f691efe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHdvcmtmbG93JTIwYXV0b21hdGlvbiUyMHN5c3RlbXxlbnwxfHx8fDE3NzIyNzExMTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       reverse: true,
     },
     {
-      title: "Scalable Architectures",
-      text: "From microservices and container orchestration to cloud-native deployments — we build software that grows with your business.",
-      bullets: [
-        "Microservice and event-driven architecture",
-        "Container deployments with Docker & Kubernetes",
-        "Auto-scaling and load balancing",
-      ],
+      title: t.software.showcase3Title,
+      text: t.software.showcase3Text,
+      bullets: [...t.software.showcase3Bullets],
       image:
         "https://images.unsplash.com/photo-1548544027-1a96c4c24c7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZXJ2ZXIlMjBpbmZyYXN0cnVjdHVyZSUyMG1pY3Jvc2VydmljZXN8ZW58MXx8fHwxNzcyMjcxMTE5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       reverse: false,
@@ -630,10 +618,10 @@ function ProcessSection() {
             <SectionBadge variant="dark" className="mb-6">{t.software.processBadge}</SectionBadge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <SectionHeading theme="dark" subtitle="Five proven steps for successful software projects.">
-              From Idea to{" "}
+            <SectionHeading theme="dark" subtitle={t.software.processSubtitle}>
+              {t.software.processTitle1}
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(135deg, #06b6d4, #10b981)" }}>
-                Finished System
+                {t.software.processTitle2}
               </span>
             </SectionHeading>
           </ScrollReveal>
@@ -763,9 +751,9 @@ function TechStackSection() {
           <ScrollReveal delay={0.1}>
             <SectionHeading
               theme="light"
-              subtitle="We rely on proven backend technologies and cloud infrastructure for robust, maintainable systems."
+              subtitle={t.software.techSubtitle}
             >
-              Our Tech Stack
+              {t.software.techTitle}
             </SectionHeading>
           </ScrollReveal>
         </div>

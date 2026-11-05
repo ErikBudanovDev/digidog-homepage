@@ -24,6 +24,27 @@ export const metadata: Metadata = {
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "KI-Integration & KI-Agenten für Unternehmen",
+  serviceType: "KI-Beratung und KI-Integration",
+  inLanguage: "de",
+  url: "https://digidog.org/de/dienstleistungen/ki-integration",
+  provider: { "@id": "https://digidog.org/#org" },
+  description: "Claude, KI-Agenten und MCP, verbunden mit CRM, E-Mail, Buchungen und Analytics. Kostenloser KI-Prozess-Check, Pilot zum Festpreis in 2 bis 3 Wochen.",
+  areaServed: [
+    { "@type": "Country", name: "Deutschland" },
+    { "@type": "Country", name: "Österreich" },
+    { "@type": "Country", name: "Schweiz" },
+  ],
+};
+
 export default function AiIntegrationPageDE() {
-  return <AiIntegrationDEClient />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <AiIntegrationDEClient />
+    </>
+  );
 }
