@@ -3,7 +3,7 @@ import type { Locale } from "./i18n-context";
 export const routes: Record<Locale, Record<string, string>> = {
   EN: {
     home: "/",
-    aiSolutions: "/services/ai-solutions",
+    aiSolutions: "/services/ai-integration",
     aiIntegration: "/services/ai-integration",
     webDesign: "/services/web-design",
     customSoftware: "/services/custom-software",
@@ -17,7 +17,7 @@ export const routes: Record<Locale, Record<string, string>> = {
   },
   DE: {
     home: "/de",
-    aiSolutions: "/de/dienstleistungen/ki-loesungen",
+    aiSolutions: "/de/dienstleistungen/ki-integration",
     aiIntegration: "/de/dienstleistungen/ki-integration",
     webDesign: "/de/dienstleistungen/webdesign",
     customSoftware: "/de/dienstleistungen/individuelle-software",
@@ -31,7 +31,7 @@ export const routes: Record<Locale, Record<string, string>> = {
   },
   TR: {
     home: "/",
-    aiSolutions: "/services/ai-solutions",
+    aiSolutions: "/services/ai-integration",
     aiIntegration: "/services/ai-integration",
     webDesign: "/services/web-design",
     customSoftware: "/services/custom-software",

@@ -404,9 +404,9 @@ export const de = {
 
     /* Hero */
     heroBadge: "KI-Beratung & KI-Integration mit Claude",
-    heroTitle1: "Sprechen Sie mit",
-    heroTitle2: "Ihrem Unternehmen",
-    heroTitle3: "Mit KI",
+    heroTitle1: "KI-Integration",
+    heroTitle2: "für Ihr Unternehmen",
+    heroTitle3: "mit Claude",
     heroDescription:
       "Integrieren Sie Ihre Abläufe, Daten und Workflows in Ihren",
     heroDescHighlight: "Claude- oder GPT-Chat",

@@ -33,7 +33,7 @@ const services = [
     glowColor: colors.blue,
     orbColor: "rgba(0, 87, 255, 0.12)",
     number: "01",
-    link: "/services/ai-solutions",
+    link: "/services/ai-integration",
   },
   {
     icon: Blocks,
@@ -55,7 +55,7 @@ const services = [
     glowColor: colors.purple,
     orbColor: "rgba(168, 85, 247, 0.12)",
     number: "02",
-    link: "/services/ai-solutions",
+    link: "/services/ai-integration",
   },
   {
     icon: Code,

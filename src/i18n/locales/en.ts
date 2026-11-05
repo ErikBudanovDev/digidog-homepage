@@ -402,9 +402,9 @@ export const en: DeepStringify<typeof de> = {
 
     /* Hero */
     heroBadge: "AI integration services & Claude consulting",
-    heroTitle1: "Talk to Your",
-    heroTitle2: "Business",
-    heroTitle3: "With AI",
+    heroTitle1: "AI integration",
+    heroTitle2: "for your business",
+    heroTitle3: "with Claude",
     heroDescription:
       "Integrate your operations, data, and workflows into your",
     heroDescHighlight: "Claude or GPT Chat",

@@ -1,9 +1,9 @@
 {
   "seo": {
     "home": {
-      "title": "KI-Integration & KI-Beratung für Unternehmen",
-      "description": "KI-Agentur für Unternehmen in Deutschland, Österreich und der Schweiz: Claude, KI-Agenten und MCP, verbunden mit CRM, Buchungen, E-Mail und Analytics. Echte Kundenprojekte. Kostenloser KI-Prozess-Check.",
-      "ogTitle": "KI-Integration & KI-Beratung für Unternehmen | DigiDog",
+      "title": "DigiDog – KI-Agenten & Claude für Ihr Unternehmen",
+      "description": "Claude, KI-Agenten und MCP, verbunden mit CRM, Buchungen, E-Mail und Analytics Ihres Unternehmens. Für Unternehmen in Deutschland, Österreich und der Schweiz. Echte Kundenprojekte, kostenloser KI-Prozess-Check.",
+      "ogTitle": "DigiDog – KI-Agenten & Claude für Ihr Unternehmen",
       "ogDescription": "Claude und KI-Agenten, verbunden mit den Tools, die Ihr Unternehmen schon nutzt. Echte Kundenprojekte, Top Rated Plus auf Upwork."
     },
     "aiIntegration": {
@@ -60,7 +60,7 @@
     }
   },
   "hero": {
-    "title1": "KI-Integration,",
+    "title1": "KI-Agenten für Ihr Unternehmen,",
     "title2": "mit Claude.",
     "description": "Ich bin Erik Budanov, Gründer von DigiDog. Ich verbinde Claude und KI-Agenten mit den Tools, die Sie schon nutzen, etwa CRM, Buchungen, E-Mail und Analytics. So fragt Ihr Team nach Antworten, statt sie zu suchen. Echte Projekte, vom Touranbieter bis zur Zahnklinik.",
     "cta": "Kostenlosen KI-Prozess-Check buchen"
@@ -75,7 +75,7 @@
     "aiOperations": "KI-Operations",
     "allServices": "Alle Dienstleistungen",
     "webDesign": "Website-Redesign",
-    "aiSolutions": "KI-Lösungen & Automatisierung",
+    "aiSolutions": "KI-Integration & KI-Agenten",
     "customSoftware": "MVP & Software"
   },
   "servicesSection": {
