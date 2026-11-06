@@ -134,18 +134,6 @@ export function AiTrustSection() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <SectionContainer>
         <ScrollReveal>
-          <div className="max-w-[760px] mx-auto text-center mb-16">
-            <SectionBadge>{c.defBadge}</SectionBadge>
-            <h2 className="mt-4 text-[28px] md:text-[38px] leading-[1.2]" style={{ fontFamily: fonts.heading, fontWeight: 700, color: colors.textDark }}>
-              {c.defTitle}
-            </h2>
-            <p className="mt-4 text-[16px] md:text-[18px] text-slate-600 leading-relaxed" style={{ fontFamily: fonts.body }}>
-              {c.defText}
-            </p>
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal>
           <div className="text-center mb-8">
             <SectionBadge>{c.dataBadge}</SectionBadge>
             <h3 className="mt-4 text-[24px] md:text-[32px]" style={{ fontFamily: fonts.heading, fontWeight: 700, color: colors.textDark }}>

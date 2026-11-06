@@ -322,25 +322,17 @@ function HeroSection() {
                 <PrimaryButton onClick={() => openBookingModal()}>
                   {t.aiIntegration.heroCta}
                 </PrimaryButton>
-                <a
-                  href={getLocalizedRoute("contact", locale)}
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-white/20 text-white text-[17px] hover:border-white/40 hover:bg-white/5 transition-all cursor-pointer"
-                  style={{ fontFamily: fonts.display, fontWeight: 600 }}
-                >
-                  {locale === "DE" ? "Nachricht senden" : "Send a Message"}
-                  <Mail size={18} />
-                </a>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.45}>
-              <div className="flex flex-wrap gap-6 md:gap-10 mt-10 pt-8 border-t border-white/[0.08]">
+              <div className="grid grid-cols-3 gap-3 md:gap-6 mt-10 pt-8 border-t border-white/[0.08]">
                 {[
                   { icon: Zap, value: t.aiIntegration.heroKpi1Value, label: t.aiIntegration.heroKpi1Label },
                   { icon: DollarSign, value: t.aiIntegration.heroKpi2Value, label: t.aiIntegration.heroKpi2Label },
                   { icon: Timer, value: t.aiIntegration.heroKpi3Value, label: t.aiIntegration.heroKpi3Label },
                 ].map((kpi, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
+                  <div key={idx} className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 min-w-0">
                     <div
                       className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
                       style={{
@@ -352,7 +344,7 @@ function HeroSection() {
                     </div>
                     <div>
                       <span
-                        className="block text-white text-[20px] md:text-[22px]"
+                        className="block text-white text-[17px] md:text-[22px] whitespace-nowrap"
                         style={{ fontFamily: fonts.heading, fontWeight: 700, lineHeight: 1.2 }}
                       >
                         {kpi.value}
