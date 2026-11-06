@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { Search, Bot, RefreshCcw, CheckCircle2 } from "lucide-react";
+import { Search, Bot, RefreshCcw, CheckCircle2, XCircle } from "lucide-react";
 import { colors, fonts } from "@/components/ui/brand";
 import { SectionContainer, SectionBadge } from "@/components/ui/section";
 import { PrimaryButton, openBookingModal } from "@/components/ui/buttons";
@@ -14,6 +13,7 @@ const COPY = {
     title1: "Your first AI agent",
     title2: "in three steps",
     desc: "No big transformation project. We start with one process, prove it works, then grow from there.",
+    price: "Packages from $400",
     steps: [
       {
         tag: "Free · 45 min",
@@ -22,10 +22,10 @@ const COPY = {
         points: ["One real process, not slides", "Which tools to connect (CRM, email, bookings)", "Honest yes/no on whether it's worth it"],
       },
       {
-        tag: "Fixed price · 2–3 weeks",
+        tag: "From $400 · 2–3 weeks",
         title: "AI agent pilot",
         text: "We build one agent connected to your real tools. You see it work on your data before you commit to more.",
-        points: ["Connected via MCP to your systems", "A person approves what matters", "Fixed price, agreed after the walk-through"],
+        points: ["Connected via MCP to your systems", "A person approves what matters", "Fixed price from $400, agreed after the walk-through"],
       },
       {
         tag: "Monthly",
@@ -35,27 +35,28 @@ const COPY = {
       },
     ],
     cta: "Book the free walk-through",
-    checkTitle: "Is your business ready for an AI agent?",
-    checkDesc: "5 quick questions. Tick what's true for you.",
-    questions: [
-      "Your team does the same task by hand every week (emails, data entry, reports).",
-      "Your data lives in tools with an API (CRM, booking system, Google Workspace, accounting).",
-      "You can name one person who owns that process.",
-      "A mistake in that task can be caught by a person before it reaches a customer.",
-      "You'd save at least 5 hours a week if it ran on its own.",
+    cmpTitle: "Your week, without us and with us",
+    withoutTitle: "Without an agent",
+    without: [
+      "Someone has to manage your WordPress site: updates, content, fixes",
+      "You copy website data, enquiries and emails between tools by hand",
+      "Your booking system, CRM and inbox don't talk to each other",
+      "Reports get built manually, if at all",
     ],
-    results: [
-      { min: 4, title: "Strong fit.", text: "You have a clear first use case. Let's pick it in the walk-through and price the pilot." },
-      { min: 2, title: "Good start.", text: "There's likely one process worth automating. The walk-through will show which one." },
-      { min: 0, title: "Early stage.", text: "An agent may not pay off yet. In 45 minutes we can tell you what to get in place first." },
+    withTitle: "With DigiDog",
+    with: [
+      "One agent connected to WordPress, email, bookings and your data",
+      "Content, updates and replies are prepared for you to approve",
+      "Everything shows up in one AI operations dashboard",
+      "You ask in plain language and get answers from your own data",
     ],
-    score: (n: number) => `${n} of 5`,
   },
   DE: {
     badge: "So starten wir",
     title1: "Ihr erster KI-Agent",
     title2: "in drei Schritten",
     desc: "Kein großes Transformationsprojekt. Wir starten mit einem Prozess, zeigen, dass es funktioniert, und bauen dann aus.",
+    price: "Pakete ab 400 $",
     steps: [
       {
         tag: "Kostenlos · 45 Min.",
@@ -64,10 +65,10 @@ const COPY = {
         points: ["Ein echter Prozess, keine Folien", "Welche Tools angebunden werden (CRM, E-Mail, Buchungen)", "Ehrliches Ja/Nein, ob es sich lohnt"],
       },
       {
-        tag: "Festpreis · 2–3 Wochen",
+        tag: "Ab 400 $ · 2–3 Wochen",
         title: "KI-Agent-Pilot",
         text: "Wir bauen einen Agenten, der mit Ihren echten Tools verbunden ist. Sie sehen ihn mit Ihren Daten arbeiten, bevor Sie mehr beauftragen.",
-        points: ["Per MCP mit Ihren Systemen verbunden", "Ein Mensch gibt Wichtiges frei", "Festpreis, vereinbart nach dem Check"],
+        points: ["Per MCP mit Ihren Systemen verbunden", "Ein Mensch gibt Wichtiges frei", "Festpreis ab 400 $, vereinbart nach dem Check"],
       },
       {
         tag: "Monatlich",
@@ -77,21 +78,21 @@ const COPY = {
       },
     ],
     cta: "Kostenlosen Check buchen",
-    checkTitle: "Ist Ihr Unternehmen bereit für einen KI-Agenten?",
-    checkDesc: "5 kurze Fragen. Haken Sie ab, was auf Sie zutrifft.",
-    questions: [
-      "Ihr Team erledigt jede Woche dieselbe Aufgabe von Hand (E-Mails, Dateneingabe, Berichte).",
-      "Ihre Daten liegen in Tools mit API (CRM, Buchungssystem, Google Workspace, Buchhaltung).",
-      "Es gibt eine Person, die für diesen Prozess verantwortlich ist.",
-      "Ein Fehler in dieser Aufgabe kann von einem Menschen abgefangen werden, bevor er den Kunden erreicht.",
-      "Sie würden mindestens 5 Stunden pro Woche sparen, wenn es von selbst liefe.",
+    cmpTitle: "Ihre Woche, ohne uns und mit uns",
+    withoutTitle: "Ohne Agent",
+    without: [
+      "Jemand muss Ihre WordPress-Seite pflegen: Updates, Inhalte, Fehler",
+      "Website-Daten, Anfragen und E-Mails werden von Hand zwischen Tools kopiert",
+      "Buchungssystem, CRM und Postfach sprechen nicht miteinander",
+      "Berichte werden manuell erstellt, wenn überhaupt",
     ],
-    results: [
-      { min: 4, title: "Sehr gute Basis.", text: "Sie haben einen klaren ersten Anwendungsfall. Im Check wählen wir ihn aus und kalkulieren den Pilot." },
-      { min: 2, title: "Guter Start.", text: "Wahrscheinlich lohnt sich ein Prozess. Der Check zeigt, welcher." },
-      { min: 0, title: "Frühe Phase.", text: "Ein Agent rechnet sich vielleicht noch nicht. In 45 Minuten sagen wir Ihnen, was zuerst nötig ist." },
+    withTitle: "Mit DigiDog",
+    with: [
+      "Ein Agent, verbunden mit WordPress, E-Mail, Buchungen und Ihren Daten",
+      "Inhalte, Updates und Antworten werden vorbereitet, Sie geben frei",
+      "Alles erscheint in einem KI-Operations-Dashboard",
+      "Sie fragen in normaler Sprache und bekommen Antworten aus Ihren Daten",
     ],
-    score: (n: number) => `${n} von 5`,
   },
 };
 
@@ -100,10 +101,6 @@ const ICONS = [Search, Bot, RefreshCcw];
 export function AiAgentOffer() {
   const { locale } = useTranslation();
   const c = locale === "DE" ? COPY.DE : COPY.EN;
-  const [ticks, setTicks] = useState<boolean[]>([false, false, false, false, false]);
-  const n = ticks.filter(Boolean).length;
-  const answered = n > 0;
-  const result = c.results.find((r) => n >= r.min)!;
 
   return (
     <section id="ai-agent-offer" className="relative bg-[#f8fafc] py-20 md:py-28">
@@ -122,6 +119,9 @@ export function AiAgentOffer() {
             </h2>
             <p className="mt-4 text-[16px] md:text-[18px] text-slate-600" style={{ fontFamily: fonts.body }}>
               {c.desc}
+            </p>
+            <p className="mt-5 inline-block text-[15px] md:text-[17px] px-4 py-2 rounded-full" style={{ fontFamily: fonts.heading, fontWeight: 700, color: colors.blue, background: "#e0edff" }}>
+              {c.price}
             </p>
           </div>
         </ScrollReveal>
@@ -170,57 +170,39 @@ export function AiAgentOffer() {
         </div>
 
         <ScrollReveal>
-          <div id="ai-readiness-check" className="mt-14 md:mt-20 rounded-3xl bg-white border border-slate-200 p-6 md:p-10 shadow-sm">
-            <div className="grid gap-8 md:grid-cols-[1.3fr_1fr] md:items-start">
-              <div>
-                <h3 className="text-[24px] md:text-[30px] leading-[1.2] mb-2" style={{ fontFamily: fonts.heading, fontWeight: 700, color: colors.textDark }}>
-                  {c.checkTitle}
-                </h3>
-                <p className="text-[15px] text-slate-600 mb-6" style={{ fontFamily: fonts.body }}>
-                  {c.checkDesc}
+          <div id="with-without" className="mt-14 md:mt-20">
+            <h3 className="text-center text-[24px] md:text-[32px] leading-[1.2] mb-8" style={{ fontFamily: fonts.heading, fontWeight: 700, color: colors.textDark }}>
+              {c.cmpTitle}
+            </h3>
+            <div className="grid gap-5 md:grid-cols-2">
+              <div className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8">
+                <p className="text-[13px] uppercase tracking-[0.15em] text-slate-500 mb-5" style={{ fontFamily: fonts.display, fontWeight: 700 }}>
+                  {c.withoutTitle}
                 </p>
-                <div className="space-y-3">
-                  {c.questions.map((q, i) => (
-                    <label
-                      key={q}
-                      className={`flex gap-3 items-start rounded-xl border p-4 cursor-pointer transition-colors ${
-                        ticks[i] ? "border-sky-400 bg-sky-50" : "border-slate-200 hover:border-slate-300"
-                      }`}
-                    >
-                      <input
-                        type="checkbox"
-                        checked={ticks[i]}
-                        onChange={() => setTicks((t) => t.map((v, j) => (j === i ? !v : v)))}
-                        className="mt-1 w-5 h-5 shrink-0 accent-sky-600"
-                      />
-                      <span className="text-[15px] text-slate-700" style={{ fontFamily: fonts.body }}>
-                        {q}
-                      </span>
-                    </label>
+                <ul className="space-y-4">
+                  {c.without.map((x) => (
+                    <li key={x} className="flex gap-3 text-[15.5px] text-slate-600" style={{ fontFamily: fonts.body }}>
+                      <XCircle size={19} className="shrink-0 mt-[2px] text-slate-400" />
+                      {x}
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
-              <div className="rounded-2xl p-7 text-white md:sticky md:top-28" style={{ background: colors.gradientCosmic }}>
-                <div className="text-[44px] leading-none mb-3" style={{ fontFamily: fonts.heading, fontWeight: 700 }}>
-                  {c.score(n)}
+              <div className="rounded-3xl p-6 md:p-8 text-white" style={{ background: colors.gradientCosmic }}>
+                <p className="text-[13px] uppercase tracking-[0.15em] text-sky-300 mb-5" style={{ fontFamily: fonts.display, fontWeight: 700 }}>
+                  {c.withTitle}
+                </p>
+                <ul className="space-y-4">
+                  {c.with.map((x) => (
+                    <li key={x} className="flex gap-3 text-[15.5px] text-white/90" style={{ fontFamily: fonts.body }}>
+                      <CheckCircle2 size={19} className="shrink-0 mt-[2px] text-sky-300" />
+                      {x}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-7">
+                  <PrimaryButton onClick={() => openBookingModal()}>{c.cta}</PrimaryButton>
                 </div>
-                {answered ? (
-                  <>
-                    <div className="text-[20px] mb-2" style={{ fontFamily: fonts.heading, fontWeight: 700 }}>
-                      {result.title}
-                    </div>
-                    <p className="text-white/75 text-[15px] mb-6" style={{ fontFamily: fonts.body }}>
-                      {result.text}
-                    </p>
-                  </>
-                ) : (
-                  <p className="text-white/60 text-[15px] mb-6" style={{ fontFamily: fonts.body }}>
-                    {c.checkDesc}
-                  </p>
-                )}
-                <PrimaryButton onClick={() => openBookingModal()}>
-                  {c.cta}
-                </PrimaryButton>
               </div>
             </div>
           </div>

@@ -402,14 +402,14 @@ export const en: DeepStringify<typeof de> = {
 
     /* Hero */
     heroBadge: "AI integration services & Claude consulting",
-    heroTitle1: "AI integration",
+    heroTitle1: "AI agents",
     heroTitle2: "for your business",
-    heroTitle3: "with Claude",
+    heroTitle3: "with",
     heroDescription:
-      "Integrate your operations, data, and workflows into your",
-    heroDescHighlight: "Claude or GPT Chat",
+      "AI integration that connects your operations, data and tools to",
+    heroDescHighlight: "Claude, ChatGPT, Grok or a local model",
     heroDescEnd:
-      ". Access reports, automate tasks, manage operations, and make decisions through natural conversation.",
+      ". Your agents answer customers, keep you visible and build your reports, and you ask them anything in plain language.",
     heroCta: "Book a free AI process walk-through",
     heroCtaSecondary: "Explore Services",
     heroKpi1Value: "1:1",
@@ -476,10 +476,10 @@ export const en: DeepStringify<typeof de> = {
     dsAhrefs: "Ahrefs",
 
     /* Case Studies */
-    csBadge: "Real Business Examples",
-    csTitle1: "Real Businesses",
-    csTitle2: "Running on AI Systems",
-    csDescription: "See how businesses across industries use AI to transform their daily operations.",
+    csBadge: "Case studies",
+    csTitle1: "Study our work:",
+    csTitle2: "AI systems in production",
+    csDescription: "Real projects we built and still run. Each one started with one process and one question: where does AI save the most time?",
     csCta: "Want to see how AI can transform your business?",
     csCtaButton: "Discuss Your Use Case",
     csAnswerLine: "AI retrieves answers from your connected systems instantly.",
