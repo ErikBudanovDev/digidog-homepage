@@ -13,6 +13,8 @@ const CALENDLY_URL = "https://calendly.com/erik-budanov/beratungsgespraech";
 export function openBookingModal() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const cal = (window as any).Calendly;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (window as any).gtag?.("event", "open_booking", { page: window.location.pathname });
   if (cal?.initPopupWidget) {
     cal.initPopupWidget({ url: CALENDLY_URL });
   } else {
