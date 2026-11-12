@@ -87,6 +87,8 @@ export default function BlogPostDEClient({ post }: { post: BlogPost }) {
           .blog-content .code-block { max-width: 100%; }
           .blog-content .inline-code { overflow-wrap: anywhere; word-break: break-word; }
           @media (max-width: 640px) { .blog-content table { display: block; overflow-x: auto; } }
+          .blog-content td .inline-code, .blog-content th .inline-code { overflow-wrap: normal; word-break: normal; }
+          .blog-content td, .blog-content th { overflow-wrap: normal; word-break: normal; }
         `}</style>
         <div
           className="blog-content"

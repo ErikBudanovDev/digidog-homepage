@@ -408,15 +408,15 @@ Mehr zur [KI-Integration mit Claude und KI-Agenten](/de/dienstleistungen/ki-inte
     title: "KI-Automatisierung für den Mittelstand: Ein praxisorientierter Leitfaden",
     metaTitle: "KI-Automatisierung für den Mittelstand — Praxisleitfaden 2026",
     metaDescription:
-      "Wie mittelständische Unternehmen (50–200 Mitarbeiter) KI-Automatisierung einsetzen, um manuelle Arbeit um 30–60 % zu reduzieren. Reale Workflows, ROI-Berechnungen und ein schrittweiser Umsetzungsplan.",
+      "Wie mittelständische Unternehmen (50–200 Mitarbeiter) KI-Automatisierung einsetzen, um repetitive manuelle Arbeit zu reduzieren. Reale Workflows, ROI-Berechnungen und ein schrittweiser Umsetzungsplan.",
     excerpt:
-      "Die meisten Mittelständler verschwenden 30–60 % der Arbeitszeit mit repetitiven Aufgaben. So ändert KI-Automatisierung das — mit echten Workflows, nicht mit Hype.",
+      "Im Mittelstand geht viel Arbeitszeit für repetitive Aufgaben verloren. So ändert KI-Automatisierung das — mit echten Workflows, nicht mit Hype.",
     content: `
 ## Warum der Mittelstand ideal für KI-Automatisierung ist
 
 Große Konzerne haben eigene KI-Teams. Startups sind schnell, haben aber noch keine etablierten Prozesse. Mittelständische Unternehmen (50–200 Mitarbeiter) befinden sich im idealen Bereich: genug repetitive Prozesse zum Automatisieren, ausreichend Budget für Investitionen und genug Leidensdruck, um Veränderungen zu rechtfertigen.
 
-Bei Digidog haben wir Unternehmen in dieser Größenordnung dabei geholfen, Rechnungsverarbeitung, Lead-Qualifizierung, Support-Ticket-Weiterleitung, Meeting-Protokolle und Dateneingabe zu automatisieren — im Schnitt 22 Stunden pro Mitarbeiter und Monat gespart.
+Bei Digidog haben wir Unternehmen in dieser Größenordnung dabei geholfen, Rechnungsverarbeitung, Lead-Qualifizierung, Support-Ticket-Weiterleitung, Meeting-Protokolle und Dateneingabe zu automatisieren.
 
 ## Die 5 Automatisierungen mit dem höchsten ROI
 
@@ -426,7 +426,7 @@ Ihr Vertriebsteam verbringt Stunden damit, Leads manuell zu bewerten und CRM-Fel
 **Typische Einsparung:** 15–20 Stunden pro Woche für ein 5-köpfiges Vertriebsteam.
 
 ### 2. Rechnungsverarbeitung & Dateneingabe
-Jede Rechnung, die als PDF, E-Mail-Anhang oder Scan eingeht, muss erfasst, geprüft, einer Bestellung zugeordnet und ins Buchhaltungssystem eingegeben werden. KI erledigt das vollständig mit einer Genauigkeit von 98 %+.
+Jede Rechnung, die als PDF, E-Mail-Anhang oder Scan eingeht, muss erfasst, geprüft, einer Bestellung zugeordnet und ins Buchhaltungssystem eingegeben werden. KI kann das weitgehend automatisch erledigen, unklare Fälle gehen zur Prüfung an einen Menschen.
 
 **Typische Einsparung:** 80 % weniger Verarbeitungszeit.
 
@@ -477,6 +477,7 @@ Möchten Sie sehen, wie viel Zeit Ihr Team sparen könnte? [Kostenloses KI-Audit
     tag: "KI-Automatisierung",
     category: "ai",
     author: "Erik Budanov",
+    updated: "2026-11-12",
     date: "2026-03-10",
     readTime: "8 Min. Lesezeit",
     keywords: ["ki automatisierung mittelstand", "ki automatisierung unternehmen", "workflow automatisierung", "prozessautomatisierung ki"],
@@ -1696,10 +1697,10 @@ Wenn du mit Vibe Coding startest und stecken bleibst, oder ein konkretes Projekt
   },
   {
     slug: "claude-skills-vs-mcp-server",
-    title: "Claude Skills: Wie sie die Hälfte deiner MCP-Server ersetzen (2026)",
+    title: "Claude Skills vs. MCP-Server: Wann du was nutzt (2026)",
     metaTitle: "Claude Skills vs MCP-Server: Wann welches nutzen (2026)",
     metaDescription:
-      "Claude Skills sind Ordner mit Anleitungen, die Claude automatisch liest — kein Server nötig. Erfahre, wann du Skills nutzt, wann MCP, und wie du dein erstes Skill in 10 Minuten baust.",
+      "Skills = Anleitungen, die Claude bei Bedarf lädt, ohne Server. MCP = Live-Daten und APIs. Vergleichstabelle, Beispiele und dein erstes Skill in 10 Minuten.",
     excerpt:
       "Anthropic hat Claude Skills veröffentlicht — Ordner mit Anleitungen, die Claude bei Bedarf liest. Sie ersetzen die Hälfte der Anwendungsfälle, für die wir früher MCP-Server brauchten. Hier ist die Anleitung.",
     content: `
@@ -1902,6 +1903,7 @@ Ja. Skills sind einfache Datei-Ordner, also lassen sie sich in einem Git-Reposit
     tag: "KI-Integration",
     category: "ai",
     author: "Erik Budanov",
+    updated: "2026-11-12",
     date: "2026-05-26",
     readTime: "9 Min. Lesezeit",
     keywords: ["claude skills", "claude skills deutsch", "claude skills vs mcp", "anthropic skills", "claude skills tutorial"],
