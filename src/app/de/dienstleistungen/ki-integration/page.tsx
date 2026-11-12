@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description:
       "KI-Integration für Unternehmen in Deutschland, Österreich und der Schweiz: Claude, KI-Agenten und MCP, verbunden mit CRM, E-Mail, Buchungen und Analytics. Echte Projekte, kostenloser KI-Prozess-Check.",
     url: "/de/dienstleistungen/ki-integration",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630 }],
     locale: "de_DE",
     alternateLocale: ["en_US"],
   },

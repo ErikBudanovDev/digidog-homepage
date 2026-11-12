@@ -16,14 +16,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const project = projectsMeta.find((p) => p.slug === slug);
-  const title = project
-    ? `${project.title} – Digidog Digital Agency`
-    : "Project – Digidog Digital Agency";
+  const title = project ? `${project.title} – Case Study` : "Case Study";
   const description = project?.description || "Case study and details for this Digidog project.";
 
   return {
     title,
     description,
+    alternates: { canonical: `/portfolio/${slug}` },
     openGraph: {
       title,
       description,

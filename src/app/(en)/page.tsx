@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   title: en.seo.home.title,
   description: en.seo.home.description,
   alternates: { canonical: "/", languages: { "en": "/", "de": "/de", "x-default": "/" } },
-  keywords: ["immersive 3D development", "VR development", "AR development", "WebXR", "3D world AI", "website redesign", "Erik Budanov"],
   openGraph: {
     title: en.seo.home.ogTitle,
     description: en.seo.home.ogDescription,

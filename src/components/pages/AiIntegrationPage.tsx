@@ -54,7 +54,7 @@ import { SEO, serviceSchema } from "@/components/SEO";
 import { AiAgentOffer } from "@/components/AiAgentOffer";
 import { AiCaseCards } from "@/components/AiCaseCards";
 import { AiTrustSection } from "@/components/AiTrustSection";
-import { ModelRotator, AiDashboardSection, ChangingWorldSection, TeamSection } from "@/components/AiPageV2";
+import { ModelRotator, ModelRotatorStyle, AiDashboardSection, ChangingWorldSection, TeamSection } from "@/components/AiPageV2";
 import { useTranslation } from "@/i18n/i18n-context";
 import { getLocalizedRoute } from "@/i18n/routes";
 import _aiHubIcon from "figma:asset/4f2027a2c62d225b0ecf9eacbb0e13452dda79c0.png";
@@ -285,16 +285,22 @@ function HeroSection() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
+              <ModelRotatorStyle />
               <h1
                 className="text-[36px] md:text-[52px] lg:text-[60px] leading-[1.1] mb-6"
                 style={{ fontFamily: fonts.heading, fontWeight: 700 }}
+                aria-label={
+                  locale === "DE"
+                    ? "KI-Agenten für Ihr Unternehmen mit Claude, ChatGPT, Grok oder lokaler KI"
+                    : "AI agents for your business with Claude, ChatGPT, Grok or local AI"
+                }
               >
                 <span
                   className="bg-clip-text text-transparent"
                   style={{ backgroundImage: "linear-gradient(90deg, #ffffff 0%, #93c5fd 100%)" }}
                 >
                   {t.aiIntegration.heroTitle1}
-                </span>
+                </span>{" "}
                 <br />
                 <span
                   className="bg-clip-text text-transparent"

@@ -14,13 +14,17 @@ export function markdownToHtml(md: string): string {
   let html = md;
 
   // Fenced code blocks: ```lang ... ```
+  // They are swapped for placeholders so the heading, list and paragraph
+  // passes below never touch code (a "## " line inside an example is not a heading).
+  const codeBlocks: string[] = [];
   html = html.replace(/```(\w*)\n([\s\S]*?)```/g, (_m, lang, code) => {
     const escaped = code
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .trimEnd();
-    return `<pre class="code-block"><code class="language-${lang || "text"}">${escaped}</code></pre>`;
+    codeBlocks.push(`<pre class="code-block"><code class="language-${lang || "text"}">${escaped}</code></pre>`);
+    return `<pre data-cb="${codeBlocks.length - 1}"></pre>`;
   });
 
   // Inline code: `code`
@@ -67,6 +71,8 @@ export function markdownToHtml(md: string): string {
   html = html.replace(/<p><\/p>/g, "");
   html = html.replace(/<p>(<[hultapcfo])/g, "$1");
   html = html.replace(/(<\/[hultapcfo][^>]*>)<\/p>/g, "$1");
+
+  html = html.replace(/<pre data-cb="(\d+)"><\/pre>/g, (_m, i) => codeBlocks[Number(i)]);
 
   return html;
 }

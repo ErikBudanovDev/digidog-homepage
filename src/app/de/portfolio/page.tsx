@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import PortfolioDEClient from "@/app/client-pages/PortfolioDEClient";
 
 export const metadata: Metadata = {
-  title: "Portfolio — Unsere Projekte | DigiDog",
+  title: "Portfolio — Unsere Projekte",
   description:
     "Ausgewählte Projekte aus den Bereichen KI-Automatisierung, Webentwicklung und individuelle Software.",
   alternates: {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Portfolio — Unsere Projekte | DigiDog",
+    title: "Portfolio — Unsere Projekte",
     description:
       "Ausgewählte Projekte aus den Bereichen KI-Automatisierung, Webentwicklung und individuelle Software.",
     url: "/de/portfolio",

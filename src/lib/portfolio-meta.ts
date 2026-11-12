@@ -10,6 +10,7 @@ export interface ProjectMeta {
 }
 
 export const projectsMeta: ProjectMeta[] = [
+  { slug: "digidog-ai-operations-system", title: "DigiDog AI Operations System", description: "Our own infrastructure: 12+ SaaS tools replaced with AI-operated systems on a single VPS. CRM, task management, reporting, lead automation and cross-platform orchestration." },
   { slug: "apartment-renovation-vr", title: "Apartment Renovation Planned in VR", description: "An empty apartment shell in Yerevan, scanned and turned into a walkable VR model where furniture, lighting, sockets and plumbing are planned at real scale on Meta Quest." },
   { slug: "solar-system-vr", title: "3D Learning Encyclopedia", description: "An Armenian-language encyclopedia of 3D worlds for children: the solar system, a time machine to the dinosaurs and a micro world inside water, blood and cells. Runs in the browser and on Meta Quest." },
   { slug: "united-nations-fp2030", title: "United Nations – FP2030", description: "Design implementation for the United Nations FP2030 Progress Report website, featuring interactive Highcharts data visualizations and parallax animations." },

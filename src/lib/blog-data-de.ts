@@ -471,7 +471,7 @@ KI-Systeme brauchen Überwachung. Wir verfolgen die Genauigkeit, behandeln Ausna
 
 Wir „fügen nicht einfach KI hinzu" — wir entwickeln vollständige Workflow-Systeme. Unser Stack umfasst Claude und GPT für Sprachaufgaben, maßgeschneiderte ML-Modelle für Klassifizierung und direkte API-Integrationen in Ihre bestehenden Tools. Jede Automatisierung enthält ein Monitoring-Dashboard und eine manuelle Fallback-Option.
 
-Möchten Sie sehen, wie viel Zeit Ihr Team sparen könnte? [Kostenloses KI-Audit buchen](/contact).
+Möchten Sie sehen, wie viel Zeit Ihr Team sparen könnte? [Kostenloses KI-Audit buchen](/de/kontakt).
     `,
     image: "/images/blog/covers/ai-automation.webp",
     tag: "KI-Automatisierung",
@@ -541,7 +541,7 @@ Die Einstiegshürde ist niedriger als Sie denken:
 3. **MCP-Server entwickeln** — Jedes Tool bekommt einen leichtgewichtigen Server, der seine Fähigkeiten bereitstellt
 4. **Mit KI verbinden** — Claude oder einen anderen KI-Assistenten als Orchestrator einbinden
 
-Möchten Sie MCP für Ihr Unternehmen erkunden? [Sprechen Sie mit unserem Team](/contact) — wir entwickeln MCP-Integrationen seit der Einführung des Protokolls.
+Möchten Sie MCP für Ihr Unternehmen erkunden? [Sprechen Sie mit unserem Team](/de/kontakt) — wir entwickeln MCP-Integrationen seit der Einführung des Protokolls.
     `,
     image: "/images/blog/covers/what-is-mcp.webp",
     tag: "KI-Integration",
@@ -616,7 +616,7 @@ Eine Website braucht laufende Pflege: Updates, Sicherheit, Performance-Monitorin
 
 Wir kombinieren Design-Expertise mit technischer Tiefe. Unsere Websites sind nicht nur schön — sie performen: schnelle Ladezeiten, SEO-optimiert, und conversion-orientiert.
 
-[Kostenloses Erstgespräch vereinbaren](/contact)
+[Kostenloses Erstgespräch vereinbaren](/de/kontakt)
     `,
     image: "/images/blog/covers/website-de.webp",
     tag: "Webentwicklung",
@@ -684,7 +684,7 @@ Einführung im Vertriebsteam mit Schulung. KI übernimmt Routineaufgaben; Mensch
 
 Der ROI wurde in 6 Wochen erreicht. Das System kostete 12.000 € in der Entwicklung und 400 €/Monat in der Wartung. Bei 25 gesparten Stunden pro Woche und durchschnittlichen Teamkosten von 45 €/Stunde beträgt der monatliche Wert 4.500 € — eine 10-fache Rendite auf die laufenden Kosten.
 
-[Möchten Sie ähnliche Ergebnisse? Sprechen Sie uns an.](/contact)
+[Möchten Sie ähnliche Ergebnisse? Sprechen Sie uns an.](/de/kontakt)
     `,
     image: "/images/blog/covers/crm-case.webp",
     tag: "Fallstudie",
@@ -751,7 +751,7 @@ Eine etablierte Kieferorthopädie-Praxis mit 15 Jahren Erfahrung hatte eine Webs
 
 Für Gesundheitspraxen liefert die Kombination aus modernem Webdesign, lokaler SEO und Content-Strategie kumulative Renditen. Die Praxis generiert jetzt mehr Anfragen über ihre Website als über Empfehlungen — und die Website arbeitet rund um die Uhr.
 
-[Ist Ihre Praxis online unsichtbar? Kostenloses Audit anfordern.](/contact)
+[Ist Ihre Praxis online unsichtbar? Kostenloses Audit anfordern.](/de/kontakt)
     `,
     image: "/images/blog/covers/dental-case.webp",
     tag: "Fallstudie",
@@ -831,7 +831,7 @@ Die klügste Strategie ist oft hybrid: SaaS für generische Funktionen nutzen un
 
 Bei Digidog sind wir auf genau diesen Ansatz spezialisiert. Wir helfen Ihnen zu identifizieren, was Sie entwickeln, was Sie kaufen und wie Sie alles verbinden sollten.
 
-[Lassen Sie uns gemeinsam Ihren Tech-Stack planen.](/contact)
+[Lassen Sie uns gemeinsam Ihren Tech-Stack planen.](/de/kontakt)
     `,
     image: "/images/blog/covers/build-vs-buy.webp",
     tag: "Software",
@@ -1094,7 +1094,7 @@ Automatische Benachrichtigungen benötigen zusätzlich einen Auslöser oder eine
 
 ## MCP bei DigiDog
 
-Ich bin Erik Budanov, unabhängiger Produktentwickler und Gründer von DigiDog. Ich plane und entwickle Integrationen mit direkter technischer Verantwortung und KI-Unterstützung. Beginnen wir mit einem konkreten Workflow, klaren Zugriffsrechten und definierten Freigaben. [Kostenloses Beratungsgespräch buchen](/contact).
+Ich bin Erik Budanov, unabhängiger Produktentwickler und Gründer von DigiDog. Ich plane und entwickle Integrationen mit direkter technischer Verantwortung und KI-Unterstützung. Beginnen wir mit einem konkreten Workflow, klaren Zugriffsrechten und definierten Freigaben. [Kostenloses Beratungsgespräch buchen](/de/kontakt).
 
 **Weiterführende Anleitungen:** [Claude Skills vs. MCP-Server — wann was?](/de/blog/claude-skills-vs-mcp-server) · [Slack MCP Server einrichten](/de/blog/slack-mcp-server-einrichten) · [Supabase MCP Server einrichten](/de/blog/supabase-mcp-server-einrichten) · [Playwright MCP Server Anleitung](/de/blog/playwright-mcp-server-anleitung) · [Vibe Coding: der deutsche Leitfaden](/de/blog/vibe-coding-deutschland-anleitung)
 
@@ -1523,7 +1523,7 @@ Alternative: Cursor (VS Code mit KI-Integration), Windsurf, oder Claude Desktop.
 **Empfehlung: Supabase**.
 - Postgres-Datenbank, Auth, Storage in einem
 - Gratis-Tier deckt die meisten kleinen Projekte ab
-- Hat einen MCP-Server, der direkt mit Claude spricht (siehe unsere [Supabase MCP Anleitung](/blog/supabase-mcp-server-einrichten))
+- Hat einen MCP-Server, der direkt mit Claude spricht (siehe unsere [Supabase MCP Anleitung](/de/blog/supabase-mcp-server-einrichten))
 
 Alternative: Firebase (Google) oder direkt Postgres auf einem VPS.
 
