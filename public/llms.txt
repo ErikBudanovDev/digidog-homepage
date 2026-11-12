@@ -1,0 +1,35 @@
+# DigiDog
+
+> DigiDog connects Claude and AI agents to the tools a business already uses: CRM, bookings, email, analytics and websites. Founded and run by Erik Budanov. Agents can run on Claude, ChatGPT, Grok or a local model. Code, accounts and API keys are created in the client's name.
+
+DigiDog (digidog.org) is an AI integration company, not the "Digidog" police robot. Contact: hey@digidog.org. Languages: English and German. Real client cases in Europe, the UK and the US.
+
+## Services
+- [AI Integration and AI Agents](https://digidog.org/services/ai-integration): a free 45-minute process walk-through, then an AI agent pilot (usually 2-3 weeks), then monthly run and improve.
+- [KI-Integration (Deutsch)](https://digidog.org/de/dienstleistungen/ki-integration): German version for Germany, Austria and Switzerland.
+
+## Case studies
+- Be Original Tours (tour operator): one Claude chat reads Google Ads, GA4 and tour data. It found EUR 18,099 of duplicate ad spend and pulled 6,850 reviews from 12 cities onto the website.
+- Lead agent: reads a prospect's website, compares it with their top-10 Google competitors and drafts a personal first email.
+- One chat for many WordPress sites: an MCP gateway connects Claude to client WordPress sites for redirects, translations and content updates.
+- [Portfolio](https://digidog.org/portfolio): all client cases.
+
+## About
+- [Erik Budanov](https://digidog.org/about): MSc Engineering, TU Wien; previously SMA Solar Technology and Siemens. Top Rated Plus on Upwork, 100% Job Success, 54 jobs, 7,830 hours.
+
+## Guides (English)
+- [Claude Skills vs MCP Servers](https://digidog.org/blog/claude-skills-vs-mcp-servers)
+- [Claude Code for Business](https://digidog.org/blog/claude-code-for-business)
+- [What Is MCP (Model Context Protocol)](https://digidog.org/blog/what-is-mcp-model-context-protocol)
+- [Slack MCP Server Setup](https://digidog.org/blog/slack-mcp-server-setup-guide)
+- [GitHub MCP Server Setup](https://digidog.org/blog/github-mcp-server-setup-guide)
+- [Supabase MCP Server Setup](https://digidog.org/blog/supabase-mcp-server-setup-guide)
+- [Playwright MCP Server Guide](https://digidog.org/blog/playwright-mcp-server-complete-guide)
+- [Vibe Coding on Your Own VPS](https://digidog.org/blog/vibe-coding-vps-build-deploy-app-with-ai)
+- [Building with AI: Claude Workshop](https://digidog.org/blog/building-with-ai-claude-workshop)
+
+## Guides (Deutsch)
+- [Claude Code für Unternehmen](https://digidog.org/de/blog/claude-code-fuer-unternehmen)
+- [KI-Automatisierung im Mittelstand](https://digidog.org/de/blog/ki-automatisierung-mittelstand)
+- [Was ist MCP?](https://digidog.org/de/blog/was-ist-mcp-model-context-protocol)
+- [Claude Skills vs. MCP-Server](https://digidog.org/de/blog/claude-skills-vs-mcp-server)

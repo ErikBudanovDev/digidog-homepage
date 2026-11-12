@@ -18,6 +18,8 @@ export interface BlogPost {
   category: "ai" | "web" | "software" | "case-study";
   author: string;
   date: string;
+  /** Date of the last real content change (YYYY-MM-DD); used for dateModified */
+  updated?: string;
   readTime: string;
   keywords: string[];
   faqs?: { question: string; answer: string }[];
@@ -428,15 +430,15 @@ What will you create, manage, or own when writing code is no longer the scarce s
     title: "AI Automation for Mid-Size Companies: A Practical Guide",
     metaTitle: "AI Automation for Mid-Size Companies — Implementation Guide",
     metaDescription:
-      "Learn how mid-size companies (50-200 employees) can implement AI automation to reduce manual work by 30-60%. Real workflows, ROI calculations, and step-by-step implementation roadmap.",
+      "Learn how mid-size companies (50-200 employees) can implement AI automation to cut repetitive manual work. Real workflows, ROI calculations, and step-by-step implementation roadmap.",
     excerpt:
-      "Most mid-size companies waste 30-60% of their team's time on repetitive tasks. Here's exactly how AI automation changes that — with real workflows, not hype.",
+      "Mid-size companies lose a lot of team time to repetitive tasks. Here's how AI automation changes that — with real workflows, not hype.",
     content: `
 ## Why Mid-Size Companies Are the Perfect AI Automation Candidates
 
 Large enterprises have dedicated AI teams. Startups move fast but lack processes to automate. Mid-size companies (50–200 employees) sit in the sweet spot: enough repetitive processes to automate, enough budget to invest, and enough pain to justify the change.
 
-At Digidog, we've helped companies in this bracket automate invoice processing, lead qualification, support ticket routing, meeting summaries, and data entry — saving an average of 22 hours per employee per month.
+At Digidog, we've helped companies in this bracket automate invoice processing, lead qualification, support ticket routing, meeting summaries, and data entry.
 
 ## The 5 Highest-ROI Automation Opportunities
 
@@ -446,7 +448,7 @@ Your sales team spends hours manually scoring leads and updating CRM fields. An 
 **Typical savings:** 15-20 hours/week for a 5-person sales team.
 
 ### 2. Invoice Processing & Data Entry
-Every invoice that arrives as a PDF, email attachment, or scan needs to be extracted, validated, matched to a PO, and entered into your accounting system. AI handles this end-to-end with 98%+ accuracy.
+Every invoice that arrives as a PDF, email attachment, or scan needs to be extracted, validated, matched to a PO, and entered into your accounting system. AI can handle most of this automatically, and unclear cases go to a person for review.
 
 **Typical savings:** 80% reduction in processing time.
 
@@ -497,6 +499,7 @@ Ready to see how much time your team could save? See our [AI Integration service
     tag: "AI Automation",
     category: "ai",
     author: "Erik Budanov",
+    updated: "2026-11-12",
     date: "2026-03-10",
     readTime: "8 min read",
     keywords: ["ai automation agency", "ai automation for business", "ai workflow automation", "business process automation"],
@@ -971,12 +974,14 @@ Playwright MCP uses the browser's accessibility tree — the same structured rep
     slug: "slack-mcp-server-setup-guide",
     /* Published: 2026-03-16 | Status: PUBLISHED | GSC: Submit for indexing */
     title: "How to Set Up a Slack MCP Server: Connect AI to Your Workspace",
-    metaTitle: "Slack MCP Server: Official OAuth & Self-Hosted Setup",
+    metaTitle: "Slack MCP Server: How to Install & Use It with Claude (2026)",
     metaDescription:
-      "Connect Slack to AI: official hosted OAuth setup, community server differences, permissions, drafts and troubleshooting.",
+      "Yes, Slack has an official MCP server. Connect it to Claude with OAuth, see its tools (incl. slack_search_public_and_private) and fix common errors.",
     excerpt:
       "Choose the right Slack MCP setup: the official OAuth connector or a separate community implementation. Understand access, drafts and permissions before connecting.",
     content: `
+**Quick answer:** Yes, Slack has an official MCP server. Slack hosts it at \`https://mcp.slack.com/mcp\` and you connect with OAuth, so there is nothing to install on your machine. Slack lists Claude.ai, Claude Code, Cursor and Perplexity as supported clients. In Claude you add the Slack connector, sign in to your workspace and approve access. If your workspace restricts apps, an admin has to approve it first.
+
 ## What Is a Slack MCP Server?
 
 A Slack MCP server connects an AI client to Slack through the Model Context Protocol. The important distinction is between **Slack’s official hosted server**, connected through OAuth, and **community or self-hosted implementations**, which may use bot tokens and expose different tools.
@@ -1013,9 +1018,44 @@ Keep tokens out of source control, follow workspace app-approval rules and test 
 
 ## Available Tools and Message Drafts
 
-Tool availability depends on the server, client and granted permissions. Check the current official tool reference or your chosen implementation’s documentation before relying on search, channel and thread reading, message sending, scheduling or canvas operations.
+Slack's documentation groups the server's tools by what they do: search, read, write, canvases, files and lists. The exact tool names depend on the client. These are the names I see in Claude's Slack connector (checked November 2026):
 
-**A draft is not automatically a Slack Draft.** The official documentation describes drafting in the AI client. Review the proposed text there; do not assume it appears in Slack’s Drafts view. Sending or scheduling is a separate action and should be reviewed before execution.
+| Tool name in Claude | What it does |
+|---|---|
+| \`slack_search_public\` | Searches messages and files in public channels only |
+| \`slack_search_public_and_private\` | Searches messages and files in every conversation the connected user can access: public and private channels, DMs and group DMs |
+| \`slack_search_channels\` | Finds channels by name or description |
+| \`slack_search_users\` | Finds people by name, email or user ID |
+| \`slack_read_channel\` | Reads a channel's message history |
+| \`slack_read_thread\` | Reads a full thread |
+| \`slack_read_user_profile\` | Reads a user's profile details |
+| \`slack_send_message\` | Sends a message to a channel, DM or thread |
+| \`slack_send_message_draft\` | Saves a draft in Slack without sending it |
+| \`slack_schedule_message\` | Schedules a message for later |
+| \`slack_create_canvas\`, \`slack_update_canvas\`, \`slack_read_canvas\` | Creates, edits and reads canvases |
+
+Slack's reference also lists reactions, channel creation, file uploads and lists. Whether you see them depends on your client and on the permissions you granted. Check the [official tool reference](https://docs.slack.dev/ai/slack-mcp-server/) before you rely on one.
+
+**Private search needs your consent.** \`slack_search_public_and_private\` reads private channels and DMs, so a well-behaved client asks before it uses that tool. \`slack_search_public\` covers public channels only.
+
+**Drafts.** In Claude's connector the draft tool saves the message to "Drafts & Sent" in Slack without sending it. Other clients may only draft the text in the chat. Either way, sending or scheduling is a separate action. Review the text before it goes out.
+
+## Slack Search Syntax That Works Through MCP
+
+The search tools accept Slack's normal search modifiers, so the AI can narrow a search the same way you would in the Slack search bar:
+
+| Example | Finds |
+|---|---|
+| \`in:#support\` | Messages in one channel |
+| \`from:@anna\` | Messages by one person |
+| \`after:2026-11-01\` | Messages after a date. \`before:\` and \`on:\` work the same way |
+| \`during:october\` | Messages in one month |
+| \`has:link\` | Messages with a link. Also \`has:pin\` and \`has:file\` |
+| \`refund is:thread\` | Matches inside threads |
+| \`"invoice overdue"\` | The exact wording |
+| \`launch -draft\` | Results without that word |
+
+Keyword search treats a space as AND. There are no OR or NOT operators, so run two searches when you need either-or.
 
 ## Real-World Use Cases
 
@@ -1043,6 +1083,24 @@ These requests begin with retrieval and review. Automated notifications need an 
 
 **Rate limits:** Limits depend on the Slack API method and app context. Follow Slack’s response and retry guidance, including Retry-After where returned. Automatic backoff is implementation-dependent; do not assume every MCP server retries for you.
 
+## Frequently Asked Questions
+
+### Does Slack have an official MCP server?
+
+Yes. Slack hosts an official MCP server at https://mcp.slack.com/mcp. You connect through OAuth with your own Slack account, and the AI can only reach what that account can reach.
+
+### How do I install the Slack MCP server in Claude?
+
+There is nothing to install locally. Add the Slack connector in Claude, sign in to your workspace and approve the requested access. If your workspace restricts apps, an admin has to approve it first.
+
+### What is slack_search_public_and_private?
+
+It is the search tool in Claude's Slack connector that covers every conversation you can access: public channels, private channels, DMs and group DMs. slack_search_public searches public channels only.
+
+### Do I need a bot token for the Slack MCP server?
+
+Not for the official hosted server, which uses OAuth with your user account. Bot tokens belong to community or self-hosted servers, which have their own setup and scopes.
+
 ## Is the native connector enough?
 
 Start with the task. If you need to find and summarise Slack conversations, first check whether the native connector in your chosen AI tool meets your access and workflow requirements.
@@ -1060,8 +1118,15 @@ I work directly with you to define and build the workflow, using AI to support r
     category: "ai",
     author: "Erik Budanov",
     date: "2026-03-17",
+    updated: "2026-11-12",
     readTime: "6 min read",
     keywords: ["slack mcp server", "slack mcp", "slack ai integration", "slack automation", "mcp server slack"],
+    faqs: [
+      { question: "Does Slack have an official MCP server?", answer: "Yes. Slack hosts an official MCP server at https://mcp.slack.com/mcp. You connect through OAuth with your own Slack account, and the AI can only reach what that account can reach." },
+      { question: "How do I install the Slack MCP server in Claude?", answer: "There is nothing to install locally. Add the Slack connector in Claude, sign in to your workspace and approve the requested access. If your workspace restricts apps, an admin has to approve it first." },
+      { question: "What is slack_search_public_and_private?", answer: "It is the search tool in Claude's Slack connector that covers every conversation you can access: public channels, private channels, DMs and group DMs. slack_search_public searches public channels only." },
+      { question: "Do I need a bot token for the Slack MCP server?", answer: "Not for the official hosted server, which uses OAuth with your user account. Bot tokens belong to community or self-hosted servers, which have their own setup and scopes." },
+    ],
   },
 
   /* ─── WEB DESIGN CLUSTER ─── */
@@ -1594,10 +1659,10 @@ If you want help building a custom Supabase MCP server for your specific use cas
   },
   {
     slug: "claude-skills-vs-mcp-servers",
-    title: "Claude Skills: How They Replace Half of Your MCP Servers (2026 Guide)",
+    title: "Claude Skills vs MCP Servers: When to Use Which (2026 Guide)",
     metaTitle: "Claude Skills vs MCP Servers: When to Use Which (2026)",
     metaDescription:
-      "Claude Skills are folders of instructions Claude reads automatically — no server required. Learn when to use Skills, when to use MCP, and how to build your first skill in 10 minutes.",
+      "Skills = instructions Claude loads on demand, no server. MCP = live data and APIs. Side-by-side table, real examples and a first skill in 10 minutes.",
     excerpt:
       "Anthropic shipped Claude Skills — folders of instructions Claude reads on demand. They replace half the use cases we used to need MCP servers for. Here's when to use which, and how to build one.",
     content: `
@@ -1829,6 +1894,7 @@ Yes. Skills are just folders of files, so you can commit them to a Git repositor
     category: "ai",
     author: "Erik Budanov",
     date: "2026-05-26",
+    updated: "2026-11-12",
     readTime: "9 min read",
     keywords: ["claude skills", "what are claude skills", "claude skills vs mcp", "anthropic claude skills", "claude skills tutorial", "how to create claude skill"],
     faqs: [
@@ -1843,12 +1909,18 @@ Yes. Skills are just folders of files, so you can commit them to a Git repositor
   {
     slug: "vibe-coding-vps-build-deploy-app-with-ai",
     title: "Vibe Coding + VPS: Build and Deploy Full Apps with AI in 2026",
-    metaTitle: "Vibe Coding + VPS: Build & Deploy Apps with AI — The New Stack",
+    metaTitle: "Self-Host a Vibe-Coded App on Your Own VPS or VPC (2026)",
     metaDescription:
-      "Stop renting someone else's platform. Learn how vibe coding with Claude AI and a VPS lets you build, deploy, and own full applications — from idea to production in hours.",
+      "Yes, you can self-host a vibe-coded app on your own VPS or VPC. The stack, the deploy steps and what you give up compared with Lovable or Bolt.",
     excerpt:
       "Everyone's talking about vibe coding with hosted platforms. But the real power move? AI + your own VPS. You build it, you deploy it, you own it. Here's how the new stack actually works.",
     content: `
+## Can You Self-Host a Vibe-Coded App on Your Own VPS or VPC?
+
+**Short answer: yes.** An app you build with Claude, Claude Code or Cursor is ordinary code, usually a web app, an API and a database packaged with Docker. It runs on any Linux server you control. That can be a small VPS at a provider like Hetzner or DigitalOcean, or a private instance inside your company's VPC on AWS, Azure or Google Cloud. The steps are nearly the same in both cases: copy the code to the server, start the containers and put a web server with SSL in front. Inside a VPC you can also keep the app off the public internet and reachable only through your VPN. In that case you issue the SSL certificate through DNS validation or your internal certificate authority.
+
+What you take on in exchange is the work a hosted platform does for you: updates, backups and monitoring. The rest of this guide shows the stack and the deploy steps.
+
 ## The Paradigm Shift Nobody's Talking About
 
 There's a new term sweeping the developer world in 2026: **vibe coding**. Describe what you want in plain English, and AI builds it. Tools like Lovable, Bolt.new, and Replit are racing to own this space, promising "idea to app in minutes."
@@ -2024,8 +2096,9 @@ Because now, if you can explain it, you can create it.
     category: "ai",
     author: "Erik Budanov",
     date: "2026-03-31",
+    updated: "2026-11-12",
     readTime: "9 min read",
-    keywords: ["vibe coding", "build app with ai", "vibe coding vps", "ai app development", "deploy app with ai", "ai software development 2026"],
+    keywords: ["vibe coding", "self-host vibe-coded app", "vibe coding vpc", "build app with ai", "vibe coding vps", "ai app development", "deploy app with ai", "ai software development 2026"],
   },
   {
     slug: "replace-saas-with-ai-vps",

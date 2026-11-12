@@ -64,7 +64,8 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.metaDescription,
     image: post.image.startsWith("http") ? post.image : `https://digidog.org${post.image}`,
     author: { "@type": "Person", "@id": "https://digidog.org/#erik", name: post.author, url: "https://digidog.org/about", jobTitle: "Founder", sameAs: ["https://www.upwork.com/freelancers/erikbudanov"] },
-    dateModified: post.date,
+    dateModified: post.updated || post.date,
+    inLanguage: "en",
     publisher: {
       "@type": "Organization",
       name: "DigiDog",
@@ -79,6 +80,7 @@ export default async function BlogPostPage({ params }: Props) {
   const faqSchema = post.faqs && post.faqs.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    inLanguage: "en",
     mainEntity: post.faqs.map(f => ({
       "@type": "Question",
       name: f.question,

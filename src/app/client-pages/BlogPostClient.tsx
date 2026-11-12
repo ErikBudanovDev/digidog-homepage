@@ -14,17 +14,22 @@ export function markdownToHtml(md: string): string {
   let html = md;
 
   // Fenced code blocks: ```lang ... ```
+  // They are swapped for placeholders so the heading, list and paragraph
+  // passes below never touch code (a "## " line inside an example is not a heading).
+  const codeBlocks: string[] = [];
   html = html.replace(/```(\w*)\n([\s\S]*?)```/g, (_m, lang, code) => {
     const escaped = code
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .trimEnd();
-    return `<pre class="code-block"><code class="language-${lang || "text"}">${escaped}</code></pre>`;
+    codeBlocks.push(`<pre class="code-block"><code class="language-${lang || "text"}">${escaped}</code></pre>`);
+    return `<pre data-cb="${codeBlocks.length - 1}"></pre>`;
   });
 
-  // Inline code: `code`
-  html = html.replace(/`([^`]+)`/g, '<code class="inline-code">$1</code>');
+  // Inline code: `code`. <wbr> after each underscore lets long identifiers
+  // (slack_search_public_and_private) wrap at word boundaries on narrow screens.
+  html = html.replace(/`([^`]+)`/g, (_m, c: string) => `<code class="inline-code">${c.replace(/_/g, "_<wbr>")}</code>`);
 
   // Headings
   html = html.replace(/^### (.+)$/gm, "<h3>$1</h3>");
@@ -47,7 +52,9 @@ export function markdownToHtml(md: string): string {
     const cells = match.split("|").filter(Boolean).map((c) => c.trim());
     return "<tr>" + cells.map((c) => `<td>${c}</td>`).join("") + "</tr>";
   });
-  html = html.replace(/^\|[-| ]+\|$/gm, "");
+  // Separator row (|---|---|): drop it together with its line break, so the header row
+  // stays attached to the body rows and becomes the <thead> of the same table.
+  html = html.replace(/^\|[-| :]+\|$\n?/gm, "");
   html = html.replace(/(<tr>.*<\/tr>\n?)+/g, (m) => {
     const rows = m.trim().split("\n");
     const header = rows[0]?.replace(/<td>/g, "<th>").replace(/<\/td>/g, "</th>");
@@ -67,6 +74,8 @@ export function markdownToHtml(md: string): string {
   html = html.replace(/<p><\/p>/g, "");
   html = html.replace(/<p>(<[hultapcfo])/g, "$1");
   html = html.replace(/(<\/[hultapcfo][^>]*>)<\/p>/g, "$1");
+
+  html = html.replace(/<pre data-cb="(\d+)"><\/pre>/g, (_m, i) => codeBlocks[Number(i)]);
 
   return html;
 }
@@ -198,6 +207,8 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
           .blog-content .code-block { max-width: 100%; }
           .blog-content .inline-code { overflow-wrap: anywhere; word-break: break-word; }
           @media (max-width: 640px) { .blog-content table { display: block; overflow-x: auto; } }
+          .blog-content td .inline-code, .blog-content th .inline-code { overflow-wrap: normal; word-break: normal; }
+          .blog-content td, .blog-content th { overflow-wrap: normal; word-break: normal; }
         `}</style>
         <div
           className="blog-content"

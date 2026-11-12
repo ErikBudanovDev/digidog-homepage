@@ -30,23 +30,26 @@ const ROTATOR_CSS = `
 @media (prefers-reduced-motion:reduce){.mr>span{animation:none}.mr>span:first-child{opacity:1}}
 `;
 
+/** Render once, outside the heading, so the CSS never ends up in the <h1> text. */
+export function ModelRotatorStyle() {
+  return <style>{ROTATOR_CSS}</style>;
+}
+
+/** Each word appears exactly once in the HTML; the hidden separator keeps the heading text readable for crawlers. */
 export function ModelRotator({ words }: { words: string[] }) {
   return (
-    <>
-      <style>{ROTATOR_CSS}</style>
-      <span className="sr-only">{words.join(", ")}</span>
-      <span className="mr" aria-hidden="true">
-        {words.map((w) => (
-          <span
-            key={w}
-            className="bg-clip-text text-transparent"
-            style={{ backgroundImage: "linear-gradient(90deg, #ffffff 0%, #7dd3fc 100%)" }}
-          >
-            {w}
-          </span>
-        ))}
-      </span>
-    </>
+    <span className="mr">
+      {words.map((w, i) => (
+        <span
+          key={w}
+          className="bg-clip-text text-transparent"
+          style={{ backgroundImage: "linear-gradient(90deg, #ffffff 0%, #7dd3fc 100%)" }}
+        >
+          {w}
+          {i < words.length - 1 && <span className="sr-only">, </span>}
+        </span>
+      ))}
+    </span>
   );
 }
 

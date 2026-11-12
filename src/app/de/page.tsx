@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     title: de.seo.home.title,
     description: de.seo.home.description,
     url: "/de",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630 }],
     locale: "de_DE",
     alternateLocale: ["en_US"],
   },

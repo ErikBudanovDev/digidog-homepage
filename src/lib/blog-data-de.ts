@@ -408,15 +408,15 @@ Mehr zur [KI-Integration mit Claude und KI-Agenten](/de/dienstleistungen/ki-inte
     title: "KI-Automatisierung für den Mittelstand: Ein praxisorientierter Leitfaden",
     metaTitle: "KI-Automatisierung für den Mittelstand — Praxisleitfaden 2026",
     metaDescription:
-      "Wie mittelständische Unternehmen (50–200 Mitarbeiter) KI-Automatisierung einsetzen, um manuelle Arbeit um 30–60 % zu reduzieren. Reale Workflows, ROI-Berechnungen und ein schrittweiser Umsetzungsplan.",
+      "Wie mittelständische Unternehmen (50–200 Mitarbeiter) KI-Automatisierung einsetzen, um repetitive manuelle Arbeit zu reduzieren. Reale Workflows, ROI-Berechnungen und ein schrittweiser Umsetzungsplan.",
     excerpt:
-      "Die meisten Mittelständler verschwenden 30–60 % der Arbeitszeit mit repetitiven Aufgaben. So ändert KI-Automatisierung das — mit echten Workflows, nicht mit Hype.",
+      "Im Mittelstand geht viel Arbeitszeit für repetitive Aufgaben verloren. So ändert KI-Automatisierung das — mit echten Workflows, nicht mit Hype.",
     content: `
 ## Warum der Mittelstand ideal für KI-Automatisierung ist
 
 Große Konzerne haben eigene KI-Teams. Startups sind schnell, haben aber noch keine etablierten Prozesse. Mittelständische Unternehmen (50–200 Mitarbeiter) befinden sich im idealen Bereich: genug repetitive Prozesse zum Automatisieren, ausreichend Budget für Investitionen und genug Leidensdruck, um Veränderungen zu rechtfertigen.
 
-Bei Digidog haben wir Unternehmen in dieser Größenordnung dabei geholfen, Rechnungsverarbeitung, Lead-Qualifizierung, Support-Ticket-Weiterleitung, Meeting-Protokolle und Dateneingabe zu automatisieren — im Schnitt 22 Stunden pro Mitarbeiter und Monat gespart.
+Bei Digidog haben wir Unternehmen in dieser Größenordnung dabei geholfen, Rechnungsverarbeitung, Lead-Qualifizierung, Support-Ticket-Weiterleitung, Meeting-Protokolle und Dateneingabe zu automatisieren.
 
 ## Die 5 Automatisierungen mit dem höchsten ROI
 
@@ -426,7 +426,7 @@ Ihr Vertriebsteam verbringt Stunden damit, Leads manuell zu bewerten und CRM-Fel
 **Typische Einsparung:** 15–20 Stunden pro Woche für ein 5-köpfiges Vertriebsteam.
 
 ### 2. Rechnungsverarbeitung & Dateneingabe
-Jede Rechnung, die als PDF, E-Mail-Anhang oder Scan eingeht, muss erfasst, geprüft, einer Bestellung zugeordnet und ins Buchhaltungssystem eingegeben werden. KI erledigt das vollständig mit einer Genauigkeit von 98 %+.
+Jede Rechnung, die als PDF, E-Mail-Anhang oder Scan eingeht, muss erfasst, geprüft, einer Bestellung zugeordnet und ins Buchhaltungssystem eingegeben werden. KI kann das weitgehend automatisch erledigen, unklare Fälle gehen zur Prüfung an einen Menschen.
 
 **Typische Einsparung:** 80 % weniger Verarbeitungszeit.
 
@@ -471,12 +471,13 @@ KI-Systeme brauchen Überwachung. Wir verfolgen die Genauigkeit, behandeln Ausna
 
 Wir „fügen nicht einfach KI hinzu" — wir entwickeln vollständige Workflow-Systeme. Unser Stack umfasst Claude und GPT für Sprachaufgaben, maßgeschneiderte ML-Modelle für Klassifizierung und direkte API-Integrationen in Ihre bestehenden Tools. Jede Automatisierung enthält ein Monitoring-Dashboard und eine manuelle Fallback-Option.
 
-Möchten Sie sehen, wie viel Zeit Ihr Team sparen könnte? [Kostenloses KI-Audit buchen](/contact).
+Möchten Sie sehen, wie viel Zeit Ihr Team sparen könnte? [Kostenloses KI-Audit buchen](/de/kontakt).
     `,
     image: "/images/blog/covers/ai-automation.webp",
     tag: "KI-Automatisierung",
     category: "ai",
     author: "Erik Budanov",
+    updated: "2026-11-12",
     date: "2026-03-10",
     readTime: "8 Min. Lesezeit",
     keywords: ["ki automatisierung mittelstand", "ki automatisierung unternehmen", "workflow automatisierung", "prozessautomatisierung ki"],
@@ -541,7 +542,7 @@ Die Einstiegshürde ist niedriger als Sie denken:
 3. **MCP-Server entwickeln** — Jedes Tool bekommt einen leichtgewichtigen Server, der seine Fähigkeiten bereitstellt
 4. **Mit KI verbinden** — Claude oder einen anderen KI-Assistenten als Orchestrator einbinden
 
-Möchten Sie MCP für Ihr Unternehmen erkunden? [Sprechen Sie mit unserem Team](/contact) — wir entwickeln MCP-Integrationen seit der Einführung des Protokolls.
+Möchten Sie MCP für Ihr Unternehmen erkunden? [Sprechen Sie mit unserem Team](/de/kontakt) — wir entwickeln MCP-Integrationen seit der Einführung des Protokolls.
     `,
     image: "/images/blog/covers/what-is-mcp.webp",
     tag: "KI-Integration",
@@ -616,7 +617,7 @@ Eine Website braucht laufende Pflege: Updates, Sicherheit, Performance-Monitorin
 
 Wir kombinieren Design-Expertise mit technischer Tiefe. Unsere Websites sind nicht nur schön — sie performen: schnelle Ladezeiten, SEO-optimiert, und conversion-orientiert.
 
-[Kostenloses Erstgespräch vereinbaren](/contact)
+[Kostenloses Erstgespräch vereinbaren](/de/kontakt)
     `,
     image: "/images/blog/covers/website-de.webp",
     tag: "Webentwicklung",
@@ -684,7 +685,7 @@ Einführung im Vertriebsteam mit Schulung. KI übernimmt Routineaufgaben; Mensch
 
 Der ROI wurde in 6 Wochen erreicht. Das System kostete 12.000 € in der Entwicklung und 400 €/Monat in der Wartung. Bei 25 gesparten Stunden pro Woche und durchschnittlichen Teamkosten von 45 €/Stunde beträgt der monatliche Wert 4.500 € — eine 10-fache Rendite auf die laufenden Kosten.
 
-[Möchten Sie ähnliche Ergebnisse? Sprechen Sie uns an.](/contact)
+[Möchten Sie ähnliche Ergebnisse? Sprechen Sie uns an.](/de/kontakt)
     `,
     image: "/images/blog/covers/crm-case.webp",
     tag: "Fallstudie",
@@ -751,7 +752,7 @@ Eine etablierte Kieferorthopädie-Praxis mit 15 Jahren Erfahrung hatte eine Webs
 
 Für Gesundheitspraxen liefert die Kombination aus modernem Webdesign, lokaler SEO und Content-Strategie kumulative Renditen. Die Praxis generiert jetzt mehr Anfragen über ihre Website als über Empfehlungen — und die Website arbeitet rund um die Uhr.
 
-[Ist Ihre Praxis online unsichtbar? Kostenloses Audit anfordern.](/contact)
+[Ist Ihre Praxis online unsichtbar? Kostenloses Audit anfordern.](/de/kontakt)
     `,
     image: "/images/blog/covers/dental-case.webp",
     tag: "Fallstudie",
@@ -831,7 +832,7 @@ Die klügste Strategie ist oft hybrid: SaaS für generische Funktionen nutzen un
 
 Bei Digidog sind wir auf genau diesen Ansatz spezialisiert. Wir helfen Ihnen zu identifizieren, was Sie entwickeln, was Sie kaufen und wie Sie alles verbinden sollten.
 
-[Lassen Sie uns gemeinsam Ihren Tech-Stack planen.](/contact)
+[Lassen Sie uns gemeinsam Ihren Tech-Stack planen.](/de/kontakt)
     `,
     image: "/images/blog/covers/build-vs-buy.webp",
     tag: "Software",
@@ -1094,7 +1095,7 @@ Automatische Benachrichtigungen benötigen zusätzlich einen Auslöser oder eine
 
 ## MCP bei DigiDog
 
-Ich bin Erik Budanov, unabhängiger Produktentwickler und Gründer von DigiDog. Ich plane und entwickle Integrationen mit direkter technischer Verantwortung und KI-Unterstützung. Beginnen wir mit einem konkreten Workflow, klaren Zugriffsrechten und definierten Freigaben. [Kostenloses Beratungsgespräch buchen](/contact).
+Ich bin Erik Budanov, unabhängiger Produktentwickler und Gründer von DigiDog. Ich plane und entwickle Integrationen mit direkter technischer Verantwortung und KI-Unterstützung. Beginnen wir mit einem konkreten Workflow, klaren Zugriffsrechten und definierten Freigaben. [Kostenloses Beratungsgespräch buchen](/de/kontakt).
 
 **Weiterführende Anleitungen:** [Claude Skills vs. MCP-Server — wann was?](/de/blog/claude-skills-vs-mcp-server) · [Slack MCP Server einrichten](/de/blog/slack-mcp-server-einrichten) · [Supabase MCP Server einrichten](/de/blog/supabase-mcp-server-einrichten) · [Playwright MCP Server Anleitung](/de/blog/playwright-mcp-server-anleitung) · [Vibe Coding: der deutsche Leitfaden](/de/blog/vibe-coding-deutschland-anleitung)
 
@@ -1523,7 +1524,7 @@ Alternative: Cursor (VS Code mit KI-Integration), Windsurf, oder Claude Desktop.
 **Empfehlung: Supabase**.
 - Postgres-Datenbank, Auth, Storage in einem
 - Gratis-Tier deckt die meisten kleinen Projekte ab
-- Hat einen MCP-Server, der direkt mit Claude spricht (siehe unsere [Supabase MCP Anleitung](/blog/supabase-mcp-server-einrichten))
+- Hat einen MCP-Server, der direkt mit Claude spricht (siehe unsere [Supabase MCP Anleitung](/de/blog/supabase-mcp-server-einrichten))
 
 Alternative: Firebase (Google) oder direkt Postgres auf einem VPS.
 
@@ -1696,10 +1697,10 @@ Wenn du mit Vibe Coding startest und stecken bleibst, oder ein konkretes Projekt
   },
   {
     slug: "claude-skills-vs-mcp-server",
-    title: "Claude Skills: Wie sie die Hälfte deiner MCP-Server ersetzen (2026)",
+    title: "Claude Skills vs. MCP-Server: Wann du was nutzt (2026)",
     metaTitle: "Claude Skills vs MCP-Server: Wann welches nutzen (2026)",
     metaDescription:
-      "Claude Skills sind Ordner mit Anleitungen, die Claude automatisch liest — kein Server nötig. Erfahre, wann du Skills nutzt, wann MCP, und wie du dein erstes Skill in 10 Minuten baust.",
+      "Skills = Anleitungen, die Claude bei Bedarf lädt, ohne Server. MCP = Live-Daten und APIs. Vergleichstabelle, Beispiele und dein erstes Skill in 10 Minuten.",
     excerpt:
       "Anthropic hat Claude Skills veröffentlicht — Ordner mit Anleitungen, die Claude bei Bedarf liest. Sie ersetzen die Hälfte der Anwendungsfälle, für die wir früher MCP-Server brauchten. Hier ist die Anleitung.",
     content: `
@@ -1902,6 +1903,7 @@ Ja. Skills sind einfache Datei-Ordner, also lassen sie sich in einem Git-Reposit
     tag: "KI-Integration",
     category: "ai",
     author: "Erik Budanov",
+    updated: "2026-11-12",
     date: "2026-05-26",
     readTime: "9 Min. Lesezeit",
     keywords: ["claude skills", "claude skills deutsch", "claude skills vs mcp", "anthropic skills", "claude skills tutorial"],
