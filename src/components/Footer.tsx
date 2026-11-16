@@ -226,9 +226,9 @@ export function Footer() {
                   <li className="flex items-start gap-2">
                     <MapPin size={16} className="mt-1 shrink-0" style={{ color: colors.textMuted }} />
                     <span className="text-[14px]" style={{ fontFamily: fonts.display, color: colors.textMuted }}>
-                      Digidog LLC<br />
-                      30 N Gould St, Ste N<br />
-                      Sheridan, WY 82801, USA
+                      DIGIDOG, LLC<br />
+                      Lvovyan 17, 50<br />
+                      Yerevan 0056, Armenia
                     </span>
                   </li>
                   <li className="flex items-start gap-2">

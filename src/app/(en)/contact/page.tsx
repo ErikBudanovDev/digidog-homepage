@@ -15,7 +15,7 @@ const localBusinessSchema = {
   url: "https://digidog.org",
   telephone: "+43-664-93020594",
   email: "info@digidog.org",
-  address: { "@type": "PostalAddress", streetAddress: "Lvovyan 17/50", addressLocality: "Yerevan", addressCountry: "AM" },
+  address: { "@type": "PostalAddress", streetAddress: "Lvovyan 17/50", addressLocality: "Yerevan", postalCode: "0056", addressCountry: "AM" },
   geo: { "@type": "GeoCoordinates", latitude: 40.1872, longitude: 44.5152 },
   priceRange: "€€€",
   openingHours: "Mo-Fr 09:00-18:00",
