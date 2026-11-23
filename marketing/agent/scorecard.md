@@ -9,3 +9,4 @@ One row per finished task. `edits` = how many times Erik had to correct or redo 
 | 2026-11-17 | sales analysis from Upwork data | 0 | 0 | M | — |
 | 2026-11-17 | traffic report from GSC | 0 | 0 | M | Ahrefs API units at 0, used GSC in Chrome |
 | 2026-11-17 | DE Mittelstand post rewrite (PR #24) | 0 | 1 | M | Ahrefs keyword data unavailable; title too long first try |
+| 2026-11-23 | AI-client search on Upwork (contracts + live jobs) | 1 | 0 | M | first answer pushed web dev; corrected to AI systems |

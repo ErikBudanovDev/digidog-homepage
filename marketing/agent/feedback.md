@@ -12,3 +12,4 @@ Mark a line `[applied YYYY-MM-DD]` once the skill reflects it.
 - standing · reports · answers short, simple, in Russian → short and plain [applied 2026-11-23]
 - standing · site · always check mobile → mobile check before "done" [applied 2026-11-23]
 - standing · files · never route files through ClickUp or other third parties → stop and ask for the upload [applied 2026-11-23]
+- 2026-11-23 · strategy · Erik rejected "go back to web dev": the goal is clients who want AI integration — complex systems (agents as workers, connected systems, databases, dashboards). Past revenue mix is context, not the direction → advise toward the chosen positioning; use history to find proof, not to change the target
