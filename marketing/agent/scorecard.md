@@ -11,3 +11,4 @@ One row per finished task. `edits` = how many times Erik had to correct or redo 
 | 2026-11-17 | DE Mittelstand post rewrite (PR #24) | 0 | 1 | M | Ahrefs keyword data unavailable; title too long first try |
 | 2026-11-23 | AI-client search on Upwork (contracts + live jobs) | 1 | 0 | M | first answer pushed web dev; corrected to AI systems |
 | 2026-11-24 | daily run: found digidog.org DNS → Hostinger, expired cert; alerted Erik | 0 | 2 | S | no GSC access (no Chrome, no Ahrefs project); no content change while site is down |
+| 2026-11-25 | new EN+DE post: Google Ads MCP server (BOT case) | 0 | 1 | M | site back up; still no GSC access; DE table overflowed 9px on mobile, fixed |

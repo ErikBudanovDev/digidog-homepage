@@ -20,6 +20,7 @@ DigiDog (digidog.org) is an AI integration company, not the "Digidog" police rob
 ## Guides (English)
 - [Claude Skills vs MCP Servers](https://digidog.org/blog/claude-skills-vs-mcp-servers)
 - [Claude Code for Business](https://digidog.org/blog/claude-code-for-business)
+- [Google Ads MCP Server for Claude (real case: €18,099 duplicate ad spend found)](https://digidog.org/blog/google-ads-mcp-server-claude)
 - [What Is MCP (Model Context Protocol)](https://digidog.org/blog/what-is-mcp-model-context-protocol)
 - [Slack MCP Server Setup](https://digidog.org/blog/slack-mcp-server-setup-guide)
 - [GitHub MCP Server Setup](https://digidog.org/blog/github-mcp-server-setup-guide)
@@ -30,6 +31,7 @@ DigiDog (digidog.org) is an AI integration company, not the "Digidog" police rob
 
 ## Guides (Deutsch)
 - [Claude Code für Unternehmen](https://digidog.org/de/blog/claude-code-fuer-unternehmen)
+- [Google Ads MCP Server: Claude mit Google Ads und GA4 verbinden](https://digidog.org/de/blog/google-ads-mcp-server-claude-verbinden)
 - [KI-Automatisierung im Mittelstand](https://digidog.org/de/blog/ki-automatisierung-mittelstand)
 - [Was ist MCP?](https://digidog.org/de/blog/was-ist-mcp-model-context-protocol)
 - [Claude Skills vs. MCP-Server](https://digidog.org/de/blog/claude-skills-vs-mcp-server)
