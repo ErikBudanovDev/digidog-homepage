@@ -34,6 +34,116 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "google-ads-mcp-server-claude",
+    title: "Google Ads MCP Server: Connect Claude to Google Ads and GA4 (Real Case)",
+    metaTitle: "Google Ads MCP Server for Claude: Setup + Real Case",
+    metaDescription: "How a Google Ads MCP server connects Claude to your ad accounts, GA4 and sales data. Google's official servers vs a custom one, and a real case: €18,099 duplicate ad spend found.",
+    excerpt: "One Claude chat that reads Google Ads, GA4 and your booking data together. What the official Google servers can do, where a custom server helps, and what we found for a real client.",
+    image: "/images/blog/covers/google-ads-mcp.webp",
+    tag: "MCP · Google Ads",
+    category: "ai",
+    author: "Erik Budanov",
+    date: "2026-11-25",
+    readTime: "7 min read",
+    keywords: ["google ads mcp server", "google ads mcp", "claude google ads", "google analytics mcp server", "ga4 mcp", "mcp server marketing", "ai agent google ads"],
+    faqs: [
+      { question: "What is a Google Ads MCP server?", answer: "It is a small program that connects an AI assistant such as Claude to the Google Ads API through the Model Context Protocol (MCP). You ask in plain language, the server runs the query against your ad accounts and Claude answers with the real numbers." },
+      { question: "Is there an official Google Ads MCP server?", answer: "Yes. Google publishes an open-source Google Ads API MCP server (github.com/googleads/google-ads-mcp). It reads account data with Google Ads queries and can create assets and manage labels. It does not create or change campaigns, ad groups, ads, budgets or bids." },
+      { question: "Can Claude read Google Analytics 4 too?", answer: "Yes. Google also publishes a Google Analytics MCP server. It is read-only and can run standard, realtime, funnel and conversion reports on your GA4 properties." },
+      { question: "When do I need a custom MCP server instead?", answer: "When the answer needs data from more than Google: bookings, CRM, revenue or stock. A custom server joins these sources, so Claude can compare ad spend with real sales instead of only clicks and conversions." },
+      { question: "Is it safe to let an AI agent touch my ad budget?", answer: "Start read-only. Let the agent find and report problems, and keep budget, bid and campaign changes with a person who approves them." },
+    ],
+    content: `
+Most marketing questions need three tabs: Google Ads, Google Analytics and the system where the money actually lands. A Google Ads MCP server puts them into one conversation. You ask "Which campaigns brought bookings last week?" and Claude answers from your real accounts.
+
+We built this for a client, a tour operator in Europe. In this post: what a Google Ads MCP server does, what Google's official servers can and can't do, and what we found when one chat could see all the data at once.
+
+## What a Google Ads MCP server does
+
+MCP (Model Context Protocol) is the standard way to connect an AI assistant to a tool. If you are new to it, start with [What is MCP?](/blog/what-is-mcp-model-context-protocol).
+
+A Google Ads MCP server sits between Claude and the Google Ads API:
+
+1. You ask a question in plain language.
+2. Claude picks the right tool on the server and writes the query.
+3. The server runs it against your ad accounts and returns the data.
+4. Claude reads the result and answers, or asks the next question itself.
+
+No exports, no copying numbers into a spreadsheet.
+
+## Google's official servers
+
+Google now publishes two open-source servers that matter for marketing:
+
+| Server | What it can do | What it can't do |
+|---|---|---|
+| Google Ads MCP | read all account data, create assets, manage labels | change campaigns, ads, budgets or bids |
+| Google Analytics MCP | GA4 reports: standard, realtime, funnels, conversions | change any GA4 settings |
+
+Both run on your own computer or server and log in with your Google account. For a team that only needs answers from Google data, this is a good, free start.
+
+## Our setup: one chat for ads, analytics and bookings
+
+[Be Original Tours](/portfolio/beoriginaltours-operations) sells walking, day and night tours in several European cities. Their ad spend runs through Google Ads, traffic is measured in GA4, and the real result, a booked tour, lives in their own booking data.
+
+So we built one custom MCP server with **51 tools**. It reads:
+
+- **Google Ads**: all accounts under the manager account (MCC) at once
+- **GA4**: traffic and conversions per page and source
+- **Booking data**: tours, bookings, guests and sales channels
+
+![Claude answering a bookings question from live business data](/images/blog/building-with-ai/claude-analytics.webp)
+
+In the screenshot, a manager asks how many bookings the Berlin walking tour had in the last 10 days. Claude runs the query and answers: 76 bookings, 148 guests, with the busiest days and the split by sales channel. That used to mean opening the booking system and building a report.
+
+## What we found: €18,099 of duplicate ad spend
+
+Because the agent saw every ad account at once, it noticed something nobody had seen in the single-account view: **a second ad account was running the same campaigns again**. Two accounts were paying for the same clicks. The duplicate spend added up to **€18,099**.
+
+Inside one account, every number looked normal. The problem only showed up when the accounts were compared side by side, which is exactly what a person rarely has time to do and an agent does in seconds.
+
+The same agent also pulled **6,850 customer reviews from 12 cities** onto the website, so every tour page shows real reviews.
+
+## Official server or custom server?
+
+| You need | Use |
+|---|---|
+| answers from Google Ads only | official Google Ads MCP |
+| answers from GA4 only | official Google Analytics MCP |
+| ads compared with real sales, CRM or bookings | custom MCP server |
+| reports, alerts and checks that run on their own | custom server plus a scheduled agent |
+
+The official servers answer "what happened in Google". A custom server answers "did the money come back", because it joins ad data with the system where revenue is recorded.
+
+## How to set it up
+
+1. **Pick the questions first.** Write down the 5 to 10 questions you ask every week. They decide which data the server needs.
+2. **Create a Google Cloud project** and an OAuth login for the Google Ads and Analytics APIs. Check Google's current requirements for Google Ads API access.
+3. **Use the manager account (MCC)** if you have more than one ad account, so the agent sees them all.
+4. **Start read-only.** For the first weeks the agent only reads and reports.
+5. **Connect Claude.** Add the server to Claude Desktop, Claude Code or your team's Claude workspace.
+6. **Add your own data.** Bookings, CRM or shop data turn ad reports into revenue reports.
+
+## Keep a person in charge of the money
+
+An agent that finds €18,099 of waste is useful. An agent that changes budgets on its own is a risk. Our rule: the agent reads, compares and recommends; a person approves every change to budgets, bids and campaigns.
+
+## Want this for your ad accounts?
+
+We run a **free 45-minute AI process walk-through**. We look at how you report on ads and sales today and show where one connected agent could take that work over. You leave with concrete next steps, whether or not you work with us.
+
+**[Book your free AI process walk-through →](https://calendly.com/erik-budanov/beratungsgespraech)**
+
+More on what we build: [AI integration services](/services/ai-integration) · [Claude Code for business](/blog/claude-code-for-business)
+
+## Sources
+
+- [Google Ads API: MCP server developer guide](https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server)
+- [Google Ads MCP on GitHub](https://github.com/googleads/google-ads-mcp)
+- [Google Analytics: MCP server](https://developers.google.com/analytics/devguides/MCP)
+    `,
+  },
+  {
     slug: "claude-code-for-business",
     title: "Claude Code for Business: What It Can Do in Your Company",
     metaTitle: "Claude Code for Business: 5 Real Uses in Companies",
@@ -547,7 +657,7 @@ Create tasks, update statuses, assign team members, and generate reports across 
 Read incoming emails, draft responses, schedule meetings, and update Slack channels — all orchestrated by AI through MCP.
 
 ### Data & Analytics
-Query your databases, generate reports, and surface insights — without anyone writing SQL or building dashboards manually.
+Query your databases, generate reports, and surface insights — without anyone writing SQL or building dashboards manually. Example: our [Google Ads MCP server](/blog/google-ads-mcp-server-claude) lets Claude compare ad spend, GA4 and bookings in one chat.
 
 ## Why This Matters for Mid-Size Companies
 
