@@ -40,6 +40,8 @@ A **free intro call, 30 minutes**, with Erik: we walk through one of their proce
 German wording: "kostenloses Erstgespräch, 30 Minuten".
 
 - First LinkedIn note in DACH and the UK: finding + one question only. No offer, no link, no "AI", no "DigiDog".
+- **LinkedIn note: max 200 characters** including greeting and sign-off. Erik's account is a free one: LinkedIn cuts notes at 200 characters and allows only 5 invitations with a note per month (seen in the invite dialog on 2026-11-26). Until Erik decides how to handle this, mark the 5 strongest notes of the day and say so in the final message.
+- The finding in the note must be re-checked on the company's page on the day of sending. Do not turn a list of named offices or products into a count unless the page shows exactly that count.
 - The intro call is offered after the person answers, or in the day-3 follow-up.
 - Email (USA, UK): finding, one line with a matching case, one question. The intro call may be named in the follow-up.
 
