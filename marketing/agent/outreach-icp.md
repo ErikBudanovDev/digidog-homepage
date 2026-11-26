@@ -57,5 +57,6 @@ We have no AI-agent project in industry or energy yet. Never claim one. Use only
 
 ## Landing pages
 
-- Industry and energy: **not live yet** → emails carry no link until this line is updated.
+- Industry and energy, English: https://digidog.org/for/industrial-companies
+- Industry and energy, German: https://digidog.org/de/fuer/industrie-energie
 - Clinics page (digidog.org/for/dental-clinics) stays online but is not used in outreach.
