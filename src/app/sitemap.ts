@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-data";
 import { blogPostsDE } from "@/lib/blog-data-de";
 import { projectsMeta } from "@/lib/portfolio-meta";
+import { landings } from "@/lib/landing-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://digidog.org";
@@ -53,5 +54,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...blogPages, ...blogPagesDE, ...portfolioPages];
+  const landingPages: MetadataRoute.Sitemap = landings.map((l) => ({
+    url: `${baseUrl}${l.path}`,
+    lastModified: "2026-11-26",
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...landingPages, ...blogPages, ...blogPagesDE, ...portfolioPages];
 }
