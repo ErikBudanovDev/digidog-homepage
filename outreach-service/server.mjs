@@ -236,7 +236,7 @@ const server = http.createServer(async (req, res) => {
       }
       const wk = (ts) => { const d = new Date(ts); const day = (d.getUTCDay() + 6) % 7; d.setUTCDate(d.getUTCDate() - day); return d.toISOString().slice(0, 10); };
       const weeks = new Map(); const W = (k) => { if (!weeks.has(k)) weeks.set(k, { leads: 0, li_sent: 0, emails: 0, opens: new Set(), clicks: new Set(), unsub: 0, replied: 0, calls: 0 }); return weeks.get(k); };
-      for (const l of rows) { const w = W(wk(l.created)); w.leads++; if (l.channel === "linkedin" && !["new", "draft"].includes(l.status)) w.li_sent++; if (["replied", "call"].includes(l.status)) w.replied++; if (l.status === "call") w.calls++; }
+      for (const l of rows) { const w = W(wk(l.created)); w.leads++; if (l.channel === "linkedin" && ["sent", "accepted", "replied", "call", "stop"].includes(l.status)) w.li_sent++; if (["replied", "call"].includes(l.status)) w.replied++; if (l.status === "call") w.calls++; }
       for (const e of events) { if (e.test) continue; const m0 = byId.get(e.id); if (m0 && m0.test) continue; const w = W(wk(e.ts)); if (e.type === "sent") w.emails++; if (e.type === "open" && !e.auto) w.opens.add(e.id); if (e.type === "click" && !e.auto) w.clicks.add(e.id); if (e.type === "unsub") w.unsub++; }
       const badge = (st) => `<span class="b b-${esc(st || "new")}">${esc(st || "new")}</span>`;
       const leadHtml = rows.map((l) => { const s0 = stats.get(l.id) || { open: 0, click: 0 }; const c = String(l.contact || ""); const link = c.startsWith("http") ? `<a href="${esc(c)}" rel="noreferrer" target="_blank">profile</a>` : esc(c);
