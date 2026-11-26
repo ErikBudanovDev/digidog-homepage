@@ -14,6 +14,7 @@ Only facts from our portfolio (portfolio-meta.ts / Upwork portfolio). Where the 
 Daily run: take the top open item, do it fully, mark it [done YYYY-MM-DD + URL].
 
 ## Priority
+0. [ ] **Top, needed before Mon Nov 30:** niche landing page for industry and energy companies (50–500 people), EN `/for/industrial-companies` + DE `/de/fuer/industrie-energie` — two entries in src/lib/landing-data.ts. Read marketing/agent/outreach-icp.md first. CTA: free intro call, 30 minutes ("kostenloses Erstgespräch"). Jobs the agent takes over: quote and enquiry handling, order processing, service and spare-parts requests, document search, weekly reporting from ERP/CRM. Proof: only the case lines in outreach-icp.md (no AI project in industry yet — do not claim one). After it is live: set the URLs under "Landing pages" in outreach-icp.md and request indexing.
 1. [ ] Wording pass on home + /services/ai-integration (EN): "AI agents & AI automation for business"; name tools (Claude, OpenAI, n8n, Make, HubSpot, RAG, MCP); keep the URL.
 2. [ ] Page: Claude / ChatGPT rollout for teams — audit, Claude Team/Enterprise setup, MCP connectors, data permissions, training. Proof: our own AI operations system, MCP WordPress gateway, Be Original Tours.
 3. [ ] Page: Multi-agent systems & MCP — agents as employees + one dashboard. Proof: Be Original Tours (whole business in one Claude chat), AI operations dashboard, Lumera property agent (no client name without Erik's OK).
@@ -21,7 +22,7 @@ Daily run: take the top open item, do it fully, mark it [done YYYY-MM-DD + URL].
 5. [ ] Page: AI sales & lead-generation agent — Proof: lead agent (website vs top-10 competitors, first email), Swiss register monitor.
 6. [ ] Page: n8n / Make AI automation — Proof: jewelry sketch automation in Make (70% time saved), Be Original Tours booking automation.
 7. [ ] Page: AI customer-support agent (chat + email) — needs a real case; check with Erik first.
-8. [done 2026-11-26 https://digidog.org/for/dental-clinics + /de/fuer/zahnarztpraxen] Industry page: dental & medical clinics (HubSpot dental chain, SmileForYou CRO). New niche pages = one entry per language in src/lib/landing-data.ts.
+8. (outreach to clinics stopped 2026-11-26 by Erik; page stays) [done 2026-11-26 https://digidog.org/for/dental-clinics + /de/fuer/zahnarztpraxen] Industry page: dental & medical clinics (HubSpot dental chain, SmileForYou CRO). New niche pages = one entry per language in src/lib/landing-data.ts.
 9. [ ] Industry page: tours & bookings (Be Original Tours).
 10. [ ] Industry page: e-commerce (jewelry pipeline).
 11. [ ] Later, only with a real case: voice AI receptionist, RAG knowledge base, real estate, finance, legal.
