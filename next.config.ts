@@ -90,6 +90,8 @@ const nextConfig: NextConfig = {
 
       // === Language prefixed pages ===
       // /de and /de/ redirects REMOVED — real German routes now exist
+      { source: "/seo-sea-analytics", destination: "/services/ai-integration", permanent: true },
+      { source: "/de/der-goldrausch-der-ki-ara", destination: "/de/blog", permanent: true },
       { source: "/en", destination: "/", permanent: true },
       { source: "/en/", destination: "/", permanent: true },
       { source: "/en/about-us", destination: "/about", permanent: true },

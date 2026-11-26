@@ -1,5 +1,6 @@
 {
   "buildCommand": "rm -rf .next && next build",
   "framework": "nextjs",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':(exclude)marketing' ':(exclude)outreach-service'"
 }
