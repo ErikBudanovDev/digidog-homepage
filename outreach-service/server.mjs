@@ -18,6 +18,7 @@ const POSTAL = process.env.POSTAL || "DIGIDOG, LLC, 30 N Gould St, Ste N, Sherid
 const DAILY_CAP = Number(process.env.DAILY_CAP || 10);
 const TEST_ALLOW = (process.env.TEST_ALLOW || "").toLowerCase().split(",").map((s) => s.trim()).filter(Boolean);
 const HOME = process.env.HOME_URL || "https://digidog.org";
+const VIEW_KEY = process.env.VIEW_KEY || "";
 
 fs.mkdirSync(DATA, { recursive: true });
 const file = (n) => path.join(DATA, n + ".jsonl");
@@ -28,6 +29,24 @@ const messages = load("messages"); // {id, lead_id, to, subject, step, country, 
 const events = load("events"); // {ts, type, id, to, lead_id, url?, ua?, auto?}
 const suppress = load("suppress"); // {email, reason, ts}
 const state = load("state"); // {mode, ts}
+// leads: upsert log, last row per id wins
+const leads = new Map();
+for (const l of load("leads")) leads.set(l.id, { ...(leads.get(l.id) || {}), ...l });
+const LEAD_FIELDS = ["niche", "company", "country", "person", "role", "channel", "contact", "website", "finding", "case", "status", "next_step", "draft_subject", "draft_text", "notes"];
+function upsertLead(input) {
+  const contact = String(input.contact || "").trim().toLowerCase();
+  let cur = input.id ? leads.get(input.id) : contact ? [...leads.values()].find((l) => l.contact === contact) : null;
+  const isNew = !cur;
+  if (isNew) cur = { id: "L" + crypto.randomBytes(5).toString("hex"), created: new Date().toISOString(), status: "new" };
+  const patch = { id: cur.id, updated: new Date().toISOString() };
+  for (const f of LEAD_FIELDS) if (input[f] !== undefined) patch[f] = f === "contact" ? contact : String(input[f]).slice(0, 4000);
+  if (isNew) { patch.created = cur.created; if (!patch.status) patch.status = "new"; }
+  const next = { ...cur, ...patch };
+  leads.set(next.id, next); append("leads", isNew ? next : patch);
+  return { lead: next, created: isNew };
+}
+const setLead = (id, patch) => { if (id && leads.has(id)) upsertLead({ id, ...patch }); };
+
 let mode = state.length ? state[state.length - 1].mode : process.env.MODE || "test";
 
 const byId = new Map(messages.map((m) => [m.id, m]));
@@ -168,12 +187,47 @@ const server = http.createServer(async (req, res) => {
       const m = byUnsub.get(mm[1]);
       if (!m) return page(res, 404, "Link not found", `<h1>Link not found</h1><p>This link is not valid any more. To stop emails, reply "no" to the message and you will be removed.</p>`);
       if (req.method === "POST") {
-        if (addSuppress(m.to, "unsubscribe")) logEvent("unsub", m, { ua });
+        if (addSuppress(m.to, "unsubscribe")) { logEvent("unsub", m, { ua }); setLead(m.lead_id, { status: "stop", next_step: "" }); }
         return page(res, 200, "Unsubscribed", `<h1>You're unsubscribed</h1><p><b>${esc(m.to)}</b> will not get any more emails from DigiDog.</p><p><small>${esc(POSTAL)}</small></p>`);
       }
       return page(res, 200, "Unsubscribe", `<h1>Unsubscribe</h1><p>Stop all emails from DigiDog to <b>${esc(m.to)}</b>?</p><form method="post"><button type="submit">Yes, unsubscribe me</button></form><p style="margin-top:14px"><small>${esc(POSTAL)}</small></p>`);
     }
 
+
+    // board (read-only view, secret key in path)
+    mm = p.match(/^\/board\/([\w-]+)(\/leads\.csv)?$/);
+    if (mm) {
+      if (!VIEW_KEY || mm[1] !== VIEW_KEY) { res.writeHead(404); return res.end("not found"); }
+      const stats = new Map();
+      for (const e of events) { if (e.auto || !e.lead_id) continue; const s0 = stats.get(e.lead_id) || { open: 0, click: 0 }; if (e.type === "open") s0.open++; if (e.type === "click") s0.click++; stats.set(e.lead_id, s0); }
+      const rows = [...leads.values()].sort((a, b) => (a.created < b.created ? 1 : -1));
+      if (mm[2]) {
+        const cols = ["created", "niche", "company", "country", "person", "role", "channel", "contact", "finding", "case", "status", "next_step", "notes"];
+        const csv = [cols.join(","), ...rows.map((l) => cols.map((c) => '"' + String(l[c] || "").replace(/"/g, '""') + '"').join(","))].join("\n");
+        res.writeHead(200, { "content-type": "text/csv; charset=utf-8", "cache-control": "no-store", "x-robots-tag": "noindex" }); return res.end(csv);
+      }
+      const wk = (ts) => { const d = new Date(ts); const day = (d.getUTCDay() + 6) % 7; d.setUTCDate(d.getUTCDate() - day); return d.toISOString().slice(0, 10); };
+      const weeks = new Map(); const W = (k) => { if (!weeks.has(k)) weeks.set(k, { leads: 0, li_sent: 0, emails: 0, opens: new Set(), clicks: new Set(), unsub: 0, replied: 0, calls: 0 }); return weeks.get(k); };
+      for (const l of rows) { const w = W(wk(l.created)); w.leads++; if (l.channel === "linkedin" && !["new", "draft"].includes(l.status)) w.li_sent++; if (["replied", "call"].includes(l.status)) w.replied++; if (l.status === "call") w.calls++; }
+      for (const e of events) { if (e.test) continue; const m0 = byId.get(e.id); if (m0 && m0.test) continue; const w = W(wk(e.ts)); if (e.type === "sent") w.emails++; if (e.type === "open" && !e.auto) w.opens.add(e.id); if (e.type === "click" && !e.auto) w.clicks.add(e.id); if (e.type === "unsub") w.unsub++; }
+      const badge = (st) => `<span class="b b-${esc(st || "new")}">${esc(st || "new")}</span>`;
+      const leadHtml = rows.map((l) => { const s0 = stats.get(l.id) || { open: 0, click: 0 }; const c = String(l.contact || ""); const link = c.startsWith("http") ? `<a href="${esc(c)}" rel="noreferrer" target="_blank">profile</a>` : esc(c);
+        return `<article data-s="${esc(l.status || "new")}" data-c="${esc(l.channel || "")}"><header><b>${esc(l.company || "—")}</b>${badge(l.status)}</header><p class="who">${esc(l.person || "")}${l.role ? " · " + esc(l.role) : ""} · ${esc(l.country || "")} · ${esc(l.channel || "")} · ${link}</p><p>${esc(l.finding || "")}</p>${l.draft_text ? `<details><summary>Message${l.draft_subject ? ": " + esc(l.draft_subject) : ""}</summary><pre>${esc(l.draft_text)}</pre></details>` : ""}<p class="meta">${esc(l.niche || "")} · ${esc((l.created || "").slice(0, 10))}${l.next_step ? " · next: " + esc(l.next_step) : ""}${s0.open || s0.click ? ` · opens ${s0.open} · clicks ${s0.click}` : ""}${l.notes ? " · " + esc(l.notes) : ""}</p></article>`; }).join("");
+      const weekHtml = [...weeks.entries()].sort((a, b) => (a[0] < b[0] ? 1 : -1)).map(([k, w]) => `<tr><td>${k}</td><td>${w.leads}</td><td>${w.li_sent}</td><td>${w.emails}</td><td>${w.opens.size}</td><td>${w.clicks.size}</td><td>${w.replied}</td><td>${w.calls}</td><td>${w.unsub}</td></tr>`).join("");
+      const statuses = ["new", "draft", "sent", "accepted", "replied", "call", "no", "stop"];
+      res.writeHead(200, { "content-type": "text/html; charset=utf-8", "cache-control": "no-store", "x-robots-tag": "noindex, nofollow", "referrer-policy": "no-referrer" });
+      return res.end(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>DigiDog Outreach</title><style>
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:#f5f7fb;color:#1d2330}main{max-width:980px;margin:0 auto;padding:20px 16px 60px}h1{font-size:22px;margin:6px 0 4px}h2{font-size:17px;margin:26px 0 10px}.sub{color:#6b7280;font-size:14px;margin:0 0 14px}
+.f{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 14px}.f button{font:inherit;font-size:13px;padding:6px 11px;border-radius:999px;border:1px solid #d8dde6;background:#fff;cursor:pointer}.f button.on{background:#0057ff;border-color:#0057ff;color:#fff}
+article{background:#fff;border-radius:12px;padding:14px 16px;margin:0 0 10px;box-shadow:0 1px 3px rgba(20,30,60,.06)}article header{display:flex;justify-content:space-between;gap:10px;align-items:center}article p{margin:6px 0 0;font-size:14.5px;line-height:1.5}.who,.meta{color:#6b7280;font-size:13px!important;overflow-wrap:anywhere}pre{white-space:pre-wrap;font:inherit;font-size:14px;background:#f5f7fb;border-radius:8px;padding:10px;margin:8px 0 0}summary{cursor:pointer;font-size:14px;color:#0057ff;margin-top:6px}
+.b{font-size:12px;padding:3px 9px;border-radius:999px;background:#e5e7eb;white-space:nowrap}.b-sent{background:#dbeafe}.b-accepted{background:#e0e7ff}.b-replied,.b-call{background:#d1fae5}.b-no,.b-stop{background:#fee2e2}.b-draft{background:#fef3c7}
+.tw{overflow-x:auto;background:#fff;border-radius:12px}table{border-collapse:collapse;width:100%;font-size:14px;min-width:620px}th,td{padding:9px 10px;text-align:right;border-bottom:1px solid #eef0f4;white-space:nowrap}th:first-child,td:first-child{text-align:left}th{font-size:12px;color:#6b7280;font-weight:600}
+</style></head><body><main><h1>DigiDog Outreach</h1><p class="sub">Mode: <b>${esc(mode)}</b> · emails today ${sentToday()}/${DAILY_CAP} · leads ${rows.length} · stop list ${suppress.length} · <a href="/board/${VIEW_KEY}/leads.csv">CSV</a></p>
+<h2>By week</h2><div class="tw"><table><thead><tr><th>Week of</th><th>Leads</th><th>LinkedIn sent</th><th>Emails</th><th>Opened</th><th>Clicked</th><th>Replied</th><th>Calls</th><th>Unsub</th></tr></thead><tbody>${weekHtml || '<tr><td colspan="9" style="text-align:left">No data yet</td></tr>'}</tbody></table></div>
+<h2>Leads</h2><div class="f" id="f"><button class="on" data-v="">all</button>${statuses.map((x) => `<button data-v="${x}">${x}</button>`).join("")}</div><div id="l">${leadHtml || "<p>No leads yet.</p>"}</div>
+<h2>Stop list</h2><div class="tw"><table style="min-width:0"><tbody>${suppress.map((x) => `<tr><td>${esc(x.email)}</td><td>${esc(x.reason)}</td><td>${esc(x.ts.slice(0, 10))}</td></tr>`).join("") || '<tr><td style="text-align:left">Empty</td></tr>'}</tbody></table></div>
+<script>document.getElementById("f").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;this.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b)});var v=b.dataset.v;document.querySelectorAll("#l article").forEach(function(a){a.style.display=!v||a.dataset.s===v?"":"none"})});</script></main></body></html>`);
+    }
     // ---- API (Bearer) ----
     if (p.startsWith("/api/")) {
       if (!authed(req)) return json(res, 401, { error: "unauthorized" });
@@ -182,6 +236,16 @@ const server = http.createServer(async (req, res) => {
       if (p === "/api/messages") { const since = url.searchParams.get("since") || ""; return json(res, 200, { messages: messages.filter((m) => m.ts > since).map(({ links, unsub, ...m }) => m).slice(-2000) }); }
       if (p === "/api/suppressions" && req.method === "GET") return json(res, 200, { suppress });
       const body = req.method === "POST" ? JSON.parse((await readBody(req)) || "{}") : {};
+      if (p === "/api/leads" && req.method === "GET") {
+        const q = url.searchParams; let out = [...leads.values()];
+        for (const k of ["status", "channel", "niche", "country"]) if (q.get(k)) out = out.filter((l) => l[k] === q.get(k));
+        return json(res, 200, { leads: out.sort((a, b) => (a.created < b.created ? 1 : -1)).slice(0, Number(q.get("limit") || 500)) });
+      }
+      if (p === "/api/leads" && req.method === "POST") {
+        const rows = Array.isArray(body) ? body : Array.isArray(body.leads) ? body.leads : [body];
+        const out = rows.slice(0, 200).map((r) => { if (r.contact && isSuppressed(String(r.contact).includes("@") ? String(r.contact) : "x@x.invalid")) return { skipped: "stop list", contact: r.contact }; const { lead, created } = upsertLead(r); return { id: lead.id, created, status: lead.status }; });
+        return json(res, 200, { results: out });
+      }
       if (p === "/api/suppress" && req.method === "POST") {
         if (!/^@?[^@\s]*@?[^@\s]+\.[^@\s]+$/.test(body.email || "")) return json(res, 400, { error: "email required" });
         return json(res, 200, { added: addSuppress(body.email, body.reason || "manual") });
@@ -209,6 +273,7 @@ const server = http.createServer(async (req, res) => {
         byId.set(m.id, m); byUnsub.set(m.unsub, m);
         for (const [t, u] of Object.entries(links)) byLink.set(t, { m, url: u });
         logEvent("sent", m, { step, test: test || undefined });
+        if (!test) setLead(m.lead_id, { status: "sent", next_step: "" });
         return json(res, 200, { id: m.id, to, test, links: Object.keys(links).length, sent_today: sentToday() });
       }
       return json(res, 404, { error: "not found" });
