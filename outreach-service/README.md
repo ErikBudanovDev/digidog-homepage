@@ -12,4 +12,4 @@ Sends 1:1 emails through the local Postfix (DKIM-signed), tracks clicks and open
 
 Safety: test mode only delivers to TEST_ALLOW addresses; daily cap; one send per address and step; stop list checked on every send.
 All API calls need `Authorization: Bearer $OUTREACH_TOKEN` (token lives in `/opt/outreach/.env` on the VPS and `~/.config/digidog/outreach.env` on the MacBook; never commit it).
-Opens are approximate (mail apps preload images); events within 45 s of sending or from scanners are marked `auto`.
+The email template adds a signature block (name, title, site) and an unsubscribe line; a postal address appears only when POSTAL is set. Opens are approximate (mail apps preload images); events within 45 s of sending or from scanners are marked `auto`.
