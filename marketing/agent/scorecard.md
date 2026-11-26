@@ -15,3 +15,4 @@ One row per finished task. `edits` = how many times Erik had to correct or redo 
 | 2026-11-26 | daily run: GSC review + LinkedIn drafts (1 post EN/DE, 5 notes) | 0 | 1 | M | GSC reachable via Control_Chrome (Claude in Chrome needed browser pick; built-in browser not signed in); yesterday's posts already indexed |
 | 2026-11-26 | market report → backlog; outreach plan doc (5 agents, LinkedIn DACH/UK, email US/UK) | 0 | 0 | M | plan waits for Erik's answers before scheduling |
 | 2026-11-26 | outreach infra: VPS service (send, tracking, unsubscribe, leads, board), dental landing EN/DE, 2 test-mode agents | 0 | 3 | L | mail from container was not DKIM-signed (fixed); test mail lands in Gmail spam (open); no Sheets write access so leads live in the service |
+| 2026-11-26 | outreach email: nicer template, postal address removed, logo in signature | 0 | 0 | S | logo served by the outreach service itself; Gmail hides images in Spam |
