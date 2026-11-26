@@ -131,8 +131,8 @@ function buildEmail(m, text, trackOpen) {
     return `<p style="${P}">${out.replace(/\n/g, "<br>")}</p>`;
   }).join("\n");
   const sigHtml = `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:26px 0 0"><tr>
-<td style="width:3px;background:#0057ff;border-radius:2px;font-size:0;line-height:0">&nbsp;</td>
-<td style="padding:2px 0 2px 14px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+<td style="vertical-align:middle;padding:0 14px 0 0"><a href="${esc(SIG_SITE)}" style="text-decoration:none"><img src="${BASE}/logo.png" width="52" height="52" alt="DigiDog" style="display:block;width:52px;height:52px;border-radius:12px;border:0"></a></td>
+<td style="vertical-align:middle;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
 <div style="font-size:16px;line-height:1.35;font-weight:600;color:#1d2330">${esc(FROM_NAME)}</div>
 <div style="font-size:14px;line-height:1.45;color:#5b6474">${esc(SIG_TITLE)}</div>
 <div style="font-size:14px;line-height:1.45"><a href="${esc(SIG_SITE)}" style="color:#0057ff;text-decoration:none">${esc(siteLabel)}</a></div>
@@ -186,6 +186,12 @@ const server = http.createServer(async (req, res) => {
     const ua = String(req.headers["user-agent"] || "").slice(0, 160);
 
     if (p === "/healthz") return json(res, 200, { ok: true });
+    if (p === "/logo.png") {
+      const f = new URL("./logo.png", import.meta.url);
+      if (!fs.existsSync(f)) { res.writeHead(404); return res.end(); }
+      const img = fs.readFileSync(f);
+      res.writeHead(200, { "content-type": "image/png", "cache-control": "public, max-age=604800", "content-length": img.length }); return res.end(img);
+    }
     if (p === "/" || p === "") { res.writeHead(302, { location: HOME }); return res.end(); }
 
     // click
