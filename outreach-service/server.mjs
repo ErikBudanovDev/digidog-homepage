@@ -14,7 +14,9 @@ const SMTP_HOST = process.env.SMTP_HOST || "172.17.0.1";
 const SMTP_PORT = Number(process.env.SMTP_PORT || 25);
 const FROM_NAME = process.env.FROM_NAME || "Erik Budanov";
 const FROM_ADDR = process.env.FROM_ADDR || "erik@digidog-services.com";
-const POSTAL = process.env.POSTAL || "DIGIDOG, LLC, 30 N Gould St, Ste N, Sheridan, WY 82801, USA";
+const POSTAL = process.env.POSTAL || ""; // optional postal address line in the footer
+const SIG_TITLE = process.env.SIG_TITLE || "Founder, DigiDog";
+const SIG_SITE = process.env.SIG_SITE || "https://digidog.org";
 const DAILY_CAP = Number(process.env.DAILY_CAP || 10);
 const TEST_ALLOW = (process.env.TEST_ALLOW || "").toLowerCase().split(",").map((s) => s.trim()).filter(Boolean);
 const HOME = process.env.HOME_URL || "https://digidog.org";
@@ -106,26 +108,46 @@ const encWord = (s) => (/^[\x20-\x7e]*$/.test(s) ? s : "=?UTF-8?B?" + Buffer.fro
 
 function buildEmail(m, text, trackOpen) {
   // body text: paragraphs separated by blank lines; links as [label](url) or bare https://...
+  // A trailing sign-off line ("Erik", "Best, Erik") is dropped: the signature block replaces it.
+  const paras = text.split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+  if (paras.length > 1 && /^((best|regards|best regards|kind regards|thanks|cheers|viele grüße|beste grüße|mit freundlichen grüßen)[,!]?\s*)?erik( budanov)?\.?$/i.test(paras[paras.length - 1].replace(/\n/g, " "))) paras.pop();
   const links = {};
   const wrap = (url) => { const t = tok(6); links[t] = url; return `${BASE}/r/${t}`; };
   const linkRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s<>)]+)/g;
   const unsubUrl = `${BASE}/u/${m.unsub}`;
   const cache = new Map();
   const tracked = (url) => { if (!cache.has(url)) cache.set(url, wrap(url)); return cache.get(url); };
-  const textOut = text.replace(linkRe, (_, label, url, bare) => (label ? `${label}: ${tracked(url)}` : tracked(bare)));
-  const htmlBody = text.split(/\n{2,}/).map((p) => {
+  const siteLabel = SIG_SITE.replace(/^https?:\/\//, "").replace(/\/$/, "");
+  const textOut = paras.join("\n\n").replace(linkRe, (_, label, url, bare) => (label ? `${label}: ${tracked(url)}` : tracked(bare))) +
+    `\n\n${FROM_NAME}\n${SIG_TITLE}\n${SIG_SITE}`;
+  const P = 'margin:0 0 16px;font-size:16px;line-height:1.6;color:#1d2330';
+  const htmlBody = paras.map((p) => {
     let out = "", last = 0;
     p.replace(linkRe, (match, label, url, bare, idx) => {
-      out += esc(p.slice(last, idx)) + `<a href="${esc(tracked(url || bare))}">${esc(label || (bare || "").replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a>`;
+      out += esc(p.slice(last, idx)) + `<a href="${esc(tracked(url || bare))}" style="color:#0057ff;text-decoration:underline">${esc(label || (bare || "").replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a>`;
       last = idx + match.length; return match;
     });
     out += esc(p.slice(last));
-    return `<p style="margin:0 0 14px">${out.replace(/\n/g, "<br>")}</p>`;
+    return `<p style="${P}">${out.replace(/\n/g, "<br>")}</p>`;
   }).join("\n");
-  const footerText = `\n\n--\n${POSTAL}\nIf you'd rather not hear from me, unsubscribe here: ${unsubUrl}`;
-  const footerHtml = `<p style="margin:22px 0 0;font-size:12px;color:#8a8f98">${esc(POSTAL)}<br>If you'd rather not hear from me, <a href="${unsubUrl}" style="color:#8a8f98">unsubscribe here</a>.</p>`;
+  const sigHtml = `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:26px 0 0"><tr>
+<td style="width:3px;background:#0057ff;border-radius:2px;font-size:0;line-height:0">&nbsp;</td>
+<td style="padding:2px 0 2px 14px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+<div style="font-size:16px;line-height:1.35;font-weight:600;color:#1d2330">${esc(FROM_NAME)}</div>
+<div style="font-size:14px;line-height:1.45;color:#5b6474">${esc(SIG_TITLE)}</div>
+<div style="font-size:14px;line-height:1.45"><a href="${esc(SIG_SITE)}" style="color:#0057ff;text-decoration:none">${esc(siteLabel)}</a></div>
+</td></tr></table>`;
+  const footerText = `\n\n--\n${POSTAL ? POSTAL + "\n" : ""}If you'd rather not hear from me, unsubscribe here: ${unsubUrl}`;
+  const footerHtml = `<p style="margin:28px 0 0;padding-top:14px;border-top:1px solid #e8ebf0;font-size:12px;line-height:1.5;color:#9aa1ad">${POSTAL ? esc(POSTAL) + "<br>" : ""}Not relevant? <a href="${unsubUrl}" style="color:#9aa1ad;text-decoration:underline">Unsubscribe</a> and I won't write again.</p>`;
   const pixel = trackOpen ? `<img src="${BASE}/o/${m.id}.gif" width="1" height="1" alt="" style="display:none">` : "";
-  const html = `<!doctype html><html><body style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#1d2330">${htmlBody}${footerHtml}${pixel}</body></html>`;
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"></head>
+<body style="margin:0;padding:0;background:#ffffff">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:8px 4px">
+<div style="max-width:560px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+${htmlBody}
+${sigHtml}
+${footerHtml}
+</div></td></tr></table>${pixel}</body></html>`;
   const boundary = "b_" + tok(12);
   const headers = [
     `From: ${encWord(FROM_NAME)} <${FROM_ADDR}>`,
@@ -188,9 +210,9 @@ const server = http.createServer(async (req, res) => {
       if (!m) return page(res, 404, "Link not found", `<h1>Link not found</h1><p>This link is not valid any more. To stop emails, reply "no" to the message and you will be removed.</p>`);
       if (req.method === "POST") {
         if (addSuppress(m.to, "unsubscribe")) { logEvent("unsub", m, { ua }); setLead(m.lead_id, { status: "stop", next_step: "" }); }
-        return page(res, 200, "Unsubscribed", `<h1>You're unsubscribed</h1><p><b>${esc(m.to)}</b> will not get any more emails from DigiDog.</p><p><small>${esc(POSTAL)}</small></p>`);
+        return page(res, 200, "Unsubscribed", `<h1>You're unsubscribed</h1><p><b>${esc(m.to)}</b> will not get any more emails from DigiDog.</p>${POSTAL ? `<p><small>${esc(POSTAL)}</small></p>` : ""}`);
       }
-      return page(res, 200, "Unsubscribe", `<h1>Unsubscribe</h1><p>Stop all emails from DigiDog to <b>${esc(m.to)}</b>?</p><form method="post"><button type="submit">Yes, unsubscribe me</button></form><p style="margin-top:14px"><small>${esc(POSTAL)}</small></p>`);
+      return page(res, 200, "Unsubscribe", `<h1>Unsubscribe</h1><p>Stop all emails from DigiDog to <b>${esc(m.to)}</b>?</p><form method="post"><button type="submit">Yes, unsubscribe me</button></form>${POSTAL ? `<p style="margin-top:14px"><small>${esc(POSTAL)}</small></p>` : ""}`);
     }
 
 
