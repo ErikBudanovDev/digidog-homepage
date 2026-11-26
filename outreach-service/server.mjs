@@ -283,9 +283,14 @@ article{background:#fff;border-radius:12px;padding:14px 16px;margin:0 0 10px;box
         mode = body.mode; append("state", { mode, ts: now() }); return json(res, 200, { mode });
       }
       if (p === "/api/send" && req.method === "POST") {
-        const to = String(body.to || "").toLowerCase().trim();
-        const subject = String(body.subject || "").replace(/[\r\n]+/g, " ").trim();
-        const text = String(body.text || "").trim();
+        // to: "test" = the first configured test address, so callers never need to hold it.
+        const toTest = String(body.to || "").toLowerCase().trim() === "test";
+        const to = toTest ? TEST_ALLOW[0] || "" : String(body.to || "").toLowerCase().trim();
+        // With a lead_id, subject and text default to that lead's saved draft.
+        const lead = body.lead_id ? leads.get(body.lead_id) : null;
+        const subject = String(body.subject || lead?.draft_subject || "").replace(/[\r\n]+/g, " ").trim();
+        const text = String(body.text || lead?.draft_text || "").trim();
+        if (!body.name && lead?.person) body.name = String(lead.person).split(" ")[0];
         if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(to) || !subject || !text) return json(res, 400, { error: "to, subject and text are required" });
         const test = TEST_ALLOW.includes(to);
         if (mode === "test" && !test) return json(res, 403, { error: "test mode: only test addresses can receive mail" });
@@ -302,7 +307,7 @@ article{background:#fff;border-radius:12px;padding:14px 16px;margin:0 0 10px;box
         for (const [t, u] of Object.entries(links)) byLink.set(t, { m, url: u });
         logEvent("sent", m, { step, test: test || undefined });
         if (!test) setLead(m.lead_id, { status: "sent", next_step: "" });
-        return json(res, 200, { id: m.id, to, test, links: Object.keys(links).length, sent_today: sentToday() });
+        return json(res, 200, { id: m.id, to: toTest ? "test" : to, test, links: Object.keys(links).length, sent_today: sentToday() });
       }
       return json(res, 404, { error: "not found" });
     }
