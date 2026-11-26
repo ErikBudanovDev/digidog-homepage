@@ -21,7 +21,7 @@ Daily run: take the top open item, do it fully, mark it [done YYYY-MM-DD + URL].
 5. [ ] Page: AI sales & lead-generation agent — Proof: lead agent (website vs top-10 competitors, first email), Swiss register monitor.
 6. [ ] Page: n8n / Make AI automation — Proof: jewelry sketch automation in Make (70% time saved), Be Original Tours booking automation.
 7. [ ] Page: AI customer-support agent (chat + email) — needs a real case; check with Erik first.
-8. [ ] Industry page: dental & medical clinics (HubSpot dental chain, SmileForYou CRO).
+8. [done 2026-11-26 https://digidog.org/for/dental-clinics + /de/fuer/zahnarztpraxen] Industry page: dental & medical clinics (HubSpot dental chain, SmileForYou CRO). New niche pages = one entry per language in src/lib/landing-data.ts.
 9. [ ] Industry page: tours & bookings (Be Original Tours).
 10. [ ] Industry page: e-commerce (jewelry pipeline).
 11. [ ] Later, only with a real case: voice AI receptionist, RAG knowledge base, real estate, finance, legal.
