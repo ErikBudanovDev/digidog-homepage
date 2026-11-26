@@ -6,6 +6,8 @@ Sends 1:1 emails through the local Postfix (DKIM-signed), tracks clicks and open
 - `POST /api/send` `{to, name?, subject, text, lead_id?, step?, country?, track_open?}` — links in `text` as `[label](https://…)`.
 - `GET /api/status`, `GET /api/events?since=ISO`, `GET /api/messages?since=ISO`, `GET /api/suppressions`
 - `POST /api/suppress {email, reason}` (use `@domain.com` to block a whole domain), `POST /api/mode {mode: "test"|"live"}`
+- Leads: `GET /api/leads?status=&channel=`, `POST /api/leads` (one lead or `{leads:[…]}`; upsert by `id`, or by `contact` when no id). Statuses: new, draft, sent, accepted, replied, call, no, stop.
+- Board for Erik: `/board/<VIEW_KEY>` (read-only page: funnel by week, leads, stop list) and `/board/<VIEW_KEY>/leads.csv`.
 - Public: `/r/<token>` click redirect, `/o/<id>.gif` open pixel, `/u/<token>` unsubscribe page (POST confirms; one-click header supported).
 
 Safety: test mode only delivers to TEST_ALLOW addresses; daily cap; one send per address and step; stop list checked on every send.
