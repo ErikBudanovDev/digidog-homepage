@@ -15,3 +15,10 @@ One entry per morning run: date, data seen, task done, links. Read the last entr
   - DE: https://digidog.org/de/blog/google-ads-mcp-server-claude-verbinden
 - Mobile (iPhone 13): no page overflow; DE table header shortened to fit.
 - Next run: request indexing for both URLs + home if GSC reachable; check coverage errors from the 2026-11-21…24 outage. Rotation next: (d) LinkedIn drafts — the Google Ads post is a good first LinkedIn post.
+
+## 2026-11-26
+- Data (Search Console via Erik's Chrome, first time since the outage): last 7 days vs previous 7 — clicks 3 vs 4, impressions 335 vs 369, CTR 0.9% vs 1.1%, avg position 23.1 vs 20.5. All 3 clicks are brand ("digidog"). Non-brand rising: "ki automatisierung mittelstand" 26 imp (13 before), "playwright mcp server" 12 (4), new "claude consulting services" 7, "claude ai consulting" 5, "ai and gpt integration services" 4 — all 0 clicks.
+- 28 days, pages at positions 5–20 with 0 clicks: /de/blog/claude-skills-vs-mcp-server (42 imp, pos 6.7), /blog/vibe-coding-vps-build-deploy-app-with-ai (86 imp, pos 12.1; query "can i self-host a vibe-coded application platform inside my vpc" pos 10.9), /about (34 imp, pos 7.6). DE Mittelstand post: 139 imp but pos 69.
+- Indexing (report last updated 2026-11-16): 56 indexed, 61 not (33 redirect, 13 crawled-not-indexed, 9 discovered-not-indexed, 4 noindex, 2 × 404). Both Google Ads MCP posts (EN+DE) from yesterday are already indexed — no request needed.
+- Task (d, LinkedIn): drafted 1 post (EN + DE variant, 3 hooks, first-comment link) on the Google Ads MCP / €18,099 case, and 5 connection-note templates for UK, DE, AT, CH, US decision-makers → marketing/agent/linkedin-drafts.md. Drafts only, nothing posted or sent.
+- Next run: (a) improve /de/blog/claude-skills-vs-mcp-server title/meta for CTR (pos 6.7, 0 clicks) and the vibe-coding post for the self-host/VPC query; check the 2 × 404 in the Pages report. Note: "claude consulting services" / "claude ai consulting" appear — candidate for a page or a better /services/ai-integration title.
