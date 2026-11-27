@@ -16,3 +16,5 @@ status: `new` → `passed to solver` → `fixed DATE` / `no action` / `needs Eri
 - 2026-11-26 · Vercel · check · thread:1a217ff19bdba5ee · Deployment Storage 100% of 10 GB on the free team, older deployments get deleted · — · fixed 2026-11-26 (builds skipped for marketing/outreach-only commits); duplicate project digidog-homepage-ugnv still to be deleted by Erik
 - 2026-11-26 · Vercel · info · thread:1a21749bb6c56b38 · Deployment Storage 75% · — · no action (same issue as above)
 - 2026-11-26 · Search Console · info · thread:1a218d85ed705d31 · Google is validating the fixes for the 403 (1 page) and 404 (4 pages) indexing issues; validation takes a few days, Google will send a result · digidog.org · no action
+- 2026-11-26 · Search Console · act · thread:1a21809615c041f8 · new reason "Blocked due to access forbidden (403)" (same event as the 403 line above) · digidog.org · no action (already handled on Nov 26)
+- 2026-11-26 · Search Console · act · thread:1a218094166fd418 · "Not found (404)" in sitemap report (same event as the 404 line above) · digidog.org · no action (already handled on Nov 26)
