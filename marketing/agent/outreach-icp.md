@@ -34,9 +34,19 @@ One fact anyone can verify on the company's own website or careers page, about h
 
 Save the page URL. No finding = no lead. Never guess internal facts (which ERP they use, how many requests they get).
 
+**Order of preference (Erik, 2026-11-27):** a finding should be something only this company can be told.
+1. A public promise that can be measured: "we reply within 24 hours", "follow-up within one business day", emergency response times.
+2. Several branches or business units, each with its own inbox or phone number.
+3. An open back-office job that shows manual work.
+4. Documents only as single PDF files, no search.
+5. "Everything goes through one form / one info@ address" — only when nothing above is on the site. Almost every firm has this, so it is the weakest finding.
+
+**How Erik reasons, use the same logic:** a public promise is a test we can run. If a company promises an answer within 24 hours, an honest enquiry sent at a known time can be checked 25 hours later, and the real answer time is a fact nobody else can tell them. Mark such leads with `promise: <what they promise>` in `notes`. The test enquiry itself is sent only from the marketing-manager chat after Erik approves the text; agents never send it. It must be truthful: Erik's real name, who he is and why he asks — never a made-up customer request.
+
 ## The offer
 
 A **free intro call, 30 minutes**, with Erik: we walk through one of their processes and say honestly whether an AI agent fits.
+What we would build for a shared enquiry inbox: the inbox or form is connected to an AI model — Claude or a local model on their own hardware, their choice — that reads each request, sorts it by service, branch and urgency, and prepares the answer for the right person to approve.
 German wording: "kostenloses Erstgespräch, 30 Minuten".
 
 - First LinkedIn note in DACH and the UK: finding + one question only. No offer, no link, no "AI", no "DigiDog".
